@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.16.10","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"7.0.2-devmk+5f0373a5-j8"};
+    window.site = {"orchidVersion":"0.16.10","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"7.0.2-devmv+34b096d0-j8"};
 </script>
 
 
@@ -57,8 +57,8 @@
 <!-- Resolved Page Template:  -->
 
 <!-- RESOURCE -->
-<!-- Class: com.eden.orchid.api.resources.resource.StringResource -->
-<!-- Source Filename: wiki/usage/export/index.md -->
+<!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
+<!-- Source Filename: wiki/usage/export.md -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
@@ -118,7 +118,26 @@
             
                 
                     
-                        <p>Exporting data</p>
+                        <h2 id="defining-exported-data">Defining exported data</h2>
+<p>Data expected as output can be exported by telling Alchemist what to log, and by passing to the executable information
+on where to export.</p>
+<p>The <code>export</code> section lists which simulation values are exported into the <code>folder</code> specified with the <code>-e path/to/folder</code>
+argument.</p>
+<h3 id="aggregating-data">Aggregating data</h3>
+<p>Data aggregators are statistically univariate.
+Valid aggregation functions must extend <a href="http://commons.apache.org/proper/commons-math/javadocs/api-3.4/org/apache/commons/math3/stat/descriptive/AbstractStorelessUnivariateStatistic.html">AbstractStorelessUnivariateStatistic</a>.</p>
+<p><strong>Examples</strong></p>
+<pre><code class="language-yaml">export:
+  # Time step of the simulation
+  - time
+  # Number of nodes involved in the simulation
+  - number-of-nodes
+  # Molecule representing an aggregated value
+  - molecule: danger
+    aggregators: [sum]
+</code></pre>
+<h3 id="filtering-unwanted-values">Filtering unwanted values</h3>
+<p>TODO</p>
 
                     
                 
@@ -362,14 +381,6 @@
         
         </ul>
     </li>
-
-                
-                    
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/readme">Readme file</a>
-    </li>
-    
 
                 
                     
@@ -4509,7 +4520,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 7.0.2-devmk+5f0373a5-j8. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 7.0.2-devmv+34b096d0-j8. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
