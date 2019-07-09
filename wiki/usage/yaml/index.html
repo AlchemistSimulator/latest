@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"8.2.1-dev01+51999e6f"};
+    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"8.2.1-dev03+7e3b5517"};
 </script>
 
 
@@ -473,7 +473,7 @@ the <code>source</code> and <code>randomSensor</code> molecules (global variable
           parameters: [-6, -6, 2, 2]
         molecule: source
         concentration: true
-        molecule: randomSensor
+      - molecule: randomSensor
         concentration: &gt;
           import java.lang.Math.random
           random() * pi
@@ -497,16 +497,19 @@ displacements:
       - *gradient
 </code></pre>
 <h2 id="writing-layers">Writing layers</h2>
-<p>In order to put a layer inside the previously specified environment you have to define the type of the layer, the molecule
-it refers to and possibly the parameters needed for the type of layer you have chosen.<br />
-Of course, it is possible to add more than one layer inside the same environment.<br />
-The syntax is like the following:</p>
+<p>It is possible to define overlays (layers) of data that can be sensed everywhere in the environment.
+Layers can be used to model physical properties, such as pollution, light, temperature, and so on.
+Conversely than readings from nodes' contents, layers have no dependency optimization.
+This implies that reactions that read values from layers should have special care in defining their <code>context</code> appropriately</p>
+<p>In order to create layer, the programmer must define the type of the layer, a molecule that will be used as identifier,
+and possibly the parameters needed for intializing the type of layer you have chosen, as per the <a href="#loading-arbitrary-java-classes-with-the-typeparameters-syntax"><code>type/parameter</code> syntax</a>.</p>
+<p>The following example exemplifies the syntax for initializing two <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/layers/BidimensionalGaussianLayer">BidimensionalGaussianLayer</a>:</p>
 <pre><code class="language-yaml">layers:
   - type: BidimensionalGaussianLayer
-    molecule: pippo
+    molecule: foo
     parameters: [0.0, 0.0, 2.0, 5.0]
   - type: BidimensionalGaussianLayer
-    molecule: pluto
+    molecule: bar
     parameters: [0.0, 0.0, 5.0, 10.0]
 </code></pre>
 
@@ -5227,7 +5230,7 @@ The syntax is like the following:</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 8.2.1-dev01+51999e6f. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 8.2.1-dev03+7e3b5517. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
