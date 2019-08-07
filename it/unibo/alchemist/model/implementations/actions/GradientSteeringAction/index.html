@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"8.3.1-dev03+731f9d21"};
+    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"8.3.1-dev19+3f6e4313"};
 </script>
 
 
@@ -66,9 +66,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/editorial_main.css"/>
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/editorial_orchidCustomizations.css"/>
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/orchidSearch.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/orchidSearch.css"/>
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"/>
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"/>
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"/>
@@ -144,9 +144,9 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_env__Environment__pedestrian__Pedestrian__targetMolecule__Molecule__rg___ERROR_CLASS___radius__Double__formula__Iterable._Molecule___P__">
+    <div class="panel-heading" id="constructor__constructor_env__EuclideanPhysics2DEnvironment__reaction__Reaction__pedestrian__Pedestrian2D__targetMolecule__Molecule__formula__Iterable._Molecule___Euclidean2DPosition_">
         <code>
-        constructor(env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>, targetMolecule: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>, rg: <ERROR CLASS>, radius: Double, formula: Iterable.(<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>)-&gt;P?)
+        constructor(env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironment">EuclideanPhysics2DEnvironment</a>, reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian2D">Pedestrian2D</a>, targetMolecule: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>, formula: Iterable.(<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>)-&gt;<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>)
         </code>
     </div>
     <div class="panel-body"><p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.</p>
@@ -160,7 +160,7 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
+        env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironment">EuclideanPhysics2DEnvironment</a>
         </code>
         
             <br><br>
@@ -172,7 +172,14 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>
+        reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian2D">Pedestrian2D</a>
         </code>
         
             <br><br>
@@ -196,32 +203,7 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        rg: <ERROR CLASS>
-        </code>
-        
-            <br><br>
-            <div><pre><code>the simulation {@link RandomGenerator}.
-</code></pre>
-</div>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        radius: Double
-        </code>
-        
-            <br><br>
-            <div><pre><code>the distance all the positions where the molecule concentration is checked
-must have from the current pedestrian position.
-</code></pre>
-</div>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        formula: Iterable.(<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>)-&gt;P?
+        formula: Iterable.(<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>)-&gt;<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
         </code>
         
             <br><br>
@@ -235,6 +217,64 @@ must have from the current pedestrian position.
 
 </div>
 
+
+
+
+    <h2 id="methods">Methods</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_getDestination_current__Euclidean2DPosition__target__Euclidean2DPosition__maxWalk__Double____ERROR_CLASS_">
+        <code>
+        protected open fun getDestination(current: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, maxWalk: Double): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        current: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        maxWalk: Double
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
 
 
 
@@ -872,7 +912,7 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/utils">it.unibo.alchemist.model.implementations.actions.utils</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies">it.unibo.alchemist.model.implementations.actions.steeringstrategies</a>
     </li>
     
 
@@ -1040,15 +1080,7 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory">it.unibo.alchemist.model.influencesphere.sensory</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/shapes">it.unibo.alchemist.model.influencesphere.shapes</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere">it.unibo.alchemist.model.influencesphere</a>
     </li>
     
 
@@ -1193,14 +1225,6 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractCognitivePedestrian">AbstractCognitivePedestrian</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/conditions/AbstractCondition">AbstractCondition</a>
     </li>
     
@@ -1242,30 +1266,6 @@ must have from the current pedestrian position.
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gpsload/api/AbstractGPSTimeAlignment">AbstractGPSTimeAlignment</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/AbstractGroup">AbstractGroup</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractHeterogeneousPedestrian">AbstractHeterogeneousPedestrian</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractHomogeneousPedestrian">AbstractHomogeneousPedestrian</a>
     </li>
     
 
@@ -1506,6 +1506,14 @@ must have from the current pedestrian position.
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gpsload/api/AlignToTime">AlignToTime</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Alone">Alone</a>
     </li>
     
 
@@ -1873,7 +1881,7 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Blended">Blended</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/BlendedSteering">BlendedSteering</a>
     </li>
     
 
@@ -2137,6 +2145,14 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/CognitivePedestrianImpl">CognitivePedestrianImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/CognitiveSpec">CognitiveSpec</a>
     </li>
     
@@ -2145,7 +2161,31 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Cohesion">Cohesion</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/CollisionAvoidance">CollisionAvoidance</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/ColorChannel">ColorChannel</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Combine">Combine</a>
     </li>
     
 
@@ -2481,6 +2521,14 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/DistanceWeighted">DistanceWeighted</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/DoubleDimension">DoubleDimension</a>
     </li>
     
@@ -2697,7 +2745,7 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/EuclideanPhysics2DEnvironmentImpl">EuclideanPhysics2DEnvironmentImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithObstacles">EuclideanPhysics2DEnvironmentWithObstacles</a>
     </li>
     
 
@@ -2809,14 +2857,6 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Family">Family</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/Fear">Fear</a>
     </li>
     
@@ -2825,7 +2865,7 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/FieldOfView2D">FieldOfView2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/FieldOfView2D">FieldOfView2D</a>
     </li>
     
 
@@ -2842,6 +2882,14 @@ must have from the current pedestrian position.
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/projectview/controller/FileNameDialogController">FileNameDialogController</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Filtered">Filtered</a>
     </li>
     
 
@@ -3009,6 +3057,14 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/GenericGroup">GenericGroup</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/conditions/GenericMoleculePresent">GenericMoleculePresent</a>
     </li>
     
@@ -3041,23 +3097,7 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/shapes/GeometricShape">GeometricShape</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/GeometricShape">GeometricShape</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/shapes/GeometricShape2D">GeometricShape2D</a>
     </li>
     
 
@@ -3137,7 +3177,7 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/HearingField2D">HearingField2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/GroupSteering">GroupSteering</a>
     </li>
     
 
@@ -3177,7 +3217,23 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/HeterogeneousPedestrianImpl">HeterogeneousPedestrianImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/HomogeneousPedestrian2D">HomogeneousPedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/HomogeneousPedestrianImpl">HomogeneousPedestrianImpl</a>
     </li>
     
 
@@ -3313,7 +3369,7 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/InfluenceSphere">InfluenceSphere</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/InfluenceSphere">InfluenceSphere</a>
     </li>
     
 
@@ -3321,7 +3377,7 @@ must have from the current pedestrian position.
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/InfluenceSphere2D">InfluenceSphere2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/InfluenceSphere2D">InfluenceSphere2D</a>
     </li>
     
 
@@ -3969,6 +4025,14 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Nearest">Nearest</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Neighborhood">Neighborhood</a>
     </li>
     
@@ -4018,14 +4082,6 @@ must have from the current pedestrian position.
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gpsload/api/NoAlignment">NoAlignment</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/NoGroup">NoGroup</a>
     </li>
     
 
@@ -4169,6 +4225,14 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian2D">Pedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/PhysicsEnvironment">PhysicsEnvironment</a>
     </li>
     
@@ -4250,6 +4314,22 @@ must have from the current pedestrian position.
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/variables/PrintableVariable">PrintableVariable</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/PriorityBlendedSteering">PriorityBlendedSteering</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/PrioritySteering">PrioritySteering</a>
     </li>
     
 
@@ -4649,6 +4729,14 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Separation">Separation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SetLocalMoleculeConcentration">SetLocalMoleculeConcentration</a>
     </li>
     
@@ -4889,6 +4977,14 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringStrategy">SteeringStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/layers/StepLayer">StepLayer</a>
     </li>
     
@@ -5041,6 +5137,14 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/TypeBased">TypeBased</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/expressions/implementations/UIDNode">UIDNode</a>
     </li>
     
@@ -5145,6 +5249,14 @@ must have from the current pedestrian position.
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Weighted">Weighted</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/cluster/WorkerSet">WorkerSet</a>
     </li>
     
@@ -5201,7 +5313,7 @@ must have from the current pedestrian position.
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 8.3.1-dev03+731f9d21. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 8.3.1-dev19+3f6e4313. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -5217,11 +5329,11 @@ must have from the current pedestrian position.
 <!-- start:inject scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_util.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_main.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_util.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_main.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_orchidCustomizations.js"></script>
 <script src="https://unpkg.com/lunr/lunr.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/orchidSearch.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/orchidSearch.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>

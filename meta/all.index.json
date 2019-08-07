@@ -5565,22 +5565,6 @@
                     "groups": {
                       "ownKey": "groups",
                       "childrenPages": {
-                        "NoGroup": {
-                          "ownKey": "NoGroup",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/cognitiveagents/groups",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "NoGroup",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/NoGroup"
-                            },
-                            "description": "",
-                            "title": "NoGroup",
-                            "content": "<p>An object representing a pedestrian alone.\nmembers\nThe list of pedestrians belonging to this group.\ncontains\nWhether a pedestrian belongs to this group or not.<\/p>\n"
-                          }]
-                        },
                         "Group": {
                           "ownKey": "Group",
                           "ownPages": [{
@@ -5594,39 +5578,39 @@
                             },
                             "description": "",
                             "title": "Group",
-                            "content": "<p>A generic group of pedestrians.\nmembers\nThe list of pedestrians belonging to this group.\ncontains\nWhether a pedestrian belongs to this group or not.<\/p>\n"
+                            "content": "<p>A group of pedestrians.\nmembers\nThe list of pedestrians belonging to this group.\ncontains\nWhether a pedestrian belongs to this group or not.\naddMember\nAdd a pedestrian in this group if not already part of it.\nremoveMember\nRemove a pedestrian from this group.<\/p>\n"
                           }]
                         },
-                        "AbstractGroup": {
-                          "ownKey": "AbstractGroup",
+                        "GenericGroup": {
+                          "ownKey": "GenericGroup",
                           "ownPages": [{
                             "reference": {
                               "path": "it/unibo/alchemist/model/cognitiveagents/groups",
                               "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "AbstractGroup",
+                              "fileName": "GenericGroup",
                               "extension": "html",
                               "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/AbstractGroup"
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/GenericGroup"
                             },
                             "description": "",
-                            "title": "AbstractGroup",
-                            "content": "<p><init><\/p>\n<p>members\nThe list of pedestrians belonging to this group.<\/p>\n"
+                            "title": "GenericGroup",
+                            "content": "<p>Basic implementation of a group.<init>\nBasic implementation of a group.\nmembers\nThe list of pedestrians belonging to this group.\naddMember\nAdd a pedestrian in this group if not already part of it.\nremoveMember\nRemove a pedestrian from this group.<\/p>\n"
                           }]
                         },
-                        "Family": {
-                          "ownKey": "Family",
+                        "Alone": {
+                          "ownKey": "Alone",
                           "ownPages": [{
                             "reference": {
                               "path": "it/unibo/alchemist/model/cognitiveagents/groups",
                               "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "Family",
+                              "fileName": "Alone",
                               "extension": "html",
                               "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Family"
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Alone"
                             },
                             "description": "",
-                            "title": "Family",
-                            "content": "<p><init><\/p>\n"
+                            "title": "Alone",
+                            "content": "<p>Group representing a pedestrian alone.<init>\nGroup representing a pedestrian alone.\nmembers\nThe list of pedestrians belonging to this group.\naddMember\nAdd a pedestrian in this group if not already part of it.\nremoveMember\nRemove a pedestrian from this group.<\/p>\n"
                           }]
                         }
                       },
@@ -5713,7 +5697,7 @@
                             },
                             "description": "",
                             "title": "EuclideanPhysics2DEnvironment",
-                            "content": "<p>Defines a bidimensional euclidean environment.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Defines a bidimensional euclidean environment.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "PhysicsEnvironment": {
@@ -5729,7 +5713,23 @@
                             },
                             "description": "",
                             "title": "PhysicsEnvironment",
-                            "content": "<p>An environment supporting physics and nodes shapes.\nNote: due to the high number of parameters its's highly recommended to not use this interface directly,\nbut to create an apposite interface extending this one instead.\nshapeFactory\nA factory of shapes compatible with this environment.\ngetHeading\nGets the heading of a node as a direction vector.\nsetHeading\nSets the heading of a node\ngetShape\nGets the shape of a node relatively to its position and heading in the environment.\ngetNodesWithin\nGets all nodes whose shape.intersect is true for the given shape.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>An environment supporting physics and nodes shapes.\nNote: due to the high number of parameters its's highly recommended to not use this interface directly,\nbut to create an apposite interface extending this one instead.\nshapeFactory\nA factory of shapes compatible with this environment.\ngetHeading\nGets the heading of a node as a direction vector.\nsetHeading\nSets the heading of a node\ngetShape\nGets the shape of a node relatively to its position and heading in the environment.\ngetNodesWithin\nGets all nodes whose shape.intersect is true for the given shape.\ncanNodeFitPosition\nWhether or not a node can be placed in a position.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          }]
+                        },
+                        "EuclideanPhysics2DEnvironmentWithObstacles": {
+                          "ownKey": "EuclideanPhysics2DEnvironmentWithObstacles",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/interfaces/environments",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "EuclideanPhysics2DEnvironmentWithObstacles",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithObstacles"
+                            },
+                            "description": "",
+                            "title": "EuclideanPhysics2DEnvironmentWithObstacles",
+                            "content": "<p>Euclidean physics environment with support for obstacles.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         }
                       },
@@ -5824,7 +5824,7 @@
                         },
                         "description": "",
                         "title": "Pedestrian",
-                        "content": "<p>A pedestrian with any characteristic taken into consideration.\nmembershipGroup\nThe group this pedestrian belongs to.\nwalkingSpeed\nThe speed at which the pedestrian moves if it's walking.\nrunningSpeed\nThe speed at which the pedestrian moves if it's running.<\/p>\n<p>shuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>A pedestrian with any characteristic taken into consideration.\nmembershipGroup\nThe group this pedestrian belongs to.\nspeed\nThe speed at which the pedestrian is moving.\ninfluencialPeople\nA list of all the pedestrians inside at least one of the sensory spheres of this pedestrian.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "Time": {
@@ -5857,6 +5857,22 @@
                         "description": "",
                         "title": "Environment2DWithObstacles",
                         "content": "<p>getObstacles<\/p>\n<p>removeObstacle\nRemoves an Obstacle2D from this environment.\nnext\nThis method must calculate the RELATIVE next allowed position given the current position and the position in which the node wants to move. For example, if your node is in position [2,3], wants to move to [3,4] but the next allowed position (because, e.g., of physical obstacles) is [2.5,3.5], the result must be a Position containing coordinates [0.5,0.5], so it's the relative movement considering the starting position as origin.\nhasMobileObstacles<\/p>\n<p>intersectsObstacle\nChecks whether there is at least an obstacle intersecting the line connecting [sx, sy] and [ex, ey].\nintersectsObstacle\nChecks whether there is at least an obstacle intersecting the line connecting p1 and p2.\naddObstacle\nAdds an Obstacle2D to this environment.\ngetObstaclesInRange\nGiven a point and a range, retrieves all the obstacles within.<\/p>\n"
+                      }]
+                    },
+                    "Pedestrian2D": {
+                      "ownKey": "Pedestrian2D",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/model/interfaces",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "Pedestrian2D",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian2D"
+                        },
+                        "description": "",
+                        "title": "Pedestrian2D",
+                        "content": "<p>The bidimensional representation of a pedestrian.<\/p>\n<p>shape\nThe default shape of any pedestrian in the Euclidean world.\nsensorySpheres\nThe spheres of influence a pedestrian in the Euclidean world is equipped with.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "EnvironmentSupportingDeformableCells": {
@@ -6016,7 +6032,7 @@
                         },
                         "description": "",
                         "title": "CognitivePedestrian",
-                        "content": "<p>An heterogeneous pedestrian with cognitive capabilities too.<\/p>\n<p>dangerBelief\nValue between 0 and 1 representing the current belief of the situation dangerousness for this pedestrian.\nfear\nValue between 0 and 1 representing the level of fear of this pedestrian.\ninfluencialPeople\nA list of all the pedestrians in the same environment who have an influence on this pedestrian.\ncognitiveCharacteristics\nThe list of all the cognitive characteristics of this pedestrian.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>An heterogeneous pedestrian with cognitive capabilities too.<\/p>\n<p>dangerBelief\nValue between 0 and 1 representing the current belief of the situation dangerousness for this pedestrian.\nfear\nValue between 0 and 1 representing the level of fear of this pedestrian.\ncognitiveCharacteristics\nThe list of all the cognitive characteristics of this pedestrian.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "Condition": {
@@ -6080,7 +6096,7 @@
                         },
                         "description": "",
                         "title": "Position",
-                        "content": "<p>An interface to represent a generic coordinates system.\ncartesianCoordinates\nAllows to get the position as a Number array.\ndimensions<\/p>\n<p>boundingBox\nGiven a range, produces N coordinates, representing the N opposite\nvertices of the hypercube having the current coordinate as center and\ncircumscribing the N-sphere defined by the range. In the case of two\ndimensional coordinates, it must return the opposite vertices of the\nsquare circumscribing the circle with center in this position and radius\nrange.\ngetCoordinate\nAllows to access the value of a coordinate.\ngetDistanceTo\nComputes the distance between this position and another compatible\nposition.\nplus\nConsiders both positions as vectors, and sums them.\nminus\nConsiders both positions as vectors, and returns the difference between this position and the passed one.\ntimes\nMultiply each coordinate of this position by a number.<\/p>\n"
+                        "content": "<p>An interface to represent a generic coordinates system.\ncartesianCoordinates\nAllows to get the position as a Number array.\ndimensions<\/p>\n<p>boundingBox\nGiven a range, produces N coordinates, representing the N opposite\nvertices of the hypercube having the current coordinate as center and\ncircumscribing the N-sphere defined by the range. In the case of two\ndimensional coordinates, it must return the opposite vertices of the\nsquare circumscribing the circle with center in this position and radius\nrange.\ngetCoordinate\nAllows to access the value of a coordinate.\ngetDistanceTo\nComputes the distance between this position and another compatible\nposition.\nplus\nConsiders both positions as vectors, and sums them.\nminus\nConsiders both positions as vectors, and returns the difference between this position and the passed one.\ntimes\nMultiply each coordinate of this position by a number.\ndiv\nDivide each coordinate of this position by a number.<\/p>\n"
                       }]
                     },
                     "BenchmarkableEnvironment": {
@@ -6322,7 +6338,7 @@
                         },
                         "description": "",
                         "title": "SteeringAction",
-                        "content": "<p>An interface for a generic action whose purpose is moving a node inside the environment it is in.<\/p>\n<p>nextPosition\nThe position the owner of this action moves to when it is executed.\ntarget\nThe position the owner of this action moves towards.<\/p>\n"
+                        "content": "<p>Action whose purpose is moving a node inside the environment it is in.<\/p>\n<p>nextPosition\nThe position the owner of this action moves to when it is executed.\ntarget\nThe position the owner of this action moves towards.<\/p>\n"
                       }]
                     },
                     "HeterogeneousPedestrian": {
@@ -6338,7 +6354,23 @@
                         },
                         "description": "",
                         "title": "HeterogeneousPedestrian",
-                        "content": "<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.\nage\nThe age of this pedestrian.\ngender\nThe gender of this pedestrian.\ncompliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nprobabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.\nage\nThe age of this pedestrian.\ngender\nThe gender of this pedestrian.\ncompliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nprobabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                      }]
+                    },
+                    "SteeringStrategy": {
+                      "ownKey": "SteeringStrategy",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/model/interfaces",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "SteeringStrategy",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringStrategy"
+                        },
+                        "description": "",
+                        "title": "SteeringStrategy",
+                        "content": "<p>Strategy interface describing how the next points of the steering actions\nare combined to calculate the next position to move on.<\/p>\n<p>computeNextPosition\nComputes the next position starting from the steering actions the pedestrian obey to.\ncomputeTarget\nComputes the target to reach starting from the steering actions the pedestrian obey to.<\/p>\n"
                       }]
                     },
                     "Position2D": {
@@ -6370,7 +6402,7 @@
                         },
                         "description": "",
                         "title": "Environment",
-                        "content": "<p>Interface for an environment. Every environment must implement this specification.<\/p>\n<p>addLayer\nAdd a Layer to the Environment.\ngetLayers\nReturn all the Layers in this Environment.\nsetSimulation<\/p>\n<p>getSize\nThis method returns the size of the environment as an array of length <code>#getDimensions()<\/code>. This method must return distance measured with the same unit used by the positions. No non-euclidean distance metrics are allowed.\ngetDistanceBetweenNodes\nMeasures the distance between two nodes in the environment.\ngetNodesWithinRange\nGiven a node (center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized and it's consequently <b>much<\/b> better to use <code>Environment#getNeighborhood(Node)<\/code> and filter the neighborhood if you are sure that all the nodes within the range are connected to the center.\ngetNodesWithinRange\nGiven a Position(center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized.\nmoveNodeToPosition\nThis method moves a node in the environment to some position. If node move is unsupported, it does nothing.\nmoveNode\nThis method moves a node in the environment toward some direction. If node move is unsupported, it does nothing.\ngetLinkingRule<\/p>\n<p>setIncarnation<\/p>\n<p>removeNode\nThis method allows to remove a node. If node removal is unsupported, it does nothing.\nsetLinkingRule<\/p>\n<p>getOffset\nThis method allows to know which are the smallest coordinates represented.\ngetIncarnation<\/p>\n<p>getNeighborhood\nGiven a node, this method returns its neighborhood.\ngetSimulation<\/p>\n<p>getNodesNumber<\/p>\n<p>isTerminated<\/p>\n<p>getNodeByID\nAllows to access a node known its id. Depending on the implementation, this method may or not be optimized (namely, id could run in constant or linear time with the number of nodes).\ngetPosition\nCalculates the position of a node.\ngetDimensions\nThe number of dimensions of this environment.\ngetNodes\nAll the nodes that exist in current environment.\naddTerminator<\/p>\n<p>getSizeInDistanceUnits\nThis method returns the size of the environment as an array of length <code>#getDimensions()<\/code>. This method must return distance measured with the same unit used for measuring distances. It may or may not return the same result of <code>#getSize()<\/code>\ngetLayer\nGet the layer associate to the given molecule. If no Layer is associated with the given molecule, return an empty optional.\nmakePosition<\/p>\n<p>addNode\nThis method allows to add a new node to this environment. The environment is responsible to call the right method of the simulation in order to ensure that the reaction is properly scheduled.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point<\/p>\n"
+                        "content": "<p>Interface for an environment. Every environment must implement this specification.<\/p>\n<p>addLayer\nAdd a Layer to the Environment.\ngetLayers\nReturn all the Layers in this Environment.\nsetSimulation<\/p>\n<p>getSize\nThis method returns the size of the environment as an array of length <code>#getDimensions()<\/code>. This method must return distance measured with the same unit used by the positions. No non-euclidean distance metrics are allowed.\ngetDistanceBetweenNodes\nMeasures the distance between two nodes in the environment.\ngetNodesWithinRange\nGiven a node (center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized and it's consequently <b>much<\/b> better to use <code>Environment#getNeighborhood(Node)<\/code> and filter the neighborhood if you are sure that all the nodes within the range are connected to the center.\ngetNodesWithinRange\nGiven a Position(center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized.\nmoveNodeToPosition\nThis method moves a node in the environment to some position. If node move is unsupported, it does nothing.\nmoveNode\nThis method moves a node in the environment toward some direction. If node move is unsupported, it does nothing.\ngetLinkingRule<\/p>\n<p>setIncarnation<\/p>\n<p>removeNode\nThis method allows to remove a node. If node removal is unsupported, it does nothing.\nsetLinkingRule<\/p>\n<p>getOffset\nThis method allows to know which are the smallest coordinates represented.\ngetIncarnation<\/p>\n<p>getNeighborhood\nGiven a node, this method returns its neighborhood.\ngetSimulation<\/p>\n<p>getNodesNumber<\/p>\n<p>isTerminated<\/p>\n<p>getNodeByID\nAllows to access a node known its id. Depending on the implementation, this method may or not be optimized (namely, id could run in constant or linear time with the number of nodes).\ngetPosition\nCalculates the position of a node.\ngetDimensions\nThe number of dimensions of this environment.\ngetNodes\nAll the nodes that exist in current environment.\naddTerminator<\/p>\n<p>getSizeInDistanceUnits\nThis method returns the size of the environment as an array of length <code>#getDimensions()<\/code>. This method must return distance measured with the same unit used for measuring distances. It may or may not return the same result of <code>#getSize()<\/code>\ngetLayer\nGet the layer associate to the given molecule. If no Layer is associated with the given molecule, return an empty optional.\nmakePosition<\/p>\n<p>addNode\nThis method allows to add a new node to this environment. The environment is responsible to call the right method of the simulation in order to ensure that the reaction is properly scheduled.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment<\/p>\n"
                       }]
                     },
                     "GeoPosition": {
@@ -6587,6 +6619,22 @@
                         "title": "ILsaAction",
                         "content": "<p>cloneAction<\/p>\n<p>getOutboundDependencies<\/p>\n<p>setExecutionContext\nSets the context in which this action will execute.<\/p>\n"
                       }]
+                    },
+                    "GroupSteering": {
+                      "ownKey": "GroupSteering",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/model/interfaces",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "GroupSteering",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/GroupSteering"
+                        },
+                        "description": "",
+                        "title": "GroupSteering",
+                        "content": "<p>Steering action caused by a group of pedestrians.<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.<\/p>\n"
+                      }]
                     }
                   },
                   "ownPages": [{
@@ -6672,139 +6720,68 @@
                 "influencesphere": {
                   "ownKey": "influencesphere",
                   "childrenPages": {
-                    "sensory": {
-                      "ownKey": "sensory",
-                      "childrenPages": {
-                        "InfluenceSphere": {
-                          "ownKey": "InfluenceSphere",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/influencesphere/sensory",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "InfluenceSphere",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/InfluenceSphere"
-                            },
-                            "description": "",
-                            "title": "InfluenceSphere",
-                            "content": "<p>A sphere of influence in any n-dimensional space.<\/p>\n<p>isInfluenced\nWhenever or not a given point has an influence on the node equipped with this sphere.<\/p>\n"
-                          }]
-                        },
-                        "InfluenceSphere2D": {
-                          "ownKey": "InfluenceSphere2D",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/influencesphere/sensory",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "InfluenceSphere2D",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/InfluenceSphere2D"
-                            },
-                            "description": "",
-                            "title": "InfluenceSphere2D",
-                            "content": "<p>A sphere of influence in the 2D world.<init>\nA sphere of influence in the 2D world.<\/p>\n<p>isInfluenced\nWhenever or not a given point has an influence on the node equipped with this sphere.<\/p>\n"
-                          }]
-                        },
-                        "HearingField2D": {
-                          "ownKey": "HearingField2D",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/influencesphere/sensory",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "HearingField2D",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/HearingField2D"
-                            },
-                            "description": "",
-                            "title": "HearingField2D",
-                            "content": "<p><init><\/p>\n"
-                          }]
-                        },
-                        "FieldOfView2D": {
-                          "ownKey": "FieldOfView2D",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/influencesphere/sensory",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "FieldOfView2D",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/FieldOfView2D"
-                            },
-                            "description": "",
-                            "title": "FieldOfView2D",
-                            "content": "<p><init><\/p>\n"
-                          }]
-                        }
-                      },
+                    "InfluenceSphere": {
+                      "ownKey": "InfluenceSphere",
                       "ownPages": [{
                         "reference": {
                           "path": "it/unibo/alchemist/model/influencesphere",
                           "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "sensory",
+                          "fileName": "InfluenceSphere",
                           "extension": "html",
                           "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory"
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/InfluenceSphere"
                         },
                         "description": "",
-                        "title": "it.unibo.alchemist.model.influencesphere.sensory",
-                        "content": ""
+                        "title": "InfluenceSphere",
+                        "content": "<p>Area inside which nodes exert an influence on each other.<\/p>\n<p>influentialNodes\nThe list of nodes relevant for this sphere of influence.<\/p>\n"
                       }]
                     },
-                    "shapes": {
-                      "ownKey": "shapes",
-                      "childrenPages": {
-                        "GeometricShape2D": {
-                          "ownKey": "GeometricShape2D",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/influencesphere/shapes",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "GeometricShape2D",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/shapes/GeometricShape2D"
-                            },
-                            "description": "",
-                            "title": "GeometricShape2D",
-                            "content": "<p>Defines a generic 2D shape.<init>\nDefines a generic 2D shape.<\/p>\n<p>contains\nWhether or not a given point is inside this shape.<\/p>\n"
-                          }]
-                        },
-                        "GeometricShape": {
-                          "ownKey": "GeometricShape",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/influencesphere/shapes",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "GeometricShape",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/shapes/GeometricShape"
-                            },
-                            "description": "",
-                            "title": "GeometricShape",
-                            "content": "<p>Defines a generic n-dimensional shape.<\/p>\n<p>contains\nWhether or not a given point is inside this shape.<\/p>\n"
-                          }]
-                        }
-                      },
+                    "InfluenceSphere2D": {
+                      "ownKey": "InfluenceSphere2D",
                       "ownPages": [{
                         "reference": {
                           "path": "it/unibo/alchemist/model/influencesphere",
                           "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "shapes",
+                          "fileName": "InfluenceSphere2D",
                           "extension": "html",
                           "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/shapes"
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/InfluenceSphere2D"
                         },
                         "description": "",
-                        "title": "it.unibo.alchemist.model.influencesphere.shapes",
-                        "content": ""
+                        "title": "InfluenceSphere2D",
+                        "content": "<p>A sphere of influence in the Euclidean world.<init>\nA sphere of influence in the Euclidean world.<\/p>\n<p>influentialNodes\nThe list of nodes relevant for this sphere of influence.<\/p>\n"
+                      }]
+                    },
+                    "FieldOfView2D": {
+                      "ownKey": "FieldOfView2D",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/model/influencesphere",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "FieldOfView2D",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/FieldOfView2D"
+                        },
+                        "description": "",
+                        "title": "FieldOfView2D",
+                        "content": "<p>A sphere of influence representing the sight of a node in the Euclidean world.<init>\nA sphere of influence representing the sight of a node in the Euclidean world.<\/p>\n"
                       }]
                     }
-                  }
+                  },
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/model",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "influencesphere",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere"
+                    },
+                    "description": "",
+                    "title": "it.unibo.alchemist.model.influencesphere",
+                    "content": ""
+                  }]
                 },
                 "BiochemistryIncarnation": {
                   "ownKey": "BiochemistryIncarnation",
@@ -6941,7 +6918,7 @@
                             },
                             "description": "",
                             "title": "Continuous2DEnvironment",
-                            "content": "<p><init><\/p>\n<p>makePosition<\/p>\n"
+                            "content": "<p>Implementation of EuclideanPhysics2DEnvironment<init>\nImplementation of EuclideanPhysics2DEnvironment\nshapeFactory\nA factory of shapes compatible with this environment.\ngetNodesWithin\nGets all nodes whose shape.intersect is true for the given shape.\ngetHeading\nGets the heading of a node as a direction vector.\nsetHeading\nSets the heading of a node\ngetShape\nGets the shape of a node relatively to its position and heading in the environment.\nnodeAdded\nKeeps track of the largest diameter of the shapes.\nnodeRemoved\n{@inheritDoc}\nmoveNodeToPosition\nMoves the node only if it doesn't collide with others.\nnodeShouldBeAdded\nA node should be added only if it doesn't collide with already existing nodes.\nmakePosition\nCreates an euclidean position from the given coordinates.\ncanNodeFitPosition\nWhether or not a node can be placed in a position.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "Continuous2DObstacles": {
@@ -7038,22 +7015,6 @@
                             "description": "",
                             "title": "MuseumHall",
                             "content": "<p><init><\/p>\n<p>toString<\/p>\n<p>moveNode<\/p>\n"
-                          }]
-                        },
-                        "EuclideanPhysics2DEnvironmentImpl": {
-                          "ownKey": "EuclideanPhysics2DEnvironmentImpl",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/environments",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "EuclideanPhysics2DEnvironmentImpl",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/EuclideanPhysics2DEnvironmentImpl"
-                            },
-                            "description": "",
-                            "title": "EuclideanPhysics2DEnvironmentImpl",
-                            "content": "<p>Implementation of EuclideanPhysics2DEnvironment<init>\nImplementation of EuclideanPhysics2DEnvironment\nshapeFactory\nA factory of shapes compatible with this environment.\ngetNodesWithin\nGets all nodes whose shape.intersect is true for the given shape.\ngetHeading\nGets the heading of a node as a direction vector.\nsetHeading\nSets the heading of a node\ngetShape\nGets the shape of a node relatively to its position and heading in the environment.\nnodeAdded\nKeeps track of the largest diameter of the shapes.\nnodeRemoved\n{@inheritDoc}\nmoveNodeToPosition\nMoves the node only if it doesn't collide with others.\nnodeShouldBeAdded\nA node should be added only if it doesn't collide with already existing nodes.\nmakePosition\nCreates an euclidean position from the given coordinates.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "Abstract2DEnvironment": {
@@ -7741,7 +7702,7 @@
                             },
                             "description": "",
                             "title": "CognitivePedestrian2D",
-                            "content": "<p><init><\/p>\n<p><init><\/p>\n<p><init><\/p>\n<p>env<\/p>\n<p>influencialPeople\nA list of all the pedestrians in the same environment who have an influence on this pedestrian.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of a cognitive pedestrian in the Euclidean world.<init><\/p>\n<p><init><\/p>\n<p><init>\nImplementation of a cognitive pedestrian in the Euclidean world.<\/p>\n<p>getShape\n{@inheritDoc}\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "AbstractNode": {
@@ -7760,38 +7721,6 @@
                             "content": "<p>This class realizes an abstract node. You may extend it to realize your own nodes.<init><\/p>\n<p>contains\n{@inheritDoc}\nhashCode<\/p>\n<p>getChemicalSpecies\n{@inheritDoc}\nequals<\/p>\n<p>setConcentration\n{@inheritDoc}\ntoString\n{@inheritDoc}\ngetId<\/p>\n<p>compareTo<\/p>\n<p>getShape\nOverride to provide a different shape than the default adimensional one.\naddReaction<\/p>\n<p>cloneNode\nDefault implementation fails: override correctly calling the constructor.\nremoveConcentration\n{@inheritDoc}\ngetReactions<\/p>\n<p>getConcentration\n{@inheritDoc}\niterator<\/p>\n<p>getContents\n{@inheritDoc}\nforEach<\/p>\n<p>spliterator<\/p>\n<p>removeReaction<\/p>\n"
                           }]
                         },
-                        "AbstractHomogeneousPedestrian": {
-                          "ownKey": "AbstractHomogeneousPedestrian",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/nodes",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "AbstractHomogeneousPedestrian",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractHomogeneousPedestrian"
-                            },
-                            "description": "",
-                            "title": "AbstractHomogeneousPedestrian",
-                            "content": "<p><init><\/p>\n<p>membershipGroup\nThe group this pedestrian belongs to.\nwalkingSpeed\nThe speed at which the pedestrian moves if it's walking.\nrunningSpeed\nThe speed at which the pedestrian moves if it's running.\ncreateT<\/p>\n<p>shuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
-                          }]
-                        },
-                        "AbstractCognitivePedestrian": {
-                          "ownKey": "AbstractCognitivePedestrian",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/nodes",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "AbstractCognitivePedestrian",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractCognitivePedestrian"
-                            },
-                            "description": "",
-                            "title": "AbstractCognitivePedestrian",
-                            "content": "<p><init><\/p>\n<p>env<\/p>\n<p>rg<\/p>\n<p>dangerBelief\nValue between 0 and 1 representing the current belief of the situation dangerousness for this pedestrian.\nfear\nValue between 0 and 1 representing the level of fear of this pedestrian.\ncognitiveCharacteristics\nThe list of all the cognitive characteristics of this pedestrian.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
-                          }]
-                        },
                         "IntegerNode": {
                           "ownKey": "IntegerNode",
                           "ownPages": [{
@@ -7806,22 +7735,6 @@
                             "description": "",
                             "title": "IntegerNode",
                             "content": "<p><init>\nCreate a new integer node.<\/p>\n"
-                          }]
-                        },
-                        "AbstractHeterogeneousPedestrian": {
-                          "ownKey": "AbstractHeterogeneousPedestrian",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/nodes",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "AbstractHeterogeneousPedestrian",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractHeterogeneousPedestrian"
-                            },
-                            "description": "",
-                            "title": "AbstractHeterogeneousPedestrian",
-                            "content": "<p><init><\/p>\n<p>compliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nwalkingSpeed\nThe speed at which the pedestrian moves if it's walking.\nrunningSpeed\nThe speed at which the pedestrian moves if it's running.\nage\nThe age of this pedestrian.\ngender\nThe gender of this pedestrian.\nprobabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "EnvironmentNodeImpl": {
@@ -7936,6 +7849,38 @@
                             "content": "<p>Implementation of a circular deformable cell.<init>\nCreate a circular deformable cell of maxDiam = maxDiameter and minDiam = deformability * maxDiam.<\/p>\n<p>getMaxRadius<\/p>\n<p>getMaxDiameter<\/p>\n"
                           }]
                         },
+                        "HomogeneousPedestrianImpl": {
+                          "ownKey": "HomogeneousPedestrianImpl",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/nodes",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "HomogeneousPedestrianImpl",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/HomogeneousPedestrianImpl"
+                            },
+                            "description": "",
+                            "title": "HomogeneousPedestrianImpl",
+                            "content": "<p>Implementation of a basic pedestrian.<init>\nImplementation of a basic pedestrian.\nmembershipGroup\nThe group this pedestrian belongs to.\nwalkingSpeed\nThe speed at which the pedestrian moves if it's walking.\nrunningSpeed\nThe speed at which the pedestrian moves if it's running.\nsenses\nThe list of influence spheres belonging to this pedestrian.\ncreateT<\/p>\n<p>speed\nThe speed at which the pedestrian is moving.\ninfluencialPeople\nA list of all the pedestrians inside at least one of the sensory spheres of this pedestrian.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          }]
+                        },
+                        "CognitivePedestrianImpl": {
+                          "ownKey": "CognitivePedestrianImpl",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/nodes",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "CognitivePedestrianImpl",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/CognitivePedestrianImpl"
+                            },
+                            "description": "",
+                            "title": "CognitivePedestrianImpl",
+                            "content": "<p>Implementation of a cognitive pedestrian.<init>\nImplementation of a cognitive pedestrian.<\/p>\n<p>speed\nThe speed at which the pedestrian is moving.\ndangerBelief\nValue between 0 and 1 representing the current belief of the situation dangerousness for this pedestrian.\nfear\nValue between 0 and 1 representing the level of fear of this pedestrian.\ncognitiveCharacteristics\nThe list of all the cognitive characteristics of this pedestrian.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          }]
+                        },
                         "HeterogeneousPedestrian2D": {
                           "ownKey": "HeterogeneousPedestrian2D",
                           "ownPages": [{
@@ -7949,7 +7894,23 @@
                             },
                             "description": "",
                             "title": "HeterogeneousPedestrian2D",
-                            "content": "<p><init><\/p>\n<p><init><\/p>\n<p><init><\/p>\n<p>shuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<init><\/p>\n<p><init><\/p>\n<p><init>\nImplementation of an heterogeneous pedestrian in the Euclidean world.<\/p>\n<p>getShape\n{@inheritDoc}\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          }]
+                        },
+                        "HeterogeneousPedestrianImpl": {
+                          "ownKey": "HeterogeneousPedestrianImpl",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/nodes",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "HeterogeneousPedestrianImpl",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/HeterogeneousPedestrianImpl"
+                            },
+                            "description": "",
+                            "title": "HeterogeneousPedestrianImpl",
+                            "content": "<p>Implementation of an heterogeneous pedestrian.<init>\nImplementation of an heterogeneous pedestrian.\ncompliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nwalkingSpeed\nThe speed at which the pedestrian moves if it's walking.\nrunningSpeed\nThe speed at which the pedestrian moves if it's running.\nage\nthe age of this pedestrian.\ngender\nthe gender of this pedestrian\nprobabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "CellNodeImpl": {
@@ -7981,7 +7942,7 @@
                             },
                             "description": "",
                             "title": "HomogeneousPedestrian2D",
-                            "content": "<p><init><\/p>\n<p>shuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of a basic pedestrian in the Euclidean world.<init>\nImplementation of a basic pedestrian in the Euclidean world.<\/p>\n<p>getShape\n{@inheritDoc}\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         }
                       },
@@ -8062,7 +8023,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.utils",
-                        "content": ""
+                        "content": "<p>makePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment\ntimes\nMultiply each coordinate of this position by a number.\ndiv\nDivide each coordinate of this position by a number.\nsurrounding\nCreate a list of points equally distributed in the circle of given radius with center in this position.\nrotate\nPerform the rotation of a position.\nnextDouble\nGenerate a random double between the given bounds.\ndirection\nGenerate a random Euclidean direction.\nposition\nGenerate a random Euclidean position.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "layers": {
@@ -8081,7 +8042,7 @@
                             },
                             "description": "",
                             "title": "BidimensionalGaussianLayer",
-                            "content": "<p>A Layer based on a 2D gaussian function and an optional baseline value.<init>\nA Layer based on a 2D gaussian function and an optional baseline value.\nfunction\nThe function on which the layer is based.\ngetValue<\/p>\n"
+                            "content": "<p>A Layer based on a 2D gaussian function and an optional baseline value.<init>\nA Layer based on a 2D gaussian function and an optional baseline value.\nfunction\nThe function on which the layer is based.\ncenterX<\/p>\n<p>centerY<\/p>\n<p>getValue<\/p>\n"
                           }]
                         },
                         "BiomolGradientLayer": {
@@ -8407,7 +8368,7 @@
                             },
                             "description": "",
                             "title": "SteeringBehavior",
-                            "content": "<p>Reaction representing the steering behaviors of a pedestrian.<init>\nReaction representing the steering behaviors of a pedestrian.<\/p>\n<p>cloneOnNewNode<\/p>\n<p>getRate<\/p>\n<p>updateInternalStatus<\/p>\n<p>execute<\/p>\n"
+                            "content": "<p>Reaction representing the steering behavior of a pedestrian.<init>\nReaction representing the steering behavior of a pedestrian.<\/p>\n<p>cloneOnNewNode<\/p>\n<p>getRate<\/p>\n<p>updateInternalStatus<\/p>\n<p>execute<\/p>\n"
                           }]
                         },
                         "BiochemicalReaction": {
@@ -8424,6 +8385,54 @@
                             "description": "",
                             "title": "BiochemicalReaction",
                             "content": "<p>A biochemical Reaction.<init><\/p>\n<p>cloneOnNewNode<\/p>\n<p>execute<\/p>\n<p>setConditions<\/p>\n"
+                          }]
+                        },
+                        "PriorityBlendedSteering": {
+                          "ownKey": "PriorityBlendedSteering",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/reactions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "PriorityBlendedSteering",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/PriorityBlendedSteering"
+                            },
+                            "description": "",
+                            "title": "PriorityBlendedSteering",
+                            "content": "<p>A priority steering between actions of the same type which are then blended together.<init>\nA priority steering between actions of the same type which are then blended together.<\/p>\n"
+                          }]
+                        },
+                        "BlendedSteering": {
+                          "ownKey": "BlendedSteering",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/reactions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "BlendedSteering",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/BlendedSteering"
+                            },
+                            "description": "",
+                            "title": "BlendedSteering",
+                            "content": "<p>Steering behavior which sums all the actions with a different weight based on their target distance.<init>\nSteering behavior which sums all the actions with a different weight based on their target distance.<\/p>\n"
+                          }]
+                        },
+                        "PrioritySteering": {
+                          "ownKey": "PrioritySteering",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/reactions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "PrioritySteering",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/PrioritySteering"
+                            },
+                            "description": "",
+                            "title": "PrioritySteering",
+                            "content": "<p>Steering behavior where only the action whose target is the nearest to the current pedestrian position is executed.<init>\nSteering behavior where only the action whose target is the nearest to the current pedestrian position is executed.<\/p>\n"
                           }]
                         },
                         "CognitiveBehavior": {
@@ -9022,22 +9031,6 @@
                             "content": "<p>Class to retain backwards compatibility with the Alchemist XML loader.<init><\/p>\n"
                           }]
                         },
-                        "utils": {
-                          "ownKey": "utils",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/actions",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "utils",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/utils"
-                            },
-                            "description": "",
-                            "title": "it.unibo.alchemist.model.implementations.actions.utils",
-                            "content": "<p>makePosition\nCreate a position from an array of double representing the coordinates of the point\ntimes\nMultiply each coordinate of this position by a number.\nsurrounding\nCreate a list of points equally distributed in the circle of given radius with center in this position.\nrotate\nPerform the rotation of a position.\nnextDouble\nGenerate a random double between the given bounds.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
-                          }]
-                        },
                         "AbstractRandomizableAction": {
                           "ownKey": "AbstractRandomizableAction",
                           "ownPages": [{
@@ -9227,7 +9220,7 @@
                             },
                             "description": "",
                             "title": "GradientSteeringAction",
-                            "content": "<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<init>\nGeneric implementation of an action influenced by the concentration of a given molecule in the environment.<\/p>\n"
+                            "content": "<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<init>\nGeneric implementation of an action influenced by the concentration of a given molecule in the environment.<\/p>\n<p>getDestination<\/p>\n"
                           }]
                         },
                         "AbstractConfigurableMoveNode": {
@@ -9292,6 +9285,104 @@
                             "description": "",
                             "title": "SetLocalMoleculeConcentration",
                             "content": "<p><init><\/p>\n<p>execute<\/p>\n<p>getContext<\/p>\n<p>cloneAction<\/p>\n"
+                          }]
+                        },
+                        "steeringstrategies": {
+                          "ownKey": "steeringstrategies",
+                          "childrenPages": {
+                            "DistanceWeighted": {
+                              "ownKey": "DistanceWeighted",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/implementations/actions/steeringstrategies",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "DistanceWeighted",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/DistanceWeighted"
+                                },
+                                "description": "",
+                                "title": "DistanceWeighted",
+                                "content": "<p>Weighted steering logic where the weight of each steering action is\nthe inverse of its distance from the target.<init>\nWeighted steering logic where the weight of each steering action is\nthe inverse of its distance from the target.<\/p>\n"
+                              }]
+                            },
+                            "Weighted": {
+                              "ownKey": "Weighted",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/implementations/actions/steeringstrategies",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "Weighted",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Weighted"
+                                },
+                                "description": "",
+                                "title": "Weighted",
+                                "content": "<p>Steering logic where each steering action is associated to a weight\nand the final computed position is their weighted sum.<init>\nSteering logic where each steering action is associated to a weight\nand the final computed position is their weighted sum.<\/p>\n<p>computeNextPosition\nComputes the next position starting from the steering actions the pedestrian obey to.\ncomputeTarget\nComputes the target to reach starting from the steering actions the pedestrian obey to.<\/p>\n"
+                              }]
+                            },
+                            "Nearest": {
+                              "ownKey": "Nearest",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/implementations/actions/steeringstrategies",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "Nearest",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Nearest"
+                                },
+                                "description": "",
+                                "title": "Nearest",
+                                "content": "<p>Steering logic where only the steering action and the group steering action (if present) whose target is\nthe nearest to the current pedestrian position is taken into consideration.<init>\nSteering logic where only the steering action and the group steering action (if present) whose target is\nthe nearest to the current pedestrian position is taken into consideration.<\/p>\n"
+                              }]
+                            },
+                            "Filtered": {
+                              "ownKey": "Filtered",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/implementations/actions/steeringstrategies",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "Filtered",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Filtered"
+                                },
+                                "description": "",
+                                "title": "Filtered",
+                                "content": "<p>Steering logic in which a filter is applied to the steering actions\nin order to execute another steering logic with only some of these.<init>\nSteering logic in which a filter is applied to the steering actions\nin order to execute another steering logic with only some of these.<\/p>\n<p>computeNextPosition\nComputes the next position starting from the steering actions the pedestrian obey to.<\/p>\n"
+                              }]
+                            },
+                            "TypeBased": {
+                              "ownKey": "TypeBased",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/implementations/actions/steeringstrategies",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "TypeBased",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/TypeBased"
+                                },
+                                "description": "",
+                                "title": "TypeBased",
+                                "content": "<p>Steering strategy which combines for each type of steering action\nonly the ones with the target nearest to the current pedestrian position.<init>\nSteering strategy which combines for each type of steering action\nonly the ones with the target nearest to the current pedestrian position.<\/p>\n"
+                              }]
+                            }
+                          },
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "steeringstrategies",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies"
+                            },
+                            "description": "",
+                            "title": "it.unibo.alchemist.model.implementations.actions.steeringstrategies",
+                            "content": "<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.<\/p>\n"
                           }]
                         },
                         "LsaDeleteNodeAction": {
@@ -9502,6 +9593,22 @@
                             "content": "<p>Represent the action of add a junction between a neighbor and the current node. <br> This action only create the junction reference inside the neighbor, the current node totally ignore that a junction has been created. <br> This is a part of the junction creation process. <br> See AddJunctionInCell for the other part of the process<init><\/p>\n<p>toString<\/p>\n<p>execute\nIf no target node is given DO NOTHING. The junction can not be created.\nexecute\nCreate the junction that links the target node and the node when this action is executed.\ncloneAction<\/p>\n<p>getNode<\/p>\n"
                           }]
                         },
+                        "Cohesion": {
+                          "ownKey": "Cohesion",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "Cohesion",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Cohesion"
+                            },
+                            "description": "",
+                            "title": "Cohesion",
+                            "content": "<p>Move the agent towards the other members of his group.<init>\nMove the agent towards the other members of his group.<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.\ngetDestination<\/p>\n"
+                          }]
+                        },
                         "AddJunctionInCell": {
                           "ownKey": "AddJunctionInCell",
                           "ownPages": [{
@@ -9516,6 +9623,22 @@
                             "description": "",
                             "title": "AddJunctionInCell",
                             "content": "<p>Represent the action of add a junction between the current node and a neighbor. <br> This action only create the junction reference inside this node, the neighbor totally ignore that a junction has been created. <br> This is a part of the junction creation process. <br> See AddJunctionInNeighbor for the other part of the process<init><\/p>\n<p>toString<\/p>\n<p>execute\nIf no target node is given DO NOTHING. The junction can not be created.\nexecute\nCreate the junction that links the node where this action is executed and the target node.\ncloneAction<\/p>\n<p>getNode<\/p>\n"
+                          }]
+                        },
+                        "Separation": {
+                          "ownKey": "Separation",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "Separation",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Separation"
+                            },
+                            "description": "",
+                            "title": "Separation",
+                            "content": "<p>Move the agent away from the pedestrians near to him.<init>\nMove the agent away from the pedestrians near to him.<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.\ngetDestination<\/p>\n"
                           }]
                         },
                         "LsaAllNeighborsAction": {
@@ -9548,6 +9671,22 @@
                             "description": "",
                             "title": "BrownianMove",
                             "content": "<p>Moves the node randomly.<init><\/p>\n<p>cloneAction<\/p>\n<p>getNextPosition<\/p>\n"
+                          }]
+                        },
+                        "Combine": {
+                          "ownKey": "Combine",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "Combine",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Combine"
+                            },
+                            "description": "",
+                            "title": "Combine",
+                            "content": "<p>Combination of multiple steering actions.<init>\nCombination of multiple steering actions.<\/p>\n<p>getDestination<\/p>\n"
                           }]
                         },
                         "LsaCountNeighborsAction": {
@@ -9595,7 +9734,7 @@
                             },
                             "description": "",
                             "title": "Wander",
-                            "content": "<p>Give the impression of a random walk through the environment.<init>\nGive the impression of a random walk through the environment.<\/p>\n"
+                            "content": "<p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<init>\nGive the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<\/p>\n<p>getDestination<\/p>\n"
                           }]
                         },
                         "SAPEREAgent": {
@@ -9774,6 +9913,22 @@
                             "content": "<p>This class provides a chemotaxis implementation for SAPERE, namely, an agent able to move a molecule towards a specific node.<init>\nBuilds a new SAPEREChemotaxis.<\/p>\n<p>execute<\/p>\n"
                           }]
                         },
+                        "CollisionAvoidance": {
+                          "ownKey": "CollisionAvoidance",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "CollisionAvoidance",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/CollisionAvoidance"
+                            },
+                            "description": "",
+                            "title": "CollisionAvoidance",
+                            "content": "<p>Move the agent avoiding potential obstacles in its path.<init>\nMove the agent avoiding potential obstacles in its path.<\/p>\n<p>getDestination<\/p>\n"
+                          }]
+                        },
                         "LsaRandomNeighborAction": {
                           "ownKey": "LsaRandomNeighborAction",
                           "ownPages": [{
@@ -9868,22 +10023,6 @@
                             "description": "",
                             "title": "AbstractLocalAction",
                             "content": "<p>getContext<\/p>\n"
-                          }]
-                        },
-                        "Blended": {
-                          "ownKey": "Blended",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/actions",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "Blended",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Blended"
-                            },
-                            "description": "",
-                            "title": "Blended",
-                            "content": "<p>Combination of multiple steering actions.<init>\nCombination of multiple steering actions.<\/p>\n"
                           }]
                         },
                         "CrowdSteeringService": {

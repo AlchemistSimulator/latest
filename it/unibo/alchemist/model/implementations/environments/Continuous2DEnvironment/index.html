@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"8.3.1-dev03+731f9d21"};
+    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"8.3.1-dev19+3f6e4313"};
 </script>
 
 
@@ -66,9 +66,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/editorial_main.css"/>
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/editorial_orchidCustomizations.css"/>
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/orchidSearch.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/orchidSearch.css"/>
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"/>
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"/>
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"/>
@@ -127,11 +127,27 @@
     </code>
 </p>
 <div class="class-description" id="description">
+<p>Implementation of EuclideanPhysics2DEnvironment</p>
 
 </div>
 
 
 
+
+
+<h2 id="fields">Fields</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__open_shapeFactory__Euclidean2DShapeFactory">
+        <code>
+        open shapeFactory: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShapeFactory">Euclidean2DShapeFactory</a>
+        </code>
+    </div>
+    <div class="panel-body"><p>A factory of shapes compatible with this environment.</p>
+</div>
+</div>
 
 
 
@@ -148,7 +164,8 @@
         constructor()
         </code>
     </div>
-    <div class="panel-body"></div>
+    <div class="panel-body"><p>Implementation of EuclideanPhysics2DEnvironment</p>
+</div>
 
     
 <div class="panel-body">
@@ -169,12 +186,376 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_makePosition_coordinates__Number___Euclidean2DPosition">
+    <div class="panel-heading" id="method__open_fun_getNodesWithin_shape__Euclidean2DShape___List">
         <code>
-        fun makePosition(coordinates: Number): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        open fun getNodesWithin(shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>): List
         </code>
     </div>
-    <div class="panel-body"></div>
+    <div class="panel-body"><p>Gets all nodes whose shape.intersect is true for the given shape.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
+        </code>
+        
+            <br><br>
+            <div><p>the shape</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        List
+        </code>
+    </div>
+    <div><p>the set of nodes colliding with the given shape</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_getHeading_node__Node____ERROR_CLASS_">
+        <code>
+        open fun getHeading(node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Gets the heading of a node as a direction vector.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
+        </code>
+        
+            <br><br>
+            <div><p>The node</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>The heading of the given node</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_setHeading_node__Node__direction__Euclidean2DPosition_">
+        <code>
+        open fun setHeading(node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, direction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>)
+        </code>
+    </div>
+    <div class="panel-body"><p>Sets the heading of a node</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
+        </code>
+        
+            <br><br>
+            <div><p>The node</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        direction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        </code>
+        
+            <br><br>
+            <div><p>The direction vector.</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_getShape_node__Node___Euclidean2DShape">
+        <code>
+        open fun getShape(node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
+        </code>
+    </div>
+    <div class="panel-body"><p>Gets the shape of a node relatively to its position and heading in the environment.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
+        </code>
+        
+            <br><br>
+            <div><p>The node</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
+        </code>
+    </div>
+    <div><p>Its shape</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_nodeAdded_node__Node__position__Euclidean2DPosition__neighborhood__Neighborhood_">
+        <code>
+        protected open fun nodeAdded(node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, position: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, neighborhood: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Neighborhood">Neighborhood</a>)
+        </code>
+    </div>
+    <div class="panel-body"><p>Keeps track of the largest diameter of the shapes.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        position: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        neighborhood: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Neighborhood">Neighborhood</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_nodeRemoved_node__Node__neighborhood__Neighborhood____ERROR_CLASS_">
+        <code>
+        protected open fun nodeRemoved(node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, neighborhood: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Neighborhood">Neighborhood</a>): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>{@inheritDoc}</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        neighborhood: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Neighborhood">Neighborhood</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_moveNodeToPosition_node__Node__newpos__Euclidean2DPosition_">
+        <code>
+        open fun moveNodeToPosition(node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, newpos: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>)
+        </code>
+    </div>
+    <div class="panel-body"><p>Moves the node only if it doesn't collide with others.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        newpos: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_nodeShouldBeAdded_node__Node__position__Euclidean2DPosition___Boolean">
+        <code>
+        protected open fun nodeShouldBeAdded(node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, position: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>A node should be added only if it doesn't collide with already existing nodes.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        position: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Boolean
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_makePosition_coordinates__Number____ERROR_CLASS_">
+        <code>
+        open fun makePosition(coordinates: Number): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Creates an euclidean position from the given coordinates.</p>
+</div>
 
     
 
@@ -189,6 +570,10 @@
         coordinates: Number
         </code>
         
+            <br><br>
+            <div><p>coordinates array</p>
+</div>
+        
     </li>
 
 </ul>
@@ -199,7 +584,66 @@
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div><p>Euclidean2DPosition</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_canNodeFitPosition_node__Node__position__Euclidean2DPosition____ERROR_CLASS_">
+        <code>
+        open fun canNodeFitPosition(node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, position: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Whether or not a node can be placed in a position.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
+        </code>
+        
+            <br><br>
+            <div><pre><code>the node to move.
+</code></pre>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        position: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        </code>
+        
+            <br><br>
+            <div><pre><code>the position you want to move the node to.
+</code></pre>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
         </code>
     </div>
     <div></div>
@@ -207,6 +651,164 @@
 
 </div>
 
+
+
+
+    <h2 id="extensions">Extensions</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun__T__P___P__Environment.makePosition_coords__Array___P">
+        <code>
+        fun &lt;T, P : P&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>.makePosition(coords: Array): P
+        </code>
+    </div>
+    <div class="panel-body"><p>Create a position from an array of double representing the coordinates of the point</p>
+</div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        coords: Array
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        P
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun__T__P___P__Environment.origin____P">
+        <code>
+        fun &lt;T, P : P&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>.origin(): P
+        </code>
+    </div>
+    <div class="panel-body"><p>Create a position corresponding to the origin of this environment</p>
+</div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        P
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun__R__Iterable.shuffled_rg___ERROR_CLASS____Iterable">
+        <code>
+        fun &lt;R&gt; Iterable.shuffled(rg: <ERROR CLASS>): Iterable
+        </code>
+    </div>
+    <div class="panel-body"><p><a href="https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135">Fisher–Yates shuffle algorithm</a>
+using Apache random number generator. More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on Wikipedia</a>.</p>
+</div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        Iterable
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        rg: <ERROR CLASS>
+        </code>
+        
+            <br><br>
+            <div><pre><code>the simulation {@link RandomGenerator}.
+</code></pre>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Iterable
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
 
 
 
@@ -843,7 +1445,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/utils">it.unibo.alchemist.model.implementations.actions.utils</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies">it.unibo.alchemist.model.implementations.actions.steeringstrategies</a>
     </li>
     
 
@@ -1011,15 +1613,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory">it.unibo.alchemist.model.influencesphere.sensory</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/shapes">it.unibo.alchemist.model.influencesphere.shapes</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere">it.unibo.alchemist.model.influencesphere</a>
     </li>
     
 
@@ -1164,14 +1758,6 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractCognitivePedestrian">AbstractCognitivePedestrian</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/conditions/AbstractCondition">AbstractCondition</a>
     </li>
     
@@ -1213,30 +1799,6 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gpsload/api/AbstractGPSTimeAlignment">AbstractGPSTimeAlignment</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/AbstractGroup">AbstractGroup</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractHeterogeneousPedestrian">AbstractHeterogeneousPedestrian</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractHomogeneousPedestrian">AbstractHomogeneousPedestrian</a>
     </li>
     
 
@@ -1477,6 +2039,14 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gpsload/api/AlignToTime">AlignToTime</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Alone">Alone</a>
     </li>
     
 
@@ -1844,7 +2414,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Blended">Blended</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/BlendedSteering">BlendedSteering</a>
     </li>
     
 
@@ -2108,6 +2678,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/CognitivePedestrianImpl">CognitivePedestrianImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/CognitiveSpec">CognitiveSpec</a>
     </li>
     
@@ -2116,7 +2694,31 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Cohesion">Cohesion</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/CollisionAvoidance">CollisionAvoidance</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/ColorChannel">ColorChannel</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Combine">Combine</a>
     </li>
     
 
@@ -2452,6 +3054,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/DistanceWeighted">DistanceWeighted</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/DoubleDimension">DoubleDimension</a>
     </li>
     
@@ -2668,7 +3278,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/EuclideanPhysics2DEnvironmentImpl">EuclideanPhysics2DEnvironmentImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithObstacles">EuclideanPhysics2DEnvironmentWithObstacles</a>
     </li>
     
 
@@ -2780,14 +3390,6 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Family">Family</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/Fear">Fear</a>
     </li>
     
@@ -2796,7 +3398,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/FieldOfView2D">FieldOfView2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/FieldOfView2D">FieldOfView2D</a>
     </li>
     
 
@@ -2813,6 +3415,14 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/projectview/controller/FileNameDialogController">FileNameDialogController</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Filtered">Filtered</a>
     </li>
     
 
@@ -2980,6 +3590,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/GenericGroup">GenericGroup</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/conditions/GenericMoleculePresent">GenericMoleculePresent</a>
     </li>
     
@@ -3012,23 +3630,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/shapes/GeometricShape">GeometricShape</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/GeometricShape">GeometricShape</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/shapes/GeometricShape2D">GeometricShape2D</a>
     </li>
     
 
@@ -3108,7 +3710,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/HearingField2D">HearingField2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/GroupSteering">GroupSteering</a>
     </li>
     
 
@@ -3148,7 +3750,23 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/HeterogeneousPedestrianImpl">HeterogeneousPedestrianImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/HomogeneousPedestrian2D">HomogeneousPedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/HomogeneousPedestrianImpl">HomogeneousPedestrianImpl</a>
     </li>
     
 
@@ -3284,7 +3902,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/InfluenceSphere">InfluenceSphere</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/InfluenceSphere">InfluenceSphere</a>
     </li>
     
 
@@ -3292,7 +3910,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/sensory/InfluenceSphere2D">InfluenceSphere2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/influencesphere/InfluenceSphere2D">InfluenceSphere2D</a>
     </li>
     
 
@@ -3940,6 +4558,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Nearest">Nearest</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Neighborhood">Neighborhood</a>
     </li>
     
@@ -3989,14 +4615,6 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gpsload/api/NoAlignment">NoAlignment</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/NoGroup">NoGroup</a>
     </li>
     
 
@@ -4140,6 +4758,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian2D">Pedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/PhysicsEnvironment">PhysicsEnvironment</a>
     </li>
     
@@ -4221,6 +4847,22 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/variables/PrintableVariable">PrintableVariable</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/PriorityBlendedSteering">PriorityBlendedSteering</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/PrioritySteering">PrioritySteering</a>
     </li>
     
 
@@ -4620,6 +5262,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Separation">Separation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SetLocalMoleculeConcentration">SetLocalMoleculeConcentration</a>
     </li>
     
@@ -4860,6 +5510,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringStrategy">SteeringStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/layers/StepLayer">StepLayer</a>
     </li>
     
@@ -5012,6 +5670,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/TypeBased">TypeBased</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/expressions/implementations/UIDNode">UIDNode</a>
     </li>
     
@@ -5116,6 +5782,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Weighted">Weighted</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/cluster/WorkerSet">WorkerSet</a>
     </li>
     
@@ -5172,7 +5846,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 8.3.1-dev03+731f9d21. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 8.3.1-dev19+3f6e4313. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -5188,11 +5862,11 @@
 <!-- start:inject scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_util.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_main.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_util.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_main.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_orchidCustomizations.js"></script>
 <script src="https://unpkg.com/lunr/lunr.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/orchidSearch.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/orchidSearch.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
