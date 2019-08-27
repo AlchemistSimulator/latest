@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"8.3.1-dev1b+e961af59"};
+    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"8.3.1-dev1n+d67007e2"};
 </script>
 
 
@@ -57,8 +57,8 @@
 <!-- Resolved Page Template:  -->
 
 <!-- RESOURCE -->
-<!-- Class: com.eden.orchid.api.resources.resource.StringResource -->
-<!-- Source Filename: wiki/usage/maps/index.md -->
+<!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
+<!-- Source Filename: wiki/usage/maps.md -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
@@ -70,9 +70,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/editorial_main.css"/>
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/editorial_orchidCustomizations.css"/>
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/orchidSearch.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/orchidSearch.css"/>
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"/>
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"/>
 <!-- end:inject styles -->
@@ -118,7 +118,117 @@
             
                 
                     
-                        <p>Maps and GPS traces</p>
+                        <p>Alchemist is equipped with the ability to load and simulate on real-world maps.
+Navigation on maps can be done by using gps traces,
+by moving along roads (Alchemist relies on <a href="https://www.graphhopper.com/">GraphHopper</a> to provide directions),
+by interpolating gps traces with on-the-road-movements,
+or by ignoring the map information on just move as you would in a continuous space.</p>
+<h2 id="setting-up-a-map-environment">Setting up a map environment</h2>
+<p>In order to run simulations on real world maps, an appropriate environment must be selected.</p>
+<p>Currently, the only environment supporting maps is <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/OSMEnvironment">OSMEnvironment</a>.</p>
+<p>The only mandatory parameter is the <code>path</code> of the file with the map to be loaded. Accepts OSM maps of any format (xml, osm, pbf).
+Is possible define other optional parameter like:</p>
+<ol start="0">
+<li><code>approximation: Int</code> -&gt; the amount of ciphers of the IEEE 754 encoded position that may be discarded when comparing two positions, allowing a quicker retrieval of the route between two position, since the cache may already contain a similar route which can be considered to be the same route, according to the level of precision determined by this value</li>
+<li><code>onStreets: Boolean</code> -&gt; if true, the nodes will be placed on the street nearest to the desired position</li>
+<li><code>onlyOnStreets: Boolean</code> -&gt; if true, the nodes which are too far from a street will be simply discarded. If false, they will be placed anyway, in the original position</li>
+</ol>
+<p>The following example shows how to configure a simulation that loads data from an Openstreetmap file
+(OSM, XML and PBF formats are supported) located in the classpath folder <code>maps</code>:</p>
+<pre><code class="language-yaml">incarnation: protelis
+environment:
+  type: OSMEnvironment
+  parameters: [maps/foo.pbf]
+</code></pre>
+<h2 id="using-gps-traces-to-displace-nodes">Using GPS traces to displace nodes</h2>
+<p>GPS traces can be used to displace nodes on a map.
+In order to set the initial position of the nodes with the first position of the GPS traces,
+you need to use the displacement <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/FromGPSTrace">FromGPSTrace</a>.
+The displacement <code>FromGPSTrace</code> require the following parameters:</p>
+<ol start="0">
+<li>number of nodes to displace</li>
+<li>file with the GPS traces to use</li>
+<li>boolean that indicates if the list of GPS trace is cyclic.
+If <code>true</code> and the GPS traces are less than the number of nodes to be displaced,
+then the traces are cyclically re-used to displace nodes.</li>
+<li>a <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gpsload/api/GPSTimeAlignment">GPSTimeAlignment</a> to define how to align the time of all the GPS points of all GPS traces.
+There are present several strategy in the package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gpsload/api">it.unibo.alchemist.boundary.gpsload.api</a>
+and introduced in the following subsection.</li>
+</ol>
+<p>The following example places 1497 nodes with the first position of the GPS traces in the file <code>vcmuser.gpx</code>.
+The list of GPS traces isn't cyclic.
+The strategy to align time of all the GPS points is AlignTime
+in order to consider only the GPS points with attribute <code>time</code> greater than the specified one
+(in milliseconds from epoch).</p>
+<pre><code class="language-yaml">displacements:
+  - in:
+      type: FromGPSTrace
+      parameters: [1497, &quot;vcmuser.gpx&quot;, false, &quot;AlignToTime&quot;, 1365922800, false, false]
+</code></pre>
+<h3 id="strategy-to-align-time-of-gps-trace">Strategy to align time of GPS trace</h3>
+<p>The strategies available to align time of GPS trace are the following:</p>
+<ol start="0">
+<li>NoAlignment -&gt; No alignment is performed.</li>
+<li>AlignToFirstTrace -&gt; Aligns all traces at the start time of the first trace.
+If you have two traces, the first trace start with time = 2 and second point with time = 5,
+the second trace start with time = 4 and second point with time = 6,
+the result will be:
+<ul>
+<li>first trace -&gt; start with time = 0 and second point with time = 3</li>
+<li>second trace -&gt; start with time = 2 and second point with time = 4</li>
+</ul>
+</li>
+<li>AlignToSimulationTime -&gt; Aligns all traces at the initial simulation time.
+If you have two traces, the first trace start with time = 2 and second point with time = 5,
+the second trace start with time = 4 and second point with time = 6,
+the result will be:
+<ul>
+<li>first trace -&gt; start with time = 0 and second point with time = 3</li>
+<li>second trace -&gt; start with time = 0 and second point with time = 2</li>
+</ul>
+</li>
+<li>AlignToTime -&gt; Aligns the traces with the given time in seconds from Epoch.
+All points before such time will be discarded. All points after the provided time will
+be shifted back.
+If you have two traces, the first trace start with time = 2 and second point with time = 5,
+the second trace start with time = 4 and second point with time = 6, the given time is 3
+the result will be:
+<ul>
+<li>first trace -&gt; first point discarded and second point with time = 2</li>
+<li>second trace -&gt; start with time = 1 and second point with time = 3</li>
+</ul>
+</li>
+</ol>
+<h2 id="navigation">Navigation</h2>
+<p>As previous say there are several behavior in order to move the nodes in a environment with real-word map:</p>
+<ol start="0">
+<li>movement ignoring map information. A node move directly from start position to destination position:
+<img src="https://alchemistsimulator.github.io/latest/assets/media/usage/no_map_information.png" alt="No map information" /></li>
+<li>movement by using map information. A node move from start position to destination position using
+intermediate position in order to follow streets and avoid obstacle (like building):
+<img src="https://alchemistsimulator.github.io/latest/assets/media/usage/use_map_information.png" alt="Use map information" /></li>
+<li>movement by reproducing a GPS trace (action <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReproduceGPSTrace">ReproduceGPSTrace</a>).
+A node start to the first position of the GPS trace, than move to the next
+position of the trace until arrive to the last. The movement from a position to another is direct with a straight line:
+<img src="https://alchemistsimulator.github.io/latest/assets/media/usage/reproduce_gps_trace.png" alt="Reproduce GPS trace" /></li>
+<li>movement by interpolating the GPS trace with street data (action <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GPSTraceWalker">GPSTraceWalker</a>).
+A node start to the first position of the GPS trace,
+than move to the next position of the trace until arrive to the last. The movement from a position to another
+use map information to define intermediate position in order to follow streets and avoid obstacle (like building):
+<img src="https://alchemistsimulator.github.io/latest/assets/media/usage/interpolate_gps_trace_with_street_data.png" alt="Interpolate GPS trace with street data" /></li>
+</ol>
+<p>Both the actions <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReproduceGPSTrace">ReproduceGPSTrace</a> and <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GPSTraceWalker">GPSTraceWalker</a> require:
+0. the file with the GPS traces
+0. a boolean that indicate if the list of GPS trace is cyclic
+0. the strategy to align the attribute <code>time</code> of the GPS points of the GPS traces</p>
+<p>The following example show how it is possible define a program to follow GPS traces.</p>
+<pre><code class="language-yaml">programs:
+  - time-distribution: 0.1
+  type: Event
+  actions:
+    - type: ReproduceGPSTrace
+      parameters: [&quot;/vcmuser.gpx&quot;, false, &quot;AlignToTime&quot;, 1365922800, false, false]
+</code></pre>
 
                     
                 
@@ -5165,7 +5275,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 8.3.1-dev1b+e961af59. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 8.3.1-dev1n+d67007e2. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -5181,11 +5291,11 @@
 <!-- start:inject scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_util.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_main.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_util.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_main.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_orchidCustomizations.js"></script>
 <script src="https://unpkg.com/lunr/lunr.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/orchidSearch.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/orchidSearch.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
