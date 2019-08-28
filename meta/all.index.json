@@ -18,10 +18,10 @@
             "previous": {
               "path": "wiki/examples",
               "baseUrl": "https://alchemistsimulator.github.io/latest",
-              "fileName": "maps",
+              "fileName": "smartcam",
               "extension": "html",
               "usePrettyUrl": true,
-              "link": "https://alchemistsimulator.github.io/latest/wiki/examples/maps"
+              "link": "https://alchemistsimulator.github.io/latest/wiki/examples/smartcam"
             },
             "description": "",
             "title": "License",
@@ -99,12 +99,12 @@
                   "link": "https://alchemistsimulator.github.io/latest/wiki/examples/maps"
                 },
                 "next": {
-                  "path": "wiki",
+                  "path": "wiki/examples",
                   "baseUrl": "https://alchemistsimulator.github.io/latest",
-                  "fileName": "license",
+                  "fileName": "smartcam",
                   "extension": "html",
                   "usePrettyUrl": true,
-                  "link": "https://alchemistsimulator.github.io/latest/wiki/license"
+                  "link": "https://alchemistsimulator.github.io/latest/wiki/examples/smartcam"
                 },
                 "previous": {
                   "path": "wiki/examples",
@@ -149,6 +149,38 @@
                 "description": "",
                 "title": "With Scafi",
                 "content": "<p>With Scafi<\/p>\n"
+              }]
+            },
+            "smartcam": {
+              "ownKey": "smartcam",
+              "ownPages": [{
+                "reference": {
+                  "path": "wiki/examples",
+                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                  "fileName": "smartcam",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "https://alchemistsimulator.github.io/latest/wiki/examples/smartcam"
+                },
+                "next": {
+                  "path": "wiki",
+                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                  "fileName": "license",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "https://alchemistsimulator.github.io/latest/wiki/license"
+                },
+                "previous": {
+                  "path": "wiki/examples",
+                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                  "fileName": "maps",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "https://alchemistsimulator.github.io/latest/wiki/examples/maps"
+                },
+                "description": "",
+                "title": "Simulation examples - Smart Cameras",
+                "content": "<h3 id=\"basis\">Basis<\/h3>\n<p>We start by writing a basic yaml configuration to place 20 potential targets and 10 cameras in a 400 x 400 rectangular environment:<\/p>\n<pre><code class=\"language-yaml\">incarnation: protelis\n\nvariables:\n  NumHumans: &amp;NumHumans\n    formula: 20\n  NumCameras: &amp;NumCameras\n    formula: 10\n  EnvironmentSize: &amp;EnvironmentSize\n    formula: 400\n  HalfEnvironmentSize: &amp;HalfEnvironmentSize\n    formula: EnvironmentSize / 2\n  EnvironmentOrigin: &amp;EnvironmentOrigin\n    formula: -HalfEnvironmentSize\n\n\nenvironment:\n  type: Rectangular2DEnvironment\n  parameters: [*EnvironmentSize, *EnvironmentSize]\n\ndisplacements:\n  - in: # possible targets\n      type: Rectangle\n      parameters: [*NumHumans, *EnvironmentOrigin, *EnvironmentOrigin, *EnvironmentSize, *EnvironmentSize]\n    nodes:\n      type: CircleNode\n      parameters: [1]\n  - in: # cameras\n      type: Rectangle\n      parameters: [*NumCameras, *EnvironmentOrigin, *EnvironmentOrigin, *EnvironmentSize, *EnvironmentSize]\n    nodes:\n      type: ProtelisNode\n<\/code><\/pre>\n<p>Then we give cameras the ability to see other nodes. The <em>See<\/em> action requires the distance and angle of the field of view. Each time it is triggered, it writes all the nodes seen in the molecule <em>vision<\/em>.<\/p>\n<pre><code class=\"language-yaml\">incarnation: protelis\n\nvariables:\n  NumHumans: &amp;NumHumans\n    formula: 20\n  NumCameras: &amp;NumCameras\n    formula: 10\n  EnvironmentSize: &amp;EnvironmentSize\n    formula: 400\n  HalfEnvironmentSize: &amp;HalfEnvironmentSize\n    formula: EnvironmentSize / 2\n  EnvironmentOrigin: &amp;EnvironmentOrigin\n    formula: -HalfEnvironmentSize\n  CameraFoVAngle: &amp;CameraFoVAngle\n    formula: 60\n  CameraFoVDistance: &amp;CameraFoVDistance\n    formula: 20\n\nenvironment:\n  type: Rectangular2DEnvironment\n  parameters: [*EnvironmentSize, *EnvironmentSize]\n\nprograms:\n  - &amp;Camera\n    - time-distribution: 1\n      type: ChemicalReaction\n      actions:\n        - type: See\n          parameters: [*CameraFoVDistance, *CameraFoVAngle, vision]\n\ndisplacements:\n  - in: # possible targets\n      type: Rectangle\n      parameters: [*NumHumans, *EnvironmentOrigin, *EnvironmentOrigin, *EnvironmentSize, *EnvironmentSize]\n    nodes:\n      type: CircleNode\n      parameters: [1]\n  - in: # cameras\n      type: Rectangle\n      parameters: [*NumCameras, *EnvironmentOrigin, *EnvironmentOrigin, *EnvironmentSize, *EnvironmentSize]\n    nodes:\n      type: ProtelisNode\n    programs:\n      - *Camera\n<\/code><\/pre>\n<p>In this example we make humans move randomly. We also want to randomly toggle a <em>wanted<\/em> molecule in them, as to have a way to mark interesting targets that needs to be followed by the cameras. Every 50 seconds each human has a 1% probability to become <em>wanted<\/em>.<\/p>\n<pre><code class=\"language-yaml\">incarnation: protelis\n\nvariables:\n  HumanSpeed: &amp;HumanSpeed\n    formula: 1\n  NumHumans: &amp;NumHumans\n    formula: 20\n  NumCameras: &amp;NumCameras\n    formula: 10\n  EnvironmentSize: &amp;EnvironmentSize\n    formula: 400\n  HalfEnvironmentSize: &amp;HalfEnvironmentSize\n    formula: EnvironmentSize / 2\n  EnvironmentOrigin: &amp;EnvironmentOrigin\n    formula: -HalfEnvironmentSize\n  CameraFoVAngle: &amp;CameraFoVAngle\n    formula: 60\n  CameraFoVDistance: &amp;CameraFoVDistance\n    formula: 20\n\nenvironment:\n  type: Rectangular2DEnvironment\n  parameters: [*EnvironmentSize, *EnvironmentSize]\n\nprograms:\n  - &amp;Human\n    - time-distribution: 1\n      type: ChemicalReaction\n      actions:\n        - type: ZigZagMove\n          parameters: [*HalfEnvironmentSize, *HumanSpeed]\n    - time-distribution: 0.02\n      type: ChemicalReaction\n      actions:\n        - type: RandomlyToggleMolecule\n          parameters: [wanted, true, 0.01]\n  - &amp;Camera\n    - time-distribution: 1\n      type: ChemicalReaction\n      actions:\n        - type: See\n          parameters: [*CameraFoVDistance, *CameraFoVAngle, vision]\n\ndisplacements:\n  - in: # possible targets\n      type: Rectangle\n      parameters: [*NumHumans, *EnvironmentOrigin, *EnvironmentOrigin, *EnvironmentSize, *EnvironmentSize]\n    nodes:\n      type: CircleNode\n      parameters: [1]\n    programs:\n      - *Human\n  - in: # cameras\n      type: Rectangle\n      parameters: [*NumCameras, *EnvironmentOrigin, *EnvironmentOrigin, *EnvironmentSize, *EnvironmentSize]\n    nodes:\n      type: ProtelisNode\n    programs:\n      - *Camera\n<\/code><\/pre>\n<p>It is time for cameras to identify <em>wanted<\/em> targets so we add a <em>ExtractClosestVisibleNodeAtDistance<\/em> action in order to select the closest node to the center of the field of view.\nWe also specify the <em>wanted<\/em> molecule in the <em>See<\/em> action in order to filter only the interesting nodes.\nThen, at the condition that a <em>target<\/em> is found, we want the cameras to start following it, so we add the actions <em>FollowAtDistance<\/em> and <em>HeadTowardTarget<\/em>.<\/p>\n<pre><code class=\"language-yaml\">incarnation: protelis\n\nvariables:\n  HumanSpeed: &amp;HumanSpeed\n    formula: 1\n  NumHumans: &amp;NumHumans\n    formula: 20\n  NumCameras: &amp;NumCameras\n    formula: 10\n  EnvironmentSize: &amp;EnvironmentSize\n    formula: 400\n  HalfEnvironmentSize: &amp;HalfEnvironmentSize\n    formula: EnvironmentSize / 2\n  EnvironmentOrigin: &amp;EnvironmentOrigin\n    formula: -HalfEnvironmentSize\n  CameraFoVAngle: &amp;CameraFoVAngle\n    formula: 60\n  CameraFoVDistance: &amp;CameraFoVDistance\n    formula: 20\n  CameraSpeed: &amp;CameraSpeed\n    formula: 1\n  CameraAngularSpeed: &amp;CameraAngularSpeed\n    formula: 3\n  CameraDistanceFromTarget: &amp;CameraDistanceFromTarget\n    formula: 2 * CameraFoVDistance / 3\n\nenvironment:\n  type: Rectangular2DEnvironment\n  parameters: [*EnvironmentSize, *EnvironmentSize]\n\nprograms:\n  - &amp;Human\n    - time-distribution: 1\n      type: ChemicalReaction\n      actions:\n        - type: ZigZagMove\n          parameters: [*HalfEnvironmentSize, *HumanSpeed]\n    - time-distribution: 0.02\n      type: ChemicalReaction\n      actions:\n        - type: RandomlyToggleMolecule\n          parameters: [wanted, true, 0.01]\n  - &amp;Camera\n    - time-distribution: 1\n      type: ChemicalReaction\n      actions:\n        - type: See\n          parameters: [*CameraFoVDistance, *CameraFoVAngle, vision, wanted]\n        - type: ExtractClosestVisibleNodeAtDistance\n          parameters: [*CameraDistanceFromTarget, vision, target]\n    - time-distribution: 1\n      type: ChemicalReaction\n      conditions:\n        - type: ContainsMolecule\n          parameters: [target]\n      actions:\n        - type: HeadTowardTarget\n          parameters: [target, *CameraAngularSpeed]\n        - type: FollowAtDistance\n          parameters: [target, *CameraDistanceFromTarget, *CameraSpeed]\n\ndisplacements:\n  - in: # possible targets\n      type: Rectangle\n      parameters: [*NumHumans, *EnvironmentOrigin, *EnvironmentOrigin, *EnvironmentSize, *EnvironmentSize]\n    nodes:\n      type: CircleNode\n      parameters: [1]\n    programs:\n      - *Human\n  - in: # cameras\n      type: Rectangle\n      parameters: [*NumCameras, *EnvironmentOrigin, *EnvironmentOrigin, *EnvironmentSize, *EnvironmentSize]\n    nodes:\n      type: ProtelisNode\n    programs:\n      - *Camera\n<\/code><\/pre>\n<p>To conclude, we want the cameras to explore randomly and spin when no targets are detected. For this purpose we add another reaction with a <em>Spin<\/em> and <em>ZigZagMove<\/em> and with an <em>Else<\/em> condition which will be triggered when the conditions of the other reactions are not valid.<\/p>\n<pre><code class=\"language-yaml\">incarnation: protelis\n\nvariables:\n  HumanSpeed: &amp;HumanSpeed\n    formula: 1\n  NumHumans: &amp;NumHumans\n    formula: 20\n  NumCameras: &amp;NumCameras\n    formula: 10\n  EnvironmentSize: &amp;EnvironmentSize\n    formula: 400\n  HalfEnvironmentSize: &amp;HalfEnvironmentSize\n    formula: EnvironmentSize / 2\n  EnvironmentOrigin: &amp;EnvironmentOrigin\n    formula: -HalfEnvironmentSize\n  CameraFoVAngle: &amp;CameraFoVAngle\n    formula: 60\n  CameraFoVDistance: &amp;CameraFoVDistance\n    formula: 20\n  CameraSpeed: &amp;CameraSpeed\n    formula: 1\n  CameraAngularSpeed: &amp;CameraAngularSpeed\n    formula: 3\n  CameraDistanceFromTarget: &amp;CameraDistanceFromTarget\n    formula: 2 * CameraFoVDistance / 3\n\nenvironment:\n  type: Rectangular2DEnvironment\n  parameters: [*EnvironmentSize, *EnvironmentSize]\n\nprograms:\n  - &amp;Human\n    - time-distribution: 1\n      type: ChemicalReaction\n      actions:\n        - type: ZigZagMove\n          parameters: [*HalfEnvironmentSize, *HumanSpeed]\n    - time-distribution: 0.02\n      type: ChemicalReaction\n      actions:\n        - type: RandomlyToggleMolecule\n          parameters: [wanted, true, 0.01]\n  - &amp;Camera\n    - time-distribution: 1\n      type: ChemicalReaction\n      actions:\n        - type: See\n          parameters: [*CameraFoVDistance, *CameraFoVAngle, vision, wanted]\n        - type: ExtractClosestVisibleNodeAtDistance\n          parameters: [*CameraDistanceFromTarget, vision, target]\n    - time-distribution: 1\n      type: ChemicalReaction\n      conditions:\n        - type: ContainsMolecule\n          parameters: [target]\n      actions:\n        - type: HeadTowardTarget\n          parameters: [target, *CameraAngularSpeed]\n        - type: FollowAtDistance\n          parameters: [target, *CameraDistanceFromTarget, *CameraSpeed]\n    - time-distribution: 1\n      type: ChemicalReaction\n      conditions:\n        - type: Else\n          parameters:\n      actions:\n        - type: Spin\n          parameters: [*CameraAngularSpeed]\n        - type: ZigZagMove\n          parameters: [*HalfEnvironmentSize, *CameraSpeed]\n\ndisplacements:\n  - in: # possible targets\n      type: Rectangle\n      parameters: [*NumHumans, *EnvironmentOrigin, *EnvironmentOrigin, *EnvironmentSize, *EnvironmentSize]\n    nodes:\n      type: CircleNode\n      parameters: [1]\n    programs:\n      - *Human\n  - in: # cameras\n      type: Rectangle\n      parameters: [*NumCameras, *EnvironmentOrigin, *EnvironmentOrigin, *EnvironmentSize, *EnvironmentSize]\n    nodes:\n      type: ProtelisNode\n    programs:\n      - *Camera\n<\/code><\/pre>\n"
               }]
             },
             "protelis": {
@@ -708,7 +740,7 @@
         },
         "description": "",
         "title": "Wiki",
-        "content": "<html>\n <head><\/head>\n <body>\n  <h1 id=\"alchemist-simulator-user-guide\">Alchemist simulator user guide<\/h1> \n  <ul> \n   <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/simulator\">Understanding Alchemist<\/a> \n    <ul> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel\">The metamodel<\/a><\/li> \n    <\/ul> <\/li> \n   <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage\">Using Alchemist<\/a> \n    <ul> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/installation\">Requirements and installation<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/quickstart\">Quick start<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/yaml\">How to write simulations<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/gui\">Graphical interface<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry\">Biology and Biochemistry<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/protelis\">Protelis<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/sapere\">SAPERE<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/scafi\">Scafi<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/indoor\">Indoor environments<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/maps\">Maps and GPS traces<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/export\">Exporting data<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/batch\">Executing batches<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/grid\">Grid computing support<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/customization\">Writing custom components<\/a><\/li> \n    <\/ul> <\/li> \n   <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/examples\">Simulation examples<\/a> \n    <ul> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/examples/protelis\">With Protelis<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/examples/scafi\">With Scafi<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/examples/maps\">On maps<\/a><\/li> \n    <\/ul> <\/li> \n   <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/license\">License<\/a><\/li> \n  <\/ul> \n <\/body>\n<\/html>\n"
+        "content": "<html>\n <head><\/head>\n <body>\n  <h1 id=\"alchemist-simulator-user-guide\">Alchemist simulator user guide<\/h1> \n  <ul> \n   <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/simulator\">Understanding Alchemist<\/a> \n    <ul> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel\">The metamodel<\/a><\/li> \n    <\/ul> <\/li> \n   <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage\">Using Alchemist<\/a> \n    <ul> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/installation\">Requirements and installation<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/quickstart\">Quick start<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/yaml\">How to write simulations<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/gui\">Graphical interface<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry\">Biology and Biochemistry<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/protelis\">Protelis<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/sapere\">SAPERE<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/scafi\">Scafi<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/indoor\">Indoor environments<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/maps\">Maps and GPS traces<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/export\">Exporting data<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/batch\">Executing batches<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/grid\">Grid computing support<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/usage/customization\">Writing custom components<\/a><\/li> \n    <\/ul> <\/li> \n   <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/examples\">Simulation examples<\/a> \n    <ul> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/examples/protelis\">With Protelis<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/examples/scafi\">With Scafi<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/examples/maps\">On maps<\/a><\/li> \n     <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/examples/smartcam\">Smart Cameras<\/a><\/li> \n    <\/ul> <\/li> \n   <li><a href=\"https://alchemistsimulator.github.io/latest/wiki/license\">License<\/a><\/li> \n  <\/ul> \n <\/body>\n<\/html>\n"
       }]
     },
     "it": {
@@ -1659,7 +1691,23 @@
                             },
                             "description": "",
                             "title": "Effect",
-                            "content": "<p>getColorSummary<\/p>\n<p>apply\nApplies the effect.<\/p>\n"
+                            "content": "<p>getColorSummary<\/p>\n<p>apply\nApplies the effect.\napply\nApplies the effect.<\/p>\n"
+                          }]
+                        },
+                        "DrawSmartcam": {
+                          "ownKey": "DrawSmartcam",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/boundary/gui/effects",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "DrawSmartcam",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawSmartcam"
+                            },
+                            "description": "",
+                            "title": "DrawSmartcam",
+                            "content": "<p>Draws node's shapes and cameras' fields of view.<init>\nDraws node's shapes and cameras' fields of view.<\/p>\n<p>getColorSummary<\/p>\n<p>apply<\/p>\n"
                           }]
                         },
                         "EffectFactory": {
@@ -2282,6 +2330,22 @@
                         "description": "",
                         "title": "TimeStepMonitor",
                         "content": "<p><init>\nConstructor.<\/p>\n<p>finished<\/p>\n<p>initialized<\/p>\n<p>stepDone<\/p>\n"
+                      }]
+                    },
+                    "BoundariesDrawer": {
+                      "ownKey": "BoundariesDrawer",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/boundary/monitors",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "BoundariesDrawer",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/monitors/BoundariesDrawer"
+                        },
+                        "description": "",
+                        "title": "BoundariesDrawer",
+                        "content": "<p>Draws it.unibo.alchemist.model.interfaces.environments.Boundaries.<init>\nDraws it.unibo.alchemist.model.interfaces.environments.Boundaries.<\/p>\n<p>visit<\/p>\n"
                       }]
                     },
                     "NodeTracker": {
@@ -5684,6 +5748,22 @@
                     "environments": {
                       "ownKey": "environments",
                       "childrenPages": {
+                        "RectangularBoundaries": {
+                          "ownKey": "RectangularBoundaries",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/interfaces/environments",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "RectangularBoundaries",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/RectangularBoundaries"
+                            },
+                            "description": "",
+                            "title": "RectangularBoundaries",
+                            "content": "<p>Describes rectangular Boundaries with the origin in (0,0).<init>\nDescribes rectangular Boundaries with the origin in (0,0).\nwidth\nWidth\nheight\nHeight\naccept\nv is the visitor in the Visitor pattern.\nBoundariesVisitor.visit will be called with the right boundary type.<\/p>\n"
+                          }]
+                        },
                         "EuclideanPhysics2DEnvironment": {
                           "ownKey": "EuclideanPhysics2DEnvironment",
                           "ownPages": [{
@@ -5698,6 +5778,38 @@
                             "description": "",
                             "title": "EuclideanPhysics2DEnvironment",
                             "content": "<p>Defines a bidimensional euclidean environment.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          }]
+                        },
+                        "BoundariesVisitor": {
+                          "ownKey": "BoundariesVisitor",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/interfaces/environments",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "BoundariesVisitor",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/BoundariesVisitor"
+                            },
+                            "description": "",
+                            "title": "BoundariesVisitor",
+                            "content": "<p>The visitor to handle different types of boundaries.\nNote: whenever a new Boundaries is created, it should be added to a new visit method in this interface.<\/p>\n<p>visit\nrectangularBoundaries with origin in (0,0)<\/p>\n"
+                          }]
+                        },
+                        "HasBoundaries": {
+                          "ownKey": "HasBoundaries",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/interfaces/environments",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "HasBoundaries",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/HasBoundaries"
+                            },
+                            "description": "",
+                            "title": "HasBoundaries",
+                            "content": "<p>Declare boundaries.\nboundaries\nThe boundaries.<\/p>\n"
                           }]
                         },
                         "PhysicsEnvironment": {
@@ -5730,6 +5842,22 @@
                             "description": "",
                             "title": "EuclideanPhysics2DEnvironmentWithObstacles",
                             "content": "<p>Euclidean physics environment with support for obstacles.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          }]
+                        },
+                        "Boundaries": {
+                          "ownKey": "Boundaries",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/interfaces/environments",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "Boundaries",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Boundaries"
+                            },
+                            "description": "",
+                            "title": "Boundaries",
+                            "content": "<p>Describes the boundaries via the Visitor pattern.\nNote: whenever a new Boundaries is created, it should be added to a new visit method in BoundariesVisitor.<\/p>\n<p>accept\nv is the visitor in the Visitor pattern.\nBoundariesVisitor.visit will be called with the right boundary type.<\/p>\n"
                           }]
                         }
                       },
@@ -5969,6 +6097,22 @@
                         "description": "",
                         "title": "LinkingRule",
                         "content": "<p>An interface that represent an auto-linking logic for nodes within an environment.<\/p>\n<p>computeNeighborhood\nProduces a new neighborhood for specified node considering its position.\nisLocallyConsistent\nSome rules may require to be evaluated against multiple nodes until the situations gets consistent. For instance, a rule that connects the closest 10 nodes must be evaluated multiple times to get to the correct result (this is because a change in one neighbor may require a disconnection from another node to maintain exactly 10 connections). Most rules do not need such machinery (e.g., connecting to nodes within some statically defined range).<\/p>\n"
+                      }]
+                    },
+                    "VisibleNode": {
+                      "ownKey": "VisibleNode",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/model/interfaces",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "VisibleNode",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/VisibleNode"
+                        },
+                        "description": "",
+                        "title": "VisibleNode",
+                        "content": "<p>Represents a node seen by the it.unibo.alchemist.model.implementations.actions.See action.\nnode\nThe node seen.\nposition\nThe position of the node<\/p>\n"
                       }]
                     },
                     "ILsaNode": {
@@ -6717,6 +6861,38 @@
                     "content": "<p><init><\/p>\n<p>VALUE_TOKEN\nThe name that can be used in a property to refer to the extracted value.\ncreateNode<\/p>\n<p>toString<\/p>\n<p>createReaction<\/p>\n<p>createAction<\/p>\n<p>createMolecule<\/p>\n<p>getProperty<\/p>\n<p>createCondition<\/p>\n<p>createTimeDistribution<\/p>\n<p>createConcentration<\/p>\n"
                   }]
                 },
+                "smartcam": {
+                  "ownKey": "smartcam",
+                  "childrenPages": {"VisibleNodeImpl": {
+                    "ownKey": "VisibleNodeImpl",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "it/unibo/alchemist/model/smartcam",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "VisibleNodeImpl",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/smartcam/VisibleNodeImpl"
+                      },
+                      "description": "",
+                      "title": "VisibleNodeImpl",
+                      "content": "<p>Basic implementation of VisibleNode<init>\nBasic implementation of VisibleNode\nnode\nThe node seen.\nposition\nThe position of the node\nequals<\/p>\n<p>hashCode<\/p>\n<p>toString<\/p>\n"
+                    }]
+                  }},
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/model",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "smartcam",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/smartcam"
+                    },
+                    "description": "",
+                    "title": "it.unibo.alchemist.model.smartcam",
+                    "content": ""
+                  }]
+                },
                 "influencesphere": {
                   "ownKey": "influencesphere",
                   "childrenPages": {
@@ -6918,7 +7094,7 @@
                             },
                             "description": "",
                             "title": "Continuous2DEnvironment",
-                            "content": "<p>Implementation of EuclideanPhysics2DEnvironment<init>\nImplementation of EuclideanPhysics2DEnvironment\nshapeFactory\nA factory of shapes compatible with this environment.\ngetNodesWithin\nGets all nodes whose shape.intersect is true for the given shape.\ngetHeading\nGets the heading of a node as a direction vector.\nsetHeading\nSets the heading of a node\ngetShape\nGets the shape of a node relatively to its position and heading in the environment.\nnodeAdded\nKeeps track of the largest diameter of the shapes.\nnodeRemoved\n{@inheritDoc}\nmoveNodeToPosition\nMoves the node only if it doesn't collide with others.\nnodeShouldBeAdded\nA node should be added only if it doesn't collide with already existing nodes.\nmakePosition\nCreates an euclidean position from the given coordinates.\ncanNodeFitPosition\nWhether or not a node can be placed in a position.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of EuclideanPhysics2DEnvironment<init>\nImplementation of EuclideanPhysics2DEnvironment\nshapeFactory\nA factory of shapes compatible with this environment.\ngetNodesWithin\nGets all nodes whose shape.intersect is true for the given shape.\ngetHeading\nGets the heading of a node as a direction vector.\nsetHeading\nSets the heading of a node\ngetShape\nGets the shape of a node relatively to its position and heading in the environment.\nnodeAdded\nKeeps track of the largest diameter of the shapes.\nnodeRemoved\n{@inheritDoc}\nmoveNodeToPosition\nMoves the node only if it doesn't collide with others.\nnodeShouldBeAdded\nA node should be added only if it doesn't collide with already existing nodes and fits in the environment's limits\nmakePosition\nCreates an euclidean position from the given coordinates.\ncanNodeFitPosition\nWhether or not a node can be placed in a position.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "Continuous2DObstacles": {
@@ -6967,6 +7143,22 @@
                             "description": "",
                             "title": "BioRect2DEnvironmentNoOverlap",
                             "content": "<p>Implements a limited environment supporting cells with a defined shape, avoiding any overlapping among them.<init>\nReturns an infinite BioRect2DEnvironment.\n<init>\nReturns a limited rectangular BioRect2DEnvironment.<\/p>\n<p>moveNodeToPosition<\/p>\n<p>getMaxDiameterAmongCircularDeformableCells<\/p>\n"
+                          }]
+                        },
+                        "Rectangular2DEnvironment": {
+                          "ownKey": "Rectangular2DEnvironment",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/environments",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "Rectangular2DEnvironment",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/Rectangular2DEnvironment"
+                            },
+                            "description": "",
+                            "title": "Rectangular2DEnvironment",
+                            "content": "<p>A bounded EuclideanPhysics2DEnvironment, nodes cannot exist nor move outside the rectangular boundaries centered in (0,0).<init>\nA bounded EuclideanPhysics2DEnvironment, nodes cannot exist nor move outside the rectangular boundaries centered in (0,0).\nboundaries\nThe boundaries.\nnodeShouldBeAdded\nA node should be added only if it doesn't collide with already existing nodes and fits in the environment's limits\ncanNodeFitPosition\nWhether or not a node can be placed in a position.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point\norigin\nCreate a position corresponding to the origin of this environment\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "AbstractEnvironment": {
@@ -7393,6 +7585,22 @@
                             "content": ""
                           }]
                         },
+                        "ZigZagRandomTarget": {
+                          "ownKey": "ZigZagRandomTarget",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/movestrategies",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "ZigZagRandomTarget",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/ZigZagRandomTarget"
+                            },
+                            "description": "",
+                            "title": "ZigZagRandomTarget",
+                            "content": "<p>Strategy to move a node in a zigzag direction.<init>\nStrategy to move a node in a zigzag direction.<\/p>\n<p>getTarget<\/p>\n"
+                          }]
+                        },
                         "speed": {
                           "ownKey": "speed",
                           "childrenPages": {
@@ -7410,6 +7618,22 @@
                                 "description": "",
                                 "title": "TraceDependantSpeed",
                                 "content": "<p>This strategy dynamically tries to move the node adjusting its speed to synchronize the reaction rate and the traces data.<init><\/p>\n<p>getNodeMovementLength<\/p>\n"
+                              }]
+                            },
+                            "GloballyConstantSpeed": {
+                              "ownKey": "GloballyConstantSpeed",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/implementations/movestrategies/speed",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "GloballyConstantSpeed",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/speed/GloballyConstantSpeed"
+                                },
+                                "description": "",
+                                "title": "GloballyConstantSpeed",
+                                "content": "<p>Similar to ConstantSpeed but takes in consideration the time distribution's rate instead of the reaction's rate.<init>\nSimilar to ConstantSpeed but takes in consideration the time distribution's rate instead of the reaction's rate.<\/p>\n<p>getNodeMovementLength<\/p>\n"
                               }]
                             },
                             "InteractWithOthers": {
@@ -8725,6 +8949,38 @@
                             "content": "<p><init><\/p>\n<p>cloneCondition<\/p>\n<p>toString<\/p>\n<p>getPropensityContribution<\/p>\n<p>isValid<\/p>\n<p>getContext<\/p>\n"
                           }]
                         },
+                        "Else": {
+                          "ownKey": "Else",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/conditions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "Else",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/conditions/Else"
+                            },
+                            "description": "",
+                            "title": "Else",
+                            "content": "<p>The condition is valid if all the other reactions having at least one condition can not execute.<init>\nThe condition is valid if all the other reactions having at least one condition can not execute.<\/p>\n<p>getContext<\/p>\n<p>getPropensityContribution<\/p>\n<p>isValid<\/p>\n"
+                          }]
+                        },
+                        "ContainsMolecule": {
+                          "ownKey": "ContainsMolecule",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/conditions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "ContainsMolecule",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/conditions/ContainsMolecule"
+                            },
+                            "description": "",
+                            "title": "ContainsMolecule",
+                            "content": "<p>The condition is valid if the node contains the molecule.<init>\nThe condition is valid if the node contains the molecule.<\/p>\n<p>getContext<\/p>\n<p>getPropensityContribution<\/p>\n<p>isValid<\/p>\n"
+                          }]
+                        },
                         "ComputationalRoundComplete": {
                           "ownKey": "ComputationalRoundComplete",
                           "ownPages": [{
@@ -9031,6 +9287,22 @@
                             "content": "<p>Class to retain backwards compatibility with the Alchemist XML loader.<init><\/p>\n"
                           }]
                         },
+                        "RandomlyToggleMolecule": {
+                          "ownKey": "RandomlyToggleMolecule",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "RandomlyToggleMolecule",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomlyToggleMolecule"
+                            },
+                            "description": "",
+                            "title": "RandomlyToggleMolecule",
+                            "content": "<p>Toggles a molecule randomly.<init>\nToggles a molecule randomly.<\/p>\n<p>cloneAction<\/p>\n<p>execute\nRolls the dice and toggles the molecule.\nshouldToggle\nReturns true if it is time to toggle the molecule.<\/p>\n"
+                          }]
+                        },
                         "AbstractRandomizableAction": {
                           "ownKey": "AbstractRandomizableAction",
                           "ownPages": [{
@@ -9093,6 +9365,22 @@
                             "description": "",
                             "title": "FollowGradient",
                             "content": "<p>Move the pedestrian towards positions of the environment with a high concentration of the target molecule.<init>\nMove the pedestrian towards positions of the environment with a high concentration of the target molecule.<\/p>\n"
+                          }]
+                        },
+                        "FollowAtDistance": {
+                          "ownKey": "FollowAtDistance",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "FollowAtDistance",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowAtDistance"
+                            },
+                            "description": "",
+                            "title": "FollowAtDistance",
+                            "content": "<p>Follows a target at distance.<init>\nFollows a target at distance.<\/p>\n<p>cloneAction<\/p>\n<p>execute<\/p>\n<p>getContext<\/p>\n"
                           }]
                         },
                         "RandomPolarization": {
@@ -9237,6 +9525,22 @@
                             "description": "",
                             "title": "AbstractConfigurableMoveNode",
                             "content": "<p>An abstract class that factorizes code for multiple different movements. With three strategies can be defined: the next target to be reached, the routing strategy to adopt, the speed to move at.<\/p>\n<p>getNextPosition<\/p>\n"
+                          }]
+                        },
+                        "ExtractClosestVisibleNodeAtDistance": {
+                          "ownKey": "ExtractClosestVisibleNodeAtDistance",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "ExtractClosestVisibleNodeAtDistance",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ExtractClosestVisibleNodeAtDistance"
+                            },
+                            "description": "",
+                            "title": "ExtractClosestVisibleNodeAtDistance",
+                            "content": "<p>Extracts the closest VisibleNode to the position at the given distance from the given node's position\nin the direction of the node's heading.<init>\nvisionMolecule is expected to contain a list of VisibleNode.\nIf there are no visible nodes then targetMolecule will be removed from <a href=\"#\">node<\/a>,\notherwise the VisibleNode's position will be inserted in targetMolecule.<\/p>\n<p>cloneAction<\/p>\n<p>execute<\/p>\n<p>getContext<\/p>\n"
                           }]
                         },
                         "LsaAbstractAction": {
@@ -9465,6 +9769,22 @@
                             "content": "<p><init><\/p>\n<p>cloneAction\nFails, can't be cloned.\ngetEnvironment<\/p>\n"
                           }]
                         },
+                        "See": {
+                          "ownKey": "See",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "See",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/See"
+                            },
+                            "description": "",
+                            "title": "See",
+                            "content": "<p>Checks nodes in the env and writes in outputMolecule a list of it.unibo.alchemist.model.interfaces.VisibleNode,\nfiltered by those containing filterByMolecule.\ndistance and angle define the field of view.<init>\nChecks nodes in the env and writes in outputMolecule a list of it.unibo.alchemist.model.interfaces.VisibleNode,\nfiltered by those containing filterByMolecule.\ndistance and angle define the field of view.\ndistance\nDistance of the field of view.\nangle\nAngle in degrees of the field of view\ncloneAction<\/p>\n<p>execute<\/p>\n<p>getContext<\/p>\n"
+                          }]
+                        },
                         "LsaBarycenterCrowd": {
                           "ownKey": "LsaBarycenterCrowd",
                           "ownPages": [{
@@ -9527,6 +9847,38 @@
                             "description": "",
                             "title": "RemoveJunctionInNeighbor",
                             "content": "<p>Represent the action of removing a junction between a neighbor and the current node. <br> This action only remove the junction reference inside the neighbor node, the current one totally ignore that a junction has been removed. <br> This is a part of the junction removal process. <br> See RemoveJunctionInCell for the other part of the process.<init><\/p>\n<p>toString<\/p>\n<p>execute\nIf no target node is given DO NOTHING. The junction can not be removed.\nexecute<\/p>\n<p>cloneAction<\/p>\n<p>getNode<\/p>\n"
+                          }]
+                        },
+                        "ZigZagMove": {
+                          "ownKey": "ZigZagMove",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "ZigZagMove",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ZigZagMove"
+                            },
+                            "description": "",
+                            "title": "ZigZagMove",
+                            "content": "<p>Moves toward a randomly chosen direction for up to distance meters, then chooses another one and so on.<init>\nMoves toward a randomly chosen direction for up to distance meters, then chooses another one and so on.<\/p>\n<p>cloneAction<\/p>\n<p>getDestination<\/p>\n"
+                          }]
+                        },
+                        "ToggleMolecule": {
+                          "ownKey": "ToggleMolecule",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "ToggleMolecule",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ToggleMolecule"
+                            },
+                            "description": "",
+                            "title": "ToggleMolecule",
+                            "content": "<p>Toggles a molecule.<init>\nToggles a molecule.\nmolecule\nthe molecule to toggle\nconcentration\nthe concentration to set\ncloneAction<\/p>\n<p>execute\nToggles concentration.\nisOn\nReturns true if it is on, already toggled.\ngetContext<\/p>\n"
                           }]
                         },
                         "ReproduceGPSTrace": {
@@ -9671,6 +10023,22 @@
                             "description": "",
                             "title": "BrownianMove",
                             "content": "<p>Moves the node randomly.<init><\/p>\n<p>cloneAction<\/p>\n<p>getNextPosition<\/p>\n"
+                          }]
+                        },
+                        "Spin": {
+                          "ownKey": "Spin",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "Spin",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Spin"
+                            },
+                            "description": "",
+                            "title": "Spin",
+                            "content": "<p>Spins a <a href=\"#\">node<\/a> around itself at angularSpeedDegrees normalized according to the speed of the reaction.<init>\nSpins a <a href=\"#\">node<\/a> around itself at angularSpeedDegrees normalized according to the speed of the reaction.<\/p>\n<p>cloneAction<\/p>\n<p>execute\nSpins the node around itself.\ngetContext<\/p>\n"
                           }]
                         },
                         "Combine": {
@@ -9945,6 +10313,22 @@
                             "content": "<p><init>\nBuilds a new action in a neighborhood. es: + This class extend LsaAbstractAction.<\/p>\n<p>cloneAction\n{@inheritDoc}\ntoString\n{@inheritDoc}\nexecute\n{@inheritDoc}\ngetContext<\/p>\n"
                           }]
                         },
+                        "HeadTowardTarget": {
+                          "ownKey": "HeadTowardTarget",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "HeadTowardTarget",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/HeadTowardTarget"
+                            },
+                            "description": "",
+                            "title": "HeadTowardTarget",
+                            "content": "<p>Reads the target's absolute coordinates from the target molecule contained in <a href=\"#\">node<\/a> and sets the <a href=\"#\">node<\/a>'s heading accordingly.<init>\nReads the target's absolute coordinates from the target molecule contained in <a href=\"#\">node<\/a> and sets the <a href=\"#\">node<\/a>'s heading accordingly.<\/p>\n<p>cloneAction<\/p>\n<p>execute\nSets the heading of the node according to the target molecule.\ngetContext<\/p>\n"
+                          }]
+                        },
                         "RunProtelisProgram": {
                           "ownKey": "RunProtelisProgram",
                           "ownPages": [{
@@ -9959,6 +10343,22 @@
                             "description": "",
                             "title": "RunProtelisProgram",
                             "content": "<p><init><\/p>\n<p><init><\/p>\n<p>hashCode<\/p>\n<p>equals<\/p>\n<p>toString\n{@inheritDoc}\ngetOutboundDependencies<\/p>\n<p>asMolecule<\/p>\n<p>execute<\/p>\n<p>getContext<\/p>\n<p>cloneAction<\/p>\n<p>prepareForComputationalCycle\nResets the computation status (used for dependency management).\nisComputationalCycleComplete<\/p>\n"
+                          }]
+                        },
+                        "RandomlyToggleMoleculeWithDuration": {
+                          "ownKey": "RandomlyToggleMoleculeWithDuration",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "RandomlyToggleMoleculeWithDuration",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomlyToggleMoleculeWithDuration"
+                            },
+                            "description": "",
+                            "title": "RandomlyToggleMoleculeWithDuration",
+                            "content": "<p>When the molecule is off, rolls the dices according to odds and if it is time to toggle, sets the concentration\nand choses a random duration in the interval [minDuration, maxDuration].\nThe molecule will be removed after the chosen duration has elapsed.<init>\nWhen the molecule is off, rolls the dices according to odds and if it is time to toggle, sets the concentration\nand choses a random duration in the interval [minDuration, maxDuration].\nThe molecule will be removed after the chosen duration has elapsed.<\/p>\n<p>cloneAction<\/p>\n<p>execute\nRolls the dice and toggles the molecule.\nshouldToggle\nReturns true if it is time to toggle the molecule.<\/p>\n"
                           }]
                         },
                         "CellTensionPolarization": {
