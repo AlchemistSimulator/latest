@@ -21,7 +21,7 @@
 
 
 
-<title>GenericGroup</title>
+<title>WantToEvacuate</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.0.0-dev03+5ec77bac"};
+    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.0.0-dev0h+f6c5717a"};
 </script>
 
 
@@ -54,11 +54,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
-<!-- Source Filename: it/unibo/alchemist/model/cognitiveagents/groups/GenericGroup.html -->
+<!-- Source Filename: it/unibo/alchemist/model/implementations/conditions/WantToEvacuate.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"it/unibo/alchemist/model/cognitiveagents/groups","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"GenericGroup","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/GenericGroup"},"description":"","title":"GenericGroup"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/conditions","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"WantToEvacuate","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/conditions/WantToEvacuate"},"description":"","title":"WantToEvacuate"};
 </script>
 
 <!-- end:debug info -->
@@ -66,9 +66,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/editorial_main.css"/>
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/editorial_orchidCustomizations.css"/>
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/orchidSearch.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/orchidSearch.css"/>
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"/>
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"/>
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"/>
@@ -106,7 +106,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>GenericGroup</h2></header>
+                    <header class="major"><h2>WantToEvacuate</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -119,35 +119,20 @@
 
 
 <p id="summary">
-    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups">it.unibo.alchemist.model.cognitiveagents.groups</a></b>
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/conditions">it.unibo.alchemist.model.implementations.conditions</a></b>
 </p>
 <p>
     <code style="padding: 0;">
-        class it.unibo.alchemist.model.cognitiveagents.groups.GenericGroup
+        class it.unibo.alchemist.model.implementations.conditions.WantToEvacuate
     </code>
 </p>
 <div class="class-description" id="description">
-<p>Basic implementation of a group.</p>
+<p>The intention of the pedestrian to evacuate or not.</p>
 
 </div>
 
 
 
-
-
-<h2 id="fields">Fields</h2>
-
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="field__open_members__List">
-        <code>
-        open members: List
-        </code>
-    </div>
-    <div class="panel-body"><p>The list of pedestrians belonging to this group.</p>
-</div>
-</div>
 
 
 
@@ -159,12 +144,12 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor__">
+    <div class="panel-heading" id="constructor__constructor_pedestrian__CognitivePedestrian_">
         <code>
-        constructor()
+        constructor(pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/CognitivePedestrian">CognitivePedestrian</a>)
         </code>
     </div>
-    <div class="panel-body"><p>Basic implementation of a group.</p>
+    <div class="panel-body"><p>The intention of the pedestrian to evacuate or not.</p>
 </div>
 
     
@@ -173,7 +158,12 @@
 </div>
 <ul class="list-group">
 
-    <li class="list-group-item">No parameters</li>
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/CognitivePedestrian">CognitivePedestrian</a>
+        </code>
+        
+    </li>
 
 </ul>
 
@@ -186,13 +176,12 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_addMember_pedestrian__Pedestrian___Group">
+    <div class="panel-heading" id="method__open_fun_getContext____Context">
         <code>
-        open fun addMember(pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Group">Group</a>
+        open fun getContext(): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Context">Context</a>
         </code>
     </div>
-    <div class="panel-body"><p>Add a pedestrian in this group if not already part of it.</p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -202,17 +191,7 @@
 </div>
 <ul class="list-group">
 
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>
-        </code>
-        
-            <br><br>
-            <div><pre><code>the pedestrian to add.
-</code></pre>
-</div>
-        
-    </li>
+    <li class="list-group-item">No parameters</li>
 
 </ul>
 
@@ -222,7 +201,7 @@
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Group">Group</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Context">Context</a>
         </code>
     </div>
     <div></div>
@@ -232,13 +211,12 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_removeMember_pedestrian__Pedestrian___Group">
+    <div class="panel-heading" id="method__open_fun_getPropensityContribution____Double">
         <code>
-        open fun removeMember(pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Group">Group</a>
+        open fun getPropensityContribution(): Double
         </code>
     </div>
-    <div class="panel-body"><p>Remove a pedestrian from this group.</p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -248,17 +226,7 @@
 </div>
 <ul class="list-group">
 
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>
-        </code>
-        
-            <br><br>
-            <div><pre><code>the pedestrian to remove.
-</code></pre>
-</div>
-        
-    </li>
+    <li class="list-group-item">No parameters</li>
 
 </ul>
 
@@ -268,7 +236,42 @@
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Group">Group</a>
+        Double
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_isValid____Boolean">
+        <code>
+        open fun isValid(): Boolean
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Boolean
         </code>
     </div>
     <div></div>
@@ -904,14 +907,6 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups">it.unibo.alchemist.model.cognitiveagents.groups</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions">it.unibo.alchemist.model.implementations.actions</a>
     </li>
     
@@ -953,6 +948,14 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry">it.unibo.alchemist.model.implementations.geometry</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/groups">it.unibo.alchemist.model.implementations.groups</a>
     </li>
     
 
@@ -1529,7 +1532,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Alone">Alone</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/groups/Alone">Alone</a>
     </li>
     
 
@@ -1601,7 +1604,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AvoidGradient">AvoidGradient</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AvoidFlowField">AvoidFlowField</a>
     </li>
     
 
@@ -2153,6 +2156,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/CognitiveAgent">CognitiveAgent</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/CognitiveBehavior">CognitiveBehavior</a>
     </li>
     
@@ -2202,14 +2213,6 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Cohesion">Cohesion</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/CollisionAvoidance">CollisionAvoidance</a>
     </li>
     
 
@@ -2929,6 +2932,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/groups/Family">Family</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/Fear">Fear</a>
     </li>
     
@@ -2993,6 +3004,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FlowFieldSteeringAction">FlowFieldSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowAtDistance">FollowAtDistance</a>
     </li>
     
@@ -3001,7 +3020,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowGradient">FollowGradient</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowFlowField">FollowFlowField</a>
     </li>
     
 
@@ -3026,6 +3045,14 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/target/FollowTrace">FollowTrace</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/groups/Friends">Friends</a>
     </li>
     
 
@@ -3137,7 +3164,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/GenericGroup">GenericGroup</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/groups/GenericGroup">GenericGroup</a>
     </li>
     
 
@@ -3217,14 +3244,6 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GradientSteeringAction">GradientSteeringAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/routes/GraphHopperRoute">GraphHopperRoute</a>
     </li>
     
@@ -3257,7 +3276,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/groups/Group">Group</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Group">Group</a>
     </li>
     
 
@@ -3265,7 +3284,15 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/GroupSteering">GroupSteering</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/GroupSteeringAction">GroupSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/GroupWithLeader">GroupWithLeader</a>
     </li>
     
 
@@ -3450,14 +3477,6 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Incarnation">Incarnation</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/individual/IndividualCharacteristic">IndividualCharacteristic</a>
     </li>
     
 
@@ -4265,6 +4284,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ObstacleAvoidance">ObstacleAvoidance</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/linkingrules/ObstaclesBreakConnection">ObstaclesBreakConnection</a>
     </li>
     
@@ -4330,6 +4357,14 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian2D">Pedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/PedestrianGroup">PedestrianGroup</a>
     </li>
     
 
@@ -4418,14 +4453,6 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/variables/PrintableVariable">PrintableVariable</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/PriorityBlendedSteering">PriorityBlendedSteering</a>
     </li>
     
 
@@ -5401,6 +5428,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/conditions/WantToEvacuate">WantToEvacuate</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/projectview/controller/Watcher">Watcher</a>
     </li>
     
@@ -5505,7 +5540,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.0.0-dev03+5ec77bac. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.0.0-dev0h+f6c5717a. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -5521,11 +5556,11 @@
 <!-- start:inject scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_util.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_main.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_util.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_main.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_orchidCustomizations.js"></script>
 <script src="https://unpkg.com/lunr/lunr.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/orchidSearch.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/orchidSearch.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
