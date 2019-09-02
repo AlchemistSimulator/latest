@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.0.0-dev0h+f6c5717a"};
+    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.0.0-dev0m+82bc2ab6"};
 </script>
 
 
@@ -66,9 +66,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/editorial_main.css"/>
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/editorial_orchidCustomizations.css"/>
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/css/orchidSearch.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/editorial_main.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/editorial_orchidCustomizations.css"/>
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/css/orchidSearch.css"/>
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"/>
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"/>
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"/>
@@ -127,7 +127,11 @@
     </code>
 </p>
 <div class="class-description" id="description">
-<p>Strategy to move a node in a zigzag direction.</p>
+<p>Strategy to move an object in a zigzag fashion. It uses euclidean geometry to determine the next position.<p>getCurrentPosition must return the current position of the object to move.
+makePosition must be able to create a 2D position given the X and Y coordinates in this order.
+rng is the random number generator to use
+maxDistance defines the maximum distance the object can move before a random change in direction is forced.
+minChangeInDirection is the minimum change in the direction (in degrees) that must be made each time a new direction is chosen.</p><p>T is the type of the concentration of the node used in the secondary constructor.</p></p>
 
 </div>
 
@@ -144,12 +148,14 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_node__Node__env__Environment__rng___ERROR_CLASS___maxDistance__Double_">
+    <div class="panel-heading" id="constructor__constructor_node__Node__env__Environment__rng___ERROR_CLASS___maxDistance__Double__minChangeInDirection__Double_">
         <code>
-        constructor(node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, rng: <ERROR CLASS>, maxDistance: Double)
+        constructor(node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, rng: <ERROR CLASS>, maxDistance: Double, minChangeInDirection: Double)
         </code>
     </div>
-    <div class="panel-body"><p>Strategy to move a node in a zigzag direction.</p>
+    <div class="panel-body"><p>Handy constructor for Alchemist where the object to move is a node in the env.
+rng is the random number generator to use
+maxDistance defines the maximum distance the object can move before a random change in direction is forced.</p>
 </div>
 
     
@@ -163,20 +169,12 @@
         node: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
         </code>
         
-            <br><br>
-            <div><p>the node</p>
-</div>
-        
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
         env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
         </code>
-        
-            <br><br>
-            <div><p>the environment containing the node</p>
-</div>
         
     </li>
 
@@ -185,15 +183,77 @@
         rng: <ERROR CLASS>
         </code>
         
-            <br><br>
-            <div><p>the random number generator to use</p>
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        maxDistance: Double
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        minChangeInDirection: Double
+        </code>
+        
+    </li>
+
+</ul>
+
 </div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="constructor__constructor_getCurrentPosition______Euclidean2DPosition__makePosition___Double__Double___Euclidean2DPosition__rng___ERROR_CLASS___maxDistance__Double__minChangeInDirection__Double_">
+        <code>
+        constructor(getCurrentPosition: ()-&gt;<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, makePosition: (Double, Double)-&gt;<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, rng: <ERROR CLASS>, maxDistance: Double, minChangeInDirection: Double)
+        </code>
+    </div>
+    <div class="panel-body"><p>Strategy to move an object in a zigzag fashion. It uses euclidean geometry to determine the next position.<p>getCurrentPosition must return the current position of the object to move.
+makePosition must be able to create a 2D position given the X and Y coordinates in this order.
+rng is the random number generator to use
+maxDistance defines the maximum distance the object can move before a random change in direction is forced.
+minChangeInDirection is the minimum change in the direction (in degrees) that must be made each time a new direction is chosen.</p><p>T is the type of the concentration of the node used in the secondary constructor.</p></p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        getCurrentPosition: ()-&gt;<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        makePosition: (Double, Double)-&gt;<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        rng: <ERROR CLASS>
+        </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
         maxDistance: Double
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        minChangeInDirection: Double
         </code>
         
     </li>
@@ -5503,7 +5563,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.0.0-dev0h+f6c5717a. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.0.0-dev0m+82bc2ab6. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -5519,11 +5579,11 @@
 <!-- start:inject scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_util.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_main.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/editorial_orchidCustomizations.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_util.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_main.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/editorial_orchidCustomizations.js"></script>
 <script src="https://unpkg.com/lunr/lunr.js"></script>
-<script src="https://alchemistsimulator.github.io/latest/Editorial/5d072ba4/assets/js/orchidSearch.js"></script>
+<script src="https://alchemistsimulator.github.io/latest/Editorial/17900aaf/assets/js/orchidSearch.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
