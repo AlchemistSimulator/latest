@@ -7597,6 +7597,22 @@
                             "content": "<p>basic move strategy that use a GPSTrace.<init>\nbasic move strategy that use a GPSTrace.<\/p>\n<p>setTrace<\/p>\n"
                           }]
                         },
+                        "RandomTarget": {
+                          "ownKey": "RandomTarget",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/movestrategies",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "RandomTarget",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/RandomTarget"
+                            },
+                            "description": "",
+                            "title": "RandomTarget",
+                            "content": "<p>Selects a target based on a random direction extracted from directionRng,\nand a random distance extracted from distanceDistribution.\ngetCurrentPosition should return the current position of the object to move.\nT is the type of the concentration of the node.<init>\nHandy constructor for Alchemist where the object to move is a node in the env.\n<init>\nSelects a target based on a random direction extracted from directionRng,\nand a random distance extracted from distanceDistribution.\ngetCurrentPosition should return the current position of the object to move.\nT is the type of the concentration of the node.<\/p>\n<p>chooseTarget\nThe target selection strategy.\nReturns the new target to reach.<\/p>\n"
+                          }]
+                        },
                         "routing": {
                           "ownKey": "routing",
                           "childrenPages": {
@@ -7660,7 +7676,23 @@
                             },
                             "description": "",
                             "title": "ZigZagRandomTarget",
-                            "content": "<p>Strategy to move an object in a zigzag fashion. It uses euclidean geometry to determine the next position.<p>getCurrentPosition must return the current position of the object to move.\nmakePosition must be able to create a 2D position given the X and Y coordinates in this order.\nrng is the random number generator to use\nmaxDistance defines the maximum distance the object can move before a random change in direction is forced.\nminChangeInDirection is the minimum change in the direction (in degrees) that must be made each time a new direction is chosen.<\/p><p>T is the type of the concentration of the node used in the secondary constructor.<\/p><init>\nHandy constructor for Alchemist where the object to move is a node in the env.\nrng is the random number generator to use\nmaxDistance defines the maximum distance the object can move before a random change in direction is forced.\n<init>\nStrategy to move an object in a zigzag fashion. It uses euclidean geometry to determine the next position.<p>getCurrentPosition must return the current position of the object to move.\nmakePosition must be able to create a 2D position given the X and Y coordinates in this order.\nrng is the random number generator to use\nmaxDistance defines the maximum distance the object can move before a random change in direction is forced.\nminChangeInDirection is the minimum change in the direction (in degrees) that must be made each time a new direction is chosen.<\/p><p>T is the type of the concentration of the node used in the secondary constructor.<\/p><\/p>\n<p>getTarget<\/p>\n"
+                            "content": "<p>Strategy to move an object in a zigzag fashion. It uses euclidean geometry to determine the next position.<p>getCurrentPosition must return the current position of the object to move.\nmakePosition must be able to create a 2D position given the X and Y coordinates in this order.\nrng is the random number generator to use\nmaxDistance defines the maximum distance the object can move before a random change in direction is forced.\nminChangeInDirection is the minimum change in the direction (in degrees) that must be made each time a new direction is chosen.<\/p><p>T is the type of the concentration of the node used in the secondary constructor.<\/p><init>\nHandy constructor for Alchemist where the object to move is a node in the env.\nrng is the random number generator to use\nmaxDistance defines the maximum distance the object can move before a random change in direction is forced.\n<init>\nStrategy to move an object in a zigzag fashion. It uses euclidean geometry to determine the next position.<p>getCurrentPosition must return the current position of the object to move.\nmakePosition must be able to create a 2D position given the X and Y coordinates in this order.\nrng is the random number generator to use\nmaxDistance defines the maximum distance the object can move before a random change in direction is forced.\nminChangeInDirection is the minimum change in the direction (in degrees) that must be made each time a new direction is chosen.<\/p><p>T is the type of the concentration of the node used in the secondary constructor.<\/p><\/p>\n<p>initializePositions\nUtility to initialize lazyinit variables dependent on the environment.\nIt is guaranteed to be called before shouldChangeTarget and chooseTarget.\nshouldChangeTarget\nReturns a boolean indicating whether it is time to change the target or not.\nBy default if it hasn't moved (assuming it's because of an obstacle) or or it has reached the previous, then choose another one.\nchooseTarget\nThe target selection strategy.\nReturns the new target to reach.<\/p>\n"
+                          }]
+                        },
+                        "ChangeTargetOnCollision": {
+                          "ownKey": "ChangeTargetOnCollision",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/movestrategies",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "ChangeTargetOnCollision",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/ChangeTargetOnCollision"
+                            },
+                            "description": "",
+                            "title": "ChangeTargetOnCollision",
+                            "content": "<p>Base class for TargetSelectionStrategy offering automatic target change on collision and utilities for initialization.\ngetCurrentPosition should return the current position of the object to move.\nP is the position type to use.<init>\nBase class for TargetSelectionStrategy offering automatic target change on collision and utilities for initialization.\ngetCurrentPosition should return the current position of the object to move.\nP is the position type to use.\ngetCurrentPosition\nReturns the current position of the object to move.\ngetTarget<\/p>\n<p>initializePositions\nUtility to initialize lazyinit variables dependent on the environment.\nIt is guaranteed to be called before shouldChangeTarget and chooseTarget.\nshouldChangeTarget\nReturns a boolean indicating whether it is time to change the target or not.\nBy default if it hasn't moved (assuming it's because of an obstacle) or or it has reached the previous, then choose another one.\nchooseTarget\nThe target selection strategy.\nReturns the new target to reach.<\/p>\n"
                           }]
                         },
                         "speed": {
@@ -9333,6 +9365,22 @@
                             "content": "<p>Move the agent towards a target position.\nIt is similar to Seek but it attempts to arrive at the target position with a zero velocity.<init>\nMove the agent towards a target position.\nIt is similar to Seek but it attempts to arrive at the target position with a zero velocity.<\/p>\n"
                           }]
                         },
+                        "AbstractConfigurableMoveNodeWithAccurateEuclideanDestination": {
+                          "ownKey": "AbstractConfigurableMoveNodeWithAccurateEuclideanDestination",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "AbstractConfigurableMoveNodeWithAccurateEuclideanDestination",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractConfigurableMoveNodeWithAccurateEuclideanDestination"
+                            },
+                            "description": "",
+                            "title": "AbstractConfigurableMoveNodeWithAccurateEuclideanDestination",
+                            "content": "<p>It's an AbstractConfigurableMoveNode for Euclidean2DPosition which provides a default getDestination that is\naccurate in regards to the target given and the current maximum speed.<init>\nIt's an AbstractConfigurableMoveNode for Euclidean2DPosition which provides a default getDestination that is\naccurate in regards to the target given and the current maximum speed.<\/p>\n<p>getDestination\nIf maxWalk is greater than the speed needed to reach target then it positions precisely on target without going\nfarther.<\/p>\n"
+                          }]
+                        },
                         "ProtelisProgram": {
                           "ownKey": "ProtelisProgram",
                           "ownPages": [{
@@ -9908,7 +9956,7 @@
                             },
                             "description": "",
                             "title": "ZigZagMove",
-                            "content": "<p>Moves toward a randomly chosen direction for up to distance meters, then chooses another one and so on.<init>\nMoves toward a randomly chosen direction for up to distance meters, then chooses another one and so on.<\/p>\n<p>cloneAction<\/p>\n<p>getDestination<\/p>\n"
+                            "content": "<p>Moves toward a randomly chosen direction for up to distance meters, then chooses another one and so on.<init>\nMoves toward a randomly chosen direction for up to distance meters, then chooses another one and so on.<\/p>\n<p>cloneAction<\/p>\n"
                           }]
                         },
                         "ToggleMolecule": {
@@ -10311,6 +10359,22 @@
                             "content": "<p>This action add LsaMolecule in a single node.<init>\nBuilds a new local action, withouth any RandomGenerator. #RANDOM.\n<init>\nBuilds a new local action.<\/p>\n<p>cloneAction\n{@inheritDoc}\ngetMolecule<\/p>\n<p>toString\n{@inheritDoc}\nexecute\n{@inheritDoc}\ngetContext\n{@inheritDoc}<\/p>\n"
                           }]
                         },
+                        "LevyWalk": {
+                          "ownKey": "LevyWalk",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "LevyWalk",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/LevyWalk"
+                            },
+                            "description": "",
+                            "title": "LevyWalk",
+                            "content": "<p>Selects a target based on a random direction extracted from rng,\nand a random distance extracted from a <a href=\"#\">ParetoDistribution<\/a> of parameters scale and shape.\nMoves toward the targets at a constant speed and changes targets on collision.<init>\nSelects a target based on a random direction extracted from rng,\nand a random distance extracted from a <a href=\"#\">ParetoDistribution<\/a> of parameters scale and shape.\nMoves toward the targets at a constant speed and changes targets on collision.<\/p>\n<p>cloneAction<\/p>\n"
+                          }]
+                        },
                         "RandomRotate": {
                           "ownKey": "RandomRotate",
                           "ownPages": [{
@@ -10453,6 +10517,22 @@
                             "description": "",
                             "title": "MoveToTarget",
                             "content": "<p>Movement towards a target defined as a concentration.<init><\/p>\n<p>cloneAction<\/p>\n"
+                          }]
+                        },
+                        "RandomWalker": {
+                          "ownKey": "RandomWalker",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "RandomWalker",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomWalker"
+                            },
+                            "description": "",
+                            "title": "RandomWalker",
+                            "content": "<p>Chooses random targets in a direction extracted from rng at a distance extracted from distanceDistribution.\nMoves the <a href=\"#\">node<\/a> towards the targets at the given constant speed. Changes target on collision.<init>\nChooses random targets in a direction extracted from rng at a distance extracted from distanceDistribution.\nMoves the <a href=\"#\">node<\/a> towards the targets at the given constant speed. Changes target on collision.<\/p>\n<p>cloneAction<\/p>\n"
                           }]
                         },
                         "AbstractLocalAction": {

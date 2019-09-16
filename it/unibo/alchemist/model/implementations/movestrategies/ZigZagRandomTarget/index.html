@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.0.0-dev0s+519ef105"};
+    window.site = {"orchidVersion":"0.17.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.0.0-dev17+98633aa9"};
 </script>
 
 
@@ -269,12 +269,46 @@ minChangeInDirection is the minimum change in the direction (in degrees) that mu
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_getTarget____Euclidean2DPosition">
+    <div class="panel-heading" id="method__protected_fun_initializePositions_currentPosition__Euclidean2DPosition_">
         <code>
-        fun getTarget(): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        protected fun initializePositions(currentPosition: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>)
         </code>
     </div>
-    <div class="panel-body"></div>
+    <div class="panel-body"><p>Utility to initialize lazyinit variables dependent on the environment.
+It is guaranteed to be called before shouldChangeTarget and chooseTarget.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        currentPosition: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_fun_shouldChangeTarget____Boolean">
+        <code>
+        protected fun shouldChangeTarget(): Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>Returns a boolean indicating whether it is time to change the target or not.
+By default if it hasn't moved (assuming it's because of an obstacle) or or it has reached the previous, then choose another one.</p>
+</div>
 
     
 
@@ -294,7 +328,44 @@ minChangeInDirection is the minimum change in the direction (in degrees) that mu
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        Boolean
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_fun_chooseTarget_____ERROR_CLASS_">
+        <code>
+        protected fun chooseTarget(): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>The target selection strategy.
+Returns the new target to reach.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
         </code>
     </div>
     <div></div>
@@ -1283,6 +1354,14 @@ minChangeInDirection is the minimum change in the direction (in degrees) that mu
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractConfigurableMoveNodeWithAccurateEuclideanDestination">AbstractConfigurableMoveNodeWithAccurateEuclideanDestination</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/AbstractDistribution">AbstractDistribution</a>
     </li>
     
@@ -2052,6 +2131,14 @@ minChangeInDirection is the minimum change in the direction (in degrees) that mu
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ChangeBiomolConcentrationInNeighbor">ChangeBiomolConcentrationInNeighbor</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/ChangeTargetOnCollision">ChangeTargetOnCollision</a>
     </li>
     
 
@@ -3787,6 +3874,14 @@ minChangeInDirection is the minimum change in the direction (in degrees) that mu
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/LevyWalk">LevyWalk</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/config/LightInfoGeneralSimulationConfig">LightInfoGeneralSimulationConfig</a>
     </li>
     
@@ -4564,6 +4659,22 @@ minChangeInDirection is the minimum change in the direction (in degrees) that mu
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomRotate">RandomRotate</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/RandomTarget">RandomTarget</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomWalker">RandomWalker</a>
     </li>
     
 
@@ -5563,7 +5674,7 @@ minChangeInDirection is the minimum change in the direction (in degrees) that mu
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.0.0-dev0s+519ef105. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.0.0-dev17+98633aa9. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
