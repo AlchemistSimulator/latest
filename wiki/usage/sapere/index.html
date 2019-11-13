@@ -134,7 +134,7 @@ the concept of <a href="https://alchemistsimulator.github.io/latest/it/unibo/alc
 As a consequence, LSAs can be inserted in nodes.
 For instance, the following code creates an irregular grid of devices,
 of which those located around the center of such grid contain the tuple <code>{ token }</code>:</p>
-<script src="http://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/05-content.yml"></script>
+<script src="https://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/05-content.yml"></script>
 <p>The relevant part here is <code>molecule: token</code>.
 If we wanted to inject the tuple <code>{ foo, 1, bar, 2 }</code>, we could have written <code>molecule: foo, 1, bar, 2</code>.</p>
 <h3 id="ground-lsa-syntax">Ground LSA syntax</h3>
@@ -168,7 +168,7 @@ the latter a number greater than <code>30</code>, and produces in a new tuple ha
 the opposite of the matched number:</p>
 <p><code>{ foo, def: N &gt; 30 } --&gt; { bar, -N }</code></p>
 <p>Nodes can be programmed with Eco-Laws as follows:</p>
-<script src="http://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/06-send.yml"></script>
+<script src="https://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/06-send.yml"></script>
 <h3 id="sharing">Sharing</h3>
 <p>Eco-Laws can be programmed to send LSAs to neighbors, as well as to look into neighboring nodes for getting LSAs.
 In order to do so, the LSA template in the Eco-Law must be preceded by a neighbor operator, either <code>+</code> or <code>*</code>.</p>
@@ -185,7 +185,7 @@ sends a copy of the LSA to all neighbors.</p>
 <p>The following code exemplifies a diffusion program:
 when <code>{ token }</code> is present locally, it is copied into neighboring nodes once per second;
 and as soon as two copies of <code>{ token }</code> are present, one gets removed.</p>
-<script src="http://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/09-diffuse.yml"></script>
+<script src="https://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/09-diffuse.yml"></script>
 <h3 id="eco-laws-syntax">Eco-Laws syntax</h3>
 <h3 id="rates">Rates</h3>
 <p>The time distribution with which reactions should get scheduled can be controlled by thinkering with the yaml specification
@@ -208,7 +208,7 @@ of an <a href="https://en.wikipedia.org/wiki/Exponential_distribution">exponenti
 <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/ExponentialTime">exponentially distributed time</a> with rate 1, namely, such reaction,
 when executable (the left hand LSAs have local matches), will execute at an average of once per second
 (with a variance of 1 s²).</p>
-<script src="http://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/06-send.yml"></script>
+<script src="https://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/06-send.yml"></script>
 <h2 id="tutorial-and-exercises">Tutorial and exercises</h2>
 <p>To better grasp details of the incarnation, we recommend looking at the examples available on
 <a href="https://github.com/AlchemistSimulator/SAPERE-incarnation-tutorial">the Alchemist SAPERE Incarnation tutorial on GitHub</a>.</p>
