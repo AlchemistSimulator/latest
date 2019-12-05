@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.2.1-dev0w+f84c2b37"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.2.1-dev12+7c3cca4b"};
 </script>
 
 
@@ -70,9 +70,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/css/orchidSearch.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3721055d/assets/css/editorial_main.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3721055d/assets/css/editorial_orchidCustomizations.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3721055d/assets/css/orchidSearch.css" />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
 <!-- end:inject styles -->
@@ -230,6 +230,11 @@ If the simulation is not executed as batch, then the default value is used</p>
 <h4 id="linear-variables">Linear variables</h4>
 <h4 id="geometric-variables">Geometric variables</h4>
 <h4 id="arbitrary-valued-variables">Arbitrary-valued variables</h4>
+<pre><code class="language-yaml">variables:
+  myvar: &amp;myvar
+    type: ArbitraryVariable
+    parameters: [&quot;defaultValue&quot;, [&quot;value1&quot;,&quot;value2&quot;,&quot;value3&quot;]]
+</code></pre>
 <h3 id="dependent-variables">Dependent variables</h3>
 <p>Some variables are combination of free parameters.
 Let's suppose that we want to deploy on a circle, but for some reason (e.g. because it is required by the constructor of some action) we need to compute and have available radius and perimeter.
@@ -425,6 +430,12 @@ The YAML key associated to displacements is <code>in</code>.</p>
       # Using a constructor taking (x,y) coordinates
       parameters: [0, 0]
 </code></pre>
+<h3 id="displacing-multiple-nodes-on-specific-positions">Displacing multiple nodes on specific positions</h3>
+<pre><code class="language-yaml">displacements:
+  - in:
+      type: SpecificPositions
+      parameters: [[0,1],[2,2],[3,4]]
+</code></pre>
 <h3 id="displacing-multiple-nodes-at-once">Displacing multiple nodes at once</h3>
 <p>This example places 10000 nodes randomly in a <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Circle">Circle</a> with center in (0, 0) and radius 10.</p>
 <pre><code class="language-yaml">displacements:
@@ -495,6 +506,17 @@ displacements:
       # Reference to the &quot;gradient&quot; list of programs. This program is executed in all
       # the grid nodes
       - *gradient
+</code></pre>
+<h3 id="triggers">Triggers</h3>
+<pre><code class="language-yaml">pools:
+  - pool:
+      - time-distribution:
+          type: Trigger
+          parameters: [0] # the param is the time step
+      type: Event
+      actions:
+        - type: MyActionType
+          parameters: [...] #
 </code></pre>
 <h2 id="writing-layers">Writing layers</h2>
 <p>It is possible to define overlays (layers) of data that can be sensed everywhere in the environment.
@@ -756,6 +778,14 @@ and possibly the parameters needed for intializing the type of layer you have ch
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
     </li>
     
 
@@ -5862,7 +5892,7 @@ and possibly the parameters needed for intializing the type of layer you have ch
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.2.1-dev0w+f84c2b37. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.2.1-dev12+7c3cca4b. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -5879,11 +5909,11 @@ and possibly the parameters needed for intializing the type of layer you have ch
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/3721055d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/3721055d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/3721055d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/orchidSearch.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/3721055d/assets/js/orchidSearch.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
