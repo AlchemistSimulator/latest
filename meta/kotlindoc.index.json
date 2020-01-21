@@ -6947,22 +6947,40 @@
                   },
                   "terminators": {
                     "ownKey": "terminators",
-                    "childrenPages": {"StableForSteps": {
-                      "ownKey": "StableForSteps",
-                      "ownPages": [{
-                        "reference": {
-                          "path": "it/unibo/alchemist/model/implementations/terminators",
-                          "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "StableForSteps",
-                          "extension": "html",
-                          "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/terminators/StableForSteps"
-                        },
-                        "description": "",
-                        "title": "StableForSteps",
-                        "content": "<p>A Predicate that tests if an environment's\nnodes (meaning their position and concentration) have\nremained unchanged for a certain amount of steps.<p>The check isn't performed on every step\nof a simulation,\ninstead an interval that determines how many steps are\nto be skipped between each check is specified.\nFor test to return true, an environment must remain unchanged for\n<code>checkInterval * equalIntervals<\/code> steps. This result might not be\nentirely consistent, since the check isn't performed every step so\nas not to cause performance issues. Therefore it might happen that\nsome changes occur in the environment but are reverted before the\nnext check is performed.<\/p><p>test should be called at every step of the simulation in order\nto avoid missing checks.<\/p><init>\nCreates a new StableForSteps with the given values.<\/p>\n<p>test<\/p>\n"
-                      }]
-                    }},
+                    "childrenPages": {
+                      "AfterTime": {
+                        "ownKey": "AfterTime",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/terminators",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "AfterTime",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/terminators/AfterTime"
+                          },
+                          "description": "",
+                          "title": "AfterTime",
+                          "content": "<p><init><\/p>\n<p>endTime<\/p>\n<p>test\nTries to access the simulation time from the environment.\nIf the simulation is unaccessible, throws an exception.\nOtherwise, reads the current time, and flips to true once it got past the provided endTime.<\/p>\n"
+                        }]
+                      },
+                      "StableForSteps": {
+                        "ownKey": "StableForSteps",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/terminators",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "StableForSteps",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/terminators/StableForSteps"
+                          },
+                          "description": "",
+                          "title": "StableForSteps",
+                          "content": "<p>A Predicate that tests if an environment's\nnodes (meaning their position and concentration) have\nremained unchanged for a certain amount of steps.<p>The check isn't performed on every step\nof a simulation,\ninstead an interval that determines how many steps are\nto be skipped between each check is specified.\nFor test to return true, an environment must remain unchanged for\n<code>checkInterval * equalIntervals<\/code> steps. This result might not be\nentirely consistent, since the check isn't performed every step so\nas not to cause performance issues. Therefore it might happen that\nsome changes occur in the environment but are reverted before the\nnext check is performed.<\/p><p>test should be called at every step of the simulation in order\nto avoid missing checks.<\/p><init>\nCreates a new StableForSteps with the given values.<\/p>\n<p>test<\/p>\n"
+                        }]
+                      }
+                    },
                     "ownPages": [{
                       "reference": {
                         "path": "it/unibo/alchemist/model/implementations",
