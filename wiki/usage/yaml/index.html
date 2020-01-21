@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev02+0b575f19"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev03+ac70c185"};
 </script>
 
 
@@ -70,9 +70,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/orchidSearch.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/css/editorial_main.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/css/editorial_orchidCustomizations.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/css/orchidSearch.css" />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
 <!-- end:inject styles -->
@@ -541,7 +541,7 @@ Termination conditions are expected to be found in the {{ anchor('it.unibo.alche
 <p>To load them, use the <code>terminators</code> keyword.
 Multiple terminators are allowed, the first terminator matching causes the termination of the simulation (they are in and).</p>
 <p>Here is an example:</p>
-<pre><code class="language-yaml">terminators:
+<pre><code class="language-yaml">terminate:
   # Defines a new terminator which every 100 simulation steps for the environment to remain equal for the 10 subsequent
   # simulation steps. If no change is detected, then the simulation is intended as concluded.
   - type: StableForSteps
@@ -551,7 +551,7 @@ Multiple terminators are allowed, the first terminator matching causes the termi
 <p>A terminator is provided for terminating when a simulation is &quot;stable&quot; (nothing changes in terms of positions and nodes' content).
 The class implementing it is {{ anchor('StableForSteps')) }}.
 The following code snippet exemplifies its usage:</p>
-<pre><code class="language-yaml">terminators:
+<pre><code class="language-yaml">terminate:
   # Defines a new terminator which every 100 simulation steps for the environment to remain equal for the 10 subsequent
   # simulation steps. If no change is detected, then the simulation is intended as concluded.
   - type: StableForSteps
@@ -6075,7 +6075,7 @@ The following code snippet exemplifies its usage:</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev02+0b575f19. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-dev03+ac70c185. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6092,11 +6092,11 @@ The following code snippet exemplifies its usage:</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/orchidSearch.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/orchidSearch.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
