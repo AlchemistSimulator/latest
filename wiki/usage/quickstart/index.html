@@ -31,11 +31,11 @@
 <link rel="prev" href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">
 
 
-<link rel="next" href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">
+<link rel="next" href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev06+06a137af"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev0g+0f1dbacc"};
 </script>
 
 
@@ -62,7 +62,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"quickstart","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/quickstart"},"next":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"run-gradle","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle"},"previous":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"installation","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/installation"},"description":"","title":"Quick start"};
+    window.allData = {"reference":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"quickstart","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/quickstart"},"next":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"gui","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/gui"},"previous":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"installation","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/installation"},"description":"","title":"Quick start"};
 </script>
 
 <!-- end:debug info -->
@@ -118,21 +118,35 @@
             
                 
                     
-                        <p>You can find <a href="https://github.com/paagamelo/Alchemist-quickstart">here</a> a project showing how to use Alchemist via <a href="https://gradle.org">Gradle</a> to run a simple simulation. Let's use it as a quick start to have you hit the ground running.</p>
+                        <p>You can find <a href="https://github.com/AlchemistSimulator/alchemist-primer">here</a> a project showing how to use Alchemist via
+<a href="https://gradle.org">Gradle</a> to run a simple simulation.
+Let's use it as a quick start to have you hit the ground running.</p>
 <p>You can either follow these instructions or those on the <code>README.md</code> file of the linked project, information is equivalent.</p>
 <h2 id="how-to-launch">How to launch</h2>
 <p>To run the example you can rely on the pre-configured Gradle build script. It will automatically download all the required libraries, set up the environment, and execute the simulator via command line for you.
 As first step, use <code>git</code> to locally clone the repository linked above.
 In order to launch, open a terminal and move to the project root folder, then on UNIX:</p>
-<pre><code class="language-bash">./gradlew runAlchemist
+<pre><code class="language-bash">./gradlew runAll
 </code></pre>
 <p>On Windows:</p>
-<pre><code>gradlew.bat runAlchemist
+<pre><code>gradlew.bat runAll
 </code></pre>
-<p>Press P and you will see some pedestrians wandering around. For further information about the gui, see the <a href="gui.md">graphical interface shortcuts</a>.</p>
-<p>Note that the first launch will be rather slow, since Gradle will download all the required files. They will get cached in the user's home folder (as per Gradle normal behavior).</p>
+<p>Press P and you will see some pedestrians wandering around. For further information about the gui, see the <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">graphical interface shortcuts</a>.</p>
+<p>Note that the first launch will be rather slow, since Gradle will download all the required files.
+They will get cached in the user's home folder (as per Gradle normal behavior).</p>
+<h2 id="importing-the-example-project-in-an-ide">Importing the example project in an IDE</h2>
+<p>Since Gradle is used to deal with the simulator configuration,
+any IDE supporting it should in principle be able to import it.
+We recommend IntelliJ Idea, as to the best of our knowledge has the smoothest integration with Gradle.</p>
+<p>If you have IntelliJ Idea, just right click from your file manager on the <code>build.gradle.kts</code> file and open it with IntelliJ.
+The IDE should warn that a Gradle project has been detected,
+and by confirming that this is correct it will self-configure appropriately.</p>
+<h3 id="project-organization">Project organization</h3>
+<p>You will see a <code>src/main</code> folder,
+with subfolders divided by language.
+Simulations are in the <code>yaml</code> folder.</p>
 <h2 id="the-build-script">The build script</h2>
-<p>Let's explain how things work by looking at the <code>build.gradle</code> script.</p>
+<p>Let's explain how things work by looking at the <code>build.gradle.kts</code> script.</p>
 <h3 id="importing-alchemist">Importing Alchemist</h3>
 <p>First of all, we need to add Alchemist as a dependency. Alchemist is available on Maven Central, we can import all the components by importing the <code>it.unibo.alchemist:alchemist</code> artifact. Thus, you will see something like this:</p>
 <pre><code class="language-kotlin">repositories { mavenCentral() }
@@ -143,8 +157,9 @@ dependencies {
 </code></pre>
 <p>With <code>SOME_ALCHEMIST_VERSION</code> replaced by the version used, nothing special actually.</p>
 <p>If you do not need the whole Alchemist machinery but just a sub-part of it, you can restrict the set of imported artifacts by using as dependencies the modules you are actually in need of.</p>
-<h3 id="running-alchemist">Running Alchemist</h3>
-<p>Now, let's look at the <code>runAlchemist</code> task, it is a simple gradle task responsible for launching the simulation. Let's dissect it:</p>
+<h3 id="detail-using-gradle-to-launch-alchemist-or-any-java-process">Detail: using Gradle to launch Alchemist (or any Java process...)</h3>
+<p>The following is a <code>runAlchemist</code> task, it is a simple gradle task responsible for launching the simulation.
+Let's dissect it:</p>
 <pre><code class="language-kotlin">tasks.register&lt;JavaExec&gt;(&quot;runAlchemist&quot;) {
     classpath = project.sourceSets.getByName(&quot;main&quot;).runtimeClasspath
     main = &quot;it.unibo.alchemist.Alchemist&quot;
@@ -219,8 +234,8 @@ dependencies {
             
             
                 <div class="float-right">
-                    <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle" class="button special small pill">
-                        Running Alchemist via Gradle<span>&rarr;</span>
+                    <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui" class="button special small pill">
+                        Alchemist graphical interface<span>&rarr;</span>
                     </a>
                 </div>
             
@@ -312,15 +327,7 @@ dependencies {
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
     </li>
     
 
@@ -329,14 +336,6 @@ dependencies {
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
     </li>
     
 
@@ -433,6 +432,22 @@ dependencies {
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
     </li>
     
 
@@ -5715,7 +5730,7 @@ dependencies {
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev06+06a137af. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-dev0g+0f1dbacc. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

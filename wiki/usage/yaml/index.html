@@ -28,14 +28,14 @@
 
 
 
-<link rel="prev" href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">
+<link rel="prev" href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">
 
 
-<link rel="next" href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">
+<link rel="next" href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev06+06a137af"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev0g+0f1dbacc"};
 </script>
 
 
@@ -62,7 +62,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"yaml","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/yaml"},"next":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"gui","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/gui"},"previous":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"run-stand-alone","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone"},"description":"","title":"Writing Alchemist simulations"};
+    window.allData = {"reference":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"yaml","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/yaml"},"next":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"biochemistry","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry"},"previous":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"gui","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/gui"},"description":"","title":"Writing Alchemist simulations"};
 </script>
 
 <!-- end:debug info -->
@@ -159,8 +159,8 @@ parameters.
 The system tries to build an object with all the available constructors until one of them provides an instanced object,
 in an order that considers both the current context (namely, the entities that have already been instanced) and the
 value of <code>parameters</code>.</p>
-<p>For instance, imagine that you are trying to build an instance of a {{ anchor('Reaction') }}, whose only constructor requires an
-{{ anchor('Environment') }}, a {{ anchor('Node') }}, an <code>int</code> and a <code>String</code>.
+<p>For instance, imagine that you are trying to build an instance of a <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>, whose only constructor requires an
+<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, a <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, an <code>int</code> and a <code>String</code>.
 In this case, an Environment and a Node must have already been created (or the YAML loader won't be at this point).
 As a consequence, the first two parameters are automatically inferred by the current context and passed to the constructor.
 The other two parameters can not be inferred this way; instead, the value associated to <code>parameters</code> is used to extract the proper values (if possible).
@@ -171,10 +171,10 @@ parameters: [4, foo]
 <p>As you can easily infer, the value of <code>parameters</code> must be a YAML list.</p>
 <p>Don't despair if the class loading system is still unclear: it is used pervasively and it will become clearer with the examples in the next sections.</p>
 <h2 id="setting-up-the-environment">Setting up the environment</h2>
-<p>The <code>environment</code> key is used to load the {{ anchor('Environment') }} implementation.
-It is optional and it defaults to a {{ anchor('continuous bidimensional space', 'Continuous2DEnvironment') }}.
+<p>The <code>environment</code> key is used to load the <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a> implementation.
+It is optional and it defaults to a <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/Continuous2DEnvironment">continuous bidimensional space</a>.
 If no fully qualified environment name is provided for class loading, Alchemist uses the package
-{{ anchor('it.unibo.alchemist.model.implementations.environments') }} to search for the class.</p>
+<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments">it.unibo.alchemist.model.implementations.environments</a> to search for the class.</p>
 <h3 id="examples">Examples</h3>
 <p>The following simulations are equivalent, and load the default environment (which is incarnation independent, here
 <code>protelis</code> is picked, but it works for any other incarnation as well):</p>
@@ -193,7 +193,7 @@ environment:
   type: Continuous2DEnvironment
   parameters: []
 </code></pre>
-<p>{{ anchor('OSMEnvironment') }} allows for running simulations over real world maps. The following simulation
+<p><a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/OSMEnvironment">OSMEnvironment</a> allows for running simulations over real world maps. The following simulation
 loads data from an Openstreetmap file (OSM, XML and PBF formats are supported) located in the classpath in the folder
 <code>maps</code>:</p>
 <pre><code class="language-yaml">incarnation: protelis
@@ -201,14 +201,14 @@ environment:
   type: OSMEnvironment
   parameters: [maps/foo.pbf]
 </code></pre>
-<p>{{ anchor('ImageEnvironment') }} loads data from a black and white raster image file (in this example, located in the
+<p><a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironment">ImageEnvironment</a> loads data from a black and white raster image file (in this example, located in the
 classpath in the folder <code>images</code>), interpreting the black pixels as obstacles (areas that cannot be accessed by nodes):</p>
 <pre><code class="language-yaml">incarnation: protelis
 environment:
   type: ImageEnvironment
   parameters: [images/foo.png]
 </code></pre>
-<p>Finally, if you write your own custom class named <code>my.package.FooEnv</code> implementing {{ anchor('Environment') }}, whose
+<p>Finally, if you write your own custom class named <code>my.package.FooEnv</code> implementing <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, whose
 constructor requires a String and a double, you can use it in the simulator by writing, for instance:</p>
 <pre><code class="language-yaml">incarnation: protelis
 environment:
@@ -216,7 +216,7 @@ environment:
   parameters: [bar, 2.2]
 </code></pre>
 <p>The environments shipped with the distribution can be found in the package
-{{ anchor('it.unibo.alchemist.model.implementations.environments') }}.</p>
+<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments">it.unibo.alchemist.model.implementations.environments</a>.</p>
 <h2 id="declaring-variables">Declaring variables</h2>
 <p>The <code>variables</code> section lists variable simulation values.
 A variable defines some kind of value that can be referenced in the simulation file.</p>
@@ -224,9 +224,12 @@ A variable defines some kind of value that can be referenced in the simulation f
 The difference is that variables of the latter kind can always be computed given the values of all the other variables.</p>
 <h3 id="free-variables">Free variables</h3>
 <p>Free variables define a set of values and a default.
-The value set is used to define the batch matrix, i.e., if the variable is selected for a batch, all its value are
-included in the cartesian product that determines which simulations are to be executed.
-If the simulation is not executed as batch, then the default value is used</p>
+Their main scope is enabling Alchemist to run a set of simulations with different parameters (values of variables)
+without the need to duplicate the simulation code.
+When used in this mode (called &quot;batch mode&quot;),
+Alchemist by default produces the cartesian product of all the variables values' selected for the batch,
+and runs a simulation for each combination.
+If the simulation is not executed as batch, then the default value is used.</p>
 <h4 id="linear-variables">Linear variables</h4>
 <h4 id="geometric-variables">Geometric variables</h4>
 <h4 id="arbitrary-valued-variables">Arbitrary-valued variables</h4>
@@ -383,9 +386,9 @@ seeds:
   simulation: *random
 </code></pre>
 <h2 id="defining-the-network">Defining the network</h2>
-<p>The <code>network-model</code> key is used to load the implementation of {{ anchor('LinkingRule') }} to be used in the simulation,
+<p>The <code>network-model</code> key is used to load the implementation of <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/LinkingRule">LinkingRule</a> to be used in the simulation,
 which determines the neighborhood of every node.
-The key is optional, but defaults to {{ anchor('NoLinks') }}, so if unspecified nodes in the environment don't get
+The key is optional, but defaults to <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/linkingrules/NoLinks">NoLinks</a>, so if unspecified nodes in the environment don't get
 connected.
 Omitting such key is equivalent to writing any of the following:</p>
 <pre><code class="language-yaml">network-model:
@@ -400,15 +403,15 @@ Omitting such key is equivalent to writing any of the following:</p>
   parameters: []
 </code></pre>
 <p>If no fully qualified linking rule name is provided for class loading, Alchemist uses the package
-{{ anchor('it.unibo.alchemist.model.implementations.linkingrules') }} to search for the class.</p>
+<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/linkingrules">it.unibo.alchemist.model.implementations.linkingrules</a> to search for the class.</p>
 <h3 id="linking-nodes-based-on-distance">Linking nodes based on distance</h3>
 <p>One of the most common ways of linking nodes is to connect those which are close enough to each other. To do so, you can
-use the class {{ anchor('ConnectWithinDistance') }}, passing a parameter representing the maximum connection distance.
+use the class <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/linkingrules/ConnectWithinDistance">ConnectWithinDistance</a>, passing a parameter representing the maximum connection distance.
 Note that such distance depends on the environment: while the definition of distance is straightforward for euclidean
 spaces, it's not so for <a href="https://en.wikipedia.org/wiki/Riemannian_geometry">Riemannian manifolds</a>, which is a fancy
 name to define geometries such as the one typical of a urban map (you can roughly interpret it as a euclidean space
 &quot;with holes&quot;).
-For instance, in case of environments using {{ anchor('GeoPosition') }}, the distance is computed in meters, so the
+For instance, in case of environments using <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/GeoPosition">GeoPosition</a>, the distance is computed in meters, so the
 distance between <code>[44.133254, 12.237770]</code> and <code>[44.146680, 12.258627]</code> is about <code>2240</code> (meters).</p>
 <pre><code class="language-yaml">network-model:
   type: ConnectWithinDistance
@@ -417,12 +420,12 @@ distance between <code>[44.133254, 12.237770]</code> and <code>[44.146680, 12.25
 </code></pre>
 <h2 id="displacing-nodes">Displacing nodes</h2>
 <p>The <code>displacements</code> section lists the node locations at the beginning of the simulation.
-Each displacement type extends the interface {{ anchor('Displacement') }}. If no fully qualified displacement name is
+Each displacement type extends the interface <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Displacement">Displacement</a>. If no fully qualified displacement name is
 provided for class loading,
-Alchemist uses the package {{ anchor('it.unibo.alchemist.loader.displacements') }} to search for the class.
+Alchemist uses the package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements">it.unibo.alchemist.loader.displacements</a> to search for the class.
 The YAML key associated to displacements is <code>in</code>.</p>
 <h3 id="displacing-on-specific-positions">Displacing on specific positions</h3>
-<p>The following example places a single node in the (0, 0) {{ anchor('Point') }}.</p>
+<p>The following example places a single node in the (0, 0) <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Point">Point</a>.</p>
 <pre><code class="language-yaml">displacements:
   # &quot;in&quot; entries, where each entry defines a group of nodes
   - in:
@@ -437,13 +440,13 @@ The YAML key associated to displacements is <code>in</code>.</p>
       parameters: [[0,1],[2,2],[3,4]]
 </code></pre>
 <h3 id="displacing-multiple-nodes-at-once">Displacing multiple nodes at once</h3>
-<p>This example places 10000 nodes randomly in a {{ anchor('Circle') }} with center in (0, 0) and radius 10.</p>
+<p>This example places 10000 nodes randomly in a <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Circle">Circle</a> with center in (0, 0) and radius 10.</p>
 <pre><code class="language-yaml">displacements:
   - in:
       type: Circle
       parameters: [10000, 0, 0, 10]
 </code></pre>
-<p>Here instead nodes are located in a {{ anchor('Grid') }} centered in (0, 0), with nodes distanced of 0.25 both
+<p>Here instead nodes are located in a <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Grid">Grid</a> centered in (0, 0), with nodes distanced of 0.25 both
 horizontally and vertically, and whose position is not exact but randomly perturbed (±0.1 distance units).</p>
 <pre><code class="language-yaml">displacements:
   - in:
@@ -472,8 +475,38 @@ radius 20.</p>
       type: MyCustomNodeImpl
 </code></pre>
 <h3 id="customizing-the-nodes-content">Customizing the nodes content</h3>
-<p>It is possible to set the content of the nodes inside a given region. Only the nodes inside the {{ anchor('Rectangle') }} area contain
-the <code>source</code> and <code>randomSensor</code> molecules (global variables).</p>
+<p>It is possible to set the content of the nodes in a deployment.
+Node contents are defined in terms of molecules and their corresponding concentration.
+As such, they depend on the specific incarnation in use.</p>
+<p>In the following example, we inject in all the nodes of a <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Grid">Grid</a> deployment a molecule called <code>foo</code>  with
+concentration <code>1</code>.
+As stated before, it would only make sense if the incarnation supports integer concentrations and it's able to produce
+a valid molecule from the <code>&quot;foo&quot;</code> String.</p>
+<pre><code class="language-yaml">displacements:
+  - in:
+      type: Grid
+      parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
+    contents:
+      - molecule: foo
+        concentration: 1
+</code></pre>
+<p>Multiple contents can be listed, e.g.,
+if we want to also have a molecule named <code>bar</code> with value <code>0</code> along with <code>foo</code>,
+we can just add another entry to the list:</p>
+<pre><code class="language-yaml">displacements:
+  - in:
+      type: Grid
+      parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
+    contents:
+      - molecule: foo
+        concentration: 1
+      - molecule: bar
+        concentration: 0
+</code></pre>
+<p>Molecules can be injected selectively inside a given <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>.
+To do so, you can a filter with the <code>in keyword</code>.
+In the following example, only the nodes inside the <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Rectangle">Rectangle</a> area contain
+the <code>source</code> molecule.</p>
 <pre><code class="language-yaml">displacements:
   - in:
       type: Grid
@@ -484,14 +517,10 @@ the <code>source</code> and <code>randomSensor</code> molecules (global variable
           parameters: [-6, -6, 2, 2]
         molecule: source
         concentration: true
-      - molecule: randomSensor
-        concentration: &gt;
-          import java.lang.Math.random
-          random() * pi
 </code></pre>
 <h2 id="writing-behaviors-reactions">Writing behaviors (Reactions)</h2>
-<p>TODO!</p>
-<p>Nodes can be programmed using reactions.</p>
+<p>Nodes can be programmed using reactions.
+Reaction are usually highly dependent on the specific incarnation.</p>
 <pre><code class="language-yaml"># Variable representing the program to be executed
 gradient: &amp;gradient
   - time-distribution: 1
@@ -518,14 +547,14 @@ displacements:
         - type: MyActionType
           parameters: [...] #
 </code></pre>
-<h2 id="writing-layers">Writing layers</h2>
+<h2 id="layers">Layers</h2>
 <p>It is possible to define overlays (layers) of data that can be sensed everywhere in the environment.
 Layers can be used to model physical properties, such as pollution, light, temperature, and so on.
 Conversely than readings from nodes' contents, layers have no dependency optimization.
 This implies that reactions that read values from layers should have special care in defining their <code>context</code> appropriately</p>
 <p>In order to create layer, the programmer must define the type of the layer, a molecule that will be used as identifier,
 and possibly the parameters needed for intializing the type of layer you have chosen, as per the <a href="#loading-arbitrary-java-classes-with-the-typeparameters-syntax"><code>type/parameter</code> syntax</a>.</p>
-<p>The following example exemplifies the syntax for initializing two {{ anchor('BidimensionalGaussianLayer') }}:</p>
+<p>The following example exemplifies the syntax for initializing two <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/layers/BidimensionalGaussianLayer">BidimensionalGaussianLayer</a>:</p>
 <pre><code class="language-yaml">layers:
   - type: BidimensionalGaussianLayer
     molecule: foo
@@ -537,7 +566,7 @@ and possibly the parameters needed for intializing the type of layer you have ch
 <h2 id="terminating-the-simulation-if-a-condition-is-met">Terminating the simulation if a condition is met</h2>
 <p>Alchemist supports the possibility to write termination conditions for any simulation.
 Termination conditions are checked after every event, and, if met, cause the immediate termination of a simulation.
-Termination conditions are expected to be found in the {{ anchor('it.unibo.alchemist.model.implementations.terminators') }} package.</p>
+Termination conditions are expected to be found in the <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/terminators">it.unibo.alchemist.model.implementations.terminators</a> package.</p>
 <p>To load them, use the <code>terminators</code> keyword.
 Multiple terminators are allowed, the first terminator matching causes the termination of the simulation (they are in and).</p>
 <p>Here is an example:</p>
@@ -563,7 +592,7 @@ terminate:
 </code></pre>
 <h3 id="terminating-the-simulation-if-the-environment-is-not-changing">Terminating the simulation if the environment is not changing</h3>
 <p>A terminator is provided for terminating when a simulation is &quot;stable&quot; (nothing changes in terms of positions and nodes' content).
-The class implementing it is {{ anchor('StableForSteps')) }}.
+The class implementing it is <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/terminators/StableForSteps">StableForSteps</a>.
 The following code snippet exemplifies its usage:</p>
 <pre><code class="language-yaml">terminate:
   # Defines a new terminator which every 100 simulation steps for the environment to remain equal for the 10 subsequent
@@ -594,15 +623,15 @@ The following code snippet exemplifies its usage:</p>
         <div class="clearfix">
             
                 <div class="float-left">
-                    <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone" class="button special small pill">
-                        <span>&larr;</span> Running Alchemist stand-alone
+                    <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui" class="button special small pill">
+                        <span>&larr;</span> Alchemist graphical interface
                     </a>
                 </div>
             
             
                 <div class="float-right">
-                    <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui" class="button special small pill">
-                        Alchemist graphical interface<span>&rarr;</span>
+                    <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry" class="button special small pill">
+                        Alchemist biochemistry incarnation<span>&rarr;</span>
                     </a>
                 </div>
             
@@ -694,15 +723,7 @@ The following code snippet exemplifies its usage:</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
     </li>
     
 
@@ -711,14 +732,6 @@ The following code snippet exemplifies its usage:</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
     </li>
     
 
@@ -815,6 +828,22 @@ The following code snippet exemplifies its usage:</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
     </li>
     
 
@@ -6097,7 +6126,7 @@ The following code snippet exemplifies its usage:</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev06+06a137af. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-dev0g+0f1dbacc. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
