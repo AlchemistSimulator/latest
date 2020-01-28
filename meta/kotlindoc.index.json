@@ -1273,6 +1273,22 @@
                           "content": "<p>Defines an object capable of drawing functions that take a Position of type P as input and give a Number as output.<\/p>\n<p>drawFunction\nDraw the provided function.<\/p>\n"
                         }]
                       },
+                      "DrawNavigationMesh": {
+                        "ownKey": "DrawNavigationMesh",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/boundary/gui/effects",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "DrawNavigationMesh",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationMesh"
+                          },
+                          "description": "",
+                          "title": "DrawNavigationMesh",
+                          "content": "<p><init><\/p>\n<p>getColorSummary\n{@inheritDoc}\ngetRed<\/p>\n<p>getEnvStartY<\/p>\n<p>getGreen<\/p>\n<p>getEnvStartX<\/p>\n<p>getBlue<\/p>\n<p>setEnvEndY<\/p>\n<p>setBlue<\/p>\n<p>setEnvStartY<\/p>\n<p>setEnvEndX<\/p>\n<p>setEnvStartX<\/p>\n<p>getEnvEndY<\/p>\n<p>apply<\/p>\n<p>getEnvEndX<\/p>\n<p>setGreen<\/p>\n<p>getAlpha<\/p>\n<p>setAlpha<\/p>\n<p>setRed<\/p>\n"
+                        }]
+                      },
                       "AbstractDrawLayers": {
                         "ownKey": "AbstractDrawLayers",
                         "ownPages": [{
@@ -6207,6 +6223,41 @@
                           "content": "<p>Generic factory for GeometricShape.<\/p>\n<p>adimensional\nA special shape which does not occupy space and does not intersect with any other, not even with itself.\nrequireCompatible\nRequires that the given shape is compatible with the ones provided by this factory, otherwise throws an exception.<\/p>\n"
                         }]
                       },
+                      "navigationmeshes": {
+                        "ownKey": "navigationmeshes",
+                        "childrenPages": {"deaccon": {
+                          "ownKey": "deaccon",
+                          "childrenPages": {"ExtendableConvexPolygon": {
+                            "ownKey": "ExtendableConvexPolygon",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "ExtendableConvexPolygon",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon/ExtendableConvexPolygon"
+                              },
+                              "description": "",
+                              "title": "ExtendableConvexPolygon",
+                              "content": "<p>A convex polygon capable of extending itself.<p>This interface was explicitly designed for the Deaccon2D algorithm.<\/p><\/p>\n<p>advanceEdge\nAdvances the specified edge in its normal direction. The step\nparameter represents the length of the vector that will be used\nto translate the edge. Returns a boolean indicating whether the\nadvancement was performed or not (e.g. because it would have\ncaused the lost of the convexity).\nextend\nTries to extend the polygon in each direction. Each edge is given\na chance to advance in its normal direction. The step parameter\nrepresents the length of the vector that will be used to advance\nthe edges.\nReturns a boolean indicating whether the polygon extended (e.g. at\nleast one edge advanced) or not (e.g. for the presence of obstacles).\nThe boundaries of the environment need to be specified as well, in\norder to prevent the polygon from growing beyond them (a rectangular\nshaped environment is assumed, with two opposite points describing it).\nThis method is able to cope with non axis-aligned convex polygonal\nobstacles as well.<\/p>\n"
+                            }]
+                          }},
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/interfaces/geometry/navigationmeshes",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "deaccon",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon"
+                            },
+                            "description": "",
+                            "title": "it.unibo.alchemist.model.interfaces.geometry.navigationmeshes.deaccon",
+                            "content": ""
+                          }]
+                        }}
+                      },
                       "GeometricTransformation": {
                         "ownKey": "GeometricTransformation",
                         "ownPages": [{
@@ -6228,6 +6279,22 @@
                         "childrenPages": {"twod": {
                           "ownKey": "twod",
                           "childrenPages": {
+                            "Euclidean2DEdge": {
+                              "ownKey": "Euclidean2DEdge",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/interfaces/geometry/euclidean/twod",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "Euclidean2DEdge",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DEdge"
+                                },
+                                "description": "",
+                                "title": "Euclidean2DEdge",
+                                "content": "<p>Defines an euclidean edge (or side) in a bidimensional space.<\/p>\n"
+                              }]
+                            },
                             "Euclidean2DShapeFactory": {
                               "ownKey": "Euclidean2DShapeFactory",
                               "ownPages": [{
@@ -6258,6 +6325,38 @@
                                 "description": "",
                                 "title": "Euclidean2DShape",
                                 "content": "<p>Defines an euclidean shape in a bidimensional space.<\/p>\n"
+                              }]
+                            },
+                            "ConvexPolygon": {
+                              "ownKey": "ConvexPolygon",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/interfaces/geometry/euclidean/twod",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "ConvexPolygon",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon"
+                                },
+                                "description": "",
+                                "title": "ConvexPolygon",
+                                "content": "<p>A convex polygon is a simple polygon (i.e. not self-intersecting and\nwith no holes) in which no line segment between two points on the boundary\never goes outside the polygon.<\/p>\n<p>vertices\nA list is used because vertices do have an order.\nintersects\nChecks whether the given shape intersects with the polygon.\nThis method is &quot;exact&quot; (no bounding box are used).\ncontainsOrLiesOnBoundary\nChecks whether the given vector is contained in the polygon or\nlies on its boundary.<\/p>\n"
+                              }]
+                            },
+                            "MutableConvexPolygon": {
+                              "ownKey": "MutableConvexPolygon",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/interfaces/geometry/euclidean/twod",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "MutableConvexPolygon",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/MutableConvexPolygon"
+                                },
+                                "description": "",
+                                "title": "MutableConvexPolygon",
+                                "content": "<p>A mutable convex polygon.<\/p>\n<p>addVertex\nAdds a vertex to the polygon, linked to the (previous) last vertex.<p>Note that it is responsibility of the user to provide vertices in\nthe correct order. If the addition of the specified vertex would\ncause the violation of the convexity, false is returned and the\nvertex is not added.<\/p>\naddVertex\nAdds a vertex in the specified position. See also addVertex.\nremoveVertex\nRemoves the vertex specified by the index parameter.<p>If the removal of such vertex would cause the violation of the\nconvexity, false is returned and the vertex is not removed. Please\nbe also aware that a polygon cannot have less than 3 vertices.<\/p>\nmoveVertex\nMove the specified vertex to the new absolute coordinates specified.<p>If the new position of the specified vertex would cause the\nviolation of the convexity, false is returned and the operation\nis not performed.<\/p>\ngetEdge\nThe index parameter specify which edge to get: edge i connects\nvertices i and i+1.\nmoveEdge\nIf the new coords would cause the lost of the convexity,\nfalse is returned.\nunion\nPerforms a union in-place with a collection of overlapping\npolygons. Returns a boolean indicating whether the union was\nsuccessful or not (e.g. because the polygon would have lost its\nconvexity or the provided polygons did not overlap).<\/p>\n"
                               }]
                             },
                             "Euclidean2DTransformation": {
@@ -7125,7 +7224,7 @@
                           },
                           "description": "",
                           "title": "Euclidean2DPosition",
-                          "content": "<p><init><\/p>\n<p><init><\/p>\n<p>y<\/p>\n<p>x<\/p>\n<p>asAngle\nComputes the angle with atan2(y, x)<\/p>\n"
+                          "content": "<p><init><\/p>\n<p><init><\/p>\n<p>y<\/p>\n<p>x<\/p>\n<p>asAngle\nComputes the angle with atan2(y, x)\ntimes\nMultiplies each coordinate of a vector for a scalar number n.\nnormalize\nNormalizes the vector.\nresize\nResizes the vector in order for it to have a length equal\nto the specified parameter. Its direction and verse are preserved.\nnormal\nFind the normal of a vector.\ndot\nDot product between bidimensional vectors.<\/p>\n"
                         }]
                       },
                       "Manhattan2DPosition": {
@@ -8236,6 +8335,22 @@
                           "content": "<p>A special shape which does not occupy space and does not intersect with any other, not even with itself.\nIt also ignores any transformation.<init>\nA special shape which does not occupy space and does not intersect with any other, not even with itself.\nIt also ignores any transformation.\ndiameter\nThe largest distance between any pair of vertices.\ncentroid\nThe geometric center.\nintersects\nA shape intersects another if any of its points is contained in the other one.\ncontains\nCheck if the shape contains a vector.\ntransformed\nAny transformation is ignored<\/p>\n"
                         }]
                       },
+                      "IntersectionResult": {
+                        "ownKey": "IntersectionResult",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/geometry",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "IntersectionResult",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/IntersectionResult"
+                          },
+                          "description": "",
+                          "title": "IntersectionResult",
+                          "content": "<p><init><\/p>\n<p>type<\/p>\n<p>intersection<\/p>\n"
+                        }]
+                      },
                       "AbstractShapeFactory": {
                         "ownKey": "AbstractShapeFactory",
                         "ownPages": [{
@@ -8251,6 +8366,110 @@
                           "title": "AbstractShapeFactory",
                           "content": "<p>Base class for GeometricTransformation providing a standard implementation for\nGeometricShapeFactory.adimensional.<init>\nBase class for GeometricTransformation providing a standard implementation for\nGeometricShapeFactory.adimensional.\norigin\nThe default origin for the shapes.\nadimensional\nA special shape which does not occupy space and does not intersect with any other, not even with itself.<\/p>\n"
                         }]
+                      },
+                      "navigationmeshes": {
+                        "ownKey": "navigationmeshes",
+                        "childrenPages": {"deaccon": {
+                          "ownKey": "deaccon",
+                          "childrenPages": {
+                            "Deaccon2D": {
+                              "ownKey": "Deaccon2D",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "Deaccon2D",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/Deaccon2D"
+                                },
+                                "description": "",
+                                "title": "Deaccon2D",
+                                "content": "<p>DEACCON (Decomposition of Environments for the Creation of Convex-region\nNavigation-meshes) is an algorithm capable of generating a navigation mesh\nof a given environment with obstacles.<p>A navigation mesh is a collection of two-dimensional convex polygons\nrepresenting which areas of an environment are traversable by agents\n(namely, walkable areas). Since convex polygons are generated, pedestrians\ncan freely walk around within these areas, as it is guaranteed that no obstacle\nwill be found.<\/p><p>Deaccon works with rectangular shaped bidimensional environments with euclidean\ngeometry and double precision coordinates (i.e. with Euclidean2DPositions).<\/p><p>For more information about the deaccon algorithm, see the related paper:\nhttps://www.aaai.org/Papers/AIIDE/2008/AIIDE08-029.pdf\nThe algorithm implemented here is a slight simplification of the one described\nin the linked paper. Please be aware of the following:<\/p><ul><li>this algorithm does not guarantee the coverage of 100% of the walkable area.<\/li><li>this algorithm was implemented without bothering too much with performance,\nsince the generation of navigation meshes is usually a pre-processing phase.\nBe aware that such operation can take a significant amount of time.<\/li><\/ul><init>\nDEACCON (Decomposition of Environments for the Creation of Convex-region\nNavigation-meshes) is an algorithm capable of generating a navigation mesh\nof a given environment with obstacles.<p>A navigation mesh is a collection of two-dimensional convex polygons\nrepresenting which areas of an environment are traversable by agents\n(namely, walkable areas). Since convex polygons are generated, pedestrians\ncan freely walk around within these areas, as it is guaranteed that no obstacle\nwill be found.<\/p><p>Deaccon works with rectangular shaped bidimensional environments with euclidean\ngeometry and double precision coordinates (i.e. with Euclidean2DPositions).<\/p><p>For more information about the deaccon algorithm, see the related paper:\nhttps://www.aaai.org/Papers/AIIDE/2008/AIIDE08-029.pdf\nThe algorithm implemented here is a slight simplification of the one described\nin the linked paper. Please be aware of the following:<\/p><ul><li>this algorithm does not guarantee the coverage of 100% of the walkable area.<\/li><li>this algorithm was implemented without bothering too much with performance,\nsince the generation of navigation meshes is usually a pre-processing phase.\nBe aware that such operation can take a significant amount of time.<\/li><\/ul><\/p>\n<p>generateNavigationMesh\nGenerates a navigation mesh of an environment. A rectangular shaped\nenvironment is assumed, its starting point, width and height (only positive)\nneed to be specified. Obstacles are represented with java.awt.Shapes.\nNote that only CONVEX POLYGONAL obstacles are supported, each curved\nsegment connecting two points will be considered as a straight line\nbetween them.<\/p>\n"
+                              }]
+                            },
+                            "ExtendableConvexPolygonImpl": {
+                              "ownKey": "ExtendableConvexPolygonImpl",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "ExtendableConvexPolygonImpl",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/ExtendableConvexPolygonImpl"
+                                },
+                                "description": "",
+                                "title": "ExtendableConvexPolygonImpl",
+                                "content": "<p>Implementation of ExtendableConvexPolygon.<init>\nImplementation of ExtendableConvexPolygon.<\/p>\n<p>addVertex\nAdds a vertex in the specified position. See also addVertex.\nremoveVertex\nRemoves the vertex specified by the index parameter.<p>If the removal of such vertex would cause the violation of the\nconvexity, false is returned and the vertex is not removed. Please\nbe also aware that a polygon cannot have less than 3 vertices.<\/p>\nmoveVertex\nMove the specified vertex to the new absolute coordinates specified.<p>If the new position of the specified vertex would cause the\nviolation of the convexity, false is returned and the operation\nis not performed.<\/p>\nmoveEdge\nIf the new coords would cause the lost of the convexity,\nfalse is returned.\nmutateTo\nMutates this polygon to a copy of the specified one.\nadvanceEdge\nAdvances the specified edge in its normal direction. The step\nparameter represents the length of the vector that will be used\nto translate the edge. Returns a boolean indicating whether the\nadvancement was performed or not (e.g. because it would have\ncaused the lost of the convexity).\nextend\nTries to extend the polygon in each direction. Each edge is given\na chance to advance in its normal direction. The step parameter\nrepresents the length of the vector that will be used to advance\nthe edges.\nReturns a boolean indicating whether the polygon extended (e.g. at\nleast one edge advanced) or not (e.g. for the presence of obstacles).\nThe boundaries of the environment need to be specified as well, in\norder to prevent the polygon from growing beyond them (a rectangular\nshaped environment is assumed, with two opposite points describing it).\nThis method is able to cope with non axis-aligned convex polygonal\nobstacles as well.\nequals<\/p>\n<p>hashCode<\/p>\n"
+                              }]
+                            }
+                          },
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/geometry/navigationmeshes",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "deaccon",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon"
+                            },
+                            "description": "",
+                            "title": "it.unibo.alchemist.model.implementations.geometry.navigationmeshes.deaccon",
+                            "content": ""
+                          }]
+                        }}
+                      },
+                      "euclidean": {
+                        "ownKey": "euclidean",
+                        "childrenPages": {"twod": {
+                          "ownKey": "twod",
+                          "childrenPages": {"MutableConvexPolygonImpl": {
+                            "ownKey": "MutableConvexPolygonImpl",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/implementations/geometry/euclidean/twod",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "MutableConvexPolygonImpl",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/MutableConvexPolygonImpl"
+                              },
+                              "description": "",
+                              "title": "MutableConvexPolygonImpl",
+                              "content": "<p>Implementation of a MutableConvexPolygon.<p>Each modification operation on this object has a time complexity of\nO(n), where n is the number of vertices/edges.<\/p><init>\nImplementation of a MutableConvexPolygon.<p>Each modification operation on this object has a time complexity of\nO(n), where n is the number of vertices/edges.<\/p>\ndiameter\nThe largest distance between any pair of vertices.\ncentroid\nThe geometric center.\nvertices\nA list is used because vertices do have an order.\naddVertex\nAdds a vertex to the polygon, linked to the (previous) last vertex.<p>Note that it is responsibility of the user to provide vertices in\nthe correct order. If the addition of the specified vertex would\ncause the violation of the convexity, false is returned and the\nvertex is not added.<\/p>\naddVertex\nAdds a vertex in the specified position. See also addVertex.\nremoveVertex\nRemoves the vertex specified by the index parameter.<p>If the removal of such vertex would cause the violation of the\nconvexity, false is returned and the vertex is not removed. Please\nbe also aware that a polygon cannot have less than 3 vertices.<\/p>\nmoveVertex\nMove the specified vertex to the new absolute coordinates specified.<p>If the new position of the specified vertex would cause the\nviolation of the convexity, false is returned and the operation\nis not performed.<\/p>\ngetEdge\nThe index parameter specify which edge to get: edge i connects\nvertices i and i+1.\nmoveEdge\nIf the new coords would cause the lost of the convexity,\nfalse is returned.\nintersects\nA shape intersects another if any of its points is contained in the other one.\nintersects\nChecks whether the given shape intersects with the polygon.\nThis method is &quot;exact&quot; (no bounding box are used).\ncontains\nCheck if the shape contains a vector.\ncontainsOrLiesOnBoundary\nChecks whether the given vector is contained in the polygon or\nlies on its boundary.\nunion\nPerforms a union in-place with a collection of overlapping\npolygons. Returns a boolean indicating whether the union was\nsuccessful or not (e.g. because the polygon would have lost its\nconvexity or the provided polygons did not overlap).\ntransformed\nTransforms the shape.\nasAwtShape<\/p>\n<p>equals<\/p>\n<p>hashCode<\/p>\n<p>mutateTo\nMutates this polygon to a copy of the specified one.\ncircularPrev<\/p>\n<p>circularNext<\/p>\n"
+                            }]
+                          }},
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/geometry/euclidean",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "twod",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod"
+                            },
+                            "description": "",
+                            "title": "it.unibo.alchemist.model.implementations.geometry.euclidean.twod",
+                            "content": ""
+                          }]
+                        }}
+                      },
+                      "SegmentsIntersectionTypes": {
+                        "ownKey": "SegmentsIntersectionTypes",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/geometry",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "SegmentsIntersectionTypes",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionTypes"
+                          },
+                          "description": "",
+                          "title": "SegmentsIntersectionTypes",
+                          "content": "<p>In euclidean geometry, the intersection of two segments can be\nan empty set, a point, or segment (in other words, infinite points).<\/p>\n"
+                        }]
                       }
                     },
                     "ownPages": [{
@@ -8264,7 +8483,7 @@
                       },
                       "description": "",
                       "title": "it.unibo.alchemist.model.implementations.geometry",
-                      "content": "<p>asAngle\nComputes the angle with atan2(y, x)<\/p>\n"
+                      "content": "<p>zCross\nComputes the z component of the cross product of the given vectors.\nisInBoundaries\nChecks whether the given point is inside a rectangular region starting in\nlowerBound and ending in upperBound (bounds are included).\nisInBoundaries\nChecks whether the given edge is inside a rectangular region starting in\nlowerBound and ending in upperBound (bounds are included).\ntoVector\nMutates an edge to a vector. In particular, the vector representing the\nmovement from the first point to the second point of the edge.\nslope\nComputes the slope of the line passing through a couple of points.\nIf the points coincide NaN is the result.\nisDegenerate\nAn edge is degenerate if its points coincide (and its length is zero).\ncontains\nChecks whether the segment (represented by a pair of positions)\ncontains the given point.\nareCollinear\nDetermines if three points are collinear (i.e. they lie on the same line).\nintersection\nFinds the intersection point of two given segments (if exists). This method is\nable to deal with degenerate edges (of length zero) and collinear segments.\nintersects\nChecks whether two intervals (inclusive) intersects.\nasAngle\nComputes the angle with atan2(y, x)\ntimes\nMultiplies each coordinate of a vector for a scalar number n.\nnormalize\nNormalizes the vector.\nresize\nResizes the vector in order for it to have a length equal\nto the specified parameter. Its direction and verse are preserved.\nnormal\nFind the normal of a vector.\ndot\nDot product between bidimensional vectors.\nvertices\nObtains the vertices of a polygonal shape. Any curved segment connecting\ntwo points will be considered as a straight line between them.\nliesBetween\nChecks if a value lies between two values (included) provided in any order.<\/p>\n"
                     }]
                   },
                   "reactions": {
