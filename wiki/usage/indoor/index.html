@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev1q+53d78d5b"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev1v+0ab874a4"};
 </script>
 
 
@@ -70,9 +70,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/editorial_main.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/editorial_orchidCustomizations.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/orchidSearch.css" />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
 <!-- end:inject styles -->
@@ -121,7 +121,12 @@
                         <p>In order to load map of indoor environment, you can use <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironment">ImageEnvironment</a>.</p>
 <p>ImageEnvironment loads the map as raster image from file, interpreting the black pixels as obstacles
 (wall-like areas not accessible to nodes). Color of pixels that represents obstacles can be set to
-every color with relative constructor's parameter, black color is only the default.</p>
+every color with relative constructor's parameter, black is default.</p>
+<p>By default, each pixel is considered as a 1x1 block.
+As a consequence, a 1200x600 image with a vertical line of black pixels at coordinate 500 will be interpreted as a single
+obstacle of size 1x600 starting at coordinate (500, 0).
+It is possible to scale up or down the size of the environment by acting on the zoom parameter of <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironment">ImageEnvironment</a>,
+as well as changing the initial coordinates.</p>
 <p>In this example the image with the map is in the classpath in the folder <code>images</code>. Using a network-model
 like <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/linkingrules/ObstaclesBreakConnection">ObstaclesBreakConnection</a> the connections between nodes are created only if there
 aren't obstacles between them. The nodes moves with a brownian move and never they moves across the walls.</p>
@@ -5784,7 +5789,7 @@ between nodes across walls.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev1q+53d78d5b. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-dev1v+0ab874a4. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -5801,11 +5806,11 @@ between nodes across walls.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/orchidSearch.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/orchidSearch.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
