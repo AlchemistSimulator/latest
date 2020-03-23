@@ -21,21 +21,17 @@
 
 
 
-<title>Using Cognitive Agents</title>
+<title>LinesIntersectionResult</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
 
 
 
-<link rel="prev" href="https://alchemistsimulator.github.io/latest/wiki/usage/navmeshes">
-
-
-<link rel="next" href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev27+53864e1e"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev5g+2924082a"};
 </script>
 
 
@@ -49,20 +45,20 @@
 <!-- Class: com.eden.orchid.editorial.EditorialTheme -->
 
 <!-- PAGE -->
-<!-- Type: wiki -->
-<!-- Class: com.eden.orchid.wiki.pages.WikiPage -->
+<!-- Type: kotlindocClass -->
+<!-- Class: com.eden.orchid.kotlindoc.page.KotlindocClassPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: wiki, page -->
+<!-- Page Template: kotlindocClass, page -->
 <!-- Resolved Page Template:  -->
 
 <!-- RESOURCE -->
-<!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
-<!-- Source Filename: wiki/usage/cognitive-agents.md -->
+<!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
+<!-- Source Filename: it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"cognitive-agents","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-agents"},"next":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"smartcam","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/smartcam"},"previous":{"path":"wiki/usage","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"navmeshes","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/usage/navmeshes"},"description":"","title":"Using Cognitive Agents"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/geometry","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"LinesIntersectionResult","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult"},"description":"","title":"LinesIntersectionResult"};
 </script>
 
 <!-- end:debug info -->
@@ -74,6 +70,7 @@
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css" />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
 <!-- end:inject styles -->
 
@@ -109,7 +106,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>Using Cognitive Agents</h2></header>
+                    <header class="major"><h2>LinesIntersectionResult</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -118,221 +115,94 @@
             
                 
                     
-                        <h3 id="prerequisites">Prerequisites</h3>
-<p>This guide assumes you already know <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">the Alchemist metamodel</a> and <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">how to write simulations in YAML</a>.</p>
-<h3 id="cognitive-agent">Cognitive Agent</h3>
-<p>A cognitive agent is a pedestrian inside the simulation who has an emotional state thanks to it is able
-to influence and to be influenced by the other people with the same capabilities in the environment.</p>
-<h3 id="types-of-agent">Types of Agent</h3>
-<p>The characteristics of the agents loadable in a simulation can be chosen from three available types,
-each representing a more refined version of the previous one.</p>
-<h4 id="homogeneous-pedestrian">Homogeneous Pedestrian</h4>
-<p>Homogeneous pedestrians are a particular type of <em>Node</em> which have no peculiar characteristic each other.
-It is the most common type of agent which can be load in a simulation.</p>
-<pre><code class="language-yaml">displacements:
-  - in:
-      type: Circle
-      parameters: [100, 0, 0, 20]
-    nodes:
-      type: HomogeneousPedestrian2D
-</code></pre>
-<h4 id="heterogeneous-pedestrian">Heterogeneous Pedestrian</h4>
-<p>Heterogeneous pedestrians are <em>Nodes</em> who have a given sex and gender, based on which their speed, compliance
-and social attitudes are computed.
-The kinds of age which can be used are: <em>child</em>, <em>adult</em>, <em>elderly</em>; alternatively you can specify the exact age as a number.
-The kinds of sex available are: <em>male</em>, <em>female</em>.</p>
-<pre><code class="language-yaml">displacements:
-  - in:
-      type: Circle
-      parameters: [50, 0, 0, 20]
-    nodes:
-      type: HeterogeneousPedestrian2D
-      parameters: [&quot;elderly&quot;, &quot;female&quot;]
-  - in:
-      type: Circle
-      parameters: [50, 0, 0, 20]
-    nodes:
-      type: HeterogeneousPedestrian2D
-      parameters: [&quot;child&quot;, &quot;male&quot;]
-</code></pre>
-<h4 id="cognitive-pedestrian">Cognitive Pedestrian</h4>
-<p>A cognitive pedestrian is the most refined type of agent currently present in Alchemist. It is an heterogeneous pedestrian
-with cognitive capabilities.
-For instance, cognitive pedestrians can perceive fear, not just directly but by contagion (seeing other people fleeing may make them flee as well).</p>
-<pre><code class="language-yaml">reactions: &amp;behavior
-  - time-distribution:
-      type: DiracComb
-      parameters: [1.0]
-    type: CognitiveBehavior
+                        <div class="orchid-sourcedoc">
 
-displacements:
-  - in:
-      type: Circle
-      parameters: [50, 0, 0, 20]
-    nodes:
-      type: CognitivePedestrian2D
-      parameters: [&quot;adult&quot;, &quot;male&quot;]
-    programs:
-      - *behavior
-  - in:
-      type: Circle
-      parameters: [50, 0, 0, 20]
-    nodes:
-      type: CognitivePedestrian2D
-      parameters: [&quot;adult&quot;, &quot;female&quot;]
-    programs:
-      - *behavior
-</code></pre>
-<h3 id="groups">Groups</h3>
-<p>It is likely that a pedestrian doesn't move on its own, but there is a group consisting of multiple people
-which are related each other and whose behaviors are strictly dependant on that structure.
-The only way you can currently assign a group to a pedestrian is by creating it as a variable and passing it
-as a parameter when the <em>Nodes</em> created are of pedestrian type. If you don't specify any group in this phase,
-automatically a new group of type Alone is assigned.</p>
-<p>The following simulation example loads two groups of homogeneous pedestrians representing friends around the center of the scene, one having 10 members and the other 15.</p>
-<pre><code class="language-yaml">incarnation: protelis
 
-variables:
-  group1: &amp;group1
-    formula: it.unibo.alchemist.model.implementations.groups.Friends&lt;Any&gt;()
-    language: kotlin
-  group2: &amp;group2
-    formula: it.unibo.alchemist.model.implementations.groups.Friends&lt;Any&gt;()
-    language: kotlin
+<p id="summary">
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry">it.unibo.alchemist.model.implementations.geometry</a></b>
+</p>
+<p>
+    <code style="padding: 0;">
+        class it.unibo.alchemist.model.implementations.geometry.LinesIntersectionResult
+    </code>
+</p>
+<div class="class-description" id="description">
 
-displacements:
-  - in:
-      type: Circle
-      parameters: [10, 0, 0, 20]
-    nodes:
-      type: HomogeneousPedestrian2D
-      parameters: [*group1]
-  - in:
-      type: Circle
-      parameters: [15, 0, 0, 20]
-    nodes:
-      type: HomogeneousPedestrian2D
-      parameters: [*group2]
-</code></pre>
-<h3 id="steering-actions">Steering Actions</h3>
-<p>A pedestrian that doesn't move is not a pedestrian. The need of <em>Actions</em> which can make it move in a realistic way
-inside the environment lead to the creation of particular behaviors such as <em>Flee</em>, <em>Wander</em>, <em>FollowFlowField</em>, <em>ObstacleAvoidance</em>... <br />
-As a potential part of a group, there must exist also some attitudes typical of this sort of formation such as <em>Cohesion</em> and <em>Separation</em>.
-The creation of complex movements can be accomplished by combining different steering actions together. <br />
-The only way currently available to do so, it is to use some <em>SteeringBehavior</em> extending <em>Reaction</em>, which can recognize, across all the actions specified, the steering ones
-to trait them in a separate way.</p>
-<p>In this simulation 50 people wander around the environment and if they are approaching an obstacle they avoid it.</p>
-<pre><code class="language-yaml">incarnation: protelis
+</div>
 
-environment:
-  type: ImageEnvironment
-  parameters: [...]
 
-reactions: &amp;behavior
-  - time-distribution:
-      type: DiracComb
-      parameters: [3.0]
-    type: PrioritySteering
-    actions:
-      - type: RandomRotate
-      - type: Wander
-        parameters: [6, 4]
-      - type: ObstacleAvoidance
-        parameters: [4]
 
-displacements:
-  - in:
-      type: Circle
-      parameters: [50, 0, 0, 25]
-    nodes:
-      type: HomogeneousPedestrian2D
-</code></pre>
-<h3 id="steering-strategies">Steering Strategies</h3>
-<p>In order to decide the logic according to which the different steering actions must be combined,
-the concept of steering strategy has been introduced and related to it different reactions are available to be used
-with the aim of computing the desired route for the pedestrians.
-If you want a pedestrian to execute a single steering action at a time, <em>PrioritySteering</em> is a reaction
-which gives relevance only to the steering action whose target point is the nearest to the current pedestrian position.
-If you want a pedestrian to execute a movement considering multiple actions at a time, <em>BlendedSteering</em> weights them
-considering their target distance to the current pedestrian position.
-There is no limit to the number of steering actions which can be used together but some messy compositions
-can result in unpredictable behaviors, so pay attention.</p>
-<p>In the example below a pedestrian reaches a point of interest, avoiding in the meantime to approach another position.</p>
-<pre><code class="language-yaml">incarnation: protelis
 
-environment:
-  type: Continuous2DEnvironment
 
-reactions: &amp;behavior
-  - time-distribution:
-      type: DiracComb
-      parameters: [1.0]
-    type: BlendedSteering
-    actions:
-      - type: Seek
-        parameters: [1000, 500]
-      - type: Flee
-        parameters: [500, -500]
+<h2 id="fields">Fields</h2>
 
-displacements:
-  - in:
-      type: Point
-      parameters: [0, 0]
-    nodes:
-      type: HomogeneousPedestrian2D
-    programs:
-      - *behavior
-</code></pre>
-<h3 id="evacuation-scenarios">Evacuation Scenarios</h3>
-<p>Pedestrians can be loaded in any kind of <em>Environment</em> but it is recommended to use <em>PhysicsEnvironments</em> since they
-have properties such as non-overlapping shapes which are advisable to be taken into consideration
-when working with a crowd.
-To specify the existence of a potential danger or a significative zone in general inside the environment you can use <em>Layers</em>.
-Each layer is associated to a <em>Molecule</em> different from the one of all the others.
-You must specify to any cognitive pedestrian the <em>Molecule</em> representing danger in the <em>Environment</em>,
-otherwise it won't have the ability to recognize the presence of it.</p>
-<p>In the following example 100 adult females with cognitive capabilities get away from a zone in the environment where
-there is a potential danger.</p>
-<pre><code class="language-yaml">incarnation: protelis
 
-variables:
-  danger: &amp;danger
-    formula: &quot;\&quot;danger\&quot;&quot;
 
-environment:
-  type: Continuous2DEnvironment
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__type__LinesIntersectionType">
+        <code>
+        type: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionType">LinesIntersectionType</a>
+        </code>
+    </div>
+    <div class="panel-body"></div>
+</div>
 
-layers:
-  - type: BidimensionalGaussianLayer
-    molecule: *danger
-    parameters: [0.0, 0.0, 20.0, 15.0]
 
-reactions: &amp;behavior
-  - time-distribution:
-      type: DiracComb
-      parameters: [1.0]
-    type: PrioritySteering
-    actions:
-      - type: AvoidFlowField
-        parameters: [*danger]
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__point__Optional">
+        <code>
+        point: Optional
+        </code>
+    </div>
+    <div class="panel-body"></div>
+</div>
 
-displacements:
-  - in:
-      type: Circle
-      parameters: [100, 0, 0, 50]
-    nodes:
-      type: CognitivePedestrian2D
-      parameters: [&quot;adult&quot;, &quot;female&quot;, *danger]
-    programs:
-      - *behavior
-</code></pre>
-<h3 id="further-references">Further references</h3>
-<p><a href="https://doi.org/10.1007/978-3-319-70647-4_11">C. Natalie van der Wal, Daniel Formolo, Mark A. Robinson, Michael Minkov, Tibor Bosse<br />
-Simulating Crowd Evacuation with Socio-Cultural, Cognitive, and Emotional Elements<br />
-Transactions on Computational Collective Intelligence XXVII. 2017.</a></p>
-<p><a href="http://citeseer.ist.psu.edu/viewdoc/summary?doi=10.1.1.16.8035">Craig W. Reynolds<br />
-Steering Behaviors for Autonomous Characters. 1999.</a></p>
 
+
+
+
+
+<h2 id="constructors">Constructors</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="constructor__constructor_type__LinesIntersectionType__point__Optional_">
+        <code>
+        constructor(type: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionType">LinesIntersectionType</a>, point: Optional)
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        type: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionType">LinesIntersectionType</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        point: Optional
+        </code>
+        
+    </li>
+
+</ul>
+
+</div>
+
+
+
+
+
+</div>
                     
                 
             
@@ -354,18 +224,6 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
     <footer id="footer">
         <div class="clearfix">
             
-                <div class="float-left">
-                    <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navmeshes" class="button special small pill">
-                        <span>&larr;</span> Generating navigation meshes
-                    </a>
-                </div>
-            
-            
-                <div class="float-right">
-                    <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam" class="button special small pill">
-                        With Smart Cameras<span>&rarr;</span>
-                    </a>
-                </div>
             
         </div>
     </footer>
@@ -519,7 +377,7 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-agents">Using Cognitive Agents</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
     </li>
     
 
@@ -1089,6 +947,22 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph">it.unibo.alchemist.model.implementations.graph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder">it.unibo.alchemist.model.implementations.graph.builder</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/groups">it.unibo.alchemist.model.implementations.groups</a>
     </li>
     
@@ -1266,6 +1140,14 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.interfaces.geometry.navigationmeshes.deaccon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a>
     </li>
     
 
@@ -1499,6 +1381,22 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractNode">AbstractNode</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractOrientingPedestrian">AbstractOrientingPedestrian</a>
     </li>
     
 
@@ -2274,6 +2172,22 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionType">CircleSegmentIntersectionType</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/CircularDeformableCell">CircularDeformableCell</a>
     </li>
     
@@ -2626,6 +2540,22 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexEuclidean2DShape">ConvexEuclidean2DShape</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/ConvexGeometricShape">ConvexGeometricShape</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>
     </li>
     
@@ -2858,6 +2788,14 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawCognitiveMap">DrawCognitiveMap</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawLayers">DrawLayers</a>
     </li>
     
@@ -2891,6 +2829,22 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationMesh">DrawNavigationMesh</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawOnce">DrawOnce</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawPedestrianPath">DrawPedestrianPath</a>
     </li>
     
 
@@ -2978,6 +2932,14 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/Ellipse">Ellipse</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/conditions/Else">Else</a>
     </li>
     
@@ -3050,7 +3012,7 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DEdge">Euclidean2DEdge</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Euclidean2DCrossing">Euclidean2DCrossing</a>
     </li>
     
 
@@ -3059,6 +3021,14 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DSegment">Euclidean2DSegment</a>
     </li>
     
 
@@ -3562,7 +3532,47 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder/GraphBuilder">GraphBuilder</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/GraphEdge">GraphEdge</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/GraphEdgeWithData">GraphEdgeWithData</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/routes/GraphHopperRoute">GraphHopperRoute</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/GraphImpl">GraphImpl</a>
     </li>
     
 
@@ -3874,14 +3884,6 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/IntersectionResult">IntersectionResult</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/isolines/Isoline">Isoline</a>
     </li>
     
@@ -4163,6 +4165,22 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/LinearZoomManager">LinearZoomManager</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionType">LinesIntersectionType</a>
     </li>
     
 
@@ -4538,6 +4556,30 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder/NavigationGraphBuilder">NavigationGraphBuilder</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/NavigationGraphImpl">NavigationGraphImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Nearest">Nearest</a>
     </li>
     
@@ -4722,6 +4764,70 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingBehavior2D">OrientingBehavior2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingCognitivePedestrian">OrientingCognitivePedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/OrientingCognitivePedestrian2D">OrientingCognitivePedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/OrientingHomogeneousPedestrian2D">OrientingHomogeneousPedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/OrientingPedestrian2D">OrientingPedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingSteeringBehavior2D">OrientingSteeringBehavior2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/projectview/model/Output">Output</a>
     </li>
     
@@ -4739,6 +4845,14 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/expressions/parser/ParseException">ParseException</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Path">Path</a>
     </li>
     
 
@@ -5298,7 +5412,23 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Seek2D">Seek2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/isolines/Segment2D">Segment2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
     </li>
     
 
@@ -5970,7 +6100,7 @@ Steering Behaviors for Autonomous Characters. 1999.</a></p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev27+53864e1e. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-dev5g+2924082a. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
