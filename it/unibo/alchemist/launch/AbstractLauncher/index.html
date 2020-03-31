@@ -21,7 +21,7 @@
 
 
 
-<title>SimulationLauncher</title>
+<title>AbstractLauncher</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev82+70655331"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev8o+60696691"};
 </script>
 
 
@@ -54,11 +54,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
-<!-- Source Filename: it/unibo/alchemist/SimulationLauncher.html -->
+<!-- Source Filename: it/unibo/alchemist/launch/AbstractLauncher.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"it/unibo/alchemist","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"SimulationLauncher","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/SimulationLauncher"},"description":"","title":"SimulationLauncher"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/launch","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"AbstractLauncher","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/AbstractLauncher"},"description":"","title":"AbstractLauncher"};
 </script>
 
 <!-- end:debug info -->
@@ -66,9 +66,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/css/orchidSearch.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/editorial_main.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/editorial_orchidCustomizations.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/orchidSearch.css" />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css" />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
@@ -106,7 +106,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>SimulationLauncher</h2></header>
+                    <header class="major"><h2>AbstractLauncher</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -119,17 +119,15 @@
 
 
 <p id="summary">
-    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist">it.unibo.alchemist</a></b>
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch">it.unibo.alchemist.launch</a></b>
 </p>
 <p>
     <code style="padding: 0;">
-        class it.unibo.alchemist.SimulationLauncher
+        class it.unibo.alchemist.launch.AbstractLauncher
     </code>
 </p>
 <div class="class-description" id="description">
-<p>A launcher stub for simulation execution.
-Takes care of creating a Loader,
-and provides support functions for generating simulations and computing the possible parameters configurations.</p>
+<p>Provides utility functions for Launcher implementors.</p>
 
 </div>
 
@@ -151,9 +149,7 @@ and provides support functions for generating simulations and computing the poss
         constructor()
         </code>
     </div>
-    <div class="panel-body"><p>A launcher stub for simulation execution.
-Takes care of creating a Loader,
-and provides support functions for generating simulations and computing the possible parameters configurations.</p>
+    <div class="panel-body"><p>Provides utility functions for Launcher implementors.</p>
 </div>
 
     
@@ -175,12 +171,13 @@ and provides support functions for generating simulations and computing the poss
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_validate_currentOptions__AlchemistExecutionOptions____ERROR_CLASS_">
+    <div class="panel-heading" id="method__protected_fun_incompatibleWith_option__String___Invalid">
         <code>
-        fun validate(currentOptions: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/AlchemistExecutionOptions">AlchemistExecutionOptions</a>): <ERROR CLASS>
+        protected fun incompatibleWith(option: String): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Validation/Invalid">Invalid</a>
         </code>
     </div>
-    <div class="panel-body"></div>
+    <div class="panel-body"><p>Creates a Validation.Invalid expliciting what is the option this Launcher is incompatible with.</p>
+</div>
 
     
 
@@ -192,7 +189,7 @@ and provides support functions for generating simulations and computing the poss
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        currentOptions: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/AlchemistExecutionOptions">AlchemistExecutionOptions</a>
+        option: String
         </code>
         
     </li>
@@ -205,7 +202,7 @@ and provides support functions for generating simulations and computing the poss
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <ERROR CLASS>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Validation/Invalid">Invalid</a>
         </code>
     </div>
     <div></div>
@@ -215,12 +212,13 @@ and provides support functions for generating simulations and computing the poss
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_launch_parameters__AlchemistExecutionOptions____ERROR_CLASS_">
+    <div class="panel-heading" id="method__protected_fun_requires_option__String___Invalid">
         <code>
-        fun launch(parameters: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/AlchemistExecutionOptions">AlchemistExecutionOptions</a>): <ERROR CLASS>
+        protected fun requires(option: String): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Validation/Invalid">Invalid</a>
         </code>
     </div>
-    <div class="panel-body"></div>
+    <div class="panel-body"><p>Creates a Validation.Invalid expliciting which option is required to run this Launcher.</p>
+</div>
 
     
 
@@ -232,7 +230,7 @@ and provides support functions for generating simulations and computing the poss
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        parameters: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/AlchemistExecutionOptions">AlchemistExecutionOptions</a>
+        option: String
         </code>
         
     </li>
@@ -245,190 +243,7 @@ and provides support functions for generating simulations and computing the poss
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__abstract_fun_launch_loader__Loader__parameters__AlchemistExecutionOptions_">
-        <code>
-        abstract fun launch(loader: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/Loader">Loader</a>, parameters: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/AlchemistExecutionOptions">AlchemistExecutionOptions</a>)
-        </code>
-    </div>
-    <div class="panel-body"><p>Launches a simulation using the provided loader and option parameters.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        loader: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/Loader">Loader</a>
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        parameters: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/AlchemistExecutionOptions">AlchemistExecutionOptions</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_fun_Map.cartesianProductOf_variables__Collection___List">
-        <code>
-        protected fun Map.cartesianProductOf(variables: Collection): List
-        </code>
-    </div>
-    <div class="panel-body"></div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        Map
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        variables: Collection
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        List
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_fun__T__P___P__prepareSimulation_loader__Loader__parameters__AlchemistExecutionOptions__variables__Map___Simulation">
-        <code>
-        protected fun &lt;T, P : P&gt; prepareSimulation(loader: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/Loader">Loader</a>, parameters: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/AlchemistExecutionOptions">AlchemistExecutionOptions</a>, variables: Map): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/core/interfaces/Simulation">Simulation</a>
-        </code>
-    </div>
-    <div class="panel-body"></div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        loader: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/Loader">Loader</a>
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        parameters: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/AlchemistExecutionOptions">AlchemistExecutionOptions</a>
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        variables: Map
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/core/interfaces/Simulation">Simulation</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_additionalValidation_currentOptions__AlchemistExecutionOptions___Validation">
-        <code>
-        open fun additionalValidation(currentOptions: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/AlchemistExecutionOptions">AlchemistExecutionOptions</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/Validation">Validation</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>Allows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        currentOptions: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/AlchemistExecutionOptions">AlchemistExecutionOptions</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/Validation">Validation</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Validation/Invalid">Invalid</a>
         </code>
     </div>
     <div></div>
@@ -856,6 +671,14 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/launch">it.unibo.alchemist.boundary.launch</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/monitors">it.unibo.alchemist.boundary.monitors</a>
     </li>
     
@@ -944,14 +767,6 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid">it.unibo.alchemist.grid</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/cluster">it.unibo.alchemist.grid.cluster</a>
     </li>
     
@@ -993,6 +808,14 @@ and provides support functions for generating simulations and computing the poss
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/kotlin">it.unibo.alchemist.kotlin</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch">it.unibo.alchemist.launch</a>
     </li>
     
 
@@ -1538,6 +1361,14 @@ and provides support functions for generating simulations and computing the poss
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gpsload/api/AbstractGPSTimeAlignment">AbstractGPSTimeAlignment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/AbstractLauncher">AbstractLauncher</a>
     </li>
     
 
@@ -2921,7 +2752,7 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/DistributedExecution">DistributedExecution</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/DistributedExecution">DistributedExecution</a>
     </li>
     
 
@@ -3817,7 +3648,7 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/HeadlessSimulationLauncher">HeadlessSimulationLauncher</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/HeadlessSimulationLauncher">HeadlessSimulationLauncher</a>
     </li>
     
 
@@ -3961,7 +3792,7 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/IgniteServerLauncher">IgniteServerLauncher</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/IgniteServerLauncher">IgniteServerLauncher</a>
     </li>
     
 
@@ -4073,7 +3904,7 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/Validation/Invalid">Invalid</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Validation/Invalid">Invalid</a>
     </li>
     
 
@@ -4305,7 +4136,7 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/Launcher">Launcher</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Launcher">Launcher</a>
     </li>
     
 
@@ -4857,7 +4688,7 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/Validation/OK">OK</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Validation/OK">OK</a>
     </li>
     
 
@@ -5681,7 +5512,7 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/SimulationLauncher">SimulationLauncher</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/SimulationLauncher">SimulationLauncher</a>
     </li>
     
 
@@ -5713,7 +5544,7 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/SingleRunSwingUI">SingleRunSwingUI</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/launch/SingleRunSwingUI">SingleRunSwingUI</a>
     </li>
     
 
@@ -6049,7 +5880,7 @@ and provides support functions for generating simulations and computing the poss
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/Validation">Validation</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Validation">Validation</a>
     </li>
     
 
@@ -6225,7 +6056,7 @@ and provides support functions for generating simulations and computing the poss
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev82+70655331. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-dev8o+60696691. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6242,11 +6073,11 @@ and provides support functions for generating simulations and computing the poss
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/bfe07541/assets/js/orchidSearch.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/orchidSearch.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>

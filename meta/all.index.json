@@ -1260,6 +1260,38 @@
                     }
                   }
                 },
+                "launch": {
+                  "ownKey": "launch",
+                  "childrenPages": {"SingleRunSwingUI": {
+                    "ownKey": "SingleRunSwingUI",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "it/unibo/alchemist/boundary/launch",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "SingleRunSwingUI",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/launch/SingleRunSwingUI"
+                      },
+                      "description": "",
+                      "title": "SingleRunSwingUI",
+                      "content": "<p>Launches a Swing GUI meant to be used for a single simulation run.\nname<\/p>\n<p>additionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
+                    }]
+                  }},
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/boundary",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "launch",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/launch"
+                    },
+                    "description": "",
+                    "title": "it.unibo.alchemist.boundary.launch",
+                    "content": ""
+                  }]
+                },
                 "gui": {
                   "ownKey": "gui",
                   "childrenPages": {
@@ -2151,22 +2183,6 @@
                         "content": ""
                       }]
                     },
-                    "SingleRunSwingUI": {
-                      "ownKey": "SingleRunSwingUI",
-                      "ownPages": [{
-                        "reference": {
-                          "path": "it/unibo/alchemist/boundary/gui",
-                          "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "SingleRunSwingUI",
-                          "extension": "html",
-                          "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/SingleRunSwingUI"
-                        },
-                        "description": "",
-                        "title": "SingleRunSwingUI",
-                        "content": "<p>name<\/p>\n<p>additionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
-                      }]
-                    },
                     "ColorChannel": {
                       "ownKey": "ColorChannel",
                       "ownPages": [{
@@ -2691,56 +2707,6 @@
                 "description": "",
                 "title": "AlchemistUtil",
                 "content": "<p>Generic utilities.<\/p>\n<p>cast\nPerforms a cast operation, throwing a decent error message in case of failure.\ncast\nPerforms a cast operation, throwing a decent error message in case of failure.\ncast\nPerforms a cast operation, throwing a decent error message in case of failure.<\/p>\n"
-              }]
-            },
-            "Validation": {
-              "ownKey": "Validation",
-              "childrenPages": {
-                "OK": {
-                  "ownKey": "OK",
-                  "ownPages": [{
-                    "reference": {
-                      "path": "it/unibo/alchemist/Validation",
-                      "baseUrl": "https://alchemistsimulator.github.io/latest",
-                      "fileName": "OK",
-                      "extension": "html",
-                      "usePrettyUrl": true,
-                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/Validation/OK"
-                    },
-                    "description": "",
-                    "title": "OK",
-                    "content": ""
-                  }]
-                },
-                "Invalid": {
-                  "ownKey": "Invalid",
-                  "ownPages": [{
-                    "reference": {
-                      "path": "it/unibo/alchemist/Validation",
-                      "baseUrl": "https://alchemistsimulator.github.io/latest",
-                      "fileName": "Invalid",
-                      "extension": "html",
-                      "usePrettyUrl": true,
-                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/Validation/Invalid"
-                    },
-                    "description": "",
-                    "title": "Invalid",
-                    "content": "<p><init><\/p>\n<p>reason<\/p>\n"
-                  }]
-                }
-              },
-              "ownPages": [{
-                "reference": {
-                  "path": "it/unibo/alchemist",
-                  "baseUrl": "https://alchemistsimulator.github.io/latest",
-                  "fileName": "Validation",
-                  "extension": "html",
-                  "usePrettyUrl": true,
-                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/Validation"
-                },
-                "description": "",
-                "title": "Validation",
-                "content": ""
               }]
             },
             "cli": {
@@ -3585,6 +3551,170 @@
                 "content": "<p>unfold\nThe opposite of <a href=\"#\">fold<\/a>.\nplus<\/p>\n<p>minus<\/p>\n"
               }]
             },
+            "launch": {
+              "ownKey": "launch",
+              "childrenPages": {
+                "SimulationLauncher": {
+                  "ownKey": "SimulationLauncher",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/launch",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "SimulationLauncher",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/SimulationLauncher"
+                    },
+                    "description": "",
+                    "title": "SimulationLauncher",
+                    "content": "<p>A launcher stub for simulation execution.\nTakes care of creating a Loader,\nand provides support functions for generating simulations and computing the possible parameters configurations.<init>\nA launcher stub for simulation execution.\nTakes care of creating a Loader,\nand provides support functions for generating simulations and computing the possible parameters configurations.<\/p>\n<p>validate\nGiven the currentOptions, decides whether or not this Launcher is executable.\nlaunch\nActually gets the job done by performing the requested operations.\nlaunch\nLaunches a simulation using the provided loader and option parameters.\ncartesianProductOf<\/p>\n<p>prepareSimulation<\/p>\n<p>additionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK<\/p>\n"
+                  }]
+                },
+                "Validation": {
+                  "ownKey": "Validation",
+                  "childrenPages": {
+                    "OK": {
+                      "ownKey": "OK",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/launch/Validation",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "OK",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Validation/OK"
+                        },
+                        "description": "",
+                        "title": "OK",
+                        "content": "<p>The Launcher can run.<\/p>\n"
+                      }]
+                    },
+                    "Invalid": {
+                      "ownKey": "Invalid",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/launch/Validation",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "Invalid",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Validation/Invalid"
+                        },
+                        "description": "",
+                        "title": "Invalid",
+                        "content": "<p>The Launcher can't run and provides a reason.<init>\nThe Launcher can't run and provides a reason.\nreason<\/p>\n"
+                      }]
+                    }
+                  },
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/launch",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "Validation",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Validation"
+                    },
+                    "description": "",
+                    "title": "Validation",
+                    "content": "<p>Result of the validation of a launcher.<\/p>\n"
+                  }]
+                },
+                "DistributedExecution": {
+                  "ownKey": "DistributedExecution",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/launch",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "DistributedExecution",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/DistributedExecution"
+                    },
+                    "description": "",
+                    "title": "DistributedExecution",
+                    "content": "<p>name<\/p>\n<p>additionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
+                  }]
+                },
+                "Launcher": {
+                  "ownKey": "Launcher",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/launch",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "Launcher",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Launcher"
+                    },
+                    "description": "",
+                    "title": "Launcher",
+                    "content": "<p>An entity with a name that can take responsibility for performing an Alchemist run, given the current\nAlchemistExecutionOptions.\nname<\/p>\n<p>validate\nGiven the currentOptions, decides whether or not this Launcher is executable.\ninvoke\nActual execution. Implementors are <b>not<\/b> supposed to override this behaviour, although they can.\nThe default implementation performs validation, and if successful calls launch.\nOtherwise, throws an <a href=\"http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalStateException.html\">IllegalStateException<\/a>.\nlaunch\nActually gets the job done by performing the requested operations.<\/p>\n"
+                  }]
+                },
+                "IgniteServerLauncher": {
+                  "ownKey": "IgniteServerLauncher",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/launch",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "IgniteServerLauncher",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/IgniteServerLauncher"
+                    },
+                    "description": "",
+                    "title": "IgniteServerLauncher",
+                    "content": "<p>Launches a service waiting for simulations to be sent over the network.\nname<\/p>\n<p>validate\nGiven the currentOptions, decides whether or not this Launcher is executable.\nlaunch\nActually gets the job done by performing the requested operations.<\/p>\n"
+                  }]
+                },
+                "HeadlessSimulationLauncher": {
+                  "ownKey": "HeadlessSimulationLauncher",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/launch",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "HeadlessSimulationLauncher",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/HeadlessSimulationLauncher"
+                    },
+                    "description": "",
+                    "title": "HeadlessSimulationLauncher",
+                    "content": "<p>Executes simulations locally in a headless environment.\nname<\/p>\n<p>additionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
+                  }]
+                },
+                "AbstractLauncher": {
+                  "ownKey": "AbstractLauncher",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/launch",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "AbstractLauncher",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/AbstractLauncher"
+                    },
+                    "description": "",
+                    "title": "AbstractLauncher",
+                    "content": "<p>Provides utility functions for Launcher implementors.<init>\nProvides utility functions for Launcher implementors.<\/p>\n<p>incompatibleWith\nCreates a Validation.Invalid expliciting what is the option this Launcher is incompatible with.\nrequires\nCreates a Validation.Invalid expliciting which option is required to run this Launcher.<\/p>\n"
+                  }]
+                }
+              },
+              "ownPages": [{
+                "reference": {
+                  "path": "it/unibo/alchemist",
+                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                  "fileName": "launch",
+                  "extension": "html",
+                  "usePrettyUrl": true,
+                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch"
+                },
+                "description": "",
+                "title": "it.unibo.alchemist.launch",
+                "content": ""
+              }]
+            },
             "expressions": {
               "ownKey": "expressions",
               "childrenPages": {
@@ -4108,22 +4238,6 @@
                 "description": "",
                 "title": "Alchemist",
                 "content": "<p>Starts Alchemist.<\/p>\n<p>main<\/p>\n"
-              }]
-            },
-            "SimulationLauncher": {
-              "ownKey": "SimulationLauncher",
-              "ownPages": [{
-                "reference": {
-                  "path": "it/unibo/alchemist",
-                  "baseUrl": "https://alchemistsimulator.github.io/latest",
-                  "fileName": "SimulationLauncher",
-                  "extension": "html",
-                  "usePrettyUrl": true,
-                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/SimulationLauncher"
-                },
-                "description": "",
-                "title": "SimulationLauncher",
-                "content": "<p>A launcher stub for simulation execution.\nTakes care of creating a Loader,\nand provides support functions for generating simulations and computing the possible parameters configurations.<init>\nA launcher stub for simulation execution.\nTakes care of creating a Loader,\nand provides support functions for generating simulations and computing the possible parameters configurations.<\/p>\n<p>validate<\/p>\n<p>launch<\/p>\n<p>launch\nLaunches a simulation using the provided loader and option parameters.\ncartesianProductOf<\/p>\n<p>prepareSimulation<\/p>\n<p>additionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK<\/p>\n"
               }]
             },
             "core": {
@@ -5088,22 +5202,6 @@
                     "content": ""
                   }]
                 },
-                "DistributedExecution": {
-                  "ownKey": "DistributedExecution",
-                  "ownPages": [{
-                    "reference": {
-                      "path": "it/unibo/alchemist/grid",
-                      "baseUrl": "https://alchemistsimulator.github.io/latest",
-                      "fileName": "DistributedExecution",
-                      "extension": "html",
-                      "usePrettyUrl": true,
-                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/DistributedExecution"
-                    },
-                    "description": "",
-                    "title": "DistributedExecution",
-                    "content": "<p>name<\/p>\n<p>additionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
-                  }]
-                },
                 "util": {
                   "ownKey": "util",
                   "childrenPages": {"WorkingDirectory": {
@@ -5282,22 +5380,6 @@
                     "content": ""
                   }]
                 },
-                "IgniteServerLauncher": {
-                  "ownKey": "IgniteServerLauncher",
-                  "ownPages": [{
-                    "reference": {
-                      "path": "it/unibo/alchemist/grid",
-                      "baseUrl": "https://alchemistsimulator.github.io/latest",
-                      "fileName": "IgniteServerLauncher",
-                      "extension": "html",
-                      "usePrettyUrl": true,
-                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/IgniteServerLauncher"
-                    },
-                    "description": "",
-                    "title": "IgniteServerLauncher",
-                    "content": "<p>name<\/p>\n<p>validate<\/p>\n<p>launch<\/p>\n"
-                  }]
-                },
                 "config": {
                   "ownKey": "config",
                   "childrenPages": {
@@ -5444,20 +5526,7 @@
                     "content": ""
                   }]
                 }
-              },
-              "ownPages": [{
-                "reference": {
-                  "path": "it/unibo/alchemist",
-                  "baseUrl": "https://alchemistsimulator.github.io/latest",
-                  "fileName": "grid",
-                  "extension": "html",
-                  "usePrettyUrl": true,
-                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid"
-                },
-                "description": "",
-                "title": "it.unibo.alchemist.grid",
-                "content": ""
-              }]
+              }
             },
             "SupportedIncarnations": {
               "ownKey": "SupportedIncarnations",
@@ -5489,22 +5558,6 @@
                 "description": "",
                 "title": "ClassPathScanner",
                 "content": "<p>subTypesOf\nThis function loads all subtypes of the provided Java class that can be discovered on the current classpath.<p>This function cannot use <code>reified<\/code> and <code>inline<\/code> (as it should have) due to Java being unaware of the required\ntransformation to use them.<\/p>\nsubTypesOf<\/p>\n<p>resourcesMatching\nThis function returns a list of all the resources in a certain (optional) package matching a regular expression.<p>This function cannot use <code>reified<\/code> and <code>inline<\/code> (as it should have) due to Java being unaware of the required\ntransformation to use them.<\/p>\nresourcesMatchingAsStream<\/p>\n"
-              }]
-            },
-            "Launcher": {
-              "ownKey": "Launcher",
-              "ownPages": [{
-                "reference": {
-                  "path": "it/unibo/alchemist",
-                  "baseUrl": "https://alchemistsimulator.github.io/latest",
-                  "fileName": "Launcher",
-                  "extension": "html",
-                  "usePrettyUrl": true,
-                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/Launcher"
-                },
-                "description": "",
-                "title": "Launcher",
-                "content": "<p>name<\/p>\n<p>validate<\/p>\n<p>invoke<\/p>\n<p>launch<\/p>\n<p>incompatibleWith<\/p>\n<p>requires<\/p>\n"
               }]
             },
             "model": {
@@ -8052,7 +8105,7 @@
                             },
                             "description": "",
                             "title": "Family",
-                            "content": "<p><init><\/p>\n<p>leader\nThe leader of the group.<\/p>\n"
+                            "content": "<p>A Family is modeled as a grup of pedestrians with a leader.<init>\nA Family is modeled as a grup of pedestrians with a leader.\nleader\nThe leader of the group.<\/p>\n"
                           }]
                         },
                         "Alone": {
@@ -10817,7 +10870,7 @@
                                 },
                                 "description": "",
                                 "title": "TypeBased",
-                                "content": "<p>Steering strategy which gives a weight based on the type of steering action you are considering.\nFor each type, only the action with the target nearest to the current pedestrian position is taken into consideration.<init>\nSteering strategy which gives a weight based on the type of steering action you are considering.\nFor each type, only the action with the target nearest to the current pedestrian position is taken into consideration.<\/p>\n"
+                                "content": "<p>Steering strategy which gives a weight based on the type of steering action you are considering.\nFor each type,\nonly the action with the target nearest to the current pedestrian position is taken into consideration.<init>\nSteering strategy which gives a weight based on the type of steering action you are considering.\nFor each type,\nonly the action with the target nearest to the current pedestrian position is taken into consideration.<\/p>\n"
                               }]
                             }
                           },
@@ -11923,22 +11976,6 @@
                 "description": "",
                 "title": "it.unibo.alchemist.model",
                 "content": ""
-              }]
-            },
-            "HeadlessSimulationLauncher": {
-              "ownKey": "HeadlessSimulationLauncher",
-              "ownPages": [{
-                "reference": {
-                  "path": "it/unibo/alchemist",
-                  "baseUrl": "https://alchemistsimulator.github.io/latest",
-                  "fileName": "HeadlessSimulationLauncher",
-                  "extension": "html",
-                  "usePrettyUrl": true,
-                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/HeadlessSimulationLauncher"
-                },
-                "description": "",
-                "title": "HeadlessSimulationLauncher",
-                "content": "<p>Executes simulations locally in a headless environment.\nname<\/p>\n<p>additionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
               }]
             },
             "AlchemistExecutionOptions": {
