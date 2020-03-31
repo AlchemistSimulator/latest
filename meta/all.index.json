@@ -3633,7 +3633,7 @@
                     },
                     "description": "",
                     "title": "DistributedExecution",
-                    "content": "<p>name<\/p>\n<p>additionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
+                    "content": "<p>Launches a simulation set on a cluster of Alchemist nodes running in server mode.\nname<\/p>\n<p>additionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
                   }]
                 },
                 "Launcher": {
@@ -4357,23 +4357,7 @@
                         },
                         "description": "",
                         "title": "JGraphTDependencyGraph",
-                        "content": "<p><init><\/p>\n<p>createDependencies<\/p>\n<p>removeDependencies<\/p>\n<p>addNeighbor<\/p>\n<p>removeNeighbor<\/p>\n<p>outboundDependencies<\/p>\n<p>toString<\/p>\n<p>globalInputContextReactions<\/p>\n"
-                      }]
-                    },
-                    "Edge": {
-                      "ownKey": "Edge",
-                      "ownPages": [{
-                        "reference": {
-                          "path": "it/unibo/alchemist/core/implementations",
-                          "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "Edge",
-                          "extension": "html",
-                          "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/core/implementations/Edge"
-                        },
-                        "description": "",
-                        "title": "Edge",
-                        "content": "<p>This class offers an implementation of a dependency graph, namely a\ndata structure which can address in an efficient way the problem of\nfinding those reactions affected by the execution of another\nreaction. This class relies heavily on the ReactionHandler\ninterface.<\/p>\n"
+                        "content": "<p>This class offers an implementation of a dependency graph, namely a\ndata structure which can address in an efficient way the problem of\nfinding those reactions affected by the execution of another\nreaction. This class relies heavily on the ReactionHandler\ninterface.<init>\nThis class offers an implementation of a dependency graph, namely a\ndata structure which can address in an efficient way the problem of\nfinding those reactions affected by the execution of another\nreaction. This class relies heavily on the ReactionHandler\ninterface.<\/p>\n<p>createDependencies<\/p>\n<p>removeDependencies<\/p>\n<p>addNeighbor<\/p>\n<p>removeNeighbor<\/p>\n<p>outboundDependencies<\/p>\n<p>toString<\/p>\n<p>globalInputContextReactions<\/p>\n"
                       }]
                     },
                     "Engine": {
@@ -5557,7 +5541,7 @@
                 },
                 "description": "",
                 "title": "ClassPathScanner",
-                "content": "<p>subTypesOf\nThis function loads all subtypes of the provided Java class that can be discovered on the current classpath.<p>This function cannot use <code>reified<\/code> and <code>inline<\/code> (as it should have) due to Java being unaware of the required\ntransformation to use them.<\/p>\nsubTypesOf<\/p>\n<p>resourcesMatching\nThis function returns a list of all the resources in a certain (optional) package matching a regular expression.<p>This function cannot use <code>reified<\/code> and <code>inline<\/code> (as it should have) due to Java being unaware of the required\ntransformation to use them.<\/p>\nresourcesMatchingAsStream<\/p>\n"
+                "content": "<p>An utility class providing support for loading arbitrary subclasses available in the classpath.<\/p>\n<p>subTypesOf\nThis function loads all subtypes of the provided Java class that can be discovered on the current classpath.<p>This function cannot use <code>reified<\/code> and <code>inline<\/code> (as it should have) due to Java being unaware of the required\ntransformation to use them.<\/p>\nsubTypesOf<\/p>\n<p>resourcesMatching\nThis function returns a list of all the resources in a certain (optional) package matching a regular expression.<p>This function cannot use <code>reified<\/code> and <code>inline<\/code> (as it should have) due to Java being unaware of the required\ntransformation to use them.<\/p>\nresourcesMatchingAsStream<\/p>\n"
               }]
             },
             "model": {
@@ -8073,7 +8057,7 @@
                             },
                             "description": "",
                             "title": "Friends",
-                            "content": "<p><init><\/p>\n"
+                            "content": "<p>A generic, leaderless group of pedestrians.<init>\nA generic, leaderless group of pedestrians.<\/p>\n"
                           }]
                         },
                         "GenericGroup": {
@@ -8827,7 +8811,7 @@
                             },
                             "description": "",
                             "title": "CognitivePedestrian2D",
-                            "content": "<p>Implementation of a cognitive pedestrian in the Euclidean world.<init><\/p>\n<p><init><\/p>\n<p><init>\nImplementation of a cognitive pedestrian in the Euclidean world.<\/p>\n<p>getShape\n{@inheritDoc}\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of a cognitive pedestrian in the Euclidean world.<init><\/p>\n<p><init><\/p>\n<p><init>\nImplementation of a cognitive pedestrian in the Euclidean world.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "AbstractNode": {
@@ -9067,7 +9051,7 @@
                             },
                             "description": "",
                             "title": "HeterogeneousPedestrian2D",
-                            "content": "<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<init><\/p>\n<p><init><\/p>\n<p><init>\nImplementation of an heterogeneous pedestrian in the Euclidean world.<\/p>\n<p>getShape\n{@inheritDoc}\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<init><\/p>\n<p><init><\/p>\n<p><init>\nImplementation of an heterogeneous pedestrian in the Euclidean world.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "HeterogeneousPedestrianImpl": {
@@ -9131,7 +9115,7 @@
                             },
                             "description": "",
                             "title": "HomogeneousPedestrian2D",
-                            "content": "<p>Implementation of a basic pedestrian in the Euclidean world.<init>\nImplementation of a basic pedestrian in the Euclidean world.<\/p>\n<p>getShape\n{@inheritDoc}\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of a basic pedestrian in the Euclidean world.<init>\nImplementation of a basic pedestrian in the Euclidean world.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator. More information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         }
                       },
