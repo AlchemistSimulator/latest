@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev97+51105c38"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devdt+aba0d261"};
 </script>
 
 
@@ -140,9 +140,9 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="field__abstract_cartesianCoordinates__DoubleArray">
+    <div class="panel-heading" id="field__abstract_coordinates__DoubleArray">
         <code>
-        abstract cartesianCoordinates: DoubleArray
+        abstract coordinates: DoubleArray
         </code>
     </div>
     <div class="panel-body"><p>Allows to get the position as a Number array.</p>
@@ -270,9 +270,9 @@ could be the X-axis and 1 the Y-axis
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__abstract_fun_getDistanceTo_p__P___Double">
+    <div class="panel-heading" id="method__abstract_fun_distanceTo_p__P___Double">
         <code>
-        abstract fun getDistanceTo(p: P): Double
+        abstract fun distanceTo(p: P): Double
         </code>
     </div>
     <div class="panel-body"><p>Computes the distance between this position and another compatible
@@ -411,122 +411,6 @@ position.</p>
 
 
 
-    <h2 id="extensions">Extensions</h2>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__operator_fun__P___P__P.times_n__Number____ERROR_CLASS_">
-        <code>
-        operator fun &lt;P : P&gt; P.times(n: Number): <ERROR CLASS>
-        </code>
-    </div>
-    <div class="panel-body"><p>Multiply each coordinate of this position by a number.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        P
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        n: Number
-        </code>
-        
-            <br><br>
-            <div><pre><code>the second factor of each multiplication.
-</code></pre>
-</div>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__operator_fun__P___P__P.div_n__Number____ERROR_CLASS_">
-        <code>
-        operator fun &lt;P : P&gt; P.div(n: Number): <ERROR CLASS>
-        </code>
-    </div>
-    <div class="panel-body"><p>Divide each coordinate of this position by a number.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        P
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        n: Number
-        </code>
-        
-            <br><br>
-            <div><pre><code>the divisor of each division.
-</code></pre>
-</div>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-
 </div>
                     
                 
@@ -638,6 +522,22 @@ position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
     </li>
     
@@ -694,7 +594,7 @@ position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navmeshes">Generating navigation meshes</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
     </li>
     
 
@@ -751,22 +651,6 @@ position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
     </li>
     
 
@@ -1248,7 +1132,7 @@ position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.implementations.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.implementations.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -1448,7 +1332,7 @@ position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.interfaces.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.interfaces.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -1457,6 +1341,14 @@ position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod">it.unibo.alchemist.model.interfaces.graph.twod</a>
     </li>
     
 
@@ -2001,7 +1893,7 @@ position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
     </li>
     
 
@@ -2841,14 +2733,6 @@ position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexEuclidean2DShape">ConvexEuclidean2DShape</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/ConvexGeometricShape">ConvexGeometricShape</a>
     </li>
     
@@ -2938,14 +2822,6 @@ position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/biochemistrydsl/BiochemistrydslParser/CustomReactionTypeContext">CustomReactionTypeContext</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/Deaccon2D">Deaccon2D</a>
     </li>
     
 
@@ -3057,6 +2933,14 @@ position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/DoubleNode">DoubleNode</a>
     </li>
     
@@ -3129,7 +3013,7 @@ position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationMesh">DrawNavigationMesh</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationGraph">DrawNavigationGraph</a>
     </li>
     
 
@@ -3273,6 +3157,14 @@ position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment2DWithObstacles">Environment2DWithObstacles</a>
     </li>
     
@@ -3305,7 +3197,39 @@ position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Euclidean2DCrossing">Euclidean2DCrossing</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DCrossing">Euclidean2DCrossing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder">Euclidean2DNavigationGraphBuilder</a>
     </li>
     
 
@@ -3314,14 +3238,6 @@ position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DSegment">Euclidean2DSegment</a>
     </li>
     
 
@@ -3361,7 +3277,7 @@ position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironment">EuclideanPhysics2DEnvironment</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
 
@@ -3457,7 +3373,7 @@ position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
     </li>
     
 
@@ -3465,7 +3381,7 @@ position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
     </li>
     
 
@@ -4090,6 +4006,14 @@ position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironment">ImageEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironmentWithGraph">ImageEnvironmentWithGraph</a>
     </li>
     
 
@@ -5145,6 +5069,14 @@ position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Physics2DEnvironment">Physics2DEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/PhysicsEnvironment">PhysicsEnvironment</a>
     </li>
     
@@ -5650,6 +5582,14 @@ position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/isolines/Segment2D">Segment2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
     </li>
     
 
@@ -6185,6 +6125,14 @@ position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Vehicle">Vehicle</a>
     </li>
     
@@ -6329,7 +6277,7 @@ position.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev97+51105c38. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devdt+aba0d261. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

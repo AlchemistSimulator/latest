@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev97+51105c38"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devdt+aba0d261"};
 </script>
 
 
@@ -127,7 +127,7 @@
     </code>
 </p>
 <div class="class-description" id="description">
-<p>Implementation of a MutableConvexPolygon.<p>Each modification operation on this object has a time complexity of
+<p>Implementation of MutableConvexPolygon.<p>Each modification operation on this object has a time complexity of
 O(n), where n is the number of vertices/edges.</p><p>Degenerate edges (of length 0) and collinear points are allowed, but
 be aware that the majority of algorithms working on convex polygons
 requires no degeneration at all.</p></p>
@@ -178,7 +178,7 @@ requires no degeneration at all.</p></p>
         constructor(vertices: MutableList)
         </code>
     </div>
-    <div class="panel-body"><p>Implementation of a MutableConvexPolygon.<p>Each modification operation on this object has a time complexity of
+    <div class="panel-body"><p>Implementation of MutableConvexPolygon.<p>Each modification operation on this object has a time complexity of
 O(n), where n is the number of vertices/edges.</p><p>Degenerate edges (of length 0) and collinear points are allowed, but
 be aware that the majority of algorithms working on convex polygons
 requires no degeneration at all.</p></p>
@@ -244,63 +244,13 @@ requires no degeneration at all.</p></p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_addVertex_x__Double__y__Double___Boolean">
-        <code>
-        open fun addVertex(x: Double, y: Double): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Adds a vertex to the polygon, linked to the (previous) last vertex.<p>Note that it is responsibility of the user to provide vertices in
-the correct order. If the addition of the specified vertex would
-cause the violation of the convexity, false is returned and the
-vertex is not added.</p></p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        x: Double
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        y: Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
     <div class="panel-heading" id="method__open_fun_addVertex_index__Int__x__Double__y__Double___Boolean">
         <code>
         open fun addVertex(index: Int, x: Double, y: Double): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Adds a vertex in the specified position. See also addVertex.</p>
+    <div class="panel-body"><p>Adds a vertex in the specified position.<p>If the operation would cause the violation of the convexity, false
+is returned and the operation is not performed.</p></p>
 </div>
 
     
@@ -355,9 +305,8 @@ vertex is not added.</p></p>
         open fun removeVertex(index: Int): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Removes the vertex specified by the index parameter.<p>If the removal of such vertex would cause the violation of the
-convexity, false is returned and the vertex is not removed. Please
-be also aware that a polygon cannot have less than 3 vertices.</p></p>
+    <div class="panel-body"><p>Removes the specified vertex.<p>If the operation would cause the violation of the convexity, false
+is returned and the operation is not performed.</p></p>
 </div>
 
     
@@ -398,9 +347,8 @@ be also aware that a polygon cannot have less than 3 vertices.</p></p>
         open fun moveVertex(index: Int, newX: Double, newY: Double): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Move the specified vertex to the new absolute coordinates specified.<p>If the new position of the specified vertex would cause the
-violation of the convexity, false is returned and the operation
-is not performed.</p></p>
+    <div class="panel-body"><p>Moves the specified vertex to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false
+is returned and the operation is not performed.</p></p>
 </div>
 
     
@@ -450,9 +398,9 @@ is not performed.</p></p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_getEdge_index__Int____ERROR_CLASS_">
+    <div class="panel-heading" id="method__open_fun_getEdge_index__Int___Segment2D">
         <code>
-        open fun getEdge(index: Int): <ERROR CLASS>
+        open fun getEdge(index: Int): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
     </div>
     <div class="panel-body"><p>The index parameter specify which edge to get: edge i connects
@@ -482,7 +430,7 @@ vertices i and i+1.</p>
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <ERROR CLASS>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
     </div>
     <div></div>
@@ -492,13 +440,13 @@ vertices i and i+1.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_moveEdge_index__Int__newEdge___ERROR_CLASS____Boolean">
+    <div class="panel-heading" id="method__open_fun_moveEdge_index__Int__newEdge__Segment2D___Boolean">
         <code>
-        open fun moveEdge(index: Int, newEdge: <ERROR CLASS>): Boolean
+        open fun moveEdge(index: Int, newEdge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>If the new coords would cause the lost of the convexity,
-false is returned.</p>
+    <div class="panel-body"><p>Moves the specified edge to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false
+is returned and the operation is not performed.</p></p>
 </div>
 
     
@@ -518,7 +466,7 @@ false is returned.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        newEdge: <ERROR CLASS>
+        newEdge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
         
     </li>
@@ -587,13 +535,12 @@ false is returned.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_intersects_other__Shape___Boolean">
+    <div class="panel-heading" id="method__open_fun_intersects_shape__Shape___Boolean">
         <code>
-        open fun intersects(other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>): Boolean
+        open fun intersects(shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Checks whether the given shape intersects with the polygon.
-This method is &quot;exact&quot; (no bounding box are used).</p>
+    <div class="panel-body"><p>This method is &quot;exact&quot; (no bounding box are used).</p>
 </div>
 
     
@@ -606,7 +553,7 @@ This method is &quot;exact&quot; (no bounding box are used).</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
+        shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
         </code>
         
     </li>
@@ -675,48 +622,6 @@ This method is &quot;exact&quot; (no bounding box are used).</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_containsOrLiesOnBoundary_vector__Euclidean2DPosition___Boolean">
-        <code>
-        open fun containsOrLiesOnBoundary(vector: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks whether the given vector is contained in the polygon or
-lies on its boundary.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        vector: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
     <div class="panel-heading" id="method__open_fun_union_polygons__Collection___Boolean">
         <code>
         open fun union(polygons: Collection): Boolean
@@ -761,9 +666,9 @@ convexity or the provided polygons did not overlap).</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_transformed_transformation__Euclidean2DTransformation.____Unit___GeometricShape">
+    <div class="panel-heading" id="method__open_fun_transformed_transformation__Euclidean2DTransformation.____Unit___Euclidean2DShape">
         <code>
-        open fun transformed(transformation: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DTransformation">Euclidean2DTransformation</a>.()-&gt;Unit): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/GeometricShape">GeometricShape</a>
+        open fun transformed(transformation: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DTransformation">Euclidean2DTransformation</a>.()-&gt;Unit): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
         </code>
     </div>
     <div class="panel-body"><p>Transforms the shape.</p>
@@ -796,7 +701,7 @@ convexity or the provided polygons did not overlap).</p>
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/GeometricShape">GeometricShape</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
         </code>
     </div>
     <div><p>a copy of the shape transformed accordingly</p>
@@ -1030,61 +935,6 @@ convexity or the provided polygons did not overlap).</p>
 
 
 
-    <h2 id="extensions">Extensions</h2>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_ConvexPolygon.intersectsBoundaryExcluded_s___ERROR_CLASS____Boolean">
-        <code>
-        fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>.intersectsBoundaryExcluded(s: <ERROR CLASS>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks if the provided segment intersects with the polygon, boundary excluded.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        s: <ERROR CLASS>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-
 </div>
                     
                 
@@ -1196,6 +1046,22 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
     </li>
     
@@ -1252,7 +1118,7 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navmeshes">Generating navigation meshes</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
     </li>
     
 
@@ -1309,22 +1175,6 @@ convexity or the provided polygons did not overlap).</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
     </li>
     
 
@@ -1806,7 +1656,7 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.implementations.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.implementations.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -2006,7 +1856,7 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.interfaces.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.interfaces.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -2015,6 +1865,14 @@ convexity or the provided polygons did not overlap).</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod">it.unibo.alchemist.model.interfaces.graph.twod</a>
     </li>
     
 
@@ -2559,7 +2417,7 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
     </li>
     
 
@@ -3399,14 +3257,6 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexEuclidean2DShape">ConvexEuclidean2DShape</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/ConvexGeometricShape">ConvexGeometricShape</a>
     </li>
     
@@ -3496,14 +3346,6 @@ convexity or the provided polygons did not overlap).</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/biochemistrydsl/BiochemistrydslParser/CustomReactionTypeContext">CustomReactionTypeContext</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/Deaccon2D">Deaccon2D</a>
     </li>
     
 
@@ -3615,6 +3457,14 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/DoubleNode">DoubleNode</a>
     </li>
     
@@ -3687,7 +3537,7 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationMesh">DrawNavigationMesh</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationGraph">DrawNavigationGraph</a>
     </li>
     
 
@@ -3831,6 +3681,14 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment2DWithObstacles">Environment2DWithObstacles</a>
     </li>
     
@@ -3863,7 +3721,39 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Euclidean2DCrossing">Euclidean2DCrossing</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DCrossing">Euclidean2DCrossing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder">Euclidean2DNavigationGraphBuilder</a>
     </li>
     
 
@@ -3872,14 +3762,6 @@ convexity or the provided polygons did not overlap).</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DSegment">Euclidean2DSegment</a>
     </li>
     
 
@@ -3919,7 +3801,7 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironment">EuclideanPhysics2DEnvironment</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
 
@@ -4015,7 +3897,7 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
     </li>
     
 
@@ -4023,7 +3905,7 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
     </li>
     
 
@@ -4648,6 +4530,14 @@ convexity or the provided polygons did not overlap).</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironment">ImageEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironmentWithGraph">ImageEnvironmentWithGraph</a>
     </li>
     
 
@@ -5703,6 +5593,14 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Physics2DEnvironment">Physics2DEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/PhysicsEnvironment">PhysicsEnvironment</a>
     </li>
     
@@ -6208,6 +6106,14 @@ convexity or the provided polygons did not overlap).</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/isolines/Segment2D">Segment2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
     </li>
     
 
@@ -6743,6 +6649,14 @@ convexity or the provided polygons did not overlap).</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Vehicle">Vehicle</a>
     </li>
     
@@ -6887,7 +6801,7 @@ convexity or the provided polygons did not overlap).</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev97+51105c38. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devdt+aba0d261. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

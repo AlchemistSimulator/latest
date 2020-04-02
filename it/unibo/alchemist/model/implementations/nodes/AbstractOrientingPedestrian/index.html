@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev97+51105c38"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devdt+aba0d261"};
 </script>
 
 
@@ -127,10 +127,11 @@
     </code>
 </p>
 <div class="class-description" id="description">
-<p>An abstract orienting pedestrian, defining an algorithm capable of generating
-a cognitiveMap, provided a NavigationGraph describing the environment.
-The creation of landmarks is left to subclasses via factory method, see
-generateLandmarkWithin.</p>
+<p>An abstract OrientingPedestrian.
+This class defines an algorithm capable of generating a pseudo-random cognitiveMap
+based on a NavigationGraph of the environment. The latter can be obtained from
+Environment2DWithGraphs, which is the only type of environment this pedestrian can
+be placed into. The creation of landmarks is left to subclasses via factory method.</p>
 
 </div>
 
@@ -193,16 +194,12 @@ a percentage value in <a href="#">0,1</a>.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="field__protected_environmentGraph__NavigationGraph">
+    <div class="panel-heading" id="field__protected_open_environment__Environment2DWithGraph">
         <code>
-        protected environmentGraph: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
+        protected open environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
         </code>
     </div>
-    <div class="panel-body"><p>A navigation graph describing the environment. Nodes are ConvexGeometricShapes
-that should represent the walkable areas of the environment (i.e. the areas that
-are freely traversable by agents). Edges represent connections between these
-areas. Additionally, a NavigationGraph can store some destinations which
-will be considered as possible final destinations by this pedestrian.</p>
+    <div class="panel-body"><p>The environment this pedestrian is into.</p>
 </div>
 </div>
 
@@ -216,15 +213,16 @@ will be considered as possible final destinations by this pedestrian.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_knowledgeDegree__Double__randomGenerator___ERROR_CLASS___environmentGraph__NavigationGraph__environment__Environment__group__PedestrianGroup___minArea__Double_">
+    <div class="panel-heading" id="constructor__constructor_knowledgeDegree__Double__randomGenerator___ERROR_CLASS___environment__Environment2DWithGraph__group__PedestrianGroup___minArea__Double_">
         <code>
-        constructor(knowledgeDegree: Double, randomGenerator: <ERROR CLASS>, environmentGraph: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>, environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, group: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/PedestrianGroup">PedestrianGroup</a>?, minArea: Double)
+        constructor(knowledgeDegree: Double, randomGenerator: <ERROR CLASS>, environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>, group: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/PedestrianGroup">PedestrianGroup</a>?, minArea: Double)
         </code>
     </div>
-    <div class="panel-body"><p>An abstract orienting pedestrian, defining an algorithm capable of generating
-a cognitiveMap, provided a NavigationGraph describing the environment.
-The creation of landmarks is left to subclasses via factory method, see
-generateLandmarkWithin.</p>
+    <div class="panel-body"><p>An abstract OrientingPedestrian.
+This class defines an algorithm capable of generating a pseudo-random cognitiveMap
+based on a NavigationGraph of the environment. The latter can be obtained from
+Environment2DWithGraphs, which is the only type of environment this pedestrian can
+be placed into. The creation of landmarks is left to subclasses via factory method.</p>
 </div>
 
     
@@ -249,14 +247,7 @@ generateLandmarkWithin.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        environmentGraph: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
+        environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
         </code>
         
     </li>
@@ -291,9 +282,8 @@ generateLandmarkWithin.</p>
         protected abstract fun generateLandmarkWithin(region: M): N
         </code>
     </div>
-    <div class="panel-body"><p>Generates a landmark entirely contained in the given region.
-If such region contains one or more destinations, the generated
-landmark must contain at least one of them.</p>
+    <div class="panel-body"><p>Generates a landmark entirely contained in the given region. If such region contains
+one or more destinations, the generated landmark must contain at least one of them.</p>
 </div>
 
     
@@ -407,8 +397,9 @@ landmark must contain at least one of them.</p>
         fun &lt;R&gt; Iterable.shuffled(rg: <ERROR CLASS>): Iterable
         </code>
     </div>
-    <div class="panel-body"><p><a href="https://www.worldcat.org/title/statistical-tables-for-biological-agricultural-and-medical-research/oclc/14222135">Fisher–Yates shuffle algorithm</a>
-using Apache random number generator. More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on Wikipedia</a>.</p>
+    <div class="panel-body"><p><a href="https://bit.ly/33Z3xFu">Fisher–Yates shuffle algorithm</a>
+using Apache random number generator.
+More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on Wikipedia</a>.</p>
 </div>
 
     
@@ -570,6 +561,22 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
     </li>
     
@@ -626,7 +633,7 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navmeshes">Generating navigation meshes</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
     </li>
     
 
@@ -683,22 +690,6 @@ using Apache random number generator. More information <a href="https://en.wikip
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
     </li>
     
 
@@ -1180,7 +1171,7 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.implementations.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.implementations.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -1380,7 +1371,7 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.interfaces.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.interfaces.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -1389,6 +1380,14 @@ using Apache random number generator. More information <a href="https://en.wikip
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod">it.unibo.alchemist.model.interfaces.graph.twod</a>
     </li>
     
 
@@ -1933,7 +1932,7 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
     </li>
     
 
@@ -2773,14 +2772,6 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexEuclidean2DShape">ConvexEuclidean2DShape</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/ConvexGeometricShape">ConvexGeometricShape</a>
     </li>
     
@@ -2870,14 +2861,6 @@ using Apache random number generator. More information <a href="https://en.wikip
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/biochemistrydsl/BiochemistrydslParser/CustomReactionTypeContext">CustomReactionTypeContext</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/Deaccon2D">Deaccon2D</a>
     </li>
     
 
@@ -2989,6 +2972,14 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/DoubleNode">DoubleNode</a>
     </li>
     
@@ -3061,7 +3052,7 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationMesh">DrawNavigationMesh</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationGraph">DrawNavigationGraph</a>
     </li>
     
 
@@ -3205,6 +3196,14 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment2DWithObstacles">Environment2DWithObstacles</a>
     </li>
     
@@ -3237,7 +3236,39 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Euclidean2DCrossing">Euclidean2DCrossing</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DCrossing">Euclidean2DCrossing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder">Euclidean2DNavigationGraphBuilder</a>
     </li>
     
 
@@ -3246,14 +3277,6 @@ using Apache random number generator. More information <a href="https://en.wikip
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DSegment">Euclidean2DSegment</a>
     </li>
     
 
@@ -3293,7 +3316,7 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironment">EuclideanPhysics2DEnvironment</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
 
@@ -3389,7 +3412,7 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
     </li>
     
 
@@ -3397,7 +3420,7 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
     </li>
     
 
@@ -4022,6 +4045,14 @@ using Apache random number generator. More information <a href="https://en.wikip
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironment">ImageEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironmentWithGraph">ImageEnvironmentWithGraph</a>
     </li>
     
 
@@ -5077,6 +5108,14 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Physics2DEnvironment">Physics2DEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/PhysicsEnvironment">PhysicsEnvironment</a>
     </li>
     
@@ -5582,6 +5621,14 @@ using Apache random number generator. More information <a href="https://en.wikip
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/isolines/Segment2D">Segment2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
     </li>
     
 
@@ -6117,6 +6164,14 @@ using Apache random number generator. More information <a href="https://en.wikip
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Vehicle">Vehicle</a>
     </li>
     
@@ -6261,7 +6316,7 @@ using Apache random number generator. More information <a href="https://en.wikip
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev97+51105c38. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devdt+aba0d261. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

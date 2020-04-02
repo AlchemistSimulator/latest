@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev97+51105c38"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devdt+aba0d261"};
 </script>
 
 
@@ -128,7 +128,7 @@
 </p>
 <div class="class-description" id="description">
 <p>A convex polygon is a simple polygon (i.e. not self-intersecting and
-with no holes) in which no line segment between two points on the boundary
+without holes) in which no line segment between two points on the boundary
 ever goes outside the polygon.</p>
 
 </div>
@@ -183,9 +183,9 @@ ever goes outside the polygon.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__abstract_fun_getEdge_index__Int____ERROR_CLASS_">
+    <div class="panel-heading" id="method__abstract_fun_getEdge_index__Int___Segment2D">
         <code>
-        abstract fun getEdge(index: Int): <ERROR CLASS>
+        abstract fun getEdge(index: Int): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
     </div>
     <div class="panel-body"><p>The index parameter specify which edge to get: edge i connects
@@ -215,7 +215,7 @@ vertices i and i+1.</p>
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <ERROR CLASS>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
     </div>
     <div></div>
@@ -225,13 +225,12 @@ vertices i and i+1.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__abstract_fun_intersects_other__Shape___Boolean">
+    <div class="panel-heading" id="method__abstract_fun_intersects_shape__Shape___Boolean">
         <code>
-        abstract fun intersects(other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>): Boolean
+        abstract fun intersects(shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Checks whether the given shape intersects with the polygon.
-This method is &quot;exact&quot; (no bounding box are used).</p>
+    <div class="panel-body"><p>Checks whether the given shape intersects with the polygon.</p>
 </div>
 
     
@@ -244,7 +243,7 @@ This method is &quot;exact&quot; (no bounding box are used).</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
+        shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
         </code>
         
     </li>
@@ -267,13 +266,89 @@ This method is &quot;exact&quot; (no bounding box are used).</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__abstract_fun_containsOrLiesOnBoundary_vector__Euclidean2DPosition___Boolean">
+    <div class="panel-heading" id="method__open_fun_edges_____ERROR_CLASS_">
         <code>
-        abstract fun containsOrLiesOnBoundary(vector: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Boolean
+        open fun edges(): <ERROR CLASS>
         </code>
     </div>
-    <div class="panel-body"><p>Checks whether the given vector is contained in the polygon or
-lies on its boundary.</p>
+    <div class="panel-body"><p>Returns a collection containing the edges (or sides) of the polygon.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_contains_shape__Shape____ERROR_CLASS_">
+        <code>
+        open fun contains(shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>Checks whether the polygon contains the given shape.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_containsBoundaryIncluded_vector__Euclidean2DPosition___Boolean">
+        <code>
+        open fun containsBoundaryIncluded(vector: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>Checks whether the given vector is contained in the polygon or lies on its boundary.</p>
 </div>
 
     
@@ -308,31 +383,16 @@ lies on its boundary.</p>
 </div>
 
 
-
-
-    <h2 id="extensions">Extensions</h2>
-
-
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_ConvexPolygon.intersectsBoundaryExcluded_s___ERROR_CLASS____Boolean">
+    <div class="panel-heading" id="method__open_fun_containsBoundaryExcluded_vector__Euclidean2DPosition___Boolean">
         <code>
-        fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>.intersectsBoundaryExcluded(s: <ERROR CLASS>): Boolean
+        open fun containsBoundaryExcluded(vector: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Checks if the provided segment intersects with the polygon, boundary excluded.</p>
+    <div class="panel-body"><p>Checks whether the given vector is contained in the polygon, boundary excluded.</p>
 </div>
 
     
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>
-        </code>
-    </div>
-    <div></div>
-</div>
 
     
 <div class="panel-body">
@@ -342,7 +402,7 @@ lies on its boundary.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        s: <ERROR CLASS>
+        vector: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
         </code>
         
     </li>
@@ -362,6 +422,89 @@ lies on its boundary.</p>
 </div>
 
 </div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_intersectsBoundaryExcluded_segment__Segment2D___Boolean">
+        <code>
+        open fun intersectsBoundaryExcluded(segment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>): Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>Checks if the provided segment intersects with the polygon, boundary excluded.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        segment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Boolean
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_closestEdgeTo_segment__Segment2D___Segment2D">
+        <code>
+        open fun closestEdgeTo(segment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
+        </code>
+    </div>
+    <div class="panel-body"><p>Finds the edge of the polygon closest to the provided segment.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        segment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
 
 
 
@@ -476,6 +619,22 @@ lies on its boundary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
     </li>
     
@@ -532,7 +691,7 @@ lies on its boundary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navmeshes">Generating navigation meshes</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
     </li>
     
 
@@ -589,22 +748,6 @@ lies on its boundary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
     </li>
     
 
@@ -1086,7 +1229,7 @@ lies on its boundary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.implementations.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.implementations.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -1286,7 +1429,7 @@ lies on its boundary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.interfaces.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.interfaces.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -1295,6 +1438,14 @@ lies on its boundary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod">it.unibo.alchemist.model.interfaces.graph.twod</a>
     </li>
     
 
@@ -1839,7 +1990,7 @@ lies on its boundary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
     </li>
     
 
@@ -2679,14 +2830,6 @@ lies on its boundary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexEuclidean2DShape">ConvexEuclidean2DShape</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/ConvexGeometricShape">ConvexGeometricShape</a>
     </li>
     
@@ -2776,14 +2919,6 @@ lies on its boundary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/biochemistrydsl/BiochemistrydslParser/CustomReactionTypeContext">CustomReactionTypeContext</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/Deaccon2D">Deaccon2D</a>
     </li>
     
 
@@ -2895,6 +3030,14 @@ lies on its boundary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/DoubleNode">DoubleNode</a>
     </li>
     
@@ -2967,7 +3110,7 @@ lies on its boundary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationMesh">DrawNavigationMesh</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationGraph">DrawNavigationGraph</a>
     </li>
     
 
@@ -3111,6 +3254,14 @@ lies on its boundary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment2DWithObstacles">Environment2DWithObstacles</a>
     </li>
     
@@ -3143,7 +3294,39 @@ lies on its boundary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Euclidean2DCrossing">Euclidean2DCrossing</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DCrossing">Euclidean2DCrossing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder">Euclidean2DNavigationGraphBuilder</a>
     </li>
     
 
@@ -3152,14 +3335,6 @@ lies on its boundary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DSegment">Euclidean2DSegment</a>
     </li>
     
 
@@ -3199,7 +3374,7 @@ lies on its boundary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironment">EuclideanPhysics2DEnvironment</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
 
@@ -3295,7 +3470,7 @@ lies on its boundary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
     </li>
     
 
@@ -3303,7 +3478,7 @@ lies on its boundary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
     </li>
     
 
@@ -3928,6 +4103,14 @@ lies on its boundary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironment">ImageEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironmentWithGraph">ImageEnvironmentWithGraph</a>
     </li>
     
 
@@ -4983,6 +5166,14 @@ lies on its boundary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Physics2DEnvironment">Physics2DEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/PhysicsEnvironment">PhysicsEnvironment</a>
     </li>
     
@@ -5488,6 +5679,14 @@ lies on its boundary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/isolines/Segment2D">Segment2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
     </li>
     
 
@@ -6023,6 +6222,14 @@ lies on its boundary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Vehicle">Vehicle</a>
     </li>
     
@@ -6167,7 +6374,7 @@ lies on its boundary.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev97+51105c38. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devdt+aba0d261. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

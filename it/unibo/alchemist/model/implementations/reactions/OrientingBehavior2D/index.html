@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev97+51105c38"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devdt+aba0d261"};
 </script>
 
 
@@ -128,19 +128,35 @@
 </p>
 <div class="class-description" id="description">
 <p>An AbstractOrientingBehavior in an euclidean bidimensional space.
-Accepts an environmentGraph whose nodes are ConvexPolygons and edges store
-information regarding the shape of each passage. In particular, edges of
-the environmentGraph are GraphEdgeWithData storing an Euclidean2DSegment.
-Similarly to an Euclidean2DCrossing, given an edge e connecting convex
-polygon a to convex polygon b, the segment provided by e MUST belong to
-the boundary of a, but can or cannot belong the boundary of b.
+This class accepts an Euclidean2DEnvironmentWithGraph whose graph features
+ConvexPolygonal nodes (or any subclass of it) and whose edges store extra
+information regarding the shape of each passage (see type parameters M and F).
+In particular, edges are any subtype of GraphEdgeWithData storing an
+<a href="#">Euclidean2DSegment</a>. Similarly to an Euclidean2DCrossing, given an edge e
+connecting convex polygon a to convex polygon b, the segment provided by e MUST
+belong to the boundary of a, but can or cannot belong the boundary of b.
 Additionally, this class redefines moveTowards in order to perform a more
-sophisticated movement, see Seek2D.</p>
+sophisticated movement (using some utils only available in two dimensions).</p>
 
 </div>
 
 
 
+
+
+<h2 id="fields">Fields</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_open_environment__Euclidean2DEnvironmentWithGraph">
+        <code>
+        protected open environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>
+        </code>
+    </div>
+    <div class="panel-body"><p>The environment the pedestrian is into.</p>
+</div>
+</div>
 
 
 
@@ -152,20 +168,21 @@ sophisticated movement, see Seek2D.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_environment__Environment__pedestrian__OrientingPedestrian__timeDistribution__TimeDistribution__environmentGraph__NavigationGraph_">
+    <div class="panel-heading" id="constructor__constructor_environment__Euclidean2DEnvironmentWithGraph__pedestrian__OrientingPedestrian__timeDistribution__TimeDistribution_">
         <code>
-        constructor(environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>, timeDistribution: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/TimeDistribution">TimeDistribution</a>, environmentGraph: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>)
+        constructor(environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>, timeDistribution: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/TimeDistribution">TimeDistribution</a>)
         </code>
     </div>
     <div class="panel-body"><p>An AbstractOrientingBehavior in an euclidean bidimensional space.
-Accepts an environmentGraph whose nodes are ConvexPolygons and edges store
-information regarding the shape of each passage. In particular, edges of
-the environmentGraph are GraphEdgeWithData storing an Euclidean2DSegment.
-Similarly to an Euclidean2DCrossing, given an edge e connecting convex
-polygon a to convex polygon b, the segment provided by e MUST belong to
-the boundary of a, but can or cannot belong the boundary of b.
+This class accepts an Euclidean2DEnvironmentWithGraph whose graph features
+ConvexPolygonal nodes (or any subclass of it) and whose edges store extra
+information regarding the shape of each passage (see type parameters M and F).
+In particular, edges are any subtype of GraphEdgeWithData storing an
+<a href="#">Euclidean2DSegment</a>. Similarly to an Euclidean2DCrossing, given an edge e
+connecting convex polygon a to convex polygon b, the segment provided by e MUST
+belong to the boundary of a, but can or cannot belong the boundary of b.
 Additionally, this class redefines moveTowards in order to perform a more
-sophisticated movement, see Seek2D.</p>
+sophisticated movement (using some utils only available in two dimensions).</p>
 </div>
 
     
@@ -176,7 +193,7 @@ sophisticated movement, see Seek2D.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
+        environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>
         </code>
         
     </li>
@@ -195,13 +212,6 @@ sophisticated movement, see Seek2D.</p>
         
     </li>
 
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        environmentGraph: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
-        </code>
-        
-    </li>
-
 </ul>
 
 </div>
@@ -213,12 +223,12 @@ sophisticated movement, see Seek2D.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_moveTowards_target__Euclidean2DPosition__currentRoom__M___targetEdge__F_">
+    <div class="panel-heading" id="method__protected_open_fun_moveTowards_target__Euclidean2DPosition__currentRoom__M___targetDoor__F_">
         <code>
-        protected open fun moveTowards(target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, currentRoom: M?, targetEdge: F)
+        protected open fun moveTowards(target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, currentRoom: M?, targetDoor: F)
         </code>
     </div>
-    <div class="panel-body"><p>Move the pedestrian towards a position which is guaranteed to be in sight (i.e. no
+    <div class="panel-body"><p>Moves the pedestrian towards a position which is guaranteed to be in sight (i.e. no
 obstacle is placed between him and such position).</p>
 </div>
 
@@ -246,7 +256,7 @@ obstacle is placed between him and such position).</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        targetEdge: F
+        targetDoor: F
         </code>
         
     </li>
@@ -266,8 +276,8 @@ obstacle is placed between him and such position).</p>
     </div>
     <div class="panel-body"><p>Maps each edge outgoing from the given room to an integer rank indicating its
 suitability in order to reach the provided destination (which is outside of the scope
-of the agent). Rankings should be in <a href="#">1,M</a>, a lower rank means the correspondent edge
-is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following
+of the agent). Rankings should be in <a href="#">1,E</a>, where E is the number of edges, a lower
+rank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following
 situation: he knows the spatial structure of the current room and the next sub-destination
 he want to reach, but has no other information regarding the spatial structure between
 his room and that position (remember that it is assumed the cognitive map provide only
@@ -316,16 +326,15 @@ guess of which crossing to take in order to get closer to the provided destinati
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_computeSubdestination_targetEdge__F___Euclidean2DPosition">
+    <div class="panel-heading" id="method__protected_open_fun_computeSubdestination_targetDoor__F___Euclidean2DPosition">
         <code>
-        protected open fun computeSubdestination(targetEdge: F): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        protected open fun computeSubdestination(targetDoor: F): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
         </code>
     </div>
-    <div class="panel-body"><p>Computes the next sub-destination the pedestrian will move towards, provided an edge the
-pedestrian wants to cross. The provided edge belongs to the room the agent is located into
-(i.e. it is in sight of the agent), the returned position must be in sight of him as well,
-which means no obstacle should be placed between such destination and his current
-position.<p>This method is mainly about exploiting the extra data stored in the edge (for instance
+    <div class="panel-body"><p>Computes the next sub-destination the pedestrian will move towards, provided an edge he
+wants to cross. The provided edge belongs to the room the agent is into (i.e. it is in
+sight of the agent), the returned position must be in sight of him as well, which means
+no obstacle should be placed between such destination and his current position.<p>This method is mainly about exploiting the extra data stored in the edge (for instance
 its shape and location in the room boundary) to determine which point the pedestrian
 shall point towards.</p></p>
 </div>
@@ -340,7 +349,7 @@ shall point towards.</p></p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        targetEdge: F
+        targetDoor: F
         </code>
         
     </li>
@@ -363,13 +372,12 @@ shall point towards.</p></p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_weight_edge__F__rank__Int____Double">
+    <div class="panel-heading" id="method__open_fun_weight_edge__F__rank__Int_____ERROR_CLASS_">
         <code>
-        open fun weight(edge: F, rank: Int?): Double
+        open fun weight(edge: F, rank: Int?): <ERROR CLASS>
         </code>
     </div>
-    <div class="panel-body"><p>We add a factor taking into account the congestion of the room the edge
-being weighted leads to.</p>
+    <div class="panel-body"><p>The congestionFactor is added.</p>
 </div>
 
     
@@ -402,7 +410,7 @@ being weighted leads to.</p>
     <div><b>Returns: </b></div>
     <div>
         <code>
-        Double
+        <ERROR CLASS>
         </code>
     </div>
     <div></div>
@@ -571,6 +579,22 @@ being weighted leads to.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
     </li>
     
@@ -627,7 +651,7 @@ being weighted leads to.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navmeshes">Generating navigation meshes</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
     </li>
     
 
@@ -684,22 +708,6 @@ being weighted leads to.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
     </li>
     
 
@@ -1181,7 +1189,7 @@ being weighted leads to.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.implementations.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.implementations.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -1381,7 +1389,7 @@ being weighted leads to.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.interfaces.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.interfaces.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -1390,6 +1398,14 @@ being weighted leads to.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod">it.unibo.alchemist.model.interfaces.graph.twod</a>
     </li>
     
 
@@ -1934,7 +1950,7 @@ being weighted leads to.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
     </li>
     
 
@@ -2774,14 +2790,6 @@ being weighted leads to.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexEuclidean2DShape">ConvexEuclidean2DShape</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/ConvexGeometricShape">ConvexGeometricShape</a>
     </li>
     
@@ -2871,14 +2879,6 @@ being weighted leads to.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/biochemistrydsl/BiochemistrydslParser/CustomReactionTypeContext">CustomReactionTypeContext</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/Deaccon2D">Deaccon2D</a>
     </li>
     
 
@@ -2990,6 +2990,14 @@ being weighted leads to.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/DoubleNode">DoubleNode</a>
     </li>
     
@@ -3062,7 +3070,7 @@ being weighted leads to.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationMesh">DrawNavigationMesh</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationGraph">DrawNavigationGraph</a>
     </li>
     
 
@@ -3206,6 +3214,14 @@ being weighted leads to.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment2DWithObstacles">Environment2DWithObstacles</a>
     </li>
     
@@ -3238,7 +3254,39 @@ being weighted leads to.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Euclidean2DCrossing">Euclidean2DCrossing</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DCrossing">Euclidean2DCrossing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder">Euclidean2DNavigationGraphBuilder</a>
     </li>
     
 
@@ -3247,14 +3295,6 @@ being weighted leads to.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DSegment">Euclidean2DSegment</a>
     </li>
     
 
@@ -3294,7 +3334,7 @@ being weighted leads to.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironment">EuclideanPhysics2DEnvironment</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
 
@@ -3390,7 +3430,7 @@ being weighted leads to.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
     </li>
     
 
@@ -3398,7 +3438,7 @@ being weighted leads to.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
     </li>
     
 
@@ -4023,6 +4063,14 @@ being weighted leads to.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironment">ImageEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironmentWithGraph">ImageEnvironmentWithGraph</a>
     </li>
     
 
@@ -5078,6 +5126,14 @@ being weighted leads to.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Physics2DEnvironment">Physics2DEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/PhysicsEnvironment">PhysicsEnvironment</a>
     </li>
     
@@ -5583,6 +5639,14 @@ being weighted leads to.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/isolines/Segment2D">Segment2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
     </li>
     
 
@@ -6118,6 +6182,14 @@ being weighted leads to.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Vehicle">Vehicle</a>
     </li>
     
@@ -6262,7 +6334,7 @@ being weighted leads to.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev97+51105c38. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devdt+aba0d261. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-dev97+51105c38"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devdt+aba0d261"};
 </script>
 
 
@@ -127,6 +127,25 @@
 
 
 
+    
+<div class="panel panel-default">
+    <div class="panel-heading"><h3 class="panel-title">Interface Summary</h3></div>
+    <div class="list-group">
+    
+    
+        <a class="list-group-item clearfix" href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">
+            <code class="pull-left">AwtShapeCompatible</code>
+            
+            
+            
+
+            
+        </a>
+    
+    </div>
+</div>
+
+
 
     
 <div class="panel panel-default">
@@ -156,6 +175,16 @@
     
         <a class="list-group-item clearfix" href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">
             <code class="pull-left">CircleSegmentIntersectionResult</code>
+            
+            
+            
+
+            
+        </a>
+    
+    
+        <a class="list-group-item clearfix" href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">
+            <code class="pull-left">DoubleInterval</code>
             
             
             
@@ -237,12 +266,13 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_zCross_v1__Euclidean2DPosition__v2__Euclidean2DPosition___Double">
+    <div class="panel-heading" id="method__fun_isInBoundaries_edge__Segment2D__origin__Vector2D__width__Double__height__Double___Boolean">
         <code>
-        fun zCross(v1: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, v2: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Double
+        fun isInBoundaries(edge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>, origin: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>, width: Double, height: Double): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Computes the z component of the cross product of the given vectors.</p>
+    <div class="panel-body"><p>Checks whether the given edge is inside a rectangular region described by an origin
+point and width and height values (only positive).</p>
 </div>
 
     
@@ -255,121 +285,28 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        v1: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        edge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        v2: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Double
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__V___V__Vector.dot_other__V___Double">
-        <code>
-        fun &lt;V : V&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector">Vector</a>.dot(other: V): Double
-        </code>
-    </div>
-    <div class="panel-body"><p>Computes the dot product between two vectors.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector">Vector</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        other: V
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Double
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_isInBoundaries_p__Euclidean2DPosition__lowerBound__Point2D__upperBound__Point2D___Boolean">
-        <code>
-        fun isInBoundaries(p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, lowerBound: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Point2D">Point2D</a>, upperBound: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Point2D">Point2D</a>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks whether the given point is inside a rectangular region starting in
-lowerBound and ending in upperBound (bounds are included).</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        origin: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        lowerBound: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Point2D">Point2D</a>
+        width: Double
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        upperBound: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Point2D">Point2D</a>
+        height: Double
         </code>
         
     </li>
@@ -392,13 +329,13 @@ lowerBound and ending in upperBound (bounds are included).</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_isInBoundaries_e___ERROR_CLASS___lowerBound__Point2D__upperBound__Point2D___Boolean">
+    <div class="panel-heading" id="method__fun_isInBoundaries_p__Vector2D__origin__Vector2D__width__Double__height__Double___Boolean">
         <code>
-        fun isInBoundaries(e: <ERROR CLASS>, lowerBound: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Point2D">Point2D</a>, upperBound: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Point2D">Point2D</a>): Boolean
+        fun isInBoundaries(p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>, origin: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>, width: Double, height: Double): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Checks whether the given edge is inside a rectangular region starting in
-lowerBound and ending in upperBound (bounds are included).</p>
+    <div class="panel-body"><p>Checks whether the given point is inside a rectangular region described by an origin
+point and width and height values (only positive).</p>
 </div>
 
     
@@ -411,213 +348,28 @@ lowerBound and ending in upperBound (bounds are included).</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        e: <ERROR CLASS>
+        p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        lowerBound: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Point2D">Point2D</a>
+        origin: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        upperBound: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Point2D">Point2D</a>
+        width: Double
         </code>
         
     </li>
 
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.toVector_____ERROR_CLASS_">
-        <code>
-        fun <ERROR CLASS>.toVector(): <ERROR CLASS>
-        </code>
-    </div>
-    <div class="panel-body"><p>Mutates an edge to a vector. In particular, the vector representing the
-movement from the first point to the second point of the edge.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.slope_____ERROR_CLASS_">
-        <code>
-        fun <ERROR CLASS>.slope(): <ERROR CLASS>
-        </code>
-    </div>
-    <div class="panel-body"><p>Computes the slope of the line passing through a couple of points.
-If the points coincide NaN is the result.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.isDegenerate____Boolean">
-        <code>
-        fun <ERROR CLASS>.isDegenerate(): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>An edge is degenerate if its points coincide (and its length is zero).</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.contains_p__Euclidean2DPosition___Boolean">
-        <code>
-        fun <ERROR CLASS>.contains(p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks whether the segment (represented by a pair of positions)
-contains the given point.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        height: Double
         </code>
         
     </li>
@@ -640,55 +392,9 @@ contains the given point.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.midPoint_____ERROR_CLASS_">
+    <div class="panel-heading" id="method__fun__P___P__areCollinear_p1__P__p2__P__p3__P___Boolean">
         <code>
-        fun <ERROR CLASS>.midPoint(): <ERROR CLASS>
-        </code>
-    </div>
-    <div class="panel-body"><p>Computes the medium point of the current segment.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_areCollinear_p1__Euclidean2DPosition__p2__Euclidean2DPosition__p3__Euclidean2DPosition___Boolean">
-        <code>
-        fun areCollinear(p1: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, p2: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, p3: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Boolean
+        fun &lt;P : P&gt; areCollinear(p1: P, p2: P, p3: P): Boolean
         </code>
     </div>
     <div class="panel-body"><p>Determines if three points are collinear (i.e. they lie on the same line).</p>
@@ -704,21 +410,21 @@ contains the given point.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        p1: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        p1: P
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        p2: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        p2: P
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        p3: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        p3: P
         </code>
         
     </li>
@@ -741,25 +447,15 @@ contains the given point.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.intersects_start__Double__end__Double___Boolean">
+    <div class="panel-heading" id="method__fun_createSegment_x1__Double__y1__Double__x2__Double__y2__Double___Segment2D">
         <code>
-        fun <ERROR CLASS>.intersects(start: Double, end: Double): Boolean
+        fun createSegment(x1: Double, y1: Double, x2: Double, y2: Double): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
     </div>
-    <div class="panel-body"><p>Checks whether two intervals (inclusive) intersects.</p>
+    <div class="panel-body"><p>Creates an <a href="#">Euclidean2DSegment</a>. x2 defaults to x1 and y2 defaults to y1.</p>
 </div>
 
     
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
 
     
 <div class="panel-body">
@@ -769,111 +465,28 @@ contains the given point.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        start: Double
+        x1: Double
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        end: Double
+        y1: Double
         </code>
         
     </li>
 
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        x2: Double
         </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__V___V__Vector.magnitude____Double">
-        <code>
-        fun &lt;V : V&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector">Vector</a>.magnitude(): Double
-        </code>
-    </div>
-    <div class="panel-body"><p>Finds the magnitude of a vector.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector">Vector</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Double
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__V___V__Vector.angleBetween_other__V___Double">
-        <code>
-        fun &lt;V : V&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector">Vector</a>.angleBetween(other: V): Double
-        </code>
-    </div>
-    <div class="panel-body"><p>Computes the angle in radians between two vectors.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector">Vector</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
+        
+    </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        other: V
+        y2: Double
         </code>
         
     </li>
@@ -886,7 +499,7 @@ contains the given point.</p>
     <div><b>Returns: </b></div>
     <div>
         <code>
-        Double
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
     </div>
     <div></div>
@@ -896,353 +509,9 @@ contains the given point.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.isXAxisAligned____Boolean">
+    <div class="panel-heading" id="method__fun_intersectionLines_l1__Segment2D__l2__Segment2D___LinesIntersectionResult">
         <code>
-        fun <ERROR CLASS>.isXAxisAligned(): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks whether the segment is aligned to the x axis.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.isYAxisAligned____Boolean">
-        <code>
-        fun <ERROR CLASS>.isYAxisAligned(): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks whether the segment is aligned to the y axis.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.isAxisAligned____Boolean">
-        <code>
-        fun <ERROR CLASS>.isAxisAligned(): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks whether the segment is axis-aligned.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.closestPointTo_p__Euclidean2DPosition___Euclidean2DPosition">
-        <code>
-        fun <ERROR CLASS>.closestPointTo(p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>Finds the point of the segment which is closest to the provided position.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_ConvexPolygon.intersectsBoundaryExcluded_s___ERROR_CLASS____Boolean">
-        <code>
-        fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>.intersectsBoundaryExcluded(s: <ERROR CLASS>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks if the provided segment intersects with the polygon, boundary excluded.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        s: <ERROR CLASS>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.findPointOnLineGivenX_x__Double___Euclidean2DPosition_">
-        <code>
-        fun <ERROR CLASS>.findPointOnLineGivenX(x: Double): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>?
-        </code>
-    </div>
-    <div class="panel-body"><p>Finds the point on the line represented by the current segment, given
-its x coordinate. Returns null if the point cannot be located.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        x: Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>?
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__ERROR_CLASS_.findPointOnLineGivenY_y__Double___Euclidean2DPosition_">
-        <code>
-        fun <ERROR CLASS>.findPointOnLineGivenY(y: Double): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>?
-        </code>
-    </div>
-    <div class="panel-body"><p>Finds the point on the line represented by the current segment, given
-its y coordinate. Returns null if the point cannot be located.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        y: Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>?
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_intersectionLines_l1___ERROR_CLASS___l2___ERROR_CLASS____LinesIntersectionResult">
-        <code>
-        fun intersectionLines(l1: <ERROR CLASS>, l2: <ERROR CLASS>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
+        fun intersectionLines(l1: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>, l2: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
         </code>
     </div>
     <div class="panel-body"><p>Finds the intersection of two lines represented by two segments.
@@ -1259,14 +528,14 @@ Such segments are required not to be degenerate (of length 0).</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        l1: <ERROR CLASS>
+        l1: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        l2: <ERROR CLASS>
+        l2: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
         
     </li>
@@ -1289,9 +558,9 @@ Such segments are required not to be degenerate (of length 0).</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_intersection_s1___ERROR_CLASS___s2___ERROR_CLASS____SegmentsIntersectionResult">
+    <div class="panel-heading" id="method__fun__P___P__intersection_s1__Segment2D__s2__Segment2D___SegmentsIntersectionResult">
         <code>
-        fun intersection(s1: <ERROR CLASS>, s2: <ERROR CLASS>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
+        fun &lt;P : P&gt; intersection(s1: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>, s2: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
         </code>
     </div>
     <div class="panel-body"><p>Finds the intersection point of two given segments (if exists). This method is
@@ -1308,14 +577,14 @@ able to deal with degenerate edges (of length zero) and collinear segments.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        s1: <ERROR CLASS>
+        s1: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        s2: <ERROR CLASS>
+        s2: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
         
     </li>
@@ -1338,9 +607,9 @@ able to deal with degenerate edges (of length zero) and collinear segments.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_intersection_segment___ERROR_CLASS___center__Euclidean2DPosition__radius__Double___CircleSegmentIntersectionResult">
+    <div class="panel-heading" id="method__fun_intersection_segment__Segment2D__center__Vector2D__radius__Double___CircleSegmentIntersectionResult">
         <code>
-        fun intersection(segment: <ERROR CLASS>, center: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, radius: Double): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
+        fun intersection(segment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>, center: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>, radius: Double): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
         </code>
     </div>
     <div class="panel-body"><p>Finds the intersection between a circle and a segment.</p>
@@ -1356,14 +625,14 @@ able to deal with degenerate edges (of length zero) and collinear segments.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        segment: <ERROR CLASS>
+        segment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        center: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        center: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>
         </code>
         
     </li>
@@ -1384,299 +653,6 @@ able to deal with degenerate edges (of length zero) and collinear segments.</p>
     <div>
         <code>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_Euclidean2DPosition.asAngle_____ERROR_CLASS_">
-        <code>
-        fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>.asAngle(): <ERROR CLASS>
-        </code>
-    </div>
-    <div class="panel-body"><p>Computes the angle with atan2(y, x)</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div><p>atan2(y, x) (in radians)</p>
-</div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_Euclidean2DPosition.times_n__Double___Euclidean2DPosition">
-        <code>
-        fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>.times(n: Double): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>Multiplies each coordinate of a vector for a scalar number n.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        n: Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_Euclidean2DPosition.normalize____Euclidean2DPosition">
-        <code>
-        fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>.normalize(): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>Normalizes the vector.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_Euclidean2DPosition.resize_newLen__Double___Euclidean2DPosition">
-        <code>
-        fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>.resize(newLen: Double): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>Resizes the vector in order for it to have a length equal
-to the specified parameter. Its direction and verse are preserved.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        newLen: Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_Euclidean2DPosition.normal____Euclidean2DPosition">
-        <code>
-        fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>.normal(): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>Find the normal of a vector.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_Euclidean2DPosition.dot_v__Euclidean2DPosition___Double">
-        <code>
-        fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>.dot(v: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Double
-        </code>
-    </div>
-    <div class="panel-body"><p>Dot product between bidimensional vectors.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        v: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Double
         </code>
     </div>
     <div></div>
@@ -1903,6 +879,22 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
     </li>
     
@@ -1959,7 +951,7 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navmeshes">Generating navigation meshes</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
     </li>
     
 
@@ -2016,22 +1008,6 @@ two points will be considered as a straight line between them.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
     </li>
     
 
@@ -2513,7 +1489,7 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.implementations.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.implementations.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -2713,7 +1689,7 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon">it.unibo.alchemist.model.interfaces.geometry.navigationmeshes.deaccon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.interfaces.geometry.euclidean.twod.navigator</a>
     </li>
     
 
@@ -2722,6 +1698,14 @@ two points will be considered as a straight line between them.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod">it.unibo.alchemist.model.interfaces.graph.twod</a>
     </li>
     
 
@@ -3266,7 +2250,7 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
     </li>
     
 
@@ -4106,14 +3090,6 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexEuclidean2DShape">ConvexEuclidean2DShape</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/ConvexGeometricShape">ConvexGeometricShape</a>
     </li>
     
@@ -4203,14 +3179,6 @@ two points will be considered as a straight line between them.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/biochemistrydsl/BiochemistrydslParser/CustomReactionTypeContext">CustomReactionTypeContext</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/Deaccon2D">Deaccon2D</a>
     </li>
     
 
@@ -4322,6 +3290,14 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/DoubleNode">DoubleNode</a>
     </li>
     
@@ -4394,7 +3370,7 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationMesh">DrawNavigationMesh</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/DrawNavigationGraph">DrawNavigationGraph</a>
     </li>
     
 
@@ -4538,6 +3514,14 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment2DWithObstacles">Environment2DWithObstacles</a>
     </li>
     
@@ -4570,7 +3554,39 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Euclidean2DCrossing">Euclidean2DCrossing</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DCrossing">Euclidean2DCrossing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder">Euclidean2DNavigationGraphBuilder</a>
     </li>
     
 
@@ -4579,14 +3595,6 @@ two points will be considered as a straight line between them.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DSegment">Euclidean2DSegment</a>
     </li>
     
 
@@ -4626,7 +3634,7 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironment">EuclideanPhysics2DEnvironment</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
 
@@ -4722,7 +3730,7 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/navigationmeshes/deaccon/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator/ExtendableConvexPolygon">ExtendableConvexPolygon</a>
     </li>
     
 
@@ -4730,7 +3738,7 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/navigationmeshes/deaccon/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
     </li>
     
 
@@ -5355,6 +4363,14 @@ two points will be considered as a straight line between them.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironment">ImageEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/ImageEnvironmentWithGraph">ImageEnvironmentWithGraph</a>
     </li>
     
 
@@ -6410,6 +5426,14 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Physics2DEnvironment">Physics2DEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/PhysicsEnvironment">PhysicsEnvironment</a>
     </li>
     
@@ -6915,6 +5939,14 @@ two points will be considered as a straight line between them.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/isolines/Segment2D">Segment2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
     </li>
     
 
@@ -7450,6 +6482,14 @@ two points will be considered as a straight line between them.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/Vector2D">Vector2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Vehicle">Vehicle</a>
     </li>
     
@@ -7594,7 +6634,7 @@ two points will be considered as a straight line between them.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-dev97+51105c38. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devdt+aba0d261. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
