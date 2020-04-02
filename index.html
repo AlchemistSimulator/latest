@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devdw+e0a363f0"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-deve2+d21cba0c"};
 </script>
 
 
@@ -66,9 +66,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/editorial_main.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/editorial_orchidCustomizations.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/css/orchidSearch.css" />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
 <!-- end:inject styles -->
@@ -144,18 +144,37 @@ At the moment, the simulator features:</p>
 <p>Alchemist users should rely on the documentation available on <a href="http://alchemistsimulator.github.io/">the official Alchemist website</a>.
 Alchemist is available on Maven Central. You can import all the components by importing the <code>it.unibo.alchemist:alchemist</code> artifact.</p>
 <h3 id="gradle">Gradle</h3>
-<p>Add this dependency to your build, substituting <code>ALCHEMIST_VERSION</code> with the version you want to use (change the scope appropriately if you need Alchemist only for runtime or testing).</p>
+<p>You need to add the alchemist core dependency, plus the modules you need for your simulation.
+Add this dependency to your build, substituting <code>ALCHEMIST_VERSION</code> with the version you want to use
+(change the scope appropriately if you need Alchemist only for runtime or testing).</p>
 <pre><code class="language-kotlin">dependencies {
+    // Alchemist core dependency
     implementation(&quot;it.unibo.alchemist:alchemist:ALCHEMIST_VERSION&quot;)
+    // Example incarnation
+    implementation(&quot;it.unibo.alchemist:alchemist-incarnation-protelis:ALCHEMIST_VERSION&quot;)
+    // Example additional module
+    implementation(&quot;it.unibo.alchemist:alchemist-cognitive-agents:ALCHEMIST_VERSION&quot;)
 }
 </code></pre>
 <h3 id="maven">Maven</h3>
 <p>Add this dependency to your build, substitute <code>ALCHEMIST_VERSION</code> with the version you want to use. If you do not need the whole Alchemist machinery but just a sub-part of it, you can restrict the set of imported artifacts by using as dependencies the modules you are actually in need of.</p>
-<pre><code class="language-xml">&lt;dependency&gt;
-    &lt;groupId&gt;it.unibo.alchemist&lt;/groupId&gt;
-    &lt;artifactId&gt;alchemist&lt;/artifactId&gt;
-    &lt;version&gt;ALCHEMIST_VERSION&lt;/version&gt;
-&lt;/dependency&gt;
+<pre><code class="language-xml">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;it.unibo.alchemist&lt;/groupId&gt;
+        &lt;artifactId&gt;alchemist&lt;/artifactId&gt;
+        &lt;version&gt;ALCHEMIST_VERSION&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;it.unibo.alchemist&lt;/groupId&gt;
+        &lt;artifactId&gt;alchemist-incarnation-protelis&lt;/artifactId&gt;
+        &lt;version&gt;ALCHEMIST_VERSION&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;it.unibo.alchemist&lt;/groupId&gt;
+        &lt;artifactId&gt;alchemist-cognitive-agents&lt;/artifactId&gt;
+        &lt;version&gt;ALCHEMIST_VERSION&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
 </code></pre>
 <h2 id="developers">Developers</h2>
 <h3 id="status-badges">Status Badges</h3>
@@ -171,7 +190,7 @@ Alchemist is available on Maven Central. You can import all the components by im
 <a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=ncloc" alt="Lines of Code" /></a>
 <img src="https://img.shields.io/github/languages/code-size/AlchemistSimulator/Alchemist" alt="GitHub code size in bytes" />
 <img src="https://img.shields.io/github/repo-size/AlchemistSimulator/Alchemist" alt="GitHub repo size" />
-<img src="https://img.shields.io/maven-central/v/org.danilopianini/upgradle" alt="Maven Central" />
+<img src="https://img.shields.io/maven-central/v/it.unibo.alchemist/alchemist" alt="Maven Central" />
 <img src="https://img.shields.io/github/contributors/AlchemistSimulator/Alchemist" alt="GitHub contributors" /></p>
 <h5 id="quality">Quality</h5>
 <p><a href="https://ktlint.github.io/"><img src="https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg" alt="ktlint" /></a>
@@ -6125,7 +6144,7 @@ If you want to generate the artifacts, you can rely on Gradle. Just point a term
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devdw+e0a363f0. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-deve2+d21cba0c. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6142,11 +6161,11 @@ If you want to generate the artifacts, you can rely on Gradle. Just point a term
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/orchidSearch.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/442c6924/assets/js/orchidSearch.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
