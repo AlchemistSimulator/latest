@@ -3586,7 +3586,7 @@
                         },
                         "description": "",
                         "title": "OK",
-                        "content": "<p>The Launcher can run.<\/p>\n"
+                        "content": "<p>The Launcher can run with some priority.<init>\nThe Launcher can run with some priority.\npriority<\/p>\n"
                       }]
                     },
                     "Invalid": {
@@ -3634,6 +3634,72 @@
                     "description": "",
                     "title": "DistributedExecution",
                     "content": "<p>Launches a simulation set on a cluster of Alchemist nodes running in server mode.\nname\nLauncher name.\nadditionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
+                  }]
+                },
+                "Priority": {
+                  "ownKey": "Priority",
+                  "childrenPages": {
+                    "High": {
+                      "ownKey": "High",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/launch/Priority",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "High",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Priority/High"
+                        },
+                        "description": "",
+                        "title": "High",
+                        "content": "<p>The loader overrides the behaviour of the loaders provided by default, for the same options.\nIt must specify a reason.<init>\nThe loader overrides the behaviour of the loaders provided by default, for the same options.\nIt must specify a reason.\nreason<\/p>\n"
+                      }]
+                    },
+                    "Fallback": {
+                      "ownKey": "Fallback",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/launch/Priority",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "Fallback",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Priority/Fallback"
+                        },
+                        "description": "",
+                        "title": "Fallback",
+                        "content": "<p>A low priority, indicating that the Launcher may run, but it will ignore some options,\nand other launchers will be preferred. It must emit a warning.<init>\nA low priority, indicating that the Launcher may run, but it will ignore some options,\nand other launchers will be preferred. It must emit a warning.\nwarning<\/p>\n"
+                      }]
+                    },
+                    "Normal": {
+                      "ownKey": "Normal",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/launch/Priority",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "Normal",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Priority/Normal"
+                        },
+                        "description": "",
+                        "title": "Normal",
+                        "content": "<p>Default priority, to be returned when the requested options fit the expected configuration.<\/p>\n"
+                      }]
+                    }
+                  },
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/launch",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "Priority",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/Priority"
+                    },
+                    "description": "",
+                    "title": "Priority",
+                    "content": "<p>Defines the likelihood that the configuration is compatible with a Launcher.<\/p>\n<p>compareTo<\/p>\n"
                   }]
                 },
                 "Launcher": {
