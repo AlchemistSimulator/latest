@@ -1260,38 +1260,6 @@
                     }
                   }
                 },
-                "launch": {
-                  "ownKey": "launch",
-                  "childrenPages": {"SingleRunSwingUI": {
-                    "ownKey": "SingleRunSwingUI",
-                    "ownPages": [{
-                      "reference": {
-                        "path": "it/unibo/alchemist/boundary/launch",
-                        "baseUrl": "https://alchemistsimulator.github.io/latest",
-                        "fileName": "SingleRunSwingUI",
-                        "extension": "html",
-                        "usePrettyUrl": true,
-                        "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/launch/SingleRunSwingUI"
-                      },
-                      "description": "",
-                      "title": "SingleRunSwingUI",
-                      "content": "<p>Launches a Swing GUI meant to be used for a single simulation run.\nname\nLauncher name.\nadditionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
-                    }]
-                  }},
-                  "ownPages": [{
-                    "reference": {
-                      "path": "it/unibo/alchemist/boundary",
-                      "baseUrl": "https://alchemistsimulator.github.io/latest",
-                      "fileName": "launch",
-                      "extension": "html",
-                      "usePrettyUrl": true,
-                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/launch"
-                    },
-                    "description": "",
-                    "title": "it.unibo.alchemist.boundary.launch",
-                    "content": ""
-                  }]
-                },
                 "gui": {
                   "ownKey": "gui",
                   "childrenPages": {
@@ -3636,6 +3604,22 @@
                     "content": "<p>Launches a simulation set on a cluster of Alchemist nodes running in server mode.\nname\nLauncher name.\nadditionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
                   }]
                 },
+                "SingleRunSwingUI": {
+                  "ownKey": "SingleRunSwingUI",
+                  "ownPages": [{
+                    "reference": {
+                      "path": "it/unibo/alchemist/launch",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "SingleRunSwingUI",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/SingleRunSwingUI"
+                    },
+                    "description": "",
+                    "title": "SingleRunSwingUI",
+                    "content": "<p>Launches a Swing GUI meant to be used for a single simulation run.\nname\nLauncher name.\nadditionalValidation\nAllows subclasses to perform further checks before getting executed. Defaults to simply return Validation.OK\nlaunch\nLaunches a simulation using the provided loader and option parameters.<\/p>\n"
+                  }]
+                },
                 "Priority": {
                   "ownKey": "Priority",
                   "childrenPages": {
@@ -3699,7 +3683,7 @@
                     },
                     "description": "",
                     "title": "Priority",
-                    "content": "<p>Defines the likelihood that the configuration is compatible with a Launcher.<\/p>\n<p>compareTo<\/p>\n"
+                    "content": "<p>Defines the likelihood that the configuration is compatible with a Launcher.<\/p>\n<p>compareTo<\/p>\n<p>toString<\/p>\n"
                   }]
                 },
                 "Launcher": {
@@ -3763,7 +3747,7 @@
                     },
                     "description": "",
                     "title": "AbstractLauncher",
-                    "content": "<p>Provides utility functions for Launcher implementors.<init>\nProvides utility functions for Launcher implementors.<\/p>\n<p>incompatibleWith\nCreates a Validation.Invalid expliciting what is the option this Launcher is incompatible with.\nrequires\nCreates a Validation.Invalid expliciting which option is required to run this Launcher.<\/p>\n"
+                    "content": "<p>Provides utility functions for Launcher implementors.<init>\nProvides utility functions for Launcher implementors.<\/p>\n<p>incompatibleWith\nCreates a Validation.Invalid expliciting what is the option this Launcher is incompatible with.\nrequires\nCreates a Validation.Invalid expliciting which option is required to run this Launcher.\ntoString<\/p>\n"
                   }]
                 }
               },
