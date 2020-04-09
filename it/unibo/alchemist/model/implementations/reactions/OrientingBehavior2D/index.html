@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-deven+7c429643"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgh+34e5b80e"};
 </script>
 
 
@@ -129,14 +129,8 @@
 <div class="class-description" id="description">
 <p>An AbstractOrientingBehavior in an euclidean bidimensional space.
 This class accepts an Euclidean2DEnvironmentWithGraph whose graph features
-ConvexPolygonal nodes (or any subclass of it) and whose edges store extra
-information regarding the shape of each passage (see type parameters M and F).
-In particular, edges are any subtype of GraphEdgeWithData storing an
-<a href="#">Euclidean2DSegment</a>. Similarly to an Euclidean2DCrossing, given an edge e
-connecting convex polygon a to convex polygon b, the segment provided by e MUST
-belong to the boundary of a, but can or cannot belong the boundary of b.
-Additionally, this class redefines moveTowards in order to perform a more
-sophisticated movement (using some utils only available in two dimensions).</p>
+ConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages
+as edges.</p>
 
 </div>
 
@@ -175,14 +169,8 @@ sophisticated movement (using some utils only available in two dimensions).</p>
     </div>
     <div class="panel-body"><p>An AbstractOrientingBehavior in an euclidean bidimensional space.
 This class accepts an Euclidean2DEnvironmentWithGraph whose graph features
-ConvexPolygonal nodes (or any subclass of it) and whose edges store extra
-information regarding the shape of each passage (see type parameters M and F).
-In particular, edges are any subtype of GraphEdgeWithData storing an
-<a href="#">Euclidean2DSegment</a>. Similarly to an Euclidean2DCrossing, given an edge e
-connecting convex polygon a to convex polygon b, the segment provided by e MUST
-belong to the boundary of a, but can or cannot belong the boundary of b.
-Additionally, this class redefines moveTowards in order to perform a more
-sophisticated movement (using some utils only available in two dimensions).</p>
+ConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages
+as edges.</p>
 </div>
 
     
@@ -223,13 +211,15 @@ sophisticated movement (using some utils only available in two dimensions).</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_moveTowards_target__Euclidean2DPosition__currentRoom__M___targetDoor__F_">
+    <div class="panel-heading" id="method__protected_open_fun_moveTowards_target__Euclidean2DPosition__currentRoom__M___targetDoor__Euclidean2DPassage_">
         <code>
-        protected open fun moveTowards(target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, currentRoom: M?, targetDoor: F)
+        protected open fun moveTowards(target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, currentRoom: M?, targetDoor: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>)
         </code>
     </div>
     <div class="panel-body"><p>Moves the pedestrian towards a position which is guaranteed to be in sight (i.e. no
-obstacle is placed between him and such position).</p>
+obstacle is placed between him and such position). The current room (if initialised)
+and the target door are provided as well to allow more complex computations, see
+OrientingBehavior2D. This method should anyway move the pedestrian towards target.</p>
 </div>
 
     
@@ -256,7 +246,7 @@ obstacle is placed between him and such position).</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        targetDoor: F
+        targetDoor: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
         </code>
         
     </li>
@@ -326,9 +316,9 @@ guess of which crossing to take in order to get closer to the provided destinati
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_computeSubdestination_targetDoor__F___Euclidean2DPosition">
+    <div class="panel-heading" id="method__protected_open_fun_computeSubdestination_targetDoor__Euclidean2DPassage___Euclidean2DPosition">
         <code>
-        protected open fun computeSubdestination(targetDoor: F): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        protected open fun computeSubdestination(targetDoor: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
         </code>
     </div>
     <div class="panel-body"><p>Computes the next sub-destination the pedestrian will move towards, provided an edge he
@@ -349,7 +339,7 @@ shall point towards.</p></p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        targetDoor: F
+        targetDoor: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
         </code>
         
     </li>
@@ -372,9 +362,9 @@ shall point towards.</p></p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_weight_edge__F__rank__Int_____ERROR_CLASS_">
+    <div class="panel-heading" id="method__open_fun_weight_edge__Euclidean2DPassage__rank__Int____Double">
         <code>
-        open fun weight(edge: F, rank: Int?): <ERROR CLASS>
+        open fun weight(edge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>, rank: Int?): Double
         </code>
     </div>
     <div class="panel-body"><p>The congestionFactor is added.</p>
@@ -390,7 +380,7 @@ shall point towards.</p></p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        edge: F
+        edge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
         </code>
         
     </li>
@@ -410,7 +400,7 @@ shall point towards.</p></p>
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <ERROR CLASS>
+        Double
         </code>
     </div>
     <div></div>
@@ -1197,14 +1187,6 @@ shall point towards.</p></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder">it.unibo.alchemist.model.implementations.graph.builder</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/groups">it.unibo.alchemist.model.implementations.groups</a>
     </li>
     
@@ -1390,14 +1372,6 @@ shall point towards.</p></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod">it.unibo.alchemist.model.interfaces.graph.twod</a>
     </li>
     
 
@@ -1943,6 +1917,14 @@ shall point towards.</p></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/BaseNavigationGraph">BaseNavigationGraph</a>
     </li>
     
 
@@ -2934,6 +2916,22 @@ shall point towards.</p></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/DirectedEuclidean2DNavigationGraph">DirectedEuclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/DirectedNavigationGraph">DirectedNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Displacement">Displacement</a>
     </li>
     
@@ -3206,15 +3204,7 @@ shall point towards.</p></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment2DWithObstacles">Environment2DWithObstacles</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithObstacles">Environment2DWithObstacles</a>
     </li>
     
 
@@ -3246,7 +3236,7 @@ shall point towards.</p></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph">EnvironmentWithGraph</a>
     </li>
     
 
@@ -3254,7 +3244,15 @@ shall point towards.</p></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DCrossing">Euclidean2DCrossing</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EnvironmentWithObstacles">EnvironmentWithObstacles</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
     </li>
     
 
@@ -3270,7 +3268,7 @@ shall point towards.</p></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithObstacles">Euclidean2DEnvironmentWithObstacles</a>
     </li>
     
 
@@ -3278,7 +3276,15 @@ shall point towards.</p></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder">Euclidean2DNavigationGraphBuilder</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
     </li>
     
 
@@ -3782,47 +3788,7 @@ shall point towards.</p></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder/GraphBuilder">GraphBuilder</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/GraphEdge">GraphEdge</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/GraphEdgeWithData">GraphEdgeWithData</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/routes/GraphHopperRoute">GraphHopperRoute</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/GraphImpl">GraphImpl</a>
     </li>
     
 
@@ -4838,22 +4804,6 @@ shall point towards.</p></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder/NavigationGraphBuilder">NavigationGraphBuilder</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/NavigationGraphImpl">NavigationGraphImpl</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Nearest">Nearest</a>
     </li>
     
@@ -4982,6 +4932,14 @@ shall point towards.</p></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Obstacle">Obstacle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Obstacle2D">Obstacle2D</a>
     </li>
     
@@ -5103,14 +5061,6 @@ shall point towards.</p></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/expressions/parser/ParseException">ParseException</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Path">Path</a>
     </li>
     
 
@@ -6166,6 +6116,14 @@ shall point towards.</p></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/UndirectedNavigationGraph">UndirectedNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/layers/UniformLayer">UniformLayer</a>
     </li>
     
@@ -6358,7 +6316,7 @@ shall point towards.</p></p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-deven+7c429643. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devgh+34e5b80e. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

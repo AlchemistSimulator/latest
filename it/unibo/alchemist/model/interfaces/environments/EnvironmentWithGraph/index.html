@@ -21,7 +21,7 @@
 
 
 
-<title>Euclidean2DNavigationGraphBuilder</title>
+<title>EnvironmentWithGraph</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-deven+7c429643"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgh+34e5b80e"};
 </script>
 
 
@@ -54,11 +54,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
-<!-- Source Filename: it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder.html -->
+<!-- Source Filename: it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"it/unibo/alchemist/model/interfaces/graph/twod","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"Euclidean2DNavigationGraphBuilder","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder"},"description":"","title":"Euclidean2DNavigationGraphBuilder"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/model/interfaces/environments","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"EnvironmentWithGraph","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph"},"description":"","title":"EnvironmentWithGraph"};
 </script>
 
 <!-- end:debug info -->
@@ -106,7 +106,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>Euclidean2DNavigationGraphBuilder</h2></header>
+                    <header class="major"><h2>EnvironmentWithGraph</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -119,15 +119,19 @@
 
 
 <p id="summary">
-    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod">it.unibo.alchemist.model.interfaces.graph.twod</a></b>
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments">it.unibo.alchemist.model.interfaces.environments</a></b>
 </p>
 <p>
     <code style="padding: 0;">
-        class it.unibo.alchemist.model.interfaces.graph.twod.Euclidean2DNavigationGraphBuilder
+        class it.unibo.alchemist.model.interfaces.environments.EnvironmentWithGraph
     </code>
 </p>
 <div class="class-description" id="description">
-<p>Builder for Euclidean2DNavigationGraph.</p>
+<p>An environment with obstacles providing a NavigationGraph, i.e. a graph whose
+nodes are convex shapes representing the areas of the environment traversable
+by agents (namely, walkable areas), whereas edges represent connections between
+them. To make it easier, think that in an indoor environment, nodes should
+represent rooms and corridors, whereas edges should represent doors and passages.</p>
 
 </div>
 
@@ -139,6 +143,204 @@
 
 
 
+
+
+    <h2 id="methods">Methods</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__abstract_fun_graph____NavigationGraph">
+        <code>
+        abstract fun graph(): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+
+
+    <h2 id="extensions">Extensions</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun__T__P___P__Environment.makePosition_coordinates__DoubleArray___P">
+        <code>
+        fun &lt;T, P : P&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>.makePosition(coordinates: DoubleArray): P
+        </code>
+    </div>
+    <div class="panel-body"><p>Create a position from an array of double representing the coordinates of the point.</p>
+</div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        coordinates: DoubleArray
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        P
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun__T__P___P__Environment.origin____P">
+        <code>
+        fun &lt;T, P : P&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>.origin(): P
+        </code>
+    </div>
+    <div class="panel-body"><p>Create a position corresponding to the origin of this environment.</p>
+</div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        P
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun__R__Iterable.shuffled_rg___ERROR_CLASS____Iterable">
+        <code>
+        fun &lt;R&gt; Iterable.shuffled(rg: <ERROR CLASS>): Iterable
+        </code>
+    </div>
+    <div class="panel-body"><p><a href="https://bit.ly/33Z3xFu">Fisher–Yates shuffle algorithm</a>
+using Apache random number generator.
+More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on Wikipedia</a>.</p>
+</div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        Iterable
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        rg: <ERROR CLASS>
+        </code>
+        
+            <br><br>
+            <div><pre><code>the simulation {@link RandomGenerator}.
+</code></pre>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Iterable
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
 
 
 
@@ -871,14 +1073,6 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder">it.unibo.alchemist.model.implementations.graph.builder</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/groups">it.unibo.alchemist.model.implementations.groups</a>
     </li>
     
@@ -1064,14 +1258,6 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod">it.unibo.alchemist.model.interfaces.graph.twod</a>
     </li>
     
 
@@ -1617,6 +1803,14 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/BaseNavigationGraph">BaseNavigationGraph</a>
     </li>
     
 
@@ -2608,6 +2802,22 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/DirectedEuclidean2DNavigationGraph">DirectedEuclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/DirectedNavigationGraph">DirectedNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Displacement">Displacement</a>
     </li>
     
@@ -2880,15 +3090,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment2DWithObstacles">Environment2DWithObstacles</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithObstacles">Environment2DWithObstacles</a>
     </li>
     
 
@@ -2920,7 +3122,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph">EnvironmentWithGraph</a>
     </li>
     
 
@@ -2928,7 +3130,15 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DCrossing">Euclidean2DCrossing</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EnvironmentWithObstacles">EnvironmentWithObstacles</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
     </li>
     
 
@@ -2944,7 +3154,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithObstacles">Euclidean2DEnvironmentWithObstacles</a>
     </li>
     
 
@@ -2952,7 +3162,15 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder">Euclidean2DNavigationGraphBuilder</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
     </li>
     
 
@@ -3456,47 +3674,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder/GraphBuilder">GraphBuilder</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/GraphEdge">GraphEdge</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/GraphEdgeWithData">GraphEdgeWithData</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/routes/GraphHopperRoute">GraphHopperRoute</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/GraphImpl">GraphImpl</a>
     </li>
     
 
@@ -4512,22 +4690,6 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder/NavigationGraphBuilder">NavigationGraphBuilder</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/NavigationGraphImpl">NavigationGraphImpl</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Nearest">Nearest</a>
     </li>
     
@@ -4656,6 +4818,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Obstacle">Obstacle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Obstacle2D">Obstacle2D</a>
     </li>
     
@@ -4777,14 +4947,6 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/expressions/parser/ParseException">ParseException</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Path">Path</a>
     </li>
     
 
@@ -5840,6 +6002,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/UndirectedNavigationGraph">UndirectedNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/layers/UniformLayer">UniformLayer</a>
     </li>
     
@@ -6032,7 +6202,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-deven+7c429643. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devgh+34e5b80e. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

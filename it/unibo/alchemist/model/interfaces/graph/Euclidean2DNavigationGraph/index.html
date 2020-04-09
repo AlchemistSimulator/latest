@@ -21,7 +21,7 @@
 
 
 
-<title>GraphImpl</title>
+<title>Euclidean2DNavigationGraph</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-deven+7c429643"};
+    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgh+34e5b80e"};
 </script>
 
 
@@ -54,11 +54,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
-<!-- Source Filename: it/unibo/alchemist/model/implementations/graph/GraphImpl.html -->
+<!-- Source Filename: it/unibo/alchemist/model/interfaces/graph/Euclidean2DNavigationGraph.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/graph","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"GraphImpl","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/GraphImpl"},"description":"","title":"GraphImpl"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/model/interfaces/graph","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"Euclidean2DNavigationGraph","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DNavigationGraph"},"description":"","title":"Euclidean2DNavigationGraph"};
 </script>
 
 <!-- end:debug info -->
@@ -106,7 +106,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>GraphImpl</h2></header>
+                    <header class="major"><h2>Euclidean2DNavigationGraph</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -119,15 +119,22 @@
 
 
 <p id="summary">
-    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph">it.unibo.alchemist.model.implementations.graph</a></b>
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a></b>
 </p>
 <p>
     <code style="padding: 0;">
-        class it.unibo.alchemist.model.implementations.graph.GraphImpl
+        class it.unibo.alchemist.model.interfaces.graph.Euclidean2DNavigationGraph
     </code>
 </p>
 <div class="class-description" id="description">
-<p>An implementation of Graph.</p>
+<p>A NavigationGraph in an euclidean bidimensional space, whose nodes are ConvexPolygons
+and edges are Euclidean2DPassages. Using Euclidean2DPassages as edges leads to some
+overhead (as these maintain the nodes they connect, when this information is already stored
+in the navigation graph), but allows to have duplicate edges in opposite directions, which
+means a node n1 can be connected to another node n2 through a passage whose shape is equal
+to the one of the passage connecting n2 to n1. The two passages would not result equal
+because their tail and head would be swapped. On the contrary, if edges were plain segments,
+the graph would not have allowed to have two edges so that e1.equal(e2).</p>
 
 </div>
 
@@ -139,420 +146,6 @@
 
 
 
-<h2 id="constructors">Constructors</h2>
-
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_adjacencyList___ERROR_CLASS__">
-        <code>
-        constructor(adjacencyList: <ERROR CLASS>)
-        </code>
-    </div>
-    <div class="panel-body"><p>An implementation of Graph.</p>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        adjacencyList: <ERROR CLASS>
-        </code>
-        
-    </li>
-
-</ul>
-
-</div>
-
-
-
-
-    <h2 id="methods">Methods</h2>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_nodes_____ERROR_CLASS_">
-        <code>
-        open fun nodes(): <ERROR CLASS>
-        </code>
-    </div>
-    <div class="panel-body"><p>A list is used to allow predictable iteration order.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <ERROR CLASS>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_edgesFrom_node__N___Nothing">
-        <code>
-        open fun edgesFrom(node: N): Nothing
-        </code>
-    </div>
-    <div class="panel-body"></div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        node: N
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Nothing
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-
-
-    <h2 id="extensions">Extensions</h2>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__N__E___N__Graph.edges____List">
-        <code>
-        fun &lt;N, E : N&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>.edges(): List
-        </code>
-    </div>
-    <div class="panel-body"></div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        List
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__N__E___N__Graph.isReachable_from__N__to__N___Boolean">
-        <code>
-        fun &lt;N, E : N&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>.isReachable(from: N, to: N): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks if there is a path between two provided nodes.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        from: N
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        to: N
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__N__E___N__Graph.depthFirstSearch_node__N__target__N__visited___ERROR_CLASS____Boolean">
-        <code>
-        fun &lt;N, E : N&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>.depthFirstSearch(node: N, target: N, visited: <ERROR CLASS>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Performs a depth-first search starting from the provided node and looking for the target node.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        node: N
-        </code>
-        
-            <br><br>
-            <div><p>is the node that will be visited with the first iteration.</p>
-</div>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        target: N
-        </code>
-        
-            <br><br>
-            <div><p>is the target node we want to find.</p>
-</div>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        visited: <ERROR CLASS>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__N__E___N__Graph.dijkstraShortestPath_from__N__to__N__weight___E___Double___Path_">
-        <code>
-        fun &lt;N, E : N&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>.dijkstraShortestPath(from: N, to: N, weight: (E)-&gt;Double): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Path">Path</a>?
-        </code>
-    </div>
-    <div class="panel-body"><p>Finds the shortest path between the provided nodes, returns null if no path between them
-could be found. If the two nodes coincide, the path will contain only such node and will
-weight 0.</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        from: N
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        to: N
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        weight: (E)-&gt;Double
-        </code>
-        
-            <br><br>
-            <div><p>a function that weights each edge.</p>
-</div>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Path">Path</a>?
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__N__E___N__Graph.primMinimumSpanningForest_weight___E___Double___Graph">
-        <code>
-        fun &lt;N, E : N&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>.primMinimumSpanningForest(weight: (E)-&gt;Double): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>Computes the minimum spanning forest of the graph using Prim's algorithm.
-Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
-</div>
-
-    
-
-<div class="panel-footer">
-    <div><b>Receiver: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        weight: (E)-&gt;Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
 
 
 
@@ -1285,14 +878,6 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder">it.unibo.alchemist.model.implementations.graph.builder</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/groups">it.unibo.alchemist.model.implementations.groups</a>
     </li>
     
@@ -1478,14 +1063,6 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph">it.unibo.alchemist.model.interfaces.graph</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod">it.unibo.alchemist.model.interfaces.graph.twod</a>
     </li>
     
 
@@ -2031,6 +1608,14 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/BaseNavigationGraph">BaseNavigationGraph</a>
     </li>
     
 
@@ -3022,6 +2607,22 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/DirectedEuclidean2DNavigationGraph">DirectedEuclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/DirectedNavigationGraph">DirectedNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Displacement">Displacement</a>
     </li>
     
@@ -3294,15 +2895,7 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph">Environment2DWithGraph</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment2DWithObstacles">Environment2DWithObstacles</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithObstacles">Environment2DWithObstacles</a>
     </li>
     
 
@@ -3334,7 +2927,7 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph">EnvironmentWithGraph</a>
     </li>
     
 
@@ -3342,7 +2935,15 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DCrossing">Euclidean2DCrossing</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EnvironmentWithObstacles">EnvironmentWithObstacles</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DConvexShape">Euclidean2DConvexShape</a>
     </li>
     
 
@@ -3358,7 +2959,7 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithObstacles">Euclidean2DEnvironmentWithObstacles</a>
     </li>
     
 
@@ -3366,7 +2967,15 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder">Euclidean2DNavigationGraphBuilder</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DNavigationGraph">Euclidean2DNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
     </li>
     
 
@@ -3870,47 +3479,7 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph">Graph</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder/GraphBuilder">GraphBuilder</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/GraphEdge">GraphEdge</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/GraphEdgeWithData">GraphEdgeWithData</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/routes/GraphHopperRoute">GraphHopperRoute</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/GraphImpl">GraphImpl</a>
     </li>
     
 
@@ -4926,22 +4495,6 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder/NavigationGraphBuilder">NavigationGraphBuilder</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/NavigationGraphImpl">NavigationGraphImpl</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/Nearest">Nearest</a>
     </li>
     
@@ -5070,6 +4623,14 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Obstacle">Obstacle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Obstacle2D">Obstacle2D</a>
     </li>
     
@@ -5191,14 +4752,6 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/expressions/parser/ParseException">ParseException</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Path">Path</a>
     </li>
     
 
@@ -6254,6 +5807,14 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/UndirectedNavigationGraph">UndirectedNavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/layers/UniformLayer">UniformLayer</a>
     </li>
     
@@ -6446,7 +6007,7 @@ Note that the graph must be undirected (i.e. each edge must be duplicated).</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-deven+7c429643. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devgh+34e5b80e. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

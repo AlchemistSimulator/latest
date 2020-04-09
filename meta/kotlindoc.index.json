@@ -5191,6 +5191,22 @@
                   "environments": {
                     "ownKey": "environments",
                     "childrenPages": {
+                      "EnvironmentWithGraph": {
+                        "ownKey": "EnvironmentWithGraph",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/interfaces/environments",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "EnvironmentWithGraph",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph"
+                          },
+                          "description": "",
+                          "title": "EnvironmentWithGraph",
+                          "content": "<p>An environment with obstacles providing a NavigationGraph, i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.<\/p>\n<p>graph<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        }]
+                      },
                       "EuclideanPhysics2DEnvironmentWithGraph": {
                         "ownKey": "EuclideanPhysics2DEnvironmentWithGraph",
                         "ownPages": [{
@@ -5204,7 +5220,7 @@
                           },
                           "description": "",
                           "title": "EuclideanPhysics2DEnvironmentWithGraph",
-                          "content": "<p>An Environment2DWithGraph with physics.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          "content": "<p>An Euclidean2DEnvironmentWithGraph with physics.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                         }]
                       },
                       "RectangularBoundaries": {
@@ -5239,20 +5255,20 @@
                           "content": "<p>The visitor to handle different types of boundaries.\nNote: whenever a new Boundaries is created, it should be added to a new visit method in this interface.<\/p>\n<p>visit\nrectangularBoundaries with origin in (0,0).<\/p>\n"
                         }]
                       },
-                      "Environment2DWithGraph": {
-                        "ownKey": "Environment2DWithGraph",
+                      "Euclidean2DEnvironmentWithObstacles": {
+                        "ownKey": "Euclidean2DEnvironmentWithObstacles",
                         "ownPages": [{
                           "reference": {
                             "path": "it/unibo/alchemist/model/interfaces/environments",
                             "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "Environment2DWithGraph",
+                            "fileName": "Euclidean2DEnvironmentWithObstacles",
                             "extension": "html",
                             "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithGraph"
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithObstacles"
                           },
                           "description": "",
-                          "title": "Environment2DWithGraph",
-                          "content": "<p>A bidimensional environment with obstacles providing a NavigationGraph, i.e.\na graph whose nodes are convex shapes representing the areas of the environment\ntraversable by agents (namely, walkable areas), whereas edges represent connections\nbetween them.<\/p>\n<p>graph<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          "title": "Euclidean2DEnvironmentWithObstacles",
+                          "content": "<p>An Environment2DWithObstacles using Euclidean2DPositions.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                         }]
                       },
                       "Physics2DEnvironment": {
@@ -5319,6 +5335,22 @@
                           "content": "<p>Euclidean physics environment with support for obstacles.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                         }]
                       },
+                      "Environment2DWithObstacles": {
+                        "ownKey": "Environment2DWithObstacles",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/interfaces/environments",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "Environment2DWithObstacles",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Environment2DWithObstacles"
+                          },
+                          "description": "",
+                          "title": "Environment2DWithObstacles",
+                          "content": "<p>A bidimensional EnvironmentWithObstacles.<\/p>\n<p>getObstaclesInRange\nGiven a point and a range, retrieves all the obstacles within.\ngetObstaclesInRange\nGiven a point and a range, retrieves all the obstacles within.\nhasMobileObstacles<\/p>\n<p>next\nThis method must calculate the ABSOLUTE next allowed position given the\ncurrent position and the position in which the node wants to move. For\nexample, if your node is in position <a href=\"#\">2,3<\/a>, wants to move to <a href=\"#\">3,4<\/a> but\nthe next allowed position (because, e.g., of physical obstacles) is\n<a href=\"#\">2.5,3.5<\/a>, the result must be a Position containing coordinates\n<a href=\"#\">2.5,3.5<\/a>.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        }]
+                      },
                       "Boundaries": {
                         "ownKey": "Boundaries",
                         "ownPages": [{
@@ -5348,7 +5380,7 @@
                           },
                           "description": "",
                           "title": "Euclidean2DEnvironmentWithGraph",
-                          "content": "<p>An euclidean Environment2DWithGraph.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          "content": "<p>An euclidean EnvironmentWithGraph.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                         }]
                       }
                     },
@@ -5542,6 +5574,22 @@
                       "content": "<p>length<\/p>\n<p>stream<\/p>\n<p>getPoint<\/p>\n<p>size<\/p>\n<p>getPoints<\/p>\n"
                     }]
                   },
+                  "EnvironmentWithObstacles": {
+                    "ownKey": "EnvironmentWithObstacles",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "it/unibo/alchemist/model/interfaces",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "EnvironmentWithObstacles",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EnvironmentWithObstacles"
+                      },
+                      "description": "",
+                      "title": "EnvironmentWithObstacles",
+                      "content": "<p>An environment with Obstacles.\nobstacles\nA list of all the obstacles in this environment.\naddObstacle\nAdds an obstacle to this environment.\nremoveObstacle\nRemoves an obstacle from this environment.\nintersectsObstacle\nChecks whether there is at least an obstacle intersecting the line connecting start and end.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                    }]
+                  },
                   "GroupWithLeader": {
                     "ownKey": "GroupWithLeader",
                     "ownPages": [{
@@ -5641,36 +5689,20 @@
                   "graph": {
                     "ownKey": "graph",
                     "childrenPages": {
-                      "GraphEdgeWithData": {
-                        "ownKey": "GraphEdgeWithData",
+                      "Euclidean2DNavigationGraph": {
+                        "ownKey": "Euclidean2DNavigationGraph",
                         "ownPages": [{
                           "reference": {
                             "path": "it/unibo/alchemist/model/interfaces/graph",
                             "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "GraphEdgeWithData",
+                            "fileName": "Euclidean2DNavigationGraph",
                             "extension": "html",
                             "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/GraphEdgeWithData"
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DNavigationGraph"
                           },
                           "description": "",
-                          "title": "GraphEdgeWithData",
-                          "content": "<p>A GraphEdge storing some kind of data.<init>\nA GraphEdge storing some kind of data.\ndata\nThe data this edge stores.<\/p>\n"
-                        }]
-                      },
-                      "Graph": {
-                        "ownKey": "Graph",
-                        "ownPages": [{
-                          "reference": {
-                            "path": "it/unibo/alchemist/model/interfaces/graph",
-                            "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "Graph",
-                            "extension": "html",
-                            "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Graph"
-                          },
-                          "description": "",
-                          "title": "Graph",
-                          "content": "<p>A graph composed by a set of nodes and a set of edges\nconnecting such nodes. Edges are directed, undirected\ngraphs can be obtained by duplicating each edge.<\/p>\n<p>nodes\nA list is used to allow predictable iteration order.\nedgesFrom<\/p>\n<p>edges<\/p>\n<p>isReachable\nChecks if there is a path between two provided nodes.\ndepthFirstSearch\nPerforms a depth-first search starting from the provided node and looking for the target node.\ndijkstraShortestPath\nFinds the shortest path between the provided nodes, returns null if no path between them\ncould be found. If the two nodes coincide, the path will contain only such node and will\nweight 0.\nprimMinimumSpanningForest\nComputes the minimum spanning forest of the graph using Prim's algorithm.\nNote that the graph must be undirected (i.e. each edge must be duplicated).<\/p>\n"
+                          "title": "Euclidean2DNavigationGraph",
+                          "content": "<p>A NavigationGraph in an euclidean bidimensional space, whose nodes are ConvexPolygons\nand edges are Euclidean2DPassages. Using Euclidean2DPassages as edges leads to some\noverhead (as these maintain the nodes they connect, when this information is already stored\nin the navigation graph), but allows to have duplicate edges in opposite directions, which\nmeans a node n1 can be connected to another node n2 through a passage whose shape is equal\nto the one of the passage connecting n2 to n1. The two passages would not result equal\nbecause their tail and head would be swapped. On the contrary, if edges were plain segments,\nthe graph would not have allowed to have two edges so that e1.equal(e2).<\/p>\n"
                         }]
                       },
                       "NavigationGraph": {
@@ -5686,89 +5718,23 @@
                           },
                           "description": "",
                           "title": "NavigationGraph",
-                          "content": "<p>A graph used for navigation purposes. Nodes are ConvexGeometricShapes,\nusually representing portions of an environment which are traversable by\nagents (the advantage of such representation is that agents can freely\nwalk around within a convex area, as it is guaranteed that no obstacle\nwill be found).\nAdditionally, a navigation graph can store a set of positions of interest\nthat may be used during navigation (e.g. destinations in an evacuation\nscenario).<\/p>\n<p>destinations\nA list of positions of interest (usually destinations).\ndestinationsWithin<\/p>\n<p>containsAnyDestination\nChecks whether the provided node contains any destination.\nnodeContaining<\/p>\n<p>dijkstraShortestPath\nSee dijkstraShortestPath. In a navigation graph, the weight assigned by\ndefault to each edge is computed as the distance between the centroids of the\ntwo ConvexGeometricShapes the edge connects.\nprimMinimumSpanningForest\nSee primMinimumSpanningForest.\nedges<\/p>\n<p>isReachable\nChecks if there is a path between two provided nodes.\ndepthFirstSearch\nPerforms a depth-first search starting from the provided node and looking for the target node.\ndijkstraShortestPath\nFinds the shortest path between the provided nodes, returns null if no path between them\ncould be found. If the two nodes coincide, the path will contain only such node and will\nweight 0.\nprimMinimumSpanningForest\nComputes the minimum spanning forest of the graph using Prim's algorithm.\nNote that the graph must be undirected (i.e. each edge must be duplicated).<\/p>\n"
+                          "content": "<p>A graph used for navigation purposes. Nodes are ConvexGeometricShapes,\nusually representing portions of an environment which are traversable by\nagents (the advantage of such representation is that agents can freely\nwalk around within a convex area, as it is guaranteed that no obstacle\nwill be found).\nAdditionally, a navigation graph can store a set of positions of interest\nthat may be used during navigation (e.g. destinations in an evacuation\nscenario).\nNote that implementations of this graph must guarantee predictable\nordering for the collections they maintain, as reproducibility is a key\nfeature of Alchemist.\nBe also aware that, by contract, the <a href=\"#\">org.jgrapht.Graph<\/a> interface does\nnot allow duplicated edges (see <a href=\"#\">org.jgrapht.Graph.addEdge<\/a>).<\/p>\n<p>destinations\nA list of positions of interest (usually destinations).\ndestinationsWithin<\/p>\n<p>containsAnyDestination\nChecks whether the provided node contains any destination.\nnodeContaining<\/p>\n"
                         }]
                       },
-                      "GraphEdge": {
-                        "ownKey": "GraphEdge",
+                      "Euclidean2DPassage": {
+                        "ownKey": "Euclidean2DPassage",
                         "ownPages": [{
                           "reference": {
                             "path": "it/unibo/alchemist/model/interfaces/graph",
                             "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "GraphEdge",
+                            "fileName": "Euclidean2DPassage",
                             "extension": "html",
                             "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/GraphEdge"
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage"
                           },
                           "description": "",
-                          "title": "GraphEdge",
-                          "content": "<p>Models a basic directed edge.<init>\nModels a basic directed edge.\ntail\nThe node this edge outgoes from.\nhead\nThe node this edge arrives to.<\/p>\n"
-                        }]
-                      },
-                      "twod": {
-                        "ownKey": "twod",
-                        "childrenPages": {
-                          "Euclidean2DNavigationGraph": {
-                            "ownKey": "Euclidean2DNavigationGraph",
-                            "ownPages": [{
-                              "reference": {
-                                "path": "it/unibo/alchemist/model/interfaces/graph/twod",
-                                "baseUrl": "https://alchemistsimulator.github.io/latest",
-                                "fileName": "Euclidean2DNavigationGraph",
-                                "extension": "html",
-                                "usePrettyUrl": true,
-                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraph"
-                              },
-                              "description": "",
-                              "title": "Euclidean2DNavigationGraph",
-                              "content": "<p>A navigation graph in an euclidean bidimensional environment, whose\nnodes are ConvexPolygons and edges are Euclidean2DCrossings.<\/p>\n"
-                            }]
-                          },
-                          "Euclidean2DCrossing": {
-                            "ownKey": "Euclidean2DCrossing",
-                            "ownPages": [{
-                              "reference": {
-                                "path": "it/unibo/alchemist/model/interfaces/graph/twod",
-                                "baseUrl": "https://alchemistsimulator.github.io/latest",
-                                "fileName": "Euclidean2DCrossing",
-                                "extension": "html",
-                                "usePrettyUrl": true,
-                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DCrossing"
-                              },
-                              "description": "",
-                              "title": "Euclidean2DCrossing",
-                              "content": "<p>Defines a connection between two ConvexPolygons represented as an <a href=\"#\">Euclidean2DSegment<\/a>.\nThe segment models the shape of the passage between the two areas: an agent could cross\nany point of it to move from one room (or better, polygon) to the other. To make it easier,\nthink of the following: in an indoor environment the segment should represent the shape of\nthe door between two rooms. Additionally, given a crossing c connecting convex polygon a\nto convex polygon b, the segment provided by c MUST belong to the boundary of a, but can\nor cannot belong the boundary of b.<\/p>\n"
-                            }]
-                          },
-                          "Euclidean2DNavigationGraphBuilder": {
-                            "ownKey": "Euclidean2DNavigationGraphBuilder",
-                            "ownPages": [{
-                              "reference": {
-                                "path": "it/unibo/alchemist/model/interfaces/graph/twod",
-                                "baseUrl": "https://alchemistsimulator.github.io/latest",
-                                "fileName": "Euclidean2DNavigationGraphBuilder",
-                                "extension": "html",
-                                "usePrettyUrl": true,
-                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod/Euclidean2DNavigationGraphBuilder"
-                              },
-                              "description": "",
-                              "title": "Euclidean2DNavigationGraphBuilder",
-                              "content": "<p>Builder for Euclidean2DNavigationGraph.<\/p>\n"
-                            }]
-                          }
-                        },
-                        "ownPages": [{
-                          "reference": {
-                            "path": "it/unibo/alchemist/model/interfaces/graph",
-                            "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "twod",
-                            "extension": "html",
-                            "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/twod"
-                          },
-                          "description": "",
-                          "title": "it.unibo.alchemist.model.interfaces.graph.twod",
-                          "content": ""
+                          "title": "Euclidean2DPassage",
+                          "content": "<p>A passage between two ConvexPolygons in an euclidean bidimensional space.\nThe passage is oriented, which means it connects tail to head, but the opposite is\nnot necessarily true.\npassageShape is a Segment2D modeling the shape of the passage between the two areas:\nan agent could cross any point of it to move from the first area to the second one. To\nmake it easier, think of the following: in an indoor environment, the segment should\nrepresent the shape of the door between two rooms. Additionally, given a passage p\nconnecting area a to area b, the segment MUST belong to the boundary of a, but can or\ncannot belong the boundary of b.<init>\nA passage between two ConvexPolygons in an euclidean bidimensional space.\nThe passage is oriented, which means it connects tail to head, but the opposite is\nnot necessarily true.\npassageShape is a Segment2D modeling the shape of the passage between the two areas:\nan agent could cross any point of it to move from the first area to the second one. To\nmake it easier, think of the following: in an indoor environment, the segment should\nrepresent the shape of the door between two rooms. Additionally, given a passage p\nconnecting area a to area b, the segment MUST belong to the boundary of a, but can or\ncannot belong the boundary of b.\ntail<\/p>\n<p>head<\/p>\n<p>passageShape<\/p>\n"
                         }]
                       }
                     },
@@ -5898,6 +5864,22 @@
                       "content": "<p>A group of nodes.\nmembers\nThe list of pedestrians belonging to this group.\ncontains\nWhether a node belongs to this group or not.\naddMember\nAdd a node in this group if not already part of it.\nremoveMember\nRemove a node from this group.<\/p>\n"
                     }]
                   },
+                  "Obstacle": {
+                    "ownKey": "Obstacle",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "it/unibo/alchemist/model/interfaces",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "Obstacle",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Obstacle"
+                      },
+                      "description": "",
+                      "title": "Obstacle",
+                      "content": "<p>A generic obstacle in a vector space.\nid\nThe id for this obstacle.\nnext\nGiven a vector (starting point and end point) representing a requested\nmove, this method computes a new end point, representing a cut version of\nthe initial vector, modified in such a way that the end point is outside\nthe obstacle.\nnearestIntersection\nGiven a vector (represented as a starting point and an end point), computes\nthe intersection point between the vector and the obstacle nearest to the\nvector's starting point.<\/p>\n"
+                    }]
+                  },
                   "Action": {
                     "ownKey": "Action",
                     "ownPages": [{
@@ -5927,7 +5909,7 @@
                       },
                       "description": "",
                       "title": "Obstacle2D",
-                      "content": "<p>next\nGiven a vector (starting point and end point) representing a requested move, this method computes a new end point, representing a cut version of the initial vector, modified in such a way that the end point is outside the obstacle.\ngetId<\/p>\n<p>nearestIntersection\nGiven a vector (represented as a starting point and an end point) and a rectangle, computes the intersection point between the vector and the rectangle nearest to the vector's starting point.<\/p>\n"
+                      "content": "<p>An Obstacle in a bidimensional space.<\/p>\n"
                     }]
                   },
                   "ILsaMolecule": {
@@ -5976,22 +5958,6 @@
                       "description": "",
                       "title": "Time",
                       "content": "<p>Interface for time representation.\nZERO\nInitial time.\nINFINITY\nIndefinitely future time.\ntoDouble\nAllows to get a double representation of this Time.\ntimes\nAllows to multiply this Time for a constant.\nisInfinite\nVerifies if the Time is set at infinite, namely if the event will never happen.\nminus\nAllows to subtract a Time to this Time.\nplus\nAllows to add a Time to this Time.\nplus\nPlus operator for Time.\nminus\nMinus operator for Time.<\/p>\n"
-                    }]
-                  },
-                  "Environment2DWithObstacles": {
-                    "ownKey": "Environment2DWithObstacles",
-                    "ownPages": [{
-                      "reference": {
-                        "path": "it/unibo/alchemist/model/interfaces",
-                        "baseUrl": "https://alchemistsimulator.github.io/latest",
-                        "fileName": "Environment2DWithObstacles",
-                        "extension": "html",
-                        "usePrettyUrl": true,
-                        "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment2DWithObstacles"
-                      },
-                      "description": "",
-                      "title": "Environment2DWithObstacles",
-                      "content": "<p>getObstacles<\/p>\n<p>removeObstacle\nRemoves an Obstacle2D from this environment.\nnext\nThis method must calculate the ABSOLUTE next allowed position given the current position and the position in which the node wants to move. For example, if your node is in position [2,3], wants to move to [3,4] but the next allowed position (because, e.g., of physical obstacles) is [2.5,3.5], the result must be a Position containing coordinates [2.5,3.5].\nhasMobileObstacles<\/p>\n<p>intersectsObstacle\nChecks whether there is at least an obstacle intersecting the line connecting [sx, sy] and [ex, ey].\nintersectsObstacle\nChecks whether there is at least an obstacle intersecting the line connecting p1 and p2.\naddObstacle\nAdds an Obstacle2D to this environment.\ngetObstaclesInRange\nGiven a point and a range, retrieves all the obstacles within.<\/p>\n"
                     }]
                   },
                   "OrientingPedestrian": {
@@ -6973,7 +6939,7 @@
                           },
                           "description": "",
                           "title": "Continuous2DObstacles",
-                          "content": "<p><init><\/p>\n<p>removeObstacle<\/p>\n<p>hasMobileObstacles\nSubclasses dealing with mobile obstacles may change this.\naddObstacle<\/p>\n<p>getObstacles<\/p>\n<p>next<\/p>\n<p>intersectsObstacle<\/p>\n<p>intersectsObstacle<\/p>\n<p>getObstaclesInRange<\/p>\n"
+                          "content": "<p><init><\/p>\n<p>obstacles<\/p>\n<p>removeObstacle<\/p>\n<p>hasMobileObstacles\nSubclasses dealing with mobile obstacles may change this.\naddObstacle<\/p>\n<p>next<\/p>\n<p>next<\/p>\n<p>intersectsObstacle<\/p>\n<p>getObstaclesInRange<\/p>\n<p>getObstaclesInRange<\/p>\n"
                         }]
                       },
                       "InfiniteHalls": {
@@ -7826,102 +7792,68 @@
                   "graph": {
                     "ownKey": "graph",
                     "childrenPages": {
-                      "Path": {
-                        "ownKey": "Path",
+                      "BaseNavigationGraph": {
+                        "ownKey": "BaseNavigationGraph",
                         "ownPages": [{
                           "reference": {
                             "path": "it/unibo/alchemist/model/implementations/graph",
                             "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "Path",
+                            "fileName": "BaseNavigationGraph",
                             "extension": "html",
                             "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/Path"
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/BaseNavigationGraph"
                           },
                           "description": "",
-                          "title": "Path",
-                          "content": "<p>Models a path composed by a list of nodes and a weight.<init>\nModels a path composed by a list of nodes and a weight.\npath<\/p>\n<p>weight<\/p>\n"
+                          "title": "BaseNavigationGraph",
+                          "content": "<p>An implementation of NavigationGraph, deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul><init><\/p>\n<p><init>\nAn implementation of NavigationGraph, deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul><\/p>\n<p>destinations\nA list of positions of interest (usually destinations).<\/p>\n"
                         }]
                       },
-                      "NavigationGraphImpl": {
-                        "ownKey": "NavigationGraphImpl",
+                      "DirectedEuclidean2DNavigationGraph": {
+                        "ownKey": "DirectedEuclidean2DNavigationGraph",
                         "ownPages": [{
                           "reference": {
                             "path": "it/unibo/alchemist/model/implementations/graph",
                             "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "NavigationGraphImpl",
+                            "fileName": "DirectedEuclidean2DNavigationGraph",
                             "extension": "html",
                             "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/NavigationGraphImpl"
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/DirectedEuclidean2DNavigationGraph"
                           },
                           "description": "",
-                          "title": "NavigationGraphImpl",
-                          "content": "<p>An implementation of NavigationGraph.<init>\nAn implementation of NavigationGraph.<\/p>\n<p>destinations\nA list of positions of interest (usually destinations).\nedges<\/p>\n<p>isReachable\nChecks if there is a path between two provided nodes.\ndepthFirstSearch\nPerforms a depth-first search starting from the provided node and looking for the target node.\ndestinationsWithin<\/p>\n<p>containsAnyDestination\nChecks whether the provided node contains any destination.\nnodeContaining<\/p>\n<p>dijkstraShortestPath\nFinds the shortest path between the provided nodes, returns null if no path between them\ncould be found. If the two nodes coincide, the path will contain only such node and will\nweight 0.\ndijkstraShortestPath\nSee dijkstraShortestPath. In a navigation graph, the weight assigned by\ndefault to each edge is computed as the distance between the centroids of the\ntwo ConvexGeometricShapes the edge connects.\nprimMinimumSpanningForest\nComputes the minimum spanning forest of the graph using Prim's algorithm.\nNote that the graph must be undirected (i.e. each edge must be duplicated).\nprimMinimumSpanningForest\nSee primMinimumSpanningForest.<\/p>\n"
+                          "title": "DirectedEuclidean2DNavigationGraph",
+                          "content": "<p>A directed Euclidean2DNavigationGraph.<\/p>\n"
                         }]
                       },
-                      "GraphImpl": {
-                        "ownKey": "GraphImpl",
+                      "UndirectedNavigationGraph": {
+                        "ownKey": "UndirectedNavigationGraph",
                         "ownPages": [{
                           "reference": {
                             "path": "it/unibo/alchemist/model/implementations/graph",
                             "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "GraphImpl",
+                            "fileName": "UndirectedNavigationGraph",
                             "extension": "html",
                             "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/GraphImpl"
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/UndirectedNavigationGraph"
                           },
                           "description": "",
-                          "title": "GraphImpl",
-                          "content": "<p>An implementation of Graph.<init>\nAn implementation of Graph.<\/p>\n<p>nodes\nA list is used to allow predictable iteration order.\nedgesFrom<\/p>\n<p>edges<\/p>\n<p>isReachable\nChecks if there is a path between two provided nodes.\ndepthFirstSearch\nPerforms a depth-first search starting from the provided node and looking for the target node.\ndijkstraShortestPath\nFinds the shortest path between the provided nodes, returns null if no path between them\ncould be found. If the two nodes coincide, the path will contain only such node and will\nweight 0.\nprimMinimumSpanningForest\nComputes the minimum spanning forest of the graph using Prim's algorithm.\nNote that the graph must be undirected (i.e. each edge must be duplicated).<\/p>\n"
+                          "title": "UndirectedNavigationGraph",
+                          "content": "<p>An undirected unweighted NavigationGraph, allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<init>\nAn undirected unweighted NavigationGraph, allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p>\n"
                         }]
                       },
-                      "builder": {
-                        "ownKey": "builder",
-                        "childrenPages": {
-                          "NavigationGraphBuilder": {
-                            "ownKey": "NavigationGraphBuilder",
-                            "ownPages": [{
-                              "reference": {
-                                "path": "it/unibo/alchemist/model/implementations/graph/builder",
-                                "baseUrl": "https://alchemistsimulator.github.io/latest",
-                                "fileName": "NavigationGraphBuilder",
-                                "extension": "html",
-                                "usePrettyUrl": true,
-                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder/NavigationGraphBuilder"
-                              },
-                              "description": "",
-                              "title": "NavigationGraphBuilder",
-                              "content": "<p><init><\/p>\n<p>build<\/p>\n<p>addEdge<\/p>\n<p>addEdge<\/p>\n<p>addUndirectedEdge\nAdds two edges: one connecting node1 to node2 and another connecting node2 to node1.\naddUndirectedEdge<\/p>\n"
-                            }]
-                          },
-                          "GraphBuilder": {
-                            "ownKey": "GraphBuilder",
-                            "ownPages": [{
-                              "reference": {
-                                "path": "it/unibo/alchemist/model/implementations/graph/builder",
-                                "baseUrl": "https://alchemistsimulator.github.io/latest",
-                                "fileName": "GraphBuilder",
-                                "extension": "html",
-                                "usePrettyUrl": true,
-                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder/GraphBuilder"
-                              },
-                              "description": "",
-                              "title": "GraphBuilder",
-                              "content": "<p>A builder for Graph.<init>\nA builder for Graph.\nadjacencyList<\/p>\n<p>nodes\nThe builder allows to access already added node.\naddNode<\/p>\n<p>edgesFrom\nThe builder allows to access already added edges.\naddEdge<\/p>\n<p>build\nBuilds the graph.\naddEdge<\/p>\n<p>addEdge<\/p>\n<p>addUndirectedEdge\nAdds two edges: one connecting node1 to node2 and another connecting node2 to node1.\naddUndirectedEdge<\/p>\n"
-                            }]
-                          }
-                        },
+                      "DirectedNavigationGraph": {
+                        "ownKey": "DirectedNavigationGraph",
                         "ownPages": [{
                           "reference": {
                             "path": "it/unibo/alchemist/model/implementations/graph",
                             "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "builder",
+                            "fileName": "DirectedNavigationGraph",
                             "extension": "html",
                             "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/builder"
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/graph/DirectedNavigationGraph"
                           },
                           "description": "",
-                          "title": "it.unibo.alchemist.model.implementations.graph.builder",
-                          "content": "<p>addEdge<\/p>\n<p>addEdge<\/p>\n<p>addUndirectedEdge\nAdds two edges: one connecting node1 to node2 and another connecting node2 to node1.\naddUndirectedEdge<\/p>\n"
+                          "title": "DirectedNavigationGraph",
+                          "content": "<p>A directed unweighted NavigationGraph, allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<init>\nA directed unweighted NavigationGraph, allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p>\n"
                         }]
                       }
                     },
@@ -7936,7 +7868,7 @@
                       },
                       "description": "",
                       "title": "it.unibo.alchemist.model.implementations.graph",
-                      "content": "<p>edges<\/p>\n<p>isReachable\nChecks if there is a path between two provided nodes.\ndepthFirstSearch\nPerforms a depth-first search starting from the provided node and looking for the target node.\ndestinationsWithin<\/p>\n<p>containsAnyDestination\nChecks whether the provided node contains any destination.\nnodeContaining<\/p>\n<p>dijkstraShortestPath\nFinds the shortest path between the provided nodes, returns null if no path between them\ncould be found. If the two nodes coincide, the path will contain only such node and will\nweight 0.\ndijkstraShortestPath\nSee dijkstraShortestPath. In a navigation graph, the weight assigned by\ndefault to each edge is computed as the distance between the centroids of the\ntwo ConvexGeometricShapes the edge connects.\nprimMinimumSpanningForest\nComputes the minimum spanning forest of the graph using Prim's algorithm.\nNote that the graph must be undirected (i.e. each edge must be duplicated).\nprimMinimumSpanningForest\nSee primMinimumSpanningForest.<\/p>\n"
+                      "content": "<p>pathExists\nChecks whether a path exists between source and sink.\n<a href=\"#\">DijkstraShortestPath<\/a> is used instead of <a href=\"#\">org.jgrapht.alg.connectivity.ConnectivityInspector.pathExists<\/a>,\nbecause, in case of directed graph, the latter checks whether the given vertices lay in the same weakly\nconnected component, which is not the desired behavior.\nAs unweighted graphs have a default edge weight of 1.0, shortest path algorithms can always be applied\nmeaningfully.<\/p>\n"
                     }]
                   },
                   "routes": {
@@ -8229,7 +8161,7 @@
                           },
                           "description": "",
                           "title": "AbstractOrientingPedestrian",
-                          "content": "<p>An abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironment2DWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<init>\nAn abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironment2DWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.\nvolatileMemory\nThe volatile memory of the agent, it models the ability to remember rooms\nor spaces of the environment already visited by the agent since the start\nof the simulation. In particular, each room is paired with the number of\nvisits.\ncognitiveMap\nThe cognitive map of the agent. A cognitive map is composed of landmarks\n(elements of the environment easy to remember due to their uniqueness)\nand spatial relations between them, it is represented using a NavigationGraph.\nknowledgeDegree\nThe knowledge degree of the agent concerning the environment. It's\na percentage value in <a href=\"#\">0,1<\/a>.\nrandomGenerator\nThe random generator to use in order to preserve reproducibility.\nenvironment\nThe environment this pedestrian is into.\ngenerateLandmarkWithin\nGenerates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          "content": "<p>An abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironmentWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<init>\nAn abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironmentWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.\nvolatileMemory\nThe volatile memory of the agent, it models the ability to remember rooms\nor spaces of the environment already visited by the agent since the start\nof the simulation. In particular, each room is paired with the number of\nvisits.\ncognitiveMap\nThe cognitive map of the agent. A cognitive map is composed of landmarks\n(elements of the environment easy to remember due to their uniqueness)\nand spatial relations between them, it is represented using a NavigationGraph.\nknowledgeDegree\nThe knowledge degree of the agent concerning the environment. It's\na percentage value in <a href=\"#\">0,1<\/a>.\nrandomGenerator\nThe random generator to use in order to preserve reproducibility.\nenvironment\nThe environment this pedestrian is into.\ngenerateLandmarkWithin\nGenerates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                         }]
                       },
                       "CircularDeformableCellImpl": {
@@ -8407,7 +8339,7 @@
                           },
                           "description": "",
                           "title": "RectObstacle2D",
-                          "content": "<p>This class implements a rectangular obstacle, whose sides are parallel to the cartesian axis.<init>\nBuilds a new RectObstacle2D, given a point, the width and the height.<\/p>\n<p>contains<\/p>\n<p>getId<\/p>\n<p>nearestIntersection<\/p>\n<p>getMinX<\/p>\n<p>next<\/p>\n<p>getMaxX<\/p>\n<p>toString<\/p>\n<p>getMinY<\/p>\n<p>getMaxY<\/p>\n"
+                          "content": "<p>This class implements a rectangular obstacle, whose sides are parallel to the cartesian axis.<init>\nBuilds a new RectObstacle2D, given a point, the width and the height.\nid<\/p>\n<p>contains<\/p>\n<p>nearestIntersection<\/p>\n<p>getMinX<\/p>\n<p>next<\/p>\n<p>getMaxX<\/p>\n<p>toString<\/p>\n<p>getMinY<\/p>\n<p>getMaxY<\/p>\n"
                         }]
                       },
                       "BidimensionalGaussian": {
@@ -9028,7 +8960,7 @@
                           },
                           "description": "",
                           "title": "AbstractOrientingBehavior",
-                          "content": "<p>A reaction representing the orienting behavior of an OrientingPedestrian.\nThis class obtains a route from the pedestrian's cognitive map and exploits that and the\nother spatial information available to navigate the environment towards (or in search of)\na destination.\nTwo tasks are left to the derived classes via template method, see computeEdgeRankings\nand computeSubdestination.<init>\nA reaction representing the orienting behavior of an OrientingPedestrian.\nThis class obtains a route from the pedestrian's cognitive map and exploits that and the\nother spatial information available to navigate the environment towards (or in search of)\na destination.\nTwo tasks are left to the derived classes via template method, see computeEdgeRankings\nand computeSubdestination.\nenvironment\nThe environment the pedestrian is into.\npedestrian\nThe owner of this behavior.\nupdateInternalStatus<\/p>\n<p>getRate<\/p>\n<p>execute<\/p>\n<p>computeEdgeRankings\nMaps each edge outgoing from the given room to an integer rank indicating its\nsuitability in order to reach the provided destination (which is outside of the scope\nof the agent). Rankings should be in <a href=\"#\">1,E<\/a>, where E is the number of edges, a lower\nrank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following\nsituation: he knows the spatial structure of the current room and the next sub-destination\nhe want to reach, but has no other information regarding the spatial structure between\nhis room and that position (remember that it is assumed the cognitive map provide only\na boolean information regarding the connection of landmarks, no extra info is stored).\nThis method should implement an algorithm allowing the pedestrian to perform an educated\nguess of which crossing to take in order to get closer to the provided destination.<\/p>\ncomputeSubdestination\nComputes the next sub-destination the pedestrian will move towards, provided an edge he\nwants to cross. The provided edge belongs to the room the agent is into (i.e. it is in\nsight of the agent), the returned position must be in sight of him as well, which means\nno obstacle should be placed between such destination and his current position.<p>This method is mainly about exploiting the extra data stored in the edge (for instance\nits shape and location in the room boundary) to determine which point the pedestrian\nshall point towards.<\/p>\nmoveTowards\nMoves the pedestrian towards a position which is guaranteed to be in sight (i.e. no\nobstacle is placed between him and such position).\nweight\nAssign a weight to a given edge. The one with minimum weight will be chosen and crossed.<\/p>\n"
+                          "content": "<p>A reaction representing the orienting behavior of an OrientingPedestrian.\nThis class obtains a route from the pedestrian's cognitive map and exploits that and the\nother spatial information available to navigate the environment towards (or in search of)\na destination.\nThree tasks are left to the derived classes via template method, see computeEdgeRankings, and moveTowards.<init>\nA reaction representing the orienting behavior of an OrientingPedestrian.\nThis class obtains a route from the pedestrian's cognitive map and exploits that and the\nother spatial information available to navigate the environment towards (or in search of)\na destination.\nThree tasks are left to the derived classes via template method, see computeEdgeRankings, and moveTowards.\nenvironment\nThe environment the pedestrian is into.\npedestrian\nThe owner of this behavior.\nupdateInternalStatus<\/p>\n<p>getRate<\/p>\n<p>execute<\/p>\n<p>computeEdgeRankings\nMaps each edge outgoing from the given room to an integer rank indicating its\nsuitability in order to reach the provided destination (which is outside of the scope\nof the agent). Rankings should be in <a href=\"#\">1,E<\/a>, where E is the number of edges, a lower\nrank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following\nsituation: he knows the spatial structure of the current room and the next sub-destination\nhe want to reach, but has no other information regarding the spatial structure between\nhis room and that position (remember that it is assumed the cognitive map provide only\na boolean information regarding the connection of landmarks, no extra info is stored).\nThis method should implement an algorithm allowing the pedestrian to perform an educated\nguess of which crossing to take in order to get closer to the provided destination.<\/p>\ncomputeSubdestination\nComputes the next sub-destination the pedestrian will move towards, provided an edge he\nwants to cross. The provided edge belongs to the room the agent is into (i.e. it is in\nsight of the agent), the returned position must be in sight of him as well, which means\nno obstacle should be placed between such destination and his current position.<p>This method is mainly about exploiting the extra data stored in the edge (for instance\nits shape and location in the room boundary) to determine which point the pedestrian\nshall point towards.<\/p>\nmoveTowards\nMoves the pedestrian towards a position which is guaranteed to be in sight (i.e. no\nobstacle is placed between him and such position). The current room (if initialised)\nand the target door are provided as well to allow more complex computations, see\nOrientingBehavior2D. This method should anyway move the pedestrian towards target.\nweight\nAssigns a weight to a given edge. The one with minimum weight will be chosen and crossed.<\/p>\n"
                         }]
                       },
                       "AbstractReaction": {
@@ -9156,7 +9088,7 @@
                           },
                           "description": "",
                           "title": "OrientingSteeringBehavior2D",
-                          "content": "<p>An OrientingBehavior2D with SteeringActions as well. This class implements a\nbasic algorithm capable of mixing the steering behavior and the orienting behavior\nsmartly (e.g. avoiding situations in which the agent is blocked due to the voiding\nof opposite forces). However, the resulting movements still present some shaking.<init>\nAn OrientingBehavior2D with SteeringActions as well. This class implements a\nbasic algorithm capable of mixing the steering behavior and the orienting behavior\nsmartly (e.g. avoiding situations in which the agent is blocked due to the voiding\nof opposite forces). However, the resulting movements still present some shaking.<\/p>\n<p>moveTowards\nMoves the pedestrian towards a position which is guaranteed to be in sight (i.e. no\nobstacle is placed between him and such position).<\/p>\n"
+                          "content": "<p>An OrientingBehavior2D with SteeringActions as well. This class implements a\nbasic algorithm capable of mixing the steering behavior and the orienting behavior\nsmartly (e.g. avoiding situations in which the agent is blocked due to the voiding\nof opposite forces). However, the resulting movements still present some shaking.<init>\nAn OrientingBehavior2D with SteeringActions as well. This class implements a\nbasic algorithm capable of mixing the steering behavior and the orienting behavior\nsmartly (e.g. avoiding situations in which the agent is blocked due to the voiding\nof opposite forces). However, the resulting movements still present some shaking.<\/p>\n<p>moveTowards\nMoves the pedestrian towards a position which is guaranteed to be in sight (i.e. no\nobstacle is placed between him and such position). The current room (if initialised)\nand the target door are provided as well to allow more complex computations, see\nOrientingBehavior2D. This method should anyway move the pedestrian towards target.<\/p>\n"
                         }]
                       },
                       "BiochemicalReactionBuilder": {
@@ -9188,7 +9120,7 @@
                           },
                           "description": "",
                           "title": "OrientingBehavior2D",
-                          "content": "<p>An AbstractOrientingBehavior in an euclidean bidimensional space.\nThis class accepts an Euclidean2DEnvironmentWithGraph whose graph features\nConvexPolygonal nodes (or any subclass of it) and whose edges store extra\ninformation regarding the shape of each passage (see type parameters M and F).\nIn particular, edges are any subtype of GraphEdgeWithData storing an\n<a href=\"#\">Euclidean2DSegment<\/a>. Similarly to an Euclidean2DCrossing, given an edge e\nconnecting convex polygon a to convex polygon b, the segment provided by e MUST\nbelong to the boundary of a, but can or cannot belong the boundary of b.\nAdditionally, this class redefines moveTowards in order to perform a more\nsophisticated movement (using some utils only available in two dimensions).<init>\nAn AbstractOrientingBehavior in an euclidean bidimensional space.\nThis class accepts an Euclidean2DEnvironmentWithGraph whose graph features\nConvexPolygonal nodes (or any subclass of it) and whose edges store extra\ninformation regarding the shape of each passage (see type parameters M and F).\nIn particular, edges are any subtype of GraphEdgeWithData storing an\n<a href=\"#\">Euclidean2DSegment<\/a>. Similarly to an Euclidean2DCrossing, given an edge e\nconnecting convex polygon a to convex polygon b, the segment provided by e MUST\nbelong to the boundary of a, but can or cannot belong the boundary of b.\nAdditionally, this class redefines moveTowards in order to perform a more\nsophisticated movement (using some utils only available in two dimensions).\nenvironment\nThe environment the pedestrian is into.\nmoveTowards\nMoves the pedestrian towards a position which is guaranteed to be in sight (i.e. no\nobstacle is placed between him and such position).\ncomputeEdgeRankings\nMaps each edge outgoing from the given room to an integer rank indicating its\nsuitability in order to reach the provided destination (which is outside of the scope\nof the agent). Rankings should be in <a href=\"#\">1,E<\/a>, where E is the number of edges, a lower\nrank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following\nsituation: he knows the spatial structure of the current room and the next sub-destination\nhe want to reach, but has no other information regarding the spatial structure between\nhis room and that position (remember that it is assumed the cognitive map provide only\na boolean information regarding the connection of landmarks, no extra info is stored).\nThis method should implement an algorithm allowing the pedestrian to perform an educated\nguess of which crossing to take in order to get closer to the provided destination.<\/p>\ncomputeSubdestination\nComputes the next sub-destination the pedestrian will move towards, provided an edge he\nwants to cross. The provided edge belongs to the room the agent is into (i.e. it is in\nsight of the agent), the returned position must be in sight of him as well, which means\nno obstacle should be placed between such destination and his current position.<p>This method is mainly about exploiting the extra data stored in the edge (for instance\nits shape and location in the room boundary) to determine which point the pedestrian\nshall point towards.<\/p>\nweight\nThe congestionFactor is added.\ncloneOnNewNode<\/p>\n"
+                          "content": "<p>An AbstractOrientingBehavior in an euclidean bidimensional space.\nThis class accepts an Euclidean2DEnvironmentWithGraph whose graph features\nConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages\nas edges.<init>\nAn AbstractOrientingBehavior in an euclidean bidimensional space.\nThis class accepts an Euclidean2DEnvironmentWithGraph whose graph features\nConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages\nas edges.\nenvironment\nThe environment the pedestrian is into.\nmoveTowards\nMoves the pedestrian towards a position which is guaranteed to be in sight (i.e. no\nobstacle is placed between him and such position). The current room (if initialised)\nand the target door are provided as well to allow more complex computations, see\nOrientingBehavior2D. This method should anyway move the pedestrian towards target.\ncomputeEdgeRankings\nMaps each edge outgoing from the given room to an integer rank indicating its\nsuitability in order to reach the provided destination (which is outside of the scope\nof the agent). Rankings should be in <a href=\"#\">1,E<\/a>, where E is the number of edges, a lower\nrank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following\nsituation: he knows the spatial structure of the current room and the next sub-destination\nhe want to reach, but has no other information regarding the spatial structure between\nhis room and that position (remember that it is assumed the cognitive map provide only\na boolean information regarding the connection of landmarks, no extra info is stored).\nThis method should implement an algorithm allowing the pedestrian to perform an educated\nguess of which crossing to take in order to get closer to the provided destination.<\/p>\ncomputeSubdestination\nComputes the next sub-destination the pedestrian will move towards, provided an edge he\nwants to cross. The provided edge belongs to the room the agent is into (i.e. it is in\nsight of the agent), the returned position must be in sight of him as well, which means\nno obstacle should be placed between such destination and his current position.<p>This method is mainly about exploiting the extra data stored in the edge (for instance\nits shape and location in the room boundary) to determine which point the pedestrian\nshall point towards.<\/p>\nweight\nThe congestionFactor is added.\ncloneOnNewNode<\/p>\n"
                         }]
                       }
                     },
