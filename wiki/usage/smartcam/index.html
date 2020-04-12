@@ -13,7 +13,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<meta name="generator" content="Orchid 0.17.6"/>
+<meta name="generator" content="Orchid 0.20.0-SNAPSHOT"/>
 <link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
 
 
@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgn+fc2a7fae"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devj8+53c8559d"};
 </script>
 
 
@@ -54,7 +54,7 @@
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
 <!-- Page Template: wiki, page -->
-<!-- Resolved Page Template:  -->
+<!-- Resolved Page Template: templates/pages/page.peb -->
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
@@ -69,12 +69,27 @@
 
 
 
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
 </head>
@@ -118,14 +133,14 @@
             
                 
                     
-                        <h3 id="prerequisites">Prerequisites</h3>
+                        <h3 id="prerequisites"><a href="#prerequisites" id="prerequisites" class="anchor"></a>Prerequisites</h3>
 <p>This guide assumes you already know <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">the Alchemist metamodel</a> and <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">how to write simulations in YAML</a>.</p>
-<h3 id="smartcam">Smartcam</h3>
+<h3 id="smartcam"><a href="#smartcam" id="smartcam" class="anchor"></a>Smartcam</h3>
 <p>A smartcam is a camera able to detect objects of interest and to communicate with other smartcameras.
 In many cases it is also assumed to be mounted on a drone as to be able to freely move around in the environment.
 In Alchemist smartcams are simulated as <em>Nodes</em> equipped with specific <em>Reactions</em> defining their capabilities and behaviour.
 Single capabilities are expressed as <em>Actions</em>.</p>
-<h4 id="vision">Vision</h4>
+<h4 id="vision"><a href="#vision" id="vision" class="anchor"></a>Vision</h4>
 <p>The most basic example of a camera is a <em>Node</em> containing a <em>Reaction</em> with the <em>See</em> action. Note: the <em>See</em> action currently
 only works in 2D environments supporting euclidean geometry, for example <em>Continuous2DEnvironment</em> and <em>Rectangular2DEnvironment</em>.
 The <em>See</em> action requires 3 parameters to be defined in this order: the distance of the field of view, its angle in degrees,
@@ -133,22 +148,22 @@ and the name of the <em>Molecule</em> which will contain the ouput, namely a lis
 each time the action is triggered. Optionally a fourth parameter can be defined in order to filter the output. Such parameter is expected to
 be the name of a <em>Molecule</em> which has to be contained in a <em>Node</em> for it to be visible, e.g. if it is &quot;wanted&quot; then only nodes containing
 a molecule named &quot;wanted&quot; will be seen.</p>
-<h4 id="movement">Movement</h4>
+<h4 id="movement"><a href="#movement" id="movement" class="anchor"></a>Movement</h4>
 <p>The ability to move can be defined using movement actions such as <em>MoveToTarget</em> or <em>FollowAtDistance</em>.
 <em>MoveToTarget</em> expects 2 parameters such as the name of the molecule containing the target's position and the movement speed.
 <em>FollowAtDistance</em> requires the name of the molecule containing the target's position, the distance to mantain from the target,
 and the movement speed.</p>
-<h4 id="rotation">Rotation</h4>
+<h4 id="rotation"><a href="#rotation" id="rotation" class="anchor"></a>Rotation</h4>
 <p>The action <em>HeadTowardTarget</em> can be used to instruct cameras to always face the specified target, it requires
 2 parameters such as the name of the molecule containing the target's position and the angular speed in degrees.
 The <em>Spin</em> action only requires the angular speed and will make the camera spin around itself like a radar.</p>
-<h4 id="algorithm">Algorithm</h4>
+<h4 id="algorithm"><a href="#algorithm" id="algorithm" class="anchor"></a>Algorithm</h4>
 <p>Without defining an algorithm the cameras wouldn't do anything interesting. Algorithms can be definied in a moltitude of different
 ways. Below there's an example of a basic algorithm defined only with <em>Reactions</em>, <em>Conditions</em> and <em>Actions</em>.
 It is advisable to use real programming languages such as <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Protelis</a> to write more elaborate algorithms.
 In this regard you'd want to use the protelis incarnation, make cameras be <em>ProtelisNode</em>, and to make sure
 that the input and output molecules' names of the actions match the ones used by the protelis program.</p>
-<h3 id="complete-example-of-a-simulation">Complete example of a simulation</h3>
+<h3 id="complete-example-of-a-simulation"><a href="#complete-example-of-a-simulation" id="complete-example-of-a-simulation" class="anchor"></a>Complete example of a simulation</h3>
 <p>We start by writing a basic yaml configuration to place 20 potential targets and 10 cameras in a 400 x 400 rectangular environment:</p>
 <pre><code class="language-yaml">incarnation: protelis
 
@@ -459,7 +474,7 @@ displacements:
     programs:
       - *Camera
 </code></pre>
-<h3 id="further-references">Further references</h3>
+<h3 id="further-references"><a href="#further-references" id="further-references" class="anchor"></a>Further references</h3>
 <p><a href="https://doi.org/10.1145/3131885.3131909">Lukas Esterle, Peter R. Lewis<br />
 Online Multi-object k-coverage with Mobile Smart Cameras<br />
 In Proceedings of the International Conference on Distributed Smart Cameras (ICDSC). Nominated for best paper. 2017.</a></p>
@@ -2413,7 +2428,7 @@ In Proceedings of the International Conference on Distributed Smart Cameras (ICD
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersection">CircleSegmentIntersection</a>
     </li>
     
 
@@ -4445,7 +4460,7 @@ In Proceedings of the International Conference on Distributed Smart Cameras (ICD
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersection">LinesIntersection</a>
     </li>
     
 
@@ -5645,7 +5660,7 @@ In Proceedings of the International Conference on Distributed Smart Cameras (ICD
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersection">SegmentsIntersection</a>
     </li>
     
 
@@ -5653,7 +5668,7 @@ In Proceedings of the International Conference on Distributed Smart Cameras (ICD
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionTypes">SegmentsIntersectionTypes</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionType">SegmentsIntersectionType</a>
     </li>
     
 
@@ -6333,7 +6348,7 @@ In Proceedings of the International Conference on Distributed Smart Cameras (ICD
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devgn+fc2a7fae. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devj8+53c8559d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6350,19 +6365,17 @@ In Proceedings of the International Conference on Distributed Smart Cameras (ICD
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_orchidCustomizations.js"></script>
-<script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/orchidSearch.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-asciidoc.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-python.min.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-groovy.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-yaml.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-asciidoc.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-markdown.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
 <!-- end:inject scripts -->
 
 </body>

@@ -13,7 +13,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<meta name="generator" content="Orchid 0.17.6"/>
+<meta name="generator" content="Orchid 0.20.0-SNAPSHOT"/>
 <link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
 
 
@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgn+fc2a7fae"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devj8+53c8559d"};
 </script>
 
 
@@ -54,7 +54,7 @@
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
 <!-- Page Template: wiki, page -->
-<!-- Resolved Page Template:  -->
+<!-- Resolved Page Template: templates/pages/page.peb -->
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
@@ -69,12 +69,27 @@
 
 
 
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
 </head>
@@ -126,7 +141,7 @@ namely a description of a resource (sensor, service, actuator...) always mapping
 <p>These annotations evolve following so-called <em>Eco-Laws</em>,
 mimicking the complex behaviours of natural ecosystems.</p>
 <p>The SAPERE approach fostered subsequent approaches, such as <a href="https://doi.org/10.1109/MC.2015.261">aggregate computing</a>.</p>
-<h2 id="live-semantic-annotations">Live Semantic Annotations</h2>
+<h2 id="live-semantic-annotations"><a href="#live-semantic-annotations" id="live-semantic-annotations" class="anchor"></a>Live Semantic Annotations</h2>
 <p>An LSA as modeled in Alchemist is a tuple of values.
 These tuples can be injected in nodes as data items.
 From the point of view of <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">the Alchemist metamodel</a>,
@@ -137,7 +152,7 @@ of which those located around the center of such grid contain the tuple <code>{ 
 <script src="https://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/05-content.yml"></script>
 <p>The relevant part here is <code>molecule: token</code>.
 If we wanted to inject the tuple <code>{ foo, 1, bar, 2 }</code>, we could have written <code>molecule: foo, 1, bar, 2</code>.</p>
-<h3 id="ground-lsa-syntax">Ground LSA syntax</h3>
+<h3 id="ground-lsa-syntax"><a href="#ground-lsa-syntax" id="ground-lsa-syntax" class="anchor"></a>Ground LSA syntax</h3>
 <pre><code>GroundLSA ::= GroundArgument (',' GroundArgument)*
 GroundArgument ::= Number | Atom | Set
 Atom ::= [a-z]([a-z]|[A-Z]|[0-9])*
@@ -150,7 +165,7 @@ match them against sets of ground tuples,
 and obtain a matching ground tuple as result.</p>
 <p>A tuple argument is considered a variable if it begins with an uppercase letter.
 Additionally, it is possible to discard some matches by expressing constraints on values.</p>
-<h3 id="lsa-syntax">LSA Syntax</h3>
+<h3 id="lsa-syntax"><a href="#lsa-syntax" id="lsa-syntax" class="anchor"></a>LSA Syntax</h3>
 <pre><code>LSA ::= '{' GroundLSA | TemplateLSA '}'
 TemplateLSA ::= Argument (',' Argument)*
 Argument ::= GroundArgument | Variable | Constraint
@@ -158,7 +173,7 @@ Variable ::= [A-Z]([a-z]|[A-Z]|[0-9])*
 Constraint ::= 'def:' Variable Operation
 Operation ::= ('&gt;'|'&gt;'|'='|'!=') Number | 'add ' Variable | 'del ' Variable
 </code></pre>
-<h2 id="eco-laws">Eco-Laws</h2>
+<h2 id="eco-laws"><a href="#eco-laws" id="eco-laws" class="anchor"></a>Eco-Laws</h2>
 <p>Tuple matching is used to define <em><a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/SAPEREReaction">Eco-Laws</a></em>.
 An Eco-Law is a rewriting rule very similar in concept to chemical reactions:
 elements on the left-hand side of the reaction are removed from the container,
@@ -169,7 +184,7 @@ the opposite of the matched number:</p>
 <p><code>{ foo, def: N &gt; 30 } --&gt; { bar, -N }</code></p>
 <p>Nodes can be programmed with Eco-Laws as follows:</p>
 <script src="https://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/06-send.yml"></script>
-<h3 id="sharing">Sharing</h3>
+<h3 id="sharing"><a href="#sharing" id="sharing" class="anchor"></a>Sharing</h3>
 <p>Eco-Laws can be programmed to send LSAs to neighbors, as well as to look into neighboring nodes for getting LSAs.
 In order to do so, the LSA template in the Eco-Law must be preceded by a neighbor operator, either <code>+</code> or <code>*</code>.</p>
 <p><code>+</code> means <em>in a neighbor</em>:
@@ -186,8 +201,8 @@ sends a copy of the LSA to all neighbors.</p>
 when <code>{ token }</code> is present locally, it is copied into neighboring nodes once per second;
 and as soon as two copies of <code>{ token }</code> are present, one gets removed.</p>
 <script src="https://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/09-diffuse.yml"></script>
-<h3 id="eco-laws-syntax">Eco-Laws syntax</h3>
-<h3 id="rates">Rates</h3>
+<h3 id="eco-laws-syntax"><a href="#eco-laws-syntax" id="eco-laws-syntax" class="anchor"></a>Eco-Laws syntax</h3>
+<h3 id="rates"><a href="#rates" id="rates" class="anchor"></a>Rates</h3>
 <p>The time distribution with which reactions should get scheduled can be controlled by thinkering with the yaml specification
 as per every reaction in Alchemist.
 If no <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/TimeDistribution">time distribution</a> is specified,
@@ -209,7 +224,7 @@ of an <a href="https://en.wikipedia.org/wiki/Exponential_distribution">exponenti
 when executable (the left hand LSAs have local matches), will execute at an average of once per second
 (with a variance of 1 s²).</p>
 <script src="https://gist-it.appspot.com/github/AlchemistSimulator/SAPERE-incarnation-tutorial/blob/master/src/main/yaml/06-send.yml"></script>
-<h2 id="tutorial-and-exercises">Tutorial and exercises</h2>
+<h2 id="tutorial-and-exercises"><a href="#tutorial-and-exercises" id="tutorial-and-exercises" class="anchor"></a>Tutorial and exercises</h2>
 <p>To better grasp details of the incarnation, we recommend looking at the examples available on
 <a href="https://github.com/AlchemistSimulator/SAPERE-incarnation-tutorial">the Alchemist SAPERE Incarnation tutorial on GitHub</a>.</p>
 <p>Besides examples with growing complexity,
@@ -2164,7 +2179,7 @@ there are a number of proposed exercises that should help you getting acquainted
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersection">CircleSegmentIntersection</a>
     </li>
     
 
@@ -4196,7 +4211,7 @@ there are a number of proposed exercises that should help you getting acquainted
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersection">LinesIntersection</a>
     </li>
     
 
@@ -5396,7 +5411,7 @@ there are a number of proposed exercises that should help you getting acquainted
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersection">SegmentsIntersection</a>
     </li>
     
 
@@ -5404,7 +5419,7 @@ there are a number of proposed exercises that should help you getting acquainted
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionTypes">SegmentsIntersectionTypes</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionType">SegmentsIntersectionType</a>
     </li>
     
 
@@ -6084,7 +6099,7 @@ there are a number of proposed exercises that should help you getting acquainted
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devgn+fc2a7fae. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devj8+53c8559d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6101,19 +6116,17 @@ there are a number of proposed exercises that should help you getting acquainted
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_orchidCustomizations.js"></script>
-<script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/orchidSearch.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-asciidoc.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-python.min.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-groovy.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-yaml.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-asciidoc.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-markdown.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
 <!-- end:inject scripts -->
 
 </body>

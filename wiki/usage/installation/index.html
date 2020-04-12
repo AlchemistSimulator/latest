@@ -13,7 +13,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<meta name="generator" content="Orchid 0.17.6"/>
+<meta name="generator" content="Orchid 0.20.0-SNAPSHOT"/>
 <link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
 
 
@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgn+fc2a7fae"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devj8+53c8559d"};
 </script>
 
 
@@ -54,7 +54,7 @@
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
 <!-- Page Template: wiki, page -->
-<!-- Resolved Page Template:  -->
+<!-- Resolved Page Template: templates/pages/page.peb -->
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
@@ -69,12 +69,27 @@
 
 
 
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
 </head>
@@ -118,13 +133,13 @@
             
                 
                     
-                        <h2 id="requirements">Requirements</h2>
+                        <h2 id="requirements"><a href="#requirements" id="requirements" class="anchor"></a>Requirements</h2>
 <p>Alchemist requires java 11 or later, if you don't have a Java Development Kit version 11+ installed we may recommend you to install the version of AdoptOpenJDK, which can be found <a href="https://adoptopenjdk.net/index.html?variant=openjdk11&amp;jvmVariant=hotspot">here</a>. If you prefer, you can install it via <a href="https://github.com/shyiko/jabba">Jabba</a> - a cross-platform Java Version Manager.</p>
 <p>For further information, the JDKs and environments tested <a href="https://travis-ci.org/AlchemistSimulator/Alchemist">here</a> are those for which executing Alchemist is supported.</p>
-<h2 id="importing-alchemist">Importing Alchemist</h2>
+<h2 id="importing-alchemist"><a href="#importing-alchemist" id="importing-alchemist" class="anchor"></a>Importing Alchemist</h2>
 <p>In this section you will be given information about how to import the Alchemist project in <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> and <a href="https://www.eclipse.org/eclipseide/">Eclipse</a>.</p>
-<h3 id="importing-in-intellij">Importing in IntelliJ</h3>
-<h4 id="recommended-configuration">Recommended configuration</h4>
+<h3 id="importing-in-intellij"><a href="#importing-in-intellij" id="importing-in-intellij" class="anchor"></a>Importing in IntelliJ</h3>
+<h4 id="recommended-configuration"><a href="#recommended-configuration" id="recommended-configuration" class="anchor"></a>Recommended configuration</h4>
 <p>Install the following plugins (use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>, then search for &quot;Plugins&quot;):</p>
 <ul>
 <li>From the main list:
@@ -142,7 +157,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="import-procedure">Import procedure</h4>
+<h4 id="import-procedure"><a href="#import-procedure" id="import-procedure" class="anchor"></a>Import procedure</h4>
 <ol start="0">
 <li>Windows user should perform an additional first step: before cloning the repository, make sure that the autocrlf feature of git is disabled, by issuing <code>git config --global core.autocrlf false</code>. If the step is not performed, git will automatically insert CRLF line endings, violating the project's Checkstyle rules (which are rather strict, and prevent the build from succeeding).</li>
 <li>Clone this repository in a folder of your preference using <code>git clone</code> appropriately</li>
@@ -163,8 +178,8 @@
 <li>On Unix: <code>./gradlew alchemist-incarnation-biochemistry:generateGrammarSource</code></li>
 <li>On Windows: <code>gradlew.bat alchemist-incarnation-biochemistry:generateGrammarSource</code></li>
 </ul>
-<h3 id="importing-in-eclipse">Importing in Eclipse</h3>
-<h4 id="recommended-configuration-1">Recommended configuration</h4>
+<h3 id="importing-in-eclipse"><a href="#importing-in-eclipse" id="importing-in-eclipse" class="anchor"></a>Importing in Eclipse</h3>
+<h4 id="recommended-configuration-1"><a href="#recommended-configuration-1" id="recommended-configuration-1" class="anchor"></a>Recommended configuration</h4>
 <ul>
 <li>Download [the latest Eclipse for Java][eclipse]. For a smooth import, Gradle Buildship is needed (starting from Eclipse Mars.1, it is included by default)
 <ul>
@@ -239,7 +254,7 @@ sudo apt-get install scala
 </ul>
 </li>
 </ul>
-<h4 id="import-procedure-1">Import Procedure</h4>
+<h4 id="import-procedure-1"><a href="#import-procedure-1" id="import-procedure-1" class="anchor"></a>Import Procedure</h4>
 <ul>
 <li>
 <p>Install git on your system, if you haven't yet</p>
@@ -2252,7 +2267,7 @@ sudo apt-get install scala
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersection">CircleSegmentIntersection</a>
     </li>
     
 
@@ -4284,7 +4299,7 @@ sudo apt-get install scala
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersection">LinesIntersection</a>
     </li>
     
 
@@ -5484,7 +5499,7 @@ sudo apt-get install scala
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersection">SegmentsIntersection</a>
     </li>
     
 
@@ -5492,7 +5507,7 @@ sudo apt-get install scala
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionTypes">SegmentsIntersectionTypes</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionType">SegmentsIntersectionType</a>
     </li>
     
 
@@ -6172,7 +6187,7 @@ sudo apt-get install scala
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devgn+fc2a7fae. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devj8+53c8559d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6189,19 +6204,17 @@ sudo apt-get install scala
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_orchidCustomizations.js"></script>
-<script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/orchidSearch.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-asciidoc.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-python.min.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-groovy.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-yaml.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-asciidoc.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-markdown.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
 <!-- end:inject scripts -->
 
 </body>

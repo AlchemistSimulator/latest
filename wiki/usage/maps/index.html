@@ -13,7 +13,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<meta name="generator" content="Orchid 0.17.6"/>
+<meta name="generator" content="Orchid 0.20.0-SNAPSHOT"/>
 <link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
 
 
@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgn+fc2a7fae"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devj8+53c8559d"};
 </script>
 
 
@@ -54,7 +54,7 @@
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
 <!-- Page Template: wiki, page -->
-<!-- Resolved Page Template:  -->
+<!-- Resolved Page Template: templates/pages/page.peb -->
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
@@ -69,12 +69,27 @@
 
 
 
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
 </head>
@@ -123,7 +138,7 @@ Navigation on maps can be done by using gps traces,
 by moving along roads (Alchemist relies on <a href="https://www.graphhopper.com/">GraphHopper</a> to provide directions),
 by interpolating gps traces with on-the-road-movements,
 or by ignoring the map information on just move as you would in a continuous space.</p>
-<h2 id="setting-up-a-map-environment">Setting up a map environment</h2>
+<h2 id="setting-up-a-map-environment"><a href="#setting-up-a-map-environment" id="setting-up-a-map-environment" class="anchor"></a>Setting up a map environment</h2>
 <p>In order to run simulations on real world maps, an appropriate environment must be selected.</p>
 <p>Currently, the only environment supporting maps is <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/OSMEnvironment">OSMEnvironment</a>.</p>
 <p>The only mandatory parameter is the <code>path</code> of the file with the map to be loaded. Accepts OSM maps of any format (xml, osm, pbf).
@@ -140,7 +155,7 @@ environment:
   type: OSMEnvironment
   parameters: [maps/foo.pbf]
 </code></pre>
-<h2 id="using-gps-traces-to-displace-nodes">Using GPS traces to displace nodes</h2>
+<h2 id="using-gps-traces-to-displace-nodes"><a href="#using-gps-traces-to-displace-nodes" id="using-gps-traces-to-displace-nodes" class="anchor"></a>Using GPS traces to displace nodes</h2>
 <p>GPS traces can be used to displace nodes on a map.
 In order to set the initial position of the nodes with the first position of the GPS traces,
 you need to use the displacement <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/FromGPSTrace">FromGPSTrace</a>.
@@ -165,7 +180,7 @@ in order to consider only the GPS points with attribute <code>time</code> greate
       type: FromGPSTrace
       parameters: [1497, &quot;vcmuser.gpx&quot;, false, &quot;AlignToTime&quot;, 1365922800, false, false]
 </code></pre>
-<h3 id="strategy-to-align-time-of-gps-trace">Strategy to align time of GPS trace</h3>
+<h3 id="strategy-to-align-time-of-gps-trace"><a href="#strategy-to-align-time-of-gps-trace" id="strategy-to-align-time-of-gps-trace" class="anchor"></a>Strategy to align time of GPS trace</h3>
 <p>The strategies available to align time of GPS trace are the following:</p>
 <ol start="0">
 <li>NoAlignment -&gt; No alignment is performed.</li>
@@ -199,7 +214,7 @@ the result will be:
 </ul>
 </li>
 </ol>
-<h2 id="navigation">Navigation</h2>
+<h2 id="navigation"><a href="#navigation" id="navigation" class="anchor"></a>Navigation</h2>
 <p>As previous say there are several behavior in order to move the nodes in a environment with real-word map:</p>
 <ol start="0">
 <li>movement ignoring map information. A node move directly from start position to destination position:
@@ -2179,7 +2194,7 @@ use map information to define intermediate position in order to follow streets a
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersection">CircleSegmentIntersection</a>
     </li>
     
 
@@ -4211,7 +4226,7 @@ use map information to define intermediate position in order to follow streets a
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersection">LinesIntersection</a>
     </li>
     
 
@@ -5411,7 +5426,7 @@ use map information to define intermediate position in order to follow streets a
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersection">SegmentsIntersection</a>
     </li>
     
 
@@ -5419,7 +5434,7 @@ use map information to define intermediate position in order to follow streets a
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionTypes">SegmentsIntersectionTypes</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionType">SegmentsIntersectionType</a>
     </li>
     
 
@@ -6099,7 +6114,7 @@ use map information to define intermediate position in order to follow streets a
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devgn+fc2a7fae. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devj8+53c8559d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6116,19 +6131,17 @@ use map information to define intermediate position in order to follow streets a
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_orchidCustomizations.js"></script>
-<script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/orchidSearch.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-asciidoc.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-python.min.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-groovy.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-yaml.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-asciidoc.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-markdown.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
 <!-- end:inject scripts -->
 
 </body>

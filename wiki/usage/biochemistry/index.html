@@ -13,7 +13,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<meta name="generator" content="Orchid 0.17.6"/>
+<meta name="generator" content="Orchid 0.20.0-SNAPSHOT"/>
 <link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
 
 
@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgn+fc2a7fae"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devj8+53c8559d"};
 </script>
 
 
@@ -54,7 +54,7 @@
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
 <!-- Page Template: wiki, page -->
-<!-- Resolved Page Template:  -->
+<!-- Resolved Page Template: templates/pages/page.peb -->
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
@@ -69,12 +69,27 @@
 
 
 
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
 </head>
@@ -119,18 +134,18 @@
                 
                     
                         <p>Biochemistry is an incarnation of Alchemist developed to provide support for biochemical reactions that take place inside a biological cell or a group of those surrounded by a common environment.</p>
-<h3 id="the-biochemistry-incarnation">The Biochemistry Incarnation</h3>
+<h3 id="the-biochemistry-incarnation"><a href="#the-biochemistry-incarnation" id="the-biochemistry-incarnation" class="anchor"></a>The Biochemistry Incarnation</h3>
 <p>The Biochemistry incarnation provides a way to:</p>
 <ul>
 <li>Manage the creation, destruction and relocation of a molecule (which can be either a simple atom or a complex protein) inside a cell or from a cell to another</li>
 <li>Create junctions between cells using a specified amount of molecules. The junctions are modeled in a general way, but with a simple use of actions and conditions it will be possible to create tight junctions, anchoring junctions, gap junctions and even customized one</li>
 <li>Move a cell inside its environment in different ways, handling collisions between two ore more of them in a simplistic but effective way</li>
 </ul>
-<h3 id="how-to-run-a-simulation">How To Run A Simulation</h3>
+<h3 id="how-to-run-a-simulation"><a href="#how-to-run-a-simulation" id="how-to-run-a-simulation" class="anchor"></a>How To Run A Simulation</h3>
 <p>As first step, it is required to add this line of code in order to notice Alchemist to use the Biochemistry Incarnation:</p>
 <pre><code class="language-yaml">incarnation: biochemistry
 </code></pre>
-<h2 id="the-biochemistry-dsl">The Biochemistry DSL</h2>
+<h2 id="the-biochemistry-dsl"><a href="#the-biochemistry-dsl" id="the-biochemistry-dsl" class="anchor"></a>The Biochemistry DSL</h2>
 <p>Biochemistry programs are encapsulated inside the YAML configuration file with a simple and human-readable syntax.
 Those simple reactions can be written in the section <code>programs</code> of the configuration file, as value of the <code>program</code> key:</p>
 <pre><code class="language-yaml">programs:
@@ -138,26 +153,26 @@ Those simple reactions can be written in the section <code>programs</code> of th
     - time-distribution: 1
       program: &quot;[ATP] --&gt; [ADP] + [P]&quot;
 </code></pre>
-<h3 id="reactions">Reactions</h3>
+<h3 id="reactions"><a href="#reactions" id="reactions" class="anchor"></a>Reactions</h3>
 <p>A reaction rule can be set using the symbol <code>--&gt;</code> according to chemistry equations, and placing both the molecules and the actions inside two square brackets (ex. <code>[OH]</code>, <code>[H2O]</code>, <code>[BrownianMove(0.1)]</code>)</p>
 <p>The following line, so, represents a basic chemical reaction that happens inside a cell: <code>[H] + [OH] --&gt; [H2O]</code></p>
 <p>However, reactions can also take place outside the cell itself. Biological cells, indeed, can swap molecules with its neighbour or the surrounding environment, and this is possible in Alchemist too, using the keywords: <code>in cell</code>, <code>in neighbour</code> and <code>in env</code>.</p>
 <p>The reaction <code>[A in env] --&gt; [A in cell]</code> moves the molecule A from the environement inside the cell.</p>
 <p>If the location is not explicit, it is assumed the molecule to be inside the cell.</p>
-<h3 id="junctions">Junctions</h3>
+<h3 id="junctions"><a href="#junctions" id="junctions" class="anchor"></a>Junctions</h3>
 <p>A junction can be created just with a neighbor of the programmed cell.</p>
 <p>The way to create it is with the syntax <code>[X] + [Y in neighbor] --&gt; [junction X-Y]</code>, which means that when this reaction happens a junction using the molecule <code>X</code> from the cell and the molecule <code>Y</code> from the neighbor will be created.</p>
 <p>The junction can also be destroyed using the syntax <code>[junction X-Y] --&gt; []</code>, causing the reintroduction of the molecule <code>X</code> inside the cell and the molecule <code>Y</code> inside the neighbor.</p>
 <p>Also, the junction will be automatically removed if, because of their movement, the cells will stop being in a neighborhood.</p>
-<h3 id="custom-conditions">Custom Conditions</h3>
+<h3 id="custom-conditions"><a href="#custom-conditions" id="custom-conditions" class="anchor"></a>Custom Conditions</h3>
 <p>Any custom condition must be placed after the reaction products following an <code>if</code> clause.</p>
 <p>For example, to create a molecule if the cell has at least three neighbor you would write:</p>
 <p><code>[] --&gt; [X] if NumberOfNeighborsGreaterThan(5)</code></p>
-<h3 id="movement">Movement</h3>
+<h3 id="movement"><a href="#movement" id="movement" class="anchor"></a>Movement</h3>
 <p>A movement can be performed in the same way of a reaction, using the function as it is a product of the reaction itself.</p>
 <p>This program constantly moves a cell without any other condition:</p>
 <p><code>[] --&gt; [BrownianMove(0.1)]</code></p>
-<h3 id="collisions">Collisions</h3>
+<h3 id="collisions"><a href="#collisions" id="collisions" class="anchor"></a>Collisions</h3>
 <p>The Biochemistry Incarnation supports cell collisions and deformations too.</p>
 <p>In order to do that, however, you must set this environment:</p>
 <pre><code class="language-yaml">environment:
@@ -2119,7 +2134,7 @@ Those simple reactions can be written in the section <code>programs</code> of th
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersection">CircleSegmentIntersection</a>
     </li>
     
 
@@ -4151,7 +4166,7 @@ Those simple reactions can be written in the section <code>programs</code> of th
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersection">LinesIntersection</a>
     </li>
     
 
@@ -5351,7 +5366,7 @@ Those simple reactions can be written in the section <code>programs</code> of th
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersection">SegmentsIntersection</a>
     </li>
     
 
@@ -5359,7 +5374,7 @@ Those simple reactions can be written in the section <code>programs</code> of th
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionTypes">SegmentsIntersectionTypes</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionType">SegmentsIntersectionType</a>
     </li>
     
 
@@ -6039,7 +6054,7 @@ Those simple reactions can be written in the section <code>programs</code> of th
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devgn+fc2a7fae. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devj8+53c8559d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6056,19 +6071,17 @@ Those simple reactions can be written in the section <code>programs</code> of th
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_orchidCustomizations.js"></script>
-<script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/orchidSearch.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-asciidoc.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-python.min.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-groovy.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-yaml.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-asciidoc.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-markdown.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
 <!-- end:inject scripts -->
 
 </body>

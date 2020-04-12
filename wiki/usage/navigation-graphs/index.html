@@ -13,7 +13,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<meta name="generator" content="Orchid 0.17.6"/>
+<meta name="generator" content="Orchid 0.20.0-SNAPSHOT"/>
 <link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
 
 
@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgn+fc2a7fae"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devj8+53c8559d"};
 </script>
 
 
@@ -54,7 +54,7 @@
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
 <!-- Page Template: wiki, page -->
-<!-- Resolved Page Template:  -->
+<!-- Resolved Page Template: templates/pages/page.peb -->
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
@@ -69,12 +69,27 @@
 
 
 
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
 </head>
@@ -127,9 +142,9 @@
 <li>Is only capable to detect axis-aligned crossings.</li>
 <li>Is only capable to deal with convex polygonal obstacles. Concave ones can be decomposed into convex meshes, whereas for curves bounding boxes can be used, eventually arbitrarily-oriented minimum bounding boxes.</li>
 </ul>
-<h3 id="navigator">NaviGator</h3>
+<h3 id="navigator"><a href="#navigator" id="navigator" class="anchor"></a>NaviGator</h3>
 <p>The algorithm implemented in Alchemist is called NaviGator (Navigation Graphs generAtor), here's a brief description of how it operates: firstly, a certain number of seeds is planted in the environment. Each seed is a square-shaped region of unitary side that will grow maintaining a convex shape. Secondly, planted seeds are extended until possible (i.e. until they are in contact with an obstacle or another seed on each side). Finally, crossings are found between the grown seeds. NaviGator is derived from the <a href="https://www.researchgate.net/profile/G_Youngblood/publication/220978343_Automatically-generated_Convex_Region_Decomposition_for_Real-time_Spatial_Agent_Navigation_in_Virtual_Worlds/links/54510d020cf24884d886f643/Automatically-generated-Convex-Region-Decomposition-for-Real-time-Spatial-Agent-Navigation-in-Virtual-Worlds.pdf">DEACCON algorithm</a> for the generation of navigation meshes.</p>
-<h3 id="generating-navigation-graphs-from-images">Generating navigation graphs from images</h3>
+<h3 id="generating-navigation-graphs-from-images"><a href="#generating-navigation-graphs-from-images" id="generating-navigation-graphs-from-images" class="anchor"></a>Generating navigation graphs from images</h3>
 <p>If your environment is codified as an image (such as the planimetry showed above), generating a navigation graph is straight-forward. All you have to do is mark the areas of the environment where to plant initial seeds in blue (RGB #0000FF). In the image below you can see the generation of the navigation graph showed on the top of the page. The blue regions in the original image indicate where to plant initial seeds. These are then grown and crossings are found between them.</p>
 <p><img src="https://alchemistsimulator.github.io/latest/assets/media/usage/navigation-graph-generation.jpeg" alt="navigation graph generation" /></p>
 <p>Once you have your image ready for the generation of the navigation graph, you can exploit the <code>ImageEnvironmentWithGraph</code> class to produce it for you. This will read your image, extract the positions you marked blue and pass them to the NaviGator algorithm. In other words, that class is capable of reading the visual format we defined in the previous paragraph. Assuming you already know <a href="yaml.md">how to write simulations in YAML</a>, instancing an <code>ImageEnvironmentWithGraph</code> in a simulation file is straight-forward:</p>
@@ -138,16 +153,16 @@
   parameters: [path/to/image.png, 1.0]
 </code></pre>
 <p>The second parameter is the zoom level. As you may see in the API documentation, the <code>ImageEnvironmentWithGraph</code> class exposes a method that will allow you to obtain the generated graph.</p>
-<h4 id="destinations">Destinations</h4>
+<h4 id="destinations"><a href="#destinations" id="destinations" class="anchor"></a>Destinations</h4>
 <p>In Alchemist, navigation graphs can store a set of positions of interest that may be used during navigation (e.g. destinations in an evacuation scenario). You can specify one or more positions of interest providing the coordinates in the constructor of <code>ImageEnvironmentWithGraph</code>:</p>
 <pre><code class="language-yaml">environment:
   type: ImageEnvironmentWithGraph
   parameters: [path/to/image.png, 1.0, 50, 50]
 </code></pre>
 <p>The code above will place a position of interest in (50, 50).</p>
-<h4 id="drawing-navigation-graphs">Drawing navigation graphs</h4>
+<h4 id="drawing-navigation-graphs"><a href="#drawing-navigation-graphs" id="drawing-navigation-graphs" class="anchor"></a>Drawing navigation graphs</h4>
 <p>A simple effect capable to draw the navigation graph of an <code>ImageEnvironmentWithGraph</code> in the gui is available as well. Its name is <code>DrawNavigationGraph</code>, you can just select it from the available effects in the gui to have your graph drawn.</p>
-<h3 id="using-navigator">Using NaviGator</h3>
+<h3 id="using-navigator"><a href="#using-navigator" id="using-navigator" class="anchor"></a>Using NaviGator</h3>
 <p>If your environment is not codified as an image, you can still generate a navigation graph by directly using the NaviGator algorithm. This is contained in the <code>NaviGator.kt</code> file whose only public function is <code>generateNavigationGraph</code>. Let us look at its signature:</p>
 <pre><code class="language-kotlin">fun generateNavigationGraph(
     origin: Euclidean2DPosition = Euclidean2DPosition(0.0, 0.0),
@@ -2119,7 +2134,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersection">CircleSegmentIntersection</a>
     </li>
     
 
@@ -4151,7 +4166,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersection">LinesIntersection</a>
     </li>
     
 
@@ -5351,7 +5366,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersection">SegmentsIntersection</a>
     </li>
     
 
@@ -5359,7 +5374,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionTypes">SegmentsIntersectionTypes</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionType">SegmentsIntersectionType</a>
     </li>
     
 
@@ -6039,7 +6054,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devgn+fc2a7fae. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devj8+53c8559d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6056,19 +6071,17 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_orchidCustomizations.js"></script>
-<script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/orchidSearch.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-asciidoc.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-python.min.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-groovy.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-yaml.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-asciidoc.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-markdown.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
 <!-- end:inject scripts -->
 
 </body>

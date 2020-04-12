@@ -13,7 +13,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<meta name="generator" content="Orchid 0.17.6"/>
+<meta name="generator" content="Orchid 0.20.0-SNAPSHOT"/>
 <link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
 
 
@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgn+fc2a7fae"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devj8+53c8559d"};
 </script>
 
 
@@ -54,7 +54,7 @@
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
 <!-- Page Template: wiki, page -->
-<!-- Resolved Page Template:  -->
+<!-- Resolved Page Template: templates/pages/page.peb -->
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
@@ -69,12 +69,27 @@
 
 
 
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
 </head>
@@ -124,7 +139,7 @@ My suggestion is to use the tutorial &quot;<a href="https://learnxinyminutes.com
 it should provide a good YAML guide (surely sufficient to follow the tutorial).</p>
 <p>Alchemist expects a YAML map as input. In the following section, we'll discuss which keys it expects.
 Of course, users are free to use all the YAML features (e.g. anchors) to organize their code and reduce duplication.</p>
-<h2 id="choosing-an-incarnation">Choosing an incarnation</h2>
+<h2 id="choosing-an-incarnation"><a href="#choosing-an-incarnation" id="choosing-an-incarnation" class="anchor"></a>Choosing an incarnation</h2>
 <p>The <code>incarnation</code> key is mandatory.
 Actually, it's the only mandatory key.
 The YAML parser expects a string value.
@@ -138,7 +153,7 @@ name is closest to the string.</p>
 <pre><code class="language-yaml">incarnation: biochemistry
 </code></pre>
 <p><em>Note:</em> this is also the most minimal valid alchemist specification</p>
-<h2 id="loading-arbitrary-java-classes-with-the-typeparameters-syntax">Loading arbitrary Java classes with the <code>type</code>/<code>parameters</code> syntax</h2>
+<h2 id="loading-arbitrary-java-classes-with-the-typeparameters-syntax"><a href="#loading-arbitrary-java-classes-with-the-typeparameters-syntax" id="loading-arbitrary-java-classes-with-the-typeparameters-syntax" class="anchor"></a>Loading arbitrary Java classes with the <code>type</code>/<code>parameters</code> syntax</h2>
 <p>One important aspect of the Alchemist YAML is the ability to let the user control which actual Java classes should be
 loaded inside a simulation, and which constructor should be used to do so.
 Almost every entity of an Alchemist simulation can be instanced using arbitrary Java classes that implement the required
@@ -170,12 +185,12 @@ parameters: [4, foo]
 </code></pre>
 <p>As you can easily infer, the value of <code>parameters</code> must be a YAML list.</p>
 <p>Don't despair if the class loading system is still unclear: it is used pervasively and it will become clearer with the examples in the next sections.</p>
-<h2 id="setting-up-the-environment">Setting up the environment</h2>
+<h2 id="setting-up-the-environment"><a href="#setting-up-the-environment" id="setting-up-the-environment" class="anchor"></a>Setting up the environment</h2>
 <p>The <code>environment</code> key is used to load the <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a> implementation.
 It is optional and it defaults to a <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments/Continuous2DEnvironment">continuous bidimensional space</a>.
 If no fully qualified environment name is provided for class loading, Alchemist uses the package
 <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments">it.unibo.alchemist.model.implementations.environments</a> to search for the class.</p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples"><a href="#examples" id="examples" class="anchor"></a>Examples</h3>
 <p>The following simulations are equivalent, and load the default environment (which is incarnation independent, here
 <code>protelis</code> is picked, but it works for any other incarnation as well):</p>
 <pre><code class="language-yaml">incarnation: protelis
@@ -217,12 +232,12 @@ environment:
 </code></pre>
 <p>The environments shipped with the distribution can be found in the package
 <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/environments">it.unibo.alchemist.model.implementations.environments</a>.</p>
-<h2 id="declaring-variables">Declaring variables</h2>
+<h2 id="declaring-variables"><a href="#declaring-variables" id="declaring-variables" class="anchor"></a>Declaring variables</h2>
 <p>The <code>variables</code> section lists variable simulation values.
 A variable defines some kind of value that can be referenced in the simulation file.</p>
 <p>There are two kinds of variables: free and dependent variables.
 The difference is that variables of the latter kind can always be computed given the values of all the other variables.</p>
-<h3 id="free-variables">Free variables</h3>
+<h3 id="free-variables"><a href="#free-variables" id="free-variables" class="anchor"></a>Free variables</h3>
 <p>Free variables define a set of values and a default.
 Their main scope is enabling Alchemist to run a set of simulations with different parameters (values of variables)
 without the need to duplicate the simulation code.
@@ -230,15 +245,15 @@ When used in this mode (called &quot;batch mode&quot;),
 Alchemist by default produces the cartesian product of all the variables values' selected for the batch,
 and runs a simulation for each combination.
 If the simulation is not executed as batch, then the default value is used.</p>
-<h4 id="linear-variables">Linear variables</h4>
-<h4 id="geometric-variables">Geometric variables</h4>
-<h4 id="arbitrary-valued-variables">Arbitrary-valued variables</h4>
+<h4 id="linear-variables"><a href="#linear-variables" id="linear-variables" class="anchor"></a>Linear variables</h4>
+<h4 id="geometric-variables"><a href="#geometric-variables" id="geometric-variables" class="anchor"></a>Geometric variables</h4>
+<h4 id="arbitrary-valued-variables"><a href="#arbitrary-valued-variables" id="arbitrary-valued-variables" class="anchor"></a>Arbitrary-valued variables</h4>
 <pre><code class="language-yaml">variables:
   myvar: &amp;myvar
     type: ArbitraryVariable
     parameters: [&quot;defaultValue&quot;, [&quot;value1&quot;,&quot;value2&quot;,&quot;value3&quot;]]
 </code></pre>
-<h3 id="dependent-variables">Dependent variables</h3>
+<h3 id="dependent-variables"><a href="#dependent-variables" id="dependent-variables" class="anchor"></a>Dependent variables</h3>
 <p>Some variables are combination of free parameters.
 Let's suppose that we want to deploy on a circle, but for some reason (e.g. because it is required by the constructor of some action) we need to compute and have available radius and perimeter.
 We don't need to control both of them: the perimeter can be computed.
@@ -268,7 +283,7 @@ Please note that the simulator variable dependency resolution system is not desi
 so even though the problem has a well formed mathematical solution the actual variable resolution may fail;
 e.g. if <code>a</code> is defined as <code>2 * b + 1</code>, and <code>b</code> is defined as <code>4 - a</code>, the system <strong>won't</strong> bind <code>a</code> to <code>3</code> and <code>b</code> to <code>1</code>,
 but will simply fail complaining about circular dependencies.</p>
-<h3 id="using-different-languages">Using different languages</h3>
+<h3 id="using-different-languages"><a href="#using-different-languages" id="using-different-languages" class="anchor"></a>Using different languages</h3>
 <p>In order to use a language different than Groovy, the user may specify it explicitly by using the <code>language</code> keyword.
 For example, Scala can be used:</p>
 <pre><code class="language-yaml">variables:
@@ -318,7 +333,7 @@ and you want to embed your favorite JSR-233 compatible scripting language, you s
 In case they are provided, such engines can be used without any additional effort.
 Javascript used to be the default for Alchemist, but it has been replaced by Groovy since
 <a href="https://openjdk.java.net/jeps/335">Nashorn, the interpreter embedded in OpenJDK, is deprecated</a>.</p>
-<h4 id="multiline-programs">Multiline programs</h4>
+<h4 id="multiline-programs"><a href="#multiline-programs" id="multiline-programs" class="anchor"></a>Multiline programs</h4>
 <p>Sometimes data manipulation can get tricky and trivial scripting may no longer be enough.
 In such cases, and especially with modern languages that allow for a reduced usage of cerimonial semicolons (such as Kotlin and Scala), it can be useful to write multiline programs.
 This can be achieved in YAML by using the pipe <code>|</code> operator, as exemplified in the following snippet:</p>
@@ -340,8 +355,8 @@ This can be achieved in YAML by using the pipe <code>|</code> operator, as exemp
     language: kotlin
 </code></pre>
 <p>If the string begins with a <code>|</code>, its contents preserve newlines, thus allowing for multiline scripts of arbitrary complexity.</p>
-<h3 id="using-variables">Using variables</h3>
-<h2 id="controlling-the-reproducibility">Controlling the reproducibility</h2>
+<h3 id="using-variables"><a href="#using-variables" id="using-variables" class="anchor"></a>Using variables</h3>
+<h2 id="controlling-the-reproducibility"><a href="#controlling-the-reproducibility" id="controlling-the-reproducibility" class="anchor"></a>Controlling the reproducibility</h2>
 <p>Alchemist simulations can be reproduced by feeding them the same random number generator.
 This assumption is true as far as the custom component in use:</p>
 <ul>
@@ -378,7 +393,7 @@ seeds:
   scenario: *random
   simulation: *random
 </code></pre>
-<h2 id="defining-the-network">Defining the network</h2>
+<h2 id="defining-the-network"><a href="#defining-the-network" id="defining-the-network" class="anchor"></a>Defining the network</h2>
 <p>The <code>network-model</code> key is used to load the implementation of <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/LinkingRule">LinkingRule</a> to be used in the simulation,
 which determines the neighborhood of every node.
 The key is optional, but defaults to <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/linkingrules/NoLinks">NoLinks</a>, so if unspecified nodes in the environment don't get
@@ -397,7 +412,7 @@ Omitting such key is equivalent to writing any of the following:</p>
 </code></pre>
 <p>If no fully qualified linking rule name is provided for class loading, Alchemist uses the package
 <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/linkingrules">it.unibo.alchemist.model.implementations.linkingrules</a> to search for the class.</p>
-<h3 id="linking-nodes-based-on-distance">Linking nodes based on distance</h3>
+<h3 id="linking-nodes-based-on-distance"><a href="#linking-nodes-based-on-distance" id="linking-nodes-based-on-distance" class="anchor"></a>Linking nodes based on distance</h3>
 <p>One of the most common ways of linking nodes is to connect those which are close enough to each other. To do so, you can
 use the class <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/linkingrules/ConnectWithinDistance">ConnectWithinDistance</a>, passing a parameter representing the maximum connection distance.
 Note that such distance depends on the environment: while the definition of distance is straightforward for euclidean
@@ -411,13 +426,13 @@ distance between <code>[44.133254, 12.237770]</code> and <code>[44.146680, 12.25
   # Link together all the nodes closer than 100 according to the distance function
   parameters: [100]
 </code></pre>
-<h2 id="displacing-nodes">Displacing nodes</h2>
+<h2 id="displacing-nodes"><a href="#displacing-nodes" id="displacing-nodes" class="anchor"></a>Displacing nodes</h2>
 <p>The <code>displacements</code> section lists the node locations at the beginning of the simulation.
 Each displacement type extends the interface <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Displacement">Displacement</a>. If no fully qualified displacement name is
 provided for class loading,
 Alchemist uses the package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements">it.unibo.alchemist.loader.displacements</a> to search for the class.
 The YAML key associated to displacements is <code>in</code>.</p>
-<h3 id="displacing-on-specific-positions">Displacing on specific positions</h3>
+<h3 id="displacing-on-specific-positions"><a href="#displacing-on-specific-positions" id="displacing-on-specific-positions" class="anchor"></a>Displacing on specific positions</h3>
 <p>The following example places a single node in the (0, 0) <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/displacements/Point">Point</a>.</p>
 <pre><code class="language-yaml">displacements:
   # &quot;in&quot; entries, where each entry defines a group of nodes
@@ -426,13 +441,13 @@ The YAML key associated to displacements is <code>in</code>.</p>
       # Using a constructor taking (x,y) coordinates
       parameters: [0, 0]
 </code></pre>
-<h3 id="displacing-multiple-nodes-on-specific-positions">Displacing multiple nodes on specific positions</h3>
+<h3 id="displacing-multiple-nodes-on-specific-positions"><a href="#displacing-multiple-nodes-on-specific-positions" id="displacing-multiple-nodes-on-specific-positions" class="anchor"></a>Displacing multiple nodes on specific positions</h3>
 <pre><code class="language-yaml">displacements:
   - in:
       type: SpecificPositions
       parameters: [[0,1],[2,2],[3,4]]
 </code></pre>
-<h3 id="displacing-multiple-nodes-at-once">Displacing multiple nodes at once</h3>
+<h3 id="displacing-multiple-nodes-at-once"><a href="#displacing-multiple-nodes-at-once" id="displacing-multiple-nodes-at-once" class="anchor"></a>Displacing multiple nodes at once</h3>
 <p>This example places 10000 nodes randomly in a <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Circle">Circle</a> with center in (0, 0) and radius 10.</p>
 <pre><code class="language-yaml">displacements:
   - in:
@@ -446,7 +461,7 @@ horizontally and vertically, and whose position is not exact but randomly pertur
       type: Grid
       parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
 </code></pre>
-<h3 id="customizing-the-node-type">Customizing the node type</h3>
+<h3 id="customizing-the-node-type"><a href="#customizing-the-node-type" id="customizing-the-node-type" class="anchor"></a>Customizing the node type</h3>
 <p>In order to specify a particular node implementation you want to put inside the environment you can use the <code>nodes</code> key
 followed by the name of the class and the parameters required to build it.</p>
 <p>100 <code>MyCustomNodeImpl</code> nodes, whose constructor needs only the environment, placed in a circle with center in (0, 0) and
@@ -467,7 +482,7 @@ radius 20.</p>
     nodes:
       type: MyCustomNodeImpl
 </code></pre>
-<h3 id="customizing-the-nodes-content">Customizing the nodes content</h3>
+<h3 id="customizing-the-nodes-content"><a href="#customizing-the-nodes-content" id="customizing-the-nodes-content" class="anchor"></a>Customizing the nodes content</h3>
 <p>It is possible to set the content of the nodes in a deployment.
 Node contents are defined in terms of molecules and their corresponding concentration.
 As such, they depend on the specific incarnation in use.</p>
@@ -511,7 +526,7 @@ the <code>source</code> molecule.</p>
         molecule: source
         concentration: true
 </code></pre>
-<h2 id="writing-behaviors-reactions">Writing behaviors (Reactions)</h2>
+<h2 id="writing-behaviors-reactions"><a href="#writing-behaviors-reactions" id="writing-behaviors-reactions" class="anchor"></a>Writing behaviors (Reactions)</h2>
 <p>Nodes can be programmed using reactions.
 Reaction are usually highly dependent on the specific incarnation.</p>
 <pre><code class="language-yaml"># Variable representing the program to be executed
@@ -529,7 +544,7 @@ displacements:
       # the grid nodes
       - *gradient
 </code></pre>
-<h3 id="triggers">Triggers</h3>
+<h3 id="triggers"><a href="#triggers" id="triggers" class="anchor"></a>Triggers</h3>
 <pre><code class="language-yaml">pools:
   - pool:
       - time-distribution:
@@ -540,7 +555,7 @@ displacements:
         - type: MyActionType
           parameters: [...] #
 </code></pre>
-<h2 id="layers">Layers</h2>
+<h2 id="layers"><a href="#layers" id="layers" class="anchor"></a>Layers</h2>
 <p>It is possible to define overlays (layers) of data that can be sensed everywhere in the environment.
 Layers can be used to model physical properties, such as pollution, light, temperature, and so on.
 Conversely than readings from nodes' contents, layers have no dependency optimization.
@@ -556,7 +571,7 @@ and possibly the parameters needed for intializing the type of layer you have ch
     molecule: bar
     parameters: [0.0, 0.0, 5.0, 10.0]
 </code></pre>
-<h2 id="terminating-the-simulation-if-a-condition-is-met">Terminating the simulation if a condition is met</h2>
+<h2 id="terminating-the-simulation-if-a-condition-is-met"><a href="#terminating-the-simulation-if-a-condition-is-met" id="terminating-the-simulation-if-a-condition-is-met" class="anchor"></a>Terminating the simulation if a condition is met</h2>
 <p>Alchemist supports the possibility to write termination conditions for any simulation.
 Termination conditions are checked after every event, and, if met, cause the immediate termination of a simulation.
 Termination conditions are expected to be found in the <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/terminators">it.unibo.alchemist.model.implementations.terminators</a> package.</p>
@@ -569,7 +584,7 @@ Multiple terminators are allowed, the first terminator matching causes the termi
   - type: StableForSteps
     parameters: [100, 10]
 </code></pre>
-<h3 id="terminating-the-simulation-after-some-time">Terminating the simulation after some time</h3>
+<h3 id="terminating-the-simulation-after-some-time"><a href="#terminating-the-simulation-after-some-time" id="terminating-the-simulation-after-some-time" class="anchor"></a>Terminating the simulation after some time</h3>
 <p>One of the simplest terminators availables allows for declaring a simulation completed when a certain simulated time is reached.
 In the following example, it is used in conjunction with a number of variables, showing how it's possible to use such
 variables to produce batches of simulations terminating at different times.</p>
@@ -583,7 +598,7 @@ terminate:
   - type: AfterTime
     parameters: [*simulationEnd]
 </code></pre>
-<h3 id="terminating-the-simulation-if-the-environment-is-not-changing">Terminating the simulation if the environment is not changing</h3>
+<h3 id="terminating-the-simulation-if-the-environment-is-not-changing"><a href="#terminating-the-simulation-if-the-environment-is-not-changing" id="terminating-the-simulation-if-the-environment-is-not-changing" class="anchor"></a>Terminating the simulation if the environment is not changing</h3>
 <p>A terminator is provided for terminating when a simulation is &quot;stable&quot; (nothing changes in terms of positions and nodes' content).
 The class implementing it is <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/terminators/StableForSteps">StableForSteps</a>.
 The following code snippet exemplifies its usage:</p>
@@ -2543,7 +2558,7 @@ The following code snippet exemplifies its usage:</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersection">CircleSegmentIntersection</a>
     </li>
     
 
@@ -4575,7 +4590,7 @@ The following code snippet exemplifies its usage:</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersection">LinesIntersection</a>
     </li>
     
 
@@ -5775,7 +5790,7 @@ The following code snippet exemplifies its usage:</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersection">SegmentsIntersection</a>
     </li>
     
 
@@ -5783,7 +5798,7 @@ The following code snippet exemplifies its usage:</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionTypes">SegmentsIntersectionTypes</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionType">SegmentsIntersectionType</a>
     </li>
     
 
@@ -6463,7 +6478,7 @@ The following code snippet exemplifies its usage:</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devgn+fc2a7fae. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devj8+53c8559d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6480,19 +6495,17 @@ The following code snippet exemplifies its usage:</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_orchidCustomizations.js"></script>
-<script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/orchidSearch.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-asciidoc.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-python.min.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-groovy.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-yaml.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-asciidoc.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-markdown.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
 <!-- end:inject scripts -->
 
 </body>

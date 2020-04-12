@@ -6495,7 +6495,7 @@
                                 },
                                 "description": "",
                                 "title": "Segment2D",
-                                "content": "<p>Defines a segment from first to second in an euclidean bidimensional space.<init>\nDefines a segment from first to second in an euclidean bidimensional space.\nxAxisAligned\nChecks whether the segment is aligned to the x axis.\nyAxisAligned\nChecks whether the segment is aligned to the y axis.\nisAxisAligned\nChecks whether the segment is axis-aligned.\nslope\nComputes the slope of the line passing through a couple of points.\nIf the points coincide NaN is the result.\ndegenerate\nAn edge is degenerate if its points coincide (and its length is zero).\nmidPoint\nComputes the medium point of the current segment.\nfirst<\/p>\n<p>second<\/p>\n<p>toVector\nMutates an edge to a vector. In particular, the vector representing the\nmovement from the first point to the second point of the edge.\ncontains\nChecks whether the segment (represented by a pair of positions)\ncontains the given point.\nclosestPointTo\nFinds the other of the segment which is closest to the provided position.\ndistanceTo\nComputes the distance between the current segment and a given point.\ndistanceTo\nComputes the (minimum) distance between two segments.<\/p>\n"
+                                "content": "<p>Defines a segment from first to second in an euclidean bidimensional space.<init>\nDefines a segment from first to second in an euclidean bidimensional space.\nxAxisAligned\nChecks whether the segment is aligned to the x axis.\nyAxisAligned\nChecks whether the segment is aligned to the y axis.\nisAxisAligned\nChecks whether the segment is axis-aligned.\nslope\nComputes the slope of the segment. If the two points coincide (i.e. the segment\nisDegenerate), Double.NaN is the result.\nintercept\nComputes the intercept of the line passing through first and second.\nisDegenerate\nChecks if its points coincide (and its length is zero).\nmidPoint\nComputes the medium point of the segment.\nfirst<\/p>\n<p>second<\/p>\n<p>toVector<\/p>\n<p>contains\nChecks whether the segment contains the given point.\nclosestPointTo\nFinds the point of the segment which is closest to the provided position.\ndistanceTo\nComputes the distance between the segment and a given point.\ndistanceTo\nComputes the (minimum) distance between two segments.<\/p>\n"
                               }]
                             },
                             "Euclidean2DTransformation": {
@@ -8652,6 +8652,22 @@
                           "content": "<p>Anything which can be represented as a <a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a>.<\/p>\n<p>asAwtShape<\/p>\n"
                         }]
                       },
+                      "CircleSegmentIntersection": {
+                        "ownKey": "CircleSegmentIntersection",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/geometry",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "CircleSegmentIntersection",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersection"
+                          },
+                          "description": "",
+                          "title": "CircleSegmentIntersection",
+                          "content": "<p>Describes the result of the intersection between a circle and a segment in an euclidean space.<init><\/p>\n<p><init>\nDescribes the result of the intersection between a circle and a segment in an euclidean space.\ntype\nthe type of intersection.\npoint1\nthe first point of intersection (if present).\npoint2\nthe second point of intersection (if present).<\/p>\n"
+                        }]
+                      },
                       "AdimensionalShape": {
                         "ownKey": "AdimensionalShape",
                         "ownPages": [{
@@ -8684,52 +8700,36 @@
                           "content": "<p>Base class for GeometricTransformation providing a standard implementation for\nGeometricShapeFactory.adimensional.<init>\nBase class for GeometricTransformation providing a standard implementation for\nGeometricShapeFactory.adimensional.\norigin\nThe default origin for the shapes.\nadimensional\nA special shape which does not occupy space and does not intersect with any other, not even with itself.<\/p>\n"
                         }]
                       },
-                      "LinesIntersectionResult": {
-                        "ownKey": "LinesIntersectionResult",
+                      "SegmentsIntersection": {
+                        "ownKey": "SegmentsIntersection",
                         "ownPages": [{
                           "reference": {
                             "path": "it/unibo/alchemist/model/implementations/geometry",
                             "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "LinesIntersectionResult",
+                            "fileName": "SegmentsIntersection",
                             "extension": "html",
                             "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult"
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersection"
                           },
                           "description": "",
-                          "title": "LinesIntersectionResult",
-                          "content": "<p>Describes the result of the intersection between two lines in an euclidean space.<init>\nDescribes the result of the intersection between two lines in an euclidean space.\ntype<\/p>\n<p>point<\/p>\n"
+                          "title": "SegmentsIntersection",
+                          "content": "<p>Describes the result of the intersection between two segments in an euclidean space.<init><\/p>\n<p><init>\nDescribes the result of the intersection between two segments in an euclidean space.\ntype\nthe type of intersection.\npoint\nthe intersection point (if present).<\/p>\n"
                         }]
                       },
-                      "SegmentsIntersectionResult": {
-                        "ownKey": "SegmentsIntersectionResult",
+                      "LinesIntersection": {
+                        "ownKey": "LinesIntersection",
                         "ownPages": [{
                           "reference": {
                             "path": "it/unibo/alchemist/model/implementations/geometry",
                             "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "SegmentsIntersectionResult",
+                            "fileName": "LinesIntersection",
                             "extension": "html",
                             "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult"
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersection"
                           },
                           "description": "",
-                          "title": "SegmentsIntersectionResult",
-                          "content": "<p>Describes the result of the intersection between two segments in an euclidean space.<init>\nDescribes the result of the intersection between two segments in an euclidean space.\ntype<\/p>\n<p>point<\/p>\n"
-                        }]
-                      },
-                      "CircleSegmentIntersectionResult": {
-                        "ownKey": "CircleSegmentIntersectionResult",
-                        "ownPages": [{
-                          "reference": {
-                            "path": "it/unibo/alchemist/model/implementations/geometry",
-                            "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "CircleSegmentIntersectionResult",
-                            "extension": "html",
-                            "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult"
-                          },
-                          "description": "",
-                          "title": "CircleSegmentIntersectionResult",
-                          "content": "<p>Describes the result of the intersection between a circle and a segment in an euclidean space.<init>\nDescribes the result of the intersection between a circle and a segment in an euclidean space.\ntype<\/p>\n<p>point1<\/p>\n<p>point2<\/p>\n"
+                          "title": "LinesIntersection",
+                          "content": "<p>Describes the result of the intersection between two lines in an euclidean space.<init><\/p>\n<p><init>\nDescribes the result of the intersection between two lines in an euclidean space.\ntype\nthe type of intersection.\npoint\nthe intersection point (if present).<\/p>\n"
                         }]
                       },
                       "CircleSegmentIntersectionType": {
@@ -8745,7 +8745,23 @@
                           },
                           "description": "",
                           "title": "CircleSegmentIntersectionType",
-                          "content": ""
+                          "content": "<p>In euclidean geometry, the intersection between a segment and a circle can be an EMPTY\nset, a POINT or a PAIR of points.<\/p>\n"
+                        }]
+                      },
+                      "SegmentsIntersectionType": {
+                        "ownKey": "SegmentsIntersectionType",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/geometry",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "SegmentsIntersectionType",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionType"
+                          },
+                          "description": "",
+                          "title": "SegmentsIntersectionType",
+                          "content": "<p>In euclidean geometry, the intersection of two segments can be an EMPTY set, a POINT, or a\nSEGMENT (in other words, infinite points).<\/p>\n"
                         }]
                       },
                       "DoubleInterval": {
@@ -8849,22 +8865,6 @@
                           }]
                         }}
                       },
-                      "SegmentsIntersectionTypes": {
-                        "ownKey": "SegmentsIntersectionTypes",
-                        "ownPages": [{
-                          "reference": {
-                            "path": "it/unibo/alchemist/model/implementations/geometry",
-                            "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "SegmentsIntersectionTypes",
-                            "extension": "html",
-                            "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionTypes"
-                          },
-                          "description": "",
-                          "title": "SegmentsIntersectionTypes",
-                          "content": "<p>In euclidean geometry, the intersection of two segments can be\nan empty set, a point, or a segment (in other words, infinite points).<\/p>\n"
-                        }]
-                      },
                       "LinesIntersectionType": {
                         "ownKey": "LinesIntersectionType",
                         "ownPages": [{
@@ -8878,7 +8878,7 @@
                           },
                           "description": "",
                           "title": "LinesIntersectionType",
-                          "content": "<p>In euclidean geometry, the intersection of two lines can be\nan empty set, a point, or a line (in other words, infinite points).<\/p>\n"
+                          "content": "<p>In euclidean geometry, the intersection of two lines can be an EMPTY set, a POINT,\nor a LINE (in other words, infinite points).<\/p>\n"
                         }]
                       }
                     },
@@ -8893,7 +8893,7 @@
                       },
                       "description": "",
                       "title": "it.unibo.alchemist.model.implementations.geometry",
-                      "content": "<p>isInBoundaries\nChecks whether the given edge is inside a rectangular region described by an origin\npoint and width and height values (only positive).\nisInBoundaries\nChecks whether the given point is inside a rectangular region described by an origin\npoint and width and height values (only positive).\nareCollinear\nDetermines if three points are collinear (i.e. they lie on the same line).\ncreateSegment\nCreates an <a href=\"#\">Euclidean2DSegment<\/a>. x2 defaults to x1 and y2 defaults to y1.\nintersectionLines\nFinds the intersection of two lines represented by two segments.\nSuch segments are required not to be degenerate (of length 0).\nintersection\nFinds the intersection point of two given segments (if exists). This method is\nable to deal with degenerate edges (of length zero) and collinear segments.\nintersection\nFinds the intersection between a circle and a segment.\nvertices\nObtains the vertices of a polygonal shape. Any curved segment connecting\ntwo points will be considered as a straight line between them.\nliesBetween\nChecks if a value lies between two values (included) provided in any order.<\/p>\n"
+                      "content": "<p>isInBoundaries\nChecks whether the given segment is inside a rectangular region described by an origin\npoint and width and height values (only positive).\nisInBoundaries\nChecks whether the given point is inside a rectangular region described by an origin\npoint and width and height values (only positive).\nareCollinear\nDetermines if three points are collinear (i.e. they lie on the same line).\ncreateSegment\nCreates a Segment2D. x2 defaults to x1 and y2 defaults to y1.\nlinesIntersection\nFinds the intersection of two lines represented by segments. Degenerate segments (of zero\nlength) are not supported.\nintersection\nFinds the intersection point of two given segments. This method is able to deal with degenerate\nand collinear segments.\nintersection\nFinds the intersection between a segment and a circle.\nvertices\nObtains the vertices of a polygonal shape. Any curved segment connecting\ntwo points will be considered as a straight line between them.\nliesBetween\nChecks if a double value lies between two values (included) provided in any order.<\/p>\n"
                     }]
                   },
                   "reactions": {
@@ -9572,7 +9572,7 @@
                           },
                           "description": "",
                           "title": "Seek2D",
-                          "content": "<p>Seek behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<init>\nSeek behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<\/p>\n<p>interpolatePositions<\/p>\n"
+                          "content": "<p>Seek behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<init>\nSeek behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
                         }]
                       },
                       "RemoveNode": {
@@ -9620,7 +9620,7 @@
                           },
                           "description": "",
                           "title": "SteeringActionImpl",
-                          "content": "<p>Generic implementation of an action adhering the SteeringAction interface.<init>\nGeneric implementation of an action adhering the SteeringAction interface.<\/p>\n<p>cloneAction<\/p>\n<p>interpolatePositions<\/p>\n<p>nextPosition\nThe position the owner of this action moves to when it is executed.\ntarget\nThe position the owner of this action moves towards.<\/p>\n"
+                          "content": "<p>Generic implementation of an action adhering the SteeringAction interface.<init>\nGeneric implementation of an action adhering the SteeringAction interface.<\/p>\n<p>cloneAction<\/p>\n<p>interpolatePositions\nNext RELATIVE position.\nnextPosition\nThe position the owner of this action moves to when it is executed.\ntarget\nThe position the owner of this action moves towards.<\/p>\n"
                         }]
                       },
                       "TargetWalker": {
@@ -9828,7 +9828,7 @@
                           },
                           "description": "",
                           "title": "Flee",
-                          "content": "<p>Move the agent away from a target position. It's the opposite of Seek.<init>\nMove the agent away from a target position. It's the opposite of Seek.<\/p>\n<p>interpolatePositions<\/p>\n"
+                          "content": "<p>Move the agent away from a target position. It's the opposite of Seek.<init>\nMove the agent away from a target position. It's the opposite of Seek.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
                         }]
                       },
                       "SAPERENeighborAgent": {
@@ -10102,7 +10102,7 @@
                           },
                           "description": "",
                           "title": "ObstacleAvoidance",
-                          "content": "<p>Move the agent avoiding potential obstacles in its path.<init>\nMove the agent avoiding potential obstacles in its path.<\/p>\n<p>interpolatePositions<\/p>\n"
+                          "content": "<p>Move the agent avoiding potential obstacles in its path.<init>\nMove the agent avoiding potential obstacles in its path.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
                         }]
                       },
                       "SAPEREWalker": {
@@ -10326,7 +10326,7 @@
                           },
                           "description": "",
                           "title": "Cohesion",
-                          "content": "<p>Move the agent towards the other members of his group.<init>\nMove the agent towards the other members of his group.<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.\ninterpolatePositions<\/p>\n"
+                          "content": "<p>Move the agent towards the other members of his group.<init>\nMove the agent towards the other members of his group.<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.\ninterpolatePositions\nNext RELATIVE position.<\/p>\n"
                         }]
                       },
                       "AddJunctionInCell": {
@@ -10358,7 +10358,7 @@
                           },
                           "description": "",
                           "title": "Separation",
-                          "content": "<p>Move the agent away from the pedestrians near to him.<init>\nMove the agent away from the pedestrians near to him.<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.\ninterpolatePositions<\/p>\n"
+                          "content": "<p>Move the agent away from the pedestrians near to him.<init>\nMove the agent away from the pedestrians near to him.<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.\ninterpolatePositions\nNext RELATIVE position.<\/p>\n"
                         }]
                       },
                       "LsaAllNeighborsAction": {
@@ -10422,7 +10422,7 @@
                           },
                           "description": "",
                           "title": "Combine",
-                          "content": "<p>Combination of multiple steering actions.<init>\nCombination of multiple steering actions.<\/p>\n<p>interpolatePositions<\/p>\n"
+                          "content": "<p>Combination of multiple steering actions.<init>\nCombination of multiple steering actions.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
                         }]
                       },
                       "LsaCountNeighborsAction": {
@@ -10486,7 +10486,7 @@
                           },
                           "description": "",
                           "title": "Wander",
-                          "content": "<p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<init>\nGive the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<\/p>\n<p>interpolatePositions<\/p>\n"
+                          "content": "<p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<init>\nGive the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
                         }]
                       },
                       "SAPEREAgent": {
@@ -10854,7 +10854,7 @@
                           },
                           "description": "",
                           "title": "FlowFieldSteeringAction",
-                          "content": "<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<init>\nGeneric implementation of an action influenced by the concentration of a given molecule in the environment.<\/p>\n<p>interpolatePositions<\/p>\n"
+                          "content": "<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<init>\nGeneric implementation of an action influenced by the concentration of a given molecule in the environment.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
                         }]
                       },
                       "FakeMove": {

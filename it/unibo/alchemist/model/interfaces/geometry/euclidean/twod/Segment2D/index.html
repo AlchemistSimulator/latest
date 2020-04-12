@@ -13,7 +13,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<meta name="generator" content="Orchid 0.17.6"/>
+<meta name="generator" content="Orchid 0.20.0-SNAPSHOT"/>
 <link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
 
 
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.17.6","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devgn+fc2a7fae"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devj8+53c8559d"};
 </script>
 
 
@@ -50,7 +50,7 @@
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
 <!-- Page Template: kotlindocClass, page -->
-<!-- Resolved Page Template:  -->
+<!-- Resolved Page Template: templates/pages/kotlindocClass.peb -->
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
@@ -65,13 +65,28 @@
 
 
 
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+    <!-- start:inject meta-components -->
+    
+    <!-- end:inject meta-components -->
+
+
+
+
+
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_main.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/editorial_orchidCustomizations.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/css/orchidSearch.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css" />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css" />
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css" />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
 </head>
@@ -178,19 +193,30 @@
         slope: Double
         </code>
     </div>
-    <div class="panel-body"><p>Computes the slope of the line passing through a couple of points.
-If the points coincide NaN is the result.</p>
+    <div class="panel-body"><p>Computes the slope of the segment. If the two points coincide (i.e. the segment
+isDegenerate), Double.NaN is the result.</p>
 </div>
 </div>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="field__degenerate__Boolean">
+    <div class="panel-heading" id="field__intercept__Double">
         <code>
-        degenerate: Boolean
+        intercept: Double
         </code>
     </div>
-    <div class="panel-body"><p>An edge is degenerate if its points coincide (and its length is zero).</p>
+    <div class="panel-body"><p>Computes the intercept of the line passing through first and second.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__isDegenerate__Boolean">
+        <code>
+        isDegenerate: Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>Checks if its points coincide (and its length is zero).</p>
 </div>
 </div>
 
@@ -201,7 +227,7 @@ If the points coincide NaN is the result.</p>
         midPoint: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
         </code>
     </div>
-    <div class="panel-body"><p>Computes the medium point of the current segment.</p>
+    <div class="panel-body"><p>Computes the medium point of the segment.</p>
 </div>
 </div>
 
@@ -279,9 +305,7 @@ If the points coincide NaN is the result.</p>
         fun toVector(): P
         </code>
     </div>
-    <div class="panel-body"><p>Mutates an edge to a vector. In particular, the vector representing the
-movement from the first point to the second point of the edge.</p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -311,13 +335,12 @@ movement from the first point to the second point of the edge.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_contains_other__P___Boolean">
+    <div class="panel-heading" id="method__fun_contains_point__P___Boolean">
         <code>
-        fun contains(other: P): Boolean
+        fun contains(point: P): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Checks whether the segment (represented by a pair of positions)
-contains the given point.</p>
+    <div class="panel-body"><p>Checks whether the segment contains the given point.</p>
 </div>
 
     
@@ -330,7 +353,7 @@ contains the given point.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        other: P
+        point: P
         </code>
         
     </li>
@@ -353,12 +376,12 @@ contains the given point.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_closestPointTo_other__P___P">
+    <div class="panel-heading" id="method__fun_closestPointTo_point__P___P">
         <code>
-        fun closestPointTo(other: P): P
+        fun closestPointTo(point: P): P
         </code>
     </div>
-    <div class="panel-body"><p>Finds the other of the segment which is closest to the provided position.</p>
+    <div class="panel-body"><p>Finds the point of the segment which is closest to the provided position.</p>
 </div>
 
     
@@ -371,7 +394,7 @@ contains the given point.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        other: P
+        point: P
         </code>
         
     </li>
@@ -399,7 +422,7 @@ contains the given point.</p>
         fun distanceTo(point: P): Double
         </code>
     </div>
-    <div class="panel-body"><p>Computes the distance between the current segment and a given point.</p>
+    <div class="panel-body"><p>Computes the distance between the segment and a given point.</p>
 </div>
 
     
@@ -2415,7 +2438,7 @@ contains the given point.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersectionResult">CircleSegmentIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/CircleSegmentIntersection">CircleSegmentIntersection</a>
     </li>
     
 
@@ -4447,7 +4470,7 @@ contains the given point.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersectionResult">LinesIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/LinesIntersection">LinesIntersection</a>
     </li>
     
 
@@ -5647,7 +5670,7 @@ contains the given point.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionResult">SegmentsIntersectionResult</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersection">SegmentsIntersection</a>
     </li>
     
 
@@ -5655,7 +5678,7 @@ contains the given point.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionTypes">SegmentsIntersectionTypes</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/SegmentsIntersectionType">SegmentsIntersectionType</a>
     </li>
     
 
@@ -6335,7 +6358,7 @@ contains the given point.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devgn+fc2a7fae. Created with <a href="https://orchid.netlify.com">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devj8+53c8559d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6352,19 +6375,17 @@ contains the given point.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/editorial_orchidCustomizations.js"></script>
-<script  src="https://unpkg.com/lunr/lunr.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/3b7a3a17/assets/js/orchidSearch.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-kotlin.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-asciidoc.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-python.min.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/2e7cda16/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-groovy.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-yaml.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-asciidoc.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-markdown.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-python.min.js"></script>
 <!-- end:inject scripts -->
 
 </body>
