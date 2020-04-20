@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devls+62b0ed89"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devmg+a691fa4f4"};
 </script>
 
 
@@ -143,7 +143,7 @@
 </p>
 <div class="class-description" id="description">
 <p>Weighted steering logic where the weight of each steering action is
-the inverse of its distance from the target.</p>
+the inverse of the pedestrian's distance from the action's target.</p>
 
 </div>
 
@@ -160,13 +160,13 @@ the inverse of its distance from the target.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_env__Environment__pedestrian__Pedestrian_">
+    <div class="panel-heading" id="constructor__constructor_env__Environment__pedestrian__Pedestrian__defaultWeight__Double_">
         <code>
-        constructor(env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>)
+        constructor(env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>, defaultWeight: Double)
         </code>
     </div>
     <div class="panel-body"><p>Weighted steering logic where the weight of each steering action is
-the inverse of its distance from the target.</p>
+the inverse of the pedestrian's distance from the action's target.</p>
 </div>
 
     
@@ -196,6 +196,13 @@ the inverse of its distance from the target.</p>
             <div><pre><code>the owner of the steering action this strategy belongs to.
 </code></pre>
 </div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        defaultWeight: Double
+        </code>
         
     </li>
 
@@ -1305,6 +1312,14 @@ the inverse of its distance from the target.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractGroupSteeringAction">AbstractGroupSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/AbstractLauncher">AbstractLauncher</a>
     </li>
     
@@ -1369,7 +1384,7 @@ the inverse of its distance from the target.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -1418,6 +1433,14 @@ the inverse of its distance from the target.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/AbstractSlideInputManager">AbstractSlideInputManager</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractSteeringAction">AbstractSteeringAction</a>
     </li>
     
 
@@ -4737,7 +4760,23 @@ the inverse of its distance from the target.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
     </li>
     
 
@@ -4786,14 +4825,6 @@ the inverse of its distance from the target.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/OrientingPedestrian2D">OrientingPedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingSteeringBehavior2D">OrientingSteeringBehavior2D</a>
     </li>
     
 
@@ -5665,7 +5696,15 @@ the inverse of its distance from the target.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl">SteeringActionImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget">SteeringActionWithTarget</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionWithTargetImpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6065,7 +6104,7 @@ the inverse of its distance from the target.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devls+62b0ed89. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devmg+a691fa4f4. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devls+62b0ed89"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devmg+a691fa4f4"};
 </script>
 
 
@@ -247,12 +247,12 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun__T__P___P__Pedestrian.targetDistance_env__Environment__action__SteeringAction___Double">
+    <div class="panel-heading" id="method__fun__T__P___P__Pedestrian.targetDistance_env__Environment__action__SteeringActionWithTarget___Double">
         <code>
-        fun &lt;T, P : P&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>.targetDistance(env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, action: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringAction">SteeringAction</a>): Double
+        fun &lt;T, P : P&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>.targetDistance(env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, action: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget">SteeringActionWithTarget</a>): Double
         </code>
     </div>
-    <div class="panel-body"><p>Calculate the distance between this pedestrian current position and the specified steering action target.</p>
+    <div class="panel-body"><p>Calculate the distance between this pedestrian current position and the target of the specified steering action.</p>
 </div>
 
     
@@ -287,7 +287,7 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        action: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringAction">SteeringAction</a>
+        action: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget">SteeringActionWithTarget</a>
         </code>
         
             <br><br>
@@ -1471,6 +1471,14 @@ More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractGroupSteeringAction">AbstractGroupSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/AbstractLauncher">AbstractLauncher</a>
     </li>
     
@@ -1535,7 +1543,7 @@ More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -1584,6 +1592,14 @@ More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/AbstractSlideInputManager">AbstractSlideInputManager</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractSteeringAction">AbstractSteeringAction</a>
     </li>
     
 
@@ -4903,7 +4919,23 @@ More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
     </li>
     
 
@@ -4952,14 +4984,6 @@ More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/OrientingPedestrian2D">OrientingPedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingSteeringBehavior2D">OrientingSteeringBehavior2D</a>
     </li>
     
 
@@ -5831,7 +5855,15 @@ More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl">SteeringActionImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget">SteeringActionWithTarget</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionWithTargetImpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6231,7 +6263,7 @@ More information <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">on
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devls+62b0ed89. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devmg+a691fa4f4. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

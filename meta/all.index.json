@@ -5717,6 +5717,22 @@
                               "content": "<p>A cognitive characteristic which has a mental response.<init>\nA cognitive characteristic which has a mental response.<\/p>\n<p>update\nUpdate the current intensity of this characteristic.<\/p>\n"
                             }]
                           },
+                          "AbstractOrientingBehavior": {
+                            "ownKey": "AbstractOrientingBehavior",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "AbstractOrientingBehavior",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior"
+                              },
+                              "description": "",
+                              "title": "AbstractOrientingBehavior",
+                              "content": "<p>The orienting behavior of an OrientingPedestrian.\nThis is a finite state machine, whose only public method is update. As stated in its\ndocumentation, update doesn't move the pedestrian, but only refreshes the internal\nstate of this behavior.\nThe client should move the pedestrian using the desiredPosition value, the reason is\nthat this class is meant to be extended or used via composition to obtain implementations\nof the orienting behavior deriving from different entities of the Alchemist meta-model,\nsuch as Action or Reaction.\nThis class obtains a route from the pedestrian's cognitive map and exploits that and the\nother spatial information available to navigate the environment towards (or in search of)\na destination.\nTwo tasks are left to the derived classes via template method, see computeEdgeRankings\nand crossingPoint.<init>\nThe orienting behavior of an OrientingPedestrian.\nThis is a finite state machine, whose only public method is update. As stated in its\ndocumentation, update doesn't move the pedestrian, but only refreshes the internal\nstate of this behavior.\nThe client should move the pedestrian using the desiredPosition value, the reason is\nthat this class is meant to be extended or used via composition to obtain implementations\nof the orienting behavior deriving from different entities of the Alchemist meta-model,\nsuch as Action or Reaction.\nThis class obtains a route from the pedestrian's cognitive map and exploits that and the\nother spatial information available to navigate the environment towards (or in search of)\na destination.\nTwo tasks are left to the derived classes via template method, see computeEdgeRankings\nand crossingPoint.\ndesiredPosition\nThe position the pedestrian wants to reach, in absolute coordinates.\nenvironment\nThe environment the pedestrian is into.\npedestrian\nThe owner of this behavior.\nupdate\nThe orienting behavior is organised as a finite state machine, this method\nupdates the internal state of the behavior but does not move the pedestrian.\nIf the position of the pedestrian didn't change since the last call, this\nmethod has no effect.\ncomputeEdgeRankings\nMaps each edge outgoing from the given room to an integer rank indicating its\nsuitability in order to reach the provided destination (which is outside of the scope\nof the agent). Rankings should be in <a href=\"#\">1,E<\/a>, where E is the number of edges, a lower\nrank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following\nsituation: he knows the spatial structure of the current room and the next sub-destination\nhe want to reach, but has no other information regarding the spatial structure between\nhis room and that position (remember that it is assumed the cognitive map provide only\na boolean information regarding the connection of landmarks, no extra info is stored).\nThis method should implement an algorithm allowing the pedestrian to perform an educated\nguess of which crossing to take in order to get closer to the provided destination.<\/p>\ncrossingPoint\nProvided a passage (or door) the pedestrian may want to cross, this method computes the exact\npoint the pedestrian will move towards in order to cross such passage.\nThe provided passage belongs to the room the agent is into (i.e. it is in sight of the agent),\nthe returned position must be in sight of him as well, which means no obstacle should be placed\nbetween such point and his current position.<p>This method is mainly about exploiting the extra data stored in the passage (for instance\nits shape and location on the room's boundary) to determine which point the pedestrian\nshall point towards.<\/p>\nweight\nAssigns a weight to a given edge. The one with minimum weight will be chosen and crossed.\nweightExit\nAssigns a weight to an edge which leads to a room containing a destination (i.e. an exit).\nWhen weighting exits, we may want to take into account different factors (for instance,\nwe don't care about the cognitiveMapFactor or the volatileMemoryFactor).\nBy default, we only consider the distance of the exit.<\/p>\n"
+                            }]
+                          },
                           "DesireEvacuate": {
                             "ownKey": "DesireEvacuate",
                             "ownPages": [{
@@ -5763,6 +5779,22 @@
                               "description": "",
                               "title": "Fear",
                               "content": "<p>The fear emotion.<init>\nThe fear emotion.<\/p>\n<p>combinationFunction\nAlgorithm which decides how the parameters involved\nin the evolution of this characteristic must be combined together.\nIt can be either a max, min, summation or any other type of function.<\/p>\n"
+                            }]
+                          },
+                          "OrientingBehavior": {
+                            "ownKey": "OrientingBehavior",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "OrientingBehavior",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior"
+                              },
+                              "description": "",
+                              "title": "OrientingBehavior",
+                              "content": "<p>The orienting behavior of a pedestrian in an euclidean bidimensional space.\nThis class accepts an Euclidean2DEnvironmentWithGraph whose graph features\nConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages\nas edges.<init>\nThe orienting behavior of a pedestrian in an euclidean bidimensional space.\nThis class accepts an Euclidean2DEnvironmentWithGraph whose graph features\nConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages\nas edges.\nenvironment\nThe environment the pedestrian is into.\ncomputeEdgeRankings\nMaps each edge outgoing from the given room to an integer rank indicating its\nsuitability in order to reach the provided destination (which is outside of the scope\nof the agent). Rankings should be in <a href=\"#\">1,E<\/a>, where E is the number of edges, a lower\nrank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following\nsituation: he knows the spatial structure of the current room and the next sub-destination\nhe want to reach, but has no other information regarding the spatial structure between\nhis room and that position (remember that it is assumed the cognitive map provide only\na boolean information regarding the connection of landmarks, no extra info is stored).\nThis method should implement an algorithm allowing the pedestrian to perform an educated\nguess of which crossing to take in order to get closer to the provided destination.<\/p>\ncrossingPoint\nProvided a passage (or door) the pedestrian may want to cross, this method computes the exact\npoint the pedestrian will move towards in order to cross such passage.\nThe provided passage belongs to the room the agent is into (i.e. it is in sight of the agent),\nthe returned position must be in sight of him as well, which means no obstacle should be placed\nbetween such point and his current position.<p>This method is mainly about exploiting the extra data stored in the passage (for instance\nits shape and location on the room's boundary) to determine which point the pedestrian\nshall point towards.<\/p>\nweight\nThe congestionFactor is added.\nweightExit\nThe congestionFactor is added.<\/p>\n"
                             }]
                           },
                           "BeliefDanger": {
@@ -6283,7 +6315,7 @@
                             },
                             "description": "",
                             "title": "Environment2DWithObstacles",
-                            "content": "<p>A bidimensional EnvironmentWithObstacles.<\/p>\n<p>getObstaclesInRange\nGiven a point and a range, retrieves all the obstacles within.\ngetObstaclesInRange\nGiven a point and a range, retrieves all the obstacles within.\nhasMobileObstacles<\/p>\n<p>next\nThis method must calculate the ABSOLUTE next allowed position given the\ncurrent position and the position in which the node wants to move. For\nexample, if your node is in position <a href=\"#\">2,3<\/a>, wants to move to <a href=\"#\">3,4<\/a> but\nthe next allowed position (because, e.g., of physical obstacles) is\n<a href=\"#\">2.5,3.5<\/a>, the result must be a Position containing coordinates\n<a href=\"#\">2.5,3.5<\/a>.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>A bidimensional EnvironmentWithObstacles.<\/p>\n<p>getObstaclesInRange\nGiven a point and a range, retrieves all the obstacles within.\ngetObstaclesInRange\nGiven a point and a range, retrieves all the obstacles within.\nhasMobileObstacles<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "Boundaries": {
@@ -6381,6 +6413,22 @@
                         "content": "<p>contains\nTests whether a node contains a Molecule.\ngetChemicalSpecies\nThis method is usefult to know how many different chemical species may be contained in this node.\nsetConcentration\nSets the concentration of mol to c.\ngetId<\/p>\n<p>getShape\nThe shape of the node, used in environments supporting geometry and physics.\naddReaction\nAdds a reaction to this node.\ncloneNode\nCreates a new Node which is a clone of the current Node. The new Node will have all the current Node's properties, such as reactions and molecules, but it will also have a different ID.\nremoveConcentration<\/p>\n<p>getReactions\nThis method allows to access all the reaction of the node.\ngetConcentration\nCalculates the concentration of a molecule.\ngetContents<\/p>\n<p>removeReaction\nRemoves a reaction from this node.<\/p>\n"
                       }]
                     },
+                    "SteeringActionWithTarget": {
+                      "ownKey": "SteeringActionWithTarget",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "it/unibo/alchemist/model/interfaces",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "SteeringActionWithTarget",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget"
+                        },
+                        "description": "",
+                        "title": "SteeringActionWithTarget",
+                        "content": "<p>A SteeringAction with a defined target.<\/p>\n<p>target\nThe position the owner of this action moves towards, in absolute coordinates.<\/p>\n"
+                      }]
+                    },
                     "Pedestrian2D": {
                       "ownKey": "Pedestrian2D",
                       "ownPages": [{
@@ -6394,7 +6442,7 @@
                         },
                         "description": "",
                         "title": "Pedestrian2D",
-                        "content": "<p>The bidimensional representation of a pedestrian.<\/p>\n<p>shape\nThe shape of any pedestrian in the Euclidean world.\nfieldOfView\nThe field of view of a pedestrian in the Euclidean world.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>The bidimensional representation of a pedestrian.<\/p>\n<p>shape\nThe shape of any pedestrian in the Euclidean world.\nfieldOfView\nThe field of view of a pedestrian in the Euclidean world.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "EnvironmentSupportingDeformableCells": {
@@ -6522,7 +6570,7 @@
                         },
                         "description": "",
                         "title": "EnvironmentWithObstacles",
-                        "content": "<p>An environment with Obstacles.\nobstacles\nA list of all the obstacles in this environment.\naddObstacle\nAdds an obstacle to this environment.\nremoveObstacle\nRemoves an obstacle from this environment.\nintersectsObstacle\nChecks whether there is at least an obstacle intersecting the line connecting start and end.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>An environment with Obstacles.\nobstacles\nA list of all the obstacles in this environment.\naddObstacle\nAdds an obstacle to this environment.\nremoveObstacle\nRemoves an obstacle from this environment.\nintersectsObstacle\nChecks whether there is at least an obstacle intersecting the line connecting start and end.\nnext\nThis method must calculate the ABSOLUTE next allowed position given the\ncurrent position and the position in which the node wants to move. For\nexample, if your node is in position <a href=\"#\">2,3<\/a>, wants to move to <a href=\"#\">3,4<\/a> but\nthe next allowed position (because, e.g., of physical obstacles) is\n<a href=\"#\">2.5,3.5<\/a>, the result must be a Position containing coordinates\n<a href=\"#\">2.5,3.5<\/a>.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "GroupWithLeader": {
@@ -6748,7 +6796,7 @@
                         },
                         "description": "",
                         "title": "HeterogeneousPedestrian",
-                        "content": "<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.\nage\nThe age of this pedestrian.\ngender\nThe gender of this pedestrian.\ncompliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nprobabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.\nage\nThe age of this pedestrian.\ngender\nThe gender of this pedestrian.\ncompliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nprobabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "Environment": {
@@ -6876,7 +6924,7 @@
                         },
                         "description": "",
                         "title": "Pedestrian",
-                        "content": "<p>A pedestrian with any characteristic taken into consideration.\nmembershipGroup\nThe group this pedestrian belongs to.\nspeed\nThe speed at which the pedestrian is moving.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>A pedestrian with any characteristic taken into consideration.\nmembershipGroup\nThe group this pedestrian belongs to.\nspeed\nThe speed at which the pedestrian is moving.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "Time": {
@@ -6908,7 +6956,7 @@
                         },
                         "description": "",
                         "title": "OrientingPedestrian",
-                        "content": "<p>A pedestrian capable of orienting itself.<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>A pedestrian capable of orienting itself.<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "TimedRoute": {
@@ -7004,7 +7052,7 @@
                         },
                         "description": "",
                         "title": "CognitivePedestrian",
-                        "content": "<p>An heterogeneous pedestrian with cognitive capabilities too.<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>An heterogeneous pedestrian with cognitive capabilities too.<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "Condition": {
@@ -7182,7 +7230,7 @@
                         },
                         "description": "",
                         "title": "SteeringAction",
-                        "content": "<p>Action whose purpose is moving a node inside the environment it is in.<\/p>\n<p>nextPosition\nThe position the owner of this action moves to when it is executed.\ntarget\nThe position the owner of this action moves towards.<\/p>\n"
+                        "content": "<p>Action whose purpose is moving a node inside the environment it is in.<\/p>\n<p>nextPosition\nThe position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.<\/p>\n"
                       }]
                     },
                     "OrientingCognitivePedestrian": {
@@ -7198,7 +7246,7 @@
                         },
                         "description": "",
                         "title": "OrientingCognitivePedestrian",
-                        "content": "<p>A heterogeneous pedestrian with cognitive and orienting capabilities.<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>A heterogeneous pedestrian with cognitive and orienting capabilities.<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "SteeringStrategy": {
@@ -7214,7 +7262,7 @@
                         },
                         "description": "",
                         "title": "SteeringStrategy",
-                        "content": "<p>Strategy interface describing how the next points of the steering actions\nare combined to calculate the next position to move on.<\/p>\n<p>computeNextPosition\nComputes the next position starting from the steering actions the pedestrian obey to.\ncomputeTarget\nComputes the target to reach starting from the steering actions the pedestrian obey to.<\/p>\n"
+                        "content": "<p>Strategy interface describing how the next points of the steering actions\nare combined to calculate the next position to move on.<\/p>\n<p>computeNextPosition\nComputes the next position starting from the steering actions the pedestrian obey to,\nin relative coordinates with respect to its current position.\ncomputeTarget\nComputes the target to reach starting from the steering actions the pedestrian obey to,\nin absolute coordinates.<\/p>\n"
                       }]
                     },
                     "Position2D": {
@@ -7510,7 +7558,7 @@
                             },
                             "description": "",
                             "title": "Vector",
-                            "content": "<p>A generic vector in a multidimensional space.\ndimensions\nThe dimensions of the space this vector belongs to.\ncoordinates\nCoordinates for a Cartesian space.\nImplementors must guarantee that internal state is not exposed.\nmagnitude\nFinds the magnitude of a vector.\nget\nThe coordinate of this vector in the specified dimension relatively to the basis its space is described with.\nplus\nSupport for sum.\nNote: the dimensions must coincide.\nminus\nSupport for subtraction.\nNote: the dimensions must coincide.\ntimes\nMultiplication by a Double.\ndiv\nDivision by a Double.\ndot\nComputes the dot product between two vectors.\nangleBetween\nComputes the angle in radians between two vectors.\ndistanceTo\nComputes the distance between two vectors, interpreted as points in an Euclidean space.\nthrows <a href=\"http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html\">IllegalArgumentException<\/a> if vectors have different dimensions.\nresize\nResizes the vector in order for it to have a length equal\nto the specified parameter. Its direction and verse are preserved.\nnormalized\nNormalizes the vector.\nnormal\nFind the normal of a vector.<\/p>\n"
+                            "content": "<p>A generic vector in a multidimensional space.\ndimensions\nThe dimensions of the space this vector belongs to.\ncoordinates\nCoordinates for a Cartesian space.\nImplementors must guarantee that internal state is not exposed.\nmagnitude\nFinds the magnitude of a vector.\nget\nThe coordinate of this vector in the specified dimension relatively to the basis\nits space is described with.\nplus\nSupport for sum.\nNote: the dimensions must coincide.\nminus\nSupport for subtraction.\nNote: the dimensions must coincide.\ntimes\nMultiplication by a Double.\ndiv\nDivision by a Double.\ndot\nComputes the dot product between two vectors.\nangleBetween\nComputes the angle in radians between two vectors.\ndistanceTo\nComputes the distance between two vectors, interpreted as points in an Euclidean\nspace. Throws <a href=\"http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html\">IllegalArgumentException<\/a> if vectors have different dimensions.\nresized<\/p>\n<p>normalized<\/p>\n<p>normal\nFind the normal of a vector.<\/p>\n"
                           }]
                         }
                       },
@@ -8920,7 +8968,7 @@
                             },
                             "description": "",
                             "title": "CognitivePedestrian2D",
-                            "content": "<p>Implementation of a cognitive pedestrian in the Euclidean world.<init><\/p>\n<p><init><\/p>\n<p><init>\nImplementation of a cognitive pedestrian in the Euclidean world.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of a cognitive pedestrian in the Euclidean world.<init><\/p>\n<p><init><\/p>\n<p><init>\nImplementation of a cognitive pedestrian in the Euclidean world.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "AbstractNode": {
@@ -8968,7 +9016,7 @@
                             },
                             "description": "",
                             "title": "OrientingHomogeneousPedestrian2D",
-                            "content": "<p>A homogeneous OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.<init>\nA homogeneous OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>A homogeneous OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.<init>\nA homogeneous OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "EnvironmentNodeImpl": {
@@ -9048,7 +9096,7 @@
                             },
                             "description": "",
                             "title": "OrientingCognitivePedestrian2D",
-                            "content": "<p>A cognitive OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.<init>\nAllows to specify age and gender with a string.\n<init>\nAllows to specify age with an int and gender with a string.\n<init>\nA cognitive OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.\ncompliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nage\nThe age of this pedestrian.\ngender\nThe gender of this pedestrian.\ngetShape<\/p>\n<p>probabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\ndangerBelief\nValue representing the current belief of the situation dangerousness for this pedestrian.\nfear\nValue representing the level of fear of this pedestrian.\nwantsToEvacuate\nWhether or not this pedestrian intends to evacuate.\ncognitiveCharacteristics\nThe list of all the cognitive characteristics of this pedestrian.\ninfluencialPeople\nA list of all the pedestrians inside at least one of the sensory spheres of this pedestrian.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>A cognitive OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.<init>\nAllows to specify age and gender with a string.\n<init>\nAllows to specify age with an int and gender with a string.\n<init>\nA cognitive OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.\ncompliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nage\nThe age of this pedestrian.\ngender\nThe gender of this pedestrian.\ngetShape<\/p>\n<p>probabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\ndangerBelief\nValue representing the current belief of the situation dangerousness for this pedestrian.\nfear\nValue representing the level of fear of this pedestrian.\nwantsToEvacuate\nWhether or not this pedestrian intends to evacuate.\ncognitiveCharacteristics\nThe list of all the cognitive characteristics of this pedestrian.\ninfluencialPeople\nA list of all the pedestrians inside at least one of the sensory spheres of this pedestrian.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "LsaNode": {
@@ -9096,7 +9144,7 @@
                             },
                             "description": "",
                             "title": "AbstractOrientingPedestrian",
-                            "content": "<p>An abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironmentWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<init>\nAn abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironmentWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.\nvolatileMemory\nThe volatile memory of the agent, it models the ability to remember rooms\nor spaces of the environment already visited by the agent since the start\nof the simulation. In particular, each room is paired with the number of\nvisits.\ncognitiveMap\nThe cognitive map of the agent. A cognitive map is composed of landmarks\n(elements of the environment easy to remember due to their uniqueness)\nand spatial relations between them, it is represented using a NavigationGraph.\nknowledgeDegree\nThe knowledge degree of the agent concerning the environment. It's\na percentage value in <a href=\"#\">0,1<\/a>.\nrandomGenerator\nThe random generator to use in order to preserve reproducibility.\nenvironment\nThe environment this pedestrian is into.\ngenerateLandmarkWithin\nGenerates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>An abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironmentWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<init>\nAn abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironmentWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.\nvolatileMemory\nThe volatile memory of the agent, it models the ability to remember rooms\nor spaces of the environment already visited by the agent since the start\nof the simulation. In particular, each room is paired with the number of\nvisits.\ncognitiveMap\nThe cognitive map of the agent. A cognitive map is composed of landmarks\n(elements of the environment easy to remember due to their uniqueness)\nand spatial relations between them, it is represented using a NavigationGraph.\nknowledgeDegree\nThe knowledge degree of the agent concerning the environment. It's\na percentage value in <a href=\"#\">0,1<\/a>.\nrandomGenerator\nThe random generator to use in order to preserve reproducibility.\nenvironment\nThe environment this pedestrian is into.\ngenerateLandmarkWithin\nGenerates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "CircularDeformableCellImpl": {
@@ -9128,7 +9176,7 @@
                             },
                             "description": "",
                             "title": "HomogeneousPedestrianImpl",
-                            "content": "<p>Implementation of a basic pedestrian.<init>\nImplementation of a basic pedestrian.\nmembershipGroup\nThe group this pedestrian belongs to.\nwalkingSpeed\nThe speed at which the pedestrian moves if it's walking.\nrunningSpeed\nThe speed at which the pedestrian moves if it's running.\nsenses\nThe list of influence spheres belonging to this pedestrian.\ncreateT<\/p>\n<p>speed\nThe speed at which the pedestrian is moving.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of a basic pedestrian.<init>\nImplementation of a basic pedestrian.\nmembershipGroup\nThe group this pedestrian belongs to.\nwalkingSpeed\nThe speed at which the pedestrian moves if it's walking.\nrunningSpeed\nThe speed at which the pedestrian moves if it's running.\nsenses\nThe list of influence spheres belonging to this pedestrian.\ncreateT<\/p>\n<p>speed\nThe speed at which the pedestrian is moving.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "CognitivePedestrianImpl": {
@@ -9144,7 +9192,7 @@
                             },
                             "description": "",
                             "title": "CognitivePedestrianImpl",
-                            "content": "<p>Implementation of a cognitive pedestrian.<init>\nImplementation of a cognitive pedestrian.<\/p>\n<p>speed\nThe speed at which the pedestrian is moving.\ndangerBelief\nValue representing the current belief of the situation dangerousness for this pedestrian.\nfear\nValue representing the level of fear of this pedestrian.\ncognitiveCharacteristics\nThe list of all the cognitive characteristics of this pedestrian.\nwantsToEvacuate\nWhether or not this pedestrian intends to evacuate.\ninfluencialPeople\nA list of all the pedestrians inside at least one of the sensory spheres of this pedestrian.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of a cognitive pedestrian.<init>\nImplementation of a cognitive pedestrian.<\/p>\n<p>speed\nThe speed at which the pedestrian is moving.\ndangerBelief\nValue representing the current belief of the situation dangerousness for this pedestrian.\nfear\nValue representing the level of fear of this pedestrian.\ncognitiveCharacteristics\nThe list of all the cognitive characteristics of this pedestrian.\nwantsToEvacuate\nWhether or not this pedestrian intends to evacuate.\ninfluencialPeople\nA list of all the pedestrians inside at least one of the sensory spheres of this pedestrian.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "HeterogeneousPedestrian2D": {
@@ -9160,7 +9208,7 @@
                             },
                             "description": "",
                             "title": "HeterogeneousPedestrian2D",
-                            "content": "<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<init><\/p>\n<p><init><\/p>\n<p><init>\nImplementation of an heterogeneous pedestrian in the Euclidean world.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<init><\/p>\n<p><init><\/p>\n<p><init>\nImplementation of an heterogeneous pedestrian in the Euclidean world.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "HeterogeneousPedestrianImpl": {
@@ -9176,7 +9224,7 @@
                             },
                             "description": "",
                             "title": "HeterogeneousPedestrianImpl",
-                            "content": "<p>Implementation of an heterogeneous pedestrian.<init>\nImplementation of an heterogeneous pedestrian.\ncompliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nwalkingSpeed\nThe speed at which the pedestrian moves if it's walking.\nrunningSpeed\nThe speed at which the pedestrian moves if it's running.\nage\nthe age of this pedestrian.\ngender\nthe gender of this pedestrian\nprobabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of an heterogeneous pedestrian.<init>\nImplementation of an heterogeneous pedestrian.\ncompliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nwalkingSpeed\nThe speed at which the pedestrian moves if it's walking.\nrunningSpeed\nThe speed at which the pedestrian moves if it's running.\nage\nthe age of this pedestrian.\ngender\nthe gender of this pedestrian\nprobabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "CellNodeImpl": {
@@ -9208,7 +9256,7 @@
                             },
                             "description": "",
                             "title": "OrientingPedestrian2D",
-                            "content": "<p>An OrientingPedestrian in an euclidean bidimensional space.\nThis class defines the method responsible for the creation of landmarks, which\nare represented as Ellipses. These can represent both the human error concerning\nthe exact position of a landmark inside the ellipse and the error concerning the\nangles formed by the connections between landmarks.\nThis class accepts an environment whose graph contains nodes which are (subclasses\nof) ConvexPolygons.<init>\nAn OrientingPedestrian in an euclidean bidimensional space.\nThis class defines the method responsible for the creation of landmarks, which\nare represented as Ellipses. These can represent both the human error concerning\nthe exact position of a landmark inside the ellipse and the error concerning the\nangles formed by the connections between landmarks.\nThis class accepts an environment whose graph contains nodes which are (subclasses\nof) ConvexPolygons.<\/p>\n<p>generateLandmarkWithin\nGenerates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.\ntargetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>An OrientingPedestrian in an euclidean bidimensional space.\nThis class defines the method responsible for the creation of landmarks, which\nare represented as Ellipses. These can represent both the human error concerning\nthe exact position of a landmark inside the ellipse and the error concerning the\nangles formed by the connections between landmarks.\nThis class accepts an environment whose graph contains nodes which are (subclasses\nof) ConvexPolygons.<init>\nAn OrientingPedestrian in an euclidean bidimensional space.\nThis class defines the method responsible for the creation of landmarks, which\nare represented as Ellipses. These can represent both the human error concerning\nthe exact position of a landmark inside the ellipse and the error concerning the\nangles formed by the connections between landmarks.\nThis class accepts an environment whose graph contains nodes which are (subclasses\nof) ConvexPolygons.<\/p>\n<p>generateLandmarkWithin\nGenerates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         },
                         "HomogeneousPedestrian2D": {
@@ -9224,7 +9272,7 @@
                             },
                             "description": "",
                             "title": "HomogeneousPedestrian2D",
-                            "content": "<p>Implementation of a basic pedestrian in the Euclidean world.<init>\nImplementation of a basic pedestrian in the Euclidean world.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                            "content": "<p>Implementation of a basic pedestrian in the Euclidean world.<init>\nImplementation of a basic pedestrian in the Euclidean world.<\/p>\n<p>getShape<\/p>\n<p>targetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                           }]
                         }
                       },
@@ -9834,70 +9882,6 @@
                     "reactions": {
                       "ownKey": "reactions",
                       "childrenPages": {
-                        "BiochemicalReaction": {
-                          "ownKey": "BiochemicalReaction",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/reactions",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "BiochemicalReaction",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/BiochemicalReaction"
-                            },
-                            "description": "",
-                            "title": "BiochemicalReaction",
-                            "content": "<p>A biochemical Reaction.<init><\/p>\n<p>cloneOnNewNode<\/p>\n<p>execute<\/p>\n<p>setConditions<\/p>\n"
-                          }]
-                        },
-                        "BlendedSteering": {
-                          "ownKey": "BlendedSteering",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/reactions",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "BlendedSteering",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/BlendedSteering"
-                            },
-                            "description": "",
-                            "title": "BlendedSteering",
-                            "content": "<p>Steering behavior which sums all the actions with a different weight based on their target distance.<init>\nSteering behavior which sums all the actions with a different weight based on their target distance.<\/p>\n"
-                          }]
-                        },
-                        "SAPEREReaction": {
-                          "ownKey": "SAPEREReaction",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/reactions",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "SAPEREReaction",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/SAPEREReaction"
-                            },
-                            "description": "",
-                            "title": "SAPEREReaction",
-                            "content": "<p>This class realizes a reaction with Lsa concentrations.<init><\/p>\n<p>cloneOnNewNode<\/p>\n<p>execute<\/p>\n<p>setConditions<\/p>\n<p>getRate<\/p>\n<p>setActions<\/p>\n<p>getRateAsString<\/p>\n"
-                          }]
-                        },
-                        "AbstractOrientingBehavior": {
-                          "ownKey": "AbstractOrientingBehavior",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/reactions",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "AbstractOrientingBehavior",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/AbstractOrientingBehavior"
-                            },
-                            "description": "",
-                            "title": "AbstractOrientingBehavior",
-                            "content": "<p>A reaction representing the orienting behavior of an OrientingPedestrian.\nThis class obtains a route from the pedestrian's cognitive map and exploits that and the\nother spatial information available to navigate the environment towards (or in search of)\na destination.\nThree tasks are left to the derived classes via template method, see computeEdgeRankings, and moveTowards.<init>\nA reaction representing the orienting behavior of an OrientingPedestrian.\nThis class obtains a route from the pedestrian's cognitive map and exploits that and the\nother spatial information available to navigate the environment towards (or in search of)\na destination.\nThree tasks are left to the derived classes via template method, see computeEdgeRankings, and moveTowards.\nenvironment\nThe environment the pedestrian is into.\npedestrian\nThe owner of this behavior.\nupdateInternalStatus<\/p>\n<p>getRate<\/p>\n<p>execute<\/p>\n<p>computeEdgeRankings\nMaps each edge outgoing from the given room to an integer rank indicating its\nsuitability in order to reach the provided destination (which is outside of the scope\nof the agent). Rankings should be in <a href=\"#\">1,E<\/a>, where E is the number of edges, a lower\nrank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following\nsituation: he knows the spatial structure of the current room and the next sub-destination\nhe want to reach, but has no other information regarding the spatial structure between\nhis room and that position (remember that it is assumed the cognitive map provide only\na boolean information regarding the connection of landmarks, no extra info is stored).\nThis method should implement an algorithm allowing the pedestrian to perform an educated\nguess of which crossing to take in order to get closer to the provided destination.<\/p>\ncomputeSubdestination\nComputes the next sub-destination the pedestrian will move towards, provided an edge he\nwants to cross. The provided edge belongs to the room the agent is into (i.e. it is in\nsight of the agent), the returned position must be in sight of him as well, which means\nno obstacle should be placed between such destination and his current position.<p>This method is mainly about exploiting the extra data stored in the edge (for instance\nits shape and location in the room boundary) to determine which point the pedestrian\nshall point towards.<\/p>\nmoveTowards\nMoves the pedestrian towards a position which is guaranteed to be in sight (i.e. no\nobstacle is placed between him and such position). The current room (if initialised)\nand the target door are provided as well to allow more complex computations, see\nOrientingBehavior2D. This method should anyway move the pedestrian towards target.\nweight\nAssigns a weight to a given edge. The one with minimum weight will be chosen and crossed.<\/p>\n"
-                          }]
-                        },
                         "AbstractReaction": {
                           "ownKey": "AbstractReaction",
                           "ownPages": [{
@@ -9928,6 +9912,38 @@
                             "description": "",
                             "title": "SteeringBehavior",
                             "content": "<p>Reaction representing the steering behavior of a pedestrian.<init>\nReaction representing the steering behavior of a pedestrian.\nsteerStrategy\nthe logic according to the steering actions are combined.\nsteerActions\nThe list of only the steering actions between all the actions in this reaction.\ncloneOnNewNode<\/p>\n<p>getRate<\/p>\n<p>updateInternalStatus<\/p>\n<p>execute<\/p>\n"
+                          }]
+                        },
+                        "BiochemicalReaction": {
+                          "ownKey": "BiochemicalReaction",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/reactions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "BiochemicalReaction",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/BiochemicalReaction"
+                            },
+                            "description": "",
+                            "title": "BiochemicalReaction",
+                            "content": "<p>A biochemical Reaction.<init><\/p>\n<p>cloneOnNewNode<\/p>\n<p>execute<\/p>\n<p>setConditions<\/p>\n"
+                          }]
+                        },
+                        "BlendedSteering": {
+                          "ownKey": "BlendedSteering",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/reactions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "BlendedSteering",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/BlendedSteering"
+                            },
+                            "description": "",
+                            "title": "BlendedSteering",
+                            "content": "<p>Steering behavior which sums all the actions with a different weight based on their target distance.<init>\nSteering behavior which sums all the actions with a different weight based on their target distance.<\/p>\n"
                           }]
                         },
                         "PrioritySteering": {
@@ -10010,22 +10026,6 @@
                             "content": "<p><init><\/p>\n<p>initializationComplete<\/p>\n<p>cloneOnNewNode\n{@inheritDoc}\ngetRate<\/p>\n"
                           }]
                         },
-                        "OrientingSteeringBehavior2D": {
-                          "ownKey": "OrientingSteeringBehavior2D",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/implementations/reactions",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "OrientingSteeringBehavior2D",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingSteeringBehavior2D"
-                            },
-                            "description": "",
-                            "title": "OrientingSteeringBehavior2D",
-                            "content": "<p>An OrientingBehavior2D with SteeringActions as well. This class implements a\nbasic algorithm capable of mixing the steering behavior and the orienting behavior\nsmartly (e.g. avoiding situations in which the agent is blocked due to the voiding\nof opposite forces). However, the resulting movements still present some shaking.<init>\nAn OrientingBehavior2D with SteeringActions as well. This class implements a\nbasic algorithm capable of mixing the steering behavior and the orienting behavior\nsmartly (e.g. avoiding situations in which the agent is blocked due to the voiding\nof opposite forces). However, the resulting movements still present some shaking.<\/p>\n<p>moveTowards\nMoves the pedestrian towards a position which is guaranteed to be in sight (i.e. no\nobstacle is placed between him and such position). The current room (if initialised)\nand the target door are provided as well to allow more complex computations, see\nOrientingBehavior2D. This method should anyway move the pedestrian towards target.<\/p>\n"
-                          }]
-                        },
                         "BiochemicalReactionBuilder": {
                           "ownKey": "BiochemicalReactionBuilder",
                           "ownPages": [{
@@ -10042,6 +10042,22 @@
                             "content": "<p>This class implements a builder for chemical reactions.<init>\nConstruct a builder for biochemical reactions.<\/p>\n<p>randomGenerator\nset the random generator to the passed object.\ntimeDistribution\nSet the time distribution to the passed object.\nprogram\nSet the reaction to the passed program string.\nbuild\nBuilds the chemical reaction.<\/p>\n"
                           }]
                         },
+                        "SAPEREReaction": {
+                          "ownKey": "SAPEREReaction",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/reactions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "SAPEREReaction",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/SAPEREReaction"
+                            },
+                            "description": "",
+                            "title": "SAPEREReaction",
+                            "content": "<p>This class realizes a reaction with Lsa concentrations.<init><\/p>\n<p>cloneOnNewNode<\/p>\n<p>execute<\/p>\n<p>setConditions<\/p>\n<p>getRate<\/p>\n<p>setActions<\/p>\n<p>getRateAsString<\/p>\n"
+                          }]
+                        },
                         "OrientingBehavior2D": {
                           "ownKey": "OrientingBehavior2D",
                           "ownPages": [{
@@ -10055,7 +10071,7 @@
                             },
                             "description": "",
                             "title": "OrientingBehavior2D",
-                            "content": "<p>An AbstractOrientingBehavior in an euclidean bidimensional space.\nThis class accepts an Euclidean2DEnvironmentWithGraph whose graph features\nConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages\nas edges.<init>\nAn AbstractOrientingBehavior in an euclidean bidimensional space.\nThis class accepts an Euclidean2DEnvironmentWithGraph whose graph features\nConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages\nas edges.\nenvironment\nThe environment the pedestrian is into.\nmoveTowards\nMoves the pedestrian towards a position which is guaranteed to be in sight (i.e. no\nobstacle is placed between him and such position). The current room (if initialised)\nand the target door are provided as well to allow more complex computations, see\nOrientingBehavior2D. This method should anyway move the pedestrian towards target.\ncomputeEdgeRankings\nMaps each edge outgoing from the given room to an integer rank indicating its\nsuitability in order to reach the provided destination (which is outside of the scope\nof the agent). Rankings should be in <a href=\"#\">1,E<\/a>, where E is the number of edges, a lower\nrank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following\nsituation: he knows the spatial structure of the current room and the next sub-destination\nhe want to reach, but has no other information regarding the spatial structure between\nhis room and that position (remember that it is assumed the cognitive map provide only\na boolean information regarding the connection of landmarks, no extra info is stored).\nThis method should implement an algorithm allowing the pedestrian to perform an educated\nguess of which crossing to take in order to get closer to the provided destination.<\/p>\ncomputeSubdestination\nComputes the next sub-destination the pedestrian will move towards, provided an edge he\nwants to cross. The provided edge belongs to the room the agent is into (i.e. it is in\nsight of the agent), the returned position must be in sight of him as well, which means\nno obstacle should be placed between such destination and his current position.<p>This method is mainly about exploiting the extra data stored in the edge (for instance\nits shape and location in the room boundary) to determine which point the pedestrian\nshall point towards.<\/p>\nweight\nThe congestionFactor is added.\ncloneOnNewNode<\/p>\n"
+                            "content": "<p>A Reaction representing the OrientingBehavior of a pedestrian.<init>\nA Reaction representing the OrientingBehavior of a pedestrian.<\/p>\n<p>updateInternalStatus<\/p>\n<p>cloneOnNewNode<\/p>\n<p>getRate<\/p>\n<p>execute<\/p>\n"
                           }]
                         }
                       },
@@ -10414,6 +10430,22 @@
                     "actions": {
                       "ownKey": "actions",
                       "childrenPages": {
+                        "AbstractSteeringAction": {
+                          "ownKey": "AbstractSteeringAction",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "AbstractSteeringAction",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractSteeringAction"
+                            },
+                            "description": "",
+                            "title": "AbstractSteeringAction",
+                            "content": "<p>A SteeringAction in a vector space. The definition of nextPosition is left to\nsubclasses.<init>\nA SteeringAction in a vector space. The definition of nextPosition is left to\nsubclasses.\nreaction\nThe reaction in which this action is executed.\npedestrian\nThe owner of this action.\ngetNextPosition\nNext relative position.\nmaxWalk\nThe maximum distance the pedestrian can walk, this is a length.\nresizedToMaxWalkIfGreater\nIf the magnitude of the vector is greater than maxWalk, a resized version with\nmagnitude equal to such quantity is returned. Otherwise, the original vector is\nreturned.<\/p>\n"
+                          }]
+                        },
                         "LsaAscendingGradientDist": {
                           "ownKey": "LsaAscendingGradientDist",
                           "ownPages": [{
@@ -10507,7 +10539,7 @@
                             },
                             "description": "",
                             "title": "Seek2D",
-                            "content": "<p>Seek behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<init>\nSeek behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
+                            "content": "<p>Seek behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<init>\nSeek behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<\/p>\n<p>interpolatePositions\nNext relative position.<\/p>\n"
                           }]
                         },
                         "RemoveNode": {
@@ -10542,20 +10574,20 @@
                             "content": "<p><init><\/p>\n<p>execute<\/p>\n"
                           }]
                         },
-                        "SteeringActionImpl": {
-                          "ownKey": "SteeringActionImpl",
+                        "AbstractGroupSteeringAction": {
+                          "ownKey": "AbstractGroupSteeringAction",
                           "ownPages": [{
                             "reference": {
                               "path": "it/unibo/alchemist/model/implementations/actions",
                               "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "SteeringActionImpl",
+                              "fileName": "AbstractGroupSteeringAction",
                               "extension": "html",
                               "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl"
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractGroupSteeringAction"
                             },
                             "description": "",
-                            "title": "SteeringActionImpl",
-                            "content": "<p>Generic implementation of an action adhering the SteeringAction interface.<init>\nGeneric implementation of an action adhering the SteeringAction interface.<\/p>\n<p>cloneAction<\/p>\n<p>interpolatePositions\nNext RELATIVE position.\nnextPosition\nThe position the owner of this action moves to when it is executed.\ntarget\nThe position the owner of this action moves towards.<\/p>\n"
+                            "title": "AbstractGroupSteeringAction",
+                            "content": "<p>An abstract GroupSteeringAction.<init>\nAn abstract GroupSteeringAction.\nenv\nThe environment in which this action executes.\ncentroid\nComputes the centroid of the group in absolute coordinates.<\/p>\n"
                           }]
                         },
                         "TargetWalker": {
@@ -10763,7 +10795,7 @@
                             },
                             "description": "",
                             "title": "Flee",
-                            "content": "<p>Move the agent away from a target position. It's the opposite of Seek.<init>\nMove the agent away from a target position. It's the opposite of Seek.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
+                            "content": "<p>Move the agent away from a target position. It's the opposite of Seek.<init>\nMove the agent away from a target position. It's the opposite of Seek.<\/p>\n<p>cloneAction<\/p>\n<p>nextPosition\nThe position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.<\/p>\n"
                           }]
                         },
                         "SAPERENeighborAgent": {
@@ -10846,6 +10878,22 @@
                             "content": "<p>Extracts the closest VisibleNode to the position at the given distance from the given node's position\nin the direction of the node's heading.<init>\nvisionMolecule is expected to contain a list of VisibleNode.\nIf there are no visible nodes then targetMolecule will be removed from <a href=\"#\">node<\/a>,\notherwise the VisibleNode's position will be inserted in targetMolecule.<\/p>\n<p>cloneAction<\/p>\n<p>execute<\/p>\n<p>getContext<\/p>\n"
                           }]
                         },
+                        "Orienting": {
+                          "ownKey": "Orienting",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "Orienting",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting"
+                            },
+                            "description": "",
+                            "title": "Orienting",
+                            "content": "<p>A SteeringAction representing the OrientingBehavior of a pedestrian.<init>\nA SteeringAction representing the OrientingBehavior of a pedestrian.<\/p>\n<p>cloneAction<\/p>\n<p>nextPosition\nThe position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.<\/p>\n"
+                          }]
+                        },
                         "LsaAbstractAction": {
                           "ownKey": "LsaAbstractAction",
                           "ownPages": [{
@@ -10910,7 +10958,7 @@
                                 },
                                 "description": "",
                                 "title": "DistanceWeighted",
-                                "content": "<p>Weighted steering logic where the weight of each steering action is\nthe inverse of its distance from the target.<init>\nWeighted steering logic where the weight of each steering action is\nthe inverse of its distance from the target.<\/p>\n"
+                                "content": "<p>Weighted steering logic where the weight of each steering action is\nthe inverse of the pedestrian's distance from the action's target.<init>\nWeighted steering logic where the weight of each steering action is\nthe inverse of the pedestrian's distance from the action's target.<\/p>\n"
                               }]
                             },
                             "Weighted": {
@@ -10926,7 +10974,7 @@
                                 },
                                 "description": "",
                                 "title": "Weighted",
-                                "content": "<p>Steering logic where each steering action is associated to a weight\nand the final computed position is their weighted sum.<init>\nSteering logic where each steering action is associated to a weight\nand the final computed position is their weighted sum.<\/p>\n<p>computeNextPosition\nComputes the next position starting from the steering actions the pedestrian obey to.\ncomputeTarget\nComputes the target to reach starting from the steering actions the pedestrian obey to.<\/p>\n"
+                                "content": "<p>Steering logic where each steering action is associated to a weight\nand the final computed position is their weighted sum.<init>\nSteering logic where each steering action is associated to a weight\nand the final computed position is their weighted sum.<\/p>\n<p>computeNextPosition\nComputes the next position starting from the steering actions the pedestrian obey to,\nin relative coordinates with respect to its current position.\ncomputeTarget\nThe overall target is computed as follows: only SteeringActionWithTarget are considered,\nand we pick the action whose target is closest to the current position of the pedestrian,\nwhich will be considered the overall target.<\/p>\n"
                               }]
                             },
                             "Nearest": {
@@ -10942,7 +10990,7 @@
                                 },
                                 "description": "",
                                 "title": "Nearest",
-                                "content": "<p>Steering logic where only the steering action and the group steering action (if present) whose target is\nthe nearest to the current pedestrian position is taken into consideration.<init>\nSteering logic where only the steering action and the group steering action (if present) whose target is\nthe nearest to the current pedestrian position is taken into consideration.<\/p>\n"
+                                "content": "<p>Steering logic where only the &quot;simple&quot; steering action and the group steering action (if present) whose targets\nare the nearest to the pedestrian's current position are considered.<init>\nSteering logic where only the &quot;simple&quot; steering action and the group steering action (if present) whose targets\nare the nearest to the pedestrian's current position are considered.<\/p>\n"
                               }]
                             },
                             "Filtered": {
@@ -10958,7 +11006,7 @@
                                 },
                                 "description": "",
                                 "title": "Filtered",
-                                "content": "<p>Steering logic in which a filter is applied to the steering actions\nin order to execute another steering logic with only some of these.<init>\nSteering logic in which a filter is applied to the steering actions\nin order to execute another steering logic with only some of these.<\/p>\n<p>computeNextPosition\nComputes the next position starting from the steering actions the pedestrian obey to.<\/p>\n"
+                                "content": "<p>Steering logic in which a filter is applied to the steering actions\nin order to execute another steering logic with only some of these.<init>\nSteering logic in which a filter is applied to the steering actions\nin order to execute another steering logic with only some of these.<\/p>\n<p>computeNextPosition\nComputes the next position starting from the steering actions the pedestrian obey to,\nin relative coordinates with respect to its current position.<\/p>\n"
                               }]
                             },
                             "TypeBased": {
@@ -10989,7 +11037,7 @@
                             },
                             "description": "",
                             "title": "it.unibo.alchemist.model.implementations.actions.steeringstrategies",
-                            "content": "<p>targetDistance\nCalculate the distance between this pedestrian current position and the specified steering action target.<\/p>\n"
+                            "content": "<p>targetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\npickNearestOrFirst\nPicks the SteeringActionWithTarget whose target is nearest to the pedestrian's current position,\nor the first simple SteeringAction if none of them has a target. If the list is empty, null is\nreturned.<\/p>\n"
                           }]
                         },
                         "LsaDeleteNodeAction": {
@@ -11037,7 +11085,7 @@
                             },
                             "description": "",
                             "title": "ObstacleAvoidance",
-                            "content": "<p>Move the agent avoiding potential obstacles in its path.<init>\nMove the agent avoiding potential obstacles in its path.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
+                            "content": "<p>Move the agent avoiding potential obstacles in its path.<init>\nMove the agent avoiding potential obstacles in its path.\nreaction\nthe reaction which executes this action.\ncloneAction<\/p>\n<p>nextPosition\nThe position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.<\/p>\n"
                           }]
                         },
                         "SAPEREWalker": {
@@ -11261,7 +11309,7 @@
                             },
                             "description": "",
                             "title": "Cohesion",
-                            "content": "<p>Move the agent towards the other members of his group.<init>\nMove the agent towards the other members of his group.<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.\ninterpolatePositions\nNext RELATIVE position.<\/p>\n"
+                            "content": "<p>Move the agent towards the other members of his group.<init>\nMove the agent towards the other members of his group.<\/p>\n<p>cloneAction<\/p>\n<p>nextPosition<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.<\/p>\n"
                           }]
                         },
                         "AddJunctionInCell": {
@@ -11293,7 +11341,7 @@
                             },
                             "description": "",
                             "title": "Separation",
-                            "content": "<p>Move the agent away from the pedestrians near to him.<init>\nMove the agent away from the pedestrians near to him.<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.\ninterpolatePositions\nNext RELATIVE position.<\/p>\n"
+                            "content": "<p>Move the agent away from the pedestrians near to him.<init>\nMove the agent away from the pedestrians near to him.\nenv\nthe environment inside which the pedestrian moves.\npedestrian\nthe owner of this action.\ncloneAction<\/p>\n<p>nextPosition<\/p>\n<p>group\nThe list of pedestrians used to compute the group steering action.<\/p>\n"
                           }]
                         },
                         "LsaAllNeighborsAction": {
@@ -11357,7 +11405,7 @@
                             },
                             "description": "",
                             "title": "Combine",
-                            "content": "<p>Combination of multiple steering actions.<init>\nCombination of multiple steering actions.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
+                            "content": "<p>Combination of multiple steering actions.<init>\nCombination of multiple steering actions.<\/p>\n<p>cloneAction<\/p>\n<p>nextPosition\nThe position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.<\/p>\n"
                           }]
                         },
                         "LsaCountNeighborsAction": {
@@ -11389,7 +11437,7 @@
                             },
                             "description": "",
                             "title": "AvoidFlowField",
-                            "content": "<p>Move the pedestrian towards positions of the environment with a low concentration of the target molecule.<init>\nMove the pedestrian towards positions of the environment with a low concentration of the target molecule.<\/p>\n"
+                            "content": "<p>Move the pedestrian towards positions of the environment with a low concentration of the target molecule.<init>\nMove the pedestrian towards positions of the environment with a low concentration of the target molecule.<\/p>\n<p>cloneAction<\/p>\n<p>selectPosition\nSelects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.<\/p>\n"
                           }]
                         },
                         "SAPEREMoveLSAToAgent": {
@@ -11408,6 +11456,22 @@
                             "content": "<p>This agent matches a template, removes a single instance of it from the current node and moves the LSA to another node (specified at creation time). Please note that, since the destination could be anywhere in the system, this action has a GLOBAL Context, and thus may trigger a large number of updates, slowing down the whole simulation. Handle with care.<init>\nThis is the constructor that should be called from DSL. Dynamically computes the destination node if an id is given.\n<init><\/p>\n<p>execute<\/p>\n<p>getContext<\/p>\n"
                           }]
                         },
+                        "SteeringActionWithTargetImpl": {
+                          "ownKey": "SteeringActionWithTargetImpl",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "SteeringActionWithTargetImpl",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionWithTargetImpl"
+                            },
+                            "description": "",
+                            "title": "SteeringActionWithTargetImpl",
+                            "content": "<p>Implementation of a generic SteeringActionWithTarget in a vector space.<init>\nImplementation of a generic SteeringActionWithTarget in a vector space.<\/p>\n<p>cloneAction<\/p>\n<p>interpolatePositions\nNext relative position.\nnextPosition\nThe position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.\ntarget\nThe position the owner of this action moves towards, in absolute coordinates.<\/p>\n"
+                          }]
+                        },
                         "Wander": {
                           "ownKey": "Wander",
                           "ownPages": [{
@@ -11421,7 +11485,7 @@
                             },
                             "description": "",
                             "title": "Wander",
-                            "content": "<p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<init>\nGive the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
+                            "content": "<p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<init>\nGive the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<\/p>\n<p>interpolatePositions\nNext relative position.<\/p>\n"
                           }]
                         },
                         "SAPEREAgent": {
@@ -11453,7 +11517,7 @@
                             },
                             "description": "",
                             "title": "FollowFlowField",
-                            "content": "<p>Move the pedestrian towards positions of the environment with a high concentration of the target molecule.<init>\nMove the pedestrian towards positions of the environment with a high concentration of the target molecule.<\/p>\n"
+                            "content": "<p>Move the pedestrian towards positions of the environment with a high concentration of the target molecule.<init>\nMove the pedestrian towards positions of the environment with a high concentration of the target molecule.<\/p>\n<p>cloneAction<\/p>\n<p>selectPosition\nSelects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.<\/p>\n"
                           }]
                         },
                         "SendToNeighbor": {
@@ -11789,7 +11853,7 @@
                             },
                             "description": "",
                             "title": "FlowFieldSteeringAction",
-                            "content": "<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<init>\nGeneric implementation of an action influenced by the concentration of a given molecule in the environment.<\/p>\n<p>interpolatePositions\nNext RELATIVE position.<\/p>\n"
+                            "content": "<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<init>\nGeneric implementation of an action influenced by the concentration of a given molecule in the environment.\nenv\nthe environment inside which the pedestrian moves.\ntargetMolecule\nthe {@link Molecule} you want to know the concentration in the different positions of the environment.\nnextPosition\nThe position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.\nselectPosition\nSelects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.\nconcentrationIn<\/p>\n<p>center<\/p>\n"
                           }]
                         },
                         "FakeMove": {
@@ -11820,7 +11884,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.actions",
-                        "content": ""
+                        "content": "<p>discardUnsuitablePositions\nDiscards the positions the pedestrian can't fit.<\/p>\n"
                       }]
                     },
                     "linkingrules": {

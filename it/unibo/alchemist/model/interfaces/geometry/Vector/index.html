@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devls+62b0ed89"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devmg+a691fa4f4"};
 </script>
 
 
@@ -203,7 +203,8 @@ Implementors must guarantee that internal state is not exposed.</p>
         abstract operator fun get(dim: Int): Double
         </code>
     </div>
-    <div class="panel-body"><p>The coordinate of this vector in the specified dimension relatively to the basis its space is described with.</p>
+    <div class="panel-body"><p>The coordinate of this vector in the specified dimension relatively to the basis
+its space is described with.</p>
 </div>
 
     
@@ -220,8 +221,8 @@ Implementors must guarantee that internal state is not exposed.</p>
         </code>
         
             <br><br>
-            <div><pre><code>the dimension. E.g., in a 2-dimensional implementation, 0
-could be the X-axis and 1 the Y-axis
+            <div><pre><code>the dimension. E.g., in a 2-dimensional implementation, 0 could be the
+X-axis and 1 the Y-axis
 </code></pre>
 </div>
         
@@ -366,7 +367,8 @@ Note: the dimensions must coincide.</p>
         S
         </code>
     </div>
-    <div></div>
+    <div><p>the resulting vector, the operation is not performed in-place.</p>
+</div>
 </div>
 
 </div>
@@ -407,7 +409,8 @@ Note: the dimensions must coincide.</p>
         S
         </code>
     </div>
-    <div></div>
+    <div><p>the resulting vector, the operation is not performed in-place.</p>
+</div>
 </div>
 
 </div>
@@ -501,8 +504,8 @@ Note: the dimensions must coincide.</p>
         abstract fun distanceTo(other: S): Double
         </code>
     </div>
-    <div class="panel-body"><p>Computes the distance between two vectors, interpreted as points in an Euclidean space.
-throws <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html">IllegalArgumentException</a> if vectors have different dimensions.</p>
+    <div class="panel-body"><p>Computes the distance between two vectors, interpreted as points in an Euclidean
+space. Throws <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html">IllegalArgumentException</a> if vectors have different dimensions.</p>
 </div>
 
     
@@ -538,14 +541,12 @@ throws <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgume
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_resize_newLen__Double___S">
+    <div class="panel-heading" id="method__open_fun_resized_newLen__Double___S">
         <code>
-        open fun resize(newLen: Double): S
+        open fun resized(newLen: Double): S
         </code>
     </div>
-    <div class="panel-body"><p>Resizes the vector in order for it to have a length equal
-to the specified parameter. Its direction and verse are preserved.</p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -573,7 +574,9 @@ to the specified parameter. Its direction and verse are preserved.</p>
         S
         </code>
     </div>
-    <div></div>
+    <div><p>a resized version of the vector, whose magnitude is equal to newLen.
+Direction and verse of the original vector are preserved.</p>
+</div>
 </div>
 
 </div>
@@ -585,8 +588,7 @@ to the specified parameter. Its direction and verse are preserved.</p>
         abstract fun normalized(): S
         </code>
     </div>
-    <div class="panel-body"><p>Normalizes the vector.</p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -609,7 +611,8 @@ to the specified parameter. Its direction and verse are preserved.</p>
         S
         </code>
     </div>
-    <div></div>
+    <div><p>a normalized version of the vector (i.e. of unitary magnitude).</p>
+</div>
 </div>
 
 </div>
@@ -1751,6 +1754,14 @@ to the specified parameter. Its direction and verse are preserved.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractGroupSteeringAction">AbstractGroupSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/AbstractLauncher">AbstractLauncher</a>
     </li>
     
@@ -1815,7 +1826,7 @@ to the specified parameter. Its direction and verse are preserved.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -1864,6 +1875,14 @@ to the specified parameter. Its direction and verse are preserved.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/AbstractSlideInputManager">AbstractSlideInputManager</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractSteeringAction">AbstractSteeringAction</a>
     </li>
     
 
@@ -5183,7 +5202,23 @@ to the specified parameter. Its direction and verse are preserved.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
     </li>
     
 
@@ -5232,14 +5267,6 @@ to the specified parameter. Its direction and verse are preserved.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/OrientingPedestrian2D">OrientingPedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingSteeringBehavior2D">OrientingSteeringBehavior2D</a>
     </li>
     
 
@@ -6111,7 +6138,15 @@ to the specified parameter. Its direction and verse are preserved.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl">SteeringActionImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget">SteeringActionWithTarget</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionWithTargetImpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6511,7 +6546,7 @@ to the specified parameter. Its direction and verse are preserved.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devls+62b0ed89. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devmg+a691fa4f4. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devls+62b0ed89"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devmg+a691fa4f4"};
 </script>
 
 
@@ -190,6 +190,11 @@
         reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
         </code>
         
+            <br><br>
+            <div><pre><code>the reaction which executes this action.
+</code></pre>
+</div>
+        
     </li>
 
     <li class="list-group-item clearfix">
@@ -227,13 +232,12 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_interpolatePositions_current__P__target__P__maxWalk__Double___P">
+    <div class="panel-heading" id="method__open_fun_cloneAction_n__Node__r__Reaction___Action">
         <code>
-        protected open fun interpolatePositions(current: P, target: P, maxWalk: Double): P
+        open fun cloneAction(n: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, r: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Action">Action</a>
         </code>
     </div>
-    <div class="panel-body"><p>Next RELATIVE position.</p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -245,24 +249,54 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        current: P
+        n: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        target: P
+        r: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
         </code>
         
     </li>
 
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        maxWalk: Double
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Action">Action</a>
         </code>
-        
-    </li>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_nextPosition____P">
+        <code>
+        open fun nextPosition(): P
+        </code>
+    </div>
+    <div class="panel-body"><p>The position the owner of this action moves to when it is executed,
+in relative coordinates with respect to its current position.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
 
 </ul>
 
@@ -1381,6 +1415,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractGroupSteeringAction">AbstractGroupSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/AbstractLauncher">AbstractLauncher</a>
     </li>
     
@@ -1445,7 +1487,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -1494,6 +1536,14 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/AbstractSlideInputManager">AbstractSlideInputManager</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractSteeringAction">AbstractSteeringAction</a>
     </li>
     
 
@@ -4813,7 +4863,23 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
     </li>
     
 
@@ -4862,14 +4928,6 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/OrientingPedestrian2D">OrientingPedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingSteeringBehavior2D">OrientingSteeringBehavior2D</a>
     </li>
     
 
@@ -5741,7 +5799,15 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl">SteeringActionImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget">SteeringActionWithTarget</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionWithTargetImpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6141,7 +6207,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devls+62b0ed89. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devmg+a691fa4f4. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

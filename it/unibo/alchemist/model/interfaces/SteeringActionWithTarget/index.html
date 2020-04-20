@@ -21,7 +21,7 @@
 
 
 
-<title>SteeringActionImpl</title>
+<title>SteeringActionWithTarget</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devls+62b0ed89"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devmg+a691fa4f4"};
 </script>
 
 
@@ -54,11 +54,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
-<!-- Source Filename: it/unibo/alchemist/model/implementations/actions/SteeringActionImpl.html -->
+<!-- Source Filename: it/unibo/alchemist/model/interfaces/SteeringActionWithTarget.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/actions","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"SteeringActionImpl","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl"},"description":"","title":"SteeringActionImpl"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/model/interfaces","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"SteeringActionWithTarget","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget"},"description":"","title":"SteeringActionWithTarget"};
 </script>
 
 <!-- end:debug info -->
@@ -121,7 +121,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>SteeringActionImpl</h2></header>
+                    <header class="major"><h2>SteeringActionWithTarget</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -134,15 +134,15 @@
 
 
 <p id="summary">
-    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions">it.unibo.alchemist.model.implementations.actions</a></b>
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces">it.unibo.alchemist.model.interfaces</a></b>
 </p>
 <p>
     <code style="padding: 0;">
-        class it.unibo.alchemist.model.implementations.actions.SteeringActionImpl
+        class it.unibo.alchemist.model.interfaces.SteeringActionWithTarget
     </code>
 </p>
 <div class="class-description" id="description">
-<p>Generic implementation of an action adhering the SteeringAction interface.</p>
+<p>A SteeringAction with a defined target.</p>
 
 </div>
 
@@ -152,97 +152,6 @@
 
 
 
-
-
-<h2 id="constructors">Constructors</h2>
-
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_env__Environment__reaction__Reaction__pedestrian__Pedestrian__target__TargetSelectionStrategy__speed__SpeedSelectionStrategy__routing__RoutingStrategy_">
-        <code>
-        constructor(env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>, target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/movestrategies/TargetSelectionStrategy">TargetSelectionStrategy</a>, speed: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/movestrategies/SpeedSelectionStrategy">SpeedSelectionStrategy</a>, routing: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/movestrategies/RoutingStrategy">RoutingStrategy</a>)
-        </code>
-    </div>
-    <div class="panel-body"><p>Generic implementation of an action adhering the SteeringAction interface.</p>
-</div>
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
-        </code>
-        
-            <br><br>
-            <div><pre><code>the environment inside which the pedestrian moves.
-</code></pre>
-</div>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>
-        </code>
-        
-            <br><br>
-            <div><pre><code>the owner of this action.
-</code></pre>
-</div>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/movestrategies/TargetSelectionStrategy">TargetSelectionStrategy</a>
-        </code>
-        
-            <br><br>
-            <div><pre><code>the strategy used to compute the next target.
-</code></pre>
-</div>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        speed: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/movestrategies/SpeedSelectionStrategy">SpeedSelectionStrategy</a>
-        </code>
-        
-            <br><br>
-            <div><pre><code>the speed selection strategy.
-</code></pre>
-</div>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        routing: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/movestrategies/RoutingStrategy">RoutingStrategy</a>
-        </code>
-        
-            <br><br>
-            <div><pre><code>the routing strategy.
-</code></pre>
-</div>
-        
-    </li>
-
-</ul>
-
-</div>
 
 
 
@@ -251,150 +160,12 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_cloneAction_n__Node__r__Reaction___SteeringActionImpl">
+    <div class="panel-heading" id="method__abstract_fun_target____P">
         <code>
-        open fun cloneAction(n: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, r: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl">SteeringActionImpl</a>
+        abstract fun target(): P
         </code>
     </div>
-    <div class="panel-body"></div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        n: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        r: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl">SteeringActionImpl</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_interpolatePositions_current__P__target__P__maxWalk__Double___P">
-        <code>
-        protected open fun interpolatePositions(current: P, target: P, maxWalk: Double): P
-        </code>
-    </div>
-    <div class="panel-body"><p>Next RELATIVE position.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        current: P
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        target: P
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        maxWalk: Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        P
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_nextPosition____P">
-        <code>
-        open fun nextPosition(): P
-        </code>
-    </div>
-    <div class="panel-body"><p>The position the owner of this action moves to when it is executed.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        P
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_target____P">
-        <code>
-        open fun target(): P
-        </code>
-    </div>
-    <div class="panel-body"><p>The position the owner of this action moves towards.</p>
+    <div class="panel-body"><p>The position the owner of this action moves towards, in absolute coordinates.</p>
 </div>
 
     
@@ -1524,6 +1295,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractGroupSteeringAction">AbstractGroupSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/AbstractLauncher">AbstractLauncher</a>
     </li>
     
@@ -1588,7 +1367,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -1637,6 +1416,14 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/AbstractSlideInputManager">AbstractSlideInputManager</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractSteeringAction">AbstractSteeringAction</a>
     </li>
     
 
@@ -4956,7 +4743,23 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
     </li>
     
 
@@ -5005,14 +4808,6 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/OrientingPedestrian2D">OrientingPedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingSteeringBehavior2D">OrientingSteeringBehavior2D</a>
     </li>
     
 
@@ -5884,7 +5679,15 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl">SteeringActionImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget">SteeringActionWithTarget</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionWithTargetImpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6284,7 +6087,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devls+62b0ed89. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devmg+a691fa4f4. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

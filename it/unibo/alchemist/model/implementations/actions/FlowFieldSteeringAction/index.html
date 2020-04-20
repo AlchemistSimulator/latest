@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devls+62b0ed89"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devmg+a691fa4f4"};
 </script>
 
 
@@ -150,6 +150,34 @@
 
 
 
+<h2 id="fields">Fields</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_env__Environment">
+        <code>
+        protected env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
+        </code>
+    </div>
+    <div class="panel-body"><pre><code>the environment inside which the pedestrian moves.
+</code></pre>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_targetMolecule__Molecule">
+        <code>
+        protected targetMolecule: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>
+        </code>
+    </div>
+    <div class="panel-body"><pre><code>the {@link Molecule} you want to know the concentration in the different positions of the environment.
+</code></pre>
+</div>
+</div>
+
+
 
 
 
@@ -159,9 +187,9 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_env__Physics2DEnvironment__reaction__Reaction__pedestrian__Pedestrian2D__targetMolecule__Molecule__selectPosition__Iterable._Molecule___Euclidean2DPosition__targetSelectionStrategy__TargetSelectionStrategy_">
+    <div class="panel-heading" id="constructor__constructor_env__Environment__reaction__Reaction__pedestrian__Pedestrian2D__targetMolecule__Molecule_">
         <code>
-        constructor(env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Physics2DEnvironment">Physics2DEnvironment</a>, reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian2D">Pedestrian2D</a>, targetMolecule: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>, selectPosition: Iterable.(<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>)-&gt;<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, targetSelectionStrategy: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/movestrategies/TargetSelectionStrategy">TargetSelectionStrategy</a>)
+        constructor(env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>, reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian2D">Pedestrian2D</a>, targetMolecule: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>)
         </code>
     </div>
     <div class="panel-body"><p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.</p>
@@ -175,7 +203,7 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Physics2DEnvironment">Physics2DEnvironment</a>
+        env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
         </code>
         
             <br><br>
@@ -189,6 +217,11 @@
         <code class="pull-left">
         reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
         </code>
+        
+            <br><br>
+            <div><pre><code>the reaction which executes this action.
+</code></pre>
+</div>
         
     </li>
 
@@ -216,25 +249,6 @@
         
     </li>
 
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        selectPosition: Iterable.(<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Molecule">Molecule</a>)-&gt;<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-        
-            <br><br>
-            <div><pre><code>the logic according to the target position is determined from all the positions checked.
-</code></pre>
-</div>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        targetSelectionStrategy: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/movestrategies/TargetSelectionStrategy">TargetSelectionStrategy</a>
-        </code>
-        
-    </li>
-
 </ul>
 
 </div>
@@ -246,12 +260,13 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_interpolatePositions_current__Euclidean2DPosition__target__Euclidean2DPosition__maxWalk__Double___Euclidean2DPosition">
+    <div class="panel-heading" id="method__open_fun_nextPosition____P">
         <code>
-        protected open fun interpolatePositions(current: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, maxWalk: Double): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        open fun nextPosition(): P
         </code>
     </div>
-    <div class="panel-body"><p>Next RELATIVE position.</p>
+    <div class="panel-body"><p>The position the owner of this action moves to when it is executed,
+in relative coordinates with respect to its current position.</p>
 </div>
 
     
@@ -262,23 +277,64 @@
 </div>
 <ul class="list-group">
 
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        P
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__abstract_fun__ERROR_CLASS_.selectPosition_layer__Layer__currentConcentration__Double___P">
+        <code>
+        abstract fun <ERROR CLASS>.selectPosition(layer: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Layer">Layer</a>, currentConcentration: Double): P
+        </code>
+    </div>
+    <div class="panel-body"><p>Selects a position from a list, given the layer and its concentration in the current position
+of the pedestrian.
+This function contains the policy concerning how to select the most desirable position.</p>
+</div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        current: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        layer: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Layer">Layer</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        maxWalk: Double
+        currentConcentration: Double
         </code>
         
     </li>
@@ -291,7 +347,102 @@
     <div><b>Returns: </b></div>
     <div>
         <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        P
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_fun__P___P__Layer.concentrationIn_position__P___Double">
+        <code>
+        protected fun &lt;P : P&gt; <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Layer">Layer</a>.concentrationIn(position: P): Double
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Layer">Layer</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        position: P
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Double
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_fun_Layer.center____P_">
+        <code>
+        protected fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Layer">Layer</a>.center(): P?
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Layer">Layer</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        P?
         </code>
     </div>
     <div></div>
@@ -1400,6 +1551,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractGroupSteeringAction">AbstractGroupSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/AbstractLauncher">AbstractLauncher</a>
     </li>
     
@@ -1464,7 +1623,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -1513,6 +1672,14 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/AbstractSlideInputManager">AbstractSlideInputManager</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractSteeringAction">AbstractSteeringAction</a>
     </li>
     
 
@@ -4832,7 +4999,23 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
     </li>
     
 
@@ -4881,14 +5064,6 @@
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/OrientingPedestrian2D">OrientingPedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingSteeringBehavior2D">OrientingSteeringBehavior2D</a>
     </li>
     
 
@@ -5760,7 +5935,15 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl">SteeringActionImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget">SteeringActionWithTarget</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionWithTargetImpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6160,7 +6343,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devls+62b0ed89. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devmg+a691fa4f4. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

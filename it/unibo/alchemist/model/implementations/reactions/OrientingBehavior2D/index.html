@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devls+62b0ed89"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devmg+a691fa4f4"};
 </script>
 
 
@@ -142,30 +142,12 @@
     </code>
 </p>
 <div class="class-description" id="description">
-<p>An AbstractOrientingBehavior in an euclidean bidimensional space.
-This class accepts an Euclidean2DEnvironmentWithGraph whose graph features
-ConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages
-as edges.</p>
+<p>A Reaction representing the OrientingBehavior of a pedestrian.</p>
 
 </div>
 
 
 
-
-
-<h2 id="fields">Fields</h2>
-
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="field__protected_open_environment__Euclidean2DEnvironmentWithGraph">
-        <code>
-        protected open environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>The environment the pedestrian is into.</p>
-</div>
-</div>
 
 
 
@@ -182,10 +164,7 @@ as edges.</p>
         constructor(environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>, timeDistribution: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/TimeDistribution">TimeDistribution</a>)
         </code>
     </div>
-    <div class="panel-body"><p>An AbstractOrientingBehavior in an euclidean bidimensional space.
-This class accepts an Euclidean2DEnvironmentWithGraph whose graph features
-ConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages
-as edges.</p>
+    <div class="panel-body"><p>A Reaction representing the OrientingBehavior of a pedestrian.</p>
 </div>
 
     
@@ -226,16 +205,12 @@ as edges.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_moveTowards_target__Euclidean2DPosition__currentRoom__M___targetDoor__Euclidean2DPassage_">
+    <div class="panel-heading" id="method__protected_fun_updateInternalStatus_curTime__Time__executed__Boolean__env__Environment_">
         <code>
-        protected open fun moveTowards(target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, currentRoom: M?, targetDoor: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>)
+        protected fun updateInternalStatus(curTime: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Time">Time</a>, executed: Boolean, env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>)
         </code>
     </div>
-    <div class="panel-body"><p>Moves the pedestrian towards a position which is guaranteed to be in sight (i.e. no
-obstacle is placed between him and such position). The current room (if initialised)
-and the target door are provided as well to allow more complex computations, see
-OrientingBehavior2D. This method should anyway move the pedestrian towards target.</p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -247,21 +222,21 @@ OrientingBehavior2D. This method should anyway move the pedestrian towards targe
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        target: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        curTime: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Time">Time</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        currentRoom: M?
+        executed: Boolean
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        targetDoor: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
+        env: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Environment">Environment</a>
         </code>
         
     </li>
@@ -274,22 +249,12 @@ OrientingBehavior2D. This method should anyway move the pedestrian towards targe
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_computeEdgeRankings_currentRoom__M__destination__Euclidean2DPosition___Map">
+    <div class="panel-heading" id="method__fun_cloneOnNewNode_n__Node__currentTime__Time___Reaction">
         <code>
-        protected open fun computeEdgeRankings(currentRoom: M, destination: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Map
+        fun cloneOnNewNode(n: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, currentTime: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Time">Time</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
         </code>
     </div>
-    <div class="panel-body"><p>Maps each edge outgoing from the given room to an integer rank indicating its
-suitability in order to reach the provided destination (which is outside of the scope
-of the agent). Rankings should be in <a href="#">1,E</a>, where E is the number of edges, a lower
-rank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following
-situation: he knows the spatial structure of the current room and the next sub-destination
-he want to reach, but has no other information regarding the spatial structure between
-his room and that position (remember that it is assumed the cognitive map provide only
-a boolean information regarding the connection of landmarks, no extra info is stored).
-This method should implement an algorithm allowing the pedestrian to perform an educated
-guess of which crossing to take in order to get closer to the provided destination.</p></p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -301,14 +266,14 @@ guess of which crossing to take in order to get closer to the provided destinati
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        currentRoom: M
+        n: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        destination: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        currentTime: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Time">Time</a>
         </code>
         
     </li>
@@ -321,7 +286,7 @@ guess of which crossing to take in order to get closer to the provided destinati
     <div><b>Returns: </b></div>
     <div>
         <code>
-        Map
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
         </code>
     </div>
     <div></div>
@@ -331,18 +296,12 @@ guess of which crossing to take in order to get closer to the provided destinati
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_computeSubdestination_targetDoor__Euclidean2DPassage___Euclidean2DPosition">
+    <div class="panel-heading" id="method__fun_getRate____Double">
         <code>
-        protected open fun computeSubdestination(targetDoor: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        fun getRate(): Double
         </code>
     </div>
-    <div class="panel-body"><p>Computes the next sub-destination the pedestrian will move towards, provided an edge he
-wants to cross. The provided edge belongs to the room the agent is into (i.e. it is in
-sight of the agent), the returned position must be in sight of him as well, which means
-no obstacle should be placed between such destination and his current position.<p>This method is mainly about exploiting the extra data stored in the edge (for instance
-its shape and location in the room boundary) to determine which point the pedestrian
-shall point towards.</p></p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -352,60 +311,7 @@ shall point towards.</p></p>
 </div>
 <ul class="list-group">
 
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        targetDoor: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_weight_edge__Euclidean2DPassage__rank__Int____Double">
-        <code>
-        open fun weight(edge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>, rank: Int?): Double
-        </code>
-    </div>
-    <div class="panel-body"><p>The congestionFactor is added.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        edge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        rank: Int?
-        </code>
-        
-    </li>
+    <li class="list-group-item">No parameters</li>
 
 </ul>
 
@@ -425,9 +331,9 @@ shall point towards.</p></p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_cloneOnNewNode_n__Node___currentTime__Time____Reaction">
+    <div class="panel-heading" id="method__fun_execute__">
         <code>
-        open fun cloneOnNewNode(n: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>?, currentTime: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Time">Time</a>?): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
+        fun execute()
         </code>
     </div>
     <div class="panel-body"></div>
@@ -440,33 +346,11 @@ shall point towards.</p></p>
 </div>
 <ul class="list-group">
 
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        n: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>?
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        currentTime: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Time">Time</a>?
-        </code>
-        
-    </li>
+    <li class="list-group-item">No parameters</li>
 
 </ul>
 
     
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
-        </code>
-    </div>
-    <div></div>
-</div>
 
 </div>
 
@@ -1571,6 +1455,14 @@ shall point towards.</p></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractGroupSteeringAction">AbstractGroupSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/launch/AbstractLauncher">AbstractLauncher</a>
     </li>
     
@@ -1635,7 +1527,7 @@ shall point towards.</p></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -1684,6 +1576,14 @@ shall point towards.</p></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/AbstractSlideInputManager">AbstractSlideInputManager</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractSteeringAction">AbstractSteeringAction</a>
     </li>
     
 
@@ -5003,7 +4903,23 @@ shall point towards.</p></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
     </li>
     
 
@@ -5052,14 +4968,6 @@ shall point towards.</p></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/OrientingPedestrian2D">OrientingPedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingSteeringBehavior2D">OrientingSteeringBehavior2D</a>
     </li>
     
 
@@ -5931,7 +5839,15 @@ shall point towards.</p></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionImpl">SteeringActionImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/SteeringActionWithTarget">SteeringActionWithTarget</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/SteeringActionWithTargetImpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6331,7 +6247,7 @@ shall point towards.</p></p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devls+62b0ed89. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devmg+a691fa4f4. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
