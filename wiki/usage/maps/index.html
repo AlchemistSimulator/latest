@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devoi+197329013"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devoi+a3b5fb663"};
 </script>
 
 
@@ -85,9 +85,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/fe4c145a/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/fe4c145a/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/fe4c145a/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/d93eadd8/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/d93eadd8/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/d93eadd8/assets/css/orchidSearch.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
@@ -216,21 +216,29 @@ the result will be:
 </ol>
 <h2 id="navigation"><a href="#navigation" id="navigation" class="anchor"></a>Navigation</h2>
 <p>As previous say there are several behavior in order to move the nodes in a environment with real-word map:</p>
-<ol start="0">
-<li>movement ignoring map information. A node move directly from start position to destination position:
-<img src="https://alchemistsimulator.github.io/latest/assets/media/usage/no_map_information.png" alt="No map information" /></li>
-<li>movement by using map information. A node move from start position to destination position using
-intermediate position in order to follow streets and avoid obstacle (like building):
-<img src="https://alchemistsimulator.github.io/latest/assets/media/usage/use_map_information.png" alt="Use map information" /></li>
-<li>movement by reproducing a GPS trace (action <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReproduceGPSTrace">ReproduceGPSTrace</a>).
+<ol>
+<li>
+<p>movement ignoring map information. A node move directly from start position to destination position:</p>
+<p><img src="https://alchemistsimulator.github.io/latest/assets/media/usage/no_map_information.png" alt="No map information" /></p>
+</li>
+<li>
+<p>movement by using map information. A node move from start position to destination position using
+intermediate position in order to follow streets and avoid obstacle (like building):</p>
+<p><img src="https://alchemistsimulator.github.io/latest/assets/media/usage/use_map_information.png" alt="Use map information" /></p>
+</li>
+<li>
+<p>movement by reproducing a GPS trace (action <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReproduceGPSTrace">ReproduceGPSTrace</a>).
 A node start to the first position of the GPS trace, than move to the next
-position of the trace until arrive to the last. The movement from a position to another is direct with a straight line:
-<img src="https://alchemistsimulator.github.io/latest/assets/media/usage/reproduce_gps_trace.png" alt="Reproduce GPS trace" /></li>
-<li>movement by interpolating the GPS trace with street data (action <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GPSTraceWalker">GPSTraceWalker</a>).
+position of the trace until arrive to the last. The movement from a position to another is direct with a straight line:</p>
+<p><img src="https://alchemistsimulator.github.io/latest/assets/media/usage/reproduce_gps_trace.png" alt="Reproduce GPS trace" /></p>
+</li>
+<li>
+<p>movement by interpolating the GPS trace with street data (action <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GPSTraceWalker">GPSTraceWalker</a>).
 A node start to the first position of the GPS trace,
 than move to the next position of the trace until arrive to the last. The movement from a position to another
-use map information to define intermediate position in order to follow streets and avoid obstacle (like building):
-<img src="https://alchemistsimulator.github.io/latest/assets/media/usage/interpolate_gps_trace_with_street_data.png" alt="Interpolate GPS trace with street data" /></li>
+use map information to define intermediate position in order to follow streets and avoid obstacle (like building):</p>
+<p><img src="https://alchemistsimulator.github.io/latest/assets/media/usage/interpolate_gps_trace_with_street_data.png" alt="Interpolate GPS trace with street data" /></p>
+</li>
 </ol>
 <p>Both the actions <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReproduceGPSTrace">ReproduceGPSTrace</a> and <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GPSTraceWalker">GPSTraceWalker</a> require:
 0. the file with the GPS traces
@@ -6146,7 +6154,7 @@ use map information to define intermediate position in order to follow streets a
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devoi+197329013. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devoi+a3b5fb663. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6163,9 +6171,9 @@ use map information to define intermediate position in order to follow streets a
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/fe4c145a/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/fe4c145a/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/fe4c145a/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/d93eadd8/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/d93eadd8/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/d93eadd8/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
