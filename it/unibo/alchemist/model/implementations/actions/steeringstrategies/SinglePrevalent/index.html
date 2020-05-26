@@ -21,7 +21,7 @@
 
 
 
-<title>Orienting</title>
+<title>SinglePrevalent</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devpt+fe5fca851"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devsq+1b66117ec"};
 </script>
 
 
@@ -54,11 +54,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
-<!-- Source Filename: it/unibo/alchemist/model/implementations/actions/Orienting.html -->
+<!-- Source Filename: it/unibo/alchemist/model/implementations/actions/steeringstrategies/SinglePrevalent.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/actions","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"Orienting","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting"},"description":"","title":"Orienting"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/actions/steeringstrategies","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"SinglePrevalent","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/SinglePrevalent"},"description":"","title":"SinglePrevalent"};
 </script>
 
 <!-- end:debug info -->
@@ -81,9 +81,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/orchidSearch.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
@@ -121,7 +121,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>Orienting</h2></header>
+                    <header class="major"><h2>SinglePrevalent</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -134,15 +134,28 @@
 
 
 <p id="summary">
-    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions">it.unibo.alchemist.model.implementations.actions</a></b>
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies">it.unibo.alchemist.model.implementations.actions.steeringstrategies</a></b>
 </p>
 <p>
     <code style="padding: 0;">
-        class it.unibo.alchemist.model.implementations.actions.Orienting
+        class it.unibo.alchemist.model.implementations.actions.steeringstrategies.SinglePrevalent
     </code>
 </p>
 <div class="class-description" id="description">
-<p>A SteeringAction representing the OrientingBehavior of a pedestrian.</p>
+<p>A SteeringStrategy in which one action is prevalent. Only NavigationActions can be prevalent, because
+they guarantee to navigate the environment consciously (e.g. without getting stuck in obstacles). The
+purpose of this strategy is to linearly combine the potentially contrasting forces to which the pedestrian
+is subject, while maintaining that warranty. Such forces are combined as follows:
+let f be the prevalent force,<ul><li>if f leads the pedestrian outside the room (= environment's area) he/she is into, no combination is performed
+and f is used as it is. This because crossing doors can be a thorny issue and we don't want to introduce
+disturbing forces.</li><li>Otherwise, a linear combination is performed: f is assigned unitary weight, all other forces are assigned
+weight w equal to the maximum value in <a href="#">0,1</a> so that the resulting force:</li><li>forms with f an angle smaller than or equal to the specified toleranceAngle,</li><li>doesn't lead the pedestrian outside the current room.
+The idea is to decrease the intensity of non-prevalent forces until the resulting one enters in some tolerance
+sector defined by both the tolerance angle and the current room's boundary. With a suitable tolerance angle
+this allows to steer the pedestrian towards the target defined by the prevalent force, while using a trajectory
+which takes into account other urges as well.
+Finally, an exponential smoothing with the given alpha is applied to the resulting force in order to decrease
+oscillatory movements (this also known as shaking behavior).</li></ul></p>
 
 </div>
 
@@ -159,12 +172,25 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_environment__Euclidean2DEnvironmentWithGraph__reaction__Reaction__pedestrian__OrientingPedestrian_">
+    <div class="panel-heading" id="constructor__constructor_environment__Euclidean2DEnvironmentWithGraph__pedestrian__Pedestrian__prevalent__List.____EuclideanNavigationAction__toleranceAngle__Double__alpha__Double__maxWalk______Double__maxWalkRatio__Double__delta__Double_">
         <code>
-        constructor(environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>, reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>)
+        constructor(environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/Euclidean2DEnvironmentWithGraph">Euclidean2DEnvironmentWithGraph</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>, prevalent: List.()-&gt;<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>, toleranceAngle: Double, alpha: Double, maxWalk: ()-&gt;Double, maxWalkRatio: Double, delta: Double)
         </code>
     </div>
-    <div class="panel-body"><p>A SteeringAction representing the OrientingBehavior of a pedestrian.</p>
+    <div class="panel-body"><p>A SteeringStrategy in which one action is prevalent. Only NavigationActions can be prevalent, because
+they guarantee to navigate the environment consciously (e.g. without getting stuck in obstacles). The
+purpose of this strategy is to linearly combine the potentially contrasting forces to which the pedestrian
+is subject, while maintaining that warranty. Such forces are combined as follows:
+let f be the prevalent force,<ul><li>if f leads the pedestrian outside the room (= environment's area) he/she is into, no combination is performed
+and f is used as it is. This because crossing doors can be a thorny issue and we don't want to introduce
+disturbing forces.</li><li>Otherwise, a linear combination is performed: f is assigned unitary weight, all other forces are assigned
+weight w equal to the maximum value in <a href="#">0,1</a> so that the resulting force:</li><li>forms with f an angle smaller than or equal to the specified toleranceAngle,</li><li>doesn't lead the pedestrian outside the current room.
+The idea is to decrease the intensity of non-prevalent forces until the resulting one enters in some tolerance
+sector defined by both the tolerance angle and the current room's boundary. With a suitable tolerance angle
+this allows to steer the pedestrian towards the target defined by the prevalent force, while using a trajectory
+which takes into account other urges as well.
+Finally, an exponential smoothing with the given alpha is applied to the resulting force in order to decrease
+oscillatory movements (this also known as shaking behavior).</li></ul></p>
 </div>
 
     
@@ -182,14 +208,49 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
+        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Pedestrian">Pedestrian</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>
+        prevalent: List.()-&gt;<a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        toleranceAngle: Double
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        alpha: Double
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        maxWalk: ()-&gt;Double
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        maxWalkRatio: Double
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        delta: Double
         </code>
         
     </li>
@@ -205,59 +266,12 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_cloneAction_n__Node__r__Reaction___Action">
+    <div class="panel-heading" id="method__fun_computeNextPosition_actions__List___Euclidean2DPosition">
         <code>
-        open fun cloneAction(n: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>, r: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Action">Action</a>
+        fun computeNextPosition(actions: List): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
         </code>
     </div>
-    <div class="panel-body"></div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        n: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Node">Node</a>
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        r: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Action">Action</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_nextPosition____Euclidean2DPosition">
-        <code>
-        open fun nextPosition(): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>The position the owner of this action moves to when it is executed,
+    <div class="panel-body"><p>Computes the next position starting from the steering actions the pedestrian obey to,
 in relative coordinates with respect to its current position.</p>
 </div>
 
@@ -269,7 +283,17 @@ in relative coordinates with respect to its current position.</p>
 </div>
 <ul class="list-group">
 
-    <li class="list-group-item">No parameters</li>
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        actions: List
+        </code>
+        
+            <br><br>
+            <div><pre><code>the list of actions to combine.
+</code></pre>
+</div>
+        
+    </li>
 
 </ul>
 
@@ -955,6 +979,14 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies">it.unibo.alchemist.model.implementations.actions.navigationstrategies</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies">it.unibo.alchemist.model.implementations.actions.steeringstrategies</a>
     </li>
     
@@ -1340,6 +1372,14 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AbstractConvexPolygon">AbstractConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/AbstractDistribution">AbstractDistribution</a>
     </li>
     
@@ -1436,6 +1476,14 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction">AbstractNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNeighborAction">AbstractNeighborAction</a>
     </li>
     
@@ -1453,14 +1501,6 @@ in relative coordinates with respect to its current position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractNode">AbstractNode</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -1764,7 +1804,23 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AwtMutableConvexPolygon">AwtMutableConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/BaseEuclideanNavigationAction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -2756,6 +2812,14 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DestinationReaching">DestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/DiracComb">DiracComb</a>
     </li>
     
@@ -2821,14 +2885,6 @@ in relative coordinates with respect to its current position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/DoubleDimension">DoubleDimension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
     </li>
     
 
@@ -2949,6 +3005,14 @@ in relative coordinates with respect to its current position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/ProtelisIncarnation/DummyContext">DummyContext</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DynamicPursuing">DynamicPursuing</a>
     </li>
     
 
@@ -3188,6 +3252,22 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationStrategy">EuclideanNavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
@@ -3244,6 +3324,30 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Explore">Explore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Exploring">Exploring</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/ExponentialSmoothing">ExponentialSmoothing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/ExponentialTime">ExponentialTime</a>
     </li>
     
@@ -3292,7 +3396,7 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonInEnvironment">ExtendableConvexPolygonInEnvironment</a>
     </li>
     
 
@@ -3413,6 +3517,14 @@ in relative coordinates with respect to its current position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowFlowField">FollowFlowField</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowRoute">FollowRoute</a>
     </li>
     
 
@@ -3637,6 +3749,22 @@ in relative coordinates with respect to its current position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/speed/GloballyConstantSpeed">GloballyConstantSpeed</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GoalOrientedExplore">GoalOrientedExplore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/GoalOrientedExploring">GoalOrientedExploring</a>
     </li>
     
 
@@ -4212,6 +4340,14 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/KnownDestinationReaching">KnownDestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/LatLongPosition">LatLongPosition</a>
     </li>
     
@@ -4237,6 +4373,14 @@ in relative coordinates with respect to its current position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/LayerToFunctionMapper">LayerToFunctionMapper</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/utils/LazyMutable">LazyMutable</a>
     </li>
     
 
@@ -4644,7 +4788,7 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/MutableConvexPolygonImpl">MutableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationAction">NavigationAction</a>
     </li>
     
 
@@ -4653,6 +4797,30 @@ in relative coordinates with respect to its current position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/NavigationPrioritisedSteering">NavigationPrioritisedSteering</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction/NavigationState">NavigationState</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationStrategy">NavigationStrategy</a>
     </li>
     
 
@@ -4844,31 +5012,7 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingBehavior2D">OrientingBehavior2D</a>
     </li>
     
 
@@ -5100,6 +5244,22 @@ in relative coordinates with respect to its current position.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Pursue">Pursue</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Pursuing">Pursuing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/RandomDiracComb">RandomDiracComb</a>
     </li>
     
@@ -5149,6 +5309,22 @@ in relative coordinates with respect to its current position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomlyToggleMoleculeWithDuration">RandomlyToggleMoleculeWithDuration</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachDestination">ReachDestination</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachKnownDestination">ReachKnownDestination</a>
     </li>
     
 
@@ -5309,6 +5485,14 @@ in relative coordinates with respect to its current position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Route">Route</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/RouteFollowing">RouteFollowing</a>
     </li>
     
 
@@ -5637,6 +5821,14 @@ in relative coordinates with respect to its current position.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/simulation/SimulationSetImpl">SimulationSetImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/SinglePrevalent">SinglePrevalent</a>
     </li>
     
 
@@ -6188,7 +6380,7 @@ in relative coordinates with respect to its current position.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devpt+fe5fca851. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devsq+1b66117ec. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6205,9 +6397,9 @@ in relative coordinates with respect to its current position.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

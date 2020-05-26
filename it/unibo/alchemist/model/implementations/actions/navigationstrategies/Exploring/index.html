@@ -21,7 +21,7 @@
 
 
 
-<title>ExtendableConvexPolygonImpl</title>
+<title>Exploring</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devpt+fe5fca851"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devsq+1b66117ec"};
 </script>
 
 
@@ -54,11 +54,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
-<!-- Source Filename: it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl.html -->
+<!-- Source Filename: it/unibo/alchemist/model/implementations/actions/navigationstrategies/Exploring.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"ExtendableConvexPolygonImpl","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl"},"description":"","title":"ExtendableConvexPolygonImpl"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/actions/navigationstrategies","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"Exploring","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Exploring"},"description":"","title":"Exploring"};
 </script>
 
 <!-- end:debug info -->
@@ -81,9 +81,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/orchidSearch.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
@@ -121,7 +121,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>ExtendableConvexPolygonImpl</h2></header>
+                    <header class="major"><h2>Exploring</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -134,20 +134,62 @@
 
 
 <p id="summary">
-    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator">it.unibo.alchemist.model.implementations.geometry.euclidean.twod.navigator</a></b>
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies">it.unibo.alchemist.model.implementations.actions.navigationstrategies</a></b>
 </p>
 <p>
     <code style="padding: 0;">
-        class it.unibo.alchemist.model.implementations.geometry.euclidean.twod.navigator.ExtendableConvexPolygonImpl
+        class it.unibo.alchemist.model.implementations.actions.navigationstrategies.Exploring
     </code>
 </p>
 <div class="class-description" id="description">
-<p>Implementation of ExtendableConvexPolygon.</p>
+<p>A NavigationStrategy allowing to explore the environment.
+In order to choose which direction to take, a weighting system is used: every time the
+pedestrian enters a new room all the visible doors are weighted, the one with minimum
+weight is then crossed. The weighting system used here is derived from the one by
+<a href="https://doi.org/10.1080/23249935.2018.1432717">Andresen et al.</a>, see weight.</p>
 
 </div>
 
 
 
+
+
+<h2 id="fields">Fields</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_pedestrian__OrientingPedestrian">
+        <code>
+        protected pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>
+        </code>
+    </div>
+    <div class="panel-body"><p>Shortcut to obtain the pedestrian.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_open_comparator___ERROR_CLASS_">
+        <code>
+        protected open comparator: <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>The comparator used to determine which passage to cross, a nearest door heuristic
+is used when multiple passages have the same weight.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__open_action__EuclideanNavigationAction">
+        <code>
+        open action: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>
+        </code>
+    </div>
+    <div class="panel-body"><p>The NavigationAction used to navigate the environment.</p>
+</div>
+</div>
 
 
 
@@ -159,12 +201,16 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_vertices__MutableList_">
+    <div class="panel-heading" id="constructor__constructor_action__EuclideanNavigationAction__knownImpasseWeight__Double_">
         <code>
-        constructor(vertices: MutableList)
+        constructor(action: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>, knownImpasseWeight: Double)
         </code>
     </div>
-    <div class="panel-body"><p>Implementation of ExtendableConvexPolygon.</p>
+    <div class="panel-body"><p>A NavigationStrategy allowing to explore the environment.
+In order to choose which direction to take, a weighting system is used: every time the
+pedestrian enters a new room all the visible doors are weighted, the one with minimum
+weight is then crossed. The weighting system used here is derived from the one by
+<a href="https://doi.org/10.1080/23249935.2018.1432717">Andresen et al.</a>, see weight.</p>
 </div>
 
     
@@ -175,7 +221,14 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        vertices: MutableList
+        action: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        knownImpasseWeight: Double
         </code>
         
     </li>
@@ -191,419 +244,25 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_addVertex_index__Int__x__Double__y__Double___Boolean">
+    <div class="panel-heading" id="method__protected_open_fun_Euclidean2DPassage.distanceToPedestrian____Double">
         <code>
-        open fun addVertex(index: Int, x: Double, y: Double): Boolean
+        protected open fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>.distanceToPedestrian(): Double
         </code>
     </div>
-    <div class="panel-body"><p>Adds a vertex in the specified position.<p>If the operation would cause the violation of the convexity, false
-is returned and the operation is not performed.</p></p>
+    <div class="panel-body"><p>Computes the distance between the pedestrian and a visible passage.</p>
 </div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        index: Int
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        x: Double
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        y: Double
-        </code>
-        
-    </li>
-
-</ul>
 
     
 
 <div class="panel-footer">
-    <div><b>Returns: </b></div>
+    <div><b>Receiver: </b></div>
     <div>
         <code>
-        Boolean
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
         </code>
     </div>
     <div></div>
 </div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_removeVertex_index__Int___Boolean">
-        <code>
-        open fun removeVertex(index: Int): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Removes the specified vertex.<p>If the operation would cause the violation of the convexity, false
-is returned and the operation is not performed.</p></p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        index: Int
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_moveVertex_index__Int__newX__Double__newY__Double___Boolean">
-        <code>
-        open fun moveVertex(index: Int, newX: Double, newY: Double): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Moves the specified vertex to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false
-is returned and the operation is not performed.</p></p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        index: Int
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        newX: Double
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        newY: Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_moveEdge_index__Int__newEdge__Segment2D___Boolean">
-        <code>
-        open fun moveEdge(index: Int, newEdge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Moves the specified edge to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false
-is returned and the operation is not performed.</p></p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        index: Int
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        newEdge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_mutateTo_p__MutableConvexPolygon_">
-        <code>
-        protected open fun mutateTo(p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/MutableConvexPolygon">MutableConvexPolygon</a>)
-        </code>
-    </div>
-    <div class="panel-body"><p>Mutates this polygon to a copy of the specified one.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/MutableConvexPolygon">MutableConvexPolygon</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_advanceEdge_index__Int__step__Double___Boolean">
-        <code>
-        open fun advanceEdge(index: Int, step: Double): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Advances the specified edge in its normal direction. The step
-parameter represents the length of the vector that will be used
-to translate the edge. Returns a boolean indicating whether the
-advancement was performed or not (e.g. because it would have
-caused the lost of the convexity).</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        index: Int
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        step: Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_extend_step__Double__obstacles__Collection__origin__Euclidean2DPosition__width__Double__height__Double___Boolean">
-        <code>
-        open fun extend(step: Double, obstacles: Collection, origin: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>, width: Double, height: Double): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Tries to extend the polygon in each direction. Each edge is given
-a chance to advance in its normal direction. The step parameter
-represents the length of the vector that will be used to advance
-the edges.
-Returns a boolean indicating whether the polygon extended (e.g. at
-least one edge advanced) or not (e.g. for the presence of obstacles).
-The boundaries of the environment need to be specified as well, in
-order to prevent the polygon from growing beyond them (a rectangular
-shaped environment is assumed, its origin, width and height are to
-be provided, width and height should be positive). This method is
-able to cope with non axis-aligned convex polygonal obstacles as well.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        step: Double
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        obstacles: Collection
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        origin: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        width: Double
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        height: Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_equals_other__Any____Boolean">
-        <code>
-        open fun equals(other: Any?): Boolean
-        </code>
-    </div>
-    <div class="panel-body"></div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        other: Any?
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_hashCode____Int">
-        <code>
-        open fun hashCode(): Int
-        </code>
-    </div>
-    <div class="panel-body"></div>
-
-    
 
     
 <div class="panel-body">
@@ -621,7 +280,312 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     <div><b>Returns: </b></div>
     <div>
         <code>
-        Int
+        Double
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_inNewRoom_newRoom__ConvexPolygon____ERROR_CLASS_">
+        <code>
+        open fun inNewRoom(newRoom: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>): <ERROR CLASS>
+        </code>
+    </div>
+    <div class="panel-body"><p>This is called whenever the pedestrian enters a new room.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        newRoom: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <ERROR CLASS>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_weight_door__Euclidean2DPassage___Double">
+        <code>
+        protected open fun weight(door: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>): Double
+        </code>
+    </div>
+    <div class="panel-body"><p>Assigns a weight to a visible door (= passage). This weighting system is derived from the one
+by <a href="https://doi.org/10.1080/23249935.2018.1432717">Andresen et al.</a>. By default, it comprises
+three factors: volatileMemoryFactor, congestionFactor and impasseFactor.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        door: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/Euclidean2DPassage">Euclidean2DPassage</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Double
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_volatileMemoryFactor_head__ConvexPolygon___Double">
+        <code>
+        protected open fun volatileMemoryFactor(head: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>): Double
+        </code>
+    </div>
+    <div class="panel-body"><p>Takes into account the information stored in the pedestrian's volatile memory. It is computed
+as 2^v where v is the number of visits to the area the edge being weighted leads to (in other
+words, less visited rooms are preferred).</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        head: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Double
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_congestionFactor_head__ConvexPolygon___Double">
+        <code>
+        protected open fun congestionFactor(head: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>): Double
+        </code>
+    </div>
+    <div class="panel-body"><p>Takes into account the congestion of the area the edge being weighted leads to (it is assumed
+that the pedestrian can estimate the congestion level of a neighboring room). It is computed
+as density of the area + 1, so as to have a value in <a href="#">1,2</a> (less crowded rooms are preferred).</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        head: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Double
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_impasseFactor_head__ConvexPolygon___Double">
+        <code>
+        protected open fun impasseFactor(head: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>): Double
+        </code>
+    </div>
+    <div class="panel-body"><p>Takes into account whereas the assessed edge leads to a known impasse or not, known impasses
+are given knownImpasseWeight (which is usually a high value, allowing to avoid them), otherwise
+this factor assumes unitary value.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        head: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Double
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_Shape.area____Double">
+        <code>
+        protected open fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>.area(): Double
+        </code>
+    </div>
+    <div class="panel-body"><p>A rough estimation of the area of a <a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">Shape</a>.</p>
+</div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Double
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_ConvexPolygon.isKnownImpasse____Boolean">
+        <code>
+        protected open fun <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>.isKnownImpasse(): Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>Checks if the pedestrian knows that the area is an impasse (= an area with a single door).</p>
+</div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Boolean
         </code>
     </div>
     <div></div>
@@ -1297,6 +1261,14 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies">it.unibo.alchemist.model.implementations.actions.navigationstrategies</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies">it.unibo.alchemist.model.implementations.actions.steeringstrategies</a>
     </li>
     
@@ -1682,6 +1654,14 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AbstractConvexPolygon">AbstractConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/AbstractDistribution">AbstractDistribution</a>
     </li>
     
@@ -1778,6 +1758,14 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction">AbstractNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNeighborAction">AbstractNeighborAction</a>
     </li>
     
@@ -1795,14 +1783,6 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractNode">AbstractNode</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -2106,7 +2086,23 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AwtMutableConvexPolygon">AwtMutableConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/BaseEuclideanNavigationAction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -3098,6 +3094,14 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DestinationReaching">DestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/DiracComb">DiracComb</a>
     </li>
     
@@ -3163,14 +3167,6 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/DoubleDimension">DoubleDimension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
     </li>
     
 
@@ -3291,6 +3287,14 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/ProtelisIncarnation/DummyContext">DummyContext</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DynamicPursuing">DynamicPursuing</a>
     </li>
     
 
@@ -3530,6 +3534,22 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationStrategy">EuclideanNavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
@@ -3586,6 +3606,30 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Explore">Explore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Exploring">Exploring</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/ExponentialSmoothing">ExponentialSmoothing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/ExponentialTime">ExponentialTime</a>
     </li>
     
@@ -3634,7 +3678,7 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonInEnvironment">ExtendableConvexPolygonInEnvironment</a>
     </li>
     
 
@@ -3755,6 +3799,14 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowFlowField">FollowFlowField</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowRoute">FollowRoute</a>
     </li>
     
 
@@ -3979,6 +4031,22 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/speed/GloballyConstantSpeed">GloballyConstantSpeed</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GoalOrientedExplore">GoalOrientedExplore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/GoalOrientedExploring">GoalOrientedExploring</a>
     </li>
     
 
@@ -4554,6 +4622,14 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/KnownDestinationReaching">KnownDestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/LatLongPosition">LatLongPosition</a>
     </li>
     
@@ -4579,6 +4655,14 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/LayerToFunctionMapper">LayerToFunctionMapper</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/utils/LazyMutable">LazyMutable</a>
     </li>
     
 
@@ -4986,7 +5070,7 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/MutableConvexPolygonImpl">MutableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationAction">NavigationAction</a>
     </li>
     
 
@@ -4995,6 +5079,30 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/NavigationPrioritisedSteering">NavigationPrioritisedSteering</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction/NavigationState">NavigationState</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationStrategy">NavigationStrategy</a>
     </li>
     
 
@@ -5186,31 +5294,7 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingBehavior2D">OrientingBehavior2D</a>
     </li>
     
 
@@ -5442,6 +5526,22 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Pursue">Pursue</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Pursuing">Pursuing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/RandomDiracComb">RandomDiracComb</a>
     </li>
     
@@ -5491,6 +5591,22 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomlyToggleMoleculeWithDuration">RandomlyToggleMoleculeWithDuration</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachDestination">ReachDestination</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachKnownDestination">ReachKnownDestination</a>
     </li>
     
 
@@ -5651,6 +5767,14 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Route">Route</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/RouteFollowing">RouteFollowing</a>
     </li>
     
 
@@ -5979,6 +6103,14 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/simulation/SimulationSetImpl">SimulationSetImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/SinglePrevalent">SinglePrevalent</a>
     </li>
     
 
@@ -6530,7 +6662,7 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devpt+fe5fca851. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devsq+1b66117ec. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6547,9 +6679,9 @@ able to cope with non axis-aligned convex polygonal obstacles as well.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

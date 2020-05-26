@@ -956,7 +956,7 @@
                           },
                           "description": "",
                           "title": "DrawLayersIsolines",
-                          "content": "<p>Draw layers isolines. The user must specify: - the number of isolines to draw - the min layer value - the max layer value - the distribution, used to space isoline values between min and max This class defines the <code>DrawLayersIsolines#drawFunction(Function, Environment, Graphics2D, IWormhole2D)<\/code> method, which is capable of drawing a layer's isolines given a function. The only responsibility left to subclasses is to provide a LayerToFunctionMapper.<init>\nEvery class extending this one should call this constructor.<\/p>\n<p>getNumberOfIsolines<\/p>\n<p>setDistribution<\/p>\n<p>drawFunction\n{@inheritDoc}\ngetDistribution<\/p>\n<p>setNumberOfIsolines<\/p>\n<p>logspace\ngenerates n logarithmically-spaced points between d1 and d2 using the provided base.\nlinspace\ngenerates n linearly-spaced points between d1 and d2.<\/p>\n"
+                          "content": "<p>Draw layers isolines. The user must specify: - the number of isolines to draw - the min layer value - the max layer value - the distribution, used to space isoline values between min and max This class defines the <code>DrawLayersIsolines#drawFunction(Function, Environment, Graphics2D, IWormhole2D)<\/code> method, which is capable of drawing a layer's isolines given a function. The only responsibility left to subclasses is to provide a LayerToFunctionMapper.<init>\nEvery class extending this one should call this constructor.<\/p>\n<p>getDrawValues<\/p>\n<p>getNumberOfIsolines<\/p>\n<p>setDistribution<\/p>\n<p>setDrawValues<\/p>\n<p>drawFunction\n{@inheritDoc}\ngetDistribution<\/p>\n<p>setNumberOfIsolines<\/p>\n<p>logspace\ngenerates n logarithmically-spaced points between d1 and d2 using the provided base.\nlinspace\ngenerates n linearly-spaced points between d1 and d2.<\/p>\n"
                         }]
                       },
                       "Effect": {
@@ -4731,7 +4731,7 @@
                             },
                             "description": "",
                             "title": "OrientingAgent",
-                            "content": "<p>An agent capable of orienting itself inside an environment.\nknowledgeDegree\nThe knowledge degree of the agent concerning the environment. It's\na percentage value in <a href=\"#\">0,1<\/a>.\ncognitiveMap\nThe cognitive map of the agent. A cognitive map is composed of landmarks\n(elements of the environment easy to remember due to their uniqueness)\nand spatial relations between them, it is represented using a NavigationGraph.\nvolatileMemory\nThe volatile memory of the agent, it models the ability to remember rooms\nor spaces of the environment already visited by the agent since the start\nof the simulation. In particular, each room is paired with the number of\nvisits.<\/p>\n"
+                            "content": "<p>An agent capable of orienting itself inside an environment.\nknowledgeDegree\nThe knowledge degree of the agent concerning the environment, it's a Double\nvalue in <a href=\"#\">0,1<\/a> describing the percentage of the environment the agent is\nfamiliar with prior to the start of the simulation (thus it does not take\ninto account the knowledge the pedestrian will gain during it, namely the\nvolatileMemory).\ncognitiveMap\nThe cognitive map of the agent. It's composed of landmarks (elements of the\nenvironment easy to remember due to their uniqueness) and spatial relations\nbetween them. It is represented using a NavigationGraph.\nvolatileMemory\nThe volatile memory of the agent: it models the ability to remember areas\nof the environment already visited by the agent since the start of the\nsimulation. In particular, each area is paired with the number of visits.\nAreas are assumed to be represented as ConvexGeometricShapes, as in\nNavigationGraphs.\nregisterVisit\nRegisters a visit to the provided area in the agent's volatileMemory.<\/p>\n"
                           }]
                         },
                         "BodyCognitiveCharacteristic": {
@@ -4798,22 +4798,6 @@
                             "content": "<p>A cognitive characteristic which has a mental response.<init>\nA cognitive characteristic which has a mental response.<\/p>\n<p>update\nUpdate the current intensity of this characteristic.<\/p>\n"
                           }]
                         },
-                        "AbstractOrientingBehavior": {
-                          "ownKey": "AbstractOrientingBehavior",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "AbstractOrientingBehavior",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior"
-                            },
-                            "description": "",
-                            "title": "AbstractOrientingBehavior",
-                            "content": "<p>The orienting behavior of an OrientingPedestrian.\nThis is a finite state machine, whose only public method is update. As stated in its\ndocumentation, update doesn't move the pedestrian, but only refreshes the internal\nstate of this behavior.\nThe client should move the pedestrian using the desiredPosition value, the reason is\nthat this class is meant to be extended or used via composition to obtain implementations\nof the orienting behavior deriving from different entities of the Alchemist meta-model,\nsuch as Action or Reaction.\nThis class obtains a route from the pedestrian's cognitive map and exploits that and the\nother spatial information available to navigate the environment towards (or in search of)\na destination.\nTwo tasks are left to the derived classes via template method, see computeEdgeRankings\nand crossingPoint.<init>\nThe orienting behavior of an OrientingPedestrian.\nThis is a finite state machine, whose only public method is update. As stated in its\ndocumentation, update doesn't move the pedestrian, but only refreshes the internal\nstate of this behavior.\nThe client should move the pedestrian using the desiredPosition value, the reason is\nthat this class is meant to be extended or used via composition to obtain implementations\nof the orienting behavior deriving from different entities of the Alchemist meta-model,\nsuch as Action or Reaction.\nThis class obtains a route from the pedestrian's cognitive map and exploits that and the\nother spatial information available to navigate the environment towards (or in search of)\na destination.\nTwo tasks are left to the derived classes via template method, see computeEdgeRankings\nand crossingPoint.\ndesiredPosition\nThe position the pedestrian wants to reach, in absolute coordinates.\nenvironment\nThe environment the pedestrian is into.\npedestrian\nThe owner of this behavior.\nupdate\nThe orienting behavior is organised as a finite state machine, this method\nupdates the internal state of the behavior but does not move the pedestrian.\nIf the position of the pedestrian didn't change since the last call, this\nmethod has no effect.\ncomputeEdgeRankings\nMaps each edge outgoing from the given room to an integer rank indicating its\nsuitability in order to reach the provided destination (which is outside of the scope\nof the agent). Rankings should be in <a href=\"#\">1,E<\/a>, where E is the number of edges, a lower\nrank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following\nsituation: he knows the spatial structure of the current room and the next sub-destination\nhe want to reach, but has no other information regarding the spatial structure between\nhis room and that position (remember that it is assumed the cognitive map provide only\na boolean information regarding the connection of landmarks, no extra info is stored).\nThis method should implement an algorithm allowing the pedestrian to perform an educated\nguess of which crossing to take in order to get closer to the provided destination.<\/p>\ncrossingPoint\nProvided a passage (or door) the pedestrian may want to cross, this method computes the exact\npoint the pedestrian will move towards in order to cross such passage.\nThe provided passage belongs to the room the agent is into (i.e. it is in sight of the agent),\nthe returned position must be in sight of him as well, which means no obstacle should be placed\nbetween such point and his current position.<p>This method is mainly about exploiting the extra data stored in the passage (for instance\nits shape and location on the room's boundary) to determine which point the pedestrian\nshall point towards.<\/p>\nweight\nAssigns a weight to a given edge. The one with minimum weight will be chosen and crossed.\nweightExit\nAssigns a weight to an edge which leads to a room containing a destination (i.e. an exit).\nWhen weighting exits, we may want to take into account different factors (for instance,\nwe don't care about the cognitiveMapFactor or the volatileMemoryFactor).\nBy default, we only consider the distance of the exit.<\/p>\n"
-                          }]
-                        },
                         "DesireEvacuate": {
                           "ownKey": "DesireEvacuate",
                           "ownPages": [{
@@ -4860,22 +4844,6 @@
                             "description": "",
                             "title": "Fear",
                             "content": "<p>The fear emotion.<init>\nThe fear emotion.<\/p>\n<p>combinationFunction\nAlgorithm which decides how the parameters involved\nin the evolution of this characteristic must be combined together.\nIt can be either a max, min, summation or any other type of function.<\/p>\n"
-                          }]
-                        },
-                        "OrientingBehavior": {
-                          "ownKey": "OrientingBehavior",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "OrientingBehavior",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior"
-                            },
-                            "description": "",
-                            "title": "OrientingBehavior",
-                            "content": "<p>The orienting behavior of a pedestrian in an euclidean bidimensional space.\nThis class accepts an Euclidean2DEnvironmentWithGraph whose graph features\nConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages\nas edges.<init>\nThe orienting behavior of a pedestrian in an euclidean bidimensional space.\nThis class accepts an Euclidean2DEnvironmentWithGraph whose graph features\nConvexPolygonal nodes (or any subclass of it) and Euclidean2DPassages\nas edges.\nenvironment\nThe environment the pedestrian is into.\ncomputeEdgeRankings\nMaps each edge outgoing from the given room to an integer rank indicating its\nsuitability in order to reach the provided destination (which is outside of the scope\nof the agent). Rankings should be in <a href=\"#\">1,E<\/a>, where E is the number of edges, a lower\nrank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following\nsituation: he knows the spatial structure of the current room and the next sub-destination\nhe want to reach, but has no other information regarding the spatial structure between\nhis room and that position (remember that it is assumed the cognitive map provide only\na boolean information regarding the connection of landmarks, no extra info is stored).\nThis method should implement an algorithm allowing the pedestrian to perform an educated\nguess of which crossing to take in order to get closer to the provided destination.<\/p>\ncrossingPoint\nProvided a passage (or door) the pedestrian may want to cross, this method computes the exact\npoint the pedestrian will move towards in order to cross such passage.\nThe provided passage belongs to the room the agent is into (i.e. it is in sight of the agent),\nthe returned position must be in sight of him as well, which means no obstacle should be placed\nbetween such point and his current position.<p>This method is mainly about exploiting the extra data stored in the passage (for instance\nits shape and location on the room's boundary) to determine which point the pedestrian\nshall point towards.<\/p>\nweight\nThe congestionFactor is added.\nweightExit\nThe congestionFactor is added.<\/p>\n"
                           }]
                         },
                         "BeliefDanger": {
@@ -5252,7 +5220,7 @@
                           },
                           "description": "",
                           "title": "EnvironmentWithGraph",
-                          "content": "<p>An environment with obstacles providing a NavigationGraph, i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.<\/p>\n<p>graph<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          "content": "<p>An environment with obstacles providing a NavigationGraph, i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.\ngraph\nThe navigation graph.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                         }]
                       },
                       "EuclideanPhysics2DEnvironmentWithGraph": {
@@ -5670,6 +5638,22 @@
                       "content": "<p>A group with a special member acting as a leader.\nleader\nThe leader of the group.<\/p>\n"
                     }]
                   },
+                  "NavigationAction": {
+                    "ownKey": "NavigationAction",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "it/unibo/alchemist/model/interfaces",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "NavigationAction",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationAction"
+                      },
+                      "description": "",
+                      "title": "NavigationAction",
+                      "content": "<p>A SteeringAction allowing a pedestrian to navigate an environment consciously (e.g. without\ngetting stuck in U-shaped obstacles).\nNames are inspired to indoor environments, but this interface works for outdoor ones as well.\npedestrian\nThe pedestrian to move.\nenvironment\nThe environment the pedestrian is into.\npedestrianPosition\nThe position of the pedestrian in the environment.\ncurrentRoom\nThe room (= environment's area) the pedestrian is into.\ndoorsInSight<\/p>\n<p>crossDoor\nMoves the pedestrian across the provided door, which must be among doorsInSight.\nmoveToFinal\nMoves the pedestrian to the given final destination, which must be inside currentRoom.\nstop\nStops moving the pedestrian.<\/p>\n"
+                    }]
+                  },
                   "Incarnation": {
                     "ownKey": "Incarnation",
                     "ownPages": [{
@@ -5684,6 +5668,22 @@
                       "description": "",
                       "title": "Incarnation",
                       "content": "<p>createNode<\/p>\n<p>createCondition<\/p>\n<p>createTimeDistribution<\/p>\n<p>createReaction<\/p>\n<p>createConcentration\nCreates a new concentration object of a specific concrete type.\ncreateAction<\/p>\n<p>createMolecule\nParses a String, and provides a Molecule.\ngetProperty\nGiven an Node, an Molecule and a property expressed as a String, returns a numeric value. If a numeric value is not deducible, Double.NaN is returned.<\/p>\n"
+                    }]
+                  },
+                  "NavigationStrategy": {
+                    "ownKey": "NavigationStrategy",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "it/unibo/alchemist/model/interfaces",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "NavigationStrategy",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationStrategy"
+                      },
+                      "description": "",
+                      "title": "NavigationStrategy",
+                      "content": "<p>Defines what a pedestrian should do when in a new room (= environment's area), this is designed\nto be used jointly with a NavigationAction: the latter defines how to properly move the\npedestrian, while delegating the decision on where to move it to a NavigationStrategy.\naction\nThe NavigationAction used to navigate the environment.\ninNewRoom\nThis is called whenever the pedestrian enters a new room.\ninUnexpectedNewRoom\nThis is called in place of inNewRoom when the pedestrian ends up in an unexpected room while moving.\nBy default, unexpected rooms are treated just like expected ones.<\/p>\n"
                     }]
                   },
                   "Position": {
@@ -5782,7 +5782,7 @@
                           },
                           "description": "",
                           "title": "NavigationGraph",
-                          "content": "<p>A graph used for navigation purposes. Nodes are ConvexGeometricShapes,\nusually representing portions of an environment which are traversable by\nagents (the advantage of such representation is that agents can freely\nwalk around within a convex area, as it is guaranteed that no obstacle\nwill be found).\nAdditionally, a navigation graph can store a set of positions of interest\nthat may be used during navigation (e.g. destinations in an evacuation\nscenario).\nNote that implementations of this graph must guarantee predictable\nordering for the collections they maintain, as reproducibility is a key\nfeature of Alchemist.\nBe also aware that, by contract, the <a href=\"#\">org.jgrapht.Graph<\/a> interface does\nnot allow duplicated edges (see <a href=\"#\">org.jgrapht.Graph.addEdge<\/a>).<\/p>\n<p>destinations\nA list of positions of interest (usually destinations).\ndestinationsWithin<\/p>\n<p>containsAnyDestination\nChecks whether the provided node contains any destination.\nnodeContaining<\/p>\n"
+                          "content": "<p>A graph used for navigation purposes. Nodes are ConvexGeometricShapes,\nusually representing portions of an environment which are traversable by\nagents (the advantage of such representation is that agents can freely\nwalk around within a convex area, as it is guaranteed that no obstacle\nwill be found).\nNote that implementations of this graph must guarantee predictable\nordering for the collections they maintain, as reproducibility is a key\nfeature of Alchemist.\nBe also aware that, by contract, the <a href=\"#\">org.jgrapht.Graph<\/a> interface does\nnot allow duplicated edges (see <a href=\"#\">org.jgrapht.Graph.addEdge<\/a>).<\/p>\n<p>nodeContaining<\/p>\n"
                         }]
                       },
                       "Euclidean2DPassage": {
@@ -5798,7 +5798,7 @@
                           },
                           "description": "",
                           "title": "Euclidean2DPassage",
-                          "content": "<p>A passage between two ConvexPolygons in an euclidean bidimensional space.\nThe passage is oriented, which means it connects tail to head, but the opposite is\nnot necessarily true.\npassageShape is a Segment2D modeling the shape of the passage between the two areas:\nan agent could cross any point of it to move from the first area to the second one. To\nmake it easier, think of the following: in an indoor environment, the segment should\nrepresent the shape of the door between two rooms. Additionally, given a passage p\nconnecting area a to area b, the segment MUST belong to the boundary of a, but can or\ncannot belong the boundary of b.<init>\nA passage between two ConvexPolygons in an euclidean bidimensional space.\nThe passage is oriented, which means it connects tail to head, but the opposite is\nnot necessarily true.\npassageShape is a Segment2D modeling the shape of the passage between the two areas:\nan agent could cross any point of it to move from the first area to the second one. To\nmake it easier, think of the following: in an indoor environment, the segment should\nrepresent the shape of the door between two rooms. Additionally, given a passage p\nconnecting area a to area b, the segment MUST belong to the boundary of a, but can or\ncannot belong the boundary of b.\ntail<\/p>\n<p>head<\/p>\n<p>passageShape<\/p>\n"
+                          "content": "<p>A passage between two ConvexPolygons in an euclidean bidimensional space.\nThe passage is oriented, which means it connects tail to head, but the opposite is\nnot necessarily true.\ntail and head can be non-adjacent (there can be some distance between them), this\nintroduces navigation issues as agents may not know which direction to follow when\ncrossing a passage.\npassageShapeOnTail is a Segment2D representing the shape of the passage on tail's\nboundary (e.g. in an indoor environment, the segment should represent the shape of the\ndoor between two rooms). passageShapeOnTail must be determined so as to guarantee that\nhead is reachable by throwing a ray from any point of the segment in its normal direction.\nThis solves navigation issues as it provides agents with a direction to follow when crossing\nEuclidean2DPassages (namely, the normal direction to passageShapeOnTail).<init>\nA passage between two ConvexPolygons in an euclidean bidimensional space.\nThe passage is oriented, which means it connects tail to head, but the opposite is\nnot necessarily true.\ntail and head can be non-adjacent (there can be some distance between them), this\nintroduces navigation issues as agents may not know which direction to follow when\ncrossing a passage.\npassageShapeOnTail is a Segment2D representing the shape of the passage on tail's\nboundary (e.g. in an indoor environment, the segment should represent the shape of the\ndoor between two rooms). passageShapeOnTail must be determined so as to guarantee that\nhead is reachable by throwing a ray from any point of the segment in its normal direction.\nThis solves navigation issues as it provides agents with a direction to follow when crossing\nEuclidean2DPassages (namely, the normal direction to passageShapeOnTail).\ntail<\/p>\n<p>head<\/p>\n<p>passageShapeOnTail<\/p>\n<p>crossingPointOnTail\nProvided the position of an agent that may want to cross this passage, this method\ncomputes the point belonging to passageShapeOnTail which is more convenient to\ncross.\nNote that the agent must be inside tail.\ncrossingPointOnHead\nProvided the crossingPointOnTail that an agent has reached (or will reach), this\nmethod computes the point belonging to the boundary of head that the agent should\npoint towards to cross the passage (i.e. the first point belonging to head's boundary\nthat is encountered when throwing a ray from crossingPointOnTail along passageShapeOnTail's\nnormal direction).\nNote that the returned point may not be formally contained in head depending on the\ndefinition of insideness used by ConvexPolygon.contains, prefer using\nConvexPolygon.containsBoundaryIncluded.\ncrossingPoints\nProvided the position of an agent that may want to cross this passage, this method\nreturns a pair containing both the crossingPointOnTail and the crossingPointOnHead.<\/p>\n"
                         }]
                       }
                     },
@@ -5878,6 +5878,22 @@
                       "description": "",
                       "title": "HeterogeneousPedestrian",
                       "content": "<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.\nage\nThe age of this pedestrian.\ngender\nThe gender of this pedestrian.\ncompliance\nValue between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.\nprobabilityOfHelping\nValue between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                    }]
+                  },
+                  "EuclideanNavigationAction": {
+                    "ownKey": "EuclideanNavigationAction",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "it/unibo/alchemist/model/interfaces",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "EuclideanNavigationAction",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction"
+                      },
+                      "description": "",
+                      "title": "EuclideanNavigationAction",
+                      "content": "<p>A NavigationAction working with euclidean spaces.<\/p>\n"
                     }]
                   },
                   "Environment": {
@@ -6118,6 +6134,22 @@
                       "description": "",
                       "title": "VisibleNode",
                       "content": "<p>Represents a node seen by the it.unibo.alchemist.model.implementations.actions.See action.\nnode\nThe node seen.\nposition\nThe position of the node.<\/p>\n"
+                    }]
+                  },
+                  "EuclideanNavigationStrategy": {
+                    "ownKey": "EuclideanNavigationStrategy",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "it/unibo/alchemist/model/interfaces",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "EuclideanNavigationStrategy",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationStrategy"
+                      },
+                      "description": "",
+                      "title": "EuclideanNavigationStrategy",
+                      "content": "<p>A NavigationStrategy working with euclidean spaces.<\/p>\n"
                     }]
                   },
                   "CognitivePedestrian": {
@@ -6447,7 +6479,7 @@
                                 },
                                 "description": "",
                                 "title": "Euclidean2DShapeFactory",
-                                "content": "<p>Defines a factory of <a href=\"#\">GeometricShape<\/a> for a bidimensional euclidean space.<\/p>\n<p>circle\nA circle extends in the first and second axis by its diameter.\nrectangle\nA rectangle extends in the first and second axis by its width and height.\ncircleSector\nA circle sector is the portion of a disk enclosed by two radii and an arc\nand it extends in the first and second axis by its radius and angle.<\/p>\n"
+                                "content": "<p>Defines a factory of GeometricShape for a bidimensional euclidean space.<\/p>\n<p>circle\nA circle extends in the first and second axis by its diameter.\nrectangle\nA rectangle extends in the first and second axis by its width and height.\ncircleSector\nA circle sector is the portion of a disk enclosed by two radii and an arc\nand it extends in the first and second axis by its radius and angle.<\/p>\n"
                               }]
                             },
                             "Euclidean2DShape": {
@@ -6479,7 +6511,7 @@
                                 },
                                 "description": "",
                                 "title": "ConvexPolygon",
-                                "content": "<p>A convex polygon is a simple polygon (i.e. not self-intersecting and\nwithout holes) in which no line segment between two points on the boundary\never goes outside the polygon.<\/p>\n<p>vertices\nA list is used because vertices do have an order.\ngetEdge\nThe index parameter specify which edge to get: edge i connects\nvertices i and i+1.\nintersects\nChecks whether the given shape intersects with the polygon.\nedges\nReturns a collection containing the edges (or sides) of the polygon.\ncontains\nChecks whether the polygon contains the given shape.\ncontainsBoundaryIncluded\nChecks whether the given vector is contained in the polygon or lies on its boundary.\ncontainsBoundaryExcluded\nChecks whether the given vector is contained in the polygon, boundary excluded.\nintersectsBoundaryExcluded\nChecks if the provided segment intersects with the polygon, boundary excluded.\nclosestEdgeTo\nFinds the edge of the polygon closest to the provided segment.<\/p>\n"
+                                "content": "<p>A simple polygon (i.e. not self-intersecting and without holes) in which no\nline segment between two points on the boundary ever goes outside the polygon.<\/p>\n<p>vertices<\/p>\n<p>edges<\/p>\n<p>getEdge\nDepending on the implementation, this may be faster than edges.get(index).\ncontains\nChecks if the polygon contains a vector (= a point). The definition of insideness\nmay vary depending on the implementation, this may affect the outcome for points\nlying on the polygon's boundary. For accurate operations see containsBoundaryIncluded\nand containsBoundaryExcluded.\ncontains\nChecks if the polygon contains a polygonal <a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a> (i.e. without curved\nsegments). A polygonal shape is contained in a polygon if all of its points are\ncontained in (or lie on the boundary of) the latter.\nliesOnBoundary\nChecks if a vector (= a point) lies on the polygon's boundary.\ncontainsBoundaryIncluded\nChecks if a vector (= a point) is contained in the polygon or lies on its boundary.\ncontainsBoundaryExcluded\nChecks if a vector (= a point) is contained in the polygon, boundary excluded.\nintersects\nChecks if a <a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a> intersects the polygon, adjacent shapes are not\nconsidered to be intersecting.\nintersects\nChecks if a segment intersects with the polygon, segments lying on the polygon's\nboundary are not considered to be intersecting.\nisAdjacentTo\nA polygon is adjacent to another if any of its points lies on the boundary of the other.\nisAdjacentTo\nChecks if the polygon is adjacent to a convex polygonal <a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a>.\nclosestEdgeTo\nFinds the edge of the polygon closest to the provided segment, i.e. the first one\nthat would collide (= intersect) with the segment in case the polygon extended on\neach side.<\/p>\n"
                               }]
                             },
                             "navigator": {
@@ -6497,7 +6529,7 @@
                                   },
                                   "description": "",
                                   "title": "ExtendableConvexPolygon",
-                                  "content": "<p>A convex polygon capable of extending itself.<\/p>\n<p>advanceEdge\nAdvances the specified edge in its normal direction. The step\nparameter represents the length of the vector that will be used\nto translate the edge. Returns a boolean indicating whether the\nadvancement was performed or not (e.g. because it would have\ncaused the lost of the convexity).\nadvanceEdge\nAdvances the specified edge only if it remains inside the given region.\nSee ExtendableConvexPolygon.advanceEdge.\nextend\nTries to extend the polygon in each direction. Each edge is given\na chance to advance in its normal direction. The step parameter\nrepresents the length of the vector that will be used to advance\nthe edges.\nReturns a boolean indicating whether the polygon extended (e.g. at\nleast one edge advanced) or not (e.g. for the presence of obstacles).\nThe boundaries of the environment need to be specified as well, in\norder to prevent the polygon from growing beyond them (a rectangular\nshaped environment is assumed, its origin, width and height are to\nbe provided, width and height should be positive). This method is\nable to cope with non axis-aligned convex polygonal obstacles as well.<\/p>\n"
+                                  "content": "<p>A sophisticated MutableConvexPolygon.<\/p>\n<p>advanceEdge\nAdvances an edge in its normal direction.\nextend\nExtends the polygon in each direction: each edge is given a chance to advance.<\/p>\n"
                                 }]
                               }},
                               "ownPages": [{
@@ -6543,7 +6575,7 @@
                                 },
                                 "description": "",
                                 "title": "MutableConvexPolygon",
-                                "content": "<p>A mutable ConvexPolygon.<\/p>\n<p>addVertex\nAdds a vertex in the specified position.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nremoveVertex\nRemoves the specified vertex.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nmoveVertex\nMoves the specified vertex to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nmoveEdge\nMoves the specified edge to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nunion\nPerforms a union in-place with a collection of overlapping\npolygons. Returns a boolean indicating whether the union was\nsuccessful or not (e.g. because the polygon would have lost its\nconvexity or the provided polygons did not overlap).<\/p>\n"
+                                "content": "<p>A mutable ConvexPolygon.<\/p>\n<p>addVertex\nAdds a vertex to the polygon.\nremoveVertex\nRemoves a vertex from the polygon.\nmoveVertex\nMoves a vertex of the polygon to a new absolute position.\nreplaceEdge\nReplaces an edge of the polygon.<\/p>\n"
                               }]
                             },
                             "Segment2D": {
@@ -6559,7 +6591,7 @@
                                 },
                                 "description": "",
                                 "title": "Segment2D",
-                                "content": "<p>Defines a segment from first to second in an euclidean bidimensional space.<init>\nDefines a segment from first to second in an euclidean bidimensional space.\nxAxisAligned\nChecks whether the segment is aligned to the x axis.\nyAxisAligned\nChecks whether the segment is aligned to the y axis.\nisAxisAligned\nChecks whether the segment is axis-aligned.\nslope\nComputes the slope of the segment. If the two points coincide (i.e. the segment\nisDegenerate), Double.NaN is the result.\nintercept\nComputes the intercept of the line passing through first and second.\nisDegenerate\nChecks if its points coincide (and its length is zero).\nmidPoint\nComputes the medium point of the segment.\nfirst<\/p>\n<p>second<\/p>\n<p>toVector<\/p>\n<p>contains\nChecks whether the segment contains the given point.\nclosestPointTo\nFinds the point of the segment which is closest to the provided position.\ndistanceTo\nComputes the distance between the segment and a given point.\ndistanceTo\nComputes the (minimum) distance between two segments.<\/p>\n"
+                                "content": "<p>Defines a segment from first to second in an euclidean bidimensional space.<init>\nDefines a segment from first to second in an euclidean bidimensional space.\nlength\nThe length of the segment.\nxAxisAligned\nIndicates if the segment is aligned to the x axis.\nyAxisAligned\nIndicates if the segment is aligned to the y axis.\nisAxisAligned\nIndicates if the segment is axis-aligned.\nslope\nThe slope of the segment. If the two points coincide, this is Double.NaN.\nintercept\nThe intercept of the line passing through first and second.\nisDegenerate\nA segment is degenerate if its points coincide.\nmidPoint\nThe medium point of the segment.\nfirst<\/p>\n<p>second<\/p>\n<p>shrunk<\/p>\n<p>toVector<\/p>\n<p>contains\nChecks if the segment contains a point. Doubles are not directly compared,\n<a href=\"#\">MathUtils.fuzzyEquals<\/a> is used instead.\nclosestPointTo\nFinds the point of the segment which is closest to the provided position.\ndistanceTo\nComputes the distance between the segment and a given point.\ndistanceTo\nComputes the (minimum) distance between two segments.\ntoRange\nMaps the segment a ClosedRange, this is done by extracting either the X coordinates or\nthe Y coordinates of the two endpoints of the segment. getXCoords indicates which pair\nof coordinates should be extracted.\nThis can be useful e.g. to represent portions of axis-aligned segments without creating\nnew ones.<\/p>\n"
                               }]
                             },
                             "Euclidean2DTransformation": {
@@ -6639,7 +6671,7 @@
                           },
                           "description": "",
                           "title": "Vector",
-                          "content": "<p>A generic vector in a multidimensional space.\ndimensions\nThe dimensions of the space this vector belongs to.\ncoordinates\nCoordinates for a Cartesian space.\nImplementors must guarantee that internal state is not exposed.\nmagnitude\nFinds the magnitude of a vector.\nget\nThe coordinate of this vector in the specified dimension relatively to the basis\nits space is described with.\nplus\nSupport for sum.\nNote: the dimensions must coincide.\nminus\nSupport for subtraction.\nNote: the dimensions must coincide.\ntimes\nMultiplication by a Double.\ndiv\nDivision by a Double.\ndot\nComputes the dot product between two vectors.\nangleBetween\nComputes the angle in radians between two vectors.\ndistanceTo\nComputes the distance between two vectors, interpreted as points in an Euclidean\nspace. Throws <a href=\"http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html\">IllegalArgumentException<\/a> if vectors have different dimensions.\nresized<\/p>\n<p>normalized<\/p>\n<p>normal\nFind the normal of a vector.<\/p>\n"
+                          "content": "<p>A generic vector in a multidimensional space.\ndimensions\nThe dimensions of the space this vector belongs to.\ncoordinates\nCoordinates for a Cartesian space.\nImplementors must guarantee that internal state is not exposed.\nmagnitude\nFinds the magnitude of a vector.\nget\nThe coordinate of this vector in the specified dimension relatively to the basis\nits space is described with.\nplus\nSupport for sum.\nNote: the dimensions must coincide.\nminus\nSupport for subtraction.\nNote: the dimensions must coincide.\ntimes\nMultiplication by a Double.\ndiv\nDivision by a Double.\ndot\nComputes the dot product between two vectors.\nangleBetween\nComputes the angle in radians between two vectors.\ndistanceTo\nComputes the distance between two vectors, interpreted as points in an Euclidean\nspace. Throws <a href=\"http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html\">IllegalArgumentException<\/a> if vectors have different dimensions.\nresized<\/p>\n<p>normalized<\/p>\n<p>coerceAtMost<\/p>\n<p>coerceAtLeast<\/p>\n<p>coerceIn\nPerforms a coercion at least and at most.\nnormal\nFind the normal of a vector.<\/p>\n"
                         }]
                       }
                     },
@@ -7067,7 +7099,7 @@
                           },
                           "description": "",
                           "title": "ImageEnvironmentWithGraph",
-                          "content": "<p>An ImageEnvironment providing an Euclidean2DNavigationGraph.\nThe NaviGator algorithm is used to produce such graph (see generateNavigationGraph).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<init>\nAn ImageEnvironment providing an Euclidean2DNavigationGraph.\nThe NaviGator algorithm is used to produce such graph (see generateNavigationGraph).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>\n<p>graph<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          "content": "<p>An ImageEnvironment providing an Euclidean2DNavigationGraph.\nThe NaviGator algorithm is used to produce such graph (see generateNavigationGraph).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<init>\nAn ImageEnvironment providing an Euclidean2DNavigationGraph.\nThe NaviGator algorithm is used to produce such graph (see generateNavigationGraph).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).\ngraph\nThe navigation graph.<\/p>\n<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                         }]
                       },
                       "BioRect2DEnvironment": {
@@ -7869,7 +7901,7 @@
                           },
                           "description": "",
                           "title": "BaseNavigationGraph",
-                          "content": "<p>An implementation of NavigationGraph, deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul><init><\/p>\n<p><init>\nAn implementation of NavigationGraph, deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul><\/p>\n<p>destinations\nA list of positions of interest (usually destinations).<\/p>\n"
+                          "content": "<p>An implementation of NavigationGraph, deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul><init><\/p>\n<p><init>\nAn implementation of NavigationGraph, deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul><\/p>\n"
                         }]
                       },
                       "DirectedEuclidean2DNavigationGraph": {
@@ -8225,7 +8257,7 @@
                           },
                           "description": "",
                           "title": "AbstractOrientingPedestrian",
-                          "content": "<p>An abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironmentWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<init>\nAn abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironmentWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.\nvolatileMemory\nThe volatile memory of the agent, it models the ability to remember rooms\nor spaces of the environment already visited by the agent since the start\nof the simulation. In particular, each room is paired with the number of\nvisits.\ncognitiveMap\nThe cognitive map of the agent. A cognitive map is composed of landmarks\n(elements of the environment easy to remember due to their uniqueness)\nand spatial relations between them, it is represented using a NavigationGraph.\nknowledgeDegree\nThe knowledge degree of the agent concerning the environment. It's\na percentage value in <a href=\"#\">0,1<\/a>.\nrandomGenerator\nThe random generator to use in order to preserve reproducibility.\nenvironment\nThe environment this pedestrian is into.\ngenerateLandmarkWithin\nGenerates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          "content": "<p>An abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironmentWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<init>\nAn abstract OrientingPedestrian.\nThis class defines an algorithm capable of generating a pseudo-random cognitiveMap\nbased on a NavigationGraph of the environment. The latter can be obtained from\nEnvironmentWithGraphs, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.\nvolatileMemory\nThe volatile memory of the agent: it models the ability to remember areas\nof the environment already visited by the agent since the start of the\nsimulation. In particular, each area is paired with the number of visits.\nAreas are assumed to be represented as ConvexGeometricShapes, as in\nNavigationGraphs.\ncognitiveMap\nThe cognitive map of the agent. It's composed of landmarks (elements of the\nenvironment easy to remember due to their uniqueness) and spatial relations\nbetween them. It is represented using a NavigationGraph.\nknowledgeDegree\nThe knowledge degree of the agent concerning the environment, it's a Double\nvalue in <a href=\"#\">0,1<\/a> describing the percentage of the environment the agent is\nfamiliar with prior to the start of the simulation (thus it does not take\ninto account the knowledge the pedestrian will gain during it, namely the\nvolatileMemory).\nrandomGenerator\nThe random generator to use in order to preserve reproducibility.\nenvironment\nThe environment this pedestrian is into.\ngenerateLandmarkWithin\nGenerates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                         }]
                       },
                       "CircularDeformableCellImpl": {
@@ -8273,7 +8305,7 @@
                           },
                           "description": "",
                           "title": "CognitivePedestrianImpl",
-                          "content": "<p>Implementation of a cognitive pedestrian.<init>\nImplementation of a cognitive pedestrian.<\/p>\n<p>speed\nThe speed at which the pedestrian is moving.\ndangerBelief\nValue representing the current belief of the situation dangerousness for this pedestrian.\nfear\nValue representing the level of fear of this pedestrian.\ncognitiveCharacteristics\nThe list of all the cognitive characteristics of this pedestrian.\nwantsToEvacuate\nWhether or not this pedestrian intends to evacuate.\ninfluencialPeople\nA list of all the pedestrians inside at least one of the sensory spheres of this pedestrian.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                          "content": "<p>Implementation of a cognitive pedestrian.<init>\nImplementation of a cognitive pedestrian.\ndanger\nthe molecule associated to danger in the environment.\nspeed\nThe speed at which the pedestrian is moving.\ndangerBelief\nValue representing the current belief of the situation dangerousness for this pedestrian.\nfear\nValue representing the level of fear of this pedestrian.\ncognitiveCharacteristics\nThe list of all the cognitive characteristics of this pedestrian.\nwantsToEvacuate\nWhether or not this pedestrian intends to evacuate.\ninfluencialPeople\nA list of all the pedestrians inside at least one of the sensory spheres of this pedestrian.\ntargetDistance\nCalculate the distance between this pedestrian current position and the target of the specified steering action.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                         }]
                       },
                       "HeterogeneousPedestrian2D": {
@@ -8406,6 +8438,22 @@
                           "content": "<p>This class implements a rectangular obstacle, whose sides are parallel to the cartesian axis.<init>\nBuilds a new RectObstacle2D, given a point, the width and the height.\nid<\/p>\n<p>contains<\/p>\n<p>nearestIntersection<\/p>\n<p>getMinX<\/p>\n<p>next<\/p>\n<p>getMaxX<\/p>\n<p>toString<\/p>\n<p>getMinY<\/p>\n<p>getMaxY<\/p>\n"
                         }]
                       },
+                      "LazyMutable": {
+                        "ownKey": "LazyMutable",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/utils",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "LazyMutable",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/utils/LazyMutable"
+                          },
+                          "description": "",
+                          "title": "LazyMutable",
+                          "content": "<p>A delegate allowing to lazily initialise a non-null mutable variable (= var).<init>\nA delegate allowing to lazily initialise a non-null mutable variable (= var).<\/p>\n<p>getValue<\/p>\n<p>setValue<\/p>\n"
+                        }]
+                      },
                       "BidimensionalGaussian": {
                         "ownKey": "BidimensionalGaussian",
                         "ownPages": [{
@@ -8434,7 +8482,7 @@
                       },
                       "description": "",
                       "title": "it.unibo.alchemist.model.implementations.utils",
-                      "content": "<p>makePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nsurrounding\nCreate a list of points equally distributed in the circle of given radius with center in this position.\nrotate\nPerform the rotation of a position.\nnextDouble\nGenerate a random double between the given bounds.\ndirection\nGenerate a random Euclidean direction.\nposition\nGenerate a random Euclidean position.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                      "content": "<p>lazyMutable\nCreates an instance of LazyMutable with the given initializer.\nmakePosition\nCreate a position from an array of double representing the coordinates of the point.\norigin\nCreate a position corresponding to the origin of this environment.\nsurrounding\nCreate a list of points equally distributed in the circle of given radius with center in this position.\nrotate\nPerform the rotation of a position.\nnextDouble\nGenerate a random double between the given bounds.\ndirection\nGenerate a random Euclidean direction.\nposition\nGenerate a random Euclidean position.\nshuffled\n<a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                     }]
                   },
                   "layers": {
@@ -8828,22 +8876,6 @@
                           "content": "<p>In euclidean geometry, the intersection of two segments can be an EMPTY set, a POINT, or a\nSEGMENT (in other words, infinite points).<\/p>\n"
                         }]
                       },
-                      "DoubleInterval": {
-                        "ownKey": "DoubleInterval",
-                        "ownPages": [{
-                          "reference": {
-                            "path": "it/unibo/alchemist/model/implementations/geometry",
-                            "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "DoubleInterval",
-                            "extension": "html",
-                            "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval"
-                          },
-                          "description": "",
-                          "title": "DoubleInterval",
-                          "content": "<p>Defines an interval with double precision.<init>\nDefines an interval with double precision.\nfirst\nSmallest value in the interval.\nsecond\nLargest value in the interval.\ncomponent1\nSame as first, for destructuring declarations.\ncomponent2\nSame as second, for destructuring declarations.\nisContained\nChecks whether the interval is contained in another given interval.\nintersection\nFinds the intersection between two intervals. If the intervals do not\nintersect, null is returned.\nintersects\nChecks whether the interval intersects with the one given.\nintersectionEndpointsExcluded\nFinds the intersection between two intervals. If the intervals do not\nintersect or share a single endpoint, null is returned.\nintersectsEndpointsExcluded\nChecks whether the interval intersects with the one given, endpoints are exluded.\nsubtract\nSubtracts a given interval from the current one.\nsubtractAll\nSubtracts all the given intervals from the current one.<\/p>\n"
-                        }]
-                      },
                       "euclidean": {
                         "ownKey": "euclidean",
                         "childrenPages": {"twod": {
@@ -8865,38 +8897,38 @@
                                 "content": "<p>Adapter of <a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/geom/Ellipse2D.html\">java.awt.geom.Ellipse2D<\/a> to Euclidean2DConvexShape.<init>\nAdapter of <a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/geom/Ellipse2D.html\">java.awt.geom.Ellipse2D<\/a> to Euclidean2DConvexShape.\ncentroid\nThe geometric center.\ndiameter\nThe largest distance between any pair of vertices.\nintersects\nA shape intersects another if any of its points is contained in the other one.\ncontains\nCheck if the shape contains a vector.\ntransformed\nTransforms the shape.\nasAwtShape<\/p>\n"
                               }]
                             },
-                            "MutableConvexPolygonImpl": {
-                              "ownKey": "MutableConvexPolygonImpl",
+                            "AbstractConvexPolygon": {
+                              "ownKey": "AbstractConvexPolygon",
                               "ownPages": [{
                                 "reference": {
                                   "path": "it/unibo/alchemist/model/implementations/geometry/euclidean/twod",
                                   "baseUrl": "https://alchemistsimulator.github.io/latest",
-                                  "fileName": "MutableConvexPolygonImpl",
+                                  "fileName": "AbstractConvexPolygon",
                                   "extension": "html",
                                   "usePrettyUrl": true,
-                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/MutableConvexPolygonImpl"
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AbstractConvexPolygon"
                                 },
                                 "description": "",
-                                "title": "MutableConvexPolygonImpl",
-                                "content": "<p>Implementation of MutableConvexPolygon.<p>Each modification operation on this object has a time complexity of\nO(n), where n is the number of vertices/edges.<\/p><p>Degenerate edges (of length 0) and collinear points are allowed, but\nbe aware that the majority of algorithms working on convex polygons\nrequires no degeneration at all.<\/p><init>\nImplementation of MutableConvexPolygon.<p>Each modification operation on this object has a time complexity of\nO(n), where n is the number of vertices/edges.<\/p><p>Degenerate edges (of length 0) and collinear points are allowed, but\nbe aware that the majority of algorithms working on convex polygons\nrequires no degeneration at all.<\/p>\ndiameter\nThe largest distance between any pair of vertices.\ncentroid\nThe geometric center.\nvertices\nA list is used because vertices do have an order.\naddVertex\nAdds a vertex in the specified position.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nremoveVertex\nRemoves the specified vertex.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nmoveVertex\nMoves the specified vertex to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\ngetEdge\nThe index parameter specify which edge to get: edge i connects\nvertices i and i+1.\nmoveEdge\nMoves the specified edge to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nintersects\nA shape intersects another if any of its points is contained in the other one.\nintersects\nThis method is &quot;exact&quot; (no bounding box are used).\ncontains\nCheck if the shape contains a vector.\nunion\nPerforms a union in-place with a collection of overlapping\npolygons. Returns a boolean indicating whether the union was\nsuccessful or not (e.g. because the polygon would have lost its\nconvexity or the provided polygons did not overlap).\ntransformed\nTransforms the shape.\nasAwtShape<\/p>\n<p>equals<\/p>\n<p>hashCode<\/p>\n<p>mutateTo\nMutates this polygon to a copy of the specified one.\ncircularPrevious\nFinds the previous index givend the provided index,\nrestarting from the end if necessary.\ncircularNext\nFinds the next index givend the provided index,\nrestarting from the beginning if necessary.<\/p>\n"
+                                "title": "AbstractConvexPolygon",
+                                "content": "<p>An abstract ConvexPolygon providing a convexity test.<init>\nAn abstract ConvexPolygon providing a convexity test.<\/p>\n<p>liesOnBoundary\nChecks if a vector (= a point) lies on the polygon's boundary.\ncontainsBoundaryIncluded\nChecks if a vector (= a point) is contained in the polygon or lies on its boundary.\ncontainsBoundaryExcluded\nChecks if a vector (= a point) is contained in the polygon, boundary excluded.\ncontains\nChecks if the polygon contains a polygonal <a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a> (i.e. without curved\nsegments). A polygonal shape is contained in a polygon if all of its points are\ncontained in (or lie on the boundary of) the latter.\nisAdjacentTo\nA polygon is adjacent to another if any of its points lies on the boundary of the other.\nisAdjacentTo\nChecks if the polygon is adjacent to a convex polygonal <a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a>.\nintersects\nChecks if a segment intersects with the polygon, segments lying on the polygon's\nboundary are not considered to be intersecting.\nclosestEdgeTo\nFinds the edge of the polygon closest to the provided segment, i.e. the first one\nthat would collide (= intersect) with the segment in case the polygon extended on\neach side.\ntoString<\/p>\n<p>circularPrevious\nFinds the previous index with the respect to the given index, restarting from the end if necessary.\ncircularNext\nFinds the next index with respect to the given index, restarting from the beginning if necessary.\nisConvex\nChecks if the polygon is convex (see ConvexPolygon).\nIn order to be convex, a polygon must first be simple (not self-intersecting).\nAscertained that the polygon is simple, a rather easy convexity test consists\nin checking that every edge turns in the same direction (either left or right)\nwith respect to the previous one. If they all turn in the same direction, then\nthe polygon is convex. That is the definition of convexity of a polygon's boundary\nin this context.\nisConvex\nChecks if the polygon is convex, assuming that every edge apart from the specified\nones does not cause self-intersection.<\/p>\n"
                               }]
                             },
                             "navigator": {
                               "ownKey": "navigator",
-                              "childrenPages": {"ExtendableConvexPolygonImpl": {
-                                "ownKey": "ExtendableConvexPolygonImpl",
+                              "childrenPages": {"ExtendableConvexPolygonInEnvironment": {
+                                "ownKey": "ExtendableConvexPolygonInEnvironment",
                                 "ownPages": [{
                                   "reference": {
                                     "path": "it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator",
                                     "baseUrl": "https://alchemistsimulator.github.io/latest",
-                                    "fileName": "ExtendableConvexPolygonImpl",
+                                    "fileName": "ExtendableConvexPolygonInEnvironment",
                                     "extension": "html",
                                     "usePrettyUrl": true,
-                                    "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl"
+                                    "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonInEnvironment"
                                   },
                                   "description": "",
-                                  "title": "ExtendableConvexPolygonImpl",
-                                  "content": "<p>Implementation of ExtendableConvexPolygon.<init>\nImplementation of ExtendableConvexPolygon.<\/p>\n<p>addVertex\nAdds a vertex in the specified position.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nremoveVertex\nRemoves the specified vertex.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nmoveVertex\nMoves the specified vertex to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nmoveEdge\nMoves the specified edge to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false\nis returned and the operation is not performed.<\/p>\nmutateTo\nMutates this polygon to a copy of the specified one.\nadvanceEdge\nAdvances the specified edge in its normal direction. The step\nparameter represents the length of the vector that will be used\nto translate the edge. Returns a boolean indicating whether the\nadvancement was performed or not (e.g. because it would have\ncaused the lost of the convexity).\nextend\nTries to extend the polygon in each direction. Each edge is given\na chance to advance in its normal direction. The step parameter\nrepresents the length of the vector that will be used to advance\nthe edges.\nReturns a boolean indicating whether the polygon extended (e.g. at\nleast one edge advanced) or not (e.g. for the presence of obstacles).\nThe boundaries of the environment need to be specified as well, in\norder to prevent the polygon from growing beyond them (a rectangular\nshaped environment is assumed, its origin, width and height are to\nbe provided, width and height should be positive). This method is\nable to cope with non axis-aligned convex polygonal obstacles as well.\nequals<\/p>\n<p>hashCode<\/p>\n"
+                                  "title": "ExtendableConvexPolygonInEnvironment",
+                                  "content": "<p>An ExtendableConvexPolygon located inside an environment with obstacles.\nObstacles, as well as the environment's boundaries, are taken into account when the polygon is\nextended (i.e. the polygon is prevented from intersecting an obstacle or growing beyond such\nboundaries).\nA rectangular region is assumed, its origin, width and height are to be specified. Both\n<a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a>s and ConvexPolygons can be specified as obstacles (see awtObstacles\nand polygonalObstacles).\nThis class is explicitly designed for the algorithm contained in generateNavigationGraph.\nTODO(improve the quality of this class)<init>\nAn ExtendableConvexPolygon located inside an environment with obstacles.\nObstacles, as well as the environment's boundaries, are taken into account when the polygon is\nextended (i.e. the polygon is prevented from intersecting an obstacle or growing beyond such\nboundaries).\nA rectangular region is assumed, its origin, width and height are to be specified. Both\n<a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a>s and ConvexPolygons can be specified as obstacles (see awtObstacles\nand polygonalObstacles).\nThis class is explicitly designed for the algorithm contained in generateNavigationGraph.\nTODO(improve the quality of this class)\npolygonalObstacles\nObstacles represented as ConvexPolygons, are assumed to be mutable but limited to the extension\n(i.e. they can only grow, not shrink). This is the behavior of seeds used by generateNavigationGraph,\nmaking this assumption allows to cache useful data such as whether an edge can still advance or\nan obstacle has already been encountered. This is a var but is assumed to be set only once before\nstarting to extend this polygon.\naddVertex\nAdds a vertex to the polygon.\nremoveVertex\nRemoves a vertex from the polygon.\nmoveVertex\nMoves a vertex of the polygon to a new absolute position.\nreplaceEdge\nReplaces an edge of the polygon.\nadvanceEdge\nAdvances an edge in its normal direction of a quantity equal to step, if extend has\nmodified the growth direction of the edge so as to follow an oblique obstacle (advanced case),\nthe modified growth direction is used.\nThe polygon is prevented from growing out of the environment's boundaries, but not from\nintersecting obstacles.\nextend\nExtends the polygon in each direction of a quantity equal to step.\nThe advancement of an edge is blocked if an obstacle is intersected, unless in a\nparticular case called advanced case. Such case shows up when a single vertex of\nthe polygon intruded an obstacle, but no vertex from the obstacle intruded the polygon.\nPlus, the intruded side of the obstacle should be oblique (or better, its slope should\nbe different from the one of the advancing edge).\nWhen this happens, we can do a simple operation in order to keep growing and allow a\nhigher coverage of the walkable area. We increment the order of the polygon (by adding\na vertex) and adjust the direction of growth in order for the new edge to follow the\nside of the obstacle.\nequals<\/p>\n<p>hashCode<\/p>\n"
                                 }]
                               }},
                               "ownPages": [{
@@ -8911,6 +8943,22 @@
                                 "description": "",
                                 "title": "it.unibo.alchemist.model.implementations.geometry.euclidean.twod.navigator",
                                 "content": "<p>generateNavigationGraph\nNaviGator (Navigation Graphs Generator) is an algorithm capable of generating an\nEuclidean2DNavigationGraph of a given environment with obstacles. The nodes of\nthe produced graph are convex polygons representing the areas of the environment\ntraversable by agents (namely, walkable areas), whereas edges represent connections\nbetween them.<p>NaviGator works with rectangular-shaped bidimensional environments with euclidean\ngeometry and double precision coordinates. Note that this algorithm:<\/p><ul><li>does not guarantee the coverage of 100% of the walkable area.<\/li><li>is only capable to deal with convex polygonal obstacles (concave ones can be\ndecomposed into convex meshes, whereas for curves bounding boxes can be used).<\/li><li>is only capable to detect axis-aligned crossings.<\/li><li>can take a significant amount of time to generate a navigation graph.<\/li><\/ul><p>Here's a brief description of how the algorithm operates:\nFirstly, a certain number of seeds is planted in the environment. Each seed is a\nsquare-shaped region of unitary side that will grow maintaining a convex shape.\nSecondly, planted seeds are extended until possible (i.e. until they are in contact\nwith an obstacle or another seed on each side). Finally, crossings are found between\nthe grown seeds.<\/p><\/p>\n"
+                              }]
+                            },
+                            "AwtMutableConvexPolygon": {
+                              "ownKey": "AwtMutableConvexPolygon",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "it/unibo/alchemist/model/implementations/geometry/euclidean/twod",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "AwtMutableConvexPolygon",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AwtMutableConvexPolygon"
+                                },
+                                "description": "",
+                                "title": "AwtMutableConvexPolygon",
+                                "content": "<p>MutableConvexPolygon partly delegated to AwtEuclidean2DShape and java.awt.geom.\nEach modification operation on this object has a time complexity of O(n), where n is\nthe number of vertices/edges.\nCollinear points are allowed.<init>\nMutableConvexPolygon partly delegated to AwtEuclidean2DShape and java.awt.geom.\nEach modification operation on this object has a time complexity of O(n), where n is\nthe number of vertices/edges.\nCollinear points are allowed.\ndiameter\nThe largest distance between any pair of vertices.\ncentroid\nThe geometric center.\nvertices<\/p>\n<p>getEdge<\/p>\n<p>edges<\/p>\n<p>addVertex\nAdds a vertex to the polygon.\nremoveVertex\nRemoves a vertex from the polygon.\nmoveVertex\nMoves a vertex of the polygon to a new absolute position.\nreplaceEdge\nReplaces an edge of the polygon.\ncontains\nDelegated to AwtEuclidean2DShape (adopts the definition of insideness used by\n<a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a>s).\nintersects\nDelegated to <a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/geom/Area.html\">java.awt.geom.Area<\/a>, this is accurate and does not consider adjacent\nshapes to be intersecting.\nintersects\nDelegated to AwtEuclidean2DShape unless other is AwtShapeCompatible, in which case\nintersects is used so as to guarantee maximum accuracy.\ntransformed\nTransforms the shape.\nasAwtShape<\/p>\n<p>equals<\/p>\n<p>hashCode<\/p>\n"
                               }]
                             }
                           },
@@ -8957,7 +9005,7 @@
                       },
                       "description": "",
                       "title": "it.unibo.alchemist.model.implementations.geometry",
-                      "content": "<p>isInBoundaries\nChecks whether the given segment is inside a rectangular region described by an origin\npoint and width and height values (only positive).\nisInBoundaries\nChecks whether the given point is inside a rectangular region described by an origin\npoint and width and height values (only positive).\nareCollinear\nDetermines if three points are collinear (i.e. they lie on the same line).\ncreateSegment\nCreates a Segment2D. x2 defaults to x1 and y2 defaults to y1.\nlinesIntersection\nFinds the intersection of two lines represented by segments. Degenerate segments (of zero\nlength) are not supported.\nintersection\nFinds the intersection point of two given segments. This method is able to deal with degenerate\nand collinear segments.\nintersection\nFinds the intersection between a segment and a circle.\nliesBetween\nChecks if a double value lies between two values (included) provided in any order.\nvertices\nObtains the vertices of a polygonal shape. Any curved segment connecting\ntwo points will be considered as a straight line between them.<\/p>\n"
+                      "content": "<p>isInBoundaries\nChecks whether the given segment is inside a rectangular region described by an origin\npoint and width and height values (only positive).\nisInBoundaries\nChecks whether the given point is inside a rectangular region described by an origin\npoint and width and height values (only positive).\nareCollinear\nDetermines if three points are collinear (i.e. they lie on the same line).\ncreateSegment\nCreates a Segment2D. x2 defaults to x1 and y2 defaults to y1.\nlinesIntersection\nFinds the intersection of two lines represented by segments. Degenerate segments (of zero\nlength) are not supported.\nintersection\nFinds the intersection point of two given segments. This method is able to deal with degenerate\nand collinear segments.\nintersection\nFinds the intersection between a segment and a circle.\nrangeFromUnordered\nCreates a ClosedRange from a couple of unordered values.\nfuzzyIn\nChecks if a double value is fuzzy contained in a range.\nvertices\nObtains the vertices of a polygonal shape. Any curved segment connecting\ntwo points will be considered as a straight line between them.\ncoincidesWith\nChecks whether two ranges coincide. It's a different way of checking if they're equals,\nwhich doesn't depend on their actual implementation. Note that the way you obtain a range\nmay influence the actual class used, and you can have two coincident ranges which don't\nresult equals because of different classes.\ncontains\nChecks whether the range contains the other one.\nThis method is faster than checking if the range contains both of the endpoints of other.\nintersects\nChecks whether the range intersects the other one.\nintersect\nFinds the intersection between two ranges, the resulting range may feature a single value\n(if the ranges only share an endpoint) or can be null, if they don't intersect at all.\nintersectsBoundsExcluded\nChecks whether two ranges intersect, excluding their bounds (i.e., excluding both\nClosedRange.start and ClosedRange.endInclusive). This means false is returned in\ncase the ranges share a single endpoint.\nminus\nPerforms a subtraction between ranges. The operation can produce an empty list (e.g. if\nthe current range is contained in the other one), a list featuring a single element,\nor a list featuring two elements (e.g. if the current range contains the other one).\nsubtractAll\nSubtracts all the given ranges from the current one. See ClosedRange.minus.\nfindExtremeCoordsOnX\nGiven a non empty list of points represented as vectors, this method finds the extreme coordinates\n(i.e. min and max coordinates) on the X-axis, these are used to create the returned ClosedRange.\nfindExtremeCoordsOnY\nGiven a non empty list of points represented as vectors, this method finds the extreme coordinates\n(i.e. min and max coordinates) on the Y-axis, these are used to create the returned ClosedRange.<\/p>\n"
                     }]
                   },
                   "reactions": {
@@ -8993,6 +9041,22 @@
                           "description": "",
                           "title": "SteeringBehavior",
                           "content": "<p>Reaction representing the steering behavior of a pedestrian.<init>\nReaction representing the steering behavior of a pedestrian.\nsteerStrategy\nthe logic according to the steering actions are combined.\nsteerActions\nThe list of only the steering actions between all the actions in this reaction.\ncloneOnNewNode<\/p>\n<p>getRate<\/p>\n<p>updateInternalStatus<\/p>\n<p>execute<\/p>\n"
+                        }]
+                      },
+                      "NavigationPrioritisedSteering": {
+                        "ownKey": "NavigationPrioritisedSteering",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/reactions",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "NavigationPrioritisedSteering",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/NavigationPrioritisedSteering"
+                          },
+                          "description": "",
+                          "title": "NavigationPrioritisedSteering",
+                          "content": "<p>A SteeringBehavior using SinglePrevalent steering strategy and accepting a collection of actions\ncontaining a single EuclideanNavigationAction, which is used as the prevalent one.<init>\nA SteeringBehavior using SinglePrevalent steering strategy and accepting a collection of actions\ncontaining a single EuclideanNavigationAction, which is used as the prevalent one.<\/p>\n"
                         }]
                       },
                       "BiochemicalReaction": {
@@ -9137,22 +9201,6 @@
                           "description": "",
                           "title": "SAPEREReaction",
                           "content": "<p>This class realizes a reaction with Lsa concentrations.<init><\/p>\n<p>cloneOnNewNode<\/p>\n<p>execute<\/p>\n<p>setConditions<\/p>\n<p>getRate<\/p>\n<p>setActions<\/p>\n<p>getRateAsString<\/p>\n"
-                        }]
-                      },
-                      "OrientingBehavior2D": {
-                        "ownKey": "OrientingBehavior2D",
-                        "ownPages": [{
-                          "reference": {
-                            "path": "it/unibo/alchemist/model/implementations/reactions",
-                            "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "OrientingBehavior2D",
-                            "extension": "html",
-                            "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingBehavior2D"
-                          },
-                          "description": "",
-                          "title": "OrientingBehavior2D",
-                          "content": "<p>A Reaction representing the OrientingBehavior of a pedestrian.<init>\nA Reaction representing the OrientingBehavior of a pedestrian.<\/p>\n<p>updateInternalStatus<\/p>\n<p>cloneOnNewNode<\/p>\n<p>getRate<\/p>\n<p>execute<\/p>\n"
                         }]
                       }
                     },
@@ -9703,6 +9751,22 @@
                           "content": "<p>Move the agent towards a target position.\nIt is similar to Seek but it attempts to arrive at the target position with a zero velocity.<init>\nMove the agent towards a target position.\nIt is similar to Seek but it attempts to arrive at the target position with a zero velocity.<\/p>\n"
                         }]
                       },
+                      "BaseEuclideanNavigationAction": {
+                        "ownKey": "BaseEuclideanNavigationAction",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/actions",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "BaseEuclideanNavigationAction",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/BaseEuclideanNavigationAction"
+                          },
+                          "description": "",
+                          "title": "BaseEuclideanNavigationAction",
+                          "content": "<p>An AbstractNavigationAction working with euclidean spaces. This action accepts\nan Euclidean2DEnvironmentWithGraph whose graph features ConvexPolygonal nodes\nand Euclidean2DPassages as edges.<init>\nAn AbstractNavigationAction working with euclidean spaces. This action accepts\nan Euclidean2DEnvironmentWithGraph whose graph features ConvexPolygonal nodes\nand Euclidean2DPassages as edges.\ntarget\nThe target of a directed edge of the environment's graph.\nenvironment\nThe environment the pedestrian is into.\ncrossDoor\nMoves the pedestrian across the provided door, which must be among doorsInSight.\nmoving<\/p>\n<p>nextPosition<\/p>\n<p>cloneAction<\/p>\n"
+                        }]
+                      },
                       "ProtelisProgram": {
                         "ownKey": "ProtelisProgram",
                         "ownPages": [{
@@ -9767,6 +9831,22 @@
                           "content": "<p>The count N of neighbors containing &quot;person&quot; is stored within a tuple of the form &quot;crowd, N&quot;.<init><\/p>\n<p>execute<\/p>\n"
                         }]
                       },
+                      "Pursue": {
+                        "ownKey": "Pursue",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/actions",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "Pursue",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Pursue"
+                          },
+                          "description": "",
+                          "title": "Pursue",
+                          "content": "<p>A NavigationAction using Pursuing navigation strategy.<init>\nA NavigationAction using Pursuing navigation strategy.<\/p>\n"
+                        }]
+                      },
                       "AbstractAction": {
                         "ownKey": "AbstractAction",
                         "ownPages": [{
@@ -9813,6 +9893,22 @@
                           "description": "",
                           "title": "RandomPolarization",
                           "content": "<p><init><\/p>\n<p>execute<\/p>\n<p>getContext<\/p>\n<p>cloneAction<\/p>\n<p>getNode<\/p>\n"
+                        }]
+                      },
+                      "FollowRoute": {
+                        "ownKey": "FollowRoute",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/actions",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "FollowRoute",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowRoute"
+                          },
+                          "description": "",
+                          "title": "FollowRoute",
+                          "content": "<p>A NavigationAction using RouteFollowing navigation strategy.<init>\nA NavigationAction using RouteFollowing navigation strategy.<\/p>\n"
                         }]
                       },
                       "ChangeBiomolConcentrationInEnv": {
@@ -9941,22 +10037,6 @@
                           "description": "",
                           "title": "ExtractClosestVisibleNodeAtDistance",
                           "content": "<p>Extracts the closest VisibleNode to the position at the given distance from the given node's position\nin the direction of the node's heading.<init>\nvisionMolecule is expected to contain a list of VisibleNode.\nIf there are no visible nodes then targetMolecule will be removed from <a href=\"#\">node<\/a>,\notherwise the VisibleNode's position will be inserted in targetMolecule.<\/p>\n<p>cloneAction<\/p>\n<p>execute<\/p>\n<p>getContext<\/p>\n"
-                        }]
-                      },
-                      "Orienting": {
-                        "ownKey": "Orienting",
-                        "ownPages": [{
-                          "reference": {
-                            "path": "it/unibo/alchemist/model/implementations/actions",
-                            "baseUrl": "https://alchemistsimulator.github.io/latest",
-                            "fileName": "Orienting",
-                            "extension": "html",
-                            "usePrettyUrl": true,
-                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting"
-                          },
-                          "description": "",
-                          "title": "Orienting",
-                          "content": "<p>A SteeringAction representing the OrientingBehavior of a pedestrian.<init>\nA SteeringAction representing the OrientingBehavior of a pedestrian.<\/p>\n<p>cloneAction<\/p>\n<p>nextPosition\nThe position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.<\/p>\n"
                         }]
                       },
                       "LsaAbstractAction": {
@@ -10088,6 +10168,38 @@
                               "description": "",
                               "title": "TypeBased",
                               "content": "<p>Steering strategy which gives a weight based on the type of steering action you are considering.\nFor each type,\nonly the action with the target nearest to the current pedestrian position is taken into consideration.<init>\nSteering strategy which gives a weight based on the type of steering action you are considering.\nFor each type,\nonly the action with the target nearest to the current pedestrian position is taken into consideration.<\/p>\n"
+                            }]
+                          },
+                          "SinglePrevalent": {
+                            "ownKey": "SinglePrevalent",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/implementations/actions/steeringstrategies",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "SinglePrevalent",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/SinglePrevalent"
+                              },
+                              "description": "",
+                              "title": "SinglePrevalent",
+                              "content": "<p>A SteeringStrategy in which one action is prevalent. Only NavigationActions can be prevalent, because\nthey guarantee to navigate the environment consciously (e.g. without getting stuck in obstacles). The\npurpose of this strategy is to linearly combine the potentially contrasting forces to which the pedestrian\nis subject, while maintaining that warranty. Such forces are combined as follows:\nlet f be the prevalent force,<ul><li>if f leads the pedestrian outside the room (= environment's area) he/she is into, no combination is performed\nand f is used as it is. This because crossing doors can be a thorny issue and we don't want to introduce\ndisturbing forces.<\/li><li>Otherwise, a linear combination is performed: f is assigned unitary weight, all other forces are assigned\nweight w equal to the maximum value in <a href=\"#\">0,1<\/a> so that the resulting force:<\/li><li>forms with f an angle smaller than or equal to the specified toleranceAngle,<\/li><li>doesn't lead the pedestrian outside the current room.\nThe idea is to decrease the intensity of non-prevalent forces until the resulting one enters in some tolerance\nsector defined by both the tolerance angle and the current room's boundary. With a suitable tolerance angle\nthis allows to steer the pedestrian towards the target defined by the prevalent force, while using a trajectory\nwhich takes into account other urges as well.\nFinally, an exponential smoothing with the given alpha is applied to the resulting force in order to decrease\noscillatory movements (this also known as shaking behavior).<\/li><\/ul><init>\nA SteeringStrategy in which one action is prevalent. Only NavigationActions can be prevalent, because\nthey guarantee to navigate the environment consciously (e.g. without getting stuck in obstacles). The\npurpose of this strategy is to linearly combine the potentially contrasting forces to which the pedestrian\nis subject, while maintaining that warranty. Such forces are combined as follows:\nlet f be the prevalent force,<ul><li>if f leads the pedestrian outside the room (= environment's area) he/she is into, no combination is performed\nand f is used as it is. This because crossing doors can be a thorny issue and we don't want to introduce\ndisturbing forces.<\/li><li>Otherwise, a linear combination is performed: f is assigned unitary weight, all other forces are assigned\nweight w equal to the maximum value in <a href=\"#\">0,1<\/a> so that the resulting force:<\/li><li>forms with f an angle smaller than or equal to the specified toleranceAngle,<\/li><li>doesn't lead the pedestrian outside the current room.\nThe idea is to decrease the intensity of non-prevalent forces until the resulting one enters in some tolerance\nsector defined by both the tolerance angle and the current room's boundary. With a suitable tolerance angle\nthis allows to steer the pedestrian towards the target defined by the prevalent force, while using a trajectory\nwhich takes into account other urges as well.\nFinally, an exponential smoothing with the given alpha is applied to the resulting force in order to decrease\noscillatory movements (this also known as shaking behavior).<\/li><\/ul><\/p>\n<p>computeNextPosition\nComputes the next position starting from the steering actions the pedestrian obey to,\nin relative coordinates with respect to its current position.<\/p>\n"
+                            }]
+                          },
+                          "ExponentialSmoothing": {
+                            "ownKey": "ExponentialSmoothing",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/implementations/actions/steeringstrategies",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "ExponentialSmoothing",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/ExponentialSmoothing"
+                              },
+                              "description": "",
+                              "title": "ExponentialSmoothing",
+                              "content": "<p>Exponential smoothing is a trivial way of smoothing signals.\nLet s(t) be the smoothed signal at time t, given a discrete signal g:\ns(t) = alpha * g(t) + (1 - alpha) * s(t-1)\ns(0) = g(0)<init>\nExponential smoothing is a trivial way of smoothing signals.\nLet s(t) be the smoothed signal at time t, given a discrete signal g:\ns(t) = alpha * g(t) + (1 - alpha) * s(t-1)\ns(0) = g(0)<\/p>\n<p>apply\nApplies the smoothing to the given force.<\/p>\n"
                             }]
                           }
                         },
@@ -10313,6 +10425,38 @@
                           "content": "<p><init><\/p>\n<p><init><\/p>\n"
                         }]
                       },
+                      "AbstractNavigationAction": {
+                        "ownKey": "AbstractNavigationAction",
+                        "childrenPages": {"NavigationState": {
+                          "ownKey": "NavigationState",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "NavigationState",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction/NavigationState"
+                            },
+                            "description": "",
+                            "title": "NavigationState",
+                            "content": ""
+                          }]
+                        }},
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/actions",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "AbstractNavigationAction",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction"
+                          },
+                          "description": "",
+                          "title": "AbstractNavigationAction",
+                          "content": "<p>An abstract NavigationAction, taking care of properly moving the pedestrian in the\nenvironment while delegating the decision on where to move it to a NavigationStrategy.<init>\nAn abstract NavigationAction, taking care of properly moving the pedestrian in the\nenvironment while delegating the decision on where to move it to a NavigationStrategy.\nstrategy\nThe strategy used to navigate the environment.\npedestrianPosition\nThe position of the pedestrian in the environment, this is cached and updated\nevery time update is called so as to avoid potentially costly re-computations.\ncurrentRoom\nThe room (= environment's area) the pedestrian is into, this is cached and updated\nevery time update is called so as to avoid potentially costly re-computations.\nminDistance\nMinimum distance to consider a target reached. Using zero (even with fuzzy equals) may lead to some\nboundary cases in which the pedestrian remains blocked due to how the environment manage collisions\nat present. This workaround allows to specify a minimum distance which is dependent on the pedestrian\nshape. In the future, something better could be done.\nstate<\/p>\n<p>previousRoom\nCaches the room the pedestrian is into when he/she starts moving. When the pedestrian is crossing a door, it\ncontains the room being left. When in NavigationState.MOVING_TO_FINAL, it contains the room the pedestrian\nwas (and should be) into. It's used to detect if the pedestrian ended up in an unexpected room while moving.\ncrossingPoints\nDefined when crossing a door. See crossDoor.\nexpectedNewRoom\nDefined when crossing a door.\nfinalDestination\nDefined in NavigationState.MOVING_TO_FINAL.\ntarget\nThe target of a directed edge of the environment's graph.\ndesiredPosition\nThe position the pedestrian wants to reach.\nenvironment\nThe environment the pedestrian is into.\nreaction\nThe reaction in which this action is executed.\npedestrian\nThe owner of this action.\nisReached<\/p>\n<p>orFail<\/p>\n<p>updateCachedVariables\nUpdates pedestrianPosition and currentRoom, this can be costly.\nDepending on how ConvexGeometricShape.contains manage points on the boundary, the pedestrian could\nbe inside two (adjacent) rooms at once. This can happen in two cases:<ul><li>when in NavigationState.MOVING_TO_CROSSING_POINT_1 or NavigationState.MOVING_TO_FINAL and the pedestrian\nis moving on previousRoom's boundary. In such case previousRoom is used.<\/li><li>when crossing a door or in NavigationState.NEW_ROOM and expectedNewRoom is adjacent to previousRoom.\nIn such case expectedNewRoom is used.\nOtherwise the first room containing pedestrianPosition is used.<\/li><\/ul>\nonStart<\/p>\n<p>doorsInSight<\/p>\n<p>crossDoor\nMoves the pedestrian across the provided door, which must be among doorsInSight.\nSince connected rooms may be non-adjacent, a pair of crossingPoints has to be provided:<ul><li>the first point must belong to the current room's boundary and will be reached first,<\/li><li>the second point must belong to the next room's boundary and will be pursued after\nreaching the former one. crossingPoints may coincide if the two rooms are adjacent.<\/li><\/ul>\nmoveToFinal\nMoves the pedestrian to the given final destination, which must be inside currentRoom.\nmoving<\/p>\n<p>update\nUpdates the internal state but does not move the pedestrian.<\/p>\n"
+                        }]
+                      },
                       "Seek": {
                         "ownKey": "Seek",
                         "ownPages": [{
@@ -10407,6 +10551,22 @@
                           "description": "",
                           "title": "AddJunctionInCell",
                           "content": "<p>Represent the action of add a junction between the current node and a neighbor. <br> This action only create the junction reference inside this node, the neighbor totally ignore that a junction has been created. <br> This is a part of the junction creation process. <br> See AddJunctionInNeighbor for the other part of the process<init><\/p>\n<p>toString<\/p>\n<p>execute\nIf no target node is given DO NOTHING. The junction can not be created.\nexecute\nCreate the junction that links the node where this action is executed and the target node.\ncloneAction<\/p>\n<p>getNode<\/p>\n"
+                        }]
+                      },
+                      "Explore": {
+                        "ownKey": "Explore",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/actions",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "Explore",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Explore"
+                          },
+                          "description": "",
+                          "title": "Explore",
+                          "content": "<p>A NavigationAction using Exploring navigation strategy.<init>\nA NavigationAction using Exploring navigation strategy.<\/p>\n"
                         }]
                       },
                       "Separation": {
@@ -10518,7 +10678,7 @@
                           },
                           "description": "",
                           "title": "AvoidFlowField",
-                          "content": "<p>Move the pedestrian towards positions of the environment with a low concentration of the target molecule.<init>\nMove the pedestrian towards positions of the environment with a low concentration of the target molecule.<\/p>\n<p>cloneAction<\/p>\n<p>selectPosition\nSelects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.<\/p>\n"
+                          "content": "<p>Move the pedestrian towards positions of the environment with a low concentration of the target molecule.<init>\nMove the pedestrian towards positions of the environment with a low concentration of the target molecule.\npedestrian\nthe owner of this action.\ncloneAction<\/p>\n<p>nextPosition<\/p>\n<p>selectPosition\nSelects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.<\/p>\n"
                         }]
                       },
                       "SAPEREMoveLSAToAgent": {
@@ -10599,6 +10759,22 @@
                           "description": "",
                           "title": "FollowFlowField",
                           "content": "<p>Move the pedestrian towards positions of the environment with a high concentration of the target molecule.<init>\nMove the pedestrian towards positions of the environment with a high concentration of the target molecule.<\/p>\n<p>cloneAction<\/p>\n<p>selectPosition\nSelects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.<\/p>\n"
+                        }]
+                      },
+                      "ReachKnownDestination": {
+                        "ownKey": "ReachKnownDestination",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/actions",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "ReachKnownDestination",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachKnownDestination"
+                          },
+                          "description": "",
+                          "title": "ReachKnownDestination",
+                          "content": "<p>A NavigationAction using KnownDestinationReaching navigation strategy.<init>\nA NavigationAction using KnownDestinationReaching navigation strategy.\nstrategy\nThe strategy used to navigate the environment.<\/p>\n"
                         }]
                       },
                       "SendToNeighbor": {
@@ -10777,6 +10953,22 @@
                           "content": "<p>This class provides a chemotaxis implementation for SAPERE, namely, an agent able to move a molecule towards a specific node.<init>\nBuilds a new SAPEREChemotaxis.<\/p>\n<p>execute<\/p>\n"
                         }]
                       },
+                      "ReachDestination": {
+                        "ownKey": "ReachDestination",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/actions",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "ReachDestination",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachDestination"
+                          },
+                          "description": "",
+                          "title": "ReachDestination",
+                          "content": "<p>A NavigationAction using DestinationReaching navigation strategy.\nAccepts an array of coordinates representing the destinations and uses inferIsKnown to partition them into\nknown and unknown ones.<init>\nA NavigationAction using DestinationReaching navigation strategy.\nAccepts an array of coordinates representing the destinations and uses inferIsKnown to partition them into\nknown and unknown ones.\nstrategy\nThe strategy used to navigate the environment.<\/p>\n"
+                        }]
+                      },
                       "LsaRandomNeighborAction": {
                         "ownKey": "LsaRandomNeighborAction",
                         "ownPages": [{
@@ -10841,6 +11033,22 @@
                           "content": "<p>When the molecule is off, rolls the dices according to odds and if it is time to toggle, sets the concentration\nand choses a random duration in the interval [minDuration, maxDuration].\nThe molecule will be removed after the chosen duration has elapsed.<init>\nWhen the molecule is off, rolls the dices according to odds and if it is time to toggle, sets the concentration\nand choses a random duration in the interval [minDuration, maxDuration].\nThe molecule will be removed after the chosen duration has elapsed.<\/p>\n<p>cloneAction<\/p>\n<p>execute\nRolls the dice and toggles the molecule.\nshouldToggle\nReturns true if it is time to toggle the molecule.<\/p>\n"
                         }]
                       },
+                      "GoalOrientedExplore": {
+                        "ownKey": "GoalOrientedExplore",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/actions",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "GoalOrientedExplore",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GoalOrientedExplore"
+                          },
+                          "description": "",
+                          "title": "GoalOrientedExplore",
+                          "content": "<p>A NavigationAction using GoalOrientedExploring navigation strategy.<init>\nA NavigationAction using GoalOrientedExploring navigation strategy.<\/p>\n"
+                        }]
+                      },
                       "CellTensionPolarization": {
                         "ownKey": "CellTensionPolarization",
                         "ownPages": [{
@@ -10871,6 +11079,136 @@
                           "description": "",
                           "title": "MoveToTarget",
                           "content": "<p>Movement towards a target defined as a concentration.<init><\/p>\n<p>cloneAction<\/p>\n"
+                        }]
+                      },
+                      "navigationstrategies": {
+                        "ownKey": "navigationstrategies",
+                        "childrenPages": {
+                          "KnownDestinationReaching": {
+                            "ownKey": "KnownDestinationReaching",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/implementations/actions/navigationstrategies",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "KnownDestinationReaching",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/KnownDestinationReaching"
+                              },
+                              "description": "",
+                              "title": "KnownDestinationReaching",
+                              "content": "<p>A NavigationStrategy allowing to reach a known (static) destination (see Pursuing).\nThe client can specify a list of known destinations, the pedestrian will try to reach the\nclosest one for which a valid path leading there is known.\nThe difference between this behavior and Pursuing is that the latter assumes no route\nleading to the destination is known, whereas this behavior tries to exploit the pedestrian's\ncognitive map to obtain a route to follow.<init>\nA NavigationStrategy allowing to reach a known (static) destination (see Pursuing).\nThe client can specify a list of known destinations, the pedestrian will try to reach the\nclosest one for which a valid path leading there is known.\nThe difference between this behavior and Pursuing is that the latter assumes no route\nleading to the destination is known, whereas this behavior tries to exploit the pedestrian's\ncognitive map to obtain a route to follow.\nroute\nThe route to follow.\nenvironment\nShortcut to get the environment.\nisReached\nA waypoint is considered reached when inside currentRoom or in an adjacent room.<\/p>\n"
+                            }]
+                          },
+                          "Exploring": {
+                            "ownKey": "Exploring",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/implementations/actions/navigationstrategies",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "Exploring",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Exploring"
+                              },
+                              "description": "",
+                              "title": "Exploring",
+                              "content": "<p>A NavigationStrategy allowing to explore the environment.\nIn order to choose which direction to take, a weighting system is used: every time the\npedestrian enters a new room all the visible doors are weighted, the one with minimum\nweight is then crossed. The weighting system used here is derived from the one by\n<a href=\"https://doi.org/10.1080/23249935.2018.1432717\">Andresen et al.<\/a>, see weight.<init>\nA NavigationStrategy allowing to explore the environment.\nIn order to choose which direction to take, a weighting system is used: every time the\npedestrian enters a new room all the visible doors are weighted, the one with minimum\nweight is then crossed. The weighting system used here is derived from the one by\n<a href=\"https://doi.org/10.1080/23249935.2018.1432717\">Andresen et al.<\/a>, see weight.\npedestrian\nShortcut to obtain the pedestrian.\ncomparator\nThe comparator used to determine which passage to cross, a nearest door heuristic\nis used when multiple passages have the same weight.\naction\nThe NavigationAction used to navigate the environment.\ndistanceToPedestrian\nComputes the distance between the pedestrian and a visible passage.\ninNewRoom\nThis is called whenever the pedestrian enters a new room.\nweight\nAssigns a weight to a visible door (= passage). This weighting system is derived from the one\nby <a href=\"https://doi.org/10.1080/23249935.2018.1432717\">Andresen et al.<\/a>. By default, it comprises\nthree factors: volatileMemoryFactor, congestionFactor and impasseFactor.\nvolatileMemoryFactor\nTakes into account the information stored in the pedestrian's volatile memory. It is computed\nas 2^v where v is the number of visits to the area the edge being weighted leads to (in other\nwords, less visited rooms are preferred).\ncongestionFactor\nTakes into account the congestion of the area the edge being weighted leads to (it is assumed\nthat the pedestrian can estimate the congestion level of a neighboring room). It is computed\nas density of the area + 1, so as to have a value in <a href=\"#\">1,2<\/a> (less crowded rooms are preferred).\nimpasseFactor\nTakes into account whereas the assessed edge leads to a known impasse or not, known impasses\nare given knownImpasseWeight (which is usually a high value, allowing to avoid them), otherwise\nthis factor assumes unitary value.\narea\nA rough estimation of the area of a <a href=\"http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">Shape<\/a>.\nisKnownImpasse\nChecks if the pedestrian knows that the area is an impasse (= an area with a single door).<\/p>\n"
+                            }]
+                          },
+                          "RouteFollowing": {
+                            "ownKey": "RouteFollowing",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/implementations/actions/navigationstrategies",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "RouteFollowing",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/RouteFollowing"
+                              },
+                              "description": "",
+                              "title": "RouteFollowing",
+                              "content": "<p>A NavigationStrategy allowing to follow a given route.\nThe route consists of a list of positions (= waypoints) that may or may not be in sight of each\nother (i.e. the path leading from a waypoint to the next one may or may not be representable\nas a single segment), for this reason Pursuing behavior is used to reach each waypoint.\nIn this context, a waypoint is considered reached when it's inside the current room (not when the\npedestrian reach that exact position), apart from the last waypoint which is actually approached.\nCuts to the route are allowed (i.e. if the pedestrian finds a waypoint which is farther than the\nexpected next one, he/she skips all the waypoints in between).<init>\nA NavigationStrategy allowing to follow a given route.\nThe route consists of a list of positions (= waypoints) that may or may not be in sight of each\nother (i.e. the path leading from a waypoint to the next one may or may not be representable\nas a single segment), for this reason Pursuing behavior is used to reach each waypoint.\nIn this context, a waypoint is considered reached when it's inside the current room (not when the\npedestrian reach that exact position), apart from the last waypoint which is actually approached.\nCuts to the route are allowed (i.e. if the pedestrian finds a waypoint which is farther than the\nexpected next one, he/she skips all the waypoints in between).\nroute\nThe route to follow.\ninUnexpectedNewRoom\nWhen in an unexpected room the pedestrian gets back to previousRoom so as to continue following the\nroute correctly.\ninNewRoom\nThis is called whenever the pedestrian enters a new room.\nwaypointReached\nChecks if a new waypoint has been reached and updates indexOfNextWaypoint accordingly.\nisReached\nChecks if the given waypoint is reached (as stated above, if it's inside currentRoom).<\/p>\n"
+                            }]
+                          },
+                          "GoalOrientedExploring": {
+                            "ownKey": "GoalOrientedExploring",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/implementations/actions/navigationstrategies",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "GoalOrientedExploring",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/GoalOrientedExploring"
+                              },
+                              "description": "",
+                              "title": "GoalOrientedExploring",
+                              "content": "<p>A NavigationStrategy allowing to explore the environment looking for something specific whose position\nis unknown.\nThe client can specify a list of unknownDestinations: these can be recognized once they're in sight,\nbut the pedestrian doesn't know their position until that moment (think e.g. of exits in an evacuation\nscenario). More specifically, unknown destinations can be detected if located in a room adjacent to the\nroom the pedestrian is into. Once a destination is detected, the pedestrian will reach it and stop.<init>\nA NavigationStrategy allowing to explore the environment looking for something specific whose position\nis unknown.\nThe client can specify a list of unknownDestinations: these can be recognized once they're in sight,\nbut the pedestrian doesn't know their position until that moment (think e.g. of exits in an evacuation\nscenario). More specifically, unknown destinations can be detected if located in a room adjacent to the\nroom the pedestrian is into. Once a destination is detected, the pedestrian will reach it and stop.<\/p>\n<p>inNewRoom\nThis is called whenever the pedestrian enters a new room.\nreachUnknownDestination\nIf one or more unknown destinations are inside newRoom (= the room the pedestrian is into), the closest\none is approached. Otherwise, if one or more destinations are in a room adjacent to the current one, the\nrelated doors are weighted using weightExit and the one with minimum weight is crossed. orElse is\nexecuted otherwise.\nleadsToUnknownDestination<\/p>\n<p>weightExit\nAssigns a weight to a door (= passage) leading to an unknown destination (e.g. an exit).\nBy default, the exit's distance and its congestion are considered.<\/p>\n"
+                            }]
+                          },
+                          "DynamicPursuing": {
+                            "ownKey": "DynamicPursuing",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/implementations/actions/navigationstrategies",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "DynamicPursuing",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DynamicPursuing"
+                              },
+                              "description": "",
+                              "title": "DynamicPursuing",
+                              "content": "<p>Pursuing strategy allowing to dynamically change destination.<init>\nPursuing strategy allowing to dynamically change destination.\ndestination\nThe destination to pursue.\nsetDestination\nChanges the destination of the strategy. If voidVolatileMemory is true, the pedestrian's\nvolatile memory is set to zero. This has two effects:<ul><li>known impasses remain stored (hence the pedestrian will keep avoiding them)<\/li><li>rooms visited while pursuing the previous destination won't be penalised (= won't be avoided)\nDefaults to false.<\/li><\/ul><\/p>\n"
+                            }]
+                          },
+                          "Pursuing": {
+                            "ownKey": "Pursuing",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/implementations/actions/navigationstrategies",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "Pursuing",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Pursuing"
+                              },
+                              "description": "",
+                              "title": "Pursuing",
+                              "content": "<p>A NavigationStrategy allowing to pursue a known (static) destination without knowing any\npath leading there, this is also known as path searching.\nIn this context, knowing a destination means knowing its position, which, in turn, means\nknowing two things:<ul><li>the direction that connects the destination and the current position as the crow flies,<\/li><li>an estimation of the distance between the destination and the current position.\nIn order to reach the destination without a route to follow, the weighting system used\nin Exploring is extended so as to take into account the (estimated) suitability of each\ndoor to reach the provided destination, see suitabilityFactor.<\/li><\/ul><init>\nA NavigationStrategy allowing to pursue a known (static) destination without knowing any\npath leading there, this is also known as path searching.\nIn this context, knowing a destination means knowing its position, which, in turn, means\nknowing two things:<ul><li>the direction that connects the destination and the current position as the crow flies,<\/li><li>an estimation of the distance between the destination and the current position.\nIn order to reach the destination without a route to follow, the weighting system used\nin Exploring is extended so as to take into account the (estimated) suitability of each\ndoor to reach the provided destination, see suitabilityFactor.<\/li><\/ul>\ndestination\nThe destination to pursue.\ninNewRoom\nThis is called whenever the pedestrian enters a new room.\nweight\nAssigns a weight to a visible door (= passage). This weighting system is derived from the one\nby <a href=\"https://doi.org/10.1080/23249935.2018.1432717\">Andresen et al.<\/a>. The suitabilityFactor\nis added to the factors of super method (= Exploring.weight).\nsuitabilityFactor\nTakes into account the rank given to the passage when assessing its suitability to reach\nthe destination (see computeDoorsRankings). It is computed as 1 - 0.5^rank. This is\nderived from <a href=\"https://doi.org/10.1080/23249935.2018.1432717\">Andresen's work<\/a>.\ncomputeDoorsRankings\nAssign an integer rank to each door in sight, a lower rank means the door is preferable to\nreach the destination. This method allows the pedestrian to perform an educated guess of\nwhich door to take in order to get closer to the destination. It works as follows:\nthe spatial structure of the currentRoom is assumed to be entirely perceived, this is\nthe only spatial information taken into account a part from the destination itself.\nThe shortest paths (represented as polygonal chains) connecting the doors of the current room\nand the destination are computed, the lengths of these polygonal chains are calculated\nunder the constraint that the room must not be traversed by them but has to be bypassed (the\npolygon chains must not overlap with currentRoom).\nTo do so, a graph composed by the doors' midpoints, the room vertices and the destination\nis built, then the shortest path between each door and the destination is computed and\neach door is ranked consequently (the shorter the path, the lower the rank).<\/p>\n"
+                            }]
+                          },
+                          "DestinationReaching": {
+                            "ownKey": "DestinationReaching",
+                            "ownPages": [{
+                              "reference": {
+                                "path": "it/unibo/alchemist/model/implementations/actions/navigationstrategies",
+                                "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                "fileName": "DestinationReaching",
+                                "extension": "html",
+                                "usePrettyUrl": true,
+                                "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DestinationReaching"
+                              },
+                              "description": "",
+                              "title": "DestinationReaching",
+                              "content": "<p>A NavigationStrategy allowing to reach a (static) destination.\nThe client can specify a list of knownDestinations (see Pursuing) and unknownDestinations (see\nGoalOrientedExploring).\nThe pedestrian will try to reach the closest known destination for which a valid path leading there is\nknown, but in case another destination is found along the way (either known or unknown), the latter will\nbe approached instead of the chosen known destination. To put it in another way, this behavior mixes\nKnownDestinationReaching and GoalOrientedExploring.<init>\nA NavigationStrategy allowing to reach a (static) destination.\nThe client can specify a list of knownDestinations (see Pursuing) and unknownDestinations (see\nGoalOrientedExploring).\nThe pedestrian will try to reach the closest known destination for which a valid path leading there is\nknown, but in case another destination is found along the way (either known or unknown), the latter will\nbe approached instead of the chosen known destination. To put it in another way, this behavior mixes\nKnownDestinationReaching and GoalOrientedExploring.<\/p>\n<p>inNewRoom\nThis is called whenever the pedestrian enters a new room.<\/p>\n"
+                            }]
+                          }
+                        },
+                        "ownPages": [{
+                          "reference": {
+                            "path": "it/unibo/alchemist/model/implementations/actions",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "navigationstrategies",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies"
+                          },
+                          "description": "",
+                          "title": "it.unibo.alchemist.model.implementations.actions.navigationstrategies",
+                          "content": ""
                         }]
                       },
                       "RandomWalker": {
@@ -10934,7 +11272,7 @@
                           },
                           "description": "",
                           "title": "FlowFieldSteeringAction",
-                          "content": "<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<init>\nGeneric implementation of an action influenced by the concentration of a given molecule in the environment.\nenv\nthe environment inside which the pedestrian moves.\ntargetMolecule\nthe {@link Molecule} you want to know the concentration in the different positions of the environment.\nnextPosition\nThe position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.\nselectPosition\nSelects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.\nconcentrationIn<\/p>\n<p>center<\/p>\n"
+                          "content": "<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<init>\nGeneric implementation of an action influenced by the concentration of a given molecule in the environment.\nenv\nthe environment inside which the pedestrian moves.\ntargetMolecule\nthe {@link Molecule} you want to know the concentration in the different positions of the environment.\nnextPosition\nThe position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.\nselectPosition\nSelects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.\nconcentrationIn<\/p>\n<p>getLayerOrFail<\/p>\n<p>center<\/p>\n"
                         }]
                       },
                       "FakeMove": {
@@ -10965,7 +11303,7 @@
                       },
                       "description": "",
                       "title": "it.unibo.alchemist.model.implementations.actions",
-                      "content": "<p>discardUnsuitablePositions\nDiscards the positions the pedestrian can't fit.<\/p>\n"
+                      "content": "<p>cartesianProduct\nPerforms the cartesian product of the given sequences.\ndiscardUnsuitablePositions\nDiscards the positions the pedestrian can't fit.\ntakePercentage\nTakes the first percentage * size elements of the list.\ntoPositions\nConverts an array of numbers representing positions to an actual list of positions. E.g. the array <a href=\"#\">2,3,4,5<\/a> in\na bidimensional environment would be transformed into a list containing positions (2,3) and (4,5).<\/p>\n"
                     }]
                   },
                   "linkingrules": {

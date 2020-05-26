@@ -21,7 +21,7 @@
 
 
 
-<title>MutableConvexPolygonImpl</title>
+<title>AbstractNavigationAction</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devpt+fe5fca851"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devsq+1b66117ec"};
 </script>
 
 
@@ -54,11 +54,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
-<!-- Source Filename: it/unibo/alchemist/model/implementations/geometry/euclidean/twod/MutableConvexPolygonImpl.html -->
+<!-- Source Filename: it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/geometry/euclidean/twod","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"MutableConvexPolygonImpl","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/MutableConvexPolygonImpl"},"description":"","title":"MutableConvexPolygonImpl"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/actions","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"AbstractNavigationAction","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction"},"description":"","title":"AbstractNavigationAction"};
 </script>
 
 <!-- end:debug info -->
@@ -81,9 +81,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/orchidSearch.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
@@ -121,7 +121,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>MutableConvexPolygonImpl</h2></header>
+                    <header class="major"><h2>AbstractNavigationAction</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -134,18 +134,16 @@
 
 
 <p id="summary">
-    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod">it.unibo.alchemist.model.implementations.geometry.euclidean.twod</a></b>
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions">it.unibo.alchemist.model.implementations.actions</a></b>
 </p>
 <p>
     <code style="padding: 0;">
-        class it.unibo.alchemist.model.implementations.geometry.euclidean.twod.MutableConvexPolygonImpl
+        class it.unibo.alchemist.model.implementations.actions.AbstractNavigationAction
     </code>
 </p>
 <div class="class-description" id="description">
-<p>Implementation of MutableConvexPolygon.<p>Each modification operation on this object has a time complexity of
-O(n), where n is the number of vertices/edges.</p><p>Degenerate edges (of length 0) and collinear points are allowed, but
-be aware that the majority of algorithms working on convex polygons
-requires no degeneration at all.</p></p>
+<p>An abstract NavigationAction, taking care of properly moving the pedestrian in the
+environment while delegating the decision on where to move it to a NavigationStrategy.</p>
 
 </div>
 
@@ -158,23 +156,161 @@ requires no degeneration at all.</p></p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="field__open_diameter__Double">
+    <div class="panel-heading" id="field__protected_open_lateinit_var_strategy__NavigationStrategy">
         <code>
-        open diameter: Double
+        protected open lateinit var strategy: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationStrategy">NavigationStrategy</a>
         </code>
     </div>
-    <div class="panel-body"><p>The largest distance between any pair of vertices.</p>
+    <div class="panel-body"><p>The strategy used to navigate the environment.</p>
 </div>
 </div>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="field__open_centroid__Euclidean2DPosition">
+    <div class="panel-heading" id="field__open_lateinit_var_pedestrianPosition__P">
         <code>
-        open centroid: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
+        open lateinit var pedestrianPosition: P
         </code>
     </div>
-    <div class="panel-body"><p>The geometric center.</p>
+    <div class="panel-body"><p>The position of the pedestrian in the environment, this is cached and updated
+every time update is called so as to avoid potentially costly re-computations.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__open_var_currentRoom__M_">
+        <code>
+        open var currentRoom: M?
+        </code>
+    </div>
+    <div class="panel-body"><p>The room (= environment's area) the pedestrian is into, this is cached and updated
+every time update is called so as to avoid potentially costly re-computations.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_minDistance__Double">
+        <code>
+        protected minDistance: Double
+        </code>
+    </div>
+    <div class="panel-body"><p>Minimum distance to consider a target reached. Using zero (even with fuzzy equals) may lead to some
+boundary cases in which the pedestrian remains blocked due to how the environment manage collisions
+at present. This workaround allows to specify a minimum distance which is dependent on the pedestrian
+shape. In the future, something better could be done.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_var_state__NavigationState">
+        <code>
+        protected var state: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction/NavigationState">NavigationState</a>
+        </code>
+    </div>
+    <div class="panel-body"></div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_var_previousRoom__M_">
+        <code>
+        protected var previousRoom: M?
+        </code>
+    </div>
+    <div class="panel-body"><p>Caches the room the pedestrian is into when he/she starts moving. When the pedestrian is crossing a door, it
+contains the room being left. When in NavigationState.MOVING_TO_FINAL, it contains the room the pedestrian
+was (and should be) into. It's used to detect if the pedestrian ended up in an unexpected room while moving.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_var_crossingPoints___ERROR_CLASS__">
+        <code>
+        protected var crossingPoints: <ERROR CLASS>?
+        </code>
+    </div>
+    <div class="panel-body"><p>Defined when crossing a door. See crossDoor.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_var_expectedNewRoom__M_">
+        <code>
+        protected var expectedNewRoom: M?
+        </code>
+    </div>
+    <div class="panel-body"><p>Defined when crossing a door.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_var_finalDestination__P_">
+        <code>
+        protected var finalDestination: P?
+        </code>
+    </div>
+    <div class="panel-body"><p>Defined in NavigationState.MOVING_TO_FINAL.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_open_target__M">
+        <code>
+        protected open target: M
+        </code>
+    </div>
+    <div class="panel-body"><p>The target of a directed edge of the environment's graph.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__desiredPosition__P">
+        <code>
+        desiredPosition: P
+        </code>
+    </div>
+    <div class="panel-body"><p>The position the pedestrian wants to reach.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__open_environment__EnvironmentWithGraph">
+        <code>
+        open environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph">EnvironmentWithGraph</a>
+        </code>
+    </div>
+    <div class="panel-body"><p>The environment the pedestrian is into.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__protected_open_reaction__Reaction">
+        <code>
+        protected open reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
+        </code>
+    </div>
+    <div class="panel-body"><p>The reaction in which this action is executed.</p>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="field__pedestrian__OrientingPedestrian">
+        <code>
+        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>
+        </code>
+    </div>
+    <div class="panel-body"><p>The owner of this action.</p>
 </div>
 </div>
 
@@ -188,15 +324,13 @@ requires no degeneration at all.</p></p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_vertices__MutableList_">
+    <div class="panel-heading" id="constructor__constructor_environment__EnvironmentWithGraph__reaction__Reaction__pedestrian__OrientingPedestrian_">
         <code>
-        constructor(vertices: MutableList)
+        constructor(environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph">EnvironmentWithGraph</a>, reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>)
         </code>
     </div>
-    <div class="panel-body"><p>Implementation of MutableConvexPolygon.<p>Each modification operation on this object has a time complexity of
-O(n), where n is the number of vertices/edges.</p><p>Degenerate edges (of length 0) and collinear points are allowed, but
-be aware that the majority of algorithms working on convex polygons
-requires no degeneration at all.</p></p>
+    <div class="panel-body"><p>An abstract NavigationAction, taking care of properly moving the pedestrian in the
+environment while delegating the decision on where to move it to a NavigationStrategy.</p>
 </div>
 
     
@@ -207,7 +341,21 @@ requires no degeneration at all.</p></p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        vertices: MutableList
+        environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph">EnvironmentWithGraph</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        reaction: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Reaction">Reaction</a>
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>
         </code>
         
     </li>
@@ -223,13 +371,158 @@ requires no degeneration at all.</p></p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_vertices____List">
+    <div class="panel-heading" id="method__protected_open_fun_P.isReached____Boolean">
         <code>
-        open fun vertices(): List
+        protected open fun P.isReached(): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>A list is used because vertices do have an order.</p>
+    <div class="panel-body"></div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        P
+        </code>
+    </div>
+    <div></div>
 </div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Boolean
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_fun__T__T_.orFail____T">
+        <code>
+        protected fun &lt;T&gt; T?.orFail(): T
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+<div class="panel-footer">
+    <div><b>Receiver: </b></div>
+    <div>
+        <code>
+        T?
+        </code>
+    </div>
+    <div></div>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        T
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_updateCachedVariables__">
+        <code>
+        protected open fun updateCachedVariables()
+        </code>
+    </div>
+    <div class="panel-body"><p>Updates pedestrianPosition and currentRoom, this can be costly.
+Depending on how ConvexGeometricShape.contains manage points on the boundary, the pedestrian could
+be inside two (adjacent) rooms at once. This can happen in two cases:<ul><li>when in NavigationState.MOVING_TO_CROSSING_POINT_1 or NavigationState.MOVING_TO_FINAL and the pedestrian
+is moving on previousRoom's boundary. In such case previousRoom is used.</li><li>when crossing a door or in NavigationState.NEW_ROOM and expectedNewRoom is adjacent to previousRoom.
+In such case expectedNewRoom is used.
+Otherwise the first room containing pedestrianPosition is used.</li></ul></p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__protected_open_fun_onStart__">
+        <code>
+        protected open fun onStart()
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_doorsInSight____List">
+        <code>
+        open fun doorsInSight(): List
+        </code>
+    </div>
+    <div class="panel-body"></div>
 
     
 
@@ -259,13 +552,14 @@ requires no degeneration at all.</p></p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_addVertex_index__Int__x__Double__y__Double___Boolean">
+    <div class="panel-heading" id="method__protected_open_fun_crossDoor_door__F__crossingPoints___ERROR_CLASS__">
         <code>
-        open fun addVertex(index: Int, x: Double, y: Double): Boolean
+        protected open fun crossDoor(door: F, crossingPoints: <ERROR CLASS>)
         </code>
     </div>
-    <div class="panel-body"><p>Adds a vertex in the specified position.<p>If the operation would cause the violation of the convexity, false
-is returned and the operation is not performed.</p></p>
+    <div class="panel-body"><p>Moves the pedestrian across the provided door, which must be among doorsInSight.
+Since connected rooms may be non-adjacent, a pair of crossingPoints has to be provided:<ul><li>the first point must belong to the current room's boundary and will be reached first,</li><li>the second point must belong to the next room's boundary and will be pursued after
+reaching the former one. crossingPoints may coincide if the two rooms are adjacent.</li></ul></p>
 </div>
 
     
@@ -278,21 +572,14 @@ is returned and the operation is not performed.</p></p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        index: Int
+        door: F
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        x: Double
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        y: Double
+        crossingPoints: <ERROR CLASS>
         </code>
         
     </li>
@@ -301,27 +588,16 @@ is returned and the operation is not performed.</p></p>
 
     
 
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
 </div>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_removeVertex_index__Int___Boolean">
+    <div class="panel-heading" id="method__open_fun_moveToFinal_destination__P_">
         <code>
-        open fun removeVertex(index: Int): Boolean
+        open fun moveToFinal(destination: P)
         </code>
     </div>
-    <div class="panel-body"><p>Removes the specified vertex.<p>If the operation would cause the violation of the convexity, false
-is returned and the operation is not performed.</p></p>
+    <div class="panel-body"><p>Moves the pedestrian to the given final destination, which must be inside currentRoom.</p>
 </div>
 
     
@@ -334,7 +610,7 @@ is returned and the operation is not performed.</p></p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        index: Int
+        destination: P
         </code>
         
     </li>
@@ -343,393 +619,13 @@ is returned and the operation is not performed.</p></p>
 
     
 
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
 </div>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_moveVertex_index__Int__newX__Double__newY__Double___Boolean">
+    <div class="panel-heading" id="method__protected_open_fun_moving__">
         <code>
-        open fun moveVertex(index: Int, newX: Double, newY: Double): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Moves the specified vertex to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false
-is returned and the operation is not performed.</p></p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        index: Int
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        newX: Double
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        newY: Double
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_getEdge_index__Int___Segment2D">
-        <code>
-        open fun getEdge(index: Int): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>The index parameter specify which edge to get: edge i connects
-vertices i and i+1.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        index: Int
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_moveEdge_index__Int__newEdge__Segment2D___Boolean">
-        <code>
-        open fun moveEdge(index: Int, newEdge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Moves the specified edge to the new absolute coordinates provided.<p>If the operation would cause the violation of the convexity, false
-is returned and the operation is not performed.</p></p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        index: Int
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        newEdge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_intersects_other__Euclidean2DShape___Boolean">
-        <code>
-        open fun intersects(other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>A shape intersects another if any of its points is contained in the other one.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
-        </code>
-        
-            <br><br>
-            <div><p>the other shape</p>
-</div>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div><p>true if the intersection is not empty</p>
-</div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_intersects_shape__Shape___Boolean">
-        <code>
-        open fun intersects(shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>This method is &quot;exact&quot; (no bounding box are used).</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_contains_vector__Euclidean2DPosition___Boolean">
-        <code>
-        open fun contains(vector: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Check if the shape contains a vector.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        vector: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
-        </code>
-        
-            <br><br>
-            <div><p>the position vector</p>
-</div>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div><p>true if the vector is contained in the shape</p>
-</div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_union_polygons__Collection___Boolean">
-        <code>
-        open fun union(polygons: Collection): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Performs a union in-place with a collection of overlapping
-polygons. Returns a boolean indicating whether the union was
-successful or not (e.g. because the polygon would have lost its
-convexity or the provided polygons did not overlap).</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        polygons: Collection
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_transformed_transformation__Euclidean2DTransformation.____Unit___Euclidean2DShape">
-        <code>
-        open fun transformed(transformation: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DTransformation">Euclidean2DTransformation</a>.()-&gt;Unit): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>Transforms the shape.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        transformation: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DTransformation">Euclidean2DTransformation</a>.()-&gt;Unit
-        </code>
-        
-            <br><br>
-            <div><p>describes the transformations to apply to the shape</p>
-</div>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
-        </code>
-    </div>
-    <div><p>a copy of the shape transformed accordingly</p>
-</div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_asAwtShape____Shape">
-        <code>
-        fun asAwtShape(): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
+        protected open fun moving()
         </code>
     </div>
     <div class="panel-body"></div>
@@ -748,67 +644,17 @@ convexity or the provided polygons did not overlap).</p>
 
     
 
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
-        </code>
-    </div>
-    <div><p>a copy of itself in form of a <a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>.</p>
-</div>
-</div>
-
 </div>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_equals_other__Any____Boolean">
+    <div class="panel-heading" id="method__open_fun_update__">
         <code>
-        open fun equals(other: Any?): Boolean
+        open fun update()
         </code>
     </div>
-    <div class="panel-body"></div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
+    <div class="panel-body"><p>Updates the internal state but does not move the pedestrian.</p>
 </div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        other: Any?
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Boolean
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__open_fun_hashCode____Int">
-        <code>
-        open fun hashCode(): Int
-        </code>
-    </div>
-    <div class="panel-body"></div>
 
     
 
@@ -823,131 +669,6 @@ convexity or the provided polygons did not overlap).</p>
 </ul>
 
     
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Int
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_mutateTo_p__MutableConvexPolygon_">
-        <code>
-        protected open fun mutateTo(p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/MutableConvexPolygon">MutableConvexPolygon</a>)
-        </code>
-    </div>
-    <div class="panel-body"><p>Mutates this polygon to a copy of the specified one.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        p: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/MutableConvexPolygon">MutableConvexPolygon</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_fun_circularPrevious_index__Int___Int">
-        <code>
-        protected fun circularPrevious(index: Int): Int
-        </code>
-    </div>
-    <div class="panel-body"><p>Finds the previous index givend the provided index,
-restarting from the end if necessary.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        index: Int
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Int
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_fun_circularNext_index__Int___Int">
-        <code>
-        protected fun circularNext(index: Int): Int
-        </code>
-    </div>
-    <div class="panel-body"><p>Finds the next index givend the provided index,
-restarting from the beginning if necessary.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        index: Int
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Int
-        </code>
-    </div>
-    <div></div>
-</div>
 
 </div>
 
@@ -1619,6 +1340,14 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies">it.unibo.alchemist.model.implementations.actions.navigationstrategies</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies">it.unibo.alchemist.model.implementations.actions.steeringstrategies</a>
     </li>
     
@@ -2004,6 +1733,14 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AbstractConvexPolygon">AbstractConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/AbstractDistribution">AbstractDistribution</a>
     </li>
     
@@ -2100,6 +1837,14 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction">AbstractNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNeighborAction">AbstractNeighborAction</a>
     </li>
     
@@ -2117,14 +1862,6 @@ restarting from the beginning if necessary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractNode">AbstractNode</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -2428,7 +2165,23 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AwtMutableConvexPolygon">AwtMutableConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/BaseEuclideanNavigationAction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -3420,6 +3173,14 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DestinationReaching">DestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/DiracComb">DiracComb</a>
     </li>
     
@@ -3485,14 +3246,6 @@ restarting from the beginning if necessary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/DoubleDimension">DoubleDimension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
     </li>
     
 
@@ -3613,6 +3366,14 @@ restarting from the beginning if necessary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/ProtelisIncarnation/DummyContext">DummyContext</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DynamicPursuing">DynamicPursuing</a>
     </li>
     
 
@@ -3852,6 +3613,22 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationStrategy">EuclideanNavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
@@ -3908,6 +3685,30 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Explore">Explore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Exploring">Exploring</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/ExponentialSmoothing">ExponentialSmoothing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/ExponentialTime">ExponentialTime</a>
     </li>
     
@@ -3956,7 +3757,7 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonInEnvironment">ExtendableConvexPolygonInEnvironment</a>
     </li>
     
 
@@ -4077,6 +3878,14 @@ restarting from the beginning if necessary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowFlowField">FollowFlowField</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowRoute">FollowRoute</a>
     </li>
     
 
@@ -4301,6 +4110,22 @@ restarting from the beginning if necessary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/speed/GloballyConstantSpeed">GloballyConstantSpeed</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GoalOrientedExplore">GoalOrientedExplore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/GoalOrientedExploring">GoalOrientedExploring</a>
     </li>
     
 
@@ -4876,6 +4701,14 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/KnownDestinationReaching">KnownDestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/LatLongPosition">LatLongPosition</a>
     </li>
     
@@ -4901,6 +4734,14 @@ restarting from the beginning if necessary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/LayerToFunctionMapper">LayerToFunctionMapper</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/utils/LazyMutable">LazyMutable</a>
     </li>
     
 
@@ -5308,7 +5149,7 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/MutableConvexPolygonImpl">MutableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationAction">NavigationAction</a>
     </li>
     
 
@@ -5317,6 +5158,30 @@ restarting from the beginning if necessary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/NavigationPrioritisedSteering">NavigationPrioritisedSteering</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction/NavigationState">NavigationState</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationStrategy">NavigationStrategy</a>
     </li>
     
 
@@ -5508,31 +5373,7 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingBehavior2D">OrientingBehavior2D</a>
     </li>
     
 
@@ -5764,6 +5605,22 @@ restarting from the beginning if necessary.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Pursue">Pursue</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Pursuing">Pursuing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/RandomDiracComb">RandomDiracComb</a>
     </li>
     
@@ -5813,6 +5670,22 @@ restarting from the beginning if necessary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomlyToggleMoleculeWithDuration">RandomlyToggleMoleculeWithDuration</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachDestination">ReachDestination</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachKnownDestination">ReachKnownDestination</a>
     </li>
     
 
@@ -5973,6 +5846,14 @@ restarting from the beginning if necessary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Route">Route</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/RouteFollowing">RouteFollowing</a>
     </li>
     
 
@@ -6301,6 +6182,14 @@ restarting from the beginning if necessary.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/simulation/SimulationSetImpl">SimulationSetImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/SinglePrevalent">SinglePrevalent</a>
     </li>
     
 
@@ -6852,7 +6741,7 @@ restarting from the beginning if necessary.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devpt+fe5fca851. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devsq+1b66117ec. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6869,9 +6758,9 @@ restarting from the beginning if necessary.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

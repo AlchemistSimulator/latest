@@ -21,7 +21,7 @@
 
 
 
-<title>AbstractOrientingBehavior</title>
+<title>DestinationReaching</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devpt+fe5fca851"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devsq+1b66117ec"};
 </script>
 
 
@@ -54,11 +54,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
-<!-- Source Filename: it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior.html -->
+<!-- Source Filename: it/unibo/alchemist/model/implementations/actions/navigationstrategies/DestinationReaching.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"AbstractOrientingBehavior","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior"},"description":"","title":"AbstractOrientingBehavior"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/actions/navigationstrategies","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"DestinationReaching","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DestinationReaching"},"description":"","title":"DestinationReaching"};
 </script>
 
 <!-- end:debug info -->
@@ -81,9 +81,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/orchidSearch.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
@@ -121,7 +121,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>AbstractOrientingBehavior</h2></header>
+                    <header class="major"><h2>DestinationReaching</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -134,69 +134,26 @@
 
 
 <p id="summary">
-    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive">it.unibo.alchemist.model.cognitiveagents.characteristics.cognitive</a></b>
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies">it.unibo.alchemist.model.implementations.actions.navigationstrategies</a></b>
 </p>
 <p>
     <code style="padding: 0;">
-        class it.unibo.alchemist.model.cognitiveagents.characteristics.cognitive.AbstractOrientingBehavior
+        class it.unibo.alchemist.model.implementations.actions.navigationstrategies.DestinationReaching
     </code>
 </p>
 <div class="class-description" id="description">
-<p>The orienting behavior of an OrientingPedestrian.
-This is a finite state machine, whose only public method is update. As stated in its
-documentation, update doesn't move the pedestrian, but only refreshes the internal
-state of this behavior.
-The client should move the pedestrian using the desiredPosition value, the reason is
-that this class is meant to be extended or used via composition to obtain implementations
-of the orienting behavior deriving from different entities of the Alchemist meta-model,
-such as Action or Reaction.
-This class obtains a route from the pedestrian's cognitive map and exploits that and the
-other spatial information available to navigate the environment towards (or in search of)
-a destination.
-Two tasks are left to the derived classes via template method, see computeEdgeRankings
-and crossingPoint.</p>
+<p>A NavigationStrategy allowing to reach a (static) destination.
+The client can specify a list of knownDestinations (see Pursuing) and unknownDestinations (see
+GoalOrientedExploring).
+The pedestrian will try to reach the closest known destination for which a valid path leading there is
+known, but in case another destination is found along the way (either known or unknown), the latter will
+be approached instead of the chosen known destination. To put it in another way, this behavior mixes
+KnownDestinationReaching and GoalOrientedExploring.</p>
 
 </div>
 
 
 
-
-
-<h2 id="fields">Fields</h2>
-
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="field__desiredPosition__P">
-        <code>
-        desiredPosition: P
-        </code>
-    </div>
-    <div class="panel-body"><p>The position the pedestrian wants to reach, in absolute coordinates.</p>
-</div>
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="field__protected_open_environment__EnvironmentWithGraph">
-        <code>
-        protected open environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph">EnvironmentWithGraph</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>The environment the pedestrian is into.</p>
-</div>
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="field__protected_pedestrian__OrientingPedestrian">
-        <code>
-        protected pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>
-        </code>
-    </div>
-    <div class="panel-body"><p>The owner of this behavior.</p>
-</div>
-</div>
 
 
 
@@ -208,24 +165,18 @@ and crossingPoint.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_environment__EnvironmentWithGraph__pedestrian__OrientingPedestrian_">
+    <div class="panel-heading" id="constructor__constructor_action__EuclideanNavigationAction__knownDestinations__List__unknownDestinations__List_">
         <code>
-        constructor(environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph">EnvironmentWithGraph</a>, pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>)
+        constructor(action: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>, knownDestinations: List, unknownDestinations: List)
         </code>
     </div>
-    <div class="panel-body"><p>The orienting behavior of an OrientingPedestrian.
-This is a finite state machine, whose only public method is update. As stated in its
-documentation, update doesn't move the pedestrian, but only refreshes the internal
-state of this behavior.
-The client should move the pedestrian using the desiredPosition value, the reason is
-that this class is meant to be extended or used via composition to obtain implementations
-of the orienting behavior deriving from different entities of the Alchemist meta-model,
-such as Action or Reaction.
-This class obtains a route from the pedestrian's cognitive map and exploits that and the
-other spatial information available to navigate the environment towards (or in search of)
-a destination.
-Two tasks are left to the derived classes via template method, see computeEdgeRankings
-and crossingPoint.</p>
+    <div class="panel-body"><p>A NavigationStrategy allowing to reach a (static) destination.
+The client can specify a list of knownDestinations (see Pursuing) and unknownDestinations (see
+GoalOrientedExploring).
+The pedestrian will try to reach the closest known destination for which a valid path leading there is
+known, but in case another destination is found along the way (either known or unknown), the latter will
+be approached instead of the chosen known destination. To put it in another way, this behavior mixes
+KnownDestinationReaching and GoalOrientedExploring.</p>
 </div>
 
     
@@ -236,14 +187,21 @@ and crossingPoint.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        environment: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EnvironmentWithGraph">EnvironmentWithGraph</a>
+        action: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>
         </code>
         
     </li>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        pedestrian: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/OrientingPedestrian">OrientingPedestrian</a>
+        knownDestinations: List
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        unknownDestinations: List
         </code>
         
     </li>
@@ -259,50 +217,12 @@ and crossingPoint.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_update__">
+    <div class="panel-heading" id="method__open_fun_inNewRoom_newRoom__ConvexPolygon____ERROR_CLASS_">
         <code>
-        fun update()
+        open fun inNewRoom(newRoom: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>): <ERROR CLASS>
         </code>
     </div>
-    <div class="panel-body"><p>The orienting behavior is organised as a finite state machine, this method
-updates the internal state of the behavior but does not move the pedestrian.
-If the position of the pedestrian didn't change since the last call, this
-method has no effect.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item">No parameters</li>
-
-</ul>
-
-    
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_abstract_fun_computeEdgeRankings_currentRoom__M__destination__P___Map">
-        <code>
-        protected abstract fun computeEdgeRankings(currentRoom: M, destination: P): Map
-        </code>
-    </div>
-    <div class="panel-body"><p>Maps each edge outgoing from the given room to an integer rank indicating its
-suitability in order to reach the provided destination (which is outside of the scope
-of the agent). Rankings should be in <a href="#">1,E</a>, where E is the number of edges, a lower
-rank means the correspondent edge is preferable to reach the given destination.<p>When following a route provided by the cognitive map, the agent often is in the following
-situation: he knows the spatial structure of the current room and the next sub-destination
-he want to reach, but has no other information regarding the spatial structure between
-his room and that position (remember that it is assumed the cognitive map provide only
-a boolean information regarding the connection of landmarks, no extra info is stored).
-This method should implement an algorithm allowing the pedestrian to perform an educated
-guess of which crossing to take in order to get closer to the provided destination.</p></p>
+    <div class="panel-body"><p>This is called whenever the pedestrian enters a new room.</p>
 </div>
 
     
@@ -315,14 +235,7 @@ guess of which crossing to take in order to get closer to the provided destinati
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        currentRoom: M
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        destination: P
+        newRoom: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/ConvexPolygon">ConvexPolygon</a>
         </code>
         
     </li>
@@ -335,151 +248,7 @@ guess of which crossing to take in order to get closer to the provided destinati
     <div><b>Returns: </b></div>
     <div>
         <code>
-        Map
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_abstract_fun_crossingPoint_door__F___P">
-        <code>
-        protected abstract fun crossingPoint(door: F): P
-        </code>
-    </div>
-    <div class="panel-body"><p>Provided a passage (or door) the pedestrian may want to cross, this method computes the exact
-point the pedestrian will move towards in order to cross such passage.
-The provided passage belongs to the room the agent is into (i.e. it is in sight of the agent),
-the returned position must be in sight of him as well, which means no obstacle should be placed
-between such point and his current position.<p>This method is mainly about exploiting the extra data stored in the passage (for instance
-its shape and location on the room's boundary) to determine which point the pedestrian
-shall point towards.</p></p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        door: F
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        P
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_weight_edge__F__rank__Int____Double">
-        <code>
-        protected open fun weight(edge: F, rank: Int?): Double
-        </code>
-    </div>
-    <div class="panel-body"><p>Assigns a weight to a given edge. The one with minimum weight will be chosen and crossed.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        edge: F
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        rank: Int?
-        </code>
-        
-            <br><br>
-            <div><p>is the rank given to the edge when assessing its suitability to reach the
-next sub-destination. See cognitiveMapFactor.</p>
-</div>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Double
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__protected_open_fun_weightExit_exit__F___Double">
-        <code>
-        protected open fun weightExit(exit: F): Double
-        </code>
-    </div>
-    <div class="panel-body"><p>Assigns a weight to an edge which leads to a room containing a destination (i.e. an exit).
-When weighting exits, we may want to take into account different factors (for instance,
-we don't care about the cognitiveMapFactor or the volatileMemoryFactor).
-By default, we only consider the distance of the exit.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        exit: F
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        Double
+        <ERROR CLASS>
         </code>
     </div>
     <div></div>
@@ -1155,6 +924,14 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies">it.unibo.alchemist.model.implementations.actions.navigationstrategies</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies">it.unibo.alchemist.model.implementations.actions.steeringstrategies</a>
     </li>
     
@@ -1540,6 +1317,14 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AbstractConvexPolygon">AbstractConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/AbstractDistribution">AbstractDistribution</a>
     </li>
     
@@ -1636,6 +1421,14 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction">AbstractNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNeighborAction">AbstractNeighborAction</a>
     </li>
     
@@ -1653,14 +1446,6 @@ By default, we only consider the distance of the exit.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractNode">AbstractNode</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -1964,7 +1749,23 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AwtMutableConvexPolygon">AwtMutableConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/BaseEuclideanNavigationAction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -2956,6 +2757,14 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DestinationReaching">DestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/DiracComb">DiracComb</a>
     </li>
     
@@ -3021,14 +2830,6 @@ By default, we only consider the distance of the exit.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/DoubleDimension">DoubleDimension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
     </li>
     
 
@@ -3149,6 +2950,14 @@ By default, we only consider the distance of the exit.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/ProtelisIncarnation/DummyContext">DummyContext</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DynamicPursuing">DynamicPursuing</a>
     </li>
     
 
@@ -3388,6 +3197,22 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationStrategy">EuclideanNavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
@@ -3444,6 +3269,30 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Explore">Explore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Exploring">Exploring</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/ExponentialSmoothing">ExponentialSmoothing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/ExponentialTime">ExponentialTime</a>
     </li>
     
@@ -3492,7 +3341,7 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonInEnvironment">ExtendableConvexPolygonInEnvironment</a>
     </li>
     
 
@@ -3613,6 +3462,14 @@ By default, we only consider the distance of the exit.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowFlowField">FollowFlowField</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowRoute">FollowRoute</a>
     </li>
     
 
@@ -3837,6 +3694,22 @@ By default, we only consider the distance of the exit.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/speed/GloballyConstantSpeed">GloballyConstantSpeed</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GoalOrientedExplore">GoalOrientedExplore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/GoalOrientedExploring">GoalOrientedExploring</a>
     </li>
     
 
@@ -4412,6 +4285,14 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/KnownDestinationReaching">KnownDestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/LatLongPosition">LatLongPosition</a>
     </li>
     
@@ -4437,6 +4318,14 @@ By default, we only consider the distance of the exit.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/LayerToFunctionMapper">LayerToFunctionMapper</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/utils/LazyMutable">LazyMutable</a>
     </li>
     
 
@@ -4844,7 +4733,7 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/MutableConvexPolygonImpl">MutableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationAction">NavigationAction</a>
     </li>
     
 
@@ -4853,6 +4742,30 @@ By default, we only consider the distance of the exit.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/NavigationPrioritisedSteering">NavigationPrioritisedSteering</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction/NavigationState">NavigationState</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationStrategy">NavigationStrategy</a>
     </li>
     
 
@@ -5044,31 +4957,7 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingBehavior2D">OrientingBehavior2D</a>
     </li>
     
 
@@ -5300,6 +5189,22 @@ By default, we only consider the distance of the exit.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Pursue">Pursue</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Pursuing">Pursuing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/RandomDiracComb">RandomDiracComb</a>
     </li>
     
@@ -5349,6 +5254,22 @@ By default, we only consider the distance of the exit.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomlyToggleMoleculeWithDuration">RandomlyToggleMoleculeWithDuration</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachDestination">ReachDestination</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachKnownDestination">ReachKnownDestination</a>
     </li>
     
 
@@ -5509,6 +5430,14 @@ By default, we only consider the distance of the exit.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Route">Route</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/RouteFollowing">RouteFollowing</a>
     </li>
     
 
@@ -5837,6 +5766,14 @@ By default, we only consider the distance of the exit.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/simulation/SimulationSetImpl">SimulationSetImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/SinglePrevalent">SinglePrevalent</a>
     </li>
     
 
@@ -6388,7 +6325,7 @@ By default, we only consider the distance of the exit.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devpt+fe5fca851. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devsq+1b66117ec. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6405,9 +6342,9 @@ By default, we only consider the distance of the exit.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

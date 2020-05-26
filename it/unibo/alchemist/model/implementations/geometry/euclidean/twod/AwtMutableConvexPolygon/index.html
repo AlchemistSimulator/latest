@@ -21,7 +21,7 @@
 
 
 
-<title>DoubleInterval</title>
+<title>AwtMutableConvexPolygon</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -31,7 +31,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devpt+fe5fca851"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devsq+1b66117ec"};
 </script>
 
 
@@ -54,11 +54,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.kotlindoc.resources.KotlinClassdocResource -->
-<!-- Source Filename: it/unibo/alchemist/model/implementations/geometry/DoubleInterval.html -->
+<!-- Source Filename: it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AwtMutableConvexPolygon.html -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/geometry","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"DoubleInterval","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval"},"description":"","title":"DoubleInterval"};
+    window.allData = {"reference":{"path":"it/unibo/alchemist/model/implementations/geometry/euclidean/twod","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"AwtMutableConvexPolygon","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AwtMutableConvexPolygon"},"description":"","title":"AwtMutableConvexPolygon"};
 </script>
 
 <!-- end:debug info -->
@@ -81,9 +81,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/orchidSearch.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
@@ -121,7 +121,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>DoubleInterval</h2></header>
+                    <header class="major"><h2>AwtMutableConvexPolygon</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -134,15 +134,18 @@
 
 
 <p id="summary">
-    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry">it.unibo.alchemist.model.implementations.geometry</a></b>
+    <b>In package <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod">it.unibo.alchemist.model.implementations.geometry.euclidean.twod</a></b>
 </p>
 <p>
     <code style="padding: 0;">
-        class it.unibo.alchemist.model.implementations.geometry.DoubleInterval
+        class it.unibo.alchemist.model.implementations.geometry.euclidean.twod.AwtMutableConvexPolygon
     </code>
 </p>
 <div class="class-description" id="description">
-<p>Defines an interval with double precision.</p>
+<p>MutableConvexPolygon partly delegated to AwtEuclidean2DShape and java.awt.geom.
+Each modification operation on this object has a time complexity of O(n), where n is
+the number of vertices/edges.
+Collinear points are allowed.</p>
 
 </div>
 
@@ -155,23 +158,23 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="field__first__Double">
+    <div class="panel-heading" id="field__open_diameter__Double">
         <code>
-        first: Double
+        open diameter: Double
         </code>
     </div>
-    <div class="panel-body"><p>Smallest value in the interval.</p>
+    <div class="panel-body"><p>The largest distance between any pair of vertices.</p>
 </div>
 </div>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="field__second__Double">
+    <div class="panel-heading" id="field__open_centroid__Euclidean2DPosition">
         <code>
-        second: Double
+        open centroid: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
         </code>
     </div>
-    <div class="panel-body"><p>Largest value in the interval.</p>
+    <div class="panel-body"><p>The geometric center.</p>
 </div>
 </div>
 
@@ -185,12 +188,15 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="constructor__constructor_endPoint1__Double__endPoint2__Double_">
+    <div class="panel-heading" id="constructor__constructor_vertices__MutableList_">
         <code>
-        constructor(endPoint1: Double, endPoint2: Double)
+        constructor(vertices: MutableList)
         </code>
     </div>
-    <div class="panel-body"><p>Defines an interval with double precision.</p>
+    <div class="panel-body"><p>MutableConvexPolygon partly delegated to AwtEuclidean2DShape and java.awt.geom.
+Each modification operation on this object has a time complexity of O(n), where n is
+the number of vertices/edges.
+Collinear points are allowed.</p>
 </div>
 
     
@@ -201,14 +207,7 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        endPoint1: Double
-        </code>
-        
-    </li>
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        endPoint2: Double
+        vertices: MutableList
         </code>
         
     </li>
@@ -224,13 +223,12 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__operator_fun_component1____Double">
+    <div class="panel-heading" id="method__open_fun_vertices____List">
         <code>
-        operator fun component1(): Double
+        open fun vertices(): List
         </code>
     </div>
-    <div class="panel-body"><p>Same as first, for destructuring declarations.</p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -250,7 +248,7 @@
     <div><b>Returns: </b></div>
     <div>
         <code>
-        Double
+        List
         </code>
     </div>
     <div></div>
@@ -260,13 +258,52 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__operator_fun_component2____Double">
+    <div class="panel-heading" id="method__open_fun_getEdge_index__Int___Segment2D">
         <code>
-        operator fun component2(): Double
+        open fun getEdge(index: Int): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
         </code>
     </div>
-    <div class="panel-body"><p>Same as second, for destructuring declarations.</p>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
 </div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        index: Int
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_edges____List">
+        <code>
+        open fun edges(): List
+        </code>
+    </div>
+    <div class="panel-body"></div>
 
     
 
@@ -286,7 +323,7 @@
     <div><b>Returns: </b></div>
     <div>
         <code>
-        Double
+        List
         </code>
     </div>
     <div></div>
@@ -296,12 +333,12 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_isContained_other__DoubleInterval___Boolean">
+    <div class="panel-heading" id="method__open_fun_addVertex_index__Int__x__Double__y__Double___Boolean">
         <code>
-        fun isContained(other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>): Boolean
+        open fun addVertex(index: Int, x: Double, y: Double): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Checks whether the interval is contained in another given interval.</p>
+    <div class="panel-body"><p>Adds a vertex to the polygon.</p>
 </div>
 
     
@@ -314,7 +351,243 @@
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
+        index: Int
+        </code>
+        
+            <br><br>
+            <div><p>the index in the list of vertices where to put the new vertex</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        x: Double
+        </code>
+        
+            <br><br>
+            <div><p>x coordinate</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        y: Double
+        </code>
+        
+            <br><br>
+            <div><p>y coordinate</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Boolean
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_removeVertex_index__Int___Boolean">
+        <code>
+        open fun removeVertex(index: Int): Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>Removes a vertex from the polygon.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        index: Int
+        </code>
+        
+            <br><br>
+            <div><p>the index of the vertex to be removed in the list of vertices</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Boolean
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_moveVertex_index__Int__newX__Double__newY__Double___Boolean">
+        <code>
+        open fun moveVertex(index: Int, newX: Double, newY: Double): Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>Moves a vertex of the polygon to a new absolute position.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        index: Int
+        </code>
+        
+            <br><br>
+            <div><p>the index of the vertex to move</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        newX: Double
+        </code>
+        
+            <br><br>
+            <div><p>new absolute x coordinate</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        newY: Double
+        </code>
+        
+            <br><br>
+            <div><p>new absolute y coordinate</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Boolean
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_replaceEdge_index__Int__newEdge__Segment2D___Boolean">
+        <code>
+        open fun replaceEdge(index: Int, newEdge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>): Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>Replaces an edge of the polygon.</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        index: Int
+        </code>
+        
+            <br><br>
+            <div><p>the index of the edge to replace (edge i connects vertices i and i+1)</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        newEdge: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Segment2D">Segment2D</a>
+        </code>
+        
+            <br><br>
+            <div><p>the new edge</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Boolean
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_contains_vector__Euclidean2DPosition___Boolean">
+        <code>
+        open fun contains(vector: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>): Boolean
+        </code>
+    </div>
+    <div class="panel-body"><p>Delegated to AwtEuclidean2DShape (adopts the definition of insideness used by
+<a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>s).</p>
+</div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        vector: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/Euclidean2DPosition">Euclidean2DPosition</a>
         </code>
         
     </li>
@@ -337,13 +610,13 @@
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_intersection_other__DoubleInterval___DoubleInterval_">
+    <div class="panel-heading" id="method__open_fun_intersects_shape__Shape___Boolean">
         <code>
-        fun intersection(other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>?
+        open fun intersects(shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Finds the intersection between two intervals. If the intervals do not
-intersect, null is returned.</p>
+    <div class="panel-body"><p>Delegated to <a href="http://docs.oracle.com/javase/6/docs/api/java/awt/geom/Area.html">java.awt.geom.Area</a>, this is accurate and does not consider adjacent
+shapes to be intersecting.</p>
 </div>
 
     
@@ -356,48 +629,7 @@ intersect, null is returned.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>?
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_intersects_other__DoubleInterval___Boolean">
-        <code>
-        fun intersects(other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks whether the interval intersects with the one given.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
+        shape: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
         </code>
         
     </li>
@@ -420,13 +652,13 @@ intersect, null is returned.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_intersectionEndpointsExcluded_other__DoubleInterval___DoubleInterval_">
+    <div class="panel-heading" id="method__open_fun_intersects_other__Euclidean2DShape___Boolean">
         <code>
-        fun intersectionEndpointsExcluded(other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>?
+        open fun intersects(other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>): Boolean
         </code>
     </div>
-    <div class="panel-body"><p>Finds the intersection between two intervals. If the intervals do not
-intersect or share a single endpoint, null is returned.</p>
+    <div class="panel-body"><p>Delegated to AwtEuclidean2DShape unless other is AwtShapeCompatible, in which case
+intersects is used so as to guarantee maximum accuracy.</p>
 </div>
 
     
@@ -439,48 +671,7 @@ intersect or share a single endpoint, null is returned.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
-        </code>
-        
-    </li>
-
-</ul>
-
-    
-
-<div class="panel-footer">
-    <div><b>Returns: </b></div>
-    <div>
-        <code>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>?
-        </code>
-    </div>
-    <div></div>
-</div>
-
-</div>
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_intersectsEndpointsExcluded_other__DoubleInterval___Boolean">
-        <code>
-        fun intersectsEndpointsExcluded(other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>): Boolean
-        </code>
-    </div>
-    <div class="panel-body"><p>Checks whether the interval intersects with the one given, endpoints are exluded.</p>
-</div>
-
-    
-
-    
-<div class="panel-body">
-    <b>Parameters: </b>
-</div>
-<ul class="list-group">
-
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
+        other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
         </code>
         
     </li>
@@ -503,12 +694,12 @@ intersect or share a single endpoint, null is returned.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_subtract_other__DoubleInterval___MutableList">
+    <div class="panel-heading" id="method__open_fun_transformed_transformation__Euclidean2DTransformation.____Unit___Euclidean2DShape">
         <code>
-        fun subtract(other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>): MutableList
+        open fun transformed(transformation: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DTransformation">Euclidean2DTransformation</a>.()-&gt;Unit): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
         </code>
     </div>
-    <div class="panel-body"><p>Subtracts a given interval from the current one.</p>
+    <div class="panel-body"><p>Transforms the shape.</p>
 </div>
 
     
@@ -521,7 +712,88 @@ intersect or share a single endpoint, null is returned.</p>
 
     <li class="list-group-item clearfix">
         <code class="pull-left">
-        other: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
+        transformation: <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DTransformation">Euclidean2DTransformation</a>.()-&gt;Unit
+        </code>
+        
+            <br><br>
+            <div><p>describes the transformations to apply to the shape</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/Euclidean2DShape">Euclidean2DShape</a>
+        </code>
+    </div>
+    <div><p>a copy of the shape transformed accordingly</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__fun_asAwtShape____Shape">
+        <code>
+        fun asAwtShape(): <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/loader/shapes/Shape">Shape</a>
+        </code>
+    </div>
+    <div><p>a copy of itself in form of a <a href="http://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>.</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__open_fun_equals_other__Any____Boolean">
+        <code>
+        open fun equals(other: Any?): Boolean
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        other: Any?
         </code>
         
     </li>
@@ -534,7 +806,7 @@ intersect or share a single endpoint, null is returned.</p>
     <div><b>Returns: </b></div>
     <div>
         <code>
-        MutableList
+        Boolean
         </code>
     </div>
     <div></div>
@@ -544,13 +816,12 @@ intersect or share a single endpoint, null is returned.</p>
 
 
 <div class="panel panel-default">
-    <div class="panel-heading" id="method__fun_subtractAll_intervals__Collection___Collection">
+    <div class="panel-heading" id="method__open_fun_hashCode____Int">
         <code>
-        fun subtractAll(intervals: Collection): Collection
+        open fun hashCode(): Int
         </code>
     </div>
-    <div class="panel-body"><p>Subtracts all the given intervals from the current one.</p>
-</div>
+    <div class="panel-body"></div>
 
     
 
@@ -560,12 +831,7 @@ intersect or share a single endpoint, null is returned.</p>
 </div>
 <ul class="list-group">
 
-    <li class="list-group-item clearfix">
-        <code class="pull-left">
-        intervals: Collection
-        </code>
-        
-    </li>
+    <li class="list-group-item">No parameters</li>
 
 </ul>
 
@@ -575,7 +841,7 @@ intersect or share a single endpoint, null is returned.</p>
     <div><b>Returns: </b></div>
     <div>
         <code>
-        Collection
+        Int
         </code>
     </div>
     <div></div>
@@ -1251,6 +1517,14 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies">it.unibo.alchemist.model.implementations.actions.navigationstrategies</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies">it.unibo.alchemist.model.implementations.actions.steeringstrategies</a>
     </li>
     
@@ -1636,6 +1910,14 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AbstractConvexPolygon">AbstractConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/AbstractDistribution">AbstractDistribution</a>
     </li>
     
@@ -1732,6 +2014,14 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction">AbstractNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNeighborAction">AbstractNeighborAction</a>
     </li>
     
@@ -1749,14 +2039,6 @@ intersect or share a single endpoint, null is returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractNode">AbstractNode</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -2060,7 +2342,23 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AwtMutableConvexPolygon">AwtMutableConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/BaseEuclideanNavigationAction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -3052,6 +3350,14 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DestinationReaching">DestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/DiracComb">DiracComb</a>
     </li>
     
@@ -3117,14 +3423,6 @@ intersect or share a single endpoint, null is returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/DoubleDimension">DoubleDimension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
     </li>
     
 
@@ -3245,6 +3543,14 @@ intersect or share a single endpoint, null is returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/ProtelisIncarnation/DummyContext">DummyContext</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DynamicPursuing">DynamicPursuing</a>
     </li>
     
 
@@ -3484,6 +3790,22 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationStrategy">EuclideanNavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
@@ -3540,6 +3862,30 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Explore">Explore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Exploring">Exploring</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/ExponentialSmoothing">ExponentialSmoothing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/ExponentialTime">ExponentialTime</a>
     </li>
     
@@ -3588,7 +3934,7 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonInEnvironment">ExtendableConvexPolygonInEnvironment</a>
     </li>
     
 
@@ -3709,6 +4055,14 @@ intersect or share a single endpoint, null is returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowFlowField">FollowFlowField</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowRoute">FollowRoute</a>
     </li>
     
 
@@ -3933,6 +4287,22 @@ intersect or share a single endpoint, null is returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/speed/GloballyConstantSpeed">GloballyConstantSpeed</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GoalOrientedExplore">GoalOrientedExplore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/GoalOrientedExploring">GoalOrientedExploring</a>
     </li>
     
 
@@ -4508,6 +4878,14 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/KnownDestinationReaching">KnownDestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/LatLongPosition">LatLongPosition</a>
     </li>
     
@@ -4533,6 +4911,14 @@ intersect or share a single endpoint, null is returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/LayerToFunctionMapper">LayerToFunctionMapper</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/utils/LazyMutable">LazyMutable</a>
     </li>
     
 
@@ -4940,7 +5326,7 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/MutableConvexPolygonImpl">MutableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationAction">NavigationAction</a>
     </li>
     
 
@@ -4949,6 +5335,30 @@ intersect or share a single endpoint, null is returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/NavigationPrioritisedSteering">NavigationPrioritisedSteering</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction/NavigationState">NavigationState</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationStrategy">NavigationStrategy</a>
     </li>
     
 
@@ -5140,31 +5550,7 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingBehavior2D">OrientingBehavior2D</a>
     </li>
     
 
@@ -5396,6 +5782,22 @@ intersect or share a single endpoint, null is returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Pursue">Pursue</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Pursuing">Pursuing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/RandomDiracComb">RandomDiracComb</a>
     </li>
     
@@ -5445,6 +5847,22 @@ intersect or share a single endpoint, null is returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomlyToggleMoleculeWithDuration">RandomlyToggleMoleculeWithDuration</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachDestination">ReachDestination</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachKnownDestination">ReachKnownDestination</a>
     </li>
     
 
@@ -5605,6 +6023,14 @@ intersect or share a single endpoint, null is returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Route">Route</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/RouteFollowing">RouteFollowing</a>
     </li>
     
 
@@ -5933,6 +6359,14 @@ intersect or share a single endpoint, null is returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/simulation/SimulationSetImpl">SimulationSetImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/SinglePrevalent">SinglePrevalent</a>
     </li>
     
 
@@ -6484,7 +6918,7 @@ intersect or share a single endpoint, null is returned.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devpt+fe5fca851. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devsq+1b66117ec. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6501,9 +6935,9 @@ intersect or share a single endpoint, null is returned.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

@@ -35,7 +35,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devpt+fe5fca851"};
+    window.site = {"orchidVersion":"0.20.0-SNAPSHOT","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devsq+1b66117ec"};
 </script>
 
 
@@ -85,9 +85,9 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/css/orchidSearch.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
@@ -138,12 +138,10 @@
 <p>The animation above shows an adult male with no previous knowledge of the environment trying to reach the destination marked green.</p>
 <h3 id="prerequisites"><a href="#prerequisites" id="prerequisites" class="anchor"></a>Prerequisites</h3>
 <p>This guide assumes you already know <a href="../simulator/metamodel.md">the Alchemist metamodel</a>, <a href="yaml.md">how to write simulations in YAML</a> and <a href="navigation-graphs.md">how to generate a navigation graph</a>.</p>
-<h3 id="types-of-pedestrians"><a href="#types-of-pedestrians" id="types-of-pedestrians" class="anchor"></a>Types of pedestrians</h3>
-<p>The characteristics of the pedestrians loadable in a simulation can be chosen from three available types,
-each representing a more refined version of the previous one.</p>
+<h3 id="types-of-pedestrian"><a href="#types-of-pedestrian" id="types-of-pedestrian" class="anchor"></a>Types of pedestrian</h3>
+<p>There are three basic types of pedestrian, each representing a more sophisticated version of the previous one. These are derived from the work of <a href="https://doi.org/10.1007/978-3-319-70647-4_11">van der Wal et al</a>.</p>
 <h4 id="homogeneous-pedestrian"><a href="#homogeneous-pedestrian" id="homogeneous-pedestrian" class="anchor"></a>Homogeneous Pedestrian</h4>
-<p>Homogeneous pedestrians are a particular type of <em>Node</em> which have no peculiar characteristic each other.
-It is the most common type of pedestrian which can be load in a simulation.</p>
+<p>Homogeneous pedestrians are <em>Nodes</em> with no peculiar characteristic each other.</p>
 <pre><code class="language-yaml">displacements:
   - in:
       type: Circle
@@ -152,10 +150,8 @@ It is the most common type of pedestrian which can be load in a simulation.</p>
       type: HomogeneousPedestrian2D
 </code></pre>
 <h4 id="heterogeneous-pedestrian"><a href="#heterogeneous-pedestrian" id="heterogeneous-pedestrian" class="anchor"></a>Heterogeneous Pedestrian</h4>
-<p>Heterogeneous pedestrians are <em>Nodes</em> who have a given age and gender, based on which their speed, compliance
-and social attitudes are computed.
-The kinds of age which can be used are: <em>child</em>, <em>adult</em>, <em>elderly</em>; alternatively you can specify the exact age as a number.
-The kinds of sex available are: <em>male</em>, <em>female</em>.</p>
+<p>Heterogeneous pedestrians have an age and a gender, based on which their speed, compliance and social attitudes are computed.
+The age groups available are: <em>child</em>, <em>adult</em>, <em>elderly</em>; alternatively you can specify the exact age. The genders available are: <em>male</em>, <em>female</em>.</p>
 <pre><code class="language-yaml">displacements:
   - in:
       type: Circle
@@ -171,7 +167,7 @@ The kinds of sex available are: <em>male</em>, <em>female</em>.</p>
       parameters: [&quot;child&quot;, &quot;male&quot;]
 </code></pre>
 <h4 id="cognitive-pedestrian"><a href="#cognitive-pedestrian" id="cognitive-pedestrian" class="anchor"></a>Cognitive Pedestrian</h4>
-<p>A cognitive pedestrian is a heterogeneous pedestrian with cognitive capabilities. It has an emotional state and is able to influence and to be influenced by other people with the same capabilities. For instance, cognitive pedestrians can perceive fear, not just directly but also by contagion (e.g. seeing other people fleeing may cause them flee as well).</p>
+<p>Cognitive pedestrians are heterogeneous pedestrians with cognitive capabilities. They have an emotional state and are able to influence and be influenced by others with the same capabilities. As an example, cognitive pedestrians can perceive fear via social contagion (e.g. seeing other people fleeing may cause them flee as well despite they haven't directly seen the danger).</p>
 <pre><code class="language-yaml">reactions: &amp;behavior
   - time-distribution:
       type: DiracComb
@@ -193,6 +189,36 @@ displacements:
     nodes:
       type: CognitivePedestrian2D
       parameters: [&quot;adult&quot;, &quot;female&quot;]
+    programs:
+      - *behavior
+</code></pre>
+<h3 id="orienting-pedestrians"><a href="#orienting-pedestrians" id="orienting-pedestrians" class="anchor"></a>Orienting pedestrians</h3>
+<p>As shown in the animation on the top of the page, pedestrians can be equipped with different knowledge degrees of the environment. To do so, orienting pedestrians are required: these are derived from the work of <a href="https://www.tandfonline.com/doi/full/10.1080/23249935.2018.1432717">Andresen et al</a>. There are two available types of orienting pedestrian, described below.</p>
+<h4 id="homogeneous-orienting-pedestrian"><a href="#homogeneous-orienting-pedestrian" id="homogeneous-orienting-pedestrian" class="anchor"></a>Homogeneous orienting pedestrian</h4>
+<p>These are homogeneous pedestrians that can be equipped with a given knowledge degree of the environment. Such quantity is a <code>Double</code> value in [0,1] describing the percentage of environment the pedestrian is familiar with prior to the start of the simulation (thus it does not take into account the knowledge the pedestrian will gain during it). Note that despite their name, the knowledge degree of different homogeneous orienting pedestrians may differ, and even pedestrians with the same knowledge degree can be different as each one can be familiar with different portions of the environment. Be also aware that orienting pedestrians can only be placed in an <code>EnvironmentWithGraph</code>, which is a type of environment providing a navigation graph (see <a href="navigation-graphs.md">how to generate navigation graphs</a>).</p>
+<pre><code class="language-yaml">displacements:
+  - in:
+      type: Point
+      parameters: [15, 15]
+    nodes:
+      type: OrientingHomogeneousPedestrian2D
+      parameters: [0.5]
+</code></pre>
+<h4 id="cognitive-orienting-pedestrian"><a href="#cognitive-orienting-pedestrian" id="cognitive-orienting-pedestrian" class="anchor"></a>Cognitive orienting pedestrian</h4>
+<p>As you may guess, these are cognitive pedestrians equipable with a given knowledge degree of the environment. Cognitive orienting pedestrians can be instanced providing their knowledge degree before every other parameter.</p>
+<pre><code class="language-yaml">reactions: &amp;behavior
+  - time-distribution:
+      type: DiracComb
+      parameters: [1.0]
+    type: CognitiveBehavior
+
+displacements:
+  - in:
+      type: Point
+      parameters: [0, 0]
+    nodes:
+      type: OrientingCognitivePedestrian2D
+      parameters: [0.5, &quot;adult&quot;, &quot;male&quot;]
     programs:
       - *behavior
 </code></pre>
@@ -228,12 +254,12 @@ displacements:
       parameters: [*group2]
 </code></pre>
 <h3 id="steering-actions"><a href="#steering-actions" id="steering-actions" class="anchor"></a>Steering Actions</h3>
-<p>A pedestrian that doesn't move is not a pedestrian. The need of <em>Actions</em> which can make it move in a realistic way
-inside the environment lead to the creation of particular behaviors such as <em>Flee</em>, <em>Wander</em>, <em>FollowFlowField</em>, <em>ObstacleAvoidance</em>... <br />
-As a potential part of a group, there must exist also some attitudes typical of this sort of formation such as <em>Cohesion</em> and <em>Separation</em>.
-The creation of complex movements can be accomplished by combining different steering actions together. <br />
-The only way currently available to do so, it is to use some <em>SteeringBehavior</em> extending <em>Reaction</em>, which can recognize, across all the actions specified, the steering ones
-to trait them in a separate way.</p>
+<p>Steering actions are <em>Actions</em> whose purpose is moving a node inside an environment. There are quite a lot of these actions, but they can be divided into two categories:</p>
+<ul>
+<li>those inspired to <a href="http://citeseer.ist.psu.edu/viewdoc/summary?doi=10.1.1.16.8035">Reynold's steering behaviors</a>, which operate in a greedy fashion, i.e. performing only local choices;</li>
+<li>those inspired to the work of <a href="https://www.tandfonline.com/doi/full/10.1080/23249935.2018.1432717">Andresen et al</a>, also called <code>NavigationAction</code>s, which exploit the spatial information available to orienting pedestrians in order to navigate the environment consciously (e.g. without getting stuck in U-shaped obstacles). Note that these actions <em>do not</em> assume that pedestrians have global knowledge of the environment, on the contrary only the spatial information available to a pedestrian is used to move it (which can be little or nothing).</li>
+</ul>
+<p>For a complete overview of the available actions refer to the api documentation. The creation of complex movements can be accomplished by combining different steering actions together. The only way currently available to do so is by using some <em>SteeringBehavior</em> extending <em>Reaction</em>, which can recognize, across all the actions specified, the steering ones to trait them in a separate way.</p>
 <p>In this simulation 50 people wander around the environment and if they are approaching an obstacle they avoid it.</p>
 <pre><code class="language-yaml">incarnation: protelis
 
@@ -296,54 +322,6 @@ displacements:
     programs:
       - *behavior
 </code></pre>
-<h3 id="orienting-abilities"><a href="#orienting-abilities" id="orienting-abilities" class="anchor"></a>Orienting abilities</h3>
-<p>As showed in the animation on the top of the page, pedestrians can be equipped with orienting abilities and different knowledge degrees of the environment. Of the types of pedestrians described above, only homogeneous and cognitive pedestrians can be equipped with orienting abilities.</p>
-<h4 id="homogeneous-orienting-pedestrians"><a href="#homogeneous-orienting-pedestrians" id="homogeneous-orienting-pedestrians" class="anchor"></a>Homogeneous orienting pedestrians</h4>
-<p>First of all, orienting pedestrians can only be placed in an <code>ImageEnvironmentWithGraph</code>, which is a type of environment providing a navigation graph (see <a href="navigation-graphs.md">how to generate navigation graphs</a>). Additionally, in order for orienting pedestrians to be able to navigate the environment, you need to provide them with the orienting behavior. Such object is a <em>reaction</em> that will exploit the spatial information available to a pedestrian in order to navigate the environment towards (or in search of) a destination. It will also register new information gained by the pedestrian during the simulation. Once you instanced the two objects described above, the only parameter you need to specify when declaring a homogeneous orienting pedestrian is its knowledge degree:</p>
-<pre><code class="language-yaml">environment:
-  type: ImageEnvironmentWithGraph
-  parameters: [path/to/image.png, 1.0, 50, 50]
-
-reactions: &amp;behavior
-  - time-distribution:
-      type: DiracComb
-      parameters: [1.0]
-    type: OrientingBehavior2D
-
-displacements:
-  - in:
-      type: Point
-      parameters: [15, 15]
-    nodes:
-      type: OrientingHomogeneousPedestrian2D
-      parameters: [0.5]
-    programs:
-      - *behavior
-</code></pre>
-<p>The knowledge degree is a <code>Double</code> value in [0,1] describing the percentage of the environment the pedestrian is familiar with prior to the start of the simulation (thus it does not take into account the knowledge the pedestrian will gain during it). Note that despite their name, the knowledge degree of different homogeneous orienting pedestrians may differ, and even pedestrians with the same knowledge degree can be different as each one can be familiar with different portions of the environment.</p>
-<h4 id="cognitive-orienting-pedestrian"><a href="#cognitive-orienting-pedestrian" id="cognitive-orienting-pedestrian" class="anchor"></a>Cognitive orienting pedestrian</h4>
-<p>Cognitive orienting pedestrians can be instanced providing their knowledge degree before all the other parameters needed. Remember to provide them with cognitive behavior as well or their emotions won't evolve at all:</p>
-<pre><code class="language-yaml">reactions: &amp;behavior
-  - time-distribution:
-      type: DiracComb
-      parameters: [1.0]
-    type: CognitiveBehavior
-  - time-distribution:
-        type: DiracComb
-        parameters: [1.0]
-    type: OrientingBehavior2D
-
-displacements:
-  - in:
-      type: Point
-      parameters: [0, 0]
-    nodes:
-      type: OrientingCognitivePedestrian2D
-      parameters: [0.5, &quot;adult&quot;, &quot;male&quot;]
-    programs:
-      - *behavior
-</code></pre>
-<p>As you may have noted, no destination is specified when instancing orienting pedestrians and the associated behavior. This is because the navigation graph provided by the environment contains a set of destinations that will be used by the orienting behavior. These can be specified in the constructor of <code>ImageEnvironmentWithGraph</code>, for more information see <a href="navigation-graphs.md">how to generate navigation graphs</a>.</p>
 <h3 id="evacuation-scenarios"><a href="#evacuation-scenarios" id="evacuation-scenarios" class="anchor"></a>Evacuation Scenarios</h3>
 <p>Pedestrians can be loaded in any kind of <em>Environment</em> but it is recommended to use <em>PhysicsEnvironments</em> since they
 have properties such as non-overlapping shapes which are advisable to be taken into consideration
@@ -387,6 +365,33 @@ displacements:
     programs:
       - *behavior
 </code></pre>
+<h3 id="navigation-system"><a href="#navigation-system" id="navigation-system" class="anchor"></a>Navigation system</h3>
+<p>Each time a pedestrian enters a new room (= environment's area), all the visible doors are weighted, the one with minimum weight is then crossed. The weighting system used in Alchemist is derived from the one by <a href="https://doi.org/10.1080/23249935.2018.1432717">Andresen et al</a>, here's a brief description of the factors included, these are multiplied to get the final weight.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>volatileMemoryFactor</td><td>Takes into account the information stored in the pedestrian's volatile memory (= a map pairing each room with the number of visits, models the ability to remember areas of the environment already visited since the start of the simulation). It is computed as 2^v where v is the number of visits to the area the edge being weighted leads to (in other words, less visited rooms are preferred).</td></tr>
+<tr><td>congestionFactor</td><td>Takes into account the congestion of the area the edge being weighted leads to (it is assumed that the pedestrian can estimate the congestion level of a neighboring room). It is computed as density of the area + 1, so as to have a value in [1,2] (less crowded rooms are preferred).</td></tr>
+<tr><td>impasseFactor</td><td>Takes into account whereas a door leads to a known impasse or not, known impasses are given <em>knownImpasseWeight</em> (see hardcoded parameters below), otherwise this factor assumes unitary value.</td></tr>
+<tr><td>suitabilityFactor</td><td>This factor is used when the pedestrian is moving towards a target: each door is given an integer rank indicating its suitability in order to reach the target (ranks are computed taking into account the target and the door locations, as well as the geometry of the current room). The factor for each door is computed as 1-0.5^rank.</td></tr>
+</tbody>
+</table>
+<h3 id="hardcoded-parameters"><a href="#hardcoded-parameters" id="hardcoded-parameters" class="anchor"></a>Hardcoded parameters</h3>
+<p>Here's a list of all the hardcoded parameters.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>knownImpasseWeight</td><td>10</td><td>Weight assigned to known impasses (= areas with a single door). It's usually a high value, allowing to avoid them.</td></tr>
+<tr><td>toleranceAngle</td><td>45 degrees</td><td>Used by <code>SinglePrevalent</code> steering strategy (see its api documentation), such strategy linearly combines multiple steering actions (= multiple forces) assuming one of them is prevalent. Weights for the linear combination are determined so that the resulting force forms with the prevalent one an angle smaller than or equal to the tolerance angle. The prevalent force usually wants to move the pedestrian consciously, whereas other forces are more &quot;greedy&quot;. The purpose of the tolerance angle is allowing to steer the pedestrian towards the target defined by the prevalent force, while using a trajectory which takes into account other urges as well.</td></tr>
+<tr><td>alpha</td><td>0.5</td><td>Used by <code>SinglePrevalent</code> steering strategy (see its api documentation), an exponential smoothing with this alpha is applied to the resulting force in order to reduce oscillatory movements.</td></tr>
+<tr><td>maxWalkRatio</td><td>0.3</td><td>Used by <code>SinglePrevalent</code> steering strategy (see its api documentation). When the pedestrian is subject to contrasting forces the resulting one may be small in magnitude, hence a lower bound for such quantity is set to (maximum distance walkable by the pedestrian) * (this parameter) so as to avoid extremely slow movements.</td></tr>
+<tr><td>delta</td><td>0.05</td><td>Used by <code>SinglePrevalent</code> steering strategy (see its api documentation). The weight assigned to disturbing forces is set to 1 and then iteratively decreased by delta until the resulting force satisfies the required conditions (see the api). This is similar to a gradient descent.</td></tr>
+</tbody>
+</table>
 <h3 id="further-references"><a href="#further-references" id="further-references" class="anchor"></a>Further references</h3>
 <p><a href="https://doi.org/10.1007/978-3-319-70647-4_11">C. Natalie van der Wal, Daniel Formolo, Mark A. Robinson, Michael Minkov, Tibor Bosse<br />
 Simulating Crowd Evacuation with Socio-Cultural, Cognitive, and Emotional Elements<br />
@@ -1072,6 +1077,14 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies">it.unibo.alchemist.model.implementations.actions.navigationstrategies</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies">it.unibo.alchemist.model.implementations.actions.steeringstrategies</a>
     </li>
     
@@ -1457,6 +1470,14 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AbstractConvexPolygon">AbstractConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/AbstractDistribution">AbstractDistribution</a>
     </li>
     
@@ -1553,6 +1574,14 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction">AbstractNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNeighborAction">AbstractNeighborAction</a>
     </li>
     
@@ -1570,14 +1599,6 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/nodes/AbstractNode">AbstractNode</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/AbstractOrientingBehavior">AbstractOrientingBehavior</a>
     </li>
     
 
@@ -1881,7 +1902,23 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/AwtMutableConvexPolygon">AwtMutableConvexPolygon</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/AwtShapeCompatible">AwtShapeCompatible</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/BaseEuclideanNavigationAction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -2873,6 +2910,14 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DestinationReaching">DestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/DiracComb">DiracComb</a>
     </li>
     
@@ -2938,14 +2983,6 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/wormhole/implementation/DoubleDimension">DoubleDimension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/DoubleInterval">DoubleInterval</a>
     </li>
     
 
@@ -3066,6 +3103,14 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/ProtelisIncarnation/DummyContext">DummyContext</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/DynamicPursuing">DynamicPursuing</a>
     </li>
     
 
@@ -3305,6 +3350,22 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationAction">EuclideanNavigationAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/EuclideanNavigationStrategy">EuclideanNavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph">EuclideanPhysics2DEnvironmentWithGraph</a>
     </li>
     
@@ -3361,6 +3422,30 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Explore">Explore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Exploring">Exploring</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/ExponentialSmoothing">ExponentialSmoothing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/ExponentialTime">ExponentialTime</a>
     </li>
     
@@ -3409,7 +3494,7 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonImpl">ExtendableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/navigator/ExtendableConvexPolygonInEnvironment">ExtendableConvexPolygonInEnvironment</a>
     </li>
     
 
@@ -3530,6 +3615,14 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowFlowField">FollowFlowField</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/FollowRoute">FollowRoute</a>
     </li>
     
 
@@ -3754,6 +3847,22 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/movestrategies/speed/GloballyConstantSpeed">GloballyConstantSpeed</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/GoalOrientedExplore">GoalOrientedExplore</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/GoalOrientedExploring">GoalOrientedExploring</a>
     </li>
     
 
@@ -4329,6 +4438,14 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/KnownDestinationReaching">KnownDestinationReaching</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/positions/LatLongPosition">LatLongPosition</a>
     </li>
     
@@ -4354,6 +4471,14 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/boundary/gui/effects/LayerToFunctionMapper">LayerToFunctionMapper</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/utils/LazyMutable">LazyMutable</a>
     </li>
     
 
@@ -4761,7 +4886,7 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/MutableConvexPolygonImpl">MutableConvexPolygonImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationAction">NavigationAction</a>
     </li>
     
 
@@ -4770,6 +4895,30 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/graph/NavigationGraph">NavigationGraph</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/NavigationPrioritisedSteering">NavigationPrioritisedSteering</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/AbstractNavigationAction/NavigationState">NavigationState</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/NavigationStrategy">NavigationStrategy</a>
     </li>
     
 
@@ -4961,31 +5110,7 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Orienting">Orienting</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingAgent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/OrientingBehavior">OrientingBehavior</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/reactions/OrientingBehavior2D">OrientingBehavior2D</a>
     </li>
     
 
@@ -5217,6 +5342,22 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/Pursue">Pursue</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/Pursuing">Pursuing</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/timedistributions/RandomDiracComb">RandomDiracComb</a>
     </li>
     
@@ -5266,6 +5407,22 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/RandomlyToggleMoleculeWithDuration">RandomlyToggleMoleculeWithDuration</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachDestination">ReachDestination</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/ReachKnownDestination">ReachKnownDestination</a>
     </li>
     
 
@@ -5426,6 +5583,14 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/interfaces/Route">Route</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/navigationstrategies/RouteFollowing">RouteFollowing</a>
     </li>
     
 
@@ -5754,6 +5919,14 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/grid/simulation/SimulationSetImpl">SimulationSetImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/it/unibo/alchemist/model/implementations/actions/steeringstrategies/SinglePrevalent">SinglePrevalent</a>
     </li>
     
 
@@ -6305,7 +6478,7 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devpt+fe5fca851. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devsq+1b66117ec. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6322,9 +6495,9 @@ A representation of partial spatial knowledge: a cognitive map approach for evac
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7eda4141/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/61cdf752/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
