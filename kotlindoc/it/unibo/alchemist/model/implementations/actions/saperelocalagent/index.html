@@ -1,0 +1,869 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>SAPERELocalAgent</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/actions/saperelocalagent","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperelocalagent"},"description":"","title":"SAPERELocalAgent"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>SAPERELocalAgent</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="SAPERELocalAgent">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="a9eb8149e294c4dd31758d32d4309e168cab11b2">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract class SAPERELocalAgent: SAPEREAgent</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>A SAPERE Agent that does not do actions on neighbors.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="464f64f7a7405b59dca1cc7f90f410908010b62b">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(node: ILsaNode?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Creates a new SAPERE Local Agent stub. If you use this constructor, you must be sure that your agent does not modify any molecule (e.g. an agent that just moves a node).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="060147f18b1bcdb77fa4c23f150700ce91849caa">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
+        <td class="sourcedoc-section section-signature">
+          <code>node: ILsaNode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaNode!: The node in which this agent stays</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="703760f7a34c6731aded4433c286881924a4facf">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(node: ILsaNode?, m1: ILsaMolecule?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Creates a new SAPERE Agent stub. If you use this constructor, you must be sure that your agent only modifies molecules matching the template passed as m1.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="86bf4ccb949e7a2c55f249d0f9fb6a82cbc445f5">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
+        <td class="sourcedoc-section section-signature">
+          <code>node: ILsaNode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaNode!: The node in which this agent stays</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0ac86cfad75970475332a8002cf839fcaafe369d">
+        <td class="sourcedoc-section section-signature">
+          <code>m1: ILsaMolecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaMolecule!: The molecule template it modifies</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="da982795a7bf04affc38e85584965a17a4ac5b02">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(node: ILsaNode?, m1: ILsaMolecule?, m2: ILsaMolecule?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Creates a new SAPERE Agent stub. If you use this constructor, you must be sure that your agent only modifies molecules matching the template passed as m1 and/or the template passed in m2.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="836809ffe4c71d756d0ceb49e899eb42a95be0ef">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
+        <td class="sourcedoc-section section-signature">
+          <code>node: ILsaNode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaNode!: The node in which this agent stays</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0ac86cfad75970475332a8002cf839fcaafe369d">
+        <td class="sourcedoc-section section-signature">
+          <code>m1: ILsaMolecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaMolecule!: The first molecule template it modifies</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0e4e6447c443a2b9bd54c540f566425438b4a905">
+        <td class="sourcedoc-section section-signature">
+          <code>m2: ILsaMolecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaMolecule!: The second molecule template it modifies</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="8dce505f6a0befa8af74cbf21cfcf09ead8bf0bd">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(node: ILsaNode?, m1: ILsaMolecule?, m2: ILsaMolecule?, m3: ILsaMolecule?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Creates a new SAPERE Agent stub. If you use this constructor, you must be sure that your agent only modifies molecules matching the template passed as m1 and/or the template passed in m2 and/or the template passed in m3.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="392333ab6c5e4476f89a96c6f80f1c89552ae6aa">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
+        <td class="sourcedoc-section section-signature">
+          <code>node: ILsaNode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaNode!: The node in which this agent stays</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0ac86cfad75970475332a8002cf839fcaafe369d">
+        <td class="sourcedoc-section section-signature">
+          <code>m1: ILsaMolecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaMolecule!: The first molecule template it modifies</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0e4e6447c443a2b9bd54c540f566425438b4a905">
+        <td class="sourcedoc-section section-signature">
+          <code>m2: ILsaMolecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaMolecule!: The second molecule template it modifies</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="b4b3366850c149c653f6c8431bb22fb514ad8486">
+        <td class="sourcedoc-section section-signature">
+          <code>m3: ILsaMolecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaMolecule!: The third molecule template it modifies</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="653ebc15a3ffcaf3e0149c1a74053f0b6cdee88f">
+      
+      <h3 class="sourcedoc-section element-name">getContext</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getContext(): Context?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="31b8bcf055c3fe6797e54c7d1b760afa039ddc37">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5e66a11414867a7afc6633feb4250ba52a57cb31">
+        <td class="sourcedoc-section section-signature">
+          <code>Context?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

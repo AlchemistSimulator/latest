@@ -1,0 +1,1193 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Time</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocInterface, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/time","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time"},"description":"","title":"Time"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>Time</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="Time">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="144fd85e4a5229cdd685a378109fc237a524b3dc">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>interface Time: Comparable&lt;Time?&gt;, Serializable, Any</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Interface for time representation.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="e6c29fb75252926e0f1b62f7f5c606c40153bb28">
+        <td class="sourcedoc-section section-signature">
+          <code>static ZERO: Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Initial time.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d23a8108486851e7a461c807f63a90ae5b9b514b">
+        <td class="sourcedoc-section section-signature">
+          <code>static INFINITY: Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Indefinitely future time.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="b691ff1fb38b478af541dd5b6478427b21c20f47">
+      
+      <h3 class="sourcedoc-section element-name">toDouble</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun toDouble(): Double</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Allows to get a double representation of this <code>Time</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3c65be60383eb1e6df52b57a1c5418e59e247513">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="81581597044514bf54d4f97266022fc991f3915e">
+        <td class="sourcedoc-section section-signature">
+          <code>Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the double representation of this <code>Time</code></p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="36d141f18bc6d58073de65731bd74ab60318cc92">
+      
+      <h3 class="sourcedoc-section element-name">times</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun times(var: Double): Time?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Allows to multiply this <code>Time</code> for a constant.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b2649b748d43a85efc010a7c85a52cefbab665dd">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="e497ebe7207e5aac11323bb4c750b14c816414c8">
+        <td class="sourcedoc-section section-signature">
+          <code>var: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the <code>Time</code> to sum to the current <code>Time</code></p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5e6ab178bab34ee5e31ead8431f81410e4af592c">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="fb5b6d153245a2585f5561d0195adf5208150d11">
+        <td class="sourcedoc-section section-signature">
+          <code>Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Time!: the result of the multiplication</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="8c1e45f2d8372796006b37e13acb07c0d74765c8">
+      
+      <h3 class="sourcedoc-section element-name">isInfinite</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun isInfinite(): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Verifies if the <code>Time</code> is set at infinite, namely if the event will never happen.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7461fc3a80de71ce15e72cfe5f22f327a0fa81c8">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean: true if the <code>Time</code> is infinite</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="87ca8731a20734a9fa1be323920d46efff07d387">
+      
+      <h3 class="sourcedoc-section element-name">minus</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun minus(dt: Time?): Time?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Allows to subtract a <code>Time</code> to this <code>Time</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5505e3a1a806496be6d49659f2c6ba7b33a05579">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6ea830f88680dda644558f3507b163ea1d651828">
+        <td class="sourcedoc-section section-signature">
+          <code>dt: Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Time!: the time to subtract from the current <code>Time</code></p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="d320382857339ed1d96d275d11781945737eaf89">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="fb5b6d153245a2585f5561d0195adf5208150d11">
+        <td class="sourcedoc-section section-signature">
+          <code>Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Time!: the result of the subtraction</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="b60c7b6b02a59805d154e914dcc21482607e6dd2">
+      
+      <h3 class="sourcedoc-section element-name">plus</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun plus(dt: Time?): Time?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Allows to add a <code>Time</code> to this <code>Time</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3a4d76987e226c828804301f587b8c0da85eea13">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6ea830f88680dda644558f3507b163ea1d651828">
+        <td class="sourcedoc-section section-signature">
+          <code>dt: Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Time!: the time to sum to the current <code>Time</code></p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b8ed3a717a7c8e3e017faf0e19b2b27fe2e79afe">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="fb5b6d153245a2585f5561d0195adf5208150d11">
+        <td class="sourcedoc-section section-signature">
+          <code>Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Time!: the result of the sum</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="extensions">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Extensions</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="9cb3fdbd6f07cbab43563dd08f092a1aac8caa49">
+      
+      <h3 class="sourcedoc-section element-name">plus</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>operator fun Time.plus(other: Double): Time</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Plus operator for Time.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="8d8b28c81a4485851c6f2a6b3cfc9f3aadeb2b65">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6c82e6dd86807ee3db07e3c82bec1ae1ce00b08b">
+        <td class="sourcedoc-section section-signature">
+          <code>Time</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5aea86a549a6b2dc474c72729f401a99fa3c3e35">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2a96080339cdd075898e0f879d8cd00ac6611874">
+        <td class="sourcedoc-section section-signature">
+          <code>other: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="05ea98617d902a86470b18a723a3218a2bcece39">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6c82e6dd86807ee3db07e3c82bec1ae1ce00b08b">
+        <td class="sourcedoc-section section-signature">
+          <code>Time</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="2e5bc6ff801c67619869c9535a2d92cb1e78ca24">
+      
+      <h3 class="sourcedoc-section element-name">minus</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>operator fun Time.minus(other: Double): Time</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Minus operator for Time.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7a6bccf1b6e6c9a08a1fc22d3c2a09ccc588617c">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6c82e6dd86807ee3db07e3c82bec1ae1ce00b08b">
+        <td class="sourcedoc-section section-signature">
+          <code>Time</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e91672a72d1b983af8580aadbb276a66a789f469">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2a96080339cdd075898e0f879d8cd00ac6611874">
+        <td class="sourcedoc-section section-signature">
+          <code>other: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9fc028398796ae726a860ccb55d5f13f73ee3d4a">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6c82e6dd86807ee3db07e3c82bec1ae1ce00b08b">
+        <td class="sourcedoc-section section-signature">
+          <code>Time</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

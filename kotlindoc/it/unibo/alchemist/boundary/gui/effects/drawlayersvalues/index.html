@@ -1,0 +1,1777 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>DrawLayersValues</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/boundary/gui/effects/drawlayersvalues","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersvalues"},"description":"","title":"DrawLayersValues"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>DrawLayersValues</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="DrawLayersValues">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="cecccaa7e1d67dc76297133faa7592ff6d2890b4">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract class DrawLayersValues: AbstractDrawLayers, FunctionDrawer</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This is a basic class for all the effects meant to draw <code>it.unibo.alchemist.model.interfaces.Layer</code>s values in different points of the view. One effect could draw isolines, whereas another could represent different values with a gradient. Normally, drawing a layer's values only makes sense for "numerical" layers (i.e. layers for which the values are <code><a href="https://docs.oracle.com/javase/6/docs/api/java/lang/Number.html">Number</a></code>s). However, one could have a "non-numerical" layer whose <code>it.unibo.alchemist.model.interfaces.Layer#getValue(it.unibo.alchemist.model.interfaces.Position)</code> return type is an object from which a value can be extracted somehow. In the end, drawing a layer's values makes sense as long as there is a way to map those values to Numbers. More generally, a <code>LayerToFunctionMapper</code> is needed. As this class is not aware of which mapper to use, this responsibility is left to subclasses. When drawing layers values, it can be important to know the min and max layer values that will be drawn. This class declares gui controls that allow the user to specify such boundaries.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  <p class="sourcedoc-section section-name"><strong>Constructors</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d4613aad3f43ed7d2b370aabe518d8516ff827ff">
+        <td class="sourcedoc-section section-signature">
+          <code>constructor()</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This is a basic class for all the effects meant to draw <code>it.unibo.alchemist.model.interfaces.Layer</code>s values in different points of the view. One effect could draw isolines, whereas another could represent different values with a gradient. Normally, drawing a layer's values only makes sense for "numerical" layers (i.e. layers for which the values are <code><a href="https://docs.oracle.com/javase/6/docs/api/java/lang/Number.html">Number</a></code>s). However, one could have a "non-numerical" layer whose <code>it.unibo.alchemist.model.interfaces.Layer#getValue(it.unibo.alchemist.model.interfaces.Position)</code> return type is an object from which a value can be extracted somehow. In the end, drawing a layer's values makes sense as long as there is a way to map those values to Numbers. More generally, a <code>LayerToFunctionMapper</code> is needed. As this class is not aware of which mapper to use, this responsibility is left to subclasses. When drawing layers values, it can be important to know the min and max layer values that will be drawn. This class declares gui controls that allow the user to specify such boundaries.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="65a856add90c8424837d09786dcb2dbc01512aeb">
+      
+      <h3 class="sourcedoc-section element-name">getMinLayerValueCached</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun getMinLayerValueCached(): String?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e7077314cd6cf62ebae7b0b319ab7059c37e3e1d">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ce29911ab38228bb2a41fe50f4edd1d765e1abcd">
+        <td class="sourcedoc-section section-signature">
+          <code>String?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String!: a string representation of the min layer value cached</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="61e7210e58ad9eed1bbacdc3d359642a23440f80">
+      
+      <h3 class="sourcedoc-section element-name">getMaxLayerValueDouble</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun getMaxLayerValueDouble(): Double?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="6bb4cf56ee33513dd5c48d8127c7c12e813472f7">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d0d2f286fdab94b05e032e029731c0a99ca5280c">
+        <td class="sourcedoc-section section-signature">
+          <code>Double?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double!: the max layer value</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="d5ea021f2caef020899ae6aebc0472deba9c88bd">
+      
+      <h3 class="sourcedoc-section element-name">drawLayers</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun &lt;T : Any?, P : Position2D&lt;P&gt;?&gt; drawLayers(toDraw: MutableCollection&lt;Layer&lt;T, P&gt;?&gt;?, env: Environment&lt;T, P&gt;?, g: Graphics2D?, wormhole: IWormhole2D&lt;P&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Effectively draw the layers.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9beadeeda95a1be65b4517bd7ee1f26bf608e2be">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="90ae2f4450156ef8e9f4ca9fde30da9bd2a3c610">
+        <td class="sourcedoc-section section-signature">
+          <code>toDraw: MutableCollection&lt;Layer&lt;T, P&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>MutableCollection&lt;Layer&lt;T, P&gt;!&gt;!: - the layers to draw</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5f36e38a592b4a94bef1b256824b2287d86c46b9">
+        <td class="sourcedoc-section section-signature">
+          <code>env: Environment&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;T, P&gt;!: - the environment (mainly used to create positions)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="edffa008f56f12e1a055ce06940e631908624df2">
+        <td class="sourcedoc-section section-signature">
+          <code>g: Graphics2D?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Graphics2D.html">Graphics2D</a>!: - the graphics2D</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="04e711ed9ea5a9bf9044acb7d7742d1e7271f78e">
+        <td class="sourcedoc-section section-signature">
+          <code>wormhole: IWormhole2D&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>IWormhole2D<P>!: - the wormhole</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="66f0ff787a57fe84b911d95dea0cb179289d5f60">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="6115d33b51af69d316f58c528352e606b789a399">
+      
+      <h3 class="sourcedoc-section element-name">setMaxLayerValueCached</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun setMaxLayerValueCached(maxLayerValueCached: String?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4607b2b31e5e300d7891de732546036bdde00219">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="324ab153f8cec7024acc59e5b980b3b395eb12b9">
+        <td class="sourcedoc-section section-signature">
+          <code>maxLayerValueCached: String?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String!: a string representation of the max layer value to cache</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="98eb159ecc6467791ce7fb085760ce089965e9dc">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="fd2c05c82b19c783b06ee8c5919aae4f31575048">
+      
+      <h3 class="sourcedoc-section element-name">createMapper</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected abstract fun createMapper(): LayerToFunctionMapper?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f6e37efe5dbf00cd48a0c78b84fc257408ce6f07">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="493b74eb359a1498a14cc439b9ebda7ddaa1b564">
+        <td class="sourcedoc-section section-signature">
+          <code>LayerToFunctionMapper?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>LayerToFunctionMapper!: a layer to function mapper</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="fc0219407497235af634efe10306c4cfa125317a">
+      
+      <h3 class="sourcedoc-section element-name">getMaxLayerValueCached</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun getMaxLayerValueCached(): String?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="85151bd4468b4347252a88c29ac282128dcf9761">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ce29911ab38228bb2a41fe50f4edd1d765e1abcd">
+        <td class="sourcedoc-section section-signature">
+          <code>String?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String!: a string representation of the max layer value cached</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="97141be7697b4f945deebe5660ae235300986c6a">
+      
+      <h3 class="sourcedoc-section element-name">minOrMaxLayerValuesNeedsToBeUpdated</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun minOrMaxLayerValuesNeedsToBeUpdated(): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="8ad99368d7936391e9a809fd39b548bf1e838dde">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean: a boolean representing whether or not min and max layer values should be updated</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="6f8e73298cdc68a9fd8ae20bdbfe6600bc09eb09">
+      
+      <h3 class="sourcedoc-section element-name">setMaxLayerValueDouble</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun setMaxLayerValueDouble(maxLayerValueDouble: Double?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ba79576ed59c02951239abb117ff7e1e8452a68a">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f3da36dcdd0b43921d1e9c425fd83b5834345e3d">
+        <td class="sourcedoc-section section-signature">
+          <code>maxLayerValueDouble: Double?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double!: the max layer value to set</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f886b0f06183f3c95702f9d773c127fdb9e63ae4">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="7e38474483472c36670a91aeae167dfebd9354de">
+      
+      <h3 class="sourcedoc-section element-name">setMinLayerValueCached</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun setMinLayerValueCached(minLayerValueCached: String?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b60f55ecc3b96bccf26ed49935852499443006fc">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="011c9206c3c32b2d64f2aa26fabc8fb127d14f99">
+        <td class="sourcedoc-section section-signature">
+          <code>minLayerValueCached: String?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String!: a string representation of the min layer value to cache</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="49c1d85b6ec0e9e5493b8216fc1e83308d3e3f56">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="4fc97ce76f74b609caf3da1a23acd50c38c3f0ab">
+      
+      <h3 class="sourcedoc-section element-name">drawFunction</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun &lt;T : Any?, P : Position2D&lt;P&gt;?&gt; drawFunction(f: Function&lt;P, Number?&gt;?, env: Environment&lt;T, P&gt;?, g: Graphics2D?, wormhole: IWormhole2D&lt;P&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Draw the provided function.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="424d549fd1c0eeff75210ca6a0feb8944f811776">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b1e8b8d4fd635701eadd983924553d136eb1cd62">
+        <td class="sourcedoc-section section-signature">
+          <code>f: Function&lt;P, Number?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Function&lt;in P, out Number!&gt;!: - the function</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5f36e38a592b4a94bef1b256824b2287d86c46b9">
+        <td class="sourcedoc-section section-signature">
+          <code>env: Environment&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;T, P&gt;!: - the environment (mainly used to make positions)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="edffa008f56f12e1a055ce06940e631908624df2">
+        <td class="sourcedoc-section section-signature">
+          <code>g: Graphics2D?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Graphics2D.html">Graphics2D</a>!: - the Graphics2D (where to draw the function)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="04e711ed9ea5a9bf9044acb7d7742d1e7271f78e">
+        <td class="sourcedoc-section section-signature">
+          <code>wormhole: IWormhole2D&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>IWormhole2D<P>!: - the wormhole (to map env points to view points)</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="25f52b86e426776252b55486bf09cbd66ca6b08b">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="685a8885ddc4818665b3be798976f72ea310eff4">
+      
+      <h3 class="sourcedoc-section element-name">setMinLayerValueDouble</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun setMinLayerValueDouble(minLayerValueDouble: Double?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9c8279cfd64cacd4539a1f06df0b6973ee3c449e">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="575b744b518a1dc116d83cce7478da6e1f8a8598">
+        <td class="sourcedoc-section section-signature">
+          <code>minLayerValueDouble: Double?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double!: the min layer value to set</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="dcbe0b443fe6f8bb4d98e2af1a118cab9029af09">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="8d5de355937b8e18f688413f77f051d99f8a82d6">
+      
+      <h3 class="sourcedoc-section element-name">updateMinAndMaxLayerValues</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun updateMinAndMaxLayerValues()</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Update min and max layer values.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e356268babf1d31d9851a3f1a87528b91176c3cb">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="1f21d86a829d056e6d4ddae31b3567f4d6dd00b9">
+      
+      <h3 class="sourcedoc-section element-name">getMinLayerValue</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getMinLayerValue(): String?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2ea72f10a751c344959ee81242c5024317c18deb">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ce29911ab38228bb2a41fe50f4edd1d765e1abcd">
+        <td class="sourcedoc-section section-signature">
+          <code>String?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String!: a string representation of the min layer value</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="318751e99cb18bb7cccee8c8f6ea95a0a2181a78">
+      
+      <h3 class="sourcedoc-section element-name">getMinLayerValueDouble</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun getMinLayerValueDouble(): Double?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3002c0b9a6d82e481b3ee00f4c63cebaf3a7919a">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d0d2f286fdab94b05e032e029731c0a99ca5280c">
+        <td class="sourcedoc-section section-signature">
+          <code>Double?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double!: the min layer value</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="8a26ed7aee1729ca7c2526405e2c01798434c701">
+      
+      <h3 class="sourcedoc-section element-name">setMinLayerValue</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setMinLayerValue(minLayerValue: String?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7813db5310f4a658d561bbd3ee74ff505aaa3a69">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5485bb7480099dece6d8ea96c8a6ec9d80f6e1a7">
+        <td class="sourcedoc-section section-signature">
+          <code>minLayerValue: String?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String!: a string representation of the min layer value to set</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="779e8a013a307c68e73a4431d5c83d433cc559da">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="f6db9631d74625e0a3489b1abba336c0ea0d9bb3">
+      
+      <h3 class="sourcedoc-section element-name">getMaxLayerValue</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getMaxLayerValue(): String?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b535cbb0bccb8901648bf216ed183f63dd7dde02">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ce29911ab38228bb2a41fe50f4edd1d765e1abcd">
+        <td class="sourcedoc-section section-signature">
+          <code>String?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String!: a string representation of the max layer value</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="1dc674c7ef6c32a54fa2b47f735ef6eb7543bbc2">
+      
+      <h3 class="sourcedoc-section element-name">setMaxLayerValue</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setMaxLayerValue(maxLayerValue: String?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4029e64ddf103e74b870d2607ddf8aa0205833d7">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c50bca61932a41b98b441f144ae7fb7d0646879c">
+        <td class="sourcedoc-section section-signature">
+          <code>maxLayerValue: String?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String!: a string representation of the max layer value to set</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="78a2c8b0e955d29cba49dfe776e8bfc894a3efca">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

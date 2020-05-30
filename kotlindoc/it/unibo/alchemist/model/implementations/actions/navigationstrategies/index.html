@@ -1,0 +1,646 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>it.unibo.alchemist.model.implementations.actions.navigationstrategies</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: packages -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocPackage, sourceDocPage, packages, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/actions/navigationstrategies","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies"},"description":"","title":"it.unibo.alchemist.model.implementations.actions.navigationstrategies"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>it.unibo.alchemist.model.implementations.actions.navigationstrategies</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="it.unibo.alchemist.model.implementations.actions.navigationstrategies">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="a4fee22bf14f7352a121b3e67e14e83f81f81e08">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>package it.unibo.alchemist.model.implementations.actions.navigationstrategies</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="classes">
+
+
+  <p class="sourcedoc-section section-name"><strong>Classes</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c10b5247d17624419e5ada4e931a2db916c468d7">
+        <td class="sourcedoc-section section-signature">
+          <code>open class DestinationReaching&lt;T, N, E&gt; : GoalOrientedExploring&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationStrategy allowing to reach a (static) destination.
+The client can specify a list of knownDestinations (see Pursuing) and unknownDestinations (see
+GoalOrientedExploring).
+The pedestrian will try to reach the closest known destination for which a valid path leading there is
+known, but in case another destination is found along the way (either known or unknown), the latter will
+be approached instead of the chosen known destination. To put it in another way, this behavior mixes
+KnownDestinationReaching and GoalOrientedExploring.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ea53eb756015cd3c3cdec9be7d08fe50ca38a8fa">
+        <td class="sourcedoc-section section-signature">
+          <code>open class DynamicPursuing&lt;T, N, E&gt; : Pursuing&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Pursuing strategy allowing to dynamically change destination.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="db079ddf8839ae02fe0145dedc2fed06e8317183">
+        <td class="sourcedoc-section section-signature">
+          <code>open class Exploring&lt;T, N, E&gt; : EuclideanNavigationStrategy&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationStrategy allowing to explore the environment.
+In order to choose which direction to take, a weighting system is used: every time the
+pedestrian enters a new room all the visible doors are weighted, the one with minimum
+weight is then crossed. The weighting system used here is derived from the one by
+<a href="https://doi.org/10.1080/23249935.2018.1432717">Andresen et al.</a>, see weight.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="35233d39467dc8d453607e940a9040cd5f9a04c4">
+        <td class="sourcedoc-section section-signature">
+          <code>open class GoalOrientedExploring&lt;T, N, E&gt; : Exploring&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationStrategy allowing to explore the environment looking for something specific whose position
+is unknown.
+The client can specify a list of unknownDestinations: these can be recognized once they're in sight,
+but the pedestrian doesn't know their position until that moment (think e.g. of exits in an evacuation
+scenario). More specifically, unknown destinations can be detected if located in a room adjacent to the
+room the pedestrian is into. Once a destination is detected, the pedestrian will reach it and stop.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7aaba22c2c54282b4b79e369f53e4e201d9a3490">
+        <td class="sourcedoc-section section-signature">
+          <code>open class KnownDestinationReaching&lt;T, N, E&gt; : RouteFollowing&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationStrategy allowing to reach a known (static) destination (see Pursuing).
+The client can specify a list of known destinations, the pedestrian will try to reach the
+closest one for which a valid path leading there is known.
+The difference between this behavior and Pursuing is that the latter assumes no route
+leading to the destination is known, whereas this behavior tries to exploit the pedestrian's
+cognitive map to obtain a route to follow.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0c28912ea39ea649b1db0bf35016bc910d40ff04">
+        <td class="sourcedoc-section section-signature">
+          <code>open class Pursuing&lt;T, N, E&gt; : Exploring&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationStrategy allowing to pursue a known (static) destination without knowing any
+path leading there, this is also known as path searching.
+In this context, knowing a destination means knowing its position, which, in turn, means
+knowing two things:</p><ul><li>the direction that connects the destination and the current position as the crow flies,</li><li>an estimation of the distance between the destination and the current position.
+In order to reach the destination without a route to follow, the weighting system used
+in Exploring is extended so as to take into account the (estimated) suitability of each
+door to reach the provided destination, see suitabilityFactor.</li></ul>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fe46d44b5b54541fbb6c8ac01c4eee053f4c9413">
+        <td class="sourcedoc-section section-signature">
+          <code>open class RouteFollowing&lt;T, N, E&gt; : DynamicPursuing&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationStrategy allowing to follow a given route.
+The route consists of a list of positions (= waypoints) that may or may not be in sight of each
+other (i.e. the path leading from a waypoint to the next one may or may not be representable
+as a single segment), for this reason Pursuing behavior is used to reach each waypoint.
+In this context, a waypoint is considered reached when it's inside the current room (not when the
+pedestrian reach that exact position), apart from the last waypoint which is actually approached.
+Cuts to the route are allowed (i.e. if the pedestrian finds a waypoint which is farther than the
+expected next one, he/she skips all the waypoints in between).</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

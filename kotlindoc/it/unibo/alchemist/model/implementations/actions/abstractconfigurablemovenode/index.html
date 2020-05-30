@@ -1,0 +1,1140 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>AbstractConfigurableMoveNode</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/actions/abstractconfigurablemovenode","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractconfigurablemovenode"},"description":"","title":"AbstractConfigurableMoveNode"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>AbstractConfigurableMoveNode</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="AbstractConfigurableMoveNode">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="cb452552d9356a1aa899a3bc3c59bec9c4ad63cd">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract class AbstractConfigurableMoveNode&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;T, P&gt;</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>An abstract class that factorizes code for multiple different movements. With three strategies can be defined: the next target to be reached, the routing strategy to adopt, the speed to move at.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="e18b91fea457befed4718c68f188b9b8a5acd37d">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected constructor(environment: Environment&lt;T, P&gt;?, node: Node&lt;T&gt;?, routing: RoutingStrategy&lt;P&gt;?, target: TargetSelectionStrategy&lt;P&gt;?, speed: SpeedSelectionStrategy&lt;P&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Builds a new move node action. By default the movements are relative.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="a2a24315c0bd91d3dfc8ddba668a1b8a36c98874">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2c0dd2590fd11fdd563b077ebb5220f604d710c7">
+        <td class="sourcedoc-section section-signature">
+          <code>environment: Environment&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;T, P&gt;!: The environment where to move</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
+        <td class="sourcedoc-section section-signature">
+          <code>node: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: The node to which this action belongs</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="c916bd11bfb69d088045aeb2697621b1e3b0b456">
+        <td class="sourcedoc-section section-signature">
+          <code>routing: RoutingStrategy&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>RoutingStrategy<P>!: the routing strategy</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="cfa9160972f471d9524a638e50bab3e597e467cc">
+        <td class="sourcedoc-section section-signature">
+          <code>target: TargetSelectionStrategy&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>TargetSelectionStrategy<P>!: the strategy used to compute the next target</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2933470cdc5b432c1f817e4317ec2dc7b8959a26">
+        <td class="sourcedoc-section section-signature">
+          <code>speed: SpeedSelectionStrategy&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>SpeedSelectionStrategy<P>!: the speed selection strategy</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="ed7c07635db9db34362811a3d8d6ec3820d3905f">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected constructor(environment: Environment&lt;T, P&gt;?, node: Node&lt;T&gt;?, routing: RoutingStrategy&lt;P&gt;?, target: TargetSelectionStrategy&lt;P&gt;?, speed: SpeedSelectionStrategy&lt;P&gt;?, isAbsolute: Boolean)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3f460e8efc80a04015e641f9f015d1795ad67d3e">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2c0dd2590fd11fdd563b077ebb5220f604d710c7">
+        <td class="sourcedoc-section section-signature">
+          <code>environment: Environment&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;T, P&gt;!: The environment where to move</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
+        <td class="sourcedoc-section section-signature">
+          <code>node: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: The node to which this action belongs</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="c916bd11bfb69d088045aeb2697621b1e3b0b456">
+        <td class="sourcedoc-section section-signature">
+          <code>routing: RoutingStrategy&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>RoutingStrategy<P>!: the routing strategy</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="cfa9160972f471d9524a638e50bab3e597e467cc">
+        <td class="sourcedoc-section section-signature">
+          <code>target: TargetSelectionStrategy&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>TargetSelectionStrategy<P>!: the strategy used to compute the next target</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2933470cdc5b432c1f817e4317ec2dc7b8959a26">
+        <td class="sourcedoc-section section-signature">
+          <code>speed: SpeedSelectionStrategy&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>SpeedSelectionStrategy<P>!: the speed selection strategy</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="e224cf967db81e877d37bae408a63f033a1ebb78">
+        <td class="sourcedoc-section section-signature">
+          <code>isAbsolute: Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean: if set to true, the environment expects the movement to be expressed in absolute coordinates. It means that, if a node in (1,1) wants to move to (2,3), its getNextPosition() must return (2,3). If false, a relative coordinate is expected, and the method for the same effect must return (1,2).</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="594bb96132a0b5bedb2bbcb2103cfcc5f846d926">
+      
+      <h3 class="sourcedoc-section element-name">interpolatePositions</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected abstract fun interpolatePositions(current: P, target: P, maxWalk: Double): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Given a start position (current), a desired target position (target), and a maximum walkable distance (maxWalk), this method computes the actual position reached by the moving node, in absolute or relative coordinates depending on the value of isAbsolute in the constructor.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ad3cbc9ad2d7cf46ff898b59463b2b35581c5c78">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="63e7b42d5a5582867b541666e28b586451ac05ff">
+        <td class="sourcedoc-section section-signature">
+          <code>current: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: the current position of the node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="e7a4bfc9d1b26f2f372b42e5508ef83a24628493">
+        <td class="sourcedoc-section section-signature">
+          <code>target: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: the target that should be reached</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="becefbdb1ba4e1e42900c4ff2199073030233b79">
+        <td class="sourcedoc-section section-signature">
+          <code>maxWalk: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: how far the node can move</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="21d3524a4598e0641759f969551d7edabd9b2567">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: the position that the node reaches</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="74fe35923c5e042b71e6e7f1861aacdbb9daed23">
+      
+      <h3 class="sourcedoc-section element-name">getTargetPoint</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun getTargetPoint(): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="118fa841e1c72d35690252013b103d139b2f0434">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: the current target</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="1f8be0f0cbb5871c052c65e94626a6fcaecea313">
+      
+      <h3 class="sourcedoc-section element-name">getCurrentRoute</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun getCurrentRoute(): Route&lt;*&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="a46a043f86465930f769b9e02ad880a16e153286">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="1a615793980f75430df4431b9e10fbdd3f3f68d3">
+        <td class="sourcedoc-section section-signature">
+          <code>Route&lt;*&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Route&lt;*&gt;!: the current route, or null if no route is currently being followed</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="54291d96f4296485d4ba09353904e4b26f85ecb4">
+      
+      <h3 class="sourcedoc-section element-name">setTargetPoint</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun setTargetPoint(p: P)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3ae92b85b893708020e507e9dc4861be5c55a3fd">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d898b39d4ab5ca3c7b38065a8ce4fdd18b34320c">
+        <td class="sourcedoc-section section-signature">
+          <code>p: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: the new target</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="86a1e155e435ad66e55743b7359326ad8b8a21e2">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="0a26030028a5e892085ef94f7127b8774f8d4499">
+      
+      <h3 class="sourcedoc-section element-name">getNextPosition</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getNextPosition(): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4b3605bdb2bbd3c7193ee597571420630e804fff">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="c4c07703d71f5c9487c12afd0b63498a1a607947">
+      
+      <h3 class="sourcedoc-section element-name">resetRoute</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun resetRoute()</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Resets the current route, e.g. because the target has been reached</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="38fca943afcd5e965997e149723035bfbbdb5921">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

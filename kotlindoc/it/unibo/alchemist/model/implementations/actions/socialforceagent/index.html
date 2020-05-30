@@ -1,0 +1,1466 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>SocialForceAgent</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/actions/socialforceagent","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/socialforceagent"},"description":"","title":"SocialForceAgent"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>SocialForceAgent</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="SocialForceAgent">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="4f513b53e5ed50e3ce4e63e867478894cd77a276">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract class SocialForceAgent&lt;P : Position&lt;P&gt;?&gt; : SAPEREMoveNodeAgent&lt;P&gt;</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="602dd373386d2915291819f1494548c649bd104d">
+        <td class="sourcedoc-section section-signature">
+          <code>static DECELERATION_FACTOR: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The proximity deceleration factor.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="05ec27f69ff48ad9732aa199c98378614707dcab">
+        <td class="sourcedoc-section section-signature">
+          <code>static DELTA_T: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Step time interval.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bd88cf7bcfbfc67ddcc722448412e78f9a644add">
+        <td class="sourcedoc-section section-signature">
+          <code>static DESIRED_FORCE_FACTOR: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Desired force (the attractive force contribution from the target node) weight factor.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="acfd4bb677ac75afca5ba2c514124091cfc53c47">
+        <td class="sourcedoc-section section-signature">
+          <code>static DODGE_FORCE_FACTOR: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Dodge force (the turn repulsive force contribution) weight factor.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="c617ad440c360c213206411b7c6a5c1f48abd365">
+        <td class="sourcedoc-section section-signature">
+          <code>static DODGE_FORCE_STRENGTH: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The dodge strength.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9c46275abb9f306f0c6c0f5eb4797566077ab4e6">
+        <td class="sourcedoc-section section-signature">
+          <code>static ETA: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The strength of the pedestrian repulsive force.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0b3f0a256df0dcb1bbf32c573ecdaf13cf927072">
+        <td class="sourcedoc-section section-signature">
+          <code>static MIN_DISP_CYC_TH: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Minimum Displacement Cycle Threshold: used to stop a pedestrian if he can't move enough for a certain number of cycles.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="49c50884611fb6804c3412f307b145e4a165067f">
+        <td class="sourcedoc-section section-signature">
+          <code>static MIN_DISPLACEMENT: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Minimum Displacement.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="608137d310ef4cea720f8f0235ee6481c205cb37">
+        <td class="sourcedoc-section section-signature">
+          <code>static MIN_PHEROMONE_DISTANCE: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A minimum distance value used to check if a pedestrian has reached the target node.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="43fc3f366b2f1724aafaeef323c3a74f7c503da0">
+        <td class="sourcedoc-section section-signature">
+          <code>static MOMENTUM_FACTOR: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Momentum factor used to compute the new speed value.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3eeee882de8e6c0f0a80e18350f05a6f0c5bd4c4">
+        <td class="sourcedoc-section section-signature">
+          <code>static NEW_W: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>OLD_W and NEW_W are weights used to compute the new direction as a weighted average starting from old and freshly computed directions. NEW_W is the freshly computed direction weight.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bff880c4df611c288b0330a27b27b4ba378bce79">
+        <td class="sourcedoc-section section-signature">
+          <code>static OBSTACLE_FORCE_FACTOR: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Obstacle force (the repulsive force contribution from obstacles) weight factor.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="63670dc0a728ef457b70ef858af10249ccc598a6">
+        <td class="sourcedoc-section section-signature">
+          <code>static OBSTACLE_FORCE_STRENGTH: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The obstacle force strength.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3be3e66c882bfe640d707786bf1678b90308d4ce">
+        <td class="sourcedoc-section section-signature">
+          <code>static OBSTACLE_INTERACTION_RANGE: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The pedestrian interaction range with obstacles.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3668b22535c3198a1936856c1e6fe1328d7503b9">
+        <td class="sourcedoc-section section-signature">
+          <code>static OLD_W: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>OLD_W and NEW_W are weights used to compute the new direction as a weighted average starting from old and freshly computed directions. OLD_W is the old direction weight.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d70b6da5be68276c7b5eb1c426fdb303342aef02">
+        <td class="sourcedoc-section section-signature">
+          <code>static PEJORATIVE_MOVE_PROBABILITY: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The probability of choosing a pejorative move.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9da03fae6bc39a93cd06303a7142a4efe0f8efb9">
+        <td class="sourcedoc-section section-signature">
+          <code>static PROXIMITY_DEC_RANGE: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Range in which a pedestrian will decelerate because of the presence of other pedestrians.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3bc41b9dd4e5ae9d058172e8d30b3e78d9a5626b">
+        <td class="sourcedoc-section section-signature">
+          <code>static PROXIMITY_TURN_RANGE: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Range in which a pedestrian will turn because of the presence of other pedestrians.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="be348f06e0060d2fbd95a6479ca25daced17b6e6">
+        <td class="sourcedoc-section section-signature">
+          <code>static SOCIAL_FORCE_FACTOR: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Social force (the repulsive force contribution from other pedestrians) weight factor.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="30c21fc9e54752fe50b7aaa644b3238d35f89666">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(environment: Environment&lt;MutableList&lt;ILsaMolecule?&gt;?, P&gt;?, node: ILsaNode?, random: RandomGenerator?, molecule: LsaMolecule?, pos: Int, group: Int, stopWhenAtTarget: Boolean, vmaxval: Double, mydimensionval: Double, desiredspaceval: Double, turnrightprobabilityval: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Construct a pedestrian agent. with</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="84be2a97c3ddd8b95a24fdffca53caa8324d7d8d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="25c305a8035c066f93d80f649263637d9898c30e">
+        <td class="sourcedoc-section section-signature">
+          <code>environment: Environment&lt;MutableList&lt;ILsaMolecule?&gt;?, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;MutableList&lt;ILsaMolecule!&gt;!, P&gt;!: the current environment</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
+        <td class="sourcedoc-section section-signature">
+          <code>node: ILsaNode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaNode!: the current node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8c8319b6235209cf4125d6444458cc784cd9fc31">
+        <td class="sourcedoc-section section-signature">
+          <code>random: RandomGenerator?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>RandomGenerator!: the current random engine</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0e416ce1a7ad4ef8e25040d5f8d78620aa8e5d9b">
+        <td class="sourcedoc-section section-signature">
+          <code>molecule: LsaMolecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>LsaMolecule!: the LSA to inspect once moving (typically a gradient)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4b2e90b359456b2085c2ffe7e3e2d034d5a0406c">
+        <td class="sourcedoc-section section-signature">
+          <code>pos: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: the position in the LSA of the value to read for identifying the new position</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ff59ea8b6eb330215e8faeb178a179f41bf6c12e">
+        <td class="sourcedoc-section section-signature">
+          <code>group: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: the group identifier: if equals to 0 there is no group</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fbc806d8a558a3846f2e1de34be77d0639fef06d">
+        <td class="sourcedoc-section section-signature">
+          <code>stopWhenAtTarget: Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean: flag used to let the user chose to make pedestrians to stop once the target is reached</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5231b57fc0893bdd5536e948eb37c580e5eb6bbb">
+        <td class="sourcedoc-section section-signature">
+          <code>vmaxval: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - maximum movement speed of the pedestrian</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ba861a51c8e61c3ba6b2acb715789641eefeeb31">
+        <td class="sourcedoc-section section-signature">
+          <code>mydimensionval: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - pedestrian size</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d6025d984e583889223093871d9493cc7c56ebef">
+        <td class="sourcedoc-section section-signature">
+          <code>desiredspaceval: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - pedestrian desired space</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="63e48bcdb6a69c80a6914d90c6c5c1b26575f9e7">
+        <td class="sourcedoc-section section-signature">
+          <code>turnrightprobabilityval: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - the probability of turn to the right</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="b0a44cc528650b816ce646fda0923e37af155a08">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(environment: Environment&lt;MutableList&lt;ILsaMolecule?&gt;?, P&gt;?, node: ILsaNode?, random: RandomGenerator?, molecule: LsaMolecule?, pos: Int, group: Int, stopWhenAtTarget: Boolean, dt: Double, vMax: Double, momentum: Double, oldw: Double, neww: Double, dimension: Double, space: Double, decRange: Double, turnRange: Double, desiredFactor: Double, socialFactor: Double, etaV: Double, dodgeFactor: Double, dodgeStrength: Double, rightProbability: Double, obstacleFactor: Double, obstacleRange: Double, obstacleStrength: Double, detrimentalProbability: Double, minpheromoneDist: Double, decFactor: Double, minDisp: Double, minDispCyc: Int)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Construct a pedestrian agent. with</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c650318ebbfd339102039e063ea4da5aefb6d359">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="25c305a8035c066f93d80f649263637d9898c30e">
+        <td class="sourcedoc-section section-signature">
+          <code>environment: Environment&lt;MutableList&lt;ILsaMolecule?&gt;?, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;MutableList&lt;ILsaMolecule!&gt;!, P&gt;!: the current environment</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
+        <td class="sourcedoc-section section-signature">
+          <code>node: ILsaNode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaNode!: the current node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8c8319b6235209cf4125d6444458cc784cd9fc31">
+        <td class="sourcedoc-section section-signature">
+          <code>random: RandomGenerator?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>RandomGenerator!: the current random engine</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0e416ce1a7ad4ef8e25040d5f8d78620aa8e5d9b">
+        <td class="sourcedoc-section section-signature">
+          <code>molecule: LsaMolecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>LsaMolecule!: the LSA to inspect once moving (typically a gradient)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4b2e90b359456b2085c2ffe7e3e2d034d5a0406c">
+        <td class="sourcedoc-section section-signature">
+          <code>pos: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: the position in the LSA of the value to read for identifying the new position</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ff59ea8b6eb330215e8faeb178a179f41bf6c12e">
+        <td class="sourcedoc-section section-signature">
+          <code>group: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: the group identifier: if equals to 0 there is no group</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fbc806d8a558a3846f2e1de34be77d0639fef06d">
+        <td class="sourcedoc-section section-signature">
+          <code>stopWhenAtTarget: Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean: flag used to let the user chose to make pedestrians to stop once the target is reached</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6071f74982dbbbdc71f158abb20a3fce8464fd83">
+        <td class="sourcedoc-section section-signature">
+          <code>dt: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - step time interval</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="14aa83232016f2df18ea0e1ca7557cf1c012699a">
+        <td class="sourcedoc-section section-signature">
+          <code>vMax: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - maximum movement speed of the pedestrian</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2512d7c4332fd27ac642b35ed0e13a65ae11e402">
+        <td class="sourcedoc-section section-signature">
+          <code>momentum: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - momentum factor used to compute the new speed value</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0c9788743b2e3c416c2d01f3b864d54d5045b7f8">
+        <td class="sourcedoc-section section-signature">
+          <code>oldw: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - old direction weight used to compute the new direction as a weighted average</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0c567f3b5d59d048150f44e804956f171c04ffff">
+        <td class="sourcedoc-section section-signature">
+          <code>neww: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - new direction weight used to compute the new direction as a weighted average</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="71ea5e71aa43013ce1af89a748344676600e2934">
+        <td class="sourcedoc-section section-signature">
+          <code>dimension: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - pedestrian size</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="85ccbe14227a8df935fa27c196ed6f0cbf9307ce">
+        <td class="sourcedoc-section section-signature">
+          <code>space: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - pedestrian desired space</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d2b51bcbb64df99fe0cbc1588c9d11aa20fd7380">
+        <td class="sourcedoc-section section-signature">
+          <code>decRange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - range in which a pedestrian will decelerate because of the presence of other pedestrians</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="66928f514d38ca86f195cd5480cb415d28092346">
+        <td class="sourcedoc-section section-signature">
+          <code>turnRange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - range in which a pedestrian will turn because of the presence of other pedestrians</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f6e2e9abeb28c3eacad97f13a4f745f50008815e">
+        <td class="sourcedoc-section section-signature">
+          <code>desiredFactor: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - desired force weight factor</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4c61ae0f28f8a68368b7352fab92f1b96f6003c6">
+        <td class="sourcedoc-section section-signature">
+          <code>socialFactor: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - social force weight factor</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f24408f5e16255a0ca5a61f43c0dd06685e56b4d">
+        <td class="sourcedoc-section section-signature">
+          <code>etaV: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - social force strength</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bf1843e30a8114da458376f1e438e32c089e238e">
+        <td class="sourcedoc-section section-signature">
+          <code>dodgeFactor: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - dodge force weight factor</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9261e519a6157b92e3e0761ff23814de6f9596d5">
+        <td class="sourcedoc-section section-signature">
+          <code>dodgeStrength: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - dodge force strength</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ab699edff435d8823a2d4ae5e218e6d302b1ad95">
+        <td class="sourcedoc-section section-signature">
+          <code>rightProbability: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - the probability of turn to the right</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6445fd47b2aa1254e0d0b4ae5e03e5bc8ff040da">
+        <td class="sourcedoc-section section-signature">
+          <code>obstacleFactor: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - obstacle force weight factor</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ed65d3ca6469a8f0247f45e8214b332e6c244143">
+        <td class="sourcedoc-section section-signature">
+          <code>obstacleRange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - pedestrian interaction range with obstacles</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fd3df9292aa26b40e6196c07a5ff9d31eb589322">
+        <td class="sourcedoc-section section-signature">
+          <code>obstacleStrength: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - obstacle force strength</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="adf667c68dd58036853a2198d9fc18dd47ce2b06">
+        <td class="sourcedoc-section section-signature">
+          <code>detrimentalProbability: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - the probability of choosing a detrimental move</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="c9f90e2c71b0e3acdd8faa8f54488e18788b3a3f">
+        <td class="sourcedoc-section section-signature">
+          <code>minpheromoneDist: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - minimum distance value used to check if a pedestrian has reached the target node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="85063530da85ad4c22b067c07397a60431d29aac">
+        <td class="sourcedoc-section section-signature">
+          <code>decFactor: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - proximity deceleration factor</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="76245a9f7662dd567e973490f9cf49d71f7975b9">
+        <td class="sourcedoc-section section-signature">
+          <code>minDisp: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - minimum displacement</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="da298d143c1f0bdac68cf4999bfd0c00db6ab95d">
+        <td class="sourcedoc-section section-signature">
+          <code>minDispCyc: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: - threshold used to stop a pedestrian if he can't move enough for a certain number of cycles</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="f551dffc275e5f53b8059f8f422daa50b1f4fe80">
+      
+      <h3 class="sourcedoc-section element-name">computeInteractions</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun computeInteractions(desiredForce: P, myx: Double, myy: Double): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>FIRST SOLUTION. Method used to compute the interaction (so the repulsive force contribution) between pedestrians</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5e248fd2a23c6de8485ff9e9db0cab845ce927fa">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="e957e92d13d89e5ab20fc22584ebc47be05e996c">
+        <td class="sourcedoc-section section-signature">
+          <code>desiredForce: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: - the attractive force through the desired direction</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="b2123abae0572b69c20755f3ac6c6634ab0f87e9">
+        <td class="sourcedoc-section section-signature">
+          <code>myx: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - the x position coordinate of the pedestrian</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2d2750b1238193db19a578afd559b16777feeb56">
+        <td class="sourcedoc-section section-signature">
+          <code>myy: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: - the y position coordinate of the pedestrian</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c94284f45f15d310495d52c2b5ddb1d09e6d2e85">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: socialForce - the repulsive force contribution from interactions with other pedestrians</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="e12aa6126e7382c7c1bbd9a337dead1695936a0f">
+      
+      <h3 class="sourcedoc-section element-name">getSpeed</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getSpeed(): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Get speed of this agent.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="34020f6f705423cb5e2f9106e5c026bfe018d1ed">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: - v: contains x and y speed components</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="b00bb23e2bab3aea5bb394f5ec6650506b409554">
+      
+      <h3 class="sourcedoc-section element-name">execute</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun execute()</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="050f0eeaeadbf9a3fa89e8115b33b13b841d75cc">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

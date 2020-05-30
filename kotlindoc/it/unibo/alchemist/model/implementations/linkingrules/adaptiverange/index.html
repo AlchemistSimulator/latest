@@ -1,0 +1,1342 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>AdaptiveRange</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/linkingrules/adaptiverange","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/linkingrules/adaptiverange"},"description":"","title":"AdaptiveRange"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>AdaptiveRange</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="AdaptiveRange">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="635c5de49b644ecdb143e575b571e79daa9d9ba4">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open class AdaptiveRange&lt;T : Any?, P : Position&lt;P&gt;?&gt; : ConnectWithinDistance&lt;T, P&gt;</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This linking rule dynamically searches for the best radius for each device, in such a way that it connects to a certain number of devices.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="adece49136f5064d94d7be57ae9f27876fee73d1">
+        <td class="sourcedoc-section section-signature">
+          <code>static DEFAULT_ADJUSTMENT: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Default adjustment.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ad7938b633051bd579fa3504ebc37083fc846de0">
+        <td class="sourcedoc-section section-signature">
+          <code>static DEFAULT_MAXRANGE: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Default maximum range.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="b4cf0a19fb1408c184b7bc1b3f1c9917035294e8">
+        <td class="sourcedoc-section section-signature">
+          <code>static DEFAULT_MINRANGE: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Default minimum range.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="c8ff847721ea47063c6cb327c213909638276901">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(radius: Double, minrange: Double, maxrange: Double, num: Int, tolerance: Int)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="81c62b59b56c3c86088be0f2d660427e49073d67">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+        <td class="sourcedoc-section section-signature">
+          <code>radius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: default radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bd20a3d02441937759ddaa9212e615fe09c9f776">
+        <td class="sourcedoc-section section-signature">
+          <code>minrange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: minimum radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3ea8e56155ead291086afb82ce1b7a883e4dfbe2">
+        <td class="sourcedoc-section section-signature">
+          <code>maxrange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: maximum radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d475e560f00ad153935ff068476f696ee1bd43c6">
+        <td class="sourcedoc-section section-signature">
+          <code>num: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: preferred number of neighbors</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6629107adbddbd2a6d3f23182ab74568317a7a16">
+        <td class="sourcedoc-section section-signature">
+          <code>tolerance: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: if the number of neighbors is smaller than num-tolerance, the radius is increased; if the number of neighbors is higher than num+tolerance, the radius is decreased</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="01fa4cc7472e1ec9c62de1bab8f8707b8b2dc073">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(radius: Double, minrange: Double, maxrange: Double, num: Int, tolerance: Int, adjustment: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2d264cb054f313c89808dd2082b25213003a5419">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+        <td class="sourcedoc-section section-signature">
+          <code>radius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: default radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bd20a3d02441937759ddaa9212e615fe09c9f776">
+        <td class="sourcedoc-section section-signature">
+          <code>minrange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: minimum radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3ea8e56155ead291086afb82ce1b7a883e4dfbe2">
+        <td class="sourcedoc-section section-signature">
+          <code>maxrange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: maximum radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d475e560f00ad153935ff068476f696ee1bd43c6">
+        <td class="sourcedoc-section section-signature">
+          <code>num: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: preferred number of neighbors</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6629107adbddbd2a6d3f23182ab74568317a7a16">
+        <td class="sourcedoc-section section-signature">
+          <code>tolerance: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: if the number of neighbors is smaller than num-tolerance, the radius is increased; if the number of neighbors is higher than num+tolerance, the radius is decreased</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fba60f800d456112c8a11980411b8a457cc77c78">
+        <td class="sourcedoc-section section-signature">
+          <code>adjustment: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the amount of metres the range will be changed if out of the bounds</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="94506a2b64f32a8518fe4b4df8ede4df9284ca4f">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(radius: Double, minrange: Double, num: Int, tolerance: Int)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fa53075bdcbaaf502d2d429bf5a991ad31b23ab6">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+        <td class="sourcedoc-section section-signature">
+          <code>radius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: default radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bd20a3d02441937759ddaa9212e615fe09c9f776">
+        <td class="sourcedoc-section section-signature">
+          <code>minrange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: minimum radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d475e560f00ad153935ff068476f696ee1bd43c6">
+        <td class="sourcedoc-section section-signature">
+          <code>num: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: preferred number of neighbors</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6629107adbddbd2a6d3f23182ab74568317a7a16">
+        <td class="sourcedoc-section section-signature">
+          <code>tolerance: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: if the number of neighbors is smaller than num-tolerance, the radius is increased; if the number of neighbors is higher than num+tolerance, the radius is decreased</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="ededea1065dcb7acac89557a41a7f3cce6523878">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(radius: Double, minrange: Double, num: Int, tolerance: Int, adjustment: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="da49ac04e2cfd1adc4c42177eed40d5be8184acb">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+        <td class="sourcedoc-section section-signature">
+          <code>radius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: default radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bd20a3d02441937759ddaa9212e615fe09c9f776">
+        <td class="sourcedoc-section section-signature">
+          <code>minrange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: minimum radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d475e560f00ad153935ff068476f696ee1bd43c6">
+        <td class="sourcedoc-section section-signature">
+          <code>num: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: preferred number of neighbors</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6629107adbddbd2a6d3f23182ab74568317a7a16">
+        <td class="sourcedoc-section section-signature">
+          <code>tolerance: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: if the number of neighbors is smaller than num-tolerance, the radius is increased; if the number of neighbors is higher than num+tolerance, the radius is decreased</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fba60f800d456112c8a11980411b8a457cc77c78">
+        <td class="sourcedoc-section section-signature">
+          <code>adjustment: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the amount of metres the range will be changed if out of the bounds</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5cc5e6c95f83d9c419470b70449c34e207208b2e">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(radius: Double, num: Int, tolerance: Int)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4eb36f4cc1b9ad0f39a74d75ca75ba5ee3054e00">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+        <td class="sourcedoc-section section-signature">
+          <code>radius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: default radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d475e560f00ad153935ff068476f696ee1bd43c6">
+        <td class="sourcedoc-section section-signature">
+          <code>num: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: preferred number of neighbors</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6629107adbddbd2a6d3f23182ab74568317a7a16">
+        <td class="sourcedoc-section section-signature">
+          <code>tolerance: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: if the number of neighbors is smaller than num-tolerance, the radius is increased; if the number of neighbors is higher than num+tolerance, the radius is decreased</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="95ddadd3be4ce14946870fa30409b34055401c74">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(radius: Double, num: Int, tolerance: Int, adjustment: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ad658a62adad7f4e8e87136bc43770fb6960c23e">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+        <td class="sourcedoc-section section-signature">
+          <code>radius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: default radius in metres</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d475e560f00ad153935ff068476f696ee1bd43c6">
+        <td class="sourcedoc-section section-signature">
+          <code>num: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: preferred number of neighbors</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6629107adbddbd2a6d3f23182ab74568317a7a16">
+        <td class="sourcedoc-section section-signature">
+          <code>tolerance: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: if the number of neighbors is smaller than num-tolerance, the radius is increased; if the number of neighbors is higher than num+tolerance, the radius is decreased</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fba60f800d456112c8a11980411b8a457cc77c78">
+        <td class="sourcedoc-section section-signature">
+          <code>adjustment: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the amount of metres the range will be changed if out of the bounds</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="f1d5e7aa2927930d80d85eaff6559bce9dbc22d0">
+      
+      <h3 class="sourcedoc-section element-name">conditionForRemoval</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun conditionForRemoval(env: Environment&lt;T, P&gt;?, center: Node&lt;T&gt;?, neighbor: Node&lt;T&gt;?, centerRange: Double, neighRange: Double): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Acts as a filter. It is called to test if the nodes in the computed neighborhood (namely, those nodes within the communication range of the current node) should be removed or not, and must return true if the node should not be inserted in the neighborhood. This implementation checks that the actual distance between the nodes is shorter than the communication range of the neighbor.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c8726bdc726f841f32c563cd688f53fa276a5d8e">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5f36e38a592b4a94bef1b256824b2287d86c46b9">
+        <td class="sourcedoc-section section-signature">
+          <code>env: Environment&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;T, P&gt;!: the current environment</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="15c91beee23d63e9ff50d9bef198c58f02378839">
+        <td class="sourcedoc-section section-signature">
+          <code>center: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: the current node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5c0f774a904b06a3b82750406a4ce4d4842aff49">
+        <td class="sourcedoc-section section-signature">
+          <code>neighbor: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: the neighbor to test</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="aea2210982a9bfd86f157fb56c1701704b0b7f12">
+        <td class="sourcedoc-section section-signature">
+          <code>centerRange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the communication range of the current node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="be408ecaba20f9bd767f405ada48a82911312ae0">
+        <td class="sourcedoc-section section-signature">
+          <code>neighRange: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the communication range of the neighbor</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="6650b7d41ba66064e74b9e20a76229da6ef02bfb">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean: true if the node must be removed, false otherwise</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="cdbfb81c5419a5c10db8e34ca317d49f34aee94a">
+      
+      <h3 class="sourcedoc-section element-name">computeNeighborhood</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun computeNeighborhood(center: Node&lt;T&gt;?, env: Environment&lt;T, P&gt;?): Neighborhood&lt;T&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b1d373acb03dbc2a80f75547531beda573196efb">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="15c91beee23d63e9ff50d9bef198c58f02378839">
+        <td class="sourcedoc-section section-signature">
+          <code>center: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5f36e38a592b4a94bef1b256824b2287d86c46b9">
+        <td class="sourcedoc-section section-signature">
+          <code>env: Environment&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="de47297b7f91fa3c6aa9a333443d3e3d81946be1">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="e057a70edaccba6ec55536122f289736371fc260">
+        <td class="sourcedoc-section section-signature">
+          <code>Neighborhood&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

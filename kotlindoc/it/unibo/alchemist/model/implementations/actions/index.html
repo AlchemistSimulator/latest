@@ -1,0 +1,1956 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>it.unibo.alchemist.model.implementations.actions</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: packages -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocPackage, sourceDocPage, packages, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/actions","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions"},"description":"","title":"it.unibo.alchemist.model.implementations.actions"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>it.unibo.alchemist.model.implementations.actions</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="it.unibo.alchemist.model.implementations.actions">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="a23c7669175c8d5b781656c59de2a7fcc5414fbe">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>package it.unibo.alchemist.model.implementations.actions</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="classes">
+
+
+  <p class="sourcedoc-section section-name"><strong>Classes</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="cd6a37f589eebb12a68ac542a6bba2d3f0417163">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractGroupSteeringAction&lt;T, P&gt; : GroupSteeringAction&lt;T, P&gt;, AbstractSteeringAction&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An abstract GroupSteeringAction.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f580ff304f10eaed72d99068e4e6b81dd92d67be">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractNavigationAction&lt;T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, E, M : ConvexGeometricShape&lt;P, A&gt;, F&gt; : AbstractSteeringAction&lt;T, P&gt;, NavigationAction&lt;T, P, A, N, E, M, F&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An abstract NavigationAction, taking care of properly moving the pedestrian in the
+environment while delegating the decision on where to move it to a NavigationStrategy.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="14fd1920a7dca66abe55359ba01fa488eae1c841">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractSteeringAction&lt;T, P&gt; : AbstractMoveNode&lt;T, P&gt;, SteeringAction&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A SteeringAction in a vector space. The definition of nextPosition is left to
+subclasses.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3a184af87b4f0a9b25cd8c94d315286a8decf344">
+        <td class="sourcedoc-section section-signature">
+          <code>open class Arrive&lt;T, P&gt; : SteeringActionWithTargetImpl&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Move the agent towards a target position.
+It is similar to Seek but it attempts to arrive at the target position with a zero velocity.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ae5b7da2831275edf8052c5e08d449217f41709b">
+        <td class="sourcedoc-section section-signature">
+          <code>open class AvoidFlowField&lt;P&gt; : FlowFieldSteeringAction&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Move the pedestrian towards positions of the environment with a low concentration of the target molecule.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6b365af28ba637aef72263d40a0f0e1bc0bef9fc">
+        <td class="sourcedoc-section section-signature">
+          <code>open class BaseEuclideanNavigationAction&lt;T, N, E&gt; : AbstractNavigationAction&lt;T, Euclidean2DPosition, Euclidean2DTransformation, N, E, ConvexPolygon, Euclidean2DPassage&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An AbstractNavigationAction working with euclidean spaces. This action accepts
+an Euclidean2DEnvironmentWithGraph whose graph features ConvexPolygonal nodes
+and Euclidean2DPassages as edges.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0b9e052f03e8734e732a40d69169190c96783574">
+        <td class="sourcedoc-section section-signature">
+          <code>class Cohesion&lt;T, P&gt; : AbstractGroupSteeringAction&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Move the agent towards the other members of his group.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="e8248caa1a01214269bdddf4f8640a5f0f73e9c3">
+        <td class="sourcedoc-section section-signature">
+          <code>class Combine&lt;T, P&gt; : AbstractSteeringAction&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Combination of multiple steering actions.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="1a6a66a83c89c442a09f8e881d08b21c80e3f098">
+        <td class="sourcedoc-section section-signature">
+          <code>class Explore&lt;T, N, E&gt; : BaseEuclideanNavigationAction&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationAction using Exploring navigation strategy.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="840cc1bb8e62071f8a62b1c991410b499e7a51de">
+        <td class="sourcedoc-section section-signature">
+          <code>open class Flee&lt;T, P&gt; : AbstractSteeringAction&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Move the agent away from a target position. It's the opposite of Seek.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2a74610174e8a1222c23842871d633cec8918aab">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class FlowFieldSteeringAction&lt;P&gt; : AbstractSteeringAction&lt;Number, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="196e13e0366f69a5258aeba3e761bb3afd7ab547">
+        <td class="sourcedoc-section section-signature">
+          <code>open class FollowFlowField&lt;P&gt; : FlowFieldSteeringAction&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Move the pedestrian towards positions of the environment with a high concentration of the target molecule.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9513e3064321f234d1aae535b2be4798844f366d">
+        <td class="sourcedoc-section section-signature">
+          <code>class FollowRoute&lt;T, N, E&gt; : BaseEuclideanNavigationAction&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationAction using RouteFollowing navigation strategy.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="972dc666a11513c7f27d0c54d425b8fc6a31d509">
+        <td class="sourcedoc-section section-signature">
+          <code>class GoalOrientedExplore&lt;T, N, E&gt; : BaseEuclideanNavigationAction&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationAction using GoalOrientedExploring navigation strategy.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4ce4d423c6636af9a41e80a76e4ac27bb370aeba">
+        <td class="sourcedoc-section section-signature">
+          <code>class ObstacleAvoidance&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : AbstractSteeringAction&lt;T, Euclidean2DPosition&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Move the agent avoiding potential obstacles in its path.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a79a87246c04ceac4ef4eda76a9c9cf7643f9261">
+        <td class="sourcedoc-section section-signature">
+          <code>class Pursue&lt;T, N, E&gt; : BaseEuclideanNavigationAction&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationAction using Pursuing navigation strategy.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="591912234fb77b1e9a4a14af9eafd4c6c77c4874">
+        <td class="sourcedoc-section section-signature">
+          <code>class ReachDestination&lt;T, N, E&gt; : BaseEuclideanNavigationAction&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationAction using DestinationReaching navigation strategy.
+Accepts an array of coordinates representing the destinations and uses inferIsKnown to partition them into
+known and unknown ones.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4b9ca233c76d1c248f625bb99d99c59fb8dacec6">
+        <td class="sourcedoc-section section-signature">
+          <code>class ReachKnownDestination&lt;T, N, E&gt; : BaseEuclideanNavigationAction&lt;T, N, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A NavigationAction using KnownDestinationReaching navigation strategy.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f46282fa9a5568c56ac590106a9321c4bb4c269d">
+        <td class="sourcedoc-section section-signature">
+          <code>open class Seek&lt;T, P&gt; : Arrive&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Move the pedestrian towards the target position as fast as possible.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d3b01e8d678bbd0b3bba63db878b3e92e8d759b4">
+        <td class="sourcedoc-section section-signature">
+          <code>open class Seek2D&lt;T, P&gt; : Seek&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Seek behavior in a bidimensional environment. The actions performed are more
+sophisticated and allow the pedestrian to try to avoid other agents on its path.
+This behavior is restricted to two dimensions because some geometry utils available
+only in 2D are required to implement it.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6f2ae3d5528a13a9acd30b14a47c6e0c16ee7b43">
+        <td class="sourcedoc-section section-signature">
+          <code>class Separation&lt;T&gt; : AbstractGroupSteeringAction&lt;T, Euclidean2DPosition&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Move the agent away from the pedestrians near to him.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0275fd0197d07d0aed4a26d9d62a7aca5a6f4337">
+        <td class="sourcedoc-section section-signature">
+          <code>open class SteeringActionWithTargetImpl&lt;T, P&gt; : AbstractConfigurableMoveNode&lt;T, P&gt;, SteeringActionWithTarget&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Implementation of a generic SteeringActionWithTarget in a vector space.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="10498cf068fc8d5c231461ded94315838636b014">
+        <td class="sourcedoc-section section-signature">
+          <code>open class Wander&lt;T&gt; : SteeringActionWithTargetImpl&lt;T, Euclidean2DPosition&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point
+of a circumference at a given distance and with a given radius from the current pedestrian position.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a9e1143f567198d7f55fb7e3c09f5bdccda7931a">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractEuclidean2DConfigurableMoveNode&lt;T&gt; : AbstractConfigurableMoveNode&lt;T, Euclidean2DPosition&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>It's an AbstractConfigurableMoveNode for Euclidean2DPosition which provides a default interpolatePositions
+that is accurate with respect to the target given and the current maximum speed.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="479991956c267990e93d59c4e22a089674e9591a">
+        <td class="sourcedoc-section section-signature">
+          <code>class RandomRotate&lt;T&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Changes the heading of the node randomly.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="818e1b99ef9d03f5946f533902b031fe0ce21970">
+        <td class="sourcedoc-section section-signature">
+          <code>class ExtractClosestVisibleNodeAtDistance: AbstractAction&lt;Any&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Extracts the closest VisibleNode to the position at the given distance from the given node's position
+in the direction of the node's heading.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="783cdd1f0ea729e82595fad36bb705b8af68fac0">
+        <td class="sourcedoc-section section-signature">
+          <code>class FollowAtDistance&lt;T&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Follows a target at distance.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a555b12c77712bd7b3097e17223fd7b90904a890">
+        <td class="sourcedoc-section section-signature">
+          <code>class HeadTowardTarget&lt;T&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Reads the target's absolute coordinates from the target molecule
+contained in getNode and sets the node's heading accordingly.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="e16dc02b7c04c5005b9e8b3204f335ce1bbbc232">
+        <td class="sourcedoc-section section-signature">
+          <code>class LevyWalk&lt;T&gt; : RandomWalker&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Selects a target based on a random direction extracted from rng,
+and a random distance extracted from a <a href="#">ParetoDistribution</a> of parameters scale and shape.
+Moves toward the targets at a constant speed and changes targets on collision.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d17f3cb2d4d11ad3511982008a553d80bf170acf">
+        <td class="sourcedoc-section section-signature">
+          <code>open class RandomWalker&lt;T&gt; : AbstractEuclidean2DConfigurableMoveNode&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Chooses random targets in a direction extracted from randomGenerator
+at a distance extracted from distanceDistribution.
+Moves the node towards the targets at the given constant speed. Changes target on collision.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8e00dc8efe308827a3db3c49dadf480b9d21b4b9">
+        <td class="sourcedoc-section section-signature">
+          <code>open class RandomlyToggleMolecule&lt;T&gt; : ToggleMolecule&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Toggles a molecule randomly.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d8841a7356f07ca29260986c2b837fff1bdaa0fb">
+        <td class="sourcedoc-section section-signature">
+          <code>class RandomlyToggleMoleculeWithDuration&lt;T&gt; : RandomlyToggleMolecule&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>When the molecule is off, rolls the dices according to odds and if it is time to toggle, sets the concentration
+and choses a random duration in the interval [minDuration, maxDuration].
+The molecule will be removed after the chosen duration has elapsed.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bf4203128fd24b002b2cb5594efd72f2feb9adc7">
+        <td class="sourcedoc-section section-signature">
+          <code>class See: AbstractAction&lt;Any&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Checks nodes in the env and writes in outputMolecule a list of it.unibo.alchemist.model.interfaces.VisibleNode,
+filtered by those containing filterByMolecule.
+distance and angle define the field of view.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="30d4ab8b35f0e925ae545e9f0d80bf3d47228cd0">
+        <td class="sourcedoc-section section-signature">
+          <code>class Spin&lt;T&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Spins a <a href="#">node</a> around itself at angularSpeedDegrees normalized according to the speed of the reaction.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="cac22bd80fbe6f126f9ea721f3cf7e6a1420a2b8">
+        <td class="sourcedoc-section section-signature">
+          <code>open class ToggleMolecule&lt;T&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Toggles a molecule.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="04a2168b4cdfb7c17473afcc2378e8a5886c1907">
+        <td class="sourcedoc-section section-signature">
+          <code>class ZigZagMove&lt;T&gt; : AbstractEuclidean2DConfigurableMoveNode&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Moves toward a randomly chosen direction for up to distance meters, then chooses another one and so on.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4466ccc885519ffdc59a385340a9aeffa1fba32b">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractAction&lt;T : Any?&gt; : Action&lt;T&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An abstract class facility with some generic methods implemented.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7caf071ece721a7f9f97de412ede12eb69e36323">
+        <td class="sourcedoc-section section-signature">
+          <code>class FakeMove&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Fake movement class, used only to trigger the neighborhood update.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ebe48a61e62052c32024f0f9d20e3e6503ae4b5c">
+        <td class="sourcedoc-section section-signature">
+          <code>open class RemoveNode&lt;T : Any?&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="1539077b0ee20b4307bd93a054c5d9bddcee7baf">
+        <td class="sourcedoc-section section-signature">
+          <code>class MoveForwardAndTeleport&lt;T : Any?, P : Position2D&lt;P&gt;?&gt; : AbstractMoveNode&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="770af8ae9ed013a8d5b345f114ddcba061ae7ca6">
+        <td class="sourcedoc-section section-signature">
+          <code>class BrownianMove&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Moves the node randomly.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="cb452552d9356a1aa899a3bc3c59bec9c4ad63cd">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractConfigurableMoveNode&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An abstract class that factorizes code for multiple different movements. With three strategies can be defined: the next target to be reached, the routing strategy to adopt, the speed to move at.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8b2cc39fad25f8274c3be90c2d2350d93844e93b">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractActionOnSingleMolecule&lt;T : Any?&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This class offers the basic structures to provide operations with numeric concentrations on a single molecule.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="221150fdb1fa2ce45b6c129ca0ffcee1817ec9bb">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractLocalAction&lt;T : Any?&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7603238d91a72c167ee15a64693ccb70afe22399">
+        <td class="sourcedoc-section section-signature">
+          <code>class MoveToTarget&lt;T : Any?, P : Position2D&lt;P&gt;?&gt; : AbstractConfigurableMoveNode&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Movement towards a target defined as a concentration.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2a857384dbc9385c0454755b97469a7107564b94">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractMoveNode&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This action moves a node inside a given environment.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a066ca105f33cdf173efac331d27c5dacfea0245">
+        <td class="sourcedoc-section section-signature">
+          <code>class SetLocalMoleculeConcentration&lt;T : Any?&gt; : AbstractActionOnSingleMolecule&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9d933dc9ffd7491a7b1b23a15bceef29529d96b5">
+        <td class="sourcedoc-section section-signature">
+          <code>class ChangeBiomolConcentrationInNeighbor: AbstractNeighborAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="99bb2398256cc747b14f1edb2d7dbee4ae7a6a11">
+        <td class="sourcedoc-section section-signature">
+          <code>class AddJunctionInNeighbor&lt;P : Position&lt;P&gt;?&gt; : AbstractNeighborAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Represent the action of add a junction between a neighbor and the current node. <br> This action only create the junction reference inside the neighbor, the current node totally ignore that a junction has been created. <br> This is a part of the junction creation process. <br> See <code>AddJunctionInCell</code> for the other part of the process</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="314b450d3e74df043fe106f54adb4b224a051a0b">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractNeighborAction&lt;T : Any?&gt; : AbstractRandomizableAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Represents an action on a neighbor.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9a5b8ae66ce6e748719fde5838d971c79d1208b6">
+        <td class="sourcedoc-section section-signature">
+          <code>class ChemotacticPolarization&lt;P : Position2D&lt;P&gt;?&gt; : AbstractAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5c6e474e609ebd81a9e827211c4855a13fc29a76">
+        <td class="sourcedoc-section section-signature">
+          <code>class RemoveJunctionInCell: AbstractNeighborAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Represent the action of removing a junction between the current node and a neighbor. <br> This action only remove the junction reference inside this node, the neighbor totally ignore that a junction has been removed. <br> This is a part of the junction removal process. <br> See <code>RemoveJunctionInNeighbor</code> for the other part of the process</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6c99b83a68792206ba1d5fb7325bc2bd2c74b1a7">
+        <td class="sourcedoc-section section-signature">
+          <code>class ChangeBiomolConcentrationInCell: AbstractActionOnSingleMolecule&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d5ccddd89d34f347048a09a3bfe5d4435abfe951">
+        <td class="sourcedoc-section section-signature">
+          <code>class CellTensionPolarization&lt;P : Position2D&lt;P&gt;?&gt; : AbstractAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="655729a2adc6cf6d24f7a99d07f209287ded46bc">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractRandomizableAction&lt;T : Any?&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5e86fefa786f896146a0a0f52fe1deed5cca5a8a">
+        <td class="sourcedoc-section section-signature">
+          <code>class CellMove&lt;P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;Double?, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="520907a7b8bbe1efcc3fa3f968c2a380f99ff95c">
+        <td class="sourcedoc-section section-signature">
+          <code>class AddJunctionInCell: AbstractNeighborAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Represent the action of add a junction between the current node and a neighbor. <br> This action only create the junction reference inside this node, the neighbor totally ignore that a junction has been created. <br> This is a part of the junction creation process. <br> See <code>AddJunctionInNeighbor</code> for the other part of the process</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="711902e7e539a592d9838da8b245031ff9aaff7f">
+        <td class="sourcedoc-section section-signature">
+          <code>class RemoveJunctionInNeighbor: AbstractNeighborAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Represent the action of removing a junction between a neighbor and the current node. <br> This action only remove the junction reference inside the neighbor node, the current one totally ignore that a junction has been removed. <br> This is a part of the junction removal process. <br> See <code>RemoveJunctionInCell</code> for the other part of the process.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="c26d869574874cd48ffba105285204dbb2c05b0f">
+        <td class="sourcedoc-section section-signature">
+          <code>class RandomPolarization&lt;P : Position2D&lt;P&gt;?&gt; : AbstractRandomizableAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="34e3b74c891e71dfbca13417a075bebf95c11f15">
+        <td class="sourcedoc-section section-signature">
+          <code>class ChangeBiomolConcentrationInEnv: AbstractRandomizableAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Action implementing the changing of the concentration of a given biomolecule in environment.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ca3e8d37d4e8ebfee3b1f0d3a76c17c1d2faa90f">
+        <td class="sourcedoc-section section-signature">
+          <code>open class RunProtelisProgram&lt;P : Position&lt;P&gt;?&gt; : Action&lt;Any?&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="805c180d6b152b2bf96e4882e11b5b5676fd390a">
+        <td class="sourcedoc-section section-signature">
+          <code>class SendToNeighbor: AbstractAction&lt;Any?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9c49751f6b23aa0d8240d1ee1c1eebf1f3e14784">
+        <td class="sourcedoc-section section-signature">
+          <code>open class ProtelisProgram&lt;P : Position&lt;P&gt;?&gt; : RunProtelisProgram&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Class to retain backwards compatibility with the Alchemist XML loader.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ba102a88c6b58da5fb1b9a6adb209c9e39c1f74f">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class LsaAbstractAction: AbstractAction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="780b229c7a6c0d48f92676e5e3fbcf6fd530bb77">
+        <td class="sourcedoc-section section-signature">
+          <code>class SAPEREChemotaxis&lt;P : Position&lt;P&gt;?&gt; : SAPERENeighborAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This class provides a chemotaxis implementation for SAPERE, namely, an agent able to move a molecule towards a specific node.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f5a97cc6f30ef97f13e6e9a86c65c76e792bdc59">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaCountNeighborsAction: SAPERELocalAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="822fc2e1fd1c54ef7780869fb2e26d3663131121">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaAllNeighborsAction: LsaRandomNeighborAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The execution involves all neighbours. The molecule can be different from a neighbor to the other, because some special Variable (#D) are specific for each node. This is why N molecules are instanced if there are N neighbours.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a6036b2a2a0bfcc6ac80ebf4aec54000dc4a9b74">
+        <td class="sourcedoc-section section-signature">
+          <code>open class LsaStandardAction: LsaAbstractAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This action add LsaMolecule in a single node.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="65cb820d78009a04a918b742f63eeb772fe0c659">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaDeleteNodeAction: RemoveNode&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d1dd75c99a849c588f2c785211b89479bf2e2d32">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class SAPEREAgent: LsaAbstractAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="b7a2bc9dcacb7cde63562113a1059b58d4e7b7fd">
+        <td class="sourcedoc-section section-signature">
+          <code>class SAPEREWalker: MoveOnMap&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5d6193f655304c2423687346640227b3fe1f4068">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaChangeArgument: SAPERELocalAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="564208dfd6a183d5253ac057082e81832f21c7a7">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaAscendingAgent&lt;P : Position2D&lt;P&gt;?&gt; : SAPEREMoveNodeAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fe4e231e72512c3b69bf944e50ce2a4069f84b65">
+        <td class="sourcedoc-section section-signature">
+          <code>class SAPEREMoveLSAToAgent: SAPEREAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This agent matches a template, removes a single instance of it from the current node and moves the LSA to another node (specified at creation time). Please note that, since the destination could be anywhere in the system, this action has a GLOBAL <code>Context</code>, and thus may trigger a large number of updates, slowing down the whole simulation. Handle with care.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4f513b53e5ed50e3ce4e63e867478894cd77a276">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class SocialForceAgent&lt;P : Position&lt;P&gt;?&gt; : SAPEREMoveNodeAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="565ad311a0119f8de2e39f1734a6bc8d114e9acc">
+        <td class="sourcedoc-section section-signature">
+          <code>open class SocialForceOldEuropeanAgent&lt;P : Position&lt;P&gt;?&gt; : SocialForceAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6574cc1bcf96b830d8fd143767b965e4b2f89bdd">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class SAPEREMoveNodeAgent&lt;P : Position&lt;P&gt;?&gt; : SAPERELocalAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="61231052cba153cb3e5fd852a4dd242781712e8d">
+        <td class="sourcedoc-section section-signature">
+          <code>open class SocialForceEuropeanAgent&lt;P : Position&lt;P&gt;?&gt; : SocialForceAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="78fd40db45fe8d7253eabb334bbc1580b2915795">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class SAPERENeighborAgent&lt;P : Position&lt;P&gt;?&gt; : SAPEREAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A SAPERE Agent that modifies something on neighboring nodes.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="de4fa93dfd6d27cb706f0a58313e458873fe0061">
+        <td class="sourcedoc-section section-signature">
+          <code>class CrowdSteeringService&lt;P : Position2D&lt;P&gt;?&gt; : SAPEREMoveNodeAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8caebd619e1add90f8e531c0a2d21493f97ad2f3">
+        <td class="sourcedoc-section section-signature">
+          <code>open class SocialForceAsianAgent&lt;P : Position&lt;P&gt;?&gt; : SocialForceAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="626b6d8f27bbffe9839c157ec0c81b6aa4a84b2c">
+        <td class="sourcedoc-section section-signature">
+          <code>open class SAPEREWalkerRiseGradient: MoveOnMap&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a9eb8149e294c4dd31758d32d4309e168cab11b2">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class SAPERELocalAgent: SAPEREAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A SAPERE Agent that does not do actions on neighbors.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="02cf000d2d30dbb841392781030734d9f10d30cc">
+        <td class="sourcedoc-section section-signature">
+          <code>open class LsaRandomNeighborAction: LsaStandardAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="768c4b7f6ba1da52053ed7d66b91715e15e4ed8f">
+        <td class="sourcedoc-section section-signature">
+          <code>class CrowdSensor: SAPERELocalAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The count N of neighbors containing "person" is stored within a tuple of the form "crowd, N".</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6ff4251ecddd48e97c3366d87fc84ec36fc6e845">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaAscendingGradientDist&lt;P : Position&lt;P&gt;?&gt; : SAPERENeighborAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9a48be035773f37fc7f96e2ceaa6cf7c1ff7dc6b">
+        <td class="sourcedoc-section section-signature">
+          <code>class GPSTraceWalker&lt;T : Any?&gt; : MoveOnMapWithGPS&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A walker that follows a trace. The trace is mandatory.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6b179ca3a574c2f4f971d9a87e044e80a1edc41e">
+        <td class="sourcedoc-section section-signature">
+          <code>open class ReproduceGPSTrace&lt;T : Any?&gt; : MoveOnMapWithGPS&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4b54de4ec1b424e1c615059dadeeb25617956120">
+        <td class="sourcedoc-section section-signature">
+          <code>open class MoveOnMap&lt;T : Any?&gt; : AbstractConfigurableMoveNode&lt;T, GeoPosition?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="553f6a3bf219861b08d8e3c3507c443c15be69ef">
+        <td class="sourcedoc-section section-signature">
+          <code>open class TargetWalker&lt;T : Any?&gt; : MoveOnMap&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="38a9ce393efdf5eb35a7901aac614ca6b52dd9cb">
+        <td class="sourcedoc-section section-signature">
+          <code>open class MoveOnMapWithGPS&lt;T : Any?&gt; : MoveOnMap&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>basic action that follow a <code>GPSTrace</code>.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="subpackages">
+
+
+  <p class="sourcedoc-section section-name"><strong>Subpackages</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="a4fee22bf14f7352a121b3e67e14e83f81f81e08">
+        <td class="sourcedoc-section section-signature">
+          <code>package it.unibo.alchemist.model.implementations.actions.navigationstrategies</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="45aeeccb6064de5dac0eaaf36a8ef424bb73f9b6">
+        <td class="sourcedoc-section section-signature">
+          <code>package it.unibo.alchemist.model.implementations.actions.steeringstrategies</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="ead90ffe8929bf7de1ed9b2ccf95b0d8fb0cf036">
+      
+      <h3 class="sourcedoc-section element-name">cartesianProduct</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T&gt; cartesianProduct(sequence1: Sequence<T>&lt;T&gt;, sequence2: Sequence<T>&lt;T&gt;): Sequence<Pair<T, T>>&lt;Pair<T, T>&lt;T, T&gt;&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Performs the cartesian product of the given sequences.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="8434f7330a1a80ba1d54a7afd3873be8b565ce4c">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3db0a25be2e1128f866f678d34aa3611834ba57d">
+        <td class="sourcedoc-section section-signature">
+          <code>sequence1: Sequence<T>&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ce892400e4294eca849a2d744d3440dbd6f488f8">
+        <td class="sourcedoc-section section-signature">
+          <code>sequence2: Sequence<T>&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ebfe9d2746a5fd44482bfe840776c0a55a7d3446">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="63e50c286bac2978e78f1129803cf17c6bca56d4">
+        <td class="sourcedoc-section section-signature">
+          <code>Sequence<Pair<T, T>>&lt;Pair<T, T>&lt;T, T&gt;&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="132d3e28874bdfbe8b34b590849f41674937f354">
+      
+      <h3 class="sourcedoc-section element-name">discardUnsuitablePositions</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T, P&gt; Sequence<P>&lt;P&gt;.discardUnsuitablePositions(environment: Environment&lt;T, P&gt;, pedestrian: Node&lt;T&gt;): Sequence<P>&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Discards the positions the pedestrian can't fit.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1b0ba5fce02c7110d9b21855709278330b031643">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c839b5509acef0df4f6bff1ed2fd2e39ea33d533">
+        <td class="sourcedoc-section section-signature">
+          <code>Sequence<P>&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ead41363493318ffadb62323641f76601482803d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b05772bbcfef0df0751eddcf829a82d4411da28a">
+        <td class="sourcedoc-section section-signature">
+          <code>environment: Environment&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4b0b24b91f483a02cd42c014e82ef7d0839db811">
+        <td class="sourcedoc-section section-signature">
+          <code>pedestrian: Node&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9eff13f82e80971cebf27619b927456f0369b0c4">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c839b5509acef0df4f6bff1ed2fd2e39ea33d533">
+        <td class="sourcedoc-section section-signature">
+          <code>Sequence<P>&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="2a1882aad90eb2abdf5589a7b164207d1b8168e9">
+      
+      <h3 class="sourcedoc-section element-name">takePercentage</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T&gt; List&lt;T&gt;.takePercentage(percentage: Double): List&lt;T&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Takes the first percentage * size elements of the list.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="30336ab4f202b49a3af7c2f02888a29227249c6b">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="8ba44f9709cdb27febdf0a05183d7bac7d3f462e">
+        <td class="sourcedoc-section section-signature">
+          <code>List&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1c0d35488cfe58d3b7f4a699b9e301e51eb46c49">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4b411133c6c2ca76ec2e46bb76fe9f044073b4fe">
+        <td class="sourcedoc-section section-signature">
+          <code>percentage: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="35bad9ded2d02bb301d853a90562450cc0d189d1">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="8ba44f9709cdb27febdf0a05183d7bac7d3f462e">
+        <td class="sourcedoc-section section-signature">
+          <code>List&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="e0e64299659cd16c9735b87a505f7bd0e1647fb6">
+      
+      <h3 class="sourcedoc-section element-name">toPositions</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;P : Position&lt;P&gt;&gt; Array&lt;Number&gt;.toPositions(environment: Environment&lt;*, P&gt;): List&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Converts an array of numbers representing positions to an actual list of positions. E.g. the array <a href="#">2,3,4,5</a> in
+a bidimensional environment would be transformed into a list containing positions (2,3) and (4,5).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="cb7971758b96fa3def4f17507169518f1d26a34d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d00ebdd84fe6c53304a73411c5fc8f18cfd16161">
+        <td class="sourcedoc-section section-signature">
+          <code>Array&lt;Number&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="93cd2a4ff147b0cbbfe18e375ad57e27e86d1f6b">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="daca80073b302bcf43c02828807a7985118881ee">
+        <td class="sourcedoc-section section-signature">
+          <code>environment: Environment&lt;*, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ca504a224694cedaf022de64c79f0e6e1a98ea41">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6f39341b8ed8ef8456ed3f2d3a7b8bf53593c9fc">
+        <td class="sourcedoc-section section-signature">
+          <code>List&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

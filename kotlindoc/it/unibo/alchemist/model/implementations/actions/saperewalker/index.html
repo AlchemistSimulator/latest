@@ -1,0 +1,1030 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>SAPEREWalker</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/actions/saperewalker","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperewalker"},"description":"","title":"SAPEREWalker"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>SAPEREWalker</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="SAPEREWalker">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="b7a2bc9dcacb7cde63562113a1059b58d4e7b7fd">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>class SAPEREWalker: MoveOnMap&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c00a5319c9aaf41e5ca5e0e658f84e44669d1e65">
+        <td class="sourcedoc-section section-signature">
+          <code>static DEFAULT_INTERACTING_TAG: ILsaMolecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The default molecule that identifies an interacting object.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="f49c932b81db31f09e577d302311adabe95228cb">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(environment: MapEnvironment&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?, node: ILsaNode?, reaction: Reaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?, speed: Double, interaction: Double, range: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7eb9606b6b2792d1d62a6ec543dcb3e1369e39bb">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="01033fc830fb56bfe220178fda731c20c44d227b">
+        <td class="sourcedoc-section section-signature">
+          <code>environment: MapEnvironment&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>MapEnvironment&lt;MutableList&lt;ILsaMolecule!&gt;!&gt;!: the environment</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
+        <td class="sourcedoc-section section-signature">
+          <code>node: ILsaNode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaNode!: the node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ed1afaddfdaf3c6c49453ca1e537b2a2a769b8c1">
+        <td class="sourcedoc-section section-signature">
+          <code>reaction: Reaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Reaction&lt;MutableList&lt;ILsaMolecule!&gt;!&gt;!: the reaction (used to compute the movement length)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a8717ac3fa3e0d2c7ba50b46bf7c29d52856bdb4">
+        <td class="sourcedoc-section section-signature">
+          <code>speed: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the average speed of the node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f0c5b860ba7706d4e4b3e48e7eb1fca797e5778a">
+        <td class="sourcedoc-section section-signature">
+          <code>interaction: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the interaction factor</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fa8c3d281d0964549892bfaa2f43428a4f36facd">
+        <td class="sourcedoc-section section-signature">
+          <code>range: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the interaction range</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="fabc93c579b1e6b9c1e068ca273c79c90d3de455">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(environment: MapEnvironment&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?, node: ILsaNode?, reaction: Reaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?, tag: ILsaMolecule?, speed: Double, interaction: Double, range: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e286c3e99870e6708f7697cd9d8ab96d310187ae">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="01033fc830fb56bfe220178fda731c20c44d227b">
+        <td class="sourcedoc-section section-signature">
+          <code>environment: MapEnvironment&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>MapEnvironment&lt;MutableList&lt;ILsaMolecule!&gt;!&gt;!: the environment</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
+        <td class="sourcedoc-section section-signature">
+          <code>node: ILsaNode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaNode!: the node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ed1afaddfdaf3c6c49453ca1e537b2a2a769b8c1">
+        <td class="sourcedoc-section section-signature">
+          <code>reaction: Reaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Reaction&lt;MutableList&lt;ILsaMolecule!&gt;!&gt;!: the reaction (used to compute the movement length)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4481cf098c00b4cb279172e186effc3c019cbed8">
+        <td class="sourcedoc-section section-signature">
+          <code>tag: ILsaMolecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ILsaMolecule!: the molecule which identifies the interacting nodes</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a8717ac3fa3e0d2c7ba50b46bf7c29d52856bdb4">
+        <td class="sourcedoc-section section-signature">
+          <code>speed: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the average speed of the node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f0c5b860ba7706d4e4b3e48e7eb1fca797e5778a">
+        <td class="sourcedoc-section section-signature">
+          <code>interaction: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the interaction factor</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fa8c3d281d0964549892bfaa2f43428a4f36facd">
+        <td class="sourcedoc-section section-signature">
+          <code>range: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the interaction range</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="68b77763ef723b4e298361f01eb795026ae029fa">
+      
+      <h3 class="sourcedoc-section element-name">cloneAction</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun cloneAction(n: Node&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?, r: Reaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?): SAPEREWalker?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="415cf13f0ee4af55caefe9163388f6f76d3dcce9">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6aa6ae52875b1131ecd36bfda5d1e25d8aecd8ae">
+        <td class="sourcedoc-section section-signature">
+          <code>n: Node&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f9a98366b6cc4144b2af14e61dee2120cbb774fa">
+        <td class="sourcedoc-section section-signature">
+          <code>r: Reaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5a50590f0ea51d58eccf6ea570558f527c8071c8">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="71d99584a13f86ba8e5792d0d2bb2638408de49c">
+        <td class="sourcedoc-section section-signature">
+          <code>SAPEREWalker?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5641d952d77d01b94965bac3acc92cda96bf95d4">
+      
+      <h3 class="sourcedoc-section element-name">getNode</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getNode(): ILsaNode?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1d60acdd76ca022d5b53ac53e80c8488774736cf">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ac7b685b092a1d1f607f63d1072aaeee320206aa">
+        <td class="sourcedoc-section section-signature">
+          <code>ILsaNode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="0f90a49090594640237b393afab28739924769e1">
+      
+      <h3 class="sourcedoc-section element-name">setExecutionContext</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun setExecutionContext(matches: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?, nodes: MutableList&lt;ILsaNode?&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4dd059f0fa8ab71e8d8fea0f04234e3c81750390">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4ca57846fe14daf3e7dcc858d6af8015c8fa6fac">
+        <td class="sourcedoc-section section-signature">
+          <code>matches: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="132a6d137e19cfd5ef782bfb72b867d2c7d13ae0">
+        <td class="sourcedoc-section section-signature">
+          <code>nodes: MutableList&lt;ILsaNode?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4119b99e936429d7a57e273528ad950e8d2a68e9">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

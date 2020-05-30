@@ -1,0 +1,749 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>it.unibo.alchemist.model.implementations.nodes</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: packages -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocPackage, sourceDocPage, packages, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/nodes","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes"},"description":"","title":"it.unibo.alchemist.model.implementations.nodes"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>it.unibo.alchemist.model.implementations.nodes</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="it.unibo.alchemist.model.implementations.nodes">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="ac98678e68c1cb5e3eb75cb6382889f8b53d2a61">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>package it.unibo.alchemist.model.implementations.nodes</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="classes">
+
+
+  <p class="sourcedoc-section section-name"><strong>Classes</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="833f111d37ff6f06717f00da435921a0a98711e1">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractOrientingPedestrian&lt;T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, M : ConvexGeometricShape&lt;P, A&gt;, F&gt; : OrientingPedestrian&lt;T, P, A, N, DefaultEdge&gt;, HomogeneousPedestrianImpl&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An abstract OrientingPedestrian.
+This class defines an algorithm capable of generating a pseudo-random cognitiveMap
+based on a NavigationGraph of the environment. The latter can be obtained from
+EnvironmentWithGraphs, which is the only type of environment this pedestrian can
+be placed into. The creation of landmarks is left to subclasses via factory method.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="57c6347022f421c5f0b57ecc7c3708c8bff3a64b">
+        <td class="sourcedoc-section section-signature">
+          <code>class CognitivePedestrian2D&lt;T&gt; : CognitivePedestrianImpl&lt;T, Euclidean2DPosition&gt;, Pedestrian2D&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Implementation of a cognitive pedestrian in the Euclidean world.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f3a84ced0c565d330373c4c75f7c9ef6a62674a0">
+        <td class="sourcedoc-section section-signature">
+          <code>open class CognitivePedestrianImpl&lt;T, P : Position&lt;P&gt;&gt; : HeterogeneousPedestrianImpl&lt;T, P&gt;, CognitivePedestrian&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Implementation of a cognitive pedestrian.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0f27b46bf4abfd6a3a7be1de3260574e815e275c">
+        <td class="sourcedoc-section section-signature">
+          <code>class HeterogeneousPedestrian2D&lt;T&gt; : HeterogeneousPedestrianImpl&lt;T, Euclidean2DPosition&gt;, Pedestrian2D&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Implementation of an heterogeneous pedestrian in the Euclidean world.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8fdf657be3893970d189ef8afa3c85ababd964b0">
+        <td class="sourcedoc-section section-signature">
+          <code>open class HeterogeneousPedestrianImpl&lt;T, P : Position&lt;P&gt;&gt; : HomogeneousPedestrianImpl&lt;T, P&gt;, HeterogeneousPedestrian&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Implementation of an heterogeneous pedestrian.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="807e3a2f80fb366293c62535d005868d8fe1c99c">
+        <td class="sourcedoc-section section-signature">
+          <code>class HomogeneousPedestrian2D&lt;T&gt; : HomogeneousPedestrianImpl&lt;T, Euclidean2DPosition&gt;, Pedestrian2D&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Implementation of a basic pedestrian in the Euclidean world.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="e7177ef5ffd444b24d687caa5781cb1b0353e866">
+        <td class="sourcedoc-section section-signature">
+          <code>open class HomogeneousPedestrianImpl&lt;T, P : Position&lt;P&gt;&gt; : AbstractNode&lt;T&gt;, Pedestrian&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Implementation of a basic pedestrian.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f6af7ce93d10915d0de6368c9d5cc2f88fbcfa53">
+        <td class="sourcedoc-section section-signature">
+          <code>class OrientingCognitivePedestrian2D&lt;T, M : ConvexPolygon, F&gt; : OrientingPedestrian2D&lt;T, M, F&gt;, OrientingCognitivePedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation, Ellipse, DefaultEdge&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A cognitive OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ac0310a5c452260fa3ffdb18da470b1c5d709ed1">
+        <td class="sourcedoc-section section-signature">
+          <code>class OrientingHomogeneousPedestrian2D&lt;T, M : ConvexPolygon, F&gt; : OrientingPedestrian2D&lt;T, M, F&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A homogeneous OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a05ef485e0e58c0bc95ff886dba3c8d002cbbad4">
+        <td class="sourcedoc-section section-signature">
+          <code>open class OrientingPedestrian2D&lt;T, M : ConvexPolygon, F&gt; : AbstractOrientingPedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation, Ellipse, M, F&gt;, Pedestrian2D&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An OrientingPedestrian in an euclidean bidimensional space.
+This class defines the method responsible for the creation of landmarks, which
+are represented as Ellipses. These can represent both the human error concerning
+the exact position of a landmark inside the ellipse and the error concerning the
+angles formed by the connections between landmarks.
+This class accepts an environment whose graph contains nodes which are (subclasses
+of) ConvexPolygons.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8c4ea41b91b3f2ec25d94ad0fd693485200beee0">
+        <td class="sourcedoc-section section-signature">
+          <code>open class CircleNode&lt;T&gt; : AbstractNode&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A it.unibo.alchemist.model.interfaces.Node with a circle shape meant to be added to a
+it.unibo.alchemist.model.interfaces.environments.PhysicsEnvironment.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f6c03948210ecef2e81685fa68b75543962c64f6">
+        <td class="sourcedoc-section section-signature">
+          <code>open class IntNode: AbstractNode&lt;Int&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An integer node.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="94d67c5f41114f5b1cba3cbe9975e0b7eccf2a20">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractNode&lt;T : Any?&gt; : Node&lt;T&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This class realizes an abstract node. You may extend it to realize your own nodes.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="b2510ecef8fdf750a06fcd6f514f04f46417037f">
+        <td class="sourcedoc-section section-signature">
+          <code>class EnvironmentNodeImpl: DoubleNode, EnvironmentNode</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="40d46f9d69275cdab75795e42671b7e7eae0e803">
+        <td class="sourcedoc-section section-signature">
+          <code>open class CellNodeImpl&lt;P : Position&lt;P&gt;?&gt; : DoubleNode, CellNode&lt;P&gt;, CellWithCircularArea&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="48d789f25d71f068a7bbc29aa46325c785bda177">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class IntegerNode: AbstractNode&lt;Int?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="274a48bfea97c21a9e573068607b9e8bd4fd9632">
+        <td class="sourcedoc-section section-signature">
+          <code>open class DoubleNode: AbstractNode&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6e8af6f96e70079493cf48ad286864b182b63155">
+        <td class="sourcedoc-section section-signature">
+          <code>class CircularDeformableCellImpl&lt;P : Position&lt;P&gt;?&gt; : CellNodeImpl&lt;P&gt;, CircularDeformableCell&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Implementation of a circular deformable cell.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4683624fab424513eeb17546086b7ec22ab85854">
+        <td class="sourcedoc-section section-signature">
+          <code>class ProtelisNode&lt;P : Position&lt;P&gt;?&gt; : AbstractNode&lt;Any?&gt;, DeviceUID, ExecutionEnvironment</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2a01173c8593504d35d5d55ca7de05a89454fca6">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaNode: AbstractNode&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaNode</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This class realizes a node with LSA concentration.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

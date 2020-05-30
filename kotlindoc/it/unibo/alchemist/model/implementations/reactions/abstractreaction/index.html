@@ -1,0 +1,2457 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>AbstractReaction</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/reactions/abstractreaction","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction"},"description":"","title":"AbstractReaction"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>AbstractReaction</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="AbstractReaction">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="55178962eab4739659370b01e487dbaff75c1ab4">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract class AbstractReaction&lt;T : Any?&gt; : Reaction&lt;T&gt;, Any</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>The type which describes the concentration of a molecule This class offers a partial implementation of Reaction. In particular, it allows to write new reaction specifying only which distribution time to adopt</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="8ef5b44eac60d6e42004a4ec53cd5ca450083d92">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(n: Node&lt;T&gt;?, pd: TimeDistribution&lt;T&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Builds a new reaction, starting at time t.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3f10d8ebfcb8d807eb97861a42e09f61d4510de9">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="1fde94d953de8c356dade4695a2331c4546aa681">
+        <td class="sourcedoc-section section-signature">
+          <code>n: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: the node this reaction belongs to</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="e370b6bd8e725315b0a3d815358aa53d150f4878">
+        <td class="sourcedoc-section section-signature">
+          <code>pd: TimeDistribution&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>TimeDistribution<T>!: the time distribution this reaction should follow</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="73e00fd66b5930e50e1e8f5f22513821a2faba54">
+      
+      <h3 class="sourcedoc-section element-name">initializationComplete</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun initializationComplete(t: Time?, env: Environment&lt;T, *&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="0d151efe0369f7641f74ed2aa52a70d44b0dc592">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5a0d02a260ee4397c97942e3ccb62021f0f0018c">
+        <td class="sourcedoc-section section-signature">
+          <code>t: Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="230def937932b42a80a7254397273237208bfc4c">
+        <td class="sourcedoc-section section-signature">
+          <code>env: Environment&lt;T, *&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="18e8f0adb1834114d335348c981b9a5eae355005">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="7689bab5bed9e9998a776e90cfab9ce69b8c188f">
+      
+      <h3 class="sourcedoc-section element-name">getOutputContext</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getOutputContext(): Context?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b97688d4ea309ae344d555d1f77d540c41b8a147">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5e66a11414867a7afc6633feb4250ba52a57cb31">
+        <td class="sourcedoc-section section-signature">
+          <code>Context?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="812492167221f4c1309fd85f4417a8beae20109f">
+      
+      <h3 class="sourcedoc-section element-name">getOutboundDependencies</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getOutboundDependencies(): ListSet?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7529deb477118e9143b617e76676d3bff87e8bfe">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="99602732fa1b266a3e94a7196ab5758f084da2a8">
+        <td class="sourcedoc-section section-signature">
+          <code>ListSet?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="257ec70bb5f1e8033991ecef4e78e7b545cbd67d">
+      
+      <h3 class="sourcedoc-section element-name">getConditions</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getConditions(): MutableList&lt;Condition&lt;T&gt;?&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Override only if you need to implement extremely tricky behaviours. Must be overridden along with <code>#setConditions(List)</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4e6bf0128eb6c8dc8afa21de6fe20e73bb2a2116">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="0c8011fe5c028fa41ef56bf586224fed03860571">
+        <td class="sourcedoc-section section-signature">
+          <code>MutableList&lt;Condition&lt;T&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>MutableList&lt;Condition<T>!&gt;!: the list of <code>Condition</code>s.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="0cc819cc440f44e16b2b5a63731dd01419bb621e">
+      
+      <h3 class="sourcedoc-section element-name">getReactionName</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun getReactionName(): String?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This method is used to provide a reaction name in toString().</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="606ed3f4ad3a894e9a6e1e60285798419963937c">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ce29911ab38228bb2a41fe50f4edd1d765e1abcd">
+        <td class="sourcedoc-section section-signature">
+          <code>String?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String!: the name for this reaction.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="081a67decfe399c240d64fdfe633bd5ff76cd508">
+      
+      <h3 class="sourcedoc-section element-name">getTau</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getTau(): Time?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b200d38de2108ce0bd527e54b5875d4a46604422">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="fb5b6d153245a2585f5561d0195adf5208150d11">
+        <td class="sourcedoc-section section-signature">
+          <code>Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="21e1e9ca950147a53787319200abefefd2f8fbec">
+      
+      <h3 class="sourcedoc-section element-name">setOutputContext</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun setOutputContext(c: Context?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Used by subclasses to set their output context.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5d07460451d6b9f3c730b286d8e328d29da000ae">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3e7c827422476b9841b9c0f95c65753c93ec496e">
+        <td class="sourcedoc-section section-signature">
+          <code>c: Context?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Context!: the new input context</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="edbbc84b648efb375983bf20e8904ea3d5cb89e0">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="52a2161aadf3e923d9a2d5ee5275d4024671b805">
+      
+      <h3 class="sourcedoc-section element-name">update</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun update(curTime: Time?, executed: Boolean, env: Environment&lt;T, *&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7be4bb2dbe7aafe70a5042f457bc12bcb02f78fe">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="040aaf4ff8acf93a1a26cb2ac10b25e8197d9261">
+        <td class="sourcedoc-section section-signature">
+          <code>curTime: Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="17a27b6e507bdde3191312a4126f076a491d53f1">
+        <td class="sourcedoc-section section-signature">
+          <code>executed: Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="230def937932b42a80a7254397273237208bfc4c">
+        <td class="sourcedoc-section section-signature">
+          <code>env: Environment&lt;T, *&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="dc69b24f1bc60b87aec914431b7d77873b42781a">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="4b0fe69ccb235087d42c622c36074a44b111f08a">
+      
+      <h3 class="sourcedoc-section element-name">updateInternalStatus</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected abstract fun updateInternalStatus(curTime: Time?, executed: Boolean, env: Environment&lt;T, *&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This method gets called as soon as <code>#update(Time, boolean, Environment)</code> is called. It is useful to update the internal status of the reaction.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="935fdc2d63dc6fbdd1a59d10c0d23cb61cce787a">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="040aaf4ff8acf93a1a26cb2ac10b25e8197d9261">
+        <td class="sourcedoc-section section-signature">
+          <code>curTime: Time?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Time!: the current simulation time</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="17a27b6e507bdde3191312a4126f076a491d53f1">
+        <td class="sourcedoc-section section-signature">
+          <code>executed: Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean: true if this reaction has just been executed, false if the update has been triggered due to a dependency</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="230def937932b42a80a7254397273237208bfc4c">
+        <td class="sourcedoc-section section-signature">
+          <code>env: Environment&lt;T, *&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;T, *&gt;!: the current environment</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="82420774166fb4264480284e624498ad94d19df7">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="383d704cce214f32e037ec65f09341c3f197cadf">
+      
+      <h3 class="sourcedoc-section element-name">canExecute</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun canExecute(): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>The default implementation verifies if all the conditions are valid.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3d480acd33285b4832551da72058b8b89445fd5e">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean: true if the reaction can execute right now.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="bfc57157c453626c32b51422c5fe3df760e4e545">
+      
+      <h3 class="sourcedoc-section element-name">getNode</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getNode(): Node&lt;T&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="6e3a77dcb55eb1df00c8a100f1e5b906885edef9">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="977eff654676d2da0411b27d18a2fcb5d23cdebd">
+        <td class="sourcedoc-section section-signature">
+          <code>Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="0ec164091acf11b7377c98a55c4f411993c49805">
+      
+      <h3 class="sourcedoc-section element-name">getInboundDependencies</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getInboundDependencies(): ListSet?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="11bbcd252cf5f672de8cbce2ea5a5f891d5e199b">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="99602732fa1b266a3e94a7196ab5758f084da2a8">
+        <td class="sourcedoc-section section-signature">
+          <code>ListSet?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="d130968b832e50b156393f8a3c1c9f8846921fd4">
+      
+      <h3 class="sourcedoc-section element-name">addOutboundDependency</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun addOutboundDependency(m: Dependency?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Allows subclasses to add influenced molecules.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b57b0303c334fa4e7254143297afd6ce5beaf068">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d4af6aa513076d07d3e2ad542725118d1b3c38f6">
+        <td class="sourcedoc-section section-signature">
+          <code>m: Dependency?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Dependency!: the influenced molecule</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5d588b5a1598aa1016dea34f8071788812985d60">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="dde665156caa56d326caf2c6956c6b1e81390892">
+      
+      <h3 class="sourcedoc-section element-name">hashCode</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun hashCode(): Int</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5636466583003f5344af19eb942d25c8e21b7afd">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5c89edcac2811a6a9e8072517cae7f3cbfd5049d">
+        <td class="sourcedoc-section section-signature">
+          <code>Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="9d53833306d53119c9dad9289581e27152750520">
+      
+      <h3 class="sourcedoc-section element-name">equals</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun equals(other: Any?): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f552e202da6df2ed7800227a627d9ca5be82ab60">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="0a1e171af6c91857649972ea14409d21dd91567a">
+        <td class="sourcedoc-section section-signature">
+          <code>other: Any?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1a2f642d672af9983556842932e3fadd115558eb">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="90ab498e9da5d8545786d5da1194c6d8a0dd8cc0">
+      
+      <h3 class="sourcedoc-section element-name">toString</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun toString(): String</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="10ff84a167aa8cf1007a772e2e06c99062ca1ba0">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3df63b7acb0522da685dad5fe84b81fdd7b25264">
+        <td class="sourcedoc-section section-signature">
+          <code>String</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String: the default implementation returns a String in the form className@timeScheduled[Conditions]-rate-&gt;[Actions]</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="96f9c9adf35981bd86460cfcb57dea6adc64460b">
+      
+      <h3 class="sourcedoc-section element-name">compareTo</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun compareTo(other: Reaction&lt;T&gt;?): Int</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="0a05ab2678a0215537491e01c7c5b70f34105051">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="cc5c11874506da2a512e18d5f672d9194380915b">
+        <td class="sourcedoc-section section-signature">
+          <code>other: Reaction&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="0b7a8a6b57f67f31b8bfffe7f98d68713cb144a1">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5c89edcac2811a6a9e8072517cae7f3cbfd5049d">
+        <td class="sourcedoc-section section-signature">
+          <code>Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="b271f56c7daf4b3dc1db290c0c889548bb3b4485">
+      
+      <h3 class="sourcedoc-section element-name">setInputContext</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun setInputContext(c: Context?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Used by subclasses to set their input context.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="deea90f0b1814531bad6938bbee027aff42c84d6">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3e7c827422476b9841b9c0f95c65753c93ec496e">
+        <td class="sourcedoc-section section-signature">
+          <code>c: Context?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Context!: the new input context</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="bbd90a6904cc675fc175de296c0faf9089723a90">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="104bdd4fd4fbc3130fa8097016f9ad657ec427dc">
+      
+      <h3 class="sourcedoc-section element-name">execute</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun execute()</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>The default execution iterates all the actions in order and executes them. Override to change the behaviour.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ae9e1b913b88166af8fd0ff81df2474674e6bef3">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="d882c533a6b493f0d0d6125b8cf8dabd50dc35e8">
+      
+      <h3 class="sourcedoc-section element-name">makeClone</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun &lt;R : Reaction&lt;T&gt;?&gt; makeClone(builder: Supplier&lt;R&gt;?): R</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This method provides facility to clone reactions. Given a constructor in form of a <code>Supplier</code>, it populates the actions and conditions with cloned version of the ones registered in this reaction.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4422093a19b7402781d1867e4f64118fb8b41320">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c2ca4dd4328e839cf919cca1f9895da2e7e044f9">
+        <td class="sourcedoc-section section-signature">
+          <code>builder: Supplier&lt;R&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Supplier<R>!: the supplier</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="eae008bd27617e27b55460fe33e6dd96d51b7adb">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="06576556d1ad802f247cad11ae748be47b70cd9c">
+        <td class="sourcedoc-section section-signature">
+          <code>R</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>R: the populated cloned reaction</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="f182904aa79b80f74ef66b69d8e2e0ed0969b290">
+      
+      <h3 class="sourcedoc-section element-name">addInboundDependency</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun addInboundDependency(m: Dependency?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Allows subclasses to add influencing molecules.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b3d782e7592c71248505e36dc62254af5e495a00">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d4af6aa513076d07d3e2ad542725118d1b3c38f6">
+        <td class="sourcedoc-section section-signature">
+          <code>m: Dependency?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Dependency!: the molecule to add</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5e7306f61e7cdee18141b2519792c62da493636a">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="cbd0208253c39ca1ada833e6196fbd0f3d1be099">
+      
+      <h3 class="sourcedoc-section element-name">getTimeDistribution</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getTimeDistribution(): TimeDistribution&lt;T&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c5e4ad5a8bf309ff75be032ef9dbb83b3a37727d">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="8f29c6bd0fbc8df4324d08b000faf236083ce4a7">
+        <td class="sourcedoc-section section-signature">
+          <code>TimeDistribution&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="9b6f66605ad0ccabcaf66e4604f1d3a0f723c81e">
+      
+      <h3 class="sourcedoc-section element-name">getInputContext</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getInputContext(): Context?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2644eb2683d78ad1f67fd1e07670074ab6d58143">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5e66a11414867a7afc6633feb4250ba52a57cb31">
+        <td class="sourcedoc-section section-signature">
+          <code>Context?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="a492433c7da4ec9c526058c99e260ef7cf1e3a0e">
+      
+      <h3 class="sourcedoc-section element-name">setConditions</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setConditions(c: MutableList&lt;Condition&lt;T&gt;?&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This should get overridden only if very tricky behaviours are implemented, such that the default Alchemist condition addition model is no longer usable. Must be overridden along with <code>#getConditions()</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="cb6b616a709c6bab444c75962a10c01b24190129">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6fb936357dca946be47a7cf95ebc203f614a5f96">
+        <td class="sourcedoc-section section-signature">
+          <code>c: MutableList&lt;Condition&lt;T&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>MutableList&lt;Condition<T>!&gt;!: the actions to set</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1ece58f59dcd4f8defd40c02601ca0198cf97103">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="bc1db4f9839225eae2296219987ece0fd22ec127">
+      
+      <h3 class="sourcedoc-section element-name">getActions</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getActions(): MutableList&lt;Action&lt;T&gt;?&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Override only if you need to implement extremely tricky behaviours. Must be overridden along with <code>#setActions(List)</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1acd3509ae7cd638c381d0817c59918708d8bcc7">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="20389669bb6d7298683501b76e19305a15fc8958">
+        <td class="sourcedoc-section section-signature">
+          <code>MutableList&lt;Action&lt;T&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>MutableList&lt;Action<T>!&gt;!: the list of <code>Action</code>s.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="a0e530030f809118242c2333d4e5cb29878ad36b">
+      
+      <h3 class="sourcedoc-section element-name">setActions</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setActions(a: MutableList&lt;Action&lt;T&gt;?&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This should get overridden only if very tricky behaviours are implemented, such that the default Alchemist action addition model is no longer usable. Must be overridden along with <code>#getActions()</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5074fc7e2a8a289b112b942807365c37a9d17943">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6a10affc574d4263d3b0378e4d8e6de5434cfb4e">
+        <td class="sourcedoc-section section-signature">
+          <code>a: MutableList&lt;Action&lt;T&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>MutableList&lt;Action<T>!&gt;!: the actions to set</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c12f76d4374add66a5c6ddfd2c7bc2c6f0c5efde">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="b5f3bb4507f492aac424256083fcd47f324bd1a7">
+      
+      <h3 class="sourcedoc-section element-name">getRateAsString</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun getRateAsString(): String?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f2847fb66b8d72fcdcb6779856314193b531f6c1">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ce29911ab38228bb2a41fe50f4edd1d765e1abcd">
+        <td class="sourcedoc-section section-signature">
+          <code>String?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>String!: a <code><a href="https://docs.oracle.com/javase/6/docs/api/java/lang/String.html">String</a></code> representation of the rate</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

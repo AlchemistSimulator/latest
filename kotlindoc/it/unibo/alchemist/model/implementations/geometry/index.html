@@ -1,0 +1,2759 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>it.unibo.alchemist.model.implementations.geometry</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: packages -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocPackage, sourceDocPage, packages, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry"},"description":"","title":"it.unibo.alchemist.model.implementations.geometry"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>it.unibo.alchemist.model.implementations.geometry</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="it.unibo.alchemist.model.implementations.geometry">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="8e6e0fca4ab1964635f5949cc4abff4269949b65">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>package it.unibo.alchemist.model.implementations.geometry</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="classes">
+
+
+  <p class="sourcedoc-section section-name"><strong>Classes</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="52d9f8e878bed5e090c1cc980373f466a37a48a3">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractShapeFactory&lt;S : Vector&lt;S&gt;, A : GeometricTransformation&lt;S&gt;&gt; : GeometricShapeFactory&lt;S, A&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Base class for GeometricTransformation providing a standard implementation for
+GeometricShapeFactory.adimensional.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4cf7746507f45f48908c915c8e041a5605efe398">
+        <td class="sourcedoc-section section-signature">
+          <code>class AdimensionalShape&lt;S : Vector&lt;S&gt;, A : GeometricTransformation&lt;S&gt;&gt; : GeometricShape&lt;S, A&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A special shape which does not occupy space and does not intersect with any other, not even with itself.
+It also ignores any transformation.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="1ab1ecd35efe0eb389ba4c87ae2b28159289ea54">
+        <td class="sourcedoc-section section-signature">
+          <code>interface AwtShapeCompatible: Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Anything which can be represented as a <a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="752e16543c6b96ef562a11bd1fdf597c815ad14c">
+        <td class="sourcedoc-section section-signature">
+          <code>enum class LinesIntersectionType: Enum&lt;LinesIntersectionType&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>In euclidean geometry, the intersection of two lines can be an EMPTY set, a POINT,
+or a LINE (in other words, infinite points).</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="27e4a7275b9c34a7cb7218f7f698fe73ec579c9c">
+        <td class="sourcedoc-section section-signature">
+          <code>data class LinesIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Describes the result of the intersection between two lines in an euclidean space.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="86793fd40e5e10a19d15cb22214a6d56030f71c4">
+        <td class="sourcedoc-section section-signature">
+          <code>enum class SegmentsIntersectionType: Enum&lt;SegmentsIntersectionType&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>In euclidean geometry, the intersection of two segments can be an EMPTY set, a POINT, or a
+SEGMENT (in other words, infinite points).</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="b22b19dd0c0095cf57f2ac974d1d4c55236351c9">
+        <td class="sourcedoc-section section-signature">
+          <code>data class SegmentsIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Describes the result of the intersection between two segments in an euclidean space.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6ca5e16034acfe0c29eac8e2d494f7489f192cac">
+        <td class="sourcedoc-section section-signature">
+          <code>enum class CircleSegmentIntersectionType: Enum&lt;CircleSegmentIntersectionType&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>In euclidean geometry, the intersection between a segment and a circle can be an EMPTY
+set, a POINT or a PAIR of points.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4678ca7ee256303c3b1533f9f340844703b5769f">
+        <td class="sourcedoc-section section-signature">
+          <code>data class CircleSegmentIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Describes the result of the intersection between a circle and a segment in an euclidean space.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="subpackages">
+
+
+  <p class="sourcedoc-section section-name"><strong>Subpackages</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="8da64f09ec4ec578ab503f9cbbcad2ede7737537">
+        <td class="sourcedoc-section section-signature">
+          <code>package it.unibo.alchemist.model.implementations.geometry.euclidean.twod</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f544c8b7fee479614c3af1983bbdd433a6703289">
+        <td class="sourcedoc-section section-signature">
+          <code>const ARRAY_SIZE_FOR_PATH_ITERATOR: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>When using java.awt.geom.PathIterator to iterate over the boundary of a
+Shape, you need to pass an array of this size.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="87b80ef9e30ff36f598a3ad990184bdc0d36745f">
+      
+      <h3 class="sourcedoc-section element-name">isInBoundaries</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun isInBoundaries(segment: Segment2D&lt;*&gt;, origin: Vector2D&lt;*&gt;, width: Double, height: Double): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Checks whether the given segment is inside a rectangular region described by an origin
+point and width and height values (only positive).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9e06a7903a5a3f1a5be8ec8ccd35fcf00379912d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="7da0f26ba4409d410f84d5441c2eb6212c9b9e46">
+        <td class="sourcedoc-section section-signature">
+          <code>segment: Segment2D&lt;*&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="29778fcc4d11844f85be13335b93c90d5d613645">
+        <td class="sourcedoc-section section-signature">
+          <code>origin: Vector2D&lt;*&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2629f5a557b0dd8b96f3ee9959ee5de306c22051">
+        <td class="sourcedoc-section section-signature">
+          <code>width: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="59df897769a819b06081194c76845e01f68216ac">
+        <td class="sourcedoc-section section-signature">
+          <code>height: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5361303b0346909b963b2f124ba46c422e40d546">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="2ce15e96760f25cb0f0b278cba34bf03a4461e6d">
+      
+      <h3 class="sourcedoc-section element-name">isInBoundaries</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun isInBoundaries(point: Vector2D&lt;*&gt;, origin: Vector2D&lt;*&gt;, width: Double, height: Double): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Checks whether the given point is inside a rectangular region described by an origin
+point and width and height values (only positive).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="950fbaf06a43141c99b30dc20de8f48f75b63ba7">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4be89c69070f318f9344013415c172d9c890fd89">
+        <td class="sourcedoc-section section-signature">
+          <code>point: Vector2D&lt;*&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="29778fcc4d11844f85be13335b93c90d5d613645">
+        <td class="sourcedoc-section section-signature">
+          <code>origin: Vector2D&lt;*&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2629f5a557b0dd8b96f3ee9959ee5de306c22051">
+        <td class="sourcedoc-section section-signature">
+          <code>width: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="59df897769a819b06081194c76845e01f68216ac">
+        <td class="sourcedoc-section section-signature">
+          <code>height: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="133974ad23c43ed1d9333406051ee05047178ac8">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="12ac0a6cb9191c1e1118ad30f4af763d9a251edc">
+      
+      <h3 class="sourcedoc-section element-name">areCollinear</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; areCollinear(p1: P, p2: P, p3: P): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Determines if three points are collinear (i.e. they lie on the same line).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="cd0673106485d0ea90f11fecb2de58340bbde37c">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6391ebc39dab205418975cb3250c35f243bd25c0">
+        <td class="sourcedoc-section section-signature">
+          <code>p1: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="611fc6ab5a7e1084d06908e2abd379354dcd27a2">
+        <td class="sourcedoc-section section-signature">
+          <code>p2: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5ed4806693b393f44fb54e700ea97322e30d75be">
+        <td class="sourcedoc-section section-signature">
+          <code>p3: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2fb66e8757b848771a8bda213b7ba34bf3397774">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="8990290b1de3cca946967f4a1ac5a5e76af42b00">
+      
+      <h3 class="sourcedoc-section element-name">createSegment</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun createSegment(x1: Double, y1: Double, x2: Double, y2: Double): Segment2D&lt;Euclidean2DPosition?&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Creates a Segment2D. x2 defaults to x1 and y2 defaults to y1.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7cfb9a98c39c4d739ed6be11b55cdbcab1b0e597">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="760d4391acfd3f1414fd57b6f23286d8bd624f07">
+        <td class="sourcedoc-section section-signature">
+          <code>x1: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5d6800916636d975d4ba0bf1791297bc3917be12">
+        <td class="sourcedoc-section section-signature">
+          <code>y1: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="87cd6e428b850231c2a79bb9341048bbf616fa9a">
+        <td class="sourcedoc-section section-signature">
+          <code>x2: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="97527760cb2b4fada119367dc496505ec2939b25">
+        <td class="sourcedoc-section section-signature">
+          <code>y2: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="cb199bdf20fb97d4e3f9fc5ba68d73f392f9e72f">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="758eda546e0048ab5d3d4e9140d25a73655ba43f">
+        <td class="sourcedoc-section section-signature">
+          <code>Segment2D&lt;Euclidean2DPosition?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="7afe13436fc89834189299a9d33d2945998de20f">
+      
+      <h3 class="sourcedoc-section element-name">linesIntersection</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; linesIntersection(s1: Segment2D&lt;P&gt;, s2: Segment2D&lt;P&gt;): LinesIntersection&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Finds the intersection of two lines represented by segments. Degenerate segments (of zero
+length) are not supported.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="53e772318a6e6577debf5d526ae29ca97bcb926b">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c412d98c4bbb2090293daf88c066406fca45a87b">
+        <td class="sourcedoc-section section-signature">
+          <code>s1: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7d4fa32e51ef5112996f0ff938145db416997b3f">
+        <td class="sourcedoc-section section-signature">
+          <code>s2: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ccd8f3f57952f4bba42ef974115bd6684eae9f19">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f393212a3c1536d8d7c53bca3b8e7d1c652e3a80">
+        <td class="sourcedoc-section section-signature">
+          <code>LinesIntersection&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="0444aa4ff166897cab126275c61d3cca6e18cab0">
+      
+      <h3 class="sourcedoc-section element-name">intersection</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; intersection(s1: Segment2D&lt;P&gt;, s2: Segment2D&lt;P&gt;): SegmentsIntersection&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Finds the intersection point of two given segments. This method is able to deal with degenerate
+and collinear segments.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3cc3df34312a150e5893b7341fbf028404cdce17">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c412d98c4bbb2090293daf88c066406fca45a87b">
+        <td class="sourcedoc-section section-signature">
+          <code>s1: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7d4fa32e51ef5112996f0ff938145db416997b3f">
+        <td class="sourcedoc-section section-signature">
+          <code>s2: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="80d3a4f6d59d0291e09e5e15cafe56f1211119c5">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="73c34b2118cfb11f44b21be082c3ba35b86a1ac1">
+        <td class="sourcedoc-section section-signature">
+          <code>SegmentsIntersection&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="93b1461712ce2ea54733c4ecb1fbe3c3aad8c1d2">
+      
+      <h3 class="sourcedoc-section element-name">intersection</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; intersection(segment: Segment2D&lt;P&gt;, center: Vector2D&lt;P&gt;, radius: Double): CircleSegmentIntersection&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Finds the intersection between a segment and a circle.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2f503fbc70aca0376aeb227e18ef4c444cf6e9ad">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="beaa2a3c04309c0792271c696a578174dbcd3110">
+        <td class="sourcedoc-section section-signature">
+          <code>segment: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="e2f713c96a1da6d0da5ab768b5fb485579c03357">
+        <td class="sourcedoc-section section-signature">
+          <code>center: Vector2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+        <td class="sourcedoc-section section-signature">
+          <code>radius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="deb696341f5fbd6b551211d36f7b83ca806a37d1">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="cf0a91e3cbf601fbcacfecf2dc2d2c6af648a54e">
+        <td class="sourcedoc-section section-signature">
+          <code>CircleSegmentIntersection&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="d7d1ce50db9af0bbdde83dc2aeeedfc9dcae90cc">
+      
+      <h3 class="sourcedoc-section element-name">rangeFromUnordered</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T : Comparable&lt;T&gt;&gt; rangeFromUnordered(bound1: T, bound2: T): ClosedRange&lt;T&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Creates a ClosedRange from a couple of unordered values.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fcc0ec8d462ba9df948c1a5f63ff1a0b06c042c8">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="355f01728146404ee52a60731ae883d480ddf502">
+        <td class="sourcedoc-section section-signature">
+          <code>bound1: T</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="088a59e997218db4af82920dfbcae4b52d5792db">
+        <td class="sourcedoc-section section-signature">
+          <code>bound2: T</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="af45f60716fdaff755ae956546a6cdab6fde4a6c">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="94b11a59c3079844184f1436a7cd581a060c15d9">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="05a8d7cf183d0c1fa8a7a7448bf99d73dc7f4373">
+      
+      <h3 class="sourcedoc-section element-name">fuzzyIn</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>infix fun Double.fuzzyIn(range: ClosedRange&lt;Double&gt;): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Checks if a double value is fuzzy contained in a range.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2de4acd68b52244f2cd9c44e9da0f140396b18ca">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="81581597044514bf54d4f97266022fc991f3915e">
+        <td class="sourcedoc-section section-signature">
+          <code>Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4b30e348270f062595d53a2e00a7c54d24403898">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="894dedfa0a04f6568e4fc07613f4ed5e83c4b5ab">
+        <td class="sourcedoc-section section-signature">
+          <code>range: ClosedRange&lt;Double&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the range</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="6e29553f0eb9cdae5b4fb77d9c42b8597f32b4c3">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="f6b2cb3b8633d58a9202d188195de7a4d45a290b">
+      
+      <h3 class="sourcedoc-section element-name">vertices</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun Shape.vertices(): List&lt;Euclidean2DPosition&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Obtains the vertices of a polygonal shape. Any curved segment connecting
+two points will be considered as a straight line between them.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="cc6bf6f0e1e842568b26bca3ee9d204391dd61e3">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ea5c1a20b7cfcfec8a35fb4c6a419a1314233755">
+        <td class="sourcedoc-section section-signature">
+          <code>Shape</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7084b816c43579db519aa884f2088fcc0167e6e6">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="23e337354ea4ebf08504b5b97f4b4443eddf28b6">
+        <td class="sourcedoc-section section-signature">
+          <code>List&lt;Euclidean2DPosition&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5a0781ed7640adfd8e453c681b5b29cf19792cc5">
+      
+      <h3 class="sourcedoc-section element-name">coincidesWith</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T : Comparable&lt;T&gt;&gt; ClosedRange&lt;T&gt;.coincidesWith(other: ClosedRange&lt;T&gt;): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Checks whether two ranges coincide. It's a different way of checking if they're equals,
+which doesn't depend on their actual implementation. Note that the way you obtain a range
+may influence the actual class used, and you can have two coincident ranges which don't
+result equals because of different classes.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="53f8e8837367b7c9a9ea065e9b04446a9893fc4f">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="94b11a59c3079844184f1436a7cd581a060c15d9">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="640b19fbda4c0113b089955128babdcfaec7c927">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="549b0d20994b14cce9aeb3bd0cbe59650ab4cb76">
+        <td class="sourcedoc-section section-signature">
+          <code>other: ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="404fee7d485c2b36b057283835f126610b74a129">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="1a118c38bc5865ae48eb0335c8cb60728407568a">
+      
+      <h3 class="sourcedoc-section element-name">contains</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T : Comparable&lt;T&gt;&gt; ClosedRange&lt;T&gt;.contains(other: ClosedRange&lt;T&gt;): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Checks whether the range contains the other one.
+This method is faster than checking if the range contains both of the endpoints of other.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="113782d0d8f53ee29f365740f76e3482d4b1b762">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="94b11a59c3079844184f1436a7cd581a060c15d9">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="94304ea601476ac1b3ebd2a4d3b2c898c4fb6529">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="549b0d20994b14cce9aeb3bd0cbe59650ab4cb76">
+        <td class="sourcedoc-section section-signature">
+          <code>other: ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5afea1f4fb6e91c05d959eaf5d7696df60c1646d">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="eb4f69d1b547b489da4ed3c39ac9a824f79fedc5">
+      
+      <h3 class="sourcedoc-section element-name">intersects</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T : Comparable&lt;T&gt;&gt; ClosedRange&lt;T&gt;.intersects(other: ClosedRange&lt;T&gt;): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Checks whether the range intersects the other one.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e389afa44e6135d67357f346a51bca5bae83a81d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="94b11a59c3079844184f1436a7cd581a060c15d9">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="edc7ff3036505fa4bc5cd306d82f643a41a2c6a3">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="549b0d20994b14cce9aeb3bd0cbe59650ab4cb76">
+        <td class="sourcedoc-section section-signature">
+          <code>other: ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="8cbf4ac5c75996fbd097b34c80bc2f145b82c965">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="db15ad87953f80ce7319cc15f7718129d4b2c950">
+      
+      <h3 class="sourcedoc-section element-name">intersect</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T : Comparable&lt;T&gt;&gt; ClosedRange&lt;T&gt;.intersect(other: ClosedRange&lt;T&gt;): ClosedRange&lt;T&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Finds the intersection between two ranges, the resulting range may feature a single value
+(if the ranges only share an endpoint) or can be null, if they don't intersect at all.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e20d2181cf551ef0c6de15d6156e386868ef43ca">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="94b11a59c3079844184f1436a7cd581a060c15d9">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e94b7903c8880005fcb263d7268e0ea86d4da109">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="549b0d20994b14cce9aeb3bd0cbe59650ab4cb76">
+        <td class="sourcedoc-section section-signature">
+          <code>other: ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4cd874a3696cff117ce01b27253a22fdabf04247">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d6973bd110dbe4b7dca293158be64dedc5549bd1">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="ed66fb949cd84bcd1dd92fc0867767cf6e16f3f5">
+      
+      <h3 class="sourcedoc-section element-name">intersectsBoundsExcluded</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T : Comparable&lt;T&gt;&gt; ClosedRange&lt;T&gt;.intersectsBoundsExcluded(other: ClosedRange&lt;T&gt;): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Checks whether two ranges intersect, excluding their bounds (i.e., excluding both
+ClosedRange.start and ClosedRange.endInclusive). This means false is returned in
+case the ranges share a single endpoint.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="67571c710f468521f50cb6ed6175562a31878064">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="94b11a59c3079844184f1436a7cd581a060c15d9">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="af88442adcf63c61f0e6cb488d6bda3a98dde398">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="549b0d20994b14cce9aeb3bd0cbe59650ab4cb76">
+        <td class="sourcedoc-section section-signature">
+          <code>other: ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f0b174daa3386cb5ebcf62debf68e916c6bc28d5">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="ca4e2052d1228ab0f0ee4ca5809a284e3706f36e">
+      
+      <h3 class="sourcedoc-section element-name">minus</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>infix operator fun &lt;T : Comparable&lt;T&gt;&gt; ClosedRange&lt;T&gt;.minus(other: ClosedRange&lt;T&gt;): List&lt;ClosedRange&lt;T&gt;&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Performs a subtraction between ranges. The operation can produce an empty list (e.g. if
+the current range is contained in the other one), a list featuring a single element,
+or a list featuring two elements (e.g. if the current range contains the other one).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e3e16e4823615453a96b0667a5095fa62d6ded65">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="94b11a59c3079844184f1436a7cd581a060c15d9">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="79dac64afb72d1b7c200e68c3f11333f19f6a395">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="549b0d20994b14cce9aeb3bd0cbe59650ab4cb76">
+        <td class="sourcedoc-section section-signature">
+          <code>other: ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fbcc231c27202be75f8b23332b57b8b23334aac9">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="dc6534f58aab88e136d73d3cb4e9b21d27ce91c4">
+        <td class="sourcedoc-section section-signature">
+          <code>List&lt;ClosedRange&lt;T&gt;&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="fceed2faf3bba92ec09e5a720d5fe14ce0f1d157">
+      
+      <h3 class="sourcedoc-section element-name">subtractAll</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T : Comparable&lt;T&gt;&gt; ClosedRange&lt;T&gt;.subtractAll(others: List&lt;ClosedRange&lt;T&gt;&gt;): List&lt;ClosedRange&lt;T&gt;&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Subtracts all the given ranges from the current one. See ClosedRange.minus.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5f9d2b914fdfeac5e35c8c3e7c8ec303ef45ad89">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="94b11a59c3079844184f1436a7cd581a060c15d9">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="584420603e2eb959f8b40433eccb78fd9dd81bb4">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b261ae5b3d8129d4dc74a1d7244e33f94ee87684">
+        <td class="sourcedoc-section section-signature">
+          <code>others: List&lt;ClosedRange&lt;T&gt;&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1f26fccc58ccfdc908c7e72497b032dfbb0c710f">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="dc6534f58aab88e136d73d3cb4e9b21d27ce91c4">
+        <td class="sourcedoc-section section-signature">
+          <code>List&lt;ClosedRange&lt;T&gt;&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="a4fb42801504b3d021b94df81a1263052a4b9ea4">
+      
+      <h3 class="sourcedoc-section element-name">findExtremeCoordsOnX</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;V : Vector2D&lt;V&gt;&gt; List&lt;V&gt;.findExtremeCoordsOnX(): ClosedRange&lt;Double&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Given a non empty list of points represented as vectors, this method finds the extreme coordinates
+(i.e. min and max coordinates) on the X-axis, these are used to create the returned ClosedRange.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9e1da62bdfd82efa6b3d2b53515f3b9439a95728">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="03bfe527237be7845b67d9e3acbc528d4d2cf7ad">
+        <td class="sourcedoc-section section-signature">
+          <code>List&lt;V&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="bec5d49930ffc760a1ccccad68f16543b154782f">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9f569e7925f7e3d4e027bb969d8df8a5ee9b95b1">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;Double&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="bb66e630ad22ec60433b7ba1ba8a5beccd47173f">
+      
+      <h3 class="sourcedoc-section element-name">findExtremeCoordsOnY</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;V : Vector2D&lt;V&gt;&gt; List&lt;V&gt;.findExtremeCoordsOnY(): ClosedRange&lt;Double&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Given a non empty list of points represented as vectors, this method finds the extreme coordinates
+(i.e. min and max coordinates) on the Y-axis, these are used to create the returned ClosedRange.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="527179eb86d46be156798b079f06653189023301">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="03bfe527237be7845b67d9e3acbc528d4d2cf7ad">
+        <td class="sourcedoc-section section-signature">
+          <code>List&lt;V&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5b50b1a6a8183b509b0e9b37aca904263f46c86c">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9f569e7925f7e3d4e027bb969d8df8a5ee9b95b1">
+        <td class="sourcedoc-section section-signature">
+          <code>ClosedRange&lt;Double&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

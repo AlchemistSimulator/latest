@@ -1,0 +1,641 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>README</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: kotlindoc -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocModuleHomePage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocModule, sourceDocModuleHomepage, kotlindoc, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocModuleHomepage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
+<!-- Source Filename: home/travis/build/AlchemistSimulator/Alchemist/README.md -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc"},"description":"","title":"README"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>README</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <h1 id="alchemist"><a href="#alchemist" id="alchemist" class="anchor"></a>Alchemist</h1>
+<p><img src="https://alchemistsimulator.github.io/latest/assets/media/logo.svg" alt="Alchemist logo" /></p>
+<p>Alchemist is a simulator for pervasive, aggregate, and nature-inspired computing.
+At the moment, the simulator features:</p>
+<ul>
+<li>Executing <a href="http://protelis.org">Protelis</a> programs</li>
+<li>Executing <a href="https://scafi.github.io/">Scafi</a> programs</li>
+<li>Executing biological simulations with chemical-like reactions</li>
+<li>Executing <a href="http://dx.doi.org/10.1016/j.pmcj.2014.12.002">SAPERE</a> -like programs, written in a tuple based language resembling <a href="https://doi.org/10.1109%2Fmc.1986.1663305">Linda</a></li>
+<li>Simulating bidimensional environments</li>
+<li>Simulating real-world maps, with support for navigation along roads, and for importing gpx format gps traces</li>
+<li>Simulating indoor environments by importing black and white images</li>
+<li>Creating batches and run with different value of parameters</li>
+<li>Run in grid computing environments</li>
+</ul>
+<h2 id="users"><a href="#users" id="users" class="anchor"></a>Users</h2>
+<p>Alchemist users should rely on the documentation available on <a href="http://alchemistsimulator.github.io/">the official Alchemist website</a>.
+Alchemist is available on Maven Central. You can import all the components by importing the <code>it.unibo.alchemist:alchemist</code> artifact.</p>
+<h3 id="gradle"><a href="#gradle" id="gradle" class="anchor"></a>Gradle</h3>
+<p>You need to add the alchemist core dependency, plus the modules you need for your simulation.
+Add this dependency to your build, substituting <code>ALCHEMIST_VERSION</code> with the version you want to use
+(change the scope appropriately if you need Alchemist only for runtime or testing).</p>
+<pre><code class="language-kotlin">dependencies {
+    // Alchemist core dependency
+    implementation(&quot;it.unibo.alchemist:alchemist:ALCHEMIST_VERSION&quot;)
+    // Example incarnation
+    implementation(&quot;it.unibo.alchemist:alchemist-incarnation-protelis:ALCHEMIST_VERSION&quot;)
+    // Example additional module
+    implementation(&quot;it.unibo.alchemist:alchemist-cognitive-agents:ALCHEMIST_VERSION&quot;)
+}
+</code></pre>
+<h3 id="maven"><a href="#maven" id="maven" class="anchor"></a>Maven</h3>
+<p>Add this dependency to your build, substitute <code>ALCHEMIST_VERSION</code> with the version you want to use. If you do not need the whole Alchemist machinery but just a sub-part of it, you can restrict the set of imported artifacts by using as dependencies the modules you are actually in need of.</p>
+<pre><code class="language-xml">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;it.unibo.alchemist&lt;/groupId&gt;
+        &lt;artifactId&gt;alchemist&lt;/artifactId&gt;
+        &lt;version&gt;ALCHEMIST_VERSION&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;it.unibo.alchemist&lt;/groupId&gt;
+        &lt;artifactId&gt;alchemist-incarnation-protelis&lt;/artifactId&gt;
+        &lt;version&gt;ALCHEMIST_VERSION&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;it.unibo.alchemist&lt;/groupId&gt;
+        &lt;artifactId&gt;alchemist-cognitive-agents&lt;/artifactId&gt;
+        &lt;version&gt;ALCHEMIST_VERSION&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+<h2 id="developers"><a href="#developers" id="developers" class="anchor"></a>Developers</h2>
+<h3 id="status-badges"><a href="#status-badges" id="status-badges" class="anchor"></a>Status Badges</h3>
+<h4 id="stable-branch"><a href="#stable-branch" id="stable-branch" class="anchor"></a>Stable branch</h4>
+<h5 id="info"><a href="#info" id="info" class="anchor"></a>Info</h5>
+<p>master: <a href="https://travis-ci.org/AlchemistSimulator/Alchemist"><img src="https://travis-ci.org/AlchemistSimulator/Alchemist.svg?branch=master" alt="Build Status" /></a></p>
+<p>develop: <a href="https://travis-ci.org/AlchemistSimulator/Alchemist"><img src="https://travis-ci.org/AlchemistSimulator/Alchemist.svg?branch=develop" alt="Build Status" /></a></p>
+<p><a href="https://www.javadoc.io/doc/it.unibo.alchemist/alchemist"><img src="https://www.javadoc.io/badge/it.unibo.alchemist/alchemist.svg" alt="Javadocs" /></a>
+<img src="https://img.shields.io/github/license/AlchemistSimulator/Alchemist" alt="GitHub" />
+<a href="https://bestpractices.coreinfrastructure.org/projects/TODO"><img src="https://bestpractices.coreinfrastructure.org/projects/TODO/badge" alt="CII Best Practices" /></a>
+<img src="https://img.shields.io/github/languages/count/AlchemistSimulator/Alchemist" alt="GitHub language count" />
+<img src="https://img.shields.io/github/languages/top/AlchemistSimulator/Alchemist" alt="GitHub top language" />
+<a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=ncloc" alt="Lines of Code" /></a>
+<img src="https://img.shields.io/github/languages/code-size/AlchemistSimulator/Alchemist" alt="GitHub code size in bytes" />
+<img src="https://img.shields.io/github/repo-size/AlchemistSimulator/Alchemist" alt="GitHub repo size" />
+<img src="https://img.shields.io/maven-central/v/it.unibo.alchemist/alchemist" alt="Maven Central" />
+<img src="https://img.shields.io/github/contributors/AlchemistSimulator/Alchemist" alt="GitHub contributors" /></p>
+<h5 id="quality"><a href="#quality" id="quality" class="anchor"></a>Quality</h5>
+<p><a href="https://ktlint.github.io/"><img src="https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg" alt="ktlint" /></a>
+<a href="https://www.codacy.com/app/Alchemist/Alchemist?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AlchemistSimulator/Alchemist&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c7304e8bd4044aa5955c6d5c844f39a4" alt="Codacy Badge" /></a>
+<img src="https://img.shields.io/codecov/c/github/AlchemistSimulator/Alchemist" alt="Codecov" />
+<img src="https://img.shields.io/codeclimate/maintainability-percentage/AlchemistSimulator/Alchemist" alt="Code Climate maintainability" />
+<img src="https://img.shields.io/codeclimate/issues/AlchemistSimulator/Alchemist" alt="Code Climate maintainability" />
+<img src="https://img.shields.io/codeclimate/tech-debt/AlchemistSimulator/Alchemist" alt="Code Climate maintainability" />
+<a href="https://www.codefactor.io/repository/github/alchemistsimulator/alchemist"><img src="https://www.codefactor.io/repository/github/alchemistsimulator/alchemist/badge" alt="CodeFactor" /></a>
+<a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=alert_status" alt="Quality Gate Status" /></a>
+<a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=bugs" alt="Bugs" /></a>
+<a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=code_smells" alt="Code Smells" /></a>
+<a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=duplicated_lines_density" alt="Duplicated Lines (%)" /></a>
+<a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=sqale_rating" alt="Maintainability Rating" /></a>
+<a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=reliability_rating" alt="Reliability Rating" /></a>
+<a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=security_rating" alt="Security Rating" /></a>
+<a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=sqale_index" alt="Technical Debt" /></a>
+<a href="https://sonarcloud.io/dashboard?id=AlchemistSimulator_Alchemist"><img src="https://sonarcloud.io/api/project_badges/measure?project=AlchemistSimulator_Alchemist&amp;metric=vulnerabilities" alt="Vulnerabilities" /></a></p>
+<h5 id="progress"><a href="#progress" id="progress" class="anchor"></a>Progress</h5>
+<p><img src="https://img.shields.io/github/issues/AlchemistSimulator/Alchemist" alt="GitHub issues" />
+<img src="https://img.shields.io/github/issues-closed/AlchemistSimulator/Alchemist" alt="GitHub closed issues" />
+<img src="https://img.shields.io/github/issues-pr/AlchemistSimulator/Alchemist" alt="GitHub pull requests" />
+<img src="https://img.shields.io/github/issues-pr-closed/AlchemistSimulator/Alchemist" alt="GitHub closed pull requests" />
+<img src="https://img.shields.io/github/commit-activity/y/AlchemistSimulator/Alchemist" alt="GitHub commit activity" />
+<img src="https://img.shields.io/github/commits-since/AlchemistSimulator/Alchemist/latest/develop" alt="GitHub commits since latest release (by date)" />
+<img src="https://img.shields.io/github/last-commit/AlchemistSimulator/Alchemist/develop" alt="GitHub last commit" /></p>
+<h3 id="javadocs"><a href="#javadocs" id="javadocs" class="anchor"></a>Javadocs</h3>
+<p>Javadocs are available for both <a href="http://alchemist-doc.surge.sh/">the latest stable version</a> and <a href="http://alchemist-unstable-doc.surge.sh/">the latest development snapshot</a>.
+If you need to access the documentation for any older stable version, <a href="https://www.javadoc.io/doc/it.unibo.alchemist/alchemist/">javadoc.io</a> is probably the right place to search in.</p>
+<h3 id="importing-the-project"><a href="#importing-the-project" id="importing-the-project" class="anchor"></a>Importing the project</h3>
+<p>The project is easiest to import in IntelliJ Idea.</p>
+<h4 id="recommended-configuration"><a href="#recommended-configuration" id="recommended-configuration" class="anchor"></a>Recommended configuration</h4>
+<p>Install the following plugins (use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>, then search for &quot;Plugins&quot;):</p>
+<ul>
+<li>From the main list:
+<ul>
+<li>Scala</li>
+<li>Kotlin</li>
+</ul>
+</li>
+<li>From &quot;Browse Repositories&quot;:
+<ul>
+<li><a href="https://plugins.jetbrains.com/plugin/7358-antlr-v4-grammar-plugin">ANTLR v4 grammar plugin</a></li>
+<li><a href="https://plugins.jetbrains.com/plugin/1065-checkstyle-idea">Checkstyle-IDEA</a></li>
+<li><a href="https://plugins.jetbrains.com/plugin/3847-findbugs-idea">FindBugs-IDEA</a></li>
+<li><a href="https://plugins.jetbrains.com/plugin/1137-pmdplugin">PMDPlugin</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="importing-the-project-1"><a href="#importing-the-project-1" id="importing-the-project-1" class="anchor"></a>Importing the project</h4>
+<ol start="0">
+<li>Windows user should perform an additional first step: before cloning the repository, make sure that the autocrlf feature of git is disabled, by issuing <code>git config --global core.autocrlf false</code>. If the step is not performed, git will automatically insert CRLF line endings, violating the project's Checkstyle rules (which are rather strict, and prevent the build from succeeding).</li>
+<li>Clone this repository in a folder of your preference using <code>git clone</code> appropriately</li>
+<li>Open IntellJ. If a project opens automatically, select &quot;Close project&quot;. You should be on the welcome screen of IntelliJ idea.</li>
+<li>Select &quot;Import Project&quot;</li>
+<li>Navigate your file system and find the folder where you cloned the repository. <strong>Do not select it</strong>. Open the folder, and you should find a lowercase <code>alchemist</code> folder. That is the correct project folder, not the outermost <code>Alchemist</code> folder (created by <code>git</code> in case you cloned without specifying a different folder name). Once the correct folder has been selected, click <kbd>Ok</kbd></li>
+<li>Select &quot;Import Project from external model&quot;</li>
+<li>Make sure &quot;Gradle&quot; is selected as external model tool</li>
+<li>Click <kbd>Finish</kbd></li>
+<li>If prompted to override any .idea file, try to answer <kbd>No</kbd>. It's possible that IntelliJ refuses to proceed, in which case click <kbd>Finish</kbd> again, then select <kbd>Yes</kbd>.</li>
+<li>A dialog stating that &quot;IntelliJ IDEA found a Gradle build script&quot; may appear, in such case answer <kbd>Import Gradle Project</kbd>.</li>
+<li>Wait for the IDE to import the project from Gradle. The process may take several minutes, due to the amount of dependencies. Should the synchronization fail, make sure that the IDE's Gradle is configured correctly:</li>
+<li>In 'Settings -&gt; Build, Execution, Deployment -&gt; Build Tools &gt; Gradle', for the option 'Use Gradle from' select 'gradle-wrapper.properties file'. Enabling auto-import is also recommended.</li>
+<li><strong>Important:</strong> Alchemist requires java 11+, so make sure the 'Gradle JVM' option points to such a version (if you don't have a JDK 11+ installed make sure to get one).</li>
+<li>Once imported, the project may still be unable to compile, due to missing sources in incarnation-biochemistry. This problem can be solved by opening the IntelliJ terminal (e.g. with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>, typing &quot;terminal&quot; and pressing <kbd>Enter</kbd>), and issue:</li>
+</ol>
+<ul>
+<li>On Unix: <code>./gradlew alchemist-incarnation-biochemistry:generateGrammarSource</code></li>
+<li>On Windows: <code>gradlew.bat alchemist-incarnation-biochemistry:generateGrammarSource</code></li>
+</ul>
+<h3 id="developing-the-project"><a href="#developing-the-project" id="developing-the-project" class="anchor"></a>Developing the project</h3>
+<p>Contributions to this project are welcome. Just some rules:</p>
+<ul>
+<li>We use <a href="https://github.com/nvie/gitflow">git flow</a>, so if you write new features, please do so in a separate <code>feature-</code> branch.</li>
+<li>We recommend forking the project, developing your stuff, then contributing back via pull request directly from GitHub</li>
+<li>Commit often. Do not throw at me pull requests with a single giant commit adding or changing the whole world. Split it in multiple commits and request a merge to the mainline often.</li>
+<li>Stay in sync with the <code>develop</code> branch: pull often from <code>develop</code> (if the build passes), so that you don't diverge too much from the main development line.</li>
+<li>Do not introduce low quality code. All the new code must comply with the checker rules (that are quite strict) and must not introduce any other warning. Resolutions of existing warnings (if any is present) are very welcome instead.</li>
+</ul>
+<h4 id="building-the-project"><a href="#building-the-project" id="building-the-project" class="anchor"></a>Building the project</h4>
+<p>While developing, you can rely on IntelliJ to build the project, it will generally do a very good job.
+If you want to generate the artifacts, you can rely on Gradle. Just point a terminal on the project's root and issue</p>
+<pre><code class="language-bash">./gradlew build
+</code></pre>
+<p>This will trigger the creation of the artifacts the executions of the tests, the generation of the documentation and of the project reports.</p>
+<p><em><strong>NOTE THAT:</strong></em> Alchemist requires java 11+ to work, make sure to have a JDK version 11+ installed.</p>
+<h4 id="build-reports"><a href="#build-reports" id="build-reports" class="anchor"></a>Build reports</h4>
+<p>Every Alchemist build triggers the creation of a set of reports, that provide hints regarding the current status of quality of the code base. Such reports are available for both <a href="http://alchemist-reports.surge.sh/build/reports/buildDashboard/">the latest stable</a> and <a href="http://alchemist-unstable-reports.surge.sh/build/reports/buildDashboard/">the latest development</a> versions.</p>
+
+
+
+<p><b>Roots:</b></p>
+<ul>
+  <li>it.unibo.alchemist</li>
+
+</ul>
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

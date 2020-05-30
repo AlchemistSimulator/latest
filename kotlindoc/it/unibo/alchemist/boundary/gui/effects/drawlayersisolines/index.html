@@ -1,0 +1,1402 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>DrawLayersIsolines</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/boundary/gui/effects/drawlayersisolines","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersisolines"},"description":"","title":"DrawLayersIsolines"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>DrawLayersIsolines</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="DrawLayersIsolines">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="35f71ec12519f64b80a4353aad0327748107d8dd">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract class DrawLayersIsolines: DrawLayersValues</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Draw layers isolines. The user must specify: - the number of isolines to draw - the min layer value - the max layer value - the distribution, used to space isoline values between min and max This class defines the DrawLayersIsolines#drawFunction(Function, Environment, Graphics2D, IWormhole2D) method, which is capable of drawing a layer's isolines given a function. The only responsibility left to subclasses is to provide a <code>LayerToFunctionMapper</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="d2e5e06c6b812775c453038f2a21484fc0a41c21">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(algorithm: IsolinesFinder?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Every class extending this one should call this constructor.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b688c547b292b6576e6398dee4377eafb1f91f56">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ac29d1aab844e5fafbbc763c1785b38a12f861e4">
+        <td class="sourcedoc-section section-signature">
+          <code>algorithm: IsolinesFinder?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>IsolinesFinder!: - the algorithm used to extract isolines</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="bce90c4915af0d54c9974125cf120f6f4042e811">
+      
+      <h3 class="sourcedoc-section element-name">getDrawValues</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getDrawValues(): Boolean?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b1013b9a027b3ceada33689a53fe6c3c0de2b6e6">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d50d517a063967f436c6c12ce570037bd03ef29c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean!: whether the values of the isolines are to be drawn or not</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="97c46424687f3835f663f8338874048da7b5b039">
+      
+      <h3 class="sourcedoc-section element-name">getNumberOfIsolines</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getNumberOfIsolines(): RangedInteger?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="a859168fa55c5aef15af3d27972e8f3dc61eaf2a">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="644aadba9524949855eab119d0f2cf30a9b5cdec">
+        <td class="sourcedoc-section section-signature">
+          <code>RangedInteger?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>RangedInteger!: the number of isolines</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="44b7d8d37c561740cfb80baeeb17ee1c68b15df4">
+      
+      <h3 class="sourcedoc-section element-name">setDistribution</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setDistribution(distribution: Distribution?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5f77d5c75e9981b49cc9fa08a219335281bf4615">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f4f465a764d357fbe37794d1d9e1126c66db6eb3">
+        <td class="sourcedoc-section section-signature">
+          <code>distribution: Distribution?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Distribution!: to set</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="74309f075bb0c8fb8b45a323a6d8396b7a67eb4f">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="0e89cfe464fb68865e31a15312bf456dd9f75943">
+      
+      <h3 class="sourcedoc-section element-name">getIsolinesFinder</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun getIsolinesFinder(): IsolinesFinder?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="13b135ff616c900017ec6b916879030abb1b4c3e">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ce0017d5df4a140ff7874f15ef79bc8e1551d84e">
+        <td class="sourcedoc-section section-signature">
+          <code>IsolinesFinder?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>IsolinesFinder!: the algorithm used to extract isolines</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="8590c064ada85b6d812494bd7c9f66789295276e">
+      
+      <h3 class="sourcedoc-section element-name">setDrawValues</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setDrawValues(drawValues: Boolean?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="0486d6c6f46008be80d1c7d7ab51d3f3a4f00aa1">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6931a2f29521ecdde5a9a9cd3cbfee239e3fb7ef">
+        <td class="sourcedoc-section section-signature">
+          <code>drawValues: Boolean?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean!: whether the values of the isolines are to be drawn or not</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9f75066580f996e70b49841318a62a9fe594b23d">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="351bc6e65471d8050f5a88c5e30a8d790a28910d">
+      
+      <h3 class="sourcedoc-section element-name">drawFunction</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun &lt;T : Any?, P : Position2D&lt;P&gt;?&gt; drawFunction(f: Function&lt;P, Number?&gt;?, env: Environment&lt;T, P&gt;?, g: Graphics2D?, wormhole: IWormhole2D&lt;P&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Draw the provided function.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="77458bf5f77f922103ca1a31d3f98a0afce4907c">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b1e8b8d4fd635701eadd983924553d136eb1cd62">
+        <td class="sourcedoc-section section-signature">
+          <code>f: Function&lt;P, Number?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Function&lt;in P, out Number!&gt;!: - the function</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5f36e38a592b4a94bef1b256824b2287d86c46b9">
+        <td class="sourcedoc-section section-signature">
+          <code>env: Environment&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;T, P&gt;!: - the environment (mainly used to make positions)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="edffa008f56f12e1a055ce06940e631908624df2">
+        <td class="sourcedoc-section section-signature">
+          <code>g: Graphics2D?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Graphics2D.html">Graphics2D</a>!: - the Graphics2D (where to draw the function)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="04e711ed9ea5a9bf9044acb7d7742d1e7271f78e">
+        <td class="sourcedoc-section section-signature">
+          <code>wormhole: IWormhole2D&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>IWormhole2D<P>!: - the wormhole (to map env points to view points)</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="526a1ffb4efba6488092df7d72053ac12842a6db">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="2f61004d7f6eb37d0dbda4593e4b053ccbdab48c">
+      
+      <h3 class="sourcedoc-section element-name">getDistribution</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getDistribution(): Distribution?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4fb5d5da0326fed0ecb5140489217aceac0acd8e">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c2f38320d7afa4d882b9084ee83a0d5f6b2bf58a">
+        <td class="sourcedoc-section section-signature">
+          <code>Distribution?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Distribution!: the current distribution</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="f486b39149af4448826f8f1fd5c1a31ec5529852">
+      
+      <h3 class="sourcedoc-section element-name">setNumberOfIsolines</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setNumberOfIsolines(nOfIsolines: RangedInteger?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="da32e86afb674cfe9ab7827d9f4b675e945aa693">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="722f2a50c28f025ac58870eae53a11cd18546989">
+        <td class="sourcedoc-section section-signature">
+          <code>nOfIsolines: RangedInteger?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>RangedInteger!: the number of isolines</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="97f94a8dafee0573ab2717e6498309cecce8d4be">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="cbad3d64c06bb73d55029175d186f74cc5bd2ad7">
+      
+      <h3 class="sourcedoc-section element-name">logspace</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open static fun logspace(d1: Double, d2: Double, n: Int, base: Double): DoubleArray?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>generates n logarithmically-spaced points between d1 and d2 using the provided base.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="871c610bb24f718e38633d817bb8b84b3f94f671">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ad5d06628e1c30e68086a36d9e484e12c7db99b4">
+        <td class="sourcedoc-section section-signature">
+          <code>d1: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: The min value</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6af6af7c9a38725dfbd67f7c3f6a24e656ce0eca">
+        <td class="sourcedoc-section section-signature">
+          <code>d2: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: The max value</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8c933cf532bb80aee9a4734191154609039c1af4">
+        <td class="sourcedoc-section section-signature">
+          <code>n: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: The number of points to generated</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="163af249e84acb566b29cd1b1f38e83e5852f729">
+        <td class="sourcedoc-section section-signature">
+          <code>base: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the logarithmic base to use</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="bd47ad23d6e3a190293215926f7410b95db7c52b">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9a2fdba097a22f98dd0acd872fb7caeaab2b6907">
+        <td class="sourcedoc-section section-signature">
+          <code>DoubleArray?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>DoubleArray!: an array of lineraly space points.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5fb61e6fb6dc7ccadfd31bb232aba3976b327cc2">
+      
+      <h3 class="sourcedoc-section element-name">linspace</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open static fun linspace(d1: Double, d2: Double, n: Int): DoubleArray?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>generates n linearly-spaced points between d1 and d2.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="48cc50ebde5a07a3ea34db4cc5914dfcca5dc726">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ad5d06628e1c30e68086a36d9e484e12c7db99b4">
+        <td class="sourcedoc-section section-signature">
+          <code>d1: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: The min value</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6af6af7c9a38725dfbd67f7c3f6a24e656ce0eca">
+        <td class="sourcedoc-section section-signature">
+          <code>d2: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: The max value</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8c933cf532bb80aee9a4734191154609039c1af4">
+        <td class="sourcedoc-section section-signature">
+          <code>n: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: The number of points to generated</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3c106cd0fe6fde1ae33acf7fbf04243c0cf00a8f">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9a2fdba097a22f98dd0acd872fb7caeaab2b6907">
+        <td class="sourcedoc-section section-signature">
+          <code>DoubleArray?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>DoubleArray!: an array of lineraly space points.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

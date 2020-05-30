@@ -1,0 +1,2862 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Environment</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocInterface, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/environment","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment"},"description":"","title":"Environment"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>Environment</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="Environment">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="a4bdcb37a17bc1367517d98d679627b556d91a3d">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>interface Environment&lt;T : Any?, P : Position&lt;P&gt;?&gt; : Serializable, MutableIterable&lt;Node&lt;T&gt;?&gt;, Any</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Interface for an environment. Every environment must implement this specification.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="d6c8a94f9b526f7b34e87698826b133dcc53e602">
+      
+      <h3 class="sourcedoc-section element-name">addLayer</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun addLayer(m: Molecule?, l: Layer&lt;T, P&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Add a <code>Layer</code> to the <code>Environment</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1a140c5e049801a2e36c214cf5b589ff6fd3aac3">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="90ca043d5ed0dee771a4f39845fad610f33e06cd">
+        <td class="sourcedoc-section section-signature">
+          <code>m: Molecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Molecule!: the <code>Molecule</code> of the <code>Layer</code></p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="216e2d21ab853fae21c23a7b1f7fea374158b6cf">
+        <td class="sourcedoc-section section-signature">
+          <code>l: Layer&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Layer&lt;T, P&gt;!: the <code>Layer</code></p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="bc8ee81d8223a0a9256caba0f1686ae09986fb67">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="6b7b8010b33e0728df1cdbca0a0fc405ae88b3e7">
+      
+      <h3 class="sourcedoc-section element-name">getLayers</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getLayers(): ListSet?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Return all the Layers in this <code>Environment</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="79dec656b69d650bd79c630710bc1429f9fc7590">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="99602732fa1b266a3e94a7196ab5758f084da2a8">
+        <td class="sourcedoc-section section-signature">
+          <code>ListSet?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ListSet!: a ListSet of <code>Layer</code>.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="653fc524ab0649192c8eebc1e405b0a985b28268">
+      
+      <h3 class="sourcedoc-section element-name">setSimulation</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun setSimulation(s: Simulation&lt;T, P&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b076f7b2946907a24be4770c5186a9793255e069">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4b8f4d33220c92e48b3961fa2719f54c69024c71">
+        <td class="sourcedoc-section section-signature">
+          <code>s: Simulation&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Simulation&lt;T, P&gt;!: the simulation</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="6ad7b77d9ffb267efc8a5d78faf2b3b4c336c13b">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="2ddd585ed5b47addfaa3c60b617033cf5710c6e7">
+      
+      <h3 class="sourcedoc-section element-name">getSize</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getSize(): DoubleArray?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This method returns the size of the environment as an array of length <code>#getDimensions()</code>. This method must return distance measured with the same unit used by the positions. No non-euclidean distance metrics are allowed.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="aa7c8a5cda15863058c806e41b4d2bdaa15bf24d">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9a2fdba097a22f98dd0acd872fb7caeaab2b6907">
+        <td class="sourcedoc-section section-signature">
+          <code>DoubleArray?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>DoubleArray!: the size of this environment</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="cf38825cef8cda84e1d1ce40594eddbea25b3dec">
+      
+      <h3 class="sourcedoc-section element-name">getDistanceBetweenNodes</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getDistanceBetweenNodes(n1: Node&lt;T&gt;?, n2: Node&lt;T&gt;?): Double</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Measures the distance between two nodes in the environment.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="8808f5b4a8fe9a0c9b60703fd01a737eee41f0be">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="481f1b3fbfa49c31c780b08bfe652f1539316cd2">
+        <td class="sourcedoc-section section-signature">
+          <code>n1: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: the first node</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="32b09dd09f9a44f7f205a4b579b0d2fcf06aa8c8">
+        <td class="sourcedoc-section section-signature">
+          <code>n2: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: the second node</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="6f4d1ab4e06c62b19c955446d1cddc6713ba2bd2">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="81581597044514bf54d4f97266022fc991f3915e">
+        <td class="sourcedoc-section section-signature">
+          <code>Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the distance between the two nodes</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="dba7a9aeb721e8c96aa15220024d533eb940201d">
+      
+      <h3 class="sourcedoc-section element-name">getNodesWithinRange</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getNodesWithinRange(center: Node&lt;T&gt;?, range: Double): ListSet?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Given a node (center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized and it's consequently <b>much</b> better to use <code>Environment#getNeighborhood(Node)</code> and filter the neighborhood if you are sure that all the nodes within the range are connected to the center.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="be94ff525840174fb5ac3c0eb4459af6589ba911">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="15c91beee23d63e9ff50d9bef198c58f02378839">
+        <td class="sourcedoc-section section-signature">
+          <code>center: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: the node to consider as center</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fa8c3d281d0964549892bfaa2f43428a4f36facd">
+        <td class="sourcedoc-section section-signature">
+          <code>range: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the exploration range</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="d826b3f8d895875c8f9eaf56492d9bc185c9cb5f">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="99602732fa1b266a3e94a7196ab5758f084da2a8">
+        <td class="sourcedoc-section section-signature">
+          <code>ListSet?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ListSet!: the list of nodes within the range</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="2ca5d5d528818105ff2f2e07d66a9b8a7cdd162b">
+      
+      <h3 class="sourcedoc-section element-name">getNodesWithinRange</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getNodesWithinRange(center: P, range: Double): ListSet?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Given a <code>Position</code>(center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="35d5fd6f82bbfed39ab4daad6d1068e0959de71a">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="302d443e6a70562013d7cb84b9d23d695d149cd1">
+        <td class="sourcedoc-section section-signature">
+          <code>center: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: the <code>Position</code> to consider as center</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fa8c3d281d0964549892bfaa2f43428a4f36facd">
+        <td class="sourcedoc-section section-signature">
+          <code>range: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the exploration range</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9d6c1a8848ca2a348a7e4493cb4cee7ab7a68003">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="99602732fa1b266a3e94a7196ab5758f084da2a8">
+        <td class="sourcedoc-section section-signature">
+          <code>ListSet?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ListSet!: the list of nodes within the range</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="41af4f5d76afab787430c4f73798a14a1d0bf686">
+      
+      <h3 class="sourcedoc-section element-name">moveNodeToPosition</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun moveNodeToPosition(node: Node&lt;T&gt;?, position: P)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This method moves a node in the environment to some position. If node move is unsupported, it does nothing.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="6a7dc31ff104132534c5b4d28265b92478eaf2b7">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
+        <td class="sourcedoc-section section-signature">
+          <code>node: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: The node to move</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9d5e9d8a47ecb839b99500a7fc00b0a5035b4c1b">
+        <td class="sourcedoc-section section-signature">
+          <code>position: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: The absolute position in which this node will be moved.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="89a6e2bcf906de2353eee7b01a1f976cc8067f84">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="827ef15a552e676da030faaa051019d443f2ff62">
+      
+      <h3 class="sourcedoc-section element-name">moveNode</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun moveNode(node: Node&lt;T&gt;?, direction: P)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This method moves a node in the environment toward some direction. If node move is unsupported, it does nothing.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="226e16e90b27382bca17a7f2e87c45a48e56dae8">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
+        <td class="sourcedoc-section section-signature">
+          <code>node: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: The node to move</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5a153b8d7eca56761c828a85840fe3fe3dca89e8">
+        <td class="sourcedoc-section section-signature">
+          <code>direction: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: The position which will be summed to the current position to move the node in the right place.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="63408161dac36ae171c6f09a7ea55a7e24b3df45">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="b1786cb6c7b50c477a290ec41a14f1a8eb0dd7a8">
+      
+      <h3 class="sourcedoc-section element-name">getLinkingRule</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getLinkingRule(): LinkingRule&lt;T, P&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="da7d4ee4d7f93684cd5d754dc16f03a9caf5867c">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="74c223bb3ff007628ad8bb500052e37853181b89">
+        <td class="sourcedoc-section section-signature">
+          <code>LinkingRule&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>LinkingRule&lt;T, P&gt;!: the current linking rule</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="06683c775d09c07fcfb7057c99699c4a0f58be89">
+      
+      <h3 class="sourcedoc-section element-name">setIncarnation</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun setIncarnation(incarnation: Incarnation&lt;T, P&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b0d80a2a703973d586100f7e1929307b4639c8ee">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d21c6a0de661dbda8aa80ee4979425d554a72aa1">
+        <td class="sourcedoc-section section-signature">
+          <code>incarnation: Incarnation&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Incarnation&lt;T, P&gt;!: the <code>Incarnation</code> that will be used for creating the entities of this environment</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7bffa97d7e199c39ea95b1e58a6b050ed6194717">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="34bc68acc533ac2efd8a45b5ce1fa6095457eef3">
+      
+      <h3 class="sourcedoc-section element-name">removeNode</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun removeNode(node: Node&lt;T&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This method allows to remove a node. If node removal is unsupported, it does nothing.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="bed757147fad8e18dc7bacd39793cf771d1aabe1">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
+        <td class="sourcedoc-section section-signature">
+          <code>node: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: the node to remove</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="6137c92c2b043c3bac765e84b5934024f840e416">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="49e532c455a61562f3f1e3485e3fc63808e55b09">
+      
+      <h3 class="sourcedoc-section element-name">setLinkingRule</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun setLinkingRule(rule: LinkingRule&lt;T, P&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f09d857761db9c7bfdc8050d83b0b3f0384e6da9">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="7683a159e006abb94f620bab02e0373376ba3dd5">
+        <td class="sourcedoc-section section-signature">
+          <code>rule: LinkingRule&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>LinkingRule&lt;T, P&gt;!: the rule to set</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e748e6a1ee574810a04e6ada2d3962ccf18937b6">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="b85715751f9271f732b1e18f8e2c0d9b26e05111">
+      
+      <h3 class="sourcedoc-section element-name">getOffset</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getOffset(): DoubleArray?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This method allows to know which are the smallest coordinates represented.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="78d1c55973928b364b33547c006fb1a854a54165">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9a2fdba097a22f98dd0acd872fb7caeaab2b6907">
+        <td class="sourcedoc-section section-signature">
+          <code>DoubleArray?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>DoubleArray!: an array of length getDimensions() containing the smallest coordinates for each dimension.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="507b00595dcb7ac8b59804ed56bce171c62104dc">
+      
+      <h3 class="sourcedoc-section element-name">getIncarnation</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getIncarnation(): Optional&lt;Incarnation&lt;T, P&gt;?&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3ed187754bd44cbfc1aeeb540f31728dcf8a8675">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d5d9de7d6f85293fb861ef522eee83ed7495977d">
+        <td class="sourcedoc-section section-signature">
+          <code>Optional&lt;Incarnation&lt;T, P&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Optional.html">Optional</a>&lt;Incarnation&lt;T, P&gt;!&gt;!: the <code>Incarnation</code> used to initialize the entities of this <code>Environment</code>, if it has been set.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="43a1859bcb6a984bba6e69194b564604c4f1e460">
+      
+      <h3 class="sourcedoc-section element-name">getNeighborhood</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getNeighborhood(center: Node&lt;T&gt;?): Neighborhood&lt;T&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Given a node, this method returns its neighborhood.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="010cc597b969fad53cbf213e9be8fd7a6216dd27">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="15c91beee23d63e9ff50d9bef198c58f02378839">
+        <td class="sourcedoc-section section-signature">
+          <code>center: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: The node you want the neighbors to be found</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f65eaaa2f4047c3a56bde0353efb084f7a437c15">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="e057a70edaccba6ec55536122f289736371fc260">
+        <td class="sourcedoc-section section-signature">
+          <code>Neighborhood&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Neighborhood<T>!: the neighborhood</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="41ebe4caaf05aac413460441c2736b75b8eabeae">
+      
+      <h3 class="sourcedoc-section element-name">getSimulation</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getSimulation(): Simulation&lt;T, P&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f15341d5093be82577816256aad65a1a33d810bb">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ba7bd417e6a63c828a44797d83dbb886b540ce9c">
+        <td class="sourcedoc-section section-signature">
+          <code>Simulation&lt;T, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Simulation&lt;T, P&gt;!: the current simulation, if present, or throws an <code><a href="https://docs.oracle.com/javase/6/docs/api/java/lang/IllegalStateException.html">IllegalStateException</a></code> otherwise</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="67d548ba61efce86cb6cda816f82f767c087cf5b">
+      
+      <h3 class="sourcedoc-section element-name">getNodesNumber</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getNodesNumber(): Int</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9f2ff878f17c20da9bfe3b3bb71e4dcfcb83805b">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5c89edcac2811a6a9e8072517cae7f3cbfd5049d">
+        <td class="sourcedoc-section section-signature">
+          <code>Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: the number of nodes currently in the environment</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="61b9eb6990dffa95936d7b3a8d05f6d9c0329f0a">
+      
+      <h3 class="sourcedoc-section element-name">isTerminated</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun isTerminated(): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f39115775b265bb02e5af3e9559b6ca039f09489">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Boolean: true if all the terminators are true</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="c6a4b64c1fe1f578451a05390707485b5ffb4dfc">
+      
+      <h3 class="sourcedoc-section element-name">getNodeByID</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getNodeByID(id: Int): Node&lt;T&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Allows to access a node known its id. Depending on the implementation, this method may or not be optimized (namely, id could run in constant or linear time with the number of nodes).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2ee4ae043e1e91833237725762dcda25de0e6fcc">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="daab6315336f93ac7759344fe949afc2d434eaf5">
+        <td class="sourcedoc-section section-signature">
+          <code>id: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: the node's ID</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7a0bd48c1c063fdbb6d80f60997a4f69c494c3e1">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="977eff654676d2da0411b27d18a2fcb5d23cdebd">
+        <td class="sourcedoc-section section-signature">
+          <code>Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: the node with that id, or null if it does not exist in this environment</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="06c5b7cc3a9f8bd160916b23c1a4fc08de1dba13">
+      
+      <h3 class="sourcedoc-section element-name">getPosition</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getPosition(node: Node&lt;T&gt;?): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Calculates the position of a node.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ca016208735603664994f1b97d983cd582bd5fd4">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
+        <td class="sourcedoc-section section-signature">
+          <code>node: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: the node you want to know the position</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="6927404a93ad292e6cf585f22cfb70830f5d37df">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: The position</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="e7ac890153796f68caf0b7295af7032dc79fc394">
+      
+      <h3 class="sourcedoc-section element-name">getDimensions</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getDimensions(): Int</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>The number of dimensions of this environment.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3046a0b0d9b28cedde6d58cf89fede50f3802fdd">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5c89edcac2811a6a9e8072517cae7f3cbfd5049d">
+        <td class="sourcedoc-section section-signature">
+          <code>Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Int: the number of dimensions of this environment</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="edd1bc44b275724c9be5243e84bc2381583bea5c">
+      
+      <h3 class="sourcedoc-section element-name">getNodes</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getNodes(): ListSet?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>All the nodes that exist in current environment.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="a78561dfa30a5bca570bb316f6225f0427c41f82">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="99602732fa1b266a3e94a7196ab5758f084da2a8">
+        <td class="sourcedoc-section section-signature">
+          <code>ListSet?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>ListSet!: All the nodes that exist in current environment</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="e5aa4aa73fddd8ef7c1c359989b5b6b0f6a6e754">
+      
+      <h3 class="sourcedoc-section element-name">addTerminator</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun addTerminator(terminator: Predicate&lt;Environment&lt;T, P&gt;?&gt;?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="8226137dfa4fe1c19c7b7161f6450bcc13bc4feb">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="90b538a3039a09923eaee03d1a875f602b62bccc">
+        <td class="sourcedoc-section section-signature">
+          <code>terminator: Predicate&lt;Environment&lt;T, P&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Predicate&lt;Environment&lt;T, P&gt;!&gt;!: a <code>Predicate</code> indicating whether the simulation should be considered finished</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2d57152a456bcf4054708e6818cc01cd68b55f1a">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="708804df1b5bd11751e9bf9e9221719d0d1a8c0e">
+      
+      <h3 class="sourcedoc-section element-name">getSizeInDistanceUnits</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getSizeInDistanceUnits(): DoubleArray?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This method returns the size of the environment as an array of length <code>#getDimensions()</code>. This method must return distance measured with the same unit used for measuring distances. It may or may not return the same result of <code>#getSize()</code></p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="08af915703df593bc852937a8f3eb69cb3b663e4">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9a2fdba097a22f98dd0acd872fb7caeaab2b6907">
+        <td class="sourcedoc-section section-signature">
+          <code>DoubleArray?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>DoubleArray!: the size of this environment</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="120680564fe491a47ccf6f3490e41cf9a6acce8f">
+      
+      <h3 class="sourcedoc-section element-name">getLayer</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun getLayer(m: Molecule?): Optional&lt;Layer&lt;T, P&gt;?&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Get the layer associate to the given molecule. If no Layer is associated with the given molecule, return an empty optional.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1109e84e36eb907759502ef8b094ad80c078946b">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="90ca043d5ed0dee771a4f39845fad610f33e06cd">
+        <td class="sourcedoc-section section-signature">
+          <code>m: Molecule?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Molecule!: the <code>Molecule</code></p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="97f09cbeccf3203276662e54eea58d346a281148">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="a8c1c8727eebc0f2d8e41444f26ffaa9748734de">
+        <td class="sourcedoc-section section-signature">
+          <code>Optional&lt;Layer&lt;T, P&gt;?&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Optional.html">Optional</a>&lt;Layer&lt;T, P&gt;!&gt;!: the <code><a href="https://docs.oracle.com/javase/6/docs/api/java/util/Optional.html">Optional</a></code> containing the <code>Layer</code> associated with the requested molecule</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="6516d070546cc0188f531cb7262ac664be6ddf2c">
+      
+      <h3 class="sourcedoc-section element-name">makePosition</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun makePosition(vararg coordinates: Number?): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="28032b68fcb66c143f759ce63ec0a002aeea72aa">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="89a4bdf2c8c105e3160d53a464229a42107ff407">
+        <td class="sourcedoc-section section-signature">
+          <code>vararg coordinates: Number?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Number!: the coordinates of the point</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="db70a83b4fdbe8f9b42b89952bc6284a28ad2df7">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: a <code>Position</code> compatible with this environment</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="a5f99cff5d5f04cbc63064253765309d8cec22d7">
+      
+      <h3 class="sourcedoc-section element-name">addNode</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun addNode(node: Node&lt;T&gt;?, p: P)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>This method allows to add a new node to this environment. The environment is responsible to call the right method of the simulation in order to ensure that the reaction is properly scheduled.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="d31b2411f653eb214a49cd38470d0a8c1d417357">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
+        <td class="sourcedoc-section section-signature">
+          <code>node: Node&lt;T&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Node<T>!: The node to add</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d898b39d4ab5ca3c7b38065a8ce4fdd18b34320c">
+        <td class="sourcedoc-section section-signature">
+          <code>p: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: The position where to place it</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="52eedf67a851bbe0de4bb483e0e9a35a632d2ca7">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="extensions">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Extensions</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="3e884323be8cfff3b8348779573b8f0f086eb2b6">
+      
+      <h3 class="sourcedoc-section element-name">makePosition</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T, P : Position&lt;P&gt;&gt; Environment&lt;T, P&gt;.makePosition(coordinates: DoubleArray): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Create a position from an array of double representing the coordinates of the point.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9cb80905c68e232810f86111b7ea2391f4128206">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="1a97184f8045b3cfcabfeda33e63dedccf874eb8">
+        <td class="sourcedoc-section section-signature">
+          <code>Environment&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1af175137458d5c66e3053a841738fc3cd9da058">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="7ef2a6cca31c012a1ceb986a77c3abb9c7825806">
+        <td class="sourcedoc-section section-signature">
+          <code>coordinates: DoubleArray</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="297c0d6133aa70f91c556192294cccfe73bb3fd7">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="6b7f946aec504cf38f329efb0ad0e3c72c10f319">
+      
+      <h3 class="sourcedoc-section element-name">origin</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T, P : Position&lt;P&gt;&gt; Environment&lt;T, P&gt;.origin(): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Create a position corresponding to the origin of this environment.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c92a68932e09be4a54626ac757f83fb9716f44d7">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="1a97184f8045b3cfcabfeda33e63dedccf874eb8">
+        <td class="sourcedoc-section section-signature">
+          <code>Environment&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="951a23b36f6e89ce9a17313e6c5d0f0374ae7b28">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>

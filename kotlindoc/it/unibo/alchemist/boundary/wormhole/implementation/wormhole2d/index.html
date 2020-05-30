@@ -1,0 +1,2330 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://alchemistsimulator.github.io/latest/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Wormhole2D</title>
+
+
+<meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/boundary/wormhole/implementation/wormhole2d","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/wormhole2d"},"description":"","title":"Wormhole2D"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devt2+ec66b6b38"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://alchemistsimulator.github.io/latest" class="logo">The Alchemist Simulator</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/AlchemistSimulator/Alchemist" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>Wormhole2D</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="Wormhole2D">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="470334de7ef675750bc540b884cada006b331620">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open class Wormhole2D&lt;P : Position2D&lt;P&gt;?&gt; : IWormhole2D&lt;P&gt;, Any</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Partial implementation for the interface <code>IWormhole2D</code>.<br> I am considering the particular case of the view as an entity into the screen-space: the y-axis grows on the bottom side of the screen.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="229ee88b4d87a3db96c3f4fb73f080af5e819c27">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(env: Environment&lt;*, P&gt;?, comp: Component?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Initializes a new instance directly setting the size of both view and environment, and the offset too.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="0471169dc4fc59aa5106ce78dca313852957e943">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="72b4fb810513f62c8ae50ca89e927787b94aab33">
+        <td class="sourcedoc-section section-signature">
+          <code>env: Environment&lt;*, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;*, P&gt;!: the <code>Environment</code></p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f76afe9c0f3341f503424395db654e8974e90923">
+        <td class="sourcedoc-section section-signature">
+          <code>comp: Component?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Component.html">Component</a>!: the controlled <code><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Component.html">Component</a></code></p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="aec9558afeb1c748e8b0057c43622250bbf2733b">
+      
+      <h3 class="sourcedoc-section element-name">rotateAroundPoint</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun rotateAroundPoint(p: Point?, a: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Rotates around a point into the view-space.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="0633ba460a7f2730abac2ef5635b1ec8713819e1">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="acfc1dfe83e6d38f15ba09588f5f6d257e107005">
+        <td class="sourcedoc-section section-signature">
+          <code>p: Point?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Point.html">Point</a>!: is the <code><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Point.html">Point</a></code></p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8ee115a08e5b536b02e77cd5fefe22d9539dadf1">
+        <td class="sourcedoc-section section-signature">
+          <code>a: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: is the absolute angle (in radians)</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="67e0c1c7e6709a1977d5c0b1dbf816a74c671476">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="4bfd17d0fa81a442e41a4fb24e3d210848fe685d">
+      
+      <h3 class="sourcedoc-section element-name">isInsideView</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun isInsideView(viewPoint: Point?): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="8bd03143aa896334eeceefea17052dd048a1068d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="78a9516135dc2356078a07aa7efa1f1e3d493059">
+        <td class="sourcedoc-section section-signature">
+          <code>viewPoint: Point?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3bba76a38e5e08d0acf2ac35f66046d0cca2cf58">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="fbe18bf5b505427b754a3668849afb867dccc9f5">
+      
+      <h3 class="sourcedoc-section element-name">setRotation</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setRotation(rad: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Rotates the environment around the Position.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5257bd078d40ce0853888e4f899efbd5aa4bea9f">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="09c3a522ea9898f9463f466fa3c492d3404cc404">
+        <td class="sourcedoc-section section-signature">
+          <code>rad: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: is the <code>double</code> value representing the angle expressed with radians</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="44aa0aaa4c8a6b90e75a0541b0e6a89487ac6326">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5850b1cc47df78714f17d7a13b19d4f8171b1757">
+      
+      <h3 class="sourcedoc-section element-name">viewPointFromEnv</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun viewPointFromEnv(envPoint: PointAdapter&lt;P&gt;?): PointAdapter&lt;P&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Translates a point to the view space.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fc85acbed35c760c5948d5e1e76474a09b4a5a5c">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b77db36da2306f3ecb4ead82de2c6b4410715ccf">
+        <td class="sourcedoc-section section-signature">
+          <code>envPoint: PointAdapter&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>PointAdapter<P>!: env space point</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="a28927bed6e94a92bc2dc60755421cf1c839967b">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2e56fe644dd4724d51e26f678d61c982c77276a8">
+        <td class="sourcedoc-section section-signature">
+          <code>PointAdapter&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>PointAdapter<P>!: view space point</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="34776393018bfc1b52b18c98c4b7361980993810">
+      
+      <h3 class="sourcedoc-section element-name">getHRate</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun getHRate(): Double</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="01f7d3f061e39d0b88c63c95a0f00e892f8d3cef">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="81581597044514bf54d4f97266022fc991f3915e">
+        <td class="sourcedoc-section section-signature">
+          <code>Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the horizontal stretch rate</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="9a94aecd928a88b511d2cb42318b6456e6ccbfe3">
+      
+      <h3 class="sourcedoc-section element-name">calculateTransform</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun calculateTransform(): AffineTransform?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Calculates the <code><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/geom/AffineTransform.html">AffineTransform</a></code> that allows the wormhole to convert points from env-space to view-space.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3fa2c7fd339ef1693fb8efcdc74b387f92628db1">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="659a3d0a1c4ce396a8740da4f4e04b95ef9b0ff5">
+        <td class="sourcedoc-section section-signature">
+          <code>AffineTransform?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/geom/AffineTransform.html">AffineTransform</a>!: an <code><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/geom/AffineTransform.html">AffineTransform</a></code> object</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="4d13faad8da9159ece5b54eac18c29da73758549">
+      
+      <h3 class="sourcedoc-section element-name">envPointFromView</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun envPointFromView(viewPoint: PointAdapter&lt;P&gt;?): PointAdapter&lt;P&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Translates a point to the env space.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2fcd5b7db05cc824b08e7f629f367c192bba2e08">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="10cb0a63844604482181b606c9825af1dd55bb09">
+        <td class="sourcedoc-section section-signature">
+          <code>viewPoint: PointAdapter&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>PointAdapter<P>!: view space point</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fa2c12087bf6c2d77fdcd753d324f071acdf1400">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2e56fe644dd4724d51e26f678d61c982c77276a8">
+        <td class="sourcedoc-section section-signature">
+          <code>PointAdapter&lt;P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>PointAdapter<P>!: env space point</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="38b984768f5dc14574744f41ef42e204699e7de9">
+      
+      <h3 class="sourcedoc-section element-name">optimalZoom</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun optimalZoom()</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Automatically sets the zoom rate in order to make the environment entirely visible on the view.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3119c58e91762d85da0d433186912d1bf59bb073">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="1fc2b2738df377e43c332d2d896e94ed31ec0d51">
+      
+      <h3 class="sourcedoc-section element-name">getMode</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getMode(): Mode?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f9ef4848bb2ece95ce611e9679875a068dff15a5">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b4148feff4a23c34a93b9bea477489ca1f266455">
+        <td class="sourcedoc-section section-signature">
+          <code>Mode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="7ba7d8321e1bb666c677b05a9e907b68ab7f470c">
+      
+      <h3 class="sourcedoc-section element-name">getEnvPoint</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getEnvPoint(viewPoint: Point?): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Converts a point from the view-space to the env-space.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="00a881b46f754d37d459d95b0fcb6e4b5e1c91ea">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="78a9516135dc2356078a07aa7efa1f1e3d493059">
+        <td class="sourcedoc-section section-signature">
+          <code>viewPoint: Point?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Point.html">Point</a>!: is the <code><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Point.html">Point</a></code> object whose coordinates are from view-space</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e6a98b1e0d40ff615f00a65030db772bb30a9cba">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: a <code>Position2D</code> object whose coordinates are from env-space</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="806fd104c8e8fee28a0b41d54e6506b8dd112325">
+      
+      <h3 class="sourcedoc-section element-name">setViewPosition</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setViewPosition(point: Point?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Sets the Position to <code>viewPoint</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e55e6b1dfed3c6e8418a321f1227af7e5b85a311">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d0cd0087bec3a3040d952b7fbda0bad0183136d1">
+        <td class="sourcedoc-section section-signature">
+          <code>point: Point?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="1f27341c2872e89daa8a336b1bf60a98542d0023">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="2ddfc1750cba62a95b50cd01701ae9348c93168c">
+      
+      <h3 class="sourcedoc-section element-name">setZoom</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setZoom(value: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Changes the zoom factor.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="64679e8d2964e68652fe480598fa12f94638b91e">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="7e024fa4cab06e3685af4bdfee89654fe7cd9de6">
+        <td class="sourcedoc-section section-signature">
+          <code>value: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: is the <code>double</code> value representing the new zoom</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="89baec8ec48091e331d4060a2694d6f0943c43a9">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="493c1bd99105e80f09c41aff5919013dbb18c3a3">
+      
+      <h3 class="sourcedoc-section element-name">getZoom</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getZoom(): Double</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e2dcd50c2e0d62714e246c667721fb92d9922829">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="81581597044514bf54d4f97266022fc991f3915e">
+        <td class="sourcedoc-section section-signature">
+          <code>Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="9427f7b21f4ef381e7afab2feaf5a2b20136f46f">
+      
+      <h3 class="sourcedoc-section element-name">getVRate</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun getVRate(): Double</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Gets the vertical stretch rate.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="a61e12b3a2ca833b1c9bdc3ec11bc8e16955f806">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="81581597044514bf54d4f97266022fc991f3915e">
+        <td class="sourcedoc-section section-signature">
+          <code>Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: a <code>double</code> value representing the vertical stretch rate</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="c4f41892eee1e6a1c30a83c6840605cd40863410">
+      
+      <h3 class="sourcedoc-section element-name">setMode</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun setMode(m: Mode?)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Allows child-classes to modify the <code>#mode</code> field.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="67f394d0df99f2078e57af5b450a6adca55ea4f3">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="45132afbad28799aee85708b541bf72b191fa2b9">
+        <td class="sourcedoc-section section-signature">
+          <code>m: Mode?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Mode!: is the new <code>#mode</code></p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fbfd8a344655db759a4711aea4c1060d60041ef0">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="a51fa37efb7b30c4a9f48ea504d288a52bf561ff">
+      
+      <h3 class="sourcedoc-section element-name">zoomOnPoint</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun zoomOnPoint(p: Point?, z: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Zooms on a point into the view-space.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="0e3883689feed61b8ec9eeb6e5bcb3912169c4c6">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="acfc1dfe83e6d38f15ba09588f5f6d257e107005">
+        <td class="sourcedoc-section section-signature">
+          <code>p: Point?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Point.html">Point</a>!: is the <code><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Point.html">Point</a></code></p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3f56a677ce3b74f66967279f68bbcf601a37648a">
+        <td class="sourcedoc-section section-signature">
+          <code>z: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: is the absolute zoom rate</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b6ae8610921d9730b5594af3d650fa0678889959">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="2d701fc7a2c2031fbf9834fa33473de2057420bf">
+      
+      <h3 class="sourcedoc-section element-name">center</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun center()</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="d0b48351895286927dc5764c79e31564b8a32221">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="4de15b7b8751552ee7c7adb74b97c230426382d0">
+      
+      <h3 class="sourcedoc-section element-name">getViewPosition</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getViewPosition(): Point?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Gets the Position.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c06bfe377b6cb1becdd38df65c69958a50603384">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="bbe5e6a25ae43c70f7658c0b88178e15f6b0c213">
+        <td class="sourcedoc-section section-signature">
+          <code>Point?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Point.html">Point</a>!: a <code><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Point.html">Point</a></code> object representing the Position</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="deaea3009037e0f2eb52760db674686942fd86a8">
+      
+      <h3 class="sourcedoc-section element-name">setEnvPosition</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun setEnvPosition(pos: P)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Sets the position to the view-point corresponding to <code>envPoint</code>.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b5bfdec8705b4defde95ad96c6d08f512f59c470">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="faa0ed757ee3914455c4c47819c31b2f708492de">
+        <td class="sourcedoc-section section-signature">
+          <code>pos: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4f92e37799380d34a7045e5c632c8382c657cbe1">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="00a9357b2adaee0b45f6a6c3a7d7b38fbb14a7f8">
+      
+      <h3 class="sourcedoc-section element-name">getViewPoint</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getViewPoint(envPoint: P): Point?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Converts a point from the env-space to the view-space.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b8130b6050068b337fbd0cf4c544e848ad0c626a">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="927a214aca9f9d5deb5d537aaf8ca6a1a6e69f9c">
+        <td class="sourcedoc-section section-signature">
+          <code>envPoint: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: is the <code>Position2D</code> object whose coordinates are from env-space</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="07d2a14ddb3f4a83d090b7159b1919ee8aa4dcff">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="bbe5e6a25ae43c70f7658c0b88178e15f6b0c213">
+        <td class="sourcedoc-section section-signature">
+          <code>Point?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Point.html">Point</a>!: a <code><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Point.html">Point</a></code> object whose coordinates are from view-space</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="7d9cda227cbd7078885a6b86e80d23bb28e53c53">
+      
+      <h3 class="sourcedoc-section element-name">getEnvironment</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected fun getEnvironment(): Environment&lt;*, P&gt;?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ce8b53b23bd2567f3302c953d5b9578af85688a9">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d825d90d5c55d9e55a347a555098243f33a3d80e">
+        <td class="sourcedoc-section section-signature">
+          <code>Environment&lt;*, P&gt;?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Environment&lt;*, P&gt;!: the <code>Environment</code></p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="26fa2c409e1fb2cfd4c9c496c7bd41b9c1a9cd81">
+      
+      <h3 class="sourcedoc-section element-name">makePosition</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun makePosition(x: Double, y: Double): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Creates a new position by delegating to the environment.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="90246021b88d7edec883ecbb869f0176cb956591">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="a75012425689dff9b94d0f57bf187c44428f11a7">
+        <td class="sourcedoc-section section-signature">
+          <code>x: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: x coordinate</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="20b15d73e5a3bf069b923eeebf8e3a60bfb49153">
+        <td class="sourcedoc-section section-signature">
+          <code>y: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: y coordinate</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f66e73a2488f52c730a6df5a5f893d44abe52226">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: a new position</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="16a19039609240e947c09d0b20cbf955c6015c9c">
+      
+      <h3 class="sourcedoc-section element-name">getViewSize</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun getViewSize(): Dimension2D?</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2cba55bd1b757c1e438913e49a39f631691dff2c">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d63d95b4bdbd38095c57bd7266727d24279594a0">
+        <td class="sourcedoc-section section-signature">
+          <code>Dimension2D?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="fca5a52cfcde312758b6df6a73a62dc88e3f4052">
+      
+      <h3 class="sourcedoc-section element-name">getRotation</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected open fun getRotation(): Double</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Gets the rotation angle, in radians.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="cbae8b63c7abda6468071adcd532609dbcbcdfea">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="81581597044514bf54d4f97266022fc991f3915e">
+        <td class="sourcedoc-section section-signature">
+          <code>Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: a <code>double</code> value representing an angle expressed with radians</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>The Alchemist Simulator</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest">Home</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">Documentation</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Understanding Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/simulator/metamodel">The Alchemist Simulator metamodel</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Using Alchemist</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/installation">Requirements and installation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/quickstart">Quick start</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-gradle">Running Alchemist via Gradle</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/run-stand-alone">Running Alchemist stand-alone</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/gui">Alchemist graphical interface</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/yaml">Writing Alchemist simulations</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/biochemistry">Alchemist biochemistry incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/protelis">Alchemist Protelis incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/sapere">Alchemist SAPERE incarnation</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/scafi">Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/indoor">Simulation of indoor environments</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/navigation-graphs">Generating navigation graphs</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/cognitive-pedestrians">Using Cognitive Pedestrians</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/smartcam">With Smart Cameras</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/maps">Maps and GPS traces</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/export">Exporting data</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/batch">Executing batches</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/grid">Grid computing support</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/customization">Writing custom components</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/faq">Frequently Asked Questions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/usage/issues">Troubleshooting and known issues</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Simulation Examples</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/protelis">With Protelis</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/scafi">With Scafi</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/examples/maps">On maps</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/license">License</a>
+    </li>
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 9.3.0-devt2+ec66b6b38. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; The Alchemist Simulator. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+<!-- start:inject scripts -->
+<!-- end:inject scripts -->
+
+
+
+
+</body>
+</html>
