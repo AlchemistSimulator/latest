@@ -24,7 +24,7 @@
 
 
 
-<title>it.unibo.alchemist.model.implementations.geometry.euclidean.twod</title>
+<title>it.unibo.alchemist.model.implementations.geometry.euclidean2d</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean/twod","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean/twod"},"description":"","title":"it.unibo.alchemist.model.implementations.geometry.euclidean.twod"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean2d","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d"},"description":"","title":"it.unibo.alchemist.model.implementations.geometry.euclidean2d"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtc+18545b2b1"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtg+c06a38bc9"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>it.unibo.alchemist.model.implementations.geometry.euclidean.twod</h2></header>
+                    <header class="major"><h2>it.unibo.alchemist.model.implementations.geometry.euclidean2d</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="it.unibo.alchemist.model.implementations.geometry.euclidean.twod">
+<div class="sourcedoc-section section-root section-level-1" id="it.unibo.alchemist.model.implementations.geometry.euclidean2d">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="8da64f09ec4ec578ab503f9cbbcad2ede7737537">
+    <div class="sourcedoc-section section-element" id="ac35439712b7c82fa9e669203a4e3f14ad0a5f06">
       
       <p class="sourcedoc-section section-signature">
-        <code>package it.unibo.alchemist.model.implementations.geometry.euclidean.twod</code>
+        <code>package it.unibo.alchemist.model.implementations.geometry.euclidean2d</code>
       </p>
 
       
@@ -203,12 +203,85 @@ Collinear points are allowed.</p>
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="9fc7aab8fd1bc10b641de42b168adeb0db5b449f">
+        <td class="sourcedoc-section section-signature">
+          <code>object AwtShapeExtension: Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Collection of extensions to Java AWT meant to simplify its usage as geometric engine.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="6888a79fc0b345eeefc3e29be302c926c8240e9f">
         <td class="sourcedoc-section section-signature">
           <code>class Ellipse: Euclidean2DConvexShape, AwtShapeCompatible, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Adapter of <a href="https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Ellipse2D.html">java.awt.geom.Ellipse2D</a> to Euclidean2DConvexShape.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="752e16543c6b96ef562a11bd1fdf597c815ad14c">
+        <td class="sourcedoc-section section-signature">
+          <code>enum class LinesIntersectionType: Enum&lt;LinesIntersectionType&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>In euclidean geometry, the intersection of two lines can be an EMPTY set, a POINT,
+or a LINE (in other words, infinite points).</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="27e4a7275b9c34a7cb7218f7f698fe73ec579c9c">
+        <td class="sourcedoc-section section-signature">
+          <code>data class LinesIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Describes the result of the intersection between two lines in an euclidean space.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="86793fd40e5e10a19d15cb22214a6d56030f71c4">
+        <td class="sourcedoc-section section-signature">
+          <code>enum class SegmentsIntersectionType: Enum&lt;SegmentsIntersectionType&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>In euclidean geometry, the intersection of two segments can be an EMPTY set, a POINT, or a
+SEGMENT (in other words, infinite points).</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="b22b19dd0c0095cf57f2ac974d1d4c55236351c9">
+        <td class="sourcedoc-section section-signature">
+          <code>data class SegmentsIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Describes the result of the intersection between two segments in an euclidean space.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6ca5e16034acfe0c29eac8e2d494f7489f192cac">
+        <td class="sourcedoc-section section-signature">
+          <code>enum class CircleSegmentIntersectionType: Enum&lt;CircleSegmentIntersectionType&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>In euclidean geometry, the intersection between a segment and a circle can be an EMPTY
+set, a POINT or a PAIR of points.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4678ca7ee256303c3b1533f9f340844703b5769f">
+        <td class="sourcedoc-section section-signature">
+          <code>data class CircleSegmentIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Describes the result of the intersection between a circle and a segment in an euclidean space.</p>
 
         </td>
       </tr>
@@ -237,9 +310,9 @@ Collinear points are allowed.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="9ff0118f6e2f3025b4127c7cac2aa1fd1bf9e47d">
+      <tr class="sourcedoc-section section-element" id="10cbcf0c003a5d68311bb86f724e99190ab11e41">
         <td class="sourcedoc-section section-signature">
-          <code>package it.unibo.alchemist.model.implementations.geometry.euclidean.twod.navigator</code>
+          <code>package it.unibo.alchemist.model.implementations.geometry.euclidean2d.navigator</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -336,6 +409,299 @@ a straight line.</p>
       <tr class="sourcedoc-section section-element" id="a66ec860d220a343c41c89c235a8e5da11282cd4">
         <td class="sourcedoc-section section-signature">
           <code>Optional&lt;MutableConvexPolygon&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="7afe13436fc89834189299a9d33d2945998de20f">
+      
+      <h3 class="sourcedoc-section element-name">linesIntersection</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; linesIntersection(s1: Segment2D&lt;P&gt;, s2: Segment2D&lt;P&gt;): LinesIntersection&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Finds the intersection of two lines represented by segments. Degenerate segments (of zero
+length) are not supported.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="53e772318a6e6577debf5d526ae29ca97bcb926b">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c412d98c4bbb2090293daf88c066406fca45a87b">
+        <td class="sourcedoc-section section-signature">
+          <code>s1: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7d4fa32e51ef5112996f0ff938145db416997b3f">
+        <td class="sourcedoc-section section-signature">
+          <code>s2: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ccd8f3f57952f4bba42ef974115bd6684eae9f19">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f393212a3c1536d8d7c53bca3b8e7d1c652e3a80">
+        <td class="sourcedoc-section section-signature">
+          <code>LinesIntersection&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="0444aa4ff166897cab126275c61d3cca6e18cab0">
+      
+      <h3 class="sourcedoc-section element-name">intersection</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; intersection(s1: Segment2D&lt;P&gt;, s2: Segment2D&lt;P&gt;): SegmentsIntersection&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Finds the intersection point of two given segments. This method is able to deal with degenerate
+and collinear segments.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3cc3df34312a150e5893b7341fbf028404cdce17">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c412d98c4bbb2090293daf88c066406fca45a87b">
+        <td class="sourcedoc-section section-signature">
+          <code>s1: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7d4fa32e51ef5112996f0ff938145db416997b3f">
+        <td class="sourcedoc-section section-signature">
+          <code>s2: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="80d3a4f6d59d0291e09e5e15cafe56f1211119c5">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="73c34b2118cfb11f44b21be082c3ba35b86a1ac1">
+        <td class="sourcedoc-section section-signature">
+          <code>SegmentsIntersection&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="93b1461712ce2ea54733c4ecb1fbe3c3aad8c1d2">
+      
+      <h3 class="sourcedoc-section element-name">intersection</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; intersection(segment: Segment2D&lt;P&gt;, center: Vector2D&lt;P&gt;, radius: Double): CircleSegmentIntersection&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Finds the intersection between a segment and a circle.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2f503fbc70aca0376aeb227e18ef4c444cf6e9ad">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="beaa2a3c04309c0792271c696a578174dbcd3110">
+        <td class="sourcedoc-section section-signature">
+          <code>segment: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="e2f713c96a1da6d0da5ab768b5fb485579c03357">
+        <td class="sourcedoc-section section-signature">
+          <code>center: Vector2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+        <td class="sourcedoc-section section-signature">
+          <code>radius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="deb696341f5fbd6b551211d36f7b83ca806a37d1">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="cf0a91e3cbf601fbcacfecf2dc2d2c6af648a54e">
+        <td class="sourcedoc-section section-signature">
+          <code>CircleSegmentIntersection&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -689,7 +1055,7 @@ a straight line.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtc+18545b2b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devtg+c06a38bc9. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

@@ -24,7 +24,7 @@
 
 
 
-<title>AbstractConvexPolygon</title>
+<title>AwtMutableConvexPolygon</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean/twod/abstractconvexpolygon","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/abstractconvexpolygon"},"description":"","title":"AbstractConvexPolygon"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean2d/awtmutableconvexpolygon","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/awtmutableconvexpolygon"},"description":"","title":"AwtMutableConvexPolygon"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtc+18545b2b1"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtg+c06a38bc9"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>AbstractConvexPolygon</h2></header>
+                    <header class="major"><h2>AwtMutableConvexPolygon</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="AbstractConvexPolygon">
+<div class="sourcedoc-section section-root section-level-1" id="AwtMutableConvexPolygon">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="8cab0409b369dc7401c0c1bb96f402a38f522219">
+    <div class="sourcedoc-section section-element" id="e649a10907bd2b2b0ec85a0d9990eaa031ac1dc0">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class AbstractConvexPolygon: ConvexPolygon, Any</code>
+        <code>open class AwtMutableConvexPolygon: AbstractConvexPolygon, MutableConvexPolygon</code>
       </p>
 
       
@@ -159,17 +159,20 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>An abstract ConvexPolygon providing a convexity test.</p>
+      <div class="sourcedoc-section section-comments"><p>MutableConvexPolygon partly delegated to AwtEuclidean2DShape and java.awt.geom.
+Each modification operation on this object has a time complexity of O(n), where n is
+the number of vertices/edges.
+Collinear points are allowed.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-2" id="constructors">
+<div class="sourcedoc-section section-root section-level-2" id="fields">
 
 
-  <p class="sourcedoc-section section-name"><strong>Constructors</strong></p>
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -181,12 +184,22 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="d4613aad3f43ed7d2b370aabe518d8516ff827ff">
+      <tr class="sourcedoc-section section-element" id="d4bbc3e6d8a5c170c36fb4fa2361e293ce65bd8c">
         <td class="sourcedoc-section section-signature">
-          <code>constructor()</code>
+          <code>open diameter: Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>An abstract ConvexPolygon providing a convexity test.</p>
+        <p>The largest distance between any pair of vertices.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2a5cadc1bbe78882fdc31cf8f1557478c71d715f">
+        <td class="sourcedoc-section section-signature">
+          <code>open centroid: Euclidean2DPosition</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The geometric center.</p>
 
         </td>
       </tr>
@@ -195,6 +208,74 @@
     </table>
   </div>
 
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="a211c5caeaaa3d04e0f3e50e8bafd48f94cd55e1">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(vertices: MutableList&lt;Euclidean2DPosition&gt;)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>MutableConvexPolygon partly delegated to AwtEuclidean2DShape and java.awt.geom.
+Each modification operation on this object has a time complexity of O(n), where n is
+the number of vertices/edges.
+Collinear points are allowed.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c409a0b3ae126935291550b4a4f87fd2fa7c2a5d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9c30f9b03751b81c5a0119e18b002b3334e754f4">
+        <td class="sourcedoc-section section-signature">
+          <code>vertices: MutableList&lt;Euclidean2DPosition&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
 
 </div>
 
@@ -208,705 +289,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="f7f9a8e66b82c1dc637dde4e48357e4ebe659ee5">
+    <div class="sourcedoc-section section-element" id="73d59b5754fc4ba86362f485aa805a535cbd40b7">
       
-      <h3 class="sourcedoc-section element-name">liesOnBoundary</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun liesOnBoundary(vector: Euclidean2DPosition): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Checks if a vector (= a point) lies on the polygon's boundary.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="05574f3f642d72a821baf4a7ab8954e1a16c7bfc">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="c11a8b0f418dcc0c1fc87c206b617fc85cbaa4d0">
-        <td class="sourcedoc-section section-signature">
-          <code>vector: Euclidean2DPosition</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the vector (= point)</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="4654a811ede08637a72d6f5b256a8a2bbc6d0130">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="e160a074e7a49126d99c9fca5269a30b0a050ad1">
-      
-      <h3 class="sourcedoc-section element-name">containsBoundaryIncluded</h3>
+      <h3 class="sourcedoc-section element-name">vertices</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun containsBoundaryIncluded(vector: Euclidean2DPosition): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Checks if a vector (= a point) is contained in the polygon or lies on its boundary.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="2abc4a20f0e1397e565e6695fa59225ca16f24ae">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="c11a8b0f418dcc0c1fc87c206b617fc85cbaa4d0">
-        <td class="sourcedoc-section section-signature">
-          <code>vector: Euclidean2DPosition</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the vector (= point)</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="0f9a4edb1a2e4f8cc754c432842a9389bfc24b87">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="10f86bd8eca27abe064eee9d9ffd3d1a0a0f1b52">
-      
-      <h3 class="sourcedoc-section element-name">containsBoundaryExcluded</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun containsBoundaryExcluded(vector: Euclidean2DPosition): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Checks if a vector (= a point) is contained in the polygon, boundary excluded.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="5eaee4f1c061f97244d7673956081e51f4e1ea5c">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="c11a8b0f418dcc0c1fc87c206b617fc85cbaa4d0">
-        <td class="sourcedoc-section section-signature">
-          <code>vector: Euclidean2DPosition</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the vector (= point)</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="b28d984bcdbe5cf3f33f4a5607b198260bb67611">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="1b250c61e7a311b5aafef5f7e07474f34a0c65ec">
-      
-      <h3 class="sourcedoc-section element-name">contains</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun contains(shape: Shape): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Checks if the polygon contains a polygonal <a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a> (i.e. without curved
-segments). A polygonal shape is contained in a polygon if all of its points are
-contained in (or lie on the boundary of) the latter.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="04d03c9ac82b065c37b8307d8ee6cb1925ec07aa">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="9e88f56c4025b8dcf3da0b914a8c26e03d4829d4">
-        <td class="sourcedoc-section section-signature">
-          <code>shape: Shape</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the polygonal shape</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="c5a20157a0e11dfed076ea6a29b32d0355f907af">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="eea48bc9188fb411649572d833eab9262ef1d7e2">
-      
-      <h3 class="sourcedoc-section element-name">isAdjacentTo</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun isAdjacentTo(other: ConvexPolygon): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>A polygon is adjacent to another if any of its points lies on the boundary of the other.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="05c9adc96519b520879a68044b230e83122d02de">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="f0e2a7c2d4b4dedbc19700985801d29a5a31048f">
-        <td class="sourcedoc-section section-signature">
-          <code>other: ConvexPolygon</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the other polygon</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="a5275f985ba4f602c90d399fea11f247c0ebdc27">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="3e5af4fefdb240d15c3454855a25dcf035adfcc2">
-      
-      <h3 class="sourcedoc-section element-name">isAdjacentTo</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun isAdjacentTo(shape: Shape): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Checks if the polygon is adjacent to a convex polygonal <a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="ad6235d0b5a89fb21f2c1dc7ceaa2a2781d21507">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="9e88f56c4025b8dcf3da0b914a8c26e03d4829d4">
-        <td class="sourcedoc-section section-signature">
-          <code>shape: Shape</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the convex polygonal shape</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="0dc8c3f18afd95be111fe7d51912995e517d4e76">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="0ccdd8ced451e467025cc6f6d7b69e953f48224a">
-      
-      <h3 class="sourcedoc-section element-name">intersects</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun intersects(segment: Segment2D&lt;Euclidean2DPosition&gt;): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Checks if a segment intersects with the polygon, segments lying on the polygon's
-boundary are not considered to be intersecting.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="c7c09adf21dc9c9e291779830df761dfd4974f6b">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="fb97cfd15be54299cd7ad5369c85ee053cc523d7">
-        <td class="sourcedoc-section section-signature">
-          <code>segment: Segment2D&lt;Euclidean2DPosition&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the segment</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="bf2c48d85e7115b112c64479e0ae0fe76504f9d8">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="406229c28ba7919e22b88721e0d23dd6cdf9c456">
-      
-      <h3 class="sourcedoc-section element-name">closestEdgeTo</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun closestEdgeTo(segment: Segment2D&lt;Euclidean2DPosition&gt;): Segment2D&lt;Euclidean2DPosition&gt;</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Finds the edge of the polygon closest to the provided segment, i.e. the first one
-that would collide (= intersect) with the segment in case the polygon extended on
-each side.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="39572a4a90c655f5fcb134c3453d33661bda9d8b">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="fb97cfd15be54299cd7ad5369c85ee053cc523d7">
-        <td class="sourcedoc-section section-signature">
-          <code>segment: Segment2D&lt;Euclidean2DPosition&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the segment</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="45cfe86fd9bd2fc4a9f0d7160f1e5297609d35ac">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="756ff732d3b4bbbc1742efc9d16b04bd2e754767">
-        <td class="sourcedoc-section section-signature">
-          <code>Segment2D&lt;Euclidean2DPosition&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="90ab498e9da5d8545786d5da1194c6d8a0dd8cc0">
-      
-      <h3 class="sourcedoc-section element-name">toString</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun toString(): String</code>
+        <code>open fun vertices(): List&lt;Euclidean2DPosition&gt;</code>
       </p>
 
       
@@ -917,7 +305,7 @@ each side.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="10ff84a167aa8cf1007a772e2e06c99062ca1ba0">
+<div class="sourcedoc-section section-root section-level-3" id="5d20798f2f3c0e629ce0365f07c067a09880470b">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -932,9 +320,9 @@ each side.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="3df63b7acb0522da685dad5fe84b81fdd7b25264">
+      <tr class="sourcedoc-section section-element" id="23e337354ea4ebf08504b5b97f4b4443eddf28b6">
         <td class="sourcedoc-section section-signature">
-          <code>String</code>
+          <code>List&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -952,24 +340,23 @@ each side.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="87b2a2cc974a89126f747dd68ecab2d71e7f4e32">
+    <div class="sourcedoc-section section-element" id="f1d03af722aa966a2da9c0f47b0081f62b481b44">
       
-      <h3 class="sourcedoc-section element-name">circularPrevious</h3>
+      <h3 class="sourcedoc-section element-name">getEdge</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun circularPrevious(index: Int): Int</code>
+        <code>open fun getEdge(index: Int): Segment2D&lt;Euclidean2DPosition?&gt;</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Finds the previous index with the respect to the given index, restarting from the end if necessary.</p>
-</div>
+      <div class="sourcedoc-section section-comments"></div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="a6a4f348808eb1e2dd5f2a0ec63fded4e7b53052">
+<div class="sourcedoc-section section-root section-level-3" id="ad418481e90389758683fb4b447a93a9ed606489">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -1002,7 +389,7 @@ each side.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="d3963269898723ded92785db4cff25c9b9d35330">
+<div class="sourcedoc-section section-root section-level-3" id="81cd8225ded45da93e183c8cb570476cfedc4453">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1017,9 +404,9 @@ each side.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="5c89edcac2811a6a9e8072517cae7f3cbfd5049d">
+      <tr class="sourcedoc-section section-element" id="758eda546e0048ab5d3d4e9140d25a73655ba43f">
         <td class="sourcedoc-section section-signature">
-          <code>Int</code>
+          <code>Segment2D&lt;Euclidean2DPosition?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1037,24 +424,75 @@ each side.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="d62ab0625a38d4d67ce9172b9d18342bd4733088">
+    <div class="sourcedoc-section section-element" id="211300cfc5b65cd916c3e0ae0ecd7d6b888e63c5">
       
-      <h3 class="sourcedoc-section element-name">circularNext</h3>
+      <h3 class="sourcedoc-section element-name">edges</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun circularNext(index: Int): Int</code>
+        <code>open fun edges(): List&lt;Segment2D&lt;Euclidean2DPosition&gt;&gt;</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Finds the next index with respect to the given index, restarting from the beginning if necessary.</p>
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="29cb6ea5335979720fe5f175a4d598e09a44dae3">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="083efc54d1462e1e8b5260e5e09ce143e96fde46">
+        <td class="sourcedoc-section section-signature">
+          <code>List&lt;Segment2D&lt;Euclidean2DPosition&gt;&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="d5d8d858164eb7602201a97a82b81847d7442395">
+      
+      <h3 class="sourcedoc-section element-name">addVertex</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun addVertex(index: Int, x: Double, y: Double): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Adds a vertex to the polygon.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="ee898582ad3f6ae71e425f5f6a2f6f83be125927">
+<div class="sourcedoc-section section-root section-level-3" id="c6e6072962c3fee8a1d76a305c66e1681ca0d450">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -1074,40 +512,28 @@ each side.</p>
           <code>index: Int</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <p>the index in the list of vertices where to put the new vertex</p>
+
         </td>
       </tr>
       
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="f75ea03b754a33b748a7aa48075b633345682ca6">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="5c89edcac2811a6a9e8072517cae7f3cbfd5049d">
+      <tr class="sourcedoc-section section-element" id="a75012425689dff9b94d0f57bf187c44428f11a7">
         <td class="sourcedoc-section section-signature">
-          <code>Int</code>
+          <code>x: Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <p>x coordinate</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="20b15d73e5a3bf069b923eeebf8e3a60bfb49153">
+        <td class="sourcedoc-section section-signature">
+          <code>y: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>y coordinate</p>
+
         </td>
       </tr>
       
@@ -1119,33 +545,8 @@ each side.</p>
 </div>
 
         
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="135de095491eec76c9d92a5d99a18c11648d9405">
-      
-      <h3 class="sourcedoc-section element-name">isConvex</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>protected fun isConvex(): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Checks if the polygon is convex (see ConvexPolygon).
-In order to be convex, a polygon must first be simple (not self-intersecting).
-Ascertained that the polygon is simple, a rather easy convexity test consists
-in checking that every edge turns in the same direction (either left or right)
-with respect to the previous one. If they all turn in the same direction, then
-the polygon is convex. That is the definition of convexity of a polygon's boundary
-in this context.</p>
-</div>
-
-      
-      
-        
           
-<div class="sourcedoc-section section-root section-level-3" id="2db8c0665abe93ed42d2a80d8fac0eb2677f382a">
+<div class="sourcedoc-section section-root section-level-3" id="70043cef41ab43d8c202db4cb110ef85998db5b0">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1180,25 +581,24 @@ in this context.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="ed4afccb3aff69f26b1d1aad7e11d632adcb0bc4">
+    <div class="sourcedoc-section section-element" id="f05e5a1b8c3fb17d35417f269992bf74a8ab33ea">
       
-      <h3 class="sourcedoc-section element-name">isConvex</h3>
+      <h3 class="sourcedoc-section element-name">removeVertex</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun isConvex(vararg modifiedEdges: Int): Boolean</code>
+        <code>open fun removeVertex(index: Int): Boolean</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Checks if the polygon is convex, assuming that every edge apart from the specified
-ones does not cause self-intersection.</p>
+      <div class="sourcedoc-section section-comments"><p>Removes a vertex from the polygon.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="dc1b80d8cad81a3b9ffa98c2bc31bd9eca2bb2d0">
+<div class="sourcedoc-section section-root section-level-3" id="f82403c3a562c5581c81084f059e25f534cc55c9">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -1213,12 +613,13 @@ ones does not cause self-intersection.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="a07e2c471a7c3344e4a09b365bcaaa66a248225b">
+      <tr class="sourcedoc-section section-element" id="a8326bd6b6bacbd5b0286fd82f9b8f31c5da99f5">
         <td class="sourcedoc-section section-signature">
-          <code>vararg modifiedEdges: Int</code>
+          <code>index: Int</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <p>the index of the vertex to be removed in the list of vertices</p>
+
         </td>
       </tr>
       
@@ -1231,7 +632,7 @@ ones does not cause self-intersection.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="ab62ec7d03560c6801226bd5b67eae529e4f40d9">
+<div class="sourcedoc-section section-root section-level-3" id="02f57c51e65c675b606bce8072384648b7854324">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1249,6 +650,740 @@ ones does not cause self-intersection.</p>
       <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
         <td class="sourcedoc-section section-signature">
           <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="dd7765321d80b592cc02bc2c0faaeb302f73646e">
+      
+      <h3 class="sourcedoc-section element-name">moveVertex</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun moveVertex(index: Int, newX: Double, newY: Double): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Moves a vertex of the polygon to a new absolute position.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fec0c2fd0578b08de3052c0ec3041f13e63a6ecb">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="a8326bd6b6bacbd5b0286fd82f9b8f31c5da99f5">
+        <td class="sourcedoc-section section-signature">
+          <code>index: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the index of the vertex to move</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="df8dddbe031b75e8d8f002df840ea69468c2b360">
+        <td class="sourcedoc-section section-signature">
+          <code>newX: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>new absolute x coordinate</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0b7cc41c057cbab440bc05fd4b850e97431fa8af">
+        <td class="sourcedoc-section section-signature">
+          <code>newY: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>new absolute y coordinate</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c4677d27baf09e969e9ee8ce4d0139e0a9d8e369">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="b8491e74f1d461b9ff0f5d6a6b85c3ff66884183">
+      
+      <h3 class="sourcedoc-section element-name">replaceEdge</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun replaceEdge(index: Int, newEdge: Segment2D&lt;Euclidean2DPosition&gt;): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Replaces an edge of the polygon.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c7fc478f814ac71b6550159e8d5cf0a6e65e707d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="a8326bd6b6bacbd5b0286fd82f9b8f31c5da99f5">
+        <td class="sourcedoc-section section-signature">
+          <code>index: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the index of the edge to replace (edge i connects vertices i and i+1)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="53b38bd349be4c88a7c593f16f3d2e615006bc7a">
+        <td class="sourcedoc-section section-signature">
+          <code>newEdge: Segment2D&lt;Euclidean2DPosition&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the new edge</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="aa6a44cba11391d651a11d575513c8c0c60f31a9">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5e7f9b53146129a4ddaf298e5806f5d9aad6cdef">
+      
+      <h3 class="sourcedoc-section element-name">contains</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun contains(vector: Euclidean2DPosition): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Delegated to AwtEuclidean2DShape (adopts the definition of insideness used by
+<a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>s).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="d5b994a1001328cfc5ec7705f66e2c4b529136aa">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c11a8b0f418dcc0c1fc87c206b617fc85cbaa4d0">
+        <td class="sourcedoc-section section-signature">
+          <code>vector: Euclidean2DPosition</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="8ea08b99ebc440d45de7a6b8a28b6347bf120887">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="1872046f1670f671b424da9c6ff7740e53f5b5e6">
+      
+      <h3 class="sourcedoc-section element-name">intersects</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun intersects(shape: Shape): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Delegated to <a href="https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Area.html">java.awt.geom.Area</a>, this is accurate and does not consider adjacent
+shapes to be intersecting.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="de1c5c50deb62a06df1c9924fedcaf2981661e6b">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9e88f56c4025b8dcf3da0b914a8c26e03d4829d4">
+        <td class="sourcedoc-section section-signature">
+          <code>shape: Shape</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f5eb007246bf2c05b83eefb76f56643d15ca94c8">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="273b7e65afd62f5b162ece1129613709a660abf4">
+      
+      <h3 class="sourcedoc-section element-name">intersects</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun intersects(other: Euclidean2DShape): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Delegated to AwtEuclidean2DShape unless other is AwtShapeCompatible, in which case
+intersects is used so as to guarantee maximum accuracy.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="a24c4749ef185b981a606047379bfb16ffb3adab">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4ae6d872ff1ad56d65d94f74b8e22726ffcfffcf">
+        <td class="sourcedoc-section section-signature">
+          <code>other: Euclidean2DShape</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="837fecb3962d1edf160823b825e1e028e6285c6d">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="11618158c0bc26ba9888512f7a04d7636b80f3b0">
+      
+      <h3 class="sourcedoc-section element-name">transformed</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun transformed(transformation: Euclidean2DTransformation.()-&gt;Unit): Euclidean2DShape</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Transforms the shape.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c5049ab09f3af3840480f78251642dc13408bcbc">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f99cfaccb447b4c62cf78527c588a2b9880cf888">
+        <td class="sourcedoc-section section-signature">
+          <code>transformation: Euclidean2DTransformation.()-&gt;Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>describes the transformations to apply to the shape</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="dcff575042eb22cdc097dee413d5fdeb1f1b4ebe">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
+        <td class="sourcedoc-section section-signature">
+          <code>Euclidean2DShape</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>a copy of the shape transformed accordingly</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="b0d0cc1503638cc8fc082c20be0085bc5a276ddb">
+      
+      <h3 class="sourcedoc-section element-name">asAwtShape</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun asAwtShape(): Shape</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="18521448931bcbb44baee3303b50e0bbb8941a7e">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ea5c1a20b7cfcfec8a35fb4c6a419a1314233755">
+        <td class="sourcedoc-section section-signature">
+          <code>Shape</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>a copy of itself in form of a <a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="0b1ac947ad4d70be3376107b95fc8d4e26022519">
+      
+      <h3 class="sourcedoc-section element-name">equals</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun equals(other: Any?): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2674528696e84287cfc535faf244a39723d053b3">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="0a1e171af6c91857649972ea14409d21dd91567a">
+        <td class="sourcedoc-section section-signature">
+          <code>other: Any?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="bafc3b2b8fb68f1d25773d46a8f4532de48659be">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5eaf60c36a0db6d21c517729141d66812b78c741">
+      
+      <h3 class="sourcedoc-section element-name">hashCode</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun hashCode(): Int</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="148c7c498d346270aaa72cbe42e6bae14f1faf22">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5c89edcac2811a6a9e8072517cae7f3cbfd5049d">
+        <td class="sourcedoc-section section-signature">
+          <code>Int</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1602,7 +1737,7 @@ ones does not cause self-intersection.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtc+18545b2b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devtg+c06a38bc9. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

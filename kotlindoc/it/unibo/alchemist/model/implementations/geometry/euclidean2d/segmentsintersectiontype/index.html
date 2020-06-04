@@ -24,7 +24,7 @@
 
 
 
-<title>Ellipse</title>
+<title>SegmentsIntersectionType</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -55,7 +55,7 @@
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Page Template: kotlindocEnum, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean/twod/ellipse","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean/twod/ellipse"},"description":"","title":"Ellipse"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean2d/segmentsintersectiontype","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/segmentsintersectiontype"},"description":"","title":"SegmentsIntersectionType"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtc+18545b2b1"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtg+c06a38bc9"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>Ellipse</h2></header>
+                    <header class="major"><h2>SegmentsIntersectionType</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="Ellipse">
+<div class="sourcedoc-section section-root section-level-1" id="SegmentsIntersectionType">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="6888a79fc0b345eeefc3e29be302c926c8240e9f">
+    <div class="sourcedoc-section section-element" id="86793fd40e5e10a19d15cb22214a6d56030f71c4">
       
       <p class="sourcedoc-section section-signature">
-        <code>class Ellipse: Euclidean2DConvexShape, AwtShapeCompatible, Any</code>
+        <code>enum class SegmentsIntersectionType: Enum&lt;SegmentsIntersectionType&gt;</code>
       </p>
 
       
@@ -159,17 +159,18 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Adapter of <a href="https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Ellipse2D.html">java.awt.geom.Ellipse2D</a> to Euclidean2DConvexShape.</p>
+      <div class="sourcedoc-section section-comments"><p>In euclidean geometry, the intersection of two segments can be an EMPTY set, a POINT, or a
+SEGMENT (in other words, infinite points).</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-2" id="fields">
+<div class="sourcedoc-section section-root section-level-2" id="enumItems">
 
 
-  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+  <p class="sourcedoc-section section-name"><strong>EnumItems</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -181,22 +182,31 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="8c79f4cac74668bce74c6b8693f4a9af8bf8e93f">
+      <tr class="sourcedoc-section section-element" id="5bc604777adb22ae457a5473c397202e00689e23">
         <td class="sourcedoc-section section-signature">
-          <code>val centroid: Euclidean2DPosition</code>
+          <code>EMPTY</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>The geometric center.</p>
-
+        
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="3b9e38d45ba6f263e93acd5607e20662e4b0ecbb">
+      <tr class="sourcedoc-section section-element" id="f1983acdea43e32e24f0c97a6cf5d00db991ce52">
         <td class="sourcedoc-section section-signature">
-          <code>val diameter: Double</code>
+          <code>POINT</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>The largest distance between any pair of vertices.</p>
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="aeb83a3049743fa790cb4f031583c4ab04eb158c">
+        <td class="sourcedoc-section section-signature">
+          <code>SEGMENT</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Note that two segments may be collinear, overlapping and share a single point (e.g. an
+endpoint). In this case the intersection type is POINT.</p>
 
         </td>
       </tr>
@@ -205,397 +215,6 @@
     </table>
   </div>
 
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-2" id="constructors">
-
-
-  
-    <h2 class="sourcedoc-section section-name">Constructors</h2>
-  
-
-  
-    <div class="sourcedoc-section section-element" id="58aebf9844d0f193930ad758a5aff7522a550a25">
-      
-      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>constructor(ellipse: Ellipse2D)</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Adapter of <a href="https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Ellipse2D.html">java.awt.geom.Ellipse2D</a> to Euclidean2DConvexShape.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="355eb378b1ce80bcc41e2d7ef5e8c1046157cf3a">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="67740bbc5e2292fe954dd6b2ff3e249e663b306c">
-        <td class="sourcedoc-section section-signature">
-          <code>ellipse: Ellipse2D</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-2" id="methods">
-
-
-  
-    <h2 class="sourcedoc-section section-name">Methods</h2>
-  
-
-  
-    <div class="sourcedoc-section section-element" id="a61f0620520b49ed86802ff8f9927df3c9ca555f">
-      
-      <h3 class="sourcedoc-section element-name">intersects</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun intersects(other: Euclidean2DShape): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>A shape intersects another if any of its points is contained in the other one.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="a32de890805f1fc8bdfc2aeb8196e6abdffb2bc7">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="4ae6d872ff1ad56d65d94f74b8e22726ffcfffcf">
-        <td class="sourcedoc-section section-signature">
-          <code>other: Euclidean2DShape</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the other shape</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="feeb8d77a05899ca363987ab8a28204c5d626da7">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>true if the intersection is not empty</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="228ab1684da027402f20c7c2f445231034b3c2cc">
-      
-      <h3 class="sourcedoc-section element-name">contains</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun contains(vector: Euclidean2DPosition): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Check if the shape contains a vector.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="e348b9d986059259dab9fefb92f061b582377038">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="c11a8b0f418dcc0c1fc87c206b617fc85cbaa4d0">
-        <td class="sourcedoc-section section-signature">
-          <code>vector: Euclidean2DPosition</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the position vector</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="b7c7812abc4730c61bfcb14affa23dd6dfd7960b">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>true if the vector is contained in the shape</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="72d1e4b023f7705669acff4dc1b707b314526a9b">
-      
-      <h3 class="sourcedoc-section element-name">transformed</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun transformed(transformation: Euclidean2DTransformation.()-&gt;Unit): Euclidean2DShape</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Transforms the shape.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="f83911432c88a40c3e8a973c6e01621926723e5e">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="f99cfaccb447b4c62cf78527c588a2b9880cf888">
-        <td class="sourcedoc-section section-signature">
-          <code>transformation: Euclidean2DTransformation.()-&gt;Unit</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>describes the transformations to apply to the shape</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="c7de2fabc052dbf5f48e8a9db5f687be9d354a30">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
-        <td class="sourcedoc-section section-signature">
-          <code>Euclidean2DShape</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>a copy of the shape transformed accordingly</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="c6c7bb28a7d660a05a15d996d450522a7eec629a">
-      
-      <h3 class="sourcedoc-section element-name">asAwtShape</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun asAwtShape(): Ellipse2D</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"></div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="1ece655572bc8b0eb8d921c446d46a9a3367c223">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="8e195414c4d438935fcfabd2ff23cec6748e4613">
-        <td class="sourcedoc-section section-signature">
-          <code>Ellipse2D</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>a copy of itself in form of a <a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>.</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
 
 </div>
 
@@ -932,7 +551,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtc+18545b2b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devtg+c06a38bc9. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

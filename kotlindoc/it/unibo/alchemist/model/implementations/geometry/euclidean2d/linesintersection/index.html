@@ -24,7 +24,7 @@
 
 
 
-<title>LinesIntersectionType</title>
+<title>LinesIntersection</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -55,7 +55,7 @@
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocEnum, sourceDocPage, classes, page -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/linesintersectiontype","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/linesintersectiontype"},"description":"","title":"LinesIntersectionType"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean2d/linesintersection","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/linesintersection"},"description":"","title":"LinesIntersection"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtc+18545b2b1"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtg+c06a38bc9"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>LinesIntersectionType</h2></header>
+                    <header class="major"><h2>LinesIntersection</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="LinesIntersectionType">
+<div class="sourcedoc-section section-root section-level-1" id="LinesIntersection">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="752e16543c6b96ef562a11bd1fdf597c815ad14c">
+    <div class="sourcedoc-section section-element" id="27e4a7275b9c34a7cb7218f7f698fe73ec579c9c">
       
       <p class="sourcedoc-section section-signature">
-        <code>enum class LinesIntersectionType: Enum&lt;LinesIntersectionType&gt;</code>
+        <code>data class LinesIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
       </p>
 
       
@@ -159,18 +159,17 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>In euclidean geometry, the intersection of two lines can be an EMPTY set, a POINT,
-or a LINE (in other words, infinite points).</p>
+      <div class="sourcedoc-section section-comments"><p>Describes the result of the intersection between two lines in an euclidean space.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-2" id="enumItems">
+<div class="sourcedoc-section section-root section-level-2" id="fields">
 
 
-  <p class="sourcedoc-section section-name"><strong>EnumItems</strong></p>
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -182,27 +181,77 @@ or a LINE (in other words, infinite points).</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="5bc604777adb22ae457a5473c397202e00689e23">
+      <tr class="sourcedoc-section section-element" id="82f5e5704a5ee8d775b797419dd9689bb65a05bb">
         <td class="sourcedoc-section section-signature">
-          <code>EMPTY</code>
+          <code>val type: LinesIntersectionType</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <pre><code>    the type of intersection.</code></pre>
+
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="f1983acdea43e32e24f0c97a6cf5d00db991ce52">
+      <tr class="sourcedoc-section section-element" id="3f3dd69d610fc53a7255c193941677ed0427d951">
         <td class="sourcedoc-section section-signature">
-          <code>POINT</code>
+          <code>val point: Optional&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <pre><code>    the intersection point (if present).</code></pre>
+
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="528a45acf62927f5e3020d13509848f28121f5ca">
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="60eb5541187534f92863167ccbd16cd0884245dc">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(point: P)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e9f5b6a9dd222f24018d0affb02b1b2b45669b79">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f3243ae1b83211c8f307e73f62054d49df18d93b">
         <td class="sourcedoc-section section-signature">
-          <code>LINE</code>
+          <code>point: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -213,6 +262,225 @@ or a LINE (in other words, infinite points).</p>
     </table>
   </div>
 
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="7d9a6597cbdf570ff10b73afb2c414a6731c05b9">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(type: LinesIntersectionType, point: Optional&lt;P&gt;)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Describes the result of the intersection between two lines in an euclidean space.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="d03707d53d206e48773efa216d154219d227a680">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="025318e8ef0e5ebf3b2b815a2d79c7d4b65887d0">
+        <td class="sourcedoc-section section-signature">
+          <code>type: LinesIntersectionType</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the type of intersection.</code></pre>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="db1f95a601083a3ab010cf698945528fad5e7f2c">
+        <td class="sourcedoc-section section-signature">
+          <code>point: Optional&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the intersection point (if present).</code></pre>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="companionObject">
+
+
+  
+    <h2 class="sourcedoc-section section-name">CompanionObject</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="27e4a7275b9c34a7cb7218f7f698fe73ec579c9c">
+      
+      <h3 class="sourcedoc-section element-name">LinesIntersection</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>data class LinesIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Describes the result of the intersection between two lines in an euclidean space.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="224f4b70ad71b5ace629510e732357e4e3225525">
+
+
+  
+    <h3 class="sourcedoc-section section-name">Methods</h3>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="b133f659ef911325027a7ee23c977176fb980d9b">
+      
+      <h4 class="sourcedoc-section element-name">empty</h4>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; empty(): LinesIntersection&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Creates an instance of LinesIntersection whose type is LinesIntersectionType.EMPTY.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-4" id="70d442f0d54406f40142f4dbcfbf5571f9a1f5ea">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f393212a3c1536d8d7c53bca3b8e7d1c652e3a80">
+        <td class="sourcedoc-section section-signature">
+          <code>LinesIntersection&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="06efdd9a15d3c802beaedfeba4353827d90dcf01">
+      
+      <h4 class="sourcedoc-section element-name">line</h4>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; line(): LinesIntersection&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Creates an instance of LinesIntersection whose type is LinesIntersectionType.LINE.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-4" id="c128c266a21dfc491d1e1eff771f2798b4bb910a">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f393212a3c1536d8d7c53bca3b8e7d1c652e3a80">
+        <td class="sourcedoc-section section-signature">
+          <code>LinesIntersection&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
 
 </div>
 
@@ -549,7 +817,7 @@ or a LINE (in other words, infinite points).</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtc+18545b2b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devtg+c06a38bc9. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
