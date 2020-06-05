@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/cbe2831e/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtw+80c219a0f"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtz+bac7df5ba"};
 </script>
 
 
@@ -222,9 +222,9 @@ Note: whenever a new Boundaries is created, it should be added to a new visit me
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="df55b623490d3ae1d35b9485ca6c5dd199457abe">
+      <tr class="sourcedoc-section section-element" id="282b286115bda04179b570ac37cb1ec97eaa8624">
         <td class="sourcedoc-section section-signature">
-          <code>interface Environment2DWithObstacles&lt;W : Obstacle2D&lt;P&gt;, T, P&gt; : EnvironmentWithObstacles&lt;W, T, P&gt;, Any</code>
+          <code>interface Environment2DWithObstacles&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : EnvironmentWithObstacles&lt;W, T, Euclidean2DPosition&gt;, Euclidean2DEnvironment&lt;T&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A bidimensional EnvironmentWithObstacles.</p>
@@ -266,9 +266,9 @@ represent rooms and corridors, whereas edges should represent doors and passages
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="0fa28250f5c78beb15cee2b21045724d1300f67a">
+      <tr class="sourcedoc-section section-element" id="692061ce2cc5ef653a873c2b51997f5db9f8c546">
         <td class="sourcedoc-section section-signature">
-          <code>interface Euclidean2DEnvironmentWithObstacles&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : Euclidean2DEnvironment&lt;T&gt;, Environment2DWithObstacles&lt;W, T, Euclidean2DPosition&gt;, Any</code>
+          <code>interface Euclidean2DEnvironmentWithObstacles&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : Euclidean2DEnvironment&lt;T&gt;, Environment2DWithObstacles&lt;W, T&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An Environment2DWithObstacles using Euclidean2DPositions.</p>
@@ -658,7 +658,7 @@ but to create an apposite interface extending this one instead.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtw+80c219a0f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devtz+bac7df5ba. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
