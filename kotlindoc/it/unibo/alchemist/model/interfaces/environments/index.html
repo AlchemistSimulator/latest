@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/cbe2831e/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtu+a01fd748a"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtw+80c219a0f"};
 </script>
 
 
@@ -246,6 +246,16 @@ represent rooms and corridors, whereas edges should represent doors and passages
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="0987a1d6843928b1f95f1ecc8757dab847cb6cec">
+        <td class="sourcedoc-section section-signature">
+          <code>interface Euclidean2DEnvironment&lt;T&gt; : EuclideanEnvironment&lt;T, Euclidean2DPosition&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A bidimensional euclidean space with any concentration type T.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="0f24767f5fac8a1b0e266dde127a05475f5b0a33">
         <td class="sourcedoc-section section-signature">
           <code>interface Euclidean2DEnvironmentWithGraph&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T, N, E&gt; : EnvironmentWithGraph&lt;W, T, Euclidean2DPosition, Euclidean2DTransformation, N, E&gt;, Euclidean2DEnvironmentWithObstacles&lt;W, T&gt;, Any</code>
@@ -256,9 +266,9 @@ represent rooms and corridors, whereas edges should represent doors and passages
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="12e9fc5a33c91059b410712a60f13377fa5ed0c1">
+      <tr class="sourcedoc-section section-element" id="0fa28250f5c78beb15cee2b21045724d1300f67a">
         <td class="sourcedoc-section section-signature">
-          <code>interface Euclidean2DEnvironmentWithObstacles&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : Environment2DWithObstacles&lt;W, T, Euclidean2DPosition&gt;, Any</code>
+          <code>interface Euclidean2DEnvironmentWithObstacles&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : Euclidean2DEnvironment&lt;T&gt;, Environment2DWithObstacles&lt;W, T, Euclidean2DPosition&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An Environment2DWithObstacles using Euclidean2DPositions.</p>
@@ -296,9 +306,9 @@ represent rooms and corridors, whereas edges should represent doors and passages
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="e83891a7f51deed8e3fade5b4f298aa4c54075d0">
+      <tr class="sourcedoc-section section-element" id="a60e61e88b38768e78820ec706012695472dc3c8">
         <td class="sourcedoc-section section-signature">
-          <code>interface PhysicsEnvironment&lt;T, P, A : GeometricTransformation&lt;P&gt;, F : GeometricShapeFactory&lt;P, A&gt;&gt; : Environment&lt;T, P&gt;, Any</code>
+          <code>interface PhysicsEnvironment&lt;T, P, A : GeometricTransformation&lt;P&gt;, F : GeometricShapeFactory&lt;P, A&gt;&gt; : EuclideanEnvironment&lt;T, P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An environment supporting physics and nodes shapes.
@@ -648,7 +658,7 @@ but to create an apposite interface extending this one instead.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtu+a01fd748a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devtw+80c219a0f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

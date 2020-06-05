@@ -5222,39 +5222,7 @@
                             },
                             "description": "",
                             "title": "EuclideanPhysics2DEnvironmentWithObstacles",
-                            "content": "<p>Euclidean physics environment with support for obstacles.<\/p>makePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
-                          }]
-                        },
-                        "environmentwithgraph": {
-                          "ownKey": "environmentwithgraph",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/interfaces/environments/environmentwithgraph",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph"
-                            },
-                            "description": "",
-                            "title": "EnvironmentWithGraph",
-                            "content": "<p>An environment with obstacles providing a  NavigationGraph , i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.<\/p>graph\n<p>The navigation graph.<\/p>\nmakePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
-                          }]
-                        },
-                        "hasboundaries": {
-                          "ownKey": "hasboundaries",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/interfaces/environments/hasboundaries",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/hasboundaries"
-                            },
-                            "description": "",
-                            "title": "HasBoundaries",
-                            "content": "<p>Declare boundaries.<\/p>boundaries\n<p>The boundaries.<\/p>\n"
+                            "content": "<p>Euclidean physics environment with support for obstacles.<\/p>\n"
                           }]
                         },
                         "physicsenvironment": {
@@ -5270,7 +5238,7 @@
                             },
                             "description": "",
                             "title": "PhysicsEnvironment",
-                            "content": "<p>An environment supporting physics and nodes shapes.\nNote: due to the high number of parameters its's highly recommended to not use this interface directly,\nbut to create an apposite interface extending this one instead.<\/p>shapeFactory\n<p>A factory of shapes compatible with this environment.<\/p>\ngetHeading\n<p>Gets the heading of a node as a direction vector.<\/p>\nsetHeading\n<p>Sets the heading of a node.<\/p>\ngetShape\n<p>Gets the shape of a node relatively to its position and heading in the environment.<\/p>\ngetNodesWithin\n<p>Gets all nodes whose shape.intersect is true for the given shape.<\/p>\ncanNodeFitPosition\n<p>Whether or not a node can be placed in a position.<\/p>\nmakePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
+                            "content": "<p>An environment supporting physics and nodes shapes.\nNote: due to the high number of parameters its's highly recommended to not use this interface directly,\nbut to create an apposite interface extending this one instead.<\/p>shapeFactory\n<p>A factory of shapes compatible with this environment.<\/p>\ngetHeading\n<p>Gets the heading of a node as a direction vector.<\/p>\nsetHeading\n<p>Sets the heading of a node.<\/p>\ngetShape\n<p>Gets the shape of a node relatively to its position and heading in the environment.<\/p>\ngetNodesWithin\n<p>Gets all nodes whose shape.intersect is true for the given shape.<\/p>\ncanNodeFitPosition\n<p>Whether or not a node can be placed in a position.<\/p>\n"
                           }]
                         },
                         "rectangularboundaries": {
@@ -5289,6 +5257,22 @@
                             "content": "<p>Describes rectangular  Boundaries  with the origin in (0,0).<\/p>width\n<p>Width.<\/p>\nheight\n<p>Height.<\/p>\n<init>\n<p>Describes rectangular  Boundaries  with the origin in (0,0).<\/p>\naccept\n<p> v  is the visitor in the Visitor pattern.\n BoundariesVisitor.visit  will be called with the right boundary type.<\/p>\n"
                           }]
                         },
+                        "euclidean2denvironment": {
+                          "ownKey": "euclidean2denvironment",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "kotlindoc",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "it/unibo/alchemist/model/interfaces/environments/euclidean2denvironment",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironment"
+                            },
+                            "description": "",
+                            "title": "Euclidean2DEnvironment",
+                            "content": "<p>A bidimensional euclidean space with any concentration type  T .<\/p>origin\n<p>Create a position corresponding to the origin of this environment.<\/p>\nmakePosition\n<p>Creates a new  Euclidean2DPosition .<\/p>\nmakePosition\n<p>Creates a  Position  compatible with this environment given its  coordinates .<\/p>\n"
+                          }]
+                        },
                         "euclidean2denvironmentwithobstacles": {
                           "ownKey": "euclidean2denvironmentwithobstacles",
                           "ownPages": [{
@@ -5302,7 +5286,87 @@
                             },
                             "description": "",
                             "title": "Euclidean2DEnvironmentWithObstacles",
-                            "content": "<p>An  Environment2DWithObstacles  using  Euclidean2DPosition s.<\/p>makePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
+                            "content": "<p>An  Environment2DWithObstacles  using  Euclidean2DPosition s.<\/p>\n"
+                          }]
+                        },
+                        "euclidean2denvironmentwithgraph": {
+                          "ownKey": "euclidean2denvironmentwithgraph",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "kotlindoc",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph"
+                            },
+                            "description": "",
+                            "title": "Euclidean2DEnvironmentWithGraph",
+                            "content": "<p>An euclidean  EnvironmentWithGraph .<\/p>\n"
+                          }]
+                        },
+                        "physics2denvironment": {
+                          "ownKey": "physics2denvironment",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "kotlindoc",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "it/unibo/alchemist/model/interfaces/environments/physics2denvironment",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physics2denvironment"
+                            },
+                            "description": "",
+                            "title": "Physics2DEnvironment",
+                            "content": "<p>Defines a bidimensional euclidean environment.<\/p>\n"
+                          }]
+                        },
+                        "boundariesvisitor": {
+                          "ownKey": "boundariesvisitor",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "kotlindoc",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "it/unibo/alchemist/model/interfaces/environments/boundariesvisitor",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/boundariesvisitor"
+                            },
+                            "description": "",
+                            "title": "BoundariesVisitor",
+                            "content": "<p>The visitor to handle different types of boundaries.\nNote: whenever a new  Boundaries  is created, it should be added to a new visit method in this interface.<\/p>visit\n<p> rectangularBoundaries  with origin in (0,0).<\/p>\n"
+                          }]
+                        },
+                        "environmentwithgraph": {
+                          "ownKey": "environmentwithgraph",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "kotlindoc",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "it/unibo/alchemist/model/interfaces/environments/environmentwithgraph",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph"
+                            },
+                            "description": "",
+                            "title": "EnvironmentWithGraph",
+                            "content": "<p>An environment with obstacles providing a  NavigationGraph , i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.<\/p>graph\n<p>The navigation graph.<\/p>\n"
+                          }]
+                        },
+                        "hasboundaries": {
+                          "ownKey": "hasboundaries",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "kotlindoc",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "it/unibo/alchemist/model/interfaces/environments/hasboundaries",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/hasboundaries"
+                            },
+                            "description": "",
+                            "title": "HasBoundaries",
+                            "content": "<p>Declare boundaries.<\/p>boundaries\n<p>The boundaries.<\/p>\n"
                           }]
                         },
                         "boundaries": {
@@ -5321,22 +5385,6 @@
                             "content": "<p>Describes the boundaries via the Visitor pattern.\nNote: whenever a new  Boundaries  is created, it should be added to a new visit method in  BoundariesVisitor .<\/p>accept\n<p> v  is the visitor in the Visitor pattern.\n BoundariesVisitor.visit  will be called with the right boundary type.<\/p>\n"
                           }]
                         },
-                        "euclidean2denvironmentwithgraph": {
-                          "ownKey": "euclidean2denvironmentwithgraph",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph"
-                            },
-                            "description": "",
-                            "title": "Euclidean2DEnvironmentWithGraph",
-                            "content": "<p>An euclidean  EnvironmentWithGraph .<\/p>makePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
-                          }]
-                        },
                         "euclideanphysics2denvironmentwithgraph": {
                           "ownKey": "euclideanphysics2denvironmentwithgraph",
                           "ownPages": [{
@@ -5350,7 +5398,7 @@
                             },
                             "description": "",
                             "title": "EuclideanPhysics2DEnvironmentWithGraph",
-                            "content": "<p>An  Euclidean2DEnvironmentWithGraph  with physics.<\/p>makePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
+                            "content": "<p>An  Euclidean2DEnvironmentWithGraph  with physics.<\/p>\n"
                           }]
                         },
                         "environment2dwithobstacles": {
@@ -5366,39 +5414,7 @@
                             },
                             "description": "",
                             "title": "Environment2DWithObstacles",
-                            "content": "<p>A bidimensional  EnvironmentWithObstacles .<\/p>getObstaclesInRange\n<p>Given a point and a range, retrieves all the obstacles within.<\/p>\ngetObstaclesInRange\n<p>Given a point and a range, retrieves all the obstacles within.<\/p>\nhasMobileObstacles\n<p>makePosition<\/p>\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
-                          }]
-                        },
-                        "physics2denvironment": {
-                          "ownKey": "physics2denvironment",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/interfaces/environments/physics2denvironment",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physics2denvironment"
-                            },
-                            "description": "",
-                            "title": "Physics2DEnvironment",
-                            "content": "<p>Defines a bidimensional euclidean environment.<\/p>makePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
-                          }]
-                        },
-                        "boundariesvisitor": {
-                          "ownKey": "boundariesvisitor",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/interfaces/environments/boundariesvisitor",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/boundariesvisitor"
-                            },
-                            "description": "",
-                            "title": "BoundariesVisitor",
-                            "content": "<p>The visitor to handle different types of boundaries.\nNote: whenever a new  Boundaries  is created, it should be added to a new visit method in this interface.<\/p>visit\n<p> rectangularBoundaries  with origin in (0,0).<\/p>\n"
+                            "content": "<p>A bidimensional  EnvironmentWithObstacles .<\/p>getObstaclesInRange\n<p>Given a point and a range, retrieves all the obstacles within.<\/p>\ngetObstaclesInRange\n<p>Given a point and a range, retrieves all the obstacles within.<\/p>\nhasMobileObstacles\n"
                           }]
                         }
                       },
@@ -5413,7 +5429,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.interfaces.environments",
-                        "content": "<p>HasBoundaries<\/p>\n<p>Declare boundaries.<\/p>\nBoundaries\n<p>Describes the boundaries via the Visitor pattern.\nNote: whenever a new  Boundaries  is created, it should be added to a new visit method in  BoundariesVisitor .<\/p>\nBoundariesVisitor\n<p>The visitor to handle different types of boundaries.\nNote: whenever a new  Boundaries  is created, it should be added to a new visit method in this interface.<\/p>\nRectangularBoundaries\n<p>Describes rectangular  Boundaries  with the origin in (0,0).<\/p>\nEnvironment2DWithObstacles\n<p>A bidimensional  EnvironmentWithObstacles .<\/p>\nEnvironmentWithGraph\n<p>An environment with obstacles providing a  NavigationGraph , i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.<\/p>\nEuclidean2DEnvironmentWithGraph\n<p>An euclidean  EnvironmentWithGraph .<\/p>\nEuclidean2DEnvironmentWithObstacles\n<p>An  Environment2DWithObstacles  using  Euclidean2DPosition s.<\/p>\nEuclideanPhysics2DEnvironmentWithGraph\n<p>An  Euclidean2DEnvironmentWithGraph  with physics.<\/p>\nEuclideanPhysics2DEnvironmentWithObstacles\n<p>Euclidean physics environment with support for obstacles.<\/p>\nPhysics2DEnvironment\n<p>Defines a bidimensional euclidean environment.<\/p>\nPhysicsEnvironment\n<p>An environment supporting physics and nodes shapes.\nNote: due to the high number of parameters its's highly recommended to not use this interface directly,\nbut to create an apposite interface extending this one instead.<\/p>\n"
+                        "content": "<p>HasBoundaries<\/p>\n<p>Declare boundaries.<\/p>\nBoundaries\n<p>Describes the boundaries via the Visitor pattern.\nNote: whenever a new  Boundaries  is created, it should be added to a new visit method in  BoundariesVisitor .<\/p>\nBoundariesVisitor\n<p>The visitor to handle different types of boundaries.\nNote: whenever a new  Boundaries  is created, it should be added to a new visit method in this interface.<\/p>\nRectangularBoundaries\n<p>Describes rectangular  Boundaries  with the origin in (0,0).<\/p>\nEnvironment2DWithObstacles\n<p>A bidimensional  EnvironmentWithObstacles .<\/p>\nEnvironmentWithGraph\n<p>An environment with obstacles providing a  NavigationGraph , i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.<\/p>\nEuclidean2DEnvironment\n<p>A bidimensional euclidean space with any concentration type  T .<\/p>\nEuclidean2DEnvironmentWithGraph\n<p>An euclidean  EnvironmentWithGraph .<\/p>\nEuclidean2DEnvironmentWithObstacles\n<p>An  Environment2DWithObstacles  using  Euclidean2DPosition s.<\/p>\nEuclideanPhysics2DEnvironmentWithGraph\n<p>An  Euclidean2DEnvironmentWithGraph  with physics.<\/p>\nEuclideanPhysics2DEnvironmentWithObstacles\n<p>Euclidean physics environment with support for obstacles.<\/p>\nPhysics2DEnvironment\n<p>Defines a bidimensional euclidean environment.<\/p>\nPhysicsEnvironment\n<p>An environment supporting physics and nodes shapes.\nNote: due to the high number of parameters its's highly recommended to not use this interface directly,\nbut to create an apposite interface extending this one instead.<\/p>\n"
                       }]
                     },
                     "position2d": {
@@ -5525,7 +5541,7 @@
                         },
                         "description": "",
                         "title": "EnvironmentWithObstacles",
-                        "content": "<p>An environment with  Obstacle s.<\/p>obstacles\n<p>A list of all the obstacles in this environment.<\/p>\naddObstacle\n<p>Adds an obstacle to this environment.<\/p>\nremoveObstacle\n<p>Removes an obstacle from this environment.<\/p>\nintersectsObstacle\n<p>Checks whether there is at least an obstacle intersecting the line connecting  start  and  end .<\/p>\nnext\n<p>This method must calculate the ABSOLUTE next allowed position given the\ncurrent position and the position in which the node wants to move. For\nexample, if your node is in position <a href=\"#\">2,3<\/a>, wants to move to <a href=\"#\">3,4<\/a> but\nthe next allowed position (because, e.g., of physical obstacles) is\n<a href=\"#\">2.5,3.5<\/a>, the result must be a Position containing coordinates\n<a href=\"#\">2.5,3.5<\/a>.<\/p>\nmakePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
+                        "content": "<p>An environment with  Obstacle s.<\/p>obstacles\n<p>A list of all the obstacles in this environment.<\/p>\naddObstacle\n<p>Adds an obstacle to this environment.<\/p>\nremoveObstacle\n<p>Removes an obstacle from this environment.<\/p>\nintersectsObstacle\n<p>Checks whether there is at least an obstacle intersecting the line connecting  start  and  end .<\/p>\nnext\n<p>This method must calculate the ABSOLUTE next allowed position given the\ncurrent position and the position in which the node wants to move. For\nexample, if your node is in position <a href=\"#\">2,3<\/a>, wants to move to <a href=\"#\">3,4<\/a> but\nthe next allowed position (because, e.g., of physical obstacles) is\n<a href=\"#\">2.5,3.5<\/a>, the result must be a Position containing coordinates\n<a href=\"#\">2.5,3.5<\/a>.<\/p>\n"
                       }]
                     },
                     "group": {
@@ -5896,6 +5912,22 @@
                         "description": "",
                         "title": "GeoPosition",
                         "content": "<p>Represents a specific point on the Earth's surface.<\/p>getLatitude\n<p>getLongitude<\/p>\n<p>getCoordinate<\/p>\n"
+                      }]
+                    },
+                    "euclideanenvironment": {
+                      "ownKey": "euclideanenvironment",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "kotlindoc",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "it/unibo/alchemist/model/interfaces/euclideanenvironment",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideanenvironment"
+                        },
+                        "description": "",
+                        "title": "EuclideanEnvironment",
+                        "content": "<p>An Euclidean space, where  Position s  P  are valid  Vector s,\nsupporting any concentration type  T .<\/p>origin\n<p>Create a position corresponding to the origin of this environment.<\/p>\nmakePosition\n<p>Creates a  Position  compatible with this environment given its  coordinates .<\/p>\n"
                       }]
                     },
                     "navigationaction": {
@@ -6297,7 +6329,7 @@
                         },
                         "description": "",
                         "title": "Environment",
-                        "content": "<p>Interface for an environment. Every environment must implement this specification.<\/p>addLayer\n<p>Add a <code> Layer <\/code> to the <code> Environment <\/code>.<\/p>\ngetLayers\n<p>Return all the Layers in this <code> Environment <\/code>.<\/p>\nsetSimulation\n<p>getSize<\/p>\n<p>This method returns the size of the environment as an array of length <code> #getDimensions() <\/code>. This method must return distance measured with the same unit used by the positions. No non-euclidean distance metrics are allowed.<\/p>\ngetDistanceBetweenNodes\n<p>Measures the distance between two nodes in the environment.<\/p>\ngetNodesWithinRange\n<p>Given a node (center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized and it's consequently <b>much<\/b> better to use <code> Environment#getNeighborhood(Node) <\/code> and filter the neighborhood if you are sure that all the nodes within the range are connected to the center.<\/p>\ngetNodesWithinRange\n<p>Given a <code> Position <\/code>(center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized.<\/p>\nmoveNodeToPosition\n<p>This method moves a node in the environment to some position. If node move is unsupported, it does nothing.<\/p>\nmoveNode\n<p>This method moves a node in the environment toward some direction. If node move is unsupported, it does nothing.<\/p>\ngetLinkingRule\n<p>setIncarnation<\/p>\n<p>removeNode<\/p>\n<p>This method allows to remove a node. If node removal is unsupported, it does nothing.<\/p>\nsetLinkingRule\n<p>getOffset<\/p>\n<p>This method allows to know which are the smallest coordinates represented.<\/p>\ngetIncarnation\n<p>getNeighborhood<\/p>\n<p>Given a node, this method returns its neighborhood.<\/p>\ngetSimulation\n<p>getNodesNumber<\/p>\n<p>isTerminated<\/p>\n<p>getNodeByID<\/p>\n<p>Allows to access a node known its id. Depending on the implementation, this method may or not be optimized (namely, id could run in constant or linear time with the number of nodes).<\/p>\ngetPosition\n<p>Calculates the position of a node.<\/p>\ngetDimensions\n<p>The number of dimensions of this environment.<\/p>\ngetNodes\n<p>All the nodes that exist in current environment.<\/p>\naddTerminator\n<p>getSizeInDistanceUnits<\/p>\n<p>This method returns the size of the environment as an array of length <code> #getDimensions() <\/code>. This method must return distance measured with the same unit used for measuring distances. It may or may not return the same result of <code> #getSize() <\/code><\/p>\ngetLayer\n<p>Get the layer associate to the given molecule. If no Layer is associated with the given molecule, return an empty optional.<\/p>\nmakePosition\n<p>addNode<\/p>\n<p>This method allows to add a new node to this environment. The environment is responsible to call the right method of the simulation in order to ensure that the reaction is properly scheduled.<\/p>\nmakePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
+                        "content": "<p>Interface for an environment. Every environment must implement this specification.<\/p>addLayer\n<p>Add a <code> Layer <\/code> to the <code> Environment <\/code>.<\/p>\ngetLayers\n<p>Return all the Layers in this <code> Environment <\/code>.<\/p>\nsetSimulation\n<p>getSize<\/p>\n<p>This method returns the size of the environment as an array of length <code> #getDimensions() <\/code>. This method must return distance measured with the same unit used by the positions. No non-euclidean distance metrics are allowed.<\/p>\ngetDistanceBetweenNodes\n<p>Measures the distance between two nodes in the environment.<\/p>\ngetNodesWithinRange\n<p>Given a node (center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized and it's consequently <b>much<\/b> better to use <code> Environment#getNeighborhood(Node) <\/code> and filter the neighborhood if you are sure that all the nodes within the range are connected to the center.<\/p>\ngetNodesWithinRange\n<p>Given a <code> Position <\/code>(center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized.<\/p>\nmoveNodeToPosition\n<p>This method moves a node in the environment to some position. If node move is unsupported, it does nothing.<\/p>\nmoveNode\n<p>This method moves a node in the environment toward some direction. If node move is unsupported, it does nothing.<\/p>\ngetLinkingRule\n<p>setIncarnation<\/p>\n<p>removeNode<\/p>\n<p>This method allows to remove a node. If node removal is unsupported, it does nothing.<\/p>\nsetLinkingRule\n<p>getOffset<\/p>\n<p>This method allows to know which are the smallest coordinates represented.<\/p>\ngetIncarnation\n<p>getNeighborhood<\/p>\n<p>Given a node, this method returns its neighborhood.<\/p>\ngetSimulation\n<p>getNodesNumber<\/p>\n<p>isTerminated<\/p>\n<p>getNodeByID<\/p>\n<p>Allows to access a node known its id. Depending on the implementation, this method may or not be optimized (namely, id could run in constant or linear time with the number of nodes).<\/p>\ngetPosition\n<p>Calculates the position of a node.<\/p>\ngetDimensions\n<p>The number of dimensions of this environment.<\/p>\ngetNodes\n<p>All the nodes that exist in current environment.<\/p>\naddTerminator\n<p>getSizeInDistanceUnits<\/p>\n<p>This method returns the size of the environment as an array of length <code> #getDimensions() <\/code>. This method must return distance measured with the same unit used for measuring distances. It may or may not return the same result of <code> #getSize() <\/code><\/p>\ngetLayer\n<p>Get the layer associate to the given molecule. If no Layer is associated with the given molecule, return an empty optional.<\/p>\nmakePosition\n<p>addNode<\/p>\n<p>This method allows to add a new node to this environment. The environment is responsible to call the right method of the simulation in order to ensure that the reaction is properly scheduled.<\/p>\n"
                       }]
                     },
                     "gpstrace": {
@@ -6719,7 +6751,7 @@
                     },
                     "description": "",
                     "title": "it.unibo.alchemist.model.interfaces",
-                    "content": "<p>CognitivePedestrian<\/p>\n<p>An heterogeneous pedestrian with cognitive capabilities too.<\/p>\nEuclideanNavigationAction\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nGroup\n<p>A group of nodes.<\/p>\nGroupSteeringAction\n<p>Steering action caused by a group of pedestrians.<\/p>\nGroupWithLeader\n<p>A group with a special member acting as a leader.<\/p>\nHeterogeneousPedestrian\n<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.<\/p>\nNavigationAction\n<p>A  SteeringAction  allowing a pedestrian to navigate an environment consciously (e.g. without\ngetting stuck in U-shaped obstacles).\nNames are inspired to indoor environments, but this interface works for outdoor ones as well.<\/p>\nNavigationStrategy\n<p>Defines what a pedestrian should do when in a new room (= environment's area), this is designed\nto be used jointly with a  NavigationAction : the latter defines how to properly move the\npedestrian, while delegating the decision on where to move it to a  NavigationStrategy .<\/p>\nOrientingCognitivePedestrian\n<p>A heterogeneous pedestrian with cognitive and orienting capabilities.<\/p>\nOrientingPedestrian\n<p>A pedestrian capable of orienting itself.<\/p>\nPedestrian\n<p>A pedestrian with any characteristic taken into consideration.<\/p>\nPedestrian2D\n<p>The bidimensional representation of a pedestrian.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\nSteeringAction\n<p>Action whose purpose is moving a node inside the environment it is in.<\/p>\nSteeringActionWithTarget\n<p>A  SteeringAction  with a defined target.<\/p>\nSteeringStrategy\n<p>Strategy interface describing how the next points of the steering actions\nare combined to calculate the next position to move on.<\/p>\nEnvironmentWithObstacles\n<p>An environment with  Obstacle s.<\/p>\nObstacle\n<p>A generic obstacle in a vector space.<\/p>\nPosition\n<p>An interface to represent a generic coordinates system.<\/p>\nPosition2D\n<p>A bidimensional position.<\/p>\nVisibleNode\n<p>Represents a node seen by the  it.unibo.alchemist.model.implementations.actions.See  action.<\/p>\nObstacle2D\n<p>An <code> Obstacle <\/code> in a bidimensional space.<\/p>\nRoute\n<p>CircularDeformableCell<\/p>\n<p>Implements a circular deformable cell.<\/p>\nEnvironmentNode\n<p>CellWithCircularArea<\/p>\n<p>Implements a cell with a defined volume.<\/p>\nEnvironmentSupportingDeformableCells\n<p><code> Environment <\/code> supporting deformable cells.<\/p>\nCellNode\n<p>ILsaMolecule<\/p>\n<p>ILsaAction<\/p>\n<p>ILsaNode<\/p>\n<p>Interface for an LSA Node. Avoids the crappy casts.<\/p>\nILsaCondition\n<p>TimeDistribution<\/p>\n<p>This interface represents a temporal distribution for any event.<\/p>\nMolecule\n<p>Interface for a molecule.<\/p>\nLinkingRule\n<p>An interface that represent an auto-linking logic for nodes within an environment.<\/p>\nBenchmarkableEnvironment\n<p>An environment which provides a mean to get infos about its performances.<\/p>\nCondition\n<p>Node<\/p>\n<p>GeoPosition<\/p>\n<p>Represents a specific point on the Earth's surface.<\/p>\nAction\n<p>Neighborhood<\/p>\n<p>The type which describes the concentration of a molecule Interface for a neighborhood. When implementing it in a real class, please remember to correctly implement also the equals method inherited from Object.<\/p>\nReaction\n<p>Concentration<\/p>\n<p>This interface is a wrapper for concentrations.<\/p>\nIncarnation\n<p>Layer<\/p>\n<p>Interface for static layer, containing a substance or a molecule with a spatial distribution.<\/p>\nDependency\n<p>This interface represents a token that may generate a dependency between two reactions. Some special built-in tokens are EVERYTHING, EVERY_MOLECULE, MOVEMENT, and NEIGHBORHOOD_CHANGE. Molecules are dependencies as well.<\/p>\nEnvironment\n<p>Interface for an environment. Every environment must implement this specification.<\/p>\nTime\n<p>Interface for time representation.<\/p>\nContext\n<p>This enum describes the possible contexts for a given <code> Action <\/code> or <code> Condition <\/code>. A context represents the elements which are read for a <code> Condition <\/code> and the elements that may be subject of modifications for an <code> Action <\/code>. Choosing the right <code> Context <\/code> is crucial: if it's too restricted the simulation will be invalid, if it's too wide it WILL impact dramatically on performances. Contexts are used internally to better determine dependencies among reactions. See <a href=\"http://apice.unibo.it/xwiki/bin/view/Publications/PianiniMASS11\"> this paper<\/a> for further information about the usage of contexts.<\/p>\nTimedRoute\n<p>Route with total trip time to cross it.<\/p>\nGPSPoint\n<p>MapEnvironment<\/p>\n<p>Vehicle<\/p>\n<p>ObjectWithGPS<\/p>\n<p>GPSTrace<\/p>\n<p>it.unibo.alchemist.model.interfaces.environments<\/p>\n<p>it.unibo.alchemist.model.interfaces.geometry<\/p>\n<p>it.unibo.alchemist.model.interfaces.graph<\/p>\n<p>it.unibo.alchemist.model.interfaces.movestrategies<\/p>\n<p>EuclideanNavigationAction<\/p>\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\n"
+                    "content": "<p>CognitivePedestrian<\/p>\n<p>An heterogeneous pedestrian with cognitive capabilities too.<\/p>\nEuclideanNavigationAction\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nGroup\n<p>A group of nodes.<\/p>\nGroupSteeringAction\n<p>Steering action caused by a group of pedestrians.<\/p>\nGroupWithLeader\n<p>A group with a special member acting as a leader.<\/p>\nHeterogeneousPedestrian\n<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.<\/p>\nNavigationAction\n<p>A  SteeringAction  allowing a pedestrian to navigate an environment consciously (e.g. without\ngetting stuck in U-shaped obstacles).\nNames are inspired to indoor environments, but this interface works for outdoor ones as well.<\/p>\nNavigationStrategy\n<p>Defines what a pedestrian should do when in a new room (= environment's area), this is designed\nto be used jointly with a  NavigationAction : the latter defines how to properly move the\npedestrian, while delegating the decision on where to move it to a  NavigationStrategy .<\/p>\nOrientingCognitivePedestrian\n<p>A heterogeneous pedestrian with cognitive and orienting capabilities.<\/p>\nOrientingPedestrian\n<p>A pedestrian capable of orienting itself.<\/p>\nPedestrian\n<p>A pedestrian with any characteristic taken into consideration.<\/p>\nPedestrian2D\n<p>The bidimensional representation of a pedestrian.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\nSteeringAction\n<p>Action whose purpose is moving a node inside the environment it is in.<\/p>\nSteeringActionWithTarget\n<p>A  SteeringAction  with a defined target.<\/p>\nSteeringStrategy\n<p>Strategy interface describing how the next points of the steering actions\nare combined to calculate the next position to move on.<\/p>\nEnvironmentWithObstacles\n<p>An environment with  Obstacle s.<\/p>\nEuclideanEnvironment\n<p>An Euclidean space, where  Position s  P  are valid  Vector s,\nsupporting any concentration type  T .<\/p>\nObstacle\n<p>A generic obstacle in a vector space.<\/p>\nPosition\n<p>An interface to represent a generic coordinates system.<\/p>\nPosition2D\n<p>A bidimensional position.<\/p>\nVisibleNode\n<p>Represents a node seen by the  it.unibo.alchemist.model.implementations.actions.See  action.<\/p>\nObstacle2D\n<p>An <code> Obstacle <\/code> in a bidimensional space.<\/p>\nRoute\n<p>CircularDeformableCell<\/p>\n<p>Implements a circular deformable cell.<\/p>\nEnvironmentNode\n<p>CellWithCircularArea<\/p>\n<p>Implements a cell with a defined volume.<\/p>\nEnvironmentSupportingDeformableCells\n<p><code> Environment <\/code> supporting deformable cells.<\/p>\nCellNode\n<p>ILsaMolecule<\/p>\n<p>ILsaAction<\/p>\n<p>ILsaNode<\/p>\n<p>Interface for an LSA Node. Avoids the crappy casts.<\/p>\nILsaCondition\n<p>TimeDistribution<\/p>\n<p>This interface represents a temporal distribution for any event.<\/p>\nMolecule\n<p>Interface for a molecule.<\/p>\nLinkingRule\n<p>An interface that represent an auto-linking logic for nodes within an environment.<\/p>\nBenchmarkableEnvironment\n<p>An environment which provides a mean to get infos about its performances.<\/p>\nCondition\n<p>Node<\/p>\n<p>GeoPosition<\/p>\n<p>Represents a specific point on the Earth's surface.<\/p>\nAction\n<p>Neighborhood<\/p>\n<p>The type which describes the concentration of a molecule Interface for a neighborhood. When implementing it in a real class, please remember to correctly implement also the equals method inherited from Object.<\/p>\nReaction\n<p>Concentration<\/p>\n<p>This interface is a wrapper for concentrations.<\/p>\nIncarnation\n<p>Layer<\/p>\n<p>Interface for static layer, containing a substance or a molecule with a spatial distribution.<\/p>\nDependency\n<p>This interface represents a token that may generate a dependency between two reactions. Some special built-in tokens are EVERYTHING, EVERY_MOLECULE, MOVEMENT, and NEIGHBORHOOD_CHANGE. Molecules are dependencies as well.<\/p>\nEnvironment\n<p>Interface for an environment. Every environment must implement this specification.<\/p>\nTime\n<p>Interface for time representation.<\/p>\nContext\n<p>This enum describes the possible contexts for a given <code> Action <\/code> or <code> Condition <\/code>. A context represents the elements which are read for a <code> Condition <\/code> and the elements that may be subject of modifications for an <code> Action <\/code>. Choosing the right <code> Context <\/code> is crucial: if it's too restricted the simulation will be invalid, if it's too wide it WILL impact dramatically on performances. Contexts are used internally to better determine dependencies among reactions. See <a href=\"http://apice.unibo.it/xwiki/bin/view/Publications/PianiniMASS11\"> this paper<\/a> for further information about the usage of contexts.<\/p>\nTimedRoute\n<p>Route with total trip time to cross it.<\/p>\nGPSPoint\n<p>MapEnvironment<\/p>\n<p>Vehicle<\/p>\n<p>ObjectWithGPS<\/p>\n<p>GPSTrace<\/p>\n<p>it.unibo.alchemist.model.interfaces.environments<\/p>\n<p>it.unibo.alchemist.model.interfaces.geometry<\/p>\n<p>it.unibo.alchemist.model.interfaces.graph<\/p>\n<p>it.unibo.alchemist.model.interfaces.movestrategies<\/p>\n<p>EuclideanNavigationAction<\/p>\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\n"
                   }]
                 },
                 "biochemistryincarnation": {
@@ -7037,7 +7069,7 @@
                             },
                             "description": "",
                             "title": "Continuous2DEnvironment",
-                            "content": "<p>Implementation of  Physics2DEnvironment .<\/p>shapeFactory\n<p>A factory of shapes compatible with this environment.<\/p>\n<init>\n<p>Implementation of  Physics2DEnvironment .<\/p>\ngetNodesWithin\n<p>Gets all nodes whose shape.intersect is true for the given shape.<\/p>\ngetHeading\n<p>Gets the heading of a node as a direction vector.<\/p>\nsetHeading\n<p>Sets the heading of a node.<\/p>\ngetShape\n<p>Gets the shape of a node relatively to its position and heading in the environment.<\/p>\nnodeAdded\n<p>Keeps track of the largest diameter of the shapes.<\/p>\nnodeRemoved\n<p>{@inheritDoc}.<\/p>\nmoveNodeToPosition\n<p>Moves the node only if it doesn't collide with others.<\/p>\nnodeShouldBeAdded\n<p>A node should be added only if it doesn't collide with already existing nodes and fits in the environment's\nlimits.<\/p>\nmakePosition\n<p>Creates an euclidean position from the given coordinates.<\/p>\ncanNodeFitPosition\n<p>Whether or not a node can be placed in a position.<\/p>\nmakePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
+                            "content": "<p>Implementation of  Physics2DEnvironment .<\/p>shapeFactory\n<p>A factory of shapes compatible with this environment.<\/p>\n<init>\n<p>Implementation of  Physics2DEnvironment .<\/p>\ngetNodesWithin\n<p>Gets all nodes whose shape.intersect is true for the given shape.<\/p>\ngetHeading\n<p>Gets the heading of a node as a direction vector.<\/p>\nsetHeading\n<p>Sets the heading of a node.<\/p>\ngetShape\n<p>Gets the shape of a node relatively to its position and heading in the environment.<\/p>\nnodeAdded\n<p>Keeps track of the largest diameter of the shapes.<\/p>\nnodeRemoved\n<p>{@inheritDoc}.<\/p>\nmoveNodeToPosition\n<p>Moves the node only if it doesn't collide with others.<\/p>\nnodeShouldBeAdded\n<p>A node should be added only if it doesn't collide with already existing nodes and fits in the environment's\nlimits.<\/p>\nmakePosition\n<p>Creates an euclidean position from the given coordinates.<\/p>\ncanNodeFitPosition\n<p>Whether or not a node can be placed in a position.<\/p>\n"
                           }]
                         },
                         "abstractenvironment": {
@@ -7117,7 +7149,7 @@
                             },
                             "description": "",
                             "title": "Rectangular2DEnvironment",
-                            "content": "<p>A bounded  Physics2DEnvironment , nodes cannot exist nor move outside the rectangular boundaries centered\nin (0,0).<\/p>boundaries\n<p>The boundaries.<\/p>\n<init>\n<p>A bounded  Physics2DEnvironment , nodes cannot exist nor move outside the rectangular boundaries centered\nin (0,0).<\/p>\nnodeShouldBeAdded\n<p>A node should be added only if it doesn't collide with already existing nodes and fits in the environment's\nlimits.<\/p>\ncanNodeFitPosition\n<p>Whether or not a node can be placed in a position.<\/p>\nmakePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
+                            "content": "<p>A bounded  Physics2DEnvironment , nodes cannot exist nor move outside the rectangular boundaries centered\nin (0,0).<\/p>boundaries\n<p>The boundaries.<\/p>\n<init>\n<p>A bounded  Physics2DEnvironment , nodes cannot exist nor move outside the rectangular boundaries centered\nin (0,0).<\/p>\nnodeShouldBeAdded\n<p>A node should be added only if it doesn't collide with already existing nodes and fits in the environment's\nlimits.<\/p>\ncanNodeFitPosition\n<p>Whether or not a node can be placed in a position.<\/p>\n"
                           }]
                         },
                         "limitedcontinuos2d": {
@@ -7181,7 +7213,7 @@
                             },
                             "description": "",
                             "title": "ImageEnvironmentWithGraph",
-                            "content": "<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>graph\n<p>The navigation graph.<\/p>\n<init>\n<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>\nmakePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\n"
+                            "content": "<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>graph\n<p>The navigation graph.<\/p>\n<init>\n<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>\n"
                           }]
                         },
                         "continuous2dobstacles": {
@@ -8468,7 +8500,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.utils",
-                        "content": "<p>LazyMutable<\/p>\n<p>A delegate allowing to lazily initialise a non-null mutable variable (= var).<\/p>\nBidimensionalGaussian\n<p>A 2D gaussian function.<\/p>\nRectObstacle2D\n<p>This class implements a rectangular obstacle, whose sides are parallel to the cartesian axis.<\/p>\nRealDistributionUtil\n<p>Utility to translate statistics names into a RealDistribution.<\/p>\nlazyMutable\n<p>Creates an instance of  LazyMutable  with the given  initializer .<\/p>\nmakePosition\n<p>Create a position from an array of double representing the coordinates of the point.<\/p>\norigin\n<p>Create a position corresponding to the origin of this environment.<\/p>\nsurrounding\n<p>Create a list of points equally distributed in the circle of given radius with center in this position.<\/p>\nrotate\n<p>Perform the rotation of a position.<\/p>\nnextDouble\n<p>Generate a random double between the given bounds.<\/p>\ndirection\n<p>Generate a random Euclidean direction.<\/p>\nposition\n<p>Generate a random Euclidean position.<\/p>\nshuffled\n<p><a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>LazyMutable<\/p>\n<p>A delegate allowing to lazily initialise a non-null mutable variable (= var).<\/p>\nBidimensionalGaussian\n<p>A 2D gaussian function.<\/p>\nRectObstacle2D\n<p>This class implements a rectangular obstacle, whose sides are parallel to the cartesian axis.<\/p>\nRealDistributionUtil\n<p>Utility to translate statistics names into a RealDistribution.<\/p>\nlazyMutable\n<p>Creates an instance of  LazyMutable  with the given  initializer .<\/p>\nsurrounding\n<p>Create a list of points equally distributed in the circle of given radius with center in this position.<\/p>\nrotate\n<p>Perform the rotation of a position.<\/p>\nnextDouble\n<p>Generate a random double between the given bounds.<\/p>\ndirection\n<p>Generate a random Euclidean direction.<\/p>\nposition\n<p>Generate a random Euclidean position.<\/p>\nshuffled\n<p><a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
                       }]
                     },
                     "layers": {
@@ -9747,7 +9779,7 @@
                             },
                             "description": "",
                             "title": "FlowFieldSteeringAction",
-                            "content": "<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<\/p>env\n<pre><code>    the environment inside which the pedestrian moves.<\/code><\/pre>\ntargetMolecule\n<pre><code>    the {@link Molecule} you want to know the concentration in the different positions of the environment.<\/code><\/pre>\n<init>\n<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<\/p>\nnextPosition\n<p>The position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.<\/p>\nselectPosition\n<p>Selects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.<\/p>\nconcentrationIn\n\ngetLayerOrFail\n\ncenter\n\n"
+                            "content": "<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<\/p>environment\n<pre><code>    the environment inside which the pedestrian moves.<\/code><\/pre>\ntargetMolecule\n<pre><code>    the {@link Molecule} you want to know the concentration in the different positions of the environment.<\/code><\/pre>\n<init>\n<p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.<\/p>\nnextPosition\n<p>The position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.<\/p>\nselectPosition\n<p>Selects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.<\/p>\nconcentrationIn\n\ngetLayerOrFail\n\ncenter\n\n"
                           }]
                         },
                         "lsachangeargument": {
