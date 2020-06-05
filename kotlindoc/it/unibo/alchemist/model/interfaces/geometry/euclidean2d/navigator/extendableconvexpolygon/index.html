@@ -24,7 +24,7 @@
 
 
 
-<title>Euclidean2DShapeFactory</title>
+<title>ExtendableConvexPolygon</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/euclidean2dshapefactory","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/euclidean2dshapefactory"},"description":"","title":"Euclidean2DShapeFactory"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean2d/navigator/extendableconvexpolygon","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/navigator/extendableconvexpolygon"},"description":"","title":"ExtendableConvexPolygon"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtz+bac7df5ba"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devu0+c5e2d439d"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>Euclidean2DShapeFactory</h2></header>
+                    <header class="major"><h2>ExtendableConvexPolygon</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="Euclidean2DShapeFactory">
+<div class="sourcedoc-section section-root section-level-1" id="ExtendableConvexPolygon">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="d3c00f8d186dd1e1e417013b92c11ce67754d3cf">
+    <div class="sourcedoc-section section-element" id="2fce823eb02d2c0b62f4077a1f9b92f2a70bc20c">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface Euclidean2DShapeFactory: GeometricShapeFactory&lt;Euclidean2DPosition, Euclidean2DTransformation&gt;, Any</code>
+        <code>interface ExtendableConvexPolygon: MutableConvexPolygon, Any</code>
       </p>
 
       
@@ -159,7 +159,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Defines a factory of GeometricShape for a bidimensional euclidean space.</p>
+      <div class="sourcedoc-section section-comments"><p>A sophisticated MutableConvexPolygon.</p>
 </div>
 
       
@@ -174,24 +174,24 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="3f65be55063031b47e658314c8d47206d3298db5">
+    <div class="sourcedoc-section section-element" id="28c6c0f25428b1aa00ded785f73f042f4043e236">
       
-      <h3 class="sourcedoc-section element-name">circle</h3>
+      <h3 class="sourcedoc-section element-name">advanceEdge</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun circle(radius: Double): Euclidean2DShape</code>
+        <code>abstract fun advanceEdge(index: Int, step: Double): Boolean</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A circle extends in the first and second axis by its diameter.</p>
+      <div class="sourcedoc-section section-comments"><p>Advances an edge in its normal direction.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7644df62db4c8d20c41481735b22d864974ef734">
+<div class="sourcedoc-section section-root section-level-3" id="4d167d85d47c3fd3733463a234a506c536c556a3">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -206,12 +206,23 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+      <tr class="sourcedoc-section section-element" id="a8326bd6b6bacbd5b0286fd82f9b8f31c5da99f5">
         <td class="sourcedoc-section section-signature">
-          <code>radius: Double</code>
+          <code>index: Int</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>the radius</p>
+        <p>the index of the edge to advance (edge i connects vertices i and i+1)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="38e1231cdee1da529a2aa6cfa48b783b362bf500">
+        <td class="sourcedoc-section section-signature">
+          <code>step: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the length of the vector that will be used to advance the edge, negative
+values are supported and will shrink the polygon instead of extending it.</p>
 
         </td>
       </tr>
@@ -225,7 +236,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="31f504f4c441daebfc1b99a3d6db5b6952f6a067">
+<div class="sourcedoc-section section-root section-level-3" id="da7f11bc143fc2e438c0ec3bdc2239332762c825">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -240,13 +251,12 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
         <td class="sourcedoc-section section-signature">
-          <code>Euclidean2DShape</code>
+          <code>Boolean</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>the shape</p>
-
+        
         </td>
       </tr>
       
@@ -261,24 +271,24 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="cd21e2d3c7898a6d6e80e94051595f65c6dc3037">
+    <div class="sourcedoc-section section-element" id="ba53ee048be9c36d6bba560e022db699a705829d">
       
-      <h3 class="sourcedoc-section element-name">rectangle</h3>
+      <h3 class="sourcedoc-section element-name">extend</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun rectangle(width: Double, height: Double): Euclidean2DShape</code>
+        <code>abstract fun extend(step: Double): Boolean</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A rectangle extends in the first and second axis by its width and height.</p>
+      <div class="sourcedoc-section section-comments"><p>Extends the polygon in each direction: each edge is given a chance to advance.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="28fc951de2d234e2f24415fdf6071af03c101688">
+<div class="sourcedoc-section section-root section-level-3" id="58de27be305dfd929aed343a0705421ac9f65021">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -293,22 +303,13 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="2629f5a557b0dd8b96f3ee9959ee5de306c22051">
+      <tr class="sourcedoc-section section-element" id="38e1231cdee1da529a2aa6cfa48b783b362bf500">
         <td class="sourcedoc-section section-signature">
-          <code>width: Double</code>
+          <code>step: Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>the width</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="59df897769a819b06081194c76845e01f68216ac">
-        <td class="sourcedoc-section section-signature">
-          <code>height: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the height</p>
+        <p>the length of the vector that will be used to advance each edge, negative
+values are supported and will shrink the polygon instead of extending it.</p>
 
         </td>
       </tr>
@@ -322,7 +323,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="e66734523b34f5b7c1577b2c7c47dd30e5ef4f20">
+<div class="sourcedoc-section section-root section-level-3" id="f750f093ad1b928e5b087c71f16ac914a8eee282">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -337,122 +338,12 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
         <td class="sourcedoc-section section-signature">
-          <code>Euclidean2DShape</code>
+          <code>Boolean</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>the shape</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
         
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="526d57b766efb21531574637661a252c02c28079">
-      
-      <h3 class="sourcedoc-section element-name">circleSector</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>abstract fun circleSector(radius: Double, angle: Double, heading: Double): Euclidean2DShape</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>A circle sector is the portion of a disk enclosed by two radii and an arc
-and it extends in the first and second axis by its radius and angle.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="5d966e8d2c0c6f7f220d263f3aa7095b29e12bd3">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
-        <td class="sourcedoc-section section-signature">
-          <code>radius: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the radius of the circle from which the sector is extracted</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="e255fb07bdc63f1ec5d9f9d7e7735c1d890cf168">
-        <td class="sourcedoc-section section-signature">
-          <code>angle: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the angle of the arc in radians, it determines its dimension in the second axis</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="76e447c6251409a25eaa69478acae033af0d61e8">
-        <td class="sourcedoc-section section-signature">
-          <code>heading: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the angle in radians of the median segment which bisects the sector.
-It's used to determine the sector's heading.</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="fbef31e4480143b413012e2c46097336dc2843e7">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
-        <td class="sourcedoc-section section-signature">
-          <code>Euclidean2DShape</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the shape</p>
-
         </td>
       </tr>
       
@@ -803,7 +694,7 @@ It's used to determine the sector's heading.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtz+bac7df5ba. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devu0+c5e2d439d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

@@ -24,7 +24,7 @@
 
 
 
-<title>ExtendableConvexPolygon</title>
+<title>Euclidean2DShape</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -55,7 +55,7 @@
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocInterface, sourceDocPage, classes, page -->
+<!-- Page Template: kotlindocTypeAlias, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator/extendableconvexpolygon","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/navigator/extendableconvexpolygon"},"description":"","title":"ExtendableConvexPolygon"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshape","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshape"},"description":"","title":"Euclidean2DShape"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtz+bac7df5ba"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devu0+c5e2d439d"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>ExtendableConvexPolygon</h2></header>
+                    <header class="major"><h2>Euclidean2DShape</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,63 +138,10 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="ExtendableConvexPolygon">
+<div class="sourcedoc-section section-root section-level-1" id="Euclidean2DShape">
 
 
-  
-
-  
-    <div class="sourcedoc-section section-element" id="2fce823eb02d2c0b62f4077a1f9b92f2a70bc20c">
-      
-      <p class="sourcedoc-section section-signature">
-        <code>interface ExtendableConvexPolygon: MutableConvexPolygon, Any</code>
-      </p>
-
-      
-        
-    <!-- start:inject components -->
-    
-    <!-- end:inject components -->
-
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>A sophisticated MutableConvexPolygon.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-2" id="methods">
-
-
-  
-    <h2 class="sourcedoc-section section-name">Methods</h2>
-  
-
-  
-    <div class="sourcedoc-section section-element" id="28c6c0f25428b1aa00ded785f73f042f4043e236">
-      
-      <h3 class="sourcedoc-section element-name">advanceEdge</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>abstract fun advanceEdge(index: Int, step: Double): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Advances an edge in its normal direction.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="4d167d85d47c3fd3733463a234a506c536c556a3">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+  <p class="sourcedoc-section section-name"><strong>Euclidean2DShape</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -206,23 +153,12 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="a8326bd6b6bacbd5b0286fd82f9b8f31c5da99f5">
+      <tr class="sourcedoc-section section-element" id="d3747f1282f66aa9ca90398ef139ca4032a1b85c">
         <td class="sourcedoc-section section-signature">
-          <code>index: Int</code>
+          <code>class Euclidean2DShape</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>the index of the edge to advance (edge i connects vertices i and i+1)</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="38e1231cdee1da529a2aa6cfa48b783b362bf500">
-        <td class="sourcedoc-section section-signature">
-          <code>step: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the length of the vector that will be used to advance the edge, negative
-values are supported and will shrink the polygon instead of extending it.</p>
+        <p>Defines an euclidean shape in a bidimensional space.</p>
 
         </td>
       </tr>
@@ -231,140 +167,6 @@ values are supported and will shrink the polygon instead of extending it.</p>
     </table>
   </div>
 
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="da7f11bc143fc2e438c0ec3bdc2239332762c825">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="ba53ee048be9c36d6bba560e022db699a705829d">
-      
-      <h3 class="sourcedoc-section element-name">extend</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>abstract fun extend(step: Double): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Extends the polygon in each direction: each edge is given a chance to advance.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="58de27be305dfd929aed343a0705421ac9f65021">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="38e1231cdee1da529a2aa6cfa48b783b362bf500">
-        <td class="sourcedoc-section section-signature">
-          <code>step: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the length of the vector that will be used to advance each edge, negative
-values are supported and will shrink the polygon instead of extending it.</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="f750f093ad1b928e5b087c71f16ac914a8eee282">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-
-</div>
-
-        
-      
-    </div>
-  
 
 </div>
 
@@ -694,7 +496,7 @@ values are supported and will shrink the polygon instead of extending it.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtz+bac7df5ba. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devu0+c5e2d439d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

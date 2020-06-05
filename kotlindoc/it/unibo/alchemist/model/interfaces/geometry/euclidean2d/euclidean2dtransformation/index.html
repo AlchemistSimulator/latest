@@ -24,7 +24,7 @@
 
 
 
-<title>MutableConvexPolygon</title>
+<title>Euclidean2DTransformation</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/mutableconvexpolygon","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/mutableconvexpolygon"},"description":"","title":"MutableConvexPolygon"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dtransformation","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dtransformation"},"description":"","title":"Euclidean2DTransformation"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtz+bac7df5ba"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devu0+c5e2d439d"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>MutableConvexPolygon</h2></header>
+                    <header class="major"><h2>Euclidean2DTransformation</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="MutableConvexPolygon">
+<div class="sourcedoc-section section-root section-level-1" id="Euclidean2DTransformation">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="38d53d0767298045b75b4c9e85d44490e92984c3">
+    <div class="sourcedoc-section section-element" id="cde3c7f8ca97f7ee83d9deab68686c8f1f25b68c">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface MutableConvexPolygon: ConvexPolygon, Any</code>
+        <code>interface Euclidean2DTransformation: GeometricTransformation&lt;Euclidean2DPosition&gt;, Any</code>
       </p>
 
       
@@ -159,7 +159,8 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A mutable ConvexPolygon.</p>
+      <div class="sourcedoc-section section-comments"><p>Defines the possible transformations for a it.unibo.alchemist.model.interfaces.geometry.GeometricShape in a
+bidimensional euclidean space.</p>
 </div>
 
       
@@ -174,24 +175,24 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="89a5671c5953a3e6d1dceaac1aef689403b2ddf6">
+    <div class="sourcedoc-section section-element" id="f7c709301106a084937fc18ca292dbb6d5713c25">
       
-      <h3 class="sourcedoc-section element-name">addVertex</h3>
+      <h3 class="sourcedoc-section element-name">rotate</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun addVertex(index: Int, x: Double, y: Double): Boolean</code>
+        <code>abstract fun rotate(angle: Double)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Adds a vertex to the polygon.</p>
+      <div class="sourcedoc-section section-comments"><p>Counter clockwise rotation.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="d457a854d0156cbbc25bf0a8c3fa4a0248e94182">
+<div class="sourcedoc-section section-root section-level-3" id="c70eb1c2fc197c45ff9070f7866e74f16bc9bb9e">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -206,23 +207,184 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="a8326bd6b6bacbd5b0286fd82f9b8f31c5da99f5">
+      <tr class="sourcedoc-section section-element" id="e255fb07bdc63f1ec5d9f9d7e7735c1d890cf168">
         <td class="sourcedoc-section section-signature">
-          <code>index: Int</code>
+          <code>angle: Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>the index in the list of vertices where to put the new vertex</p>
+        <p>the angle in radians</p>
 
         </td>
       </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="45285aa41aa630307f6e2ab3392a1706929cc4d4">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="e5fc2a66b0220116f88f227d0cb11b2e7ddda7b8">
+      
+      <h3 class="sourcedoc-section element-name">rotate</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun rotate(direction: Euclidean2DPosition)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Rotates toward the specified direction.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b7d40685817783b4eaeb9f365f7499357b7abc49">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="7ea98f006d9354e97f686f17c7ba0a928635568e">
+        <td class="sourcedoc-section section-signature">
+          <code>direction: Euclidean2DPosition</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the direction vector</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fb0fcdf305cc8e496da4e8c956fa9e0ed100baa2">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="ff3eace23e2f6736973fd8832486dd447a934f48">
+      
+      <h3 class="sourcedoc-section element-name">origin</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun origin(x: Double, y: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Changes origin.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9cbfbd258afbf791fe34c9ce7957cfac52803d27">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
       
       <tr class="sourcedoc-section section-element" id="a75012425689dff9b94d0f57bf187c44428f11a7">
         <td class="sourcedoc-section section-signature">
           <code>x: Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>x coordinate</p>
-
+        
         </td>
       </tr>
       
@@ -231,8 +393,7 @@
           <code>y: Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>y coordinate</p>
-
+        
         </td>
       </tr>
       
@@ -245,7 +406,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="30ebb6ef9b4ad0d6b43b2f7bf3cab039a0bbb441">
+<div class="sourcedoc-section section-root section-level-3" id="4375f82c98eb8a974937e8e289434136490c9bec">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -260,297 +421,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
         <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="e0290a8a090c467b19372d2e8d9bc3a163388328">
-      
-      <h3 class="sourcedoc-section element-name">removeVertex</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>abstract fun removeVertex(index: Int): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Removes a vertex from the polygon.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="3eb3da900740d7e97a10b697119bfe81482fa681">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="a8326bd6b6bacbd5b0286fd82f9b8f31c5da99f5">
-        <td class="sourcedoc-section section-signature">
-          <code>index: Int</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the index of the vertex to be removed in the list of vertices</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="253a32af52f72abf7e37b1d51fe6c2e46cc837a8">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="fd5b3f58ac30b03e024fe6bad79c89f52cee482f">
-      
-      <h3 class="sourcedoc-section element-name">moveVertex</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>abstract fun moveVertex(index: Int, newX: Double, newY: Double): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Moves a vertex of the polygon to a new absolute position.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="976901d71e2bd5e54ccd46b194925efb2ce4c502">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="a8326bd6b6bacbd5b0286fd82f9b8f31c5da99f5">
-        <td class="sourcedoc-section section-signature">
-          <code>index: Int</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the index of the vertex to move</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="df8dddbe031b75e8d8f002df840ea69468c2b360">
-        <td class="sourcedoc-section section-signature">
-          <code>newX: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>new absolute x coordinate</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="0b7cc41c057cbab440bc05fd4b850e97431fa8af">
-        <td class="sourcedoc-section section-signature">
-          <code>newY: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>new absolute y coordinate</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="149f07ad4f9c9490dd8c64122ffa72b94599ff74">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="1339a7064393dd4a9e2163aa7269e82e360d13d8">
-      
-      <h3 class="sourcedoc-section element-name">replaceEdge</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>abstract fun replaceEdge(index: Int, newEdge: Segment2D&lt;Euclidean2DPosition&gt;): Boolean</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Replaces an edge of the polygon.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="cc0a1826a2ea4287df2bb618df486e017858c206">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="a8326bd6b6bacbd5b0286fd82f9b8f31c5da99f5">
-        <td class="sourcedoc-section section-signature">
-          <code>index: Int</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the index of the edge to replace (edge i connects vertices i and i+1)</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="53b38bd349be4c88a7c593f16f3d2e615006bc7a">
-        <td class="sourcedoc-section section-signature">
-          <code>newEdge: Segment2D&lt;Euclidean2DPosition&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>the new edge</p>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="b9e69a977f31efd5053609430ce1404814a60c32">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
-        <td class="sourcedoc-section section-signature">
-          <code>Boolean</code>
+          <code>Unit</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -904,7 +777,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtz+bac7df5ba. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devu0+c5e2d439d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

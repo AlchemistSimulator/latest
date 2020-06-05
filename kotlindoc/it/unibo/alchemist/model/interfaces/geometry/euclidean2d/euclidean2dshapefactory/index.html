@@ -24,7 +24,7 @@
 
 
 
-<title>it.unibo.alchemist.model.interfaces.geometry.euclidean.twod</title>
+<title>Euclidean2DShapeFactory</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -51,11 +51,11 @@
 <!-- Class: com.eden.orchid.editorial.EditorialTheme -->
 
 <!-- PAGE -->
-<!-- Type: packages -->
+<!-- Type: classes -->
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocPackage, sourceDocPage, packages, page -->
+<!-- Page Template: kotlindocInterface, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean/twod","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod"},"description":"","title":"it.unibo.alchemist.model.interfaces.geometry.euclidean.twod"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshapefactory","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshapefactory"},"description":"","title":"Euclidean2DShapeFactory"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtz+bac7df5ba"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devu0+c5e2d439d"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>it.unibo.alchemist.model.interfaces.geometry.euclidean.twod</h2></header>
+                    <header class="major"><h2>Euclidean2DShapeFactory</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="it.unibo.alchemist.model.interfaces.geometry.euclidean.twod">
+<div class="sourcedoc-section section-root section-level-1" id="Euclidean2DShapeFactory">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="68864b564728614e51ec754dfe766f3e0d8763d3">
+    <div class="sourcedoc-section section-element" id="d3c00f8d186dd1e1e417013b92c11ce67754d3cf">
       
       <p class="sourcedoc-section section-signature">
-        <code>package it.unibo.alchemist.model.interfaces.geometry.euclidean.twod</code>
+        <code>interface Euclidean2DShapeFactory: GeometricShapeFactory&lt;Euclidean2DPosition, Euclidean2DTransformation&gt;, Any</code>
       </p>
 
       
@@ -159,16 +159,42 @@
 
       
 
-      <div class="sourcedoc-section section-comments"></div>
+      <div class="sourcedoc-section section-comments"><p>Defines a factory of GeometricShape for a bidimensional euclidean space.</p>
+</div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-2" id="classes">
+<div class="sourcedoc-section section-root section-level-2" id="methods">
 
 
-  <p class="sourcedoc-section section-name"><strong>Classes</strong></p>
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="3f65be55063031b47e658314c8d47206d3298db5">
+      
+      <h3 class="sourcedoc-section element-name">circle</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun circle(radius: Double): Euclidean2DShape</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>A circle extends in the first and second axis by its diameter.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7644df62db4c8d20c41481735b22d864974ef734">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -180,74 +206,12 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="5c8fa2fd39edee18ee38b6fa2da1264094f6af6c">
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
         <td class="sourcedoc-section section-signature">
-          <code>interface ConvexPolygon: Euclidean2DConvexShape, AwtShapeCompatible, Any</code>
+          <code>radius: Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A simple polygon (i.e. not self-intersecting and without holes) in which no
-line segment between two points on the boundary ever goes outside the polygon.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="99f7c54c00571a78f9a8b94235a21a72adac287f">
-        <td class="sourcedoc-section section-signature">
-          <code>class Euclidean2DConvexShape</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A convex euclidean shape in a bidimensional environment.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="d3747f1282f66aa9ca90398ef139ca4032a1b85c">
-        <td class="sourcedoc-section section-signature">
-          <code>class Euclidean2DShape</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Defines an euclidean shape in a bidimensional space.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="d3c00f8d186dd1e1e417013b92c11ce67754d3cf">
-        <td class="sourcedoc-section section-signature">
-          <code>interface Euclidean2DShapeFactory: GeometricShapeFactory&lt;Euclidean2DPosition, Euclidean2DTransformation&gt;, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Defines a factory of GeometricShape for a bidimensional euclidean space.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="cde3c7f8ca97f7ee83d9deab68686c8f1f25b68c">
-        <td class="sourcedoc-section section-signature">
-          <code>interface Euclidean2DTransformation: GeometricTransformation&lt;Euclidean2DPosition&gt;, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Defines the possible transformations for a it.unibo.alchemist.model.interfaces.geometry.GeometricShape in a
-bidimensional euclidean space.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="38d53d0767298045b75b4c9e85d44490e92984c3">
-        <td class="sourcedoc-section section-signature">
-          <code>interface MutableConvexPolygon: ConvexPolygon, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A mutable ConvexPolygon.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="de88dcf2ba3a922a367e2b6a8702e3ef1535dd06">
-        <td class="sourcedoc-section section-signature">
-          <code>data class Segment2D&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Defines a segment from first to second in an euclidean bidimensional space.</p>
+        <p>the radius</p>
 
         </td>
       </tr>
@@ -261,10 +225,10 @@ bidimensional euclidean space.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-2" id="subpackages">
+<div class="sourcedoc-section section-root section-level-3" id="31f504f4c441daebfc1b99a3d6db5b6952f6a067">
 
 
-  <p class="sourcedoc-section section-name"><strong>Subpackages</strong></p>
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -276,12 +240,76 @@ bidimensional euclidean space.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="17fe1448c05057869a1ce14f117c5e566080b870">
+      <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
         <td class="sourcedoc-section section-signature">
-          <code>package it.unibo.alchemist.model.interfaces.geometry.euclidean.twod.navigator</code>
+          <code>Euclidean2DShape</code>
         </td>
         <td class="sourcedoc-section section-comments content">
+        <p>the shape</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
         
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="cd21e2d3c7898a6d6e80e94051595f65c6dc3037">
+      
+      <h3 class="sourcedoc-section element-name">rectangle</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun rectangle(width: Double, height: Double): Euclidean2DShape</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>A rectangle extends in the first and second axis by its width and height.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="28fc951de2d234e2f24415fdf6071af03c101688">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2629f5a557b0dd8b96f3ee9959ee5de306c22051">
+        <td class="sourcedoc-section section-signature">
+          <code>width: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the width</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="59df897769a819b06081194c76845e01f68216ac">
+        <td class="sourcedoc-section section-signature">
+          <code>height: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the height</p>
+
         </td>
       </tr>
       
@@ -294,10 +322,10 @@ bidimensional euclidean space.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-2" id="typealiases">
+<div class="sourcedoc-section section-root section-level-3" id="e66734523b34f5b7c1577b2c7c47dd30e5ef4f20">
 
 
-  <p class="sourcedoc-section section-name"><strong>Typealiases</strong></p>
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -309,22 +337,12 @@ bidimensional euclidean space.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="6b22488d6a489a6fc4a7cc96860b2b232881043a">
+      <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
         <td class="sourcedoc-section section-signature">
-          <code>typealias Euclidean2DConvexShape = ConvexGeometricShape</code>
+          <code>Euclidean2DShape</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A convex euclidean shape in a bidimensional environment.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="d4ed22581b690f815f64b5dc84646c0ad8bd7699">
-        <td class="sourcedoc-section section-signature">
-          <code>typealias Euclidean2DShape = GeometricShape</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Defines an euclidean shape in a bidimensional space.</p>
+        <p>the shape</p>
 
         </td>
       </tr>
@@ -333,6 +351,122 @@ bidimensional euclidean space.</p>
     </table>
   </div>
 
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="526d57b766efb21531574637661a252c02c28079">
+      
+      <h3 class="sourcedoc-section element-name">circleSector</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun circleSector(radius: Double, angle: Double, heading: Double): Euclidean2DShape</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>A circle sector is the portion of a disk enclosed by two radii and an arc
+and it extends in the first and second axis by its radius and angle.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5d966e8d2c0c6f7f220d263f3aa7095b29e12bd3">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+        <td class="sourcedoc-section section-signature">
+          <code>radius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the radius of the circle from which the sector is extracted</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="e255fb07bdc63f1ec5d9f9d7e7735c1d890cf168">
+        <td class="sourcedoc-section section-signature">
+          <code>angle: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the angle of the arc in radians, it determines its dimension in the second axis</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="76e447c6251409a25eaa69478acae033af0d61e8">
+        <td class="sourcedoc-section section-signature">
+          <code>heading: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the angle in radians of the median segment which bisects the sector.
+It's used to determine the sector's heading.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fbef31e4480143b413012e2c46097336dc2843e7">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
+        <td class="sourcedoc-section section-signature">
+          <code>Euclidean2DShape</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>the shape</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
 
 </div>
 
@@ -669,7 +803,7 @@ bidimensional euclidean space.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtz+bac7df5ba. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devu0+c5e2d439d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

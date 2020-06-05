@@ -24,7 +24,7 @@
 
 
 
-<title>Euclidean2DShape</title>
+<title>it.unibo.alchemist.model.interfaces.geometry.euclidean2d</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -51,11 +51,11 @@
 <!-- Class: com.eden.orchid.editorial.EditorialTheme -->
 
 <!-- PAGE -->
-<!-- Type: classes -->
+<!-- Type: packages -->
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocTypeAlias, sourceDocPage, classes, page -->
+<!-- Page Template: kotlindocPackage, sourceDocPage, packages, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/euclidean2dshape","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean/twod/euclidean2dshape"},"description":"","title":"Euclidean2DShape"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean2d","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d"},"description":"","title":"it.unibo.alchemist.model.interfaces.geometry.euclidean2d"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devtz+bac7df5ba"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devu0+c5e2d439d"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>Euclidean2DShape</h2></header>
+                    <header class="major"><h2>it.unibo.alchemist.model.interfaces.geometry.euclidean2d</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,10 +138,37 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="Euclidean2DShape">
+<div class="sourcedoc-section section-root section-level-1" id="it.unibo.alchemist.model.interfaces.geometry.euclidean2d">
 
 
-  <p class="sourcedoc-section section-name"><strong>Euclidean2DShape</strong></p>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="57f1d6aaccd6b15a687e310c0f99b5da65d697d1">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>package it.unibo.alchemist.model.interfaces.geometry.euclidean2d</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="classes">
+
+
+  <p class="sourcedoc-section section-name"><strong>Classes</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -153,9 +180,148 @@
       </thead>
       <tbody>
       
+      <tr class="sourcedoc-section section-element" id="5c8fa2fd39edee18ee38b6fa2da1264094f6af6c">
+        <td class="sourcedoc-section section-signature">
+          <code>interface ConvexPolygon: Euclidean2DConvexShape, AwtShapeCompatible, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A simple polygon (i.e. not self-intersecting and without holes) in which no
+line segment between two points on the boundary ever goes outside the polygon.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="99f7c54c00571a78f9a8b94235a21a72adac287f">
+        <td class="sourcedoc-section section-signature">
+          <code>class Euclidean2DConvexShape</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A convex euclidean shape in a bidimensional environment.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="d3747f1282f66aa9ca90398ef139ca4032a1b85c">
         <td class="sourcedoc-section section-signature">
           <code>class Euclidean2DShape</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Defines an euclidean shape in a bidimensional space.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d3c00f8d186dd1e1e417013b92c11ce67754d3cf">
+        <td class="sourcedoc-section section-signature">
+          <code>interface Euclidean2DShapeFactory: GeometricShapeFactory&lt;Euclidean2DPosition, Euclidean2DTransformation&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Defines a factory of GeometricShape for a bidimensional euclidean space.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="cde3c7f8ca97f7ee83d9deab68686c8f1f25b68c">
+        <td class="sourcedoc-section section-signature">
+          <code>interface Euclidean2DTransformation: GeometricTransformation&lt;Euclidean2DPosition&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Defines the possible transformations for a it.unibo.alchemist.model.interfaces.geometry.GeometricShape in a
+bidimensional euclidean space.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="38d53d0767298045b75b4c9e85d44490e92984c3">
+        <td class="sourcedoc-section section-signature">
+          <code>interface MutableConvexPolygon: ConvexPolygon, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A mutable ConvexPolygon.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="de88dcf2ba3a922a367e2b6a8702e3ef1535dd06">
+        <td class="sourcedoc-section section-signature">
+          <code>data class Segment2D&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Defines a segment from first to second in an euclidean bidimensional space.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="subpackages">
+
+
+  <p class="sourcedoc-section section-name"><strong>Subpackages</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4180d10852bf3ca43685a5c66022864ab08974cd">
+        <td class="sourcedoc-section section-signature">
+          <code>package it.unibo.alchemist.model.interfaces.geometry.euclidean2d.navigator</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="typealiases">
+
+
+  <p class="sourcedoc-section section-name"><strong>Typealiases</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6b22488d6a489a6fc4a7cc96860b2b232881043a">
+        <td class="sourcedoc-section section-signature">
+          <code>typealias Euclidean2DConvexShape = ConvexGeometricShape</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A convex euclidean shape in a bidimensional environment.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d4ed22581b690f815f64b5dc84646c0ad8bd7699">
+        <td class="sourcedoc-section section-signature">
+          <code>typealias Euclidean2DShape = GeometricShape</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Defines an euclidean shape in a bidimensional space.</p>
@@ -167,6 +333,13 @@
     </table>
   </div>
 
+
+</div>
+
+        
+      
+    </div>
+  
 
 </div>
 
@@ -496,7 +669,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devtz+bac7df5ba. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devu0+c5e2d439d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
