@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devua+e315e585c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devul+67c80ce2d"};
 </script>
 
 
@@ -521,12 +521,12 @@ length) are not supported.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="0444aa4ff166897cab126275c61d3cca6e18cab0">
+    <div class="sourcedoc-section section-element" id="e3363063f28fcc2ae78d525130950aa12b4db8b4">
       
-      <h3 class="sourcedoc-section element-name">intersection</h3>
+      <h3 class="sourcedoc-section element-name">intersectSegment</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; intersection(s1: Segment2D&lt;P&gt;, s2: Segment2D&lt;P&gt;): SegmentsIntersection&lt;P&gt;</code>
+        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; Segment2D&lt;P&gt;.intersectSegment(other: Segment2D&lt;P&gt;): SegmentsIntersection&lt;P&gt;</code>
       </p>
 
       
@@ -539,10 +539,10 @@ and collinear segments.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="3cc3df34312a150e5893b7341fbf028404cdce17">
+<div class="sourcedoc-section section-root section-level-3" id="2b2b084d8d82861b2f71badadc7012080419d2b6">
 
 
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -554,18 +554,9 @@ and collinear segments.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="c412d98c4bbb2090293daf88c066406fca45a87b">
+      <tr class="sourcedoc-section section-element" id="2ce160e814973d6087707842c8ec54bbc3e9fb9c">
         <td class="sourcedoc-section section-signature">
-          <code>s1: Segment2D&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="7d4fa32e51ef5112996f0ff938145db416997b3f">
-        <td class="sourcedoc-section section-signature">
-          <code>s2: Segment2D&lt;P&gt;</code>
+          <code>Segment2D&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -581,7 +572,40 @@ and collinear segments.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="80d3a4f6d59d0291e09e5e15cafe56f1211119c5">
+<div class="sourcedoc-section section-root section-level-3" id="ec61e5e5e6f6881d0c7cac4c1befb88aa455aeef">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ac9cffb6bba30f2d6ce222982b073ded49d43d3f">
+        <td class="sourcedoc-section section-signature">
+          <code>other: Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="94b34fc3456af1d37dfb0d091cfa265dbbac5027">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -599,109 +623,6 @@ and collinear segments.</p>
       <tr class="sourcedoc-section section-element" id="73c34b2118cfb11f44b21be082c3ba35b86a1ac1">
         <td class="sourcedoc-section section-signature">
           <code>SegmentsIntersection&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="93b1461712ce2ea54733c4ecb1fbe3c3aad8c1d2">
-      
-      <h3 class="sourcedoc-section element-name">intersection</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; intersection(segment: Segment2D&lt;P&gt;, center: Vector2D&lt;P&gt;, radius: Double): CircleSegmentIntersection&lt;P&gt;</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Finds the intersection between a segment and a circle.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="2f503fbc70aca0376aeb227e18ef4c444cf6e9ad">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="beaa2a3c04309c0792271c696a578174dbcd3110">
-        <td class="sourcedoc-section section-signature">
-          <code>segment: Segment2D&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="e2f713c96a1da6d0da5ab768b5fb485579c03357">
-        <td class="sourcedoc-section section-signature">
-          <code>center: Vector2D&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
-        <td class="sourcedoc-section section-signature">
-          <code>radius: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="deb696341f5fbd6b551211d36f7b83ca806a37d1">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="cf0a91e3cbf601fbcacfecf2dc2d2c6af648a54e">
-        <td class="sourcedoc-section section-signature">
-          <code>CircleSegmentIntersection&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1055,7 +976,7 @@ and collinear segments.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devua+e315e585c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devul+67c80ce2d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
