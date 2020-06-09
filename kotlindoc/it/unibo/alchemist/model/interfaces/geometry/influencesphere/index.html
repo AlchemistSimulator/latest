@@ -24,7 +24,7 @@
 
 
 
-<title>it.unibo.alchemist.model.influencesphere</title>
+<title>InfluenceSphere</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/52737c18/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4f896d0b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -51,11 +51,11 @@
 <!-- Class: com.eden.orchid.editorial.EditorialTheme -->
 
 <!-- PAGE -->
-<!-- Type: packages -->
+<!-- Type: classes -->
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocPackage, sourceDocPage, packages, page -->
+<!-- Page Template: kotlindocInterface, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/influencesphere","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/influencesphere"},"description":"","title":"it.unibo.alchemist.model.influencesphere"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/influencesphere","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/influencesphere"},"description":"","title":"InfluenceSphere"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv0+444028957"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv5+d9ef1d750"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>it.unibo.alchemist.model.influencesphere</h2></header>
+                    <header class="major"><h2>InfluenceSphere</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="it.unibo.alchemist.model.influencesphere">
+<div class="sourcedoc-section section-root section-level-1" id="InfluenceSphere">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="26d017d36faca32b4eaa60dbef99f7fd8264343c">
+    <div class="sourcedoc-section section-element" id="24b31f64456abca75ad046eeba6d0bf0e63d280f">
       
       <p class="sourcedoc-section section-signature">
-        <code>package it.unibo.alchemist.model.influencesphere</code>
+        <code>interface InfluenceSphere: Any</code>
       </p>
 
       
@@ -159,16 +159,42 @@
 
       
 
-      <div class="sourcedoc-section section-comments"></div>
+      <div class="sourcedoc-section section-comments"><p>Area inside which nodes exert an influence on each other.</p>
+</div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-2" id="classes">
+<div class="sourcedoc-section section-root section-level-2" id="methods">
 
 
-  <p class="sourcedoc-section section-name"><strong>Classes</strong></p>
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="85a3149e1eb1f5d7671d5ee083371f529c0ebbf1">
+      
+      <h3 class="sourcedoc-section element-name">influentialNodes</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>abstract fun influentialNodes(): List&lt;Node&lt;*&gt;&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>The list of nodes relevant for this sphere of influence.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="064fc3f268c451f5c227a9dab867ef70737de379">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -180,33 +206,12 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="bb9917e1b5f0db091e49c01b1f5f173e440045f9">
+      <tr class="sourcedoc-section section-element" id="4630959d67dbb43eabe8b499f8327c8845dea5a9">
         <td class="sourcedoc-section section-signature">
-          <code>class FieldOfView2D&lt;T&gt; : InfluenceSphere2D&lt;T&gt;</code>
+          <code>List&lt;Node&lt;*&gt;&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A sphere of influence representing the sight of a node in the Euclidean world.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="24b31f64456abca75ad046eeba6d0bf0e63d280f">
-        <td class="sourcedoc-section section-signature">
-          <code>interface InfluenceSphere: Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Area inside which nodes exert an influence on each other.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="1f238bd7758497f7a5cc05d4766f3893e0f17e61">
-        <td class="sourcedoc-section section-signature">
-          <code>open class InfluenceSphere2D&lt;T&gt; : InfluenceSphere, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A sphere of influence in the Euclidean world.</p>
-
+        
         </td>
       </tr>
       
@@ -214,6 +219,13 @@
     </table>
   </div>
 
+
+</div>
+
+        
+      
+    </div>
+  
 
 </div>
 
@@ -550,7 +562,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv0+444028957. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devv5+d9ef1d750. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

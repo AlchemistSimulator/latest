@@ -24,7 +24,7 @@
 
 
 
-<title>InfluenceSphere</title>
+<title>FieldOfView2D</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/52737c18/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4f896d0b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -55,7 +55,7 @@
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocInterface, sourceDocPage, classes, page -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/influencesphere/influencesphere","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/influencesphere/influencesphere"},"description":"","title":"InfluenceSphere"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean2d/fieldofview2d","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/fieldofview2d"},"description":"","title":"FieldOfView2D"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv0+444028957"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv5+d9ef1d750"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>InfluenceSphere</h2></header>
+                    <header class="major"><h2>FieldOfView2D</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="InfluenceSphere">
+<div class="sourcedoc-section section-root section-level-1" id="FieldOfView2D">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="24b31f64456abca75ad046eeba6d0bf0e63d280f">
+    <div class="sourcedoc-section section-element" id="bb9917e1b5f0db091e49c01b1f5f173e440045f9">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface InfluenceSphere: Any</code>
+        <code>class FieldOfView2D&lt;T&gt; : InfluenceSphere2D&lt;T&gt;</code>
       </p>
 
       
@@ -159,42 +159,42 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Area inside which nodes exert an influence on each other.</p>
+      <div class="sourcedoc-section section-comments"><p>A sphere of influence representing the sight of a node in the Euclidean world.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-2" id="methods">
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
 
 
   
-    <h2 class="sourcedoc-section section-name">Methods</h2>
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
   
 
   
-    <div class="sourcedoc-section section-element" id="85a3149e1eb1f5d7671d5ee083371f529c0ebbf1">
+    <div class="sourcedoc-section section-element" id="8eb29cb1e4310f564eab41c71f953c9fce4036af">
       
-      <h3 class="sourcedoc-section element-name">influentialNodes</h3>
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun influentialNodes(): List&lt;Node&lt;*&gt;&gt;</code>
+        <code>constructor(env: Physics2DEnvironment&lt;T&gt;, owner: Node&lt;T&gt;, distance: Double, aperture: Double)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>The list of nodes relevant for this sphere of influence.</p>
+      <div class="sourcedoc-section section-comments"><p>A sphere of influence representing the sight of a node in the Euclidean world.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="064fc3f268c451f5c227a9dab867ef70737de379">
+<div class="sourcedoc-section section-root section-level-3" id="da383ae383dc335881ae728466675a88fcc98da8">
 
 
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -206,12 +206,43 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="4630959d67dbb43eabe8b499f8327c8845dea5a9">
+      <tr class="sourcedoc-section section-element" id="b0f1eae4263e389b32eb8189b612bd69965be438">
         <td class="sourcedoc-section section-signature">
-          <code>List&lt;Node&lt;*&gt;&gt;</code>
+          <code>env: Physics2DEnvironment&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <pre><code>    the environment where this sphere of influence is.</code></pre>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="24fd3260422ed02c30de9d30ce481b4c89891ca2">
+        <td class="sourcedoc-section section-signature">
+          <code>owner: Node&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the node who owns this sphere of influence.</code></pre>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="cd3e27cc0003abdd640c70660e5b3770441de324">
+        <td class="sourcedoc-section section-signature">
+          <code>distance: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the distance in meters at which the sight arrives.</code></pre>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="95c9e59f7616862ccb0ef3ff243c0b1d71e0973d">
+        <td class="sourcedoc-section section-signature">
+          <code>aperture: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the amplitude of the field of view in radians.</code></pre>
+
         </td>
       </tr>
       
@@ -562,7 +593,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv0+444028957. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devv5+d9ef1d750. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

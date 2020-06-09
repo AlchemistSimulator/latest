@@ -6707,6 +6707,22 @@
                             "content": "<p>Defines a generic transformation of a generic shape.\nThe operations allowed depend on the space the shape belongs to.\nThis interface is meant to be extended.<\/p>origin\n<p>Performs an absolute translation to the provided position.<\/p>\n"
                           }]
                         },
+                        "influencesphere": {
+                          "ownKey": "influencesphere",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "kotlindoc",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "it/unibo/alchemist/model/interfaces/geometry/influencesphere",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/influencesphere"
+                            },
+                            "description": "",
+                            "title": "InfluenceSphere",
+                            "content": "<p>Area inside which nodes exert an influence on each other.<\/p>influentialNodes\n<p>The list of nodes relevant for this sphere of influence.<\/p>\n"
+                          }]
+                        },
                         "geometricshapefactory": {
                           "ownKey": "geometricshapefactory",
                           "ownPages": [{
@@ -6767,7 +6783,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.interfaces.geometry",
-                        "content": "<p>ConvexGeometricShape<\/p>\n<p>A convex  GeometricShape .<\/p><p>This interface models a property instead of an object, this may be\nunusual but consider it as a contract: interfaces are often said to\nbe contracts the implementor has to comply, the contract defined by\nthis interface implies convexity.<\/p>\nGeometricShapeFactory\n<p>Generic factory for  GeometricShape .<\/p>\nGeometricShape\n<p>Models a generic shape.<\/p>\nGeometricTransformation\n<p>Defines a generic transformation of a generic shape.\nThe operations allowed depend on the space the shape belongs to.\nThis interface is meant to be extended.<\/p>\nVector\n<p>A generic vector in a multidimensional space.<\/p>\nVector2D\n<p>Bidimensional vector with  x  and  y  coordinates.<\/p>\nit.unibo.alchemist.model.interfaces.geometry.euclidean2d\n"
+                        "content": "<p>InfluenceSphere<\/p>\n<p>Area inside which nodes exert an influence on each other.<\/p>\nConvexGeometricShape\n<p>A convex  GeometricShape .<\/p><p>This interface models a property instead of an object, this may be\nunusual but consider it as a contract: interfaces are often said to\nbe contracts the implementor has to comply, the contract defined by\nthis interface implies convexity.<\/p>\nGeometricShapeFactory\n<p>Generic factory for  GeometricShape .<\/p>\nGeometricShape\n<p>Models a generic shape.<\/p>\nGeometricTransformation\n<p>Defines a generic transformation of a generic shape.\nThe operations allowed depend on the space the shape belongs to.\nThis interface is meant to be extended.<\/p>\nVector\n<p>A generic vector in a multidimensional space.<\/p>\nVector2D\n<p>Bidimensional vector with  x  and  y  coordinates.<\/p>\nit.unibo.alchemist.model.interfaces.geometry.euclidean2d\n"
                       }]
                     },
                     "pedestrian": {
@@ -6846,7 +6862,7 @@
                     },
                     "description": "",
                     "title": "it.unibo.alchemist.model.interfaces",
-                    "content": "<p>CognitivePedestrian<\/p>\n<p>An heterogeneous pedestrian with cognitive capabilities too.<\/p>\nEuclideanNavigationAction\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nGroup\n<p>A group of nodes.<\/p>\nGroupSteeringAction\n<p>Steering action caused by a group of pedestrians.<\/p>\nGroupWithLeader\n<p>A group with a special member acting as a leader.<\/p>\nHeterogeneousPedestrian\n<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.<\/p>\nNavigationAction\n<p>A  SteeringAction  allowing a pedestrian to navigate an environment consciously (e.g. without\ngetting stuck in U-shaped obstacles).\nNames are inspired to indoor environments, but this interface works for outdoor ones as well.<\/p>\nNavigationStrategy\n<p>Defines what a pedestrian should do when in a new room (= environment's area), this is designed\nto be used jointly with a  NavigationAction : the latter defines how to properly move the\npedestrian, while delegating the decision on where to move it to a  NavigationStrategy .<\/p>\nOrientingCognitivePedestrian\n<p>A heterogeneous pedestrian with cognitive and orienting capabilities.<\/p>\nOrientingPedestrian\n<p>A pedestrian capable of orienting itself.<\/p>\nPedestrian\n<p>A pedestrian with any characteristic taken into consideration.<\/p>\nPedestrian2D\n<p>The bidimensional representation of a pedestrian.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\nSteeringAction\n<p>Action whose purpose is moving a node inside the environment it is in.<\/p>\nSteeringActionWithTarget\n<p>A  SteeringAction  with a defined target.<\/p>\nSteeringStrategy\n<p>Strategy interface describing how the next points of the steering actions\nare combined to calculate the next position to move on.<\/p>\nEnvironmentWithObstacles\n<p>An environment with  Obstacle s.<\/p>\nEuclideanEnvironment\n<p>An Euclidean space, where  Position s  P  are valid  Vector s,\nsupporting any concentration type  T .<\/p>\nObstacle\n<p>A generic obstacle in a vector space.<\/p>\nPosition\n<p>An interface to represent a generic coordinates system.<\/p>\nPosition2D\n<p>A bidimensional position.<\/p>\nVisibleNode\n<p>Represents a node seen by the  it.unibo.alchemist.model.implementations.actions.See  action.<\/p>\nObstacle2D\n<p>An <code> Obstacle <\/code> in a bidimensional space.<\/p>\nRoute\n<p>CircularDeformableCell<\/p>\n<p>Implements a circular deformable cell.<\/p>\nEnvironmentNode\n<p>CellWithCircularArea<\/p>\n<p>Implements a cell with a defined volume.<\/p>\nEnvironmentSupportingDeformableCells\n<p><code> Environment <\/code> supporting deformable cells.<\/p>\nCellNode\n<p>ILsaMolecule<\/p>\n<p>ILsaAction<\/p>\n<p>ILsaNode<\/p>\n<p>Interface for an LSA Node. Avoids the crappy casts.<\/p>\nILsaCondition\n<p>TimeDistribution<\/p>\n<p>This interface represents a temporal distribution for any event.<\/p>\nMolecule\n<p>Interface for a molecule.<\/p>\nLinkingRule\n<p>An interface that represent an auto-linking logic for nodes within an environment.<\/p>\nBenchmarkableEnvironment\n<p>An environment which provides a mean to get infos about its performances.<\/p>\nCondition\n<p>Node<\/p>\n<p>GeoPosition<\/p>\n<p>Represents a specific point on the Earth's surface.<\/p>\nAction\n<p>Neighborhood<\/p>\n<p>The type which describes the concentration of a molecule Interface for a neighborhood. When implementing it in a real class, please remember to correctly implement also the equals method inherited from Object.<\/p>\nReaction\n<p>Concentration<\/p>\n<p>This interface is a wrapper for concentrations.<\/p>\nIncarnation\n<p>Layer<\/p>\n<p>Interface for static layer, containing a substance or a molecule with a spatial distribution.<\/p>\nDependency\n<p>This interface represents a token that may generate a dependency between two reactions. Some special built-in tokens are EVERYTHING, EVERY_MOLECULE, MOVEMENT, and NEIGHBORHOOD_CHANGE. Molecules are dependencies as well.<\/p>\nEnvironment\n<p>Interface for an environment. Every environment must implement this specification.<\/p>\nTime\n<p>Interface for time representation.<\/p>\nContext\n<p>This enum describes the possible contexts for a given <code> Action <\/code> or <code> Condition <\/code>. A context represents the elements which are read for a <code> Condition <\/code> and the elements that may be subject of modifications for an <code> Action <\/code>. Choosing the right <code> Context <\/code> is crucial: if it's too restricted the simulation will be invalid, if it's too wide it WILL impact dramatically on performances. Contexts are used internally to better determine dependencies among reactions. See <a href=\"http://apice.unibo.it/xwiki/bin/view/Publications/PianiniMASS11\"> this paper<\/a> for further information about the usage of contexts.<\/p>\nTimedRoute\n<p>Route with total trip time to cross it.<\/p>\nGPSPoint\n<p>MapEnvironment<\/p>\n<p>Vehicle<\/p>\n<p>ObjectWithGPS<\/p>\n<p>GPSTrace<\/p>\n<p>it.unibo.alchemist.model.interfaces.environments<\/p>\n<p>it.unibo.alchemist.model.interfaces.geometry<\/p>\n<p>it.unibo.alchemist.model.interfaces.graph<\/p>\n<p>it.unibo.alchemist.model.interfaces.movestrategies<\/p>\n<p>EuclideanNavigationAction<\/p>\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\n"
+                    "content": "<p>CognitivePedestrian<\/p>\n<p>An heterogeneous pedestrian with cognitive capabilities too.<\/p>\nEuclideanNavigationAction\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nGroup\n<p>A group of nodes.<\/p>\nGroupSteeringAction\n<p>Steering action caused by a group of pedestrians.<\/p>\nGroupWithLeader\n<p>A group with a special member acting as a leader.<\/p>\nHeterogeneousPedestrian\n<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.<\/p>\nNavigationAction\n<p>A  SteeringAction  allowing a pedestrian to navigate an environment consciously (e.g. without\ngetting stuck in U-shaped obstacles).\nNames are inspired to indoor environments, but this interface works for outdoor ones as well.<\/p>\nNavigationStrategy\n<p>Defines what a pedestrian should do when in a new room (= environment's area), this is designed\nto be used jointly with a  NavigationAction : the latter defines how to properly move the\npedestrian, while delegating the decision on where to move it to a  NavigationStrategy .<\/p>\nOrientingCognitivePedestrian\n<p>A heterogeneous pedestrian with cognitive and orienting capabilities.<\/p>\nOrientingPedestrian\n<p>A pedestrian capable of orienting itself.<\/p>\nPedestrian\n<p>A pedestrian with any characteristic taken into consideration.<\/p>\nPedestrian2D\n<p>The bidimensional representation of a pedestrian.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\nSteeringAction\n<p>Action whose purpose is moving a node inside the environment it is in.<\/p>\nSteeringActionWithTarget\n<p>A  SteeringAction  with a defined target.<\/p>\nSteeringStrategy\n<p>Strategy interface describing how the next points of the steering actions\nare combined to calculate the next position to move on.<\/p>\nEnvironmentWithObstacles\n<p>An environment with  Obstacle s.<\/p>\nEuclideanEnvironment\n<p>An Euclidean space, where  Position s  P  are valid  Vector s,\nsupporting any concentration type  T .<\/p>\nObstacle\n<p>A generic obstacle in a vector space.<\/p>\nPosition\n<p>An interface to represent a generic coordinates system.<\/p>\nPosition2D\n<p>A bidimensional position.<\/p>\nVisibleNode\n<p>Represents a node seen by the  it.unibo.alchemist.model.implementations.actions.See  action.<\/p>\nObstacle2D\n<p>An <code> Obstacle <\/code> in a bidimensional space.<\/p>\nRoute\n<p>CircularDeformableCell<\/p>\n<p>Implements a circular deformable cell.<\/p>\nEnvironmentNode\n<p>CellWithCircularArea<\/p>\n<p>Implements a cell with a defined volume.<\/p>\nEnvironmentSupportingDeformableCells\n<p><code> Environment <\/code> supporting deformable cells.<\/p>\nCellNode\n<p>ILsaMolecule<\/p>\n<p>ILsaAction<\/p>\n<p>ILsaNode<\/p>\n<p>Interface for an LSA Node. Avoids the crappy casts.<\/p>\nILsaCondition\n<p>TimeDistribution<\/p>\n<p>This interface represents a temporal distribution for any event.<\/p>\nMolecule\n<p>Interface for a molecule.<\/p>\nLinkingRule\n<p>An interface that represent an auto-linking logic for nodes within an environment.<\/p>\nBenchmarkableEnvironment\n<p>An environment which provides a mean to get infos about its performances.<\/p>\nCondition\n<p>Node<\/p>\n<p>GeoPosition<\/p>\n<p>Represents a specific point on the Earth's surface.<\/p>\nAction\n<p>Neighborhood<\/p>\n<p>The type which describes the concentration of a molecule Interface for a neighborhood. When implementing it in a real class, please remember to correctly implement also the equals method inherited from Object.<\/p>\nReaction\n<p>Concentration<\/p>\n<p>This interface is a wrapper for concentrations.<\/p>\nIncarnation\n<p>Layer<\/p>\n<p>Interface for static layer, containing a substance or a molecule with a spatial distribution.<\/p>\nDependency\n<p>This interface represents a token that may generate a dependency between two reactions. Some special built-in tokens are EVERYTHING, EVERY_MOLECULE, MOVEMENT, and NEIGHBORHOOD_CHANGE. Molecules are dependencies as well.<\/p>\nEnvironment\n<p>Interface for an environment. Every environment must implement this specification.<\/p>\nTime\n<p>Interface for time representation.<\/p>\nContext\n<p>This enum describes the possible contexts for a given <code> Action <\/code> or <code> Condition <\/code>. A context represents the elements which are read for a <code> Condition <\/code> and the elements that may be subject of modifications for an <code> Action <\/code>. Choosing the right <code> Context <\/code> is crucial: if it's too restricted the simulation will be invalid, if it's too wide it WILL impact dramatically on performances. Contexts are used internally to better determine dependencies among reactions. See <a href=\"http://apice.unibo.it/xwiki/bin/view/Publications/PianiniMASS11\"> this paper<\/a> for further information about the usage of contexts.<\/p>\nTimedRoute\n<p>Route with total trip time to cross it.<\/p>\nGPSPoint\n<p>MapEnvironment<\/p>\n<p>Vehicle<\/p>\n<p>ObjectWithGPS<\/p>\n<p>GPSTrace<\/p>\n<p>it.unibo.alchemist.model.interfaces.geometry<\/p>\n<p>it.unibo.alchemist.model.interfaces.environments<\/p>\n<p>it.unibo.alchemist.model.interfaces.graph<\/p>\n<p>it.unibo.alchemist.model.interfaces.movestrategies<\/p>\n<p>EuclideanNavigationAction<\/p>\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\n"
                   }]
                 },
                 "biochemistryincarnation": {
@@ -6945,72 +6961,6 @@
                     "description": "",
                     "title": "it.unibo.alchemist.model.smartcam",
                     "content": "<p>VisibleNodeImpl<\/p>\n<p>Basic implementation of  VisibleNode .<\/p>\n"
-                  }]
-                },
-                "influencesphere": {
-                  "ownKey": "influencesphere",
-                  "childrenPages": {
-                    "influencesphere": {
-                      "ownKey": "influencesphere",
-                      "ownPages": [{
-                        "reference": {
-                          "path": "kotlindoc",
-                          "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "it/unibo/alchemist/model/influencesphere/influencesphere",
-                          "extension": "html",
-                          "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/influencesphere/influencesphere"
-                        },
-                        "description": "",
-                        "title": "InfluenceSphere",
-                        "content": "<p>Area inside which nodes exert an influence on each other.<\/p>influentialNodes\n<p>The list of nodes relevant for this sphere of influence.<\/p>\n"
-                      }]
-                    },
-                    "fieldofview2d": {
-                      "ownKey": "fieldofview2d",
-                      "ownPages": [{
-                        "reference": {
-                          "path": "kotlindoc",
-                          "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "it/unibo/alchemist/model/influencesphere/fieldofview2d",
-                          "extension": "html",
-                          "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/influencesphere/fieldofview2d"
-                        },
-                        "description": "",
-                        "title": "FieldOfView2D",
-                        "content": "<p>A sphere of influence representing the sight of a node in the Euclidean world.<\/p><init>\n<p>A sphere of influence representing the sight of a node in the Euclidean world.<\/p>\n"
-                      }]
-                    },
-                    "influencesphere2d": {
-                      "ownKey": "influencesphere2d",
-                      "ownPages": [{
-                        "reference": {
-                          "path": "kotlindoc",
-                          "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "it/unibo/alchemist/model/influencesphere/influencesphere2d",
-                          "extension": "html",
-                          "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/influencesphere/influencesphere2d"
-                        },
-                        "description": "",
-                        "title": "InfluenceSphere2D",
-                        "content": "<p>A sphere of influence in the Euclidean world.<\/p><init>\n<p>A sphere of influence in the Euclidean world.<\/p>\ninfluentialNodes\n<p>The list of nodes relevant for this sphere of influence.<\/p>\n"
-                      }]
-                    }
-                  },
-                  "ownPages": [{
-                    "reference": {
-                      "path": "kotlindoc",
-                      "baseUrl": "https://alchemistsimulator.github.io/latest",
-                      "fileName": "it/unibo/alchemist/model/influencesphere",
-                      "extension": "html",
-                      "usePrettyUrl": true,
-                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/influencesphere"
-                    },
-                    "description": "",
-                    "title": "it.unibo.alchemist.model.influencesphere",
-                    "content": "<p>FieldOfView2D<\/p>\n<p>A sphere of influence representing the sight of a node in the Euclidean world.<\/p>\nInfluenceSphere\n<p>Area inside which nodes exert an influence on each other.<\/p>\nInfluenceSphere2D\n<p>A sphere of influence in the Euclidean world.<\/p>\n"
                   }]
                 },
                 "implementations": {
@@ -7339,7 +7289,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.environments",
-                        "content": "<p>Continuous2DEnvironment<\/p>\n<p>Implementation of  Physics2DEnvironment .<\/p>\nImageEnvironmentWithGraph\n<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>\nRectangular2DEnvironment\n<p>A bounded  Physics2DEnvironment , nodes cannot exist nor move outside the rectangular boundaries centered\nin (0,0).<\/p>\nContinuous2DObstacles\n<p>InfiniteHalls<\/p>\n<p>MuseumHall<\/p>\n<p>AbstractEnvironment<\/p>\n<p>Very generic and basic implementation for an environment. Basically, only manages an internal set of nodes and their position.<\/p>\nAbstract2DEnvironment\n<p>Models a bidimensional environment.<\/p>\nImageEnvironment\n<p>This environment loads an image from the file system, and marks as obstacles all the pixels of a given color.<\/p>\nLimitedContinuos2D\n<p>This class represents a 2D continuous environment with spatial limitations. Those limitations will prevent nodes to move in positions which are not allowed.<\/p>\nBioRect2DEnvironmentNoOverlap\n<p>Implements a limited environment supporting cells with a defined shape, avoiding any overlapping among them.<\/p>\nBioRect2DEnvironment\n<p>OSMEnvironment<\/p>\n<p>This class serves as template for more specific implementations of environments using a map. It encloses the navigation logic, but leaves the subclasses to decide how to provide map data (e.g. loading from disk or rely on online services). The data is then stored in-memory for performance reasons.<\/p>\n"
+                        "content": "<p>ImageEnvironmentWithGraph<\/p>\n<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>\nContinuous2DEnvironment\n<p>Implementation of  Physics2DEnvironment .<\/p>\nRectangular2DEnvironment\n<p>A bounded  Physics2DEnvironment , nodes cannot exist nor move outside the rectangular boundaries centered\nin (0,0).<\/p>\nContinuous2DObstacles\n<p>InfiniteHalls<\/p>\n<p>MuseumHall<\/p>\n<p>AbstractEnvironment<\/p>\n<p>Very generic and basic implementation for an environment. Basically, only manages an internal set of nodes and their position.<\/p>\nAbstract2DEnvironment\n<p>Models a bidimensional environment.<\/p>\nImageEnvironment\n<p>This environment loads an image from the file system, and marks as obstacles all the pixels of a given color.<\/p>\nLimitedContinuos2D\n<p>This class represents a 2D continuous environment with spatial limitations. Those limitations will prevent nodes to move in positions which are not allowed.<\/p>\nBioRect2DEnvironmentNoOverlap\n<p>Implements a limited environment supporting cells with a defined shape, avoiding any overlapping among them.<\/p>\nBioRect2DEnvironment\n<p>OSMEnvironment<\/p>\n<p>This class serves as template for more specific implementations of environments using a map. It encloses the navigation logic, but leaves the subclasses to decide how to provide map data (e.g. loading from disk or rely on online services). The data is then stored in-memory for performance reasons.<\/p>\n"
                       }]
                     },
                     "molecules": {
@@ -8960,6 +8910,38 @@
                                 "content": "<p> MutableConvexPolygon  partly delegated to AwtEuclidean2DShape and java.awt.geom.\nEach modification operation on this object has a time complexity of O(n), where n is\nthe number of vertices/edges.\nCollinear points are allowed.<\/p>diameter\n<p>The largest distance between any pair of vertices.<\/p>\ncentroid\n<p>The geometric center.<\/p>\n<init>\n<p> MutableConvexPolygon  partly delegated to AwtEuclidean2DShape and java.awt.geom.\nEach modification operation on this object has a time complexity of O(n), where n is\nthe number of vertices/edges.\nCollinear points are allowed.<\/p>\nvertices\n\ngetEdge\n\nedges\n\naddVertex\n<p>Adds a vertex to the polygon.<\/p>\nremoveVertex\n<p>Removes a vertex from the polygon.<\/p>\nmoveVertex\n<p>Moves a vertex of the polygon to a new absolute position.<\/p>\nreplaceEdge\n<p>Replaces an edge of the polygon.<\/p>\ncontains\n<p>Delegated to AwtEuclidean2DShape (adopts the definition of insideness used by\n<a href=\"https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a>s).<\/p>\nintersects\n<p>Delegated to <a href=\"https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Area.html\">java.awt.geom.Area<\/a>, this is accurate and does not consider adjacent\nshapes to be intersecting.<\/p>\nintersects\n<p>Delegated to AwtEuclidean2DShape unless  other  is  AwtShapeCompatible , in which case\n intersects  is used so as to guarantee maximum accuracy.<\/p>\ntransformed\n<p>Transforms the shape.<\/p>\nasAwtShape\n\nequals\n\nhashCode\n\n"
                               }]
                             },
+                            "fieldofview2d": {
+                              "ownKey": "fieldofview2d",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "kotlindoc",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "it/unibo/alchemist/model/implementations/geometry/euclidean2d/fieldofview2d",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/fieldofview2d"
+                                },
+                                "description": "",
+                                "title": "FieldOfView2D",
+                                "content": "<p>A sphere of influence representing the sight of a node in the Euclidean world.<\/p><init>\n<p>A sphere of influence representing the sight of a node in the Euclidean world.<\/p>\n"
+                              }]
+                            },
+                            "influencesphere2d": {
+                              "ownKey": "influencesphere2d",
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "kotlindoc",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "it/unibo/alchemist/model/implementations/geometry/euclidean2d/influencesphere2d",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/influencesphere2d"
+                                },
+                                "description": "",
+                                "title": "InfluenceSphere2D",
+                                "content": "<p>A sphere of influence in the Euclidean world.<\/p><init>\n<p>A sphere of influence in the Euclidean world.<\/p>\ninfluentialNodes\n<p>The list of nodes relevant for this sphere of influence.<\/p>\n"
+                              }]
+                            },
                             "abstractconvexpolygon": {
                               "ownKey": "abstractconvexpolygon",
                               "ownPages": [{
@@ -8988,7 +8970,7 @@
                             },
                             "description": "",
                             "title": "it.unibo.alchemist.model.implementations.geometry.euclidean2d",
-                            "content": "<p>AbstractConvexPolygon<\/p>\n<p>An abstract  ConvexPolygon  providing a convexity test.<\/p>\nAwtMutableConvexPolygon\n<p> MutableConvexPolygon  partly delegated to AwtEuclidean2DShape and java.awt.geom.\nEach modification operation on this object has a time complexity of O(n), where n is\nthe number of vertices/edges.\nCollinear points are allowed.<\/p>\nAwtShapeExtension\n<p>Collection of extensions to Java AWT meant to simplify its usage as geometric engine.<\/p>\nEllipse\n<p>Adapter of <a href=\"https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Ellipse2D.html\">java.awt.geom.Ellipse2D<\/a> to  Euclidean2DConvexShape .<\/p>\nSegment2DImpl\n<p>Defines a segment from  first  to  second  in an euclidean bidimensional space.<\/p>\nit.unibo.alchemist.model.implementations.geometry.euclidean2d.navigator\n<p>fromShape<\/p>\n<p>Creates a MutableConvexPolygon from a java.awt.Shape.\nIf the Polygon could not be created (e.g. because of the\nnon-convexity of the given shape), an empty optional is\nreturned.\nEach curved segment of the shape will be considered as\na straight line.<\/p>\n"
+                            "content": "<p>FieldOfView2D<\/p>\n<p>A sphere of influence representing the sight of a node in the Euclidean world.<\/p>\nInfluenceSphere2D\n<p>A sphere of influence in the Euclidean world.<\/p>\nAbstractConvexPolygon\n<p>An abstract  ConvexPolygon  providing a convexity test.<\/p>\nAwtMutableConvexPolygon\n<p> MutableConvexPolygon  partly delegated to AwtEuclidean2DShape and java.awt.geom.\nEach modification operation on this object has a time complexity of O(n), where n is\nthe number of vertices/edges.\nCollinear points are allowed.<\/p>\nAwtShapeExtension\n<p>Collection of extensions to Java AWT meant to simplify its usage as geometric engine.<\/p>\nEllipse\n<p>Adapter of <a href=\"https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Ellipse2D.html\">java.awt.geom.Ellipse2D<\/a> to  Euclidean2DConvexShape .<\/p>\nSegment2DImpl\n<p>Defines a segment from  first  to  second  in an euclidean bidimensional space.<\/p>\nit.unibo.alchemist.model.implementations.geometry.euclidean2d.navigator\n<p>fromShape<\/p>\n<p>Creates a MutableConvexPolygon from a java.awt.Shape.\nIf the Polygon could not be created (e.g. because of the\nnon-convexity of the given shape), an empty optional is\nreturned.\nEach curved segment of the shape will be considered as\na straight line.<\/p>\n"
                           }]
                         },
                         "adimensionalshape": {
@@ -11624,7 +11606,7 @@
                 },
                 "description": "",
                 "title": "it.unibo.alchemist.model",
-                "content": "<p>BiochemistryIncarnation<\/p>\n<p>ProtelisIncarnation<\/p>\n<p>SAPEREIncarnation<\/p>\n<p>it.unibo.alchemist.model.cognitiveagents.characteristics<\/p>\n<p>it.unibo.alchemist.model.implementations.actions<\/p>\n<p>it.unibo.alchemist.model.implementations.conditions<\/p>\n<p>it.unibo.alchemist.model.implementations.groups<\/p>\n<p>it.unibo.alchemist.model.implementations.nodes<\/p>\n<p>it.unibo.alchemist.model.implementations.reactions<\/p>\n<p>it.unibo.alchemist.model.implementations.utils<\/p>\n<p>it.unibo.alchemist.model.interfaces<\/p>\n<p>it.unibo.alchemist.model.implementations.environments<\/p>\n<p>it.unibo.alchemist.model.implementations.geometry<\/p>\n<p>it.unibo.alchemist.model.implementations.graph<\/p>\n<p>it.unibo.alchemist.model.implementations.layers<\/p>\n<p>it.unibo.alchemist.model.implementations.linkingrules<\/p>\n<p>it.unibo.alchemist.model.implementations.movestrategies<\/p>\n<p>it.unibo.alchemist.model.implementations.neighborhoods<\/p>\n<p>it.unibo.alchemist.model.implementations.terminators<\/p>\n<p>it.unibo.alchemist.model.influencesphere<\/p>\n<p>it.unibo.alchemist.model.smartcam<\/p>\n<p>it.unibo.alchemist.model.implementations.times<\/p>\n<p>it.unibo.alchemist.model.implementations.routes<\/p>\n<p>it.unibo.alchemist.model.implementations.molecules<\/p>\n<p>it.unibo.alchemist.model.implementations.timedistributions<\/p>\n<p>it.unibo.alchemist.model.implementations.positions<\/p>\n<p>it.unibo.alchemist.model.implementations.concentrations<\/p>\n<p>randomAngle<\/p>\n<p>Generates a random value in 0..2π.<\/p>\nplus\n<p>Plus operator for  Time  and Double.<\/p>\nminus\n<p>Minus operator for  Time  and Double.<\/p>\n"
+                "content": "<p>BiochemistryIncarnation<\/p>\n<p>ProtelisIncarnation<\/p>\n<p>SAPEREIncarnation<\/p>\n<p>it.unibo.alchemist.model.cognitiveagents.characteristics<\/p>\n<p>it.unibo.alchemist.model.implementations.actions<\/p>\n<p>it.unibo.alchemist.model.implementations.conditions<\/p>\n<p>it.unibo.alchemist.model.implementations.groups<\/p>\n<p>it.unibo.alchemist.model.implementations.nodes<\/p>\n<p>it.unibo.alchemist.model.implementations.reactions<\/p>\n<p>it.unibo.alchemist.model.implementations.utils<\/p>\n<p>it.unibo.alchemist.model.interfaces<\/p>\n<p>it.unibo.alchemist.model.implementations.environments<\/p>\n<p>it.unibo.alchemist.model.implementations.geometry<\/p>\n<p>it.unibo.alchemist.model.implementations.graph<\/p>\n<p>it.unibo.alchemist.model.implementations.layers<\/p>\n<p>it.unibo.alchemist.model.implementations.linkingrules<\/p>\n<p>it.unibo.alchemist.model.implementations.movestrategies<\/p>\n<p>it.unibo.alchemist.model.implementations.neighborhoods<\/p>\n<p>it.unibo.alchemist.model.implementations.terminators<\/p>\n<p>it.unibo.alchemist.model.smartcam<\/p>\n<p>it.unibo.alchemist.model.implementations.times<\/p>\n<p>it.unibo.alchemist.model.implementations.routes<\/p>\n<p>it.unibo.alchemist.model.implementations.molecules<\/p>\n<p>it.unibo.alchemist.model.implementations.timedistributions<\/p>\n<p>it.unibo.alchemist.model.implementations.positions<\/p>\n<p>it.unibo.alchemist.model.implementations.concentrations<\/p>\n<p>randomAngle<\/p>\n<p>Generates a random value in 0..2π.<\/p>\nplus\n<p>Plus operator for  Time  and Double.<\/p>\nminus\n<p>Minus operator for  Time  and Double.<\/p>\n"
               }]
             },
             "protelis": {
