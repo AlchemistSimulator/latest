@@ -24,7 +24,7 @@
 
 
 
-<title>SegmentsIntersection</title>
+<title>SinglePoint</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean2d/segmentsintersection","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/segmentsintersection"},"description":"","title":"SegmentsIntersection"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/singlepoint","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/singlepoint"},"description":"","title":"SinglePoint"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuq+ef91aaf18"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuy+b84aa21ae"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>SegmentsIntersection</h2></header>
+                    <header class="major"><h2>SinglePoint</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="SegmentsIntersection">
+<div class="sourcedoc-section section-root section-level-1" id="SinglePoint">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="b22b19dd0c0095cf57f2ac974d1d4c55236351c9">
+    <div class="sourcedoc-section section-element" id="0ee4c79e8fc69254146a33d6e23c928c50facfca">
       
       <p class="sourcedoc-section section-signature">
-        <code>data class SegmentsIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
+        <code>data class SinglePoint&lt;P : Vector2D&lt;P&gt;&gt; : Intersection2D&lt;P&gt;</code>
       </p>
 
       
@@ -159,7 +159,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Describes the result of the intersection between two segments in an euclidean space.</p>
+      <div class="sourcedoc-section section-comments"><p>Objects intersect in a single point.</p>
 </div>
 
       
@@ -181,23 +181,12 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="d9a81c77276ffd4b97f2df1e01da17e8ff34c939">
+      <tr class="sourcedoc-section section-element" id="e9db868a0c778c8c7282c9aba302daf1f21bbfee">
         <td class="sourcedoc-section section-signature">
-          <code>val type: SegmentsIntersectionType</code>
+          <code>val point: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <pre><code>    the type of intersection.</code></pre>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="3f3dd69d610fc53a7255c193941677ed0427d951">
-        <td class="sourcedoc-section section-signature">
-          <code>val point: Optional&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <pre><code>    the intersection point (if present).</code></pre>
-
+        
         </td>
       </tr>
       
@@ -228,7 +217,8 @@
 
       
 
-      <div class="sourcedoc-section section-comments"></div>
+      <div class="sourcedoc-section section-comments"><p>Objects intersect in a single point.</p>
+</div>
 
       
       
@@ -262,218 +252,6 @@
     </table>
   </div>
 
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="18cf974ee7fb14fe3d32ee5f7925cf14eed5edf3">
-      
-      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>constructor(type: SegmentsIntersectionType, point: Optional&lt;P&gt;)</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Describes the result of the intersection between two segments in an euclidean space.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="4146341ae06f6faaa537d6d39ffd892bd58ec911">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="59f3d54426dcfd7bca40d556538d8c30081b847c">
-        <td class="sourcedoc-section section-signature">
-          <code>type: SegmentsIntersectionType</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <pre><code>    the type of intersection.</code></pre>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="db1f95a601083a3ab010cf698945528fad5e7f2c">
-        <td class="sourcedoc-section section-signature">
-          <code>point: Optional&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <pre><code>    the intersection point (if present).</code></pre>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-2" id="companionObject">
-
-
-  
-    <h2 class="sourcedoc-section section-name">CompanionObject</h2>
-  
-
-  
-    <div class="sourcedoc-section section-element" id="b22b19dd0c0095cf57f2ac974d1d4c55236351c9">
-      
-      <h3 class="sourcedoc-section element-name">SegmentsIntersection</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>data class SegmentsIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Describes the result of the intersection between two segments in an euclidean space.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="e43114fcd4e8612b795a6c37b8c180b1a5ba6fa4">
-
-
-  
-    <h3 class="sourcedoc-section section-name">Methods</h3>
-  
-
-  
-    <div class="sourcedoc-section section-element" id="ebe29a3e318251fc91a6806167e50899911577f3">
-      
-      <h4 class="sourcedoc-section element-name">empty</h4>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; empty(): SegmentsIntersection&lt;P&gt;</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Creates an instance of SegmentsIntersection whose type is SegmentsIntersectionType.EMPTY.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-4" id="56be16370af6373ff5cdf984155a98981fbd3b4e">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="73c34b2118cfb11f44b21be082c3ba35b86a1ac1">
-        <td class="sourcedoc-section section-signature">
-          <code>SegmentsIntersection&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="85fb836ea6cb3e469fe118decd7b666612570b68">
-      
-      <h4 class="sourcedoc-section element-name">segment</h4>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; segment(): SegmentsIntersection&lt;P&gt;</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Creates an instance of SegmentsIntersection whose type is SegmentsIntersectionType.SEGMENT.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-4" id="ea23d0fcd88a655a252d2f3f2c92cc1059079bb5">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="73c34b2118cfb11f44b21be082c3ba35b86a1ac1">
-        <td class="sourcedoc-section section-signature">
-          <code>SegmentsIntersection&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
 
 </div>
 
@@ -817,7 +595,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devuq+ef91aaf18. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devuy+b84aa21ae. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

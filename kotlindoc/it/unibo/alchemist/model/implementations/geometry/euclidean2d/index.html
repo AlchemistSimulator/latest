@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuq+ef91aaf18"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuy+b84aa21ae"};
 </script>
 
 
@@ -223,55 +223,12 @@ Collinear points are allowed.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="752e16543c6b96ef562a11bd1fdf597c815ad14c">
+      <tr class="sourcedoc-section section-element" id="1c7cb858a275ea42cb123173f815b3334a46a45c">
         <td class="sourcedoc-section section-signature">
-          <code>enum class LinesIntersectionType: Enum&lt;LinesIntersectionType&gt;</code>
+          <code>data class Segment2DImpl&lt;P : Vector2D&lt;P&gt;&gt; : Segment2D&lt;P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>In euclidean geometry, the intersection of two lines can be an EMPTY set, a POINT,
-or a LINE (in other words, infinite points).</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="27e4a7275b9c34a7cb7218f7f698fe73ec579c9c">
-        <td class="sourcedoc-section section-signature">
-          <code>data class LinesIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Describes the result of the intersection between two lines in an euclidean space.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="86793fd40e5e10a19d15cb22214a6d56030f71c4">
-        <td class="sourcedoc-section section-signature">
-          <code>enum class SegmentsIntersectionType: Enum&lt;SegmentsIntersectionType&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>In euclidean geometry, the intersection of two segments can be an EMPTY set, a POINT, or a
-SEGMENT (in other words, infinite points).</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="b22b19dd0c0095cf57f2ac974d1d4c55236351c9">
-        <td class="sourcedoc-section section-signature">
-          <code>data class SegmentsIntersection&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Describes the result of the intersection between two segments in an euclidean space.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="6ca5e16034acfe0c29eac8e2d494f7489f192cac">
-        <td class="sourcedoc-section section-signature">
-          <code>enum class CircleSegmentIntersectionType: Enum&lt;CircleSegmentIntersectionType&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>In euclidean geometry, the intersection between a segment and a circle can be an EMPTY
-set, a POINT or a PAIR of points.</p>
+        <p>Defines a segment from first to second in an euclidean bidimensional space.</p>
 
         </td>
       </tr>
@@ -399,245 +356,6 @@ a straight line.</p>
       <tr class="sourcedoc-section section-element" id="a66ec860d220a343c41c89c235a8e5da11282cd4">
         <td class="sourcedoc-section section-signature">
           <code>Optional&lt;MutableConvexPolygon&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="37dc54de09029f9faf8e193b0e10c9e7c5e5af74">
-      
-      <h3 class="sourcedoc-section element-name">intersectAsLines</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; Segment2D&lt;P&gt;.intersectAsLines(other: Segment2D&lt;P&gt;): LinesIntersection&lt;P&gt;</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Finds the intersection of two lines represented by segments.
-Degenerate segments (of zero
-length) are not supported.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="53faac9ad31e1e4890ce3035429907e9fb3ad63c">
-
-
-  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="2ce160e814973d6087707842c8ec54bbc3e9fb9c">
-        <td class="sourcedoc-section section-signature">
-          <code>Segment2D&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="b6c2475f21cb7c3e92c29478fa52b8f9c54e0382">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="ac9cffb6bba30f2d6ce222982b073ded49d43d3f">
-        <td class="sourcedoc-section section-signature">
-          <code>other: Segment2D&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="edbb0d480e359f4f8f80719b128db693f93e720f">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="f393212a3c1536d8d7c53bca3b8e7d1c652e3a80">
-        <td class="sourcedoc-section section-signature">
-          <code>LinesIntersection&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="e3363063f28fcc2ae78d525130950aa12b4db8b4">
-      
-      <h3 class="sourcedoc-section element-name">intersectSegment</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; Segment2D&lt;P&gt;.intersectSegment(other: Segment2D&lt;P&gt;): SegmentsIntersection&lt;P&gt;</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Finds the intersection point of two given segments. This method is able to deal with degenerate
-and collinear segments.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="2b2b084d8d82861b2f71badadc7012080419d2b6">
-
-
-  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="2ce160e814973d6087707842c8ec54bbc3e9fb9c">
-        <td class="sourcedoc-section section-signature">
-          <code>Segment2D&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="ec61e5e5e6f6881d0c7cac4c1befb88aa455aeef">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="ac9cffb6bba30f2d6ce222982b073ded49d43d3f">
-        <td class="sourcedoc-section section-signature">
-          <code>other: Segment2D&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="94b34fc3456af1d37dfb0d091cfa265dbbac5027">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="73c34b2118cfb11f44b21be082c3ba35b86a1ac1">
-        <td class="sourcedoc-section section-signature">
-          <code>SegmentsIntersection&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -991,7 +709,7 @@ and collinear segments.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devuq+ef91aaf18. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devuy+b84aa21ae. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

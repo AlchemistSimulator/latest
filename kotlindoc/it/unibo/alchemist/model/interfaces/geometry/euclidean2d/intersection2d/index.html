@@ -24,7 +24,7 @@
 
 
 
-<title>CircleSegmentIntersectionType</title>
+<title>Intersection2D</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -55,7 +55,7 @@
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocEnum, sourceDocPage, classes, page -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean2d/circlesegmentintersectiontype","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/circlesegmentintersectiontype"},"description":"","title":"CircleSegmentIntersectionType"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d"},"description":"","title":"Intersection2D"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuq+ef91aaf18"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuy+b84aa21ae"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>CircleSegmentIntersectionType</h2></header>
+                    <header class="major"><h2>Intersection2D</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,39 +138,10 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="CircleSegmentIntersectionType">
+<div class="sourcedoc-section section-root section-level-1" id="Intersection2D">
 
 
-  
-
-  
-    <div class="sourcedoc-section section-element" id="6ca5e16034acfe0c29eac8e2d494f7489f192cac">
-      
-      <p class="sourcedoc-section section-signature">
-        <code>enum class CircleSegmentIntersectionType: Enum&lt;CircleSegmentIntersectionType&gt;</code>
-      </p>
-
-      
-        
-    <!-- start:inject components -->
-    
-    <!-- end:inject components -->
-
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>In euclidean geometry, the intersection between a segment and a circle can be an EMPTY
-set, a POINT or a PAIR of points.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-2" id="enumItems">
-
-
-  <p class="sourcedoc-section section-name"><strong>EnumItems</strong></p>
+  <p class="sourcedoc-section section-name"><strong>Intersection2D</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -182,30 +153,15 @@ set, a POINT or a PAIR of points.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="5bc604777adb22ae457a5473c397202e00689e23">
+      <tr class="sourcedoc-section section-element" id="2f23c62a2f29bc19dee7362c27c6bee455e991e1">
         <td class="sourcedoc-section section-signature">
-          <code>EMPTY</code>
+          <code>sealed class Intersection2D&lt;V&gt; : Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="f1983acdea43e32e24f0c97a6cf5d00db991ce52">
-        <td class="sourcedoc-section section-signature">
-          <code>POINT</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="459db3903efc253d525a15dc209a6fdbc3155c66">
-        <td class="sourcedoc-section section-signature">
-          <code>PAIR</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
+        <p>Describes the result an intersection operation in an euclidean 2D space.
+Type V must extend Vector2D.
+The requirement is not explicitly enforced to allow the class to work covariantly.</p>
+
         </td>
       </tr>
       
@@ -213,13 +169,6 @@ set, a POINT or a PAIR of points.</p>
     </table>
   </div>
 
-
-</div>
-
-        
-      
-    </div>
-  
 
 </div>
 
@@ -549,7 +498,7 @@ set, a POINT or a PAIR of points.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devuq+ef91aaf18. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devuy+b84aa21ae. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

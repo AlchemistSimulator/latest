@@ -24,7 +24,7 @@
 
 
 
-<title>SegmentsIntersectionType</title>
+<title>MultiplePoints</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -55,7 +55,7 @@
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocEnum, sourceDocPage, classes, page -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean2d/segmentsintersectiontype","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/segmentsintersectiontype"},"description":"","title":"SegmentsIntersectionType"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/multiplepoints","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/multiplepoints"},"description":"","title":"MultiplePoints"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuq+ef91aaf18"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuy+b84aa21ae"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>SegmentsIntersectionType</h2></header>
+                    <header class="major"><h2>MultiplePoints</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="SegmentsIntersectionType">
+<div class="sourcedoc-section section-root section-level-1" id="MultiplePoints">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="86793fd40e5e10a19d15cb22214a6d56030f71c4">
+    <div class="sourcedoc-section section-element" id="569270e856c8faf4731651aa6ac343787c82e25b">
       
       <p class="sourcedoc-section section-signature">
-        <code>enum class SegmentsIntersectionType: Enum&lt;SegmentsIntersectionType&gt;</code>
+        <code>data class MultiplePoints&lt;P : Vector2D&lt;P&gt;&gt; : Intersection2D&lt;P&gt;</code>
       </p>
 
       
@@ -159,18 +159,17 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>In euclidean geometry, the intersection of two segments can be an EMPTY set, a POINT, or a
-SEGMENT (in other words, infinite points).</p>
+      <div class="sourcedoc-section section-comments"><p>Objects intersect in multiple points.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-2" id="enumItems">
+<div class="sourcedoc-section section-root section-level-2" id="fields">
 
 
-  <p class="sourcedoc-section section-name"><strong>EnumItems</strong></p>
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -182,32 +181,12 @@ SEGMENT (in other words, infinite points).</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="5bc604777adb22ae457a5473c397202e00689e23">
+      <tr class="sourcedoc-section section-element" id="486d81cbfadc10d8867ee101c7c8bb7c6c0e165d">
         <td class="sourcedoc-section section-signature">
-          <code>EMPTY</code>
+          <code>val points: List&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="f1983acdea43e32e24f0c97a6cf5d00db991ce52">
-        <td class="sourcedoc-section section-signature">
-          <code>POINT</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="aeb83a3049743fa790cb4f031583c4ab04eb158c">
-        <td class="sourcedoc-section section-signature">
-          <code>SEGMENT</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Note that two segments may be collinear, overlapping and share a single point (e.g. an
-endpoint). In this case the intersection type is POINT.</p>
-
         </td>
       </tr>
       
@@ -215,6 +194,71 @@ endpoint). In this case the intersection type is POINT.</p>
     </table>
   </div>
 
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="ffe85fb919a0bee3129e32f8f72be63241fb1db9">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(points: List&lt;P&gt;)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Objects intersect in multiple points.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4dd0994bbc9704732763ce2597cb9d0f04066fd2">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="0e0b8c1a76ba8a7610d455cca93b4fec68d4ea87">
+        <td class="sourcedoc-section section-signature">
+          <code>points: List&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
 
 </div>
 
@@ -551,7 +595,7 @@ endpoint). In this case the intersection type is POINT.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devuq+ef91aaf18. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devuy+b84aa21ae. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

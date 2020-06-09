@@ -55,7 +55,7 @@
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Page Template: kotlindocInterface, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuq+ef91aaf18"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuy+b84aa21ae"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="de88dcf2ba3a922a367e2b6a8702e3ef1535dd06">
+    <div class="sourcedoc-section section-element" id="5a5cb3c6077a1ef26c626f71b3a6db31f56f7ba9">
       
       <p class="sourcedoc-section section-signature">
-        <code>data class Segment2D&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
+        <code>interface Segment2D&lt;P : Vector2D&lt;P&gt;&gt; : Any</code>
       </p>
 
       
@@ -181,59 +181,29 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="1cd6c690f5d7e50526e18d8150208caaaa7d916f">
+      <tr class="sourcedoc-section section-element" id="4c121656306b998c7a9e7ea2fd508573a6ab6722">
         <td class="sourcedoc-section section-signature">
-          <code>val length: Double</code>
+          <code>abstract first: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>The length of the segment.</p>
+        <p>First point.</p>
 
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="e944e8d54dd5faef1ddbfcf89c847bc39e822034">
+      <tr class="sourcedoc-section section-element" id="b52411a90ee93a90865aba4d202840cfc19eff1c">
         <td class="sourcedoc-section section-signature">
-          <code>val xAxisAligned: Boolean</code>
+          <code>abstract second: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Indicates if the segment is aligned to the x axis.</p>
+        <p>Second point.</p>
 
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="6721a1f627dab2107e6e52942505c5af25736676">
+      <tr class="sourcedoc-section section-element" id="2e1935eba3e955501b8f58ce477cf11a25728758">
         <td class="sourcedoc-section section-signature">
-          <code>val yAxisAligned: Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Indicates if the segment is aligned to the y axis.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="986e939e29dc56a6e0bdc19c9097bf5ea3bc5180">
-        <td class="sourcedoc-section section-signature">
-          <code>val isAxisAligned: Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Indicates if the segment is axis-aligned.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="f1fb2167ac98edf79c50d15c6258d1fc642ed504">
-        <td class="sourcedoc-section section-signature">
-          <code>val slope: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>The slope of the segment. If the two points coincide, this is Double.NaN.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="d1620a48ad89d20464482082a35139bfafbe2261">
-        <td class="sourcedoc-section section-signature">
-          <code>val intercept: Double</code>
+          <code>open intercept: Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The intercept of the line passing through first and second.</p>
@@ -241,9 +211,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="97cfab355cd35250ce5f19c4fc9402e5129c0f6f">
+      <tr class="sourcedoc-section section-element" id="28bd53ffdeacb1487b8ee29145215a57cceacdbf">
         <td class="sourcedoc-section section-signature">
-          <code>val isDegenerate: Boolean</code>
+          <code>open isDegenerate: Boolean</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A segment is degenerate if its points coincide.</p>
@@ -251,9 +221,59 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="777e92a5f83387793cf71b0bdaa8d20b0591003f">
+      <tr class="sourcedoc-section section-element" id="bf896bf50901a1a0a306589ce13359b7d75eb922">
         <td class="sourcedoc-section section-signature">
-          <code>val midPoint: Euclidean2DPosition</code>
+          <code>open isHorizontal: Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Indicates if the segment is aligned to the x axis.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2526c47b01d1941850d3f857ef28d9a389dc4a18">
+        <td class="sourcedoc-section section-signature">
+          <code>open isVertical: Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Indicates if the segment is aligned to the y axis.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="99ab4225536059948496e8586751a3a3ac8f2232">
+        <td class="sourcedoc-section section-signature">
+          <code>open isAlignedToAnyAxis: Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Indicates if the segment is axis-aligned.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5d13b6bdbed40a4f8ebb5bdbb9c9113044b870ff">
+        <td class="sourcedoc-section section-signature">
+          <code>open length: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The length of the segment.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="73c645bf66e532a8dc7eef461ab624b909de0ba2">
+        <td class="sourcedoc-section section-signature">
+          <code>open slope: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The slope of the segment. If the two points coincide, this is Double.NaN.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="1cfa2b43427353d3f1ff5761c30ad03e8092ffd7">
+        <td class="sourcedoc-section section-signature">
+          <code>open midPoint: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The medium point of the segment.</p>
@@ -261,18 +281,58 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="fdc1386f56d82240bee61d384cebed246c98118f">
-        <td class="sourcedoc-section section-signature">
-          <code>val first: P</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
         
-        </td>
-      </tr>
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="9736be1ae215013c9343cf9b1d6c97c1c5d81de9">
       
-      <tr class="sourcedoc-section section-element" id="65c801b1953e74e292cc5bf95160bd5d89ab6ad0">
+      <h3 class="sourcedoc-section element-name">closestPointTo</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun closestPointTo(point: P): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Finds the point of the segment which is closest to the provided position.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="bde8acd96dbdb588a7df00e2cded30639116e4ff">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f3243ae1b83211c8f307e73f62054d49df18d93b">
         <td class="sourcedoc-section section-signature">
-          <code>val second: P</code>
+          <code>point: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -288,32 +348,59 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-2" id="constructors">
+<div class="sourcedoc-section section-root section-level-3" id="9bf144bea0ae2c220abafdfd77f48e0df4a0e380">
 
 
-  
-    <h2 class="sourcedoc-section section-name">Constructors</h2>
-  
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
 
-  
-    <div class="sourcedoc-section section-element" id="cf44918b7d6c79bae32dab2f5918d83b0982f298">
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
       
-      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="51326b6fe85d79c037004ae3672d1dd26d167187">
+      
+      <h3 class="sourcedoc-section element-name">copyWith</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(first: P, second: P)</code>
+        <code>abstract fun copyWith(first: P, second: P): Segment2D&lt;P&gt;</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Defines a segment from first to second in an euclidean bidimensional space.</p>
+      <div class="sourcedoc-section section-comments"><p>Creates a copy of this Segment2D using the specified first and second points.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="f8f898f6bc53f1d9f5ca8cf17f7800a3833605b1">
+<div class="sourcedoc-section section-root section-level-3" id="d4fadf53276fcb15124e344d87397298bbe40f92">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -354,72 +441,8 @@
 </div>
 
         
-      
-    </div>
-  
-
-</div>
-
-        
           
-<div class="sourcedoc-section section-root section-level-2" id="methods">
-
-
-  
-    <h2 class="sourcedoc-section section-name">Methods</h2>
-  
-
-  
-    <div class="sourcedoc-section section-element" id="9390e54edac9ce9fc6675b7205badbf0300649ec">
-      
-      <h3 class="sourcedoc-section element-name">shrunk</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun shrunk(factor: Double): Segment2D&lt;P&gt;</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"></div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="d60a05c32fb03a97b7f510c378377e3610e8c8ce">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="efbc7079e7314129f24e867dcf47514acd083b42">
-        <td class="sourcedoc-section section-signature">
-          <code>factor: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="8c133fff6d632f517b20e656deb2e670f6cb0de5">
+<div class="sourcedoc-section section-root section-level-3" id="0fee0db559c86b445104234aa4ca6c0617a91e8c">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -454,63 +477,12 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="6957e3c409835a39fdeffe929393ebec7958e28f">
-      
-      <h3 class="sourcedoc-section element-name">toVector</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun toVector(): ()</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"></div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="75ae44ff03db569564f8f5ce28ccc14c30b3c3c1">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="f9065fa7389750e16fe00d7ba36748f61d3e0df6">
-        <td class="sourcedoc-section section-signature">
-          <code>()</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="3a729c7db4b668eebf8ec02761ec31fc281c96f0">
+    <div class="sourcedoc-section section-element" id="54c4646da8249fed2c4c59e86cc2b00054b6e629">
       
       <h3 class="sourcedoc-section element-name">contains</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun contains(point: P): Boolean</code>
+        <code>open fun contains(point: P): Boolean</code>
       </p>
 
       
@@ -523,7 +495,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="d06d675b22d245928ae74672c64e929e7aab9270">
+<div class="sourcedoc-section section-root section-level-3" id="ac03f6dc3ce7a1b4b6922ff49a56ed00cb185322">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -556,7 +528,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="51f316b3dc9e0122fc82656f6e1dbd7c3424b642">
+<div class="sourcedoc-section section-root section-level-3" id="061ed14f0790971f49f8b40f7e80d30a5dbc28d3">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -591,97 +563,12 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="6592e80aa6b26986f2d871968356bf3f27d503e7">
-      
-      <h3 class="sourcedoc-section element-name">closestPointTo</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun closestPointTo(point: P): P</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Finds the point of the segment which is closest to the provided position.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="f70bad142d6337162d0ae8b290a6c7e352a26ab0">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="f3243ae1b83211c8f307e73f62054d49df18d93b">
-        <td class="sourcedoc-section section-signature">
-          <code>point: P</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="564c4d3b40752f1a54327313edaee74819358a8e">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
-        <td class="sourcedoc-section section-signature">
-          <code>P</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="a18b63773209249493fc88900419d865106a1d23">
+    <div class="sourcedoc-section section-element" id="cf0ba8a16a5c3139a9914ea8ca8c22dbba4ab865">
       
       <h3 class="sourcedoc-section element-name">distanceTo</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun distanceTo(point: P): Double</code>
+        <code>open fun distanceTo(point: P): Double</code>
       </p>
 
       
@@ -693,7 +580,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="e9f8a5bea2436c8002387932a5a8074a77721b14">
+<div class="sourcedoc-section section-root section-level-3" id="313d0d8b6e3758eec8b728ecd7d0dd4024ec0cd2">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -726,7 +613,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="e6f76ad7a0c96e6ec0d3ac9da7ad8c888182cb8a">
+<div class="sourcedoc-section section-root section-level-3" id="aceda67aae83992a97c1e0054d86f0192a6e365e">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -761,12 +648,12 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="4e920109559f160263b4a46a919c493926739722">
+    <div class="sourcedoc-section section-element" id="a5c2ef0873cb9b95e9611853cdb7634ead258535">
       
       <h3 class="sourcedoc-section element-name">distanceTo</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun distanceTo(other: Segment2D&lt;P&gt;): Double</code>
+        <code>open fun distanceTo(other: Segment2D&lt;P&gt;): Double</code>
       </p>
 
       
@@ -778,7 +665,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="9a811937243dd52068b8523d82fe62ce7128784f">
+<div class="sourcedoc-section section-root section-level-3" id="ab8fec27316488fc06ca758c6458f4e03f0f1f15">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -811,7 +698,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="95c9ebc4daf8bd67d80a3eafc65584888c45a3a2">
+<div class="sourcedoc-section section-root section-level-3" id="8e59a7444f600cf1745ed7bbb97601fb2710372c">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -846,12 +733,96 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="d123e7991d98c7e5b6715b51f5258d1fd5553e8e">
+    <div class="sourcedoc-section section-element" id="9c7bb2054ef8891d821f75444d2a978de7395a1a">
+      
+      <h3 class="sourcedoc-section element-name">shrunk</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun shrunk(factor: Double): Segment2D&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="dd393787f6cf495a29eea13a84558448a6d0303c">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="efbc7079e7314129f24e867dcf47514acd083b42">
+        <td class="sourcedoc-section section-signature">
+          <code>factor: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="674bbb349bb1321aa2efd82854426e820150715d">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2ce160e814973d6087707842c8ec54bbc3e9fb9c">
+        <td class="sourcedoc-section section-signature">
+          <code>Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="552f415e8f229307636a655f2381b0e5f343f789">
       
       <h3 class="sourcedoc-section element-name">toRange</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun toRange(getXCoords: Boolean): ClosedRange&lt;Double&gt;</code>
+        <code>open fun toRange(getXCoords: Boolean): ClosedRange&lt;Double&gt;</code>
       </p>
 
       
@@ -867,7 +838,7 @@ new ones.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="80713b75dd210156c5f32b5ae083d29c7b285917">
+<div class="sourcedoc-section section-root section-level-3" id="94d5eba564da5565b663db24f07680b3ba39ee3b">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -900,7 +871,7 @@ new ones.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="c5cec9d52ab97309acc241057da2ee00cede2c73">
+<div class="sourcedoc-section section-root section-level-3" id="25c0bf6643eca5127a82571e48bc76065a9a122d">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -935,25 +906,25 @@ new ones.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="373a950d2760d9acf02e392eeea0950358e8c80b">
+    <div class="sourcedoc-section section-element" id="a42bb82b07196a2daf2dc83a5a5de732ad225cd9">
       
       <h3 class="sourcedoc-section element-name">isInRectangle</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun isInRectangle(origin: Vector2D&lt;*&gt;, width: Double, height: Double): Boolean</code>
+        <code>open fun isInRectangle(origin: Vector2D&lt;*&gt;, width: Double, height: Double): Boolean</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Checks whether the given <a href="#">segment</a> is inside a rectangular region described by an origin
-point and width and height values (only positive).</p>
+      <div class="sourcedoc-section section-comments"><p>Checks whether this segment is inside a rectangular region described by an origin
+point and width and height values (must be positive).</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="3b40579ffae4aef6a180593d250f7efc7d3758ab">
+<div class="sourcedoc-section section-root section-level-3" id="9215b316e104588d497383e4778950fd1686dfcb">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -1004,7 +975,7 @@ point and width and height values (only positive).</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="d064528566d0057ac65cd689e67ced434fed3499">
+<div class="sourcedoc-section section-root section-level-3" id="c5bfe05eb9c54c8f1714c19670de5a734ca18af4">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1039,72 +1010,25 @@ point and width and height values (only positive).</p>
       
     </div>
   
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-2" id="extensions">
-
-
-  
-    <h2 class="sourcedoc-section section-name">Extensions</h2>
-  
-
-  
-    <div class="sourcedoc-section section-element" id="37dc54de09029f9faf8e193b0e10c9e7c5e5af74">
+    <div class="sourcedoc-section section-element" id="43ae8dc0789d95aa48e15496b4ed5e16e16fbee1">
       
-      <h3 class="sourcedoc-section element-name">intersectAsLines</h3>
+      <h3 class="sourcedoc-section element-name">intersectSegment</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; Segment2D&lt;P&gt;.intersectAsLines(other: Segment2D&lt;P&gt;): LinesIntersection&lt;P&gt;</code>
+        <code>open fun intersectSegment(other: Segment2D&lt;P&gt;): Intersection2D&lt;P&gt;</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Finds the intersection of two lines represented by segments.
-Degenerate segments (of zero
-length) are not supported.</p>
+      <div class="sourcedoc-section section-comments"><p>Finds the intersection point of two given segments. This method is able to deal with degenerate
+and collinear segments.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="53faac9ad31e1e4890ce3035429907e9fb3ad63c">
-
-
-  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="2ce160e814973d6087707842c8ec54bbc3e9fb9c">
-        <td class="sourcedoc-section section-signature">
-          <code>Segment2D&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="b6c2475f21cb7c3e92c29478fa52b8f9c54e0382">
+<div class="sourcedoc-section section-root section-level-3" id="b6bf1851d8141fa804a1ddecd739518ebf58dde9">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -1137,7 +1061,7 @@ length) are not supported.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="edbb0d480e359f4f8f80719b128db693f93e720f">
+<div class="sourcedoc-section section-root section-level-3" id="29dae70ddce50325b0db2a1727bdd2167fc81b59">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1152,9 +1076,9 @@ length) are not supported.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="f393212a3c1536d8d7c53bca3b8e7d1c652e3a80">
+      <tr class="sourcedoc-section section-element" id="2ffb2ffdcbe653fcde0227cccb69d01232ae35fb">
         <td class="sourcedoc-section section-signature">
-          <code>LinesIntersection&lt;P&gt;</code>
+          <code>Intersection2D&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1172,58 +1096,26 @@ length) are not supported.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="e3363063f28fcc2ae78d525130950aa12b4db8b4">
+    <div class="sourcedoc-section section-element" id="c3e484fbf076baa3a7639aeace81bcf85846f095">
       
-      <h3 class="sourcedoc-section element-name">intersectSegment</h3>
+      <h3 class="sourcedoc-section element-name">intersectAsLines</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;P : Vector2D&lt;P&gt;&gt; Segment2D&lt;P&gt;.intersectSegment(other: Segment2D&lt;P&gt;): SegmentsIntersection&lt;P&gt;</code>
+        <code>open fun intersectAsLines(other: Segment2D&lt;P&gt;): Intersection2D&lt;P&gt;</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Finds the intersection point of two given segments. This method is able to deal with degenerate
-and collinear segments.</p>
+      <div class="sourcedoc-section section-comments"><p>Finds the intersection of two lines represented by segments.
+Degenerate segments (of zero
+length) are not supported.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="2b2b084d8d82861b2f71badadc7012080419d2b6">
-
-
-  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="2ce160e814973d6087707842c8ec54bbc3e9fb9c">
-        <td class="sourcedoc-section section-signature">
-          <code>Segment2D&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="ec61e5e5e6f6881d0c7cac4c1befb88aa455aeef">
+<div class="sourcedoc-section section-root section-level-3" id="421c883b86eb0d2708262d72ccd5eb416fde6c91">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -1256,7 +1148,7 @@ and collinear segments.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="94b34fc3456af1d37dfb0d091cfa265dbbac5027">
+<div class="sourcedoc-section section-root section-level-3" id="712c2f74e9090f1c3e8f1e1c806b238e7d9fa14b">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1271,9 +1163,146 @@ and collinear segments.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="73c34b2118cfb11f44b21be082c3ba35b86a1ac1">
+      <tr class="sourcedoc-section section-element" id="2ffb2ffdcbe653fcde0227cccb69d01232ae35fb">
         <td class="sourcedoc-section section-signature">
-          <code>SegmentsIntersection&lt;P&gt;</code>
+          <code>Intersection2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5cad22334a70f0acdc488a125818afa47df43847">
+      
+      <h3 class="sourcedoc-section element-name">toVector</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun toVector(): @JvmDefault</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="98ce2d7f67985b982c1494622140b5a22290040f">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="a85269ecc4d736bf7f756267a46b4cd70390de5b">
+        <td class="sourcedoc-section section-signature">
+          <code>@JvmDefault</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="3241382bec01ad54d6faa5cfcb1b1eb350b2920e">
+      
+      <h3 class="sourcedoc-section element-name">isCollinearWith</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun isCollinearWith(point: P): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Determines if a segment built from the second point of this segment to the provided point
+is collinear (forms a line) with this segment.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="b6565392e611b1036a3e39e376bcb10ad79e23cd">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f3243ae1b83211c8f307e73f62054d49df18d93b">
+        <td class="sourcedoc-section section-signature">
+          <code>point: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f1175ed5b039e099321d16846ddcce405549fd61">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1627,7 +1656,7 @@ and collinear segments.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devuq+ef91aaf18. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devuy+b84aa21ae. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

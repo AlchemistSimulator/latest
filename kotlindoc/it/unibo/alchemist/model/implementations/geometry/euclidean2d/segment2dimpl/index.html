@@ -24,7 +24,7 @@
 
 
 
-<title>LinesIntersectionType</title>
+<title>Segment2DImpl</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -55,7 +55,7 @@
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocEnum, sourceDocPage, classes, page -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean2d/linesintersectiontype","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/linesintersectiontype"},"description":"","title":"LinesIntersectionType"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/geometry/euclidean2d/segment2dimpl","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/segment2dimpl"},"description":"","title":"Segment2DImpl"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuq+ef91aaf18"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devuy+b84aa21ae"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>LinesIntersectionType</h2></header>
+                    <header class="major"><h2>Segment2DImpl</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="LinesIntersectionType">
+<div class="sourcedoc-section section-root section-level-1" id="Segment2DImpl">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="752e16543c6b96ef562a11bd1fdf597c815ad14c">
+    <div class="sourcedoc-section section-element" id="1c7cb858a275ea42cb123173f815b3334a46a45c">
       
       <p class="sourcedoc-section section-signature">
-        <code>enum class LinesIntersectionType: Enum&lt;LinesIntersectionType&gt;</code>
+        <code>data class Segment2DImpl&lt;P : Vector2D&lt;P&gt;&gt; : Segment2D&lt;P&gt;, Any</code>
       </p>
 
       
@@ -159,18 +159,17 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>In euclidean geometry, the intersection of two lines can be an EMPTY set, a POINT,
-or a LINE (in other words, infinite points).</p>
+      <div class="sourcedoc-section section-comments"><p>Defines a segment from first to second in an euclidean bidimensional space.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-2" id="enumItems">
+<div class="sourcedoc-section section-root section-level-2" id="fields">
 
 
-  <p class="sourcedoc-section section-name"><strong>EnumItems</strong></p>
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -182,27 +181,87 @@ or a LINE (in other words, infinite points).</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="5bc604777adb22ae457a5473c397202e00689e23">
+      <tr class="sourcedoc-section section-element" id="fdc1386f56d82240bee61d384cebed246c98118f">
         <td class="sourcedoc-section section-signature">
-          <code>EMPTY</code>
+          <code>val first: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>First point.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="65c801b1953e74e292cc5bf95160bd5d89ab6ad0">
+        <td class="sourcedoc-section section-signature">
+          <code>val second: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Second point.</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="cf44918b7d6c79bae32dab2f5918d83b0982f298">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(first: P, second: P)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Defines a segment from first to second in an euclidean bidimensional space.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f8f898f6bc53f1d9f5ca8cf17f7800a3833605b1">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4f16148aec0ed01ae51137f5b84eec022baeae66">
+        <td class="sourcedoc-section section-signature">
+          <code>first: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="f1983acdea43e32e24f0c97a6cf5d00db991ce52">
+      <tr class="sourcedoc-section section-element" id="6dc751d5badcac44260742db44c62dc098d197dc">
         <td class="sourcedoc-section section-signature">
-          <code>POINT</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="528a45acf62927f5e3020d13509848f28121f5ca">
-        <td class="sourcedoc-section section-signature">
-          <code>LINE</code>
+          <code>second: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -213,6 +272,120 @@ or a LINE (in other words, infinite points).</p>
     </table>
   </div>
 
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="5f32a448f86118bf7869ed89523c48d94f01c017">
+      
+      <h3 class="sourcedoc-section element-name">copyWith</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun copyWith(first: P, second: P): Segment2D&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Creates a copy of this Segment2D using the specified first and second points.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c49e314bc2eb654487741c7b9316b165b585bb02">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4f16148aec0ed01ae51137f5b84eec022baeae66">
+        <td class="sourcedoc-section section-signature">
+          <code>first: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6dc751d5badcac44260742db44c62dc098d197dc">
+        <td class="sourcedoc-section section-signature">
+          <code>second: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4e81fbe68c68f12c3194e5706162477479121562">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2ce160e814973d6087707842c8ec54bbc3e9fb9c">
+        <td class="sourcedoc-section section-signature">
+          <code>Segment2D&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
 
 </div>
 
@@ -549,7 +722,7 @@ or a LINE (in other words, infinite points).</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devuq+ef91aaf18. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devuy+b84aa21ae. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
