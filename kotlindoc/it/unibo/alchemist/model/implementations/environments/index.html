@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4f896d0b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv5+d9ef1d750"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
 </script>
 
 
@@ -180,20 +180,6 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="8afa111108f9a695ba543fe58982681dea597187">
-        <td class="sourcedoc-section section-signature">
-          <code>class ImageEnvironmentWithGraph&lt;T&gt; : ImageEnvironment&lt;T&gt;, EuclideanPhysics2DEnvironmentWithGraph&lt;RectObstacle2D&lt;Euclidean2DPosition&gt;, T, ConvexPolygon, Euclidean2DPassage&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>An ImageEnvironment providing an Euclidean2DNavigationGraph.
-The NaviGator algorithm is used to produce such graph (see generateNavigationGraph).
-The positions where to plant initial seeds should be specified directly in the image,
-marking each area of the environment with one or more pixels of a given color (defaults
-to blue).</p>
-
-        </td>
-      </tr>
-      
       <tr class="sourcedoc-section section-element" id="32c3f3dcb77dd83c2a6d8c88ec5582209f1b6c60">
         <td class="sourcedoc-section section-signature">
           <code>open class Continuous2DEnvironment&lt;T&gt; : Euclidean2DEnvironment&lt;T&gt;, Abstract2DEnvironment&lt;T, Euclidean2DPosition&gt;, Physics2DEnvironment&lt;T&gt;</code>
@@ -204,13 +190,16 @@ to blue).</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="ced47065b8ca939ec3f133beee5ac1ed05057dc8">
+      <tr class="sourcedoc-section section-element" id="8afa111108f9a695ba543fe58982681dea597187">
         <td class="sourcedoc-section section-signature">
-          <code>class Rectangular2DEnvironment&lt;T&gt; : Continuous2DEnvironment&lt;T&gt;, HasBoundaries</code>
+          <code>class ImageEnvironmentWithGraph&lt;T&gt; : ImageEnvironment&lt;T&gt;, EuclideanPhysics2DEnvironmentWithGraph&lt;RectObstacle2D&lt;Euclidean2DPosition&gt;, T, ConvexPolygon, Euclidean2DPassage&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A bounded Physics2DEnvironment, nodes cannot exist nor move outside the rectangular boundaries centered
-in (0,0).</p>
+        <p>An ImageEnvironment providing an Euclidean2DNavigationGraph.
+The NaviGator algorithm is used to produce such graph (see generateNavigationGraph).
+The positions where to plant initial seeds should be specified directly in the image,
+marking each area of the environment with one or more pixels of a given color (defaults
+to blue).</p>
 
         </td>
       </tr>
@@ -242,26 +231,6 @@ in (0,0).</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="93aabb2c7fc60f8dfaad1eb4f8346d4232351382">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class AbstractEnvironment&lt;T : Any?, P : Position&lt;P&gt;?&gt; : Environment&lt;T, P&gt;, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Very generic and basic implementation for an environment. Basically, only manages an internal set of nodes and their position.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="47f69193f965db3ae317b1278bd8ee86e251b72a">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class Abstract2DEnvironment&lt;T : Any?, P : Position2D&lt;P&gt;?&gt; : AbstractEnvironment&lt;T, P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Models a bidimensional environment.</p>
-
-        </td>
-      </tr>
-      
       <tr class="sourcedoc-section section-element" id="4d46743f94c4635ed22adf4713b352684831fd26">
         <td class="sourcedoc-section section-signature">
           <code>open class ImageEnvironment&lt;T : Any?&gt; : Continuous2DObstacles&lt;T&gt;</code>
@@ -278,6 +247,26 @@ in (0,0).</p>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>This class represents a 2D continuous environment with spatial limitations. Those limitations will prevent nodes to move in positions which are not allowed.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="93aabb2c7fc60f8dfaad1eb4f8346d4232351382">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractEnvironment&lt;T : Any?, P : Position&lt;P&gt;?&gt; : Environment&lt;T, P&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Very generic and basic implementation for an environment. Basically, only manages an internal set of nodes and their position.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="47f69193f965db3ae317b1278bd8ee86e251b72a">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class Abstract2DEnvironment&lt;T : Any?, P : Position2D&lt;P&gt;?&gt; : AbstractEnvironment&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Models a bidimensional environment.</p>
 
         </td>
       </tr>
@@ -651,7 +640,7 @@ in (0,0).</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv5+d9ef1d750. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

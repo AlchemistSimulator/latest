@@ -24,7 +24,7 @@
 
 
 
-<title>Manhattan2DPosition</title>
+<title>AbstractPosition</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4f896d0b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -64,7 +64,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/positions/manhattan2dposition","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/manhattan2dposition"},"description":"","title":"Manhattan2DPosition"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/model/implementations/positions/abstractposition","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/abstractposition"},"description":"","title":"AbstractPosition"};
 </script>
 
 <!-- end:debug info -->
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv5+d9ef1d750"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
 </script>
 
 
@@ -127,7 +127,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>Manhattan2DPosition</h2></header>
+                    <header class="major"><h2>AbstractPosition</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -138,16 +138,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="Manhattan2DPosition">
+<div class="sourcedoc-section section-root section-level-1" id="AbstractPosition">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="97c8b574b745d46b968b59e18c76e1c4b8ab4fcf">
+    <div class="sourcedoc-section section-element" id="d58ea608070706dfe29c6968b3dcee860e82ccd5">
       
       <p class="sourcedoc-section section-signature">
-        <code>class Manhattan2DPosition: Position2D&lt;Manhattan2DPosition?&gt;, Any</code>
+        <code>abstract class AbstractPosition&lt;P : Position&lt;P&gt;?&gt; : Position&lt;P&gt;, Any</code>
       </p>
 
       
@@ -159,7 +159,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>This class measures distances as integers. Suitable for bidimensional discrete environments. The distance between two nodes is computed as Manhattan distance.</p>
+      <div class="sourcedoc-section section-comments"><p>N-dimensional position.</p>
 </div>
 
       
@@ -180,24 +180,6 @@
       </tr>
       </thead>
       <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="3cbc2c469832ba19f6cab1a44a0b5db88f2760a5">
-        <td class="sourcedoc-section section-signature">
-          <code>val y: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="abe31642ff7d02808e9c5dfd7c058f8d3c494064">
-        <td class="sourcedoc-section section-signature">
-          <code>val x: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
       
       <tr class="sourcedoc-section section-element" id="c15248827be8741ad1d657bf4792e32e847e191b">
         <td class="sourcedoc-section section-signature">
@@ -234,12 +216,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="030b6ae2932415720f360d36d95b0744dae4d77b">
+    <div class="sourcedoc-section section-element" id="94da8628003b8c5e95b46b3a1172c5d76279d3cc">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(x: Int, y: Int)</code>
+        <code>protected constructor(copy: Boolean, vararg coordinates: Double)</code>
       </p>
 
       
@@ -250,7 +232,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7f9b20fbf3b52c6ffbc22b8fb73a1e92e48a51c1">
+<div class="sourcedoc-section section-root section-level-3" id="6a86493dea092b8ba47c66e1df911ddf0871fac4">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -265,22 +247,22 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="9011786a7d3cd5b458b5c5c68c61b19f5b708b90">
+      <tr class="sourcedoc-section section-element" id="a2d21154cffa08821b8f2e76221a19d8fe40a947">
         <td class="sourcedoc-section section-signature">
-          <code>x: Int</code>
+          <code>copy: Boolean</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Int: X coordinate</p>
+        <p>Boolean: true if it is unsafe to store the array as-is</p>
 
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="cb50a80e4962a1a9373aaae746c5fc85da4570ff">
+      <tr class="sourcedoc-section section-element" id="ed943d7159cbaff57343ffc9f5ce03cd6d2fbf01">
         <td class="sourcedoc-section section-signature">
-          <code>y: Int</code>
+          <code>vararg coordinates: Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Int: Y coordinate</p>
+        <p>Double: the array of coordinates</p>
 
         </td>
       </tr>
@@ -308,6 +290,93 @@
     <h2 class="sourcedoc-section section-name">Methods</h2>
   
 
+  
+    <div class="sourcedoc-section section-element" id="eab21be04cf24c2b0c39f6151f556b64e831f9fc">
+      
+      <h3 class="sourcedoc-section element-name">div</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun div(other: Double): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Division by a number.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="87afd2374097da864361fbfc7c307e392e67cea5">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2a96080339cdd075898e0f879d8cd00ac6611874">
+        <td class="sourcedoc-section section-signature">
+          <code>other: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the number</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4b54690cdd20e110bb77f50fdf9e88b9502bd95c">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: every element divided by the number</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
   
     <div class="sourcedoc-section section-element" id="dde665156caa56d326caf2c6956c6b1e81390892">
       
@@ -444,23 +513,24 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="01d86357db616e3d839e73745db55c033ca70ffb">
+    <div class="sourcedoc-section section-element" id="90ab498e9da5d8545786d5da1194c6d8a0dd8cc0">
       
       <h3 class="sourcedoc-section element-name">toString</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun toString(): String</code>
+        <code>open fun toString(): String</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"></div>
+      <div class="sourcedoc-section section-comments"><p>Prints the coordinates.</p>
+</div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="51cc9ed56b4c58e53a7efded8900e33c932371be">
+<div class="sourcedoc-section section-root section-level-3" id="10ff84a167aa8cf1007a772e2e06c99062ca1ba0">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -495,23 +565,24 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="620e5a0ba84dc9c0ca735b8b4b82845158bd9c48">
+    <div class="sourcedoc-section section-element" id="7f3b6893a8635db9681b177f8b40b826f0dbda12">
       
       <h3 class="sourcedoc-section element-name">minus</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun minus(other: Manhattan2DPosition?): Manhattan2DPosition?</code>
+        <code>fun minus(other: P): P</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"></div>
+      <div class="sourcedoc-section section-comments"><p>Same as <code>#minus(double[])</code>, with the internal representation of other.</p>
+</div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="dac5f540bd6c43072606383739c82c6d2c9c0ac1">
+<div class="sourcedoc-section section-root section-level-3" id="01c5b1c8f91ad3d29fc4ca49b9b685fb46d377cc">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -526,9 +597,95 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="1c676e2f39890339ead198fd988f946f972bb9ac">
+      <tr class="sourcedoc-section section-element" id="674cac5467a6d6eee3509048744ead53f2b082b8">
         <td class="sourcedoc-section section-signature">
-          <code>other: Manhattan2DPosition?</code>
+          <code>other: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: the other position</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9acc96dfc7f493251c2ae4cc87787b73ea4b7760">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: a new position with the coordinates summed with the other</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5ab3adf349652cff33686fee6a551e4e8aa8dd75">
+      
+      <h3 class="sourcedoc-section element-name">minus</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun minus(other: DoubleArray): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="56ab0de45b730312c21bdf72641590641c00af0d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="bbff2d9c2d42e6508ecddb5f624efd3340508832">
+        <td class="sourcedoc-section section-signature">
+          <code>other: DoubleArray</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -544,7 +701,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="59eb55a52e00d524ff468077677ad281604afc5c">
+<div class="sourcedoc-section section-root section-level-3" id="d0792d8085a9d8b62b5ebd6929fdecf79526df41">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -559,12 +716,99 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="c79e3d7bd0cc910d2e00111d40f58e8866cf4349">
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
         <td class="sourcedoc-section section-signature">
-          <code>Manhattan2DPosition?</code>
+          <code>P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="61382dac2deee37ccb3ed0c6547caa9d6775a60a">
+      
+      <h3 class="sourcedoc-section element-name">times</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun times(other: Double): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Multiplication by a number.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="97dacd6e23e056c2f561c8d2560124bd4d4d39ec">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2a96080339cdd075898e0f879d8cd00ac6611874">
+        <td class="sourcedoc-section section-signature">
+          <code>other: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Double: the number</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="bc28f1148cabe052066f04cca3b29a8f83dfc042">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: every element times the number</p>
+
         </td>
       </tr>
       
@@ -663,23 +907,24 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="ca9b412e8b3bde2a0c2bdf03afed61ac49ecd8fe">
+    <div class="sourcedoc-section section-element" id="3d11fe84536e88562c25c03a840820b5465f2a48">
       
       <h3 class="sourcedoc-section element-name">plus</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun plus(other: Manhattan2DPosition?): Manhattan2DPosition?</code>
+        <code>fun plus(other: P): P</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"></div>
+      <div class="sourcedoc-section section-comments"><p>Same as <code>#plus(double[])</code>, with the internal representation of other.</p>
+</div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="8cd29a7e4543de3894dfcb1a38fdb96a20e144dc">
+<div class="sourcedoc-section section-root section-level-3" id="9a9bea29b26fb7307a743acaeb11f61401aa531d">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -694,9 +939,95 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="1c676e2f39890339ead198fd988f946f972bb9ac">
+      <tr class="sourcedoc-section section-element" id="674cac5467a6d6eee3509048744ead53f2b082b8">
         <td class="sourcedoc-section section-signature">
-          <code>other: Manhattan2DPosition?</code>
+          <code>other: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: the other position</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="8869b2900bb5b7f0a1d9935f0e90a51ba78d410c">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: a new position with the coordinates summed with the other</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="8858c485b96fa8642e0423e66b567d9d2d6e2747">
+      
+      <h3 class="sourcedoc-section element-name">plus</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun plus(other: DoubleArray): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fa90d9e1ba75b78e0e80b33c35d8a498e8737105">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="bbff2d9c2d42e6508ecddb5f624efd3340508832">
+        <td class="sourcedoc-section section-signature">
+          <code>other: DoubleArray</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -712,7 +1043,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="bbd92e47bc0a1f33905cd3f247637f4f066c9df2">
+<div class="sourcedoc-section section-root section-level-3" id="ca5b94ca8881c4056efa3ca8a7e78a0103ea3adf">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -727,9 +1058,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="c79e3d7bd0cc910d2e00111d40f58e8866cf4349">
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
         <td class="sourcedoc-section section-signature">
-          <code>Manhattan2DPosition?</code>
+          <code>P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -747,12 +1078,99 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="e239c7bdc41fbd7cdd4f9af9990d539e03896b6f">
+    <div class="sourcedoc-section section-element" id="015b66666623b28248324b0004ab4171e0be4b42">
+      
+      <h3 class="sourcedoc-section element-name">unsafeConstructor</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected abstract fun unsafeConstructor(coordinates: DoubleArray?): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Calls an internal constructor of subclasses that provides a way to instance a new position given its coordinates.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2b119df26af3e140323c0538c91ad0326c269cbc">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d4bfdf960faddbb1c95cf73f149dd84486c42ed2">
+        <td class="sourcedoc-section section-signature">
+          <code>coordinates: DoubleArray?</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>DoubleArray!: the coordinates</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="bcbba08d972c2338c559f9aeaa8d3fc08aff669d">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>P: a new position (with correct subtype)</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="dc7e8d14634846232f2e1bc2764fb9e59b60e933">
       
       <h3 class="sourcedoc-section element-name">boundingBox</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun boundingBox(range: Double): MutableList&lt;Manhattan2DPosition?&gt;</code>
+        <code>fun boundingBox(range: Double): List&lt;P&gt;</code>
       </p>
 
       
@@ -763,7 +1181,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="09641cee69b1a794733f8ec18936f7f9a8089d65">
+<div class="sourcedoc-section section-root section-level-3" id="b371890dc1c17260b4632e9fb957cecc6d93afa4">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -796,7 +1214,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="52530fa88281269a74aac399844b8671c4afb60c">
+<div class="sourcedoc-section section-root section-level-3" id="78142d346c067edbd13c63b594ab532de0eff63e">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -811,9 +1229,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="809adc211d426ff6696c9859997cd9784236fbc4">
+      <tr class="sourcedoc-section section-element" id="6f39341b8ed8ef8456ed3f2d3a7b8bf53593c9fc">
         <td class="sourcedoc-section section-signature">
-          <code>MutableList&lt;Manhattan2DPosition?&gt;</code>
+          <code>List&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -831,12 +1249,12 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="5f264642ddaf5bc5791db4bbd3452cea8cf5aaa8">
+    <div class="sourcedoc-section section-element" id="41e3ed70f93439b63f01779da6d1a0b3389f9c29">
       
       <h3 class="sourcedoc-section element-name">distanceTo</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun distanceTo(p: Manhattan2DPosition?): Double</code>
+        <code>fun distanceTo(p: P): Double</code>
       </p>
 
       
@@ -847,7 +1265,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="27fd3614754f3a6cc7dcede781aafc253179da09">
+<div class="sourcedoc-section section-root section-level-3" id="42c92c71298bb76d87b5f1cb08978324a8e66cbe">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -862,9 +1280,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="5a8aefaa57d0d5a7a5c2d377d585196c901589fd">
+      <tr class="sourcedoc-section section-element" id="d898b39d4ab5ca3c7b38065a8ce4fdd18b34320c">
         <td class="sourcedoc-section section-signature">
-          <code>p: Manhattan2DPosition?</code>
+          <code>p: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -880,7 +1298,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="b7bc4d9f44c643a7c90093104980cdcb094b7a5a">
+<div class="sourcedoc-section section-root section-level-3" id="6f1b3aa4996d5aada696640a2eace3c3148248b6">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1251,7 +1669,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv5+d9ef1d750. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

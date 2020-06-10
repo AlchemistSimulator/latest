@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4f896d0b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv5+d9ef1d750"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
 </script>
 
 
@@ -217,12 +217,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="b7f28f13331927b7e690a979b0eaa89a706dfb63">
+    <div class="sourcedoc-section section-element" id="ee10eaecc523db3d90eadb1811d1e6adbaae994f">
       
       <h3 class="sourcedoc-section element-name">boundingBox</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun boundingBox(range: Double): MutableList&lt;P&gt;</code>
+        <code>abstract fun boundingBox(range: Double): List&lt;P&gt;</code>
       </p>
 
       
@@ -239,7 +239,7 @@ range.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="d03fb6776bf0f12904db897724b8c65d374bbb35">
+<div class="sourcedoc-section section-root section-level-3" id="fdbc5664d720c989d3196f02622b9ceb94d867c2">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -273,7 +273,7 @@ range.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="201e65c05c53e094aafcf83bac6f9f0491b656a6">
+<div class="sourcedoc-section section-root section-level-3" id="98d5c8ad96b92008b3c21c830f013e2dc6d60543">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -288,9 +288,9 @@ range.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="23e92c89a845bb993cd0a7bead87e0000da6a372">
+      <tr class="sourcedoc-section section-element" id="6f39341b8ed8ef8456ed3f2d3a7b8bf53593c9fc">
         <td class="sourcedoc-section section-signature">
-          <code>MutableList&lt;P&gt;</code>
+          <code>List&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the vertices of the circumscribed hypercube</p>
@@ -485,12 +485,12 @@ position.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="c7a4fa8000ddcfcd3726ffb0b73f377c32e33c0e">
+    <div class="sourcedoc-section section-element" id="cf4aa745089a450b5c5c04f17677d64bdc3a69fe">
       
       <h3 class="sourcedoc-section element-name">plus</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract operator fun plus(other: P): P</code>
+        <code>abstract operator fun plus(other: DoubleArray): P</code>
       </p>
 
       
@@ -502,7 +502,7 @@ position.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="e3ee0e92e2c4dc9d6ca4be6c0d77a6e30acf2156">
+<div class="sourcedoc-section section-root section-level-3" id="b6a751b9821b002e97eba32fae10d8875061f902">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -517,9 +517,9 @@ position.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="674cac5467a6d6eee3509048744ead53f2b082b8">
+      <tr class="sourcedoc-section section-element" id="bbff2d9c2d42e6508ecddb5f624efd3340508832">
         <td class="sourcedoc-section section-signature">
-          <code>other: P</code>
+          <code>other: DoubleArray</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the other position</p>
@@ -536,7 +536,7 @@ position.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="558886a7d18c523053472ae8e4fc3d68593b6062">
+<div class="sourcedoc-section section-root section-level-3" id="33266c0f2aae6b523869aada7920a57a71416d7a">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -572,12 +572,12 @@ position.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="f99b2e099a016280722f691bfa26e5c7d591b587">
+    <div class="sourcedoc-section section-element" id="82f9bdb41a98165008b28b949919baaf17efb073">
       
       <h3 class="sourcedoc-section element-name">minus</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract operator fun minus(other: P): P</code>
+        <code>abstract operator fun minus(other: DoubleArray): P</code>
       </p>
 
       
@@ -589,7 +589,7 @@ position.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="a2112db6af63c54c7d098f74757904f31aa2092e">
+<div class="sourcedoc-section section-root section-level-3" id="c844291410a5b1d8300de52008f86611f301d622">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -604,9 +604,9 @@ position.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="674cac5467a6d6eee3509048744ead53f2b082b8">
+      <tr class="sourcedoc-section section-element" id="bbff2d9c2d42e6508ecddb5f624efd3340508832">
         <td class="sourcedoc-section section-signature">
-          <code>other: P</code>
+          <code>other: DoubleArray</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the other position</p>
@@ -623,7 +623,7 @@ position.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7c6b6c7727667d31c9fe53ad307452f1f9a08527">
+<div class="sourcedoc-section section-root section-level-3" id="d0296b15934f1c17f193298edcfae3b0fef37d85">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -995,7 +995,7 @@ position.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv5+d9ef1d750. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
