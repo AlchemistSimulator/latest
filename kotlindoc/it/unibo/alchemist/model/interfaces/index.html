@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -180,9 +180,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="ddde2728bff6e4fced34b2d0f86179a5781c71ce">
+      <tr class="sourcedoc-section section-element" id="f0be87ce42ca368ae07b1cc9168ec520f8932ce7">
         <td class="sourcedoc-section section-signature">
-          <code>interface CognitivePedestrian&lt;T&gt; : HeterogeneousPedestrian&lt;T&gt;, CognitiveAgent, Any</code>
+          <code>interface CognitivePedestrian&lt;T, V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;&gt; : HeterogeneousPedestrian&lt;T, V, A&gt;, CognitiveAgent, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An heterogeneous pedestrian with cognitive capabilities too.</p>
@@ -220,9 +220,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="2f912b17374ae314ac3b63aa819bda2597578df3">
+      <tr class="sourcedoc-section section-element" id="2730041f844340b615f7ade7bd3369ce5f4df3e2">
         <td class="sourcedoc-section section-signature">
-          <code>interface GroupSteeringAction&lt;T, P : Position&lt;P&gt;&gt; : SteeringAction&lt;T, P&gt;, Any</code>
+          <code>interface GroupSteeringAction&lt;T, P&gt; : SteeringAction&lt;T, P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Steering action caused by a group of pedestrians.</p>
@@ -240,9 +240,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="e1875db827f0884740732de0120d7dd189f716c9">
+      <tr class="sourcedoc-section section-element" id="ffd9cd56b6653bb667c3045ce8982254e26f7431">
         <td class="sourcedoc-section section-signature">
-          <code>interface HeterogeneousPedestrian&lt;T&gt; : Pedestrian&lt;T&gt;, Any</code>
+          <code>interface HeterogeneousPedestrian&lt;T, S : Vector&lt;S&gt;, A : GeometricTransformation&lt;S&gt;&gt; : Pedestrian&lt;T, S, A&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.</p>
@@ -274,9 +274,9 @@ pedestrian, while delegating the decision on where to move it to a NavigationStr
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="53baf4a0a1306b7bf814e46a5e6ad1a2e70b4dc6">
+      <tr class="sourcedoc-section section-element" id="7b6233feeda21b778b17fc06667de1a6450c2004">
         <td class="sourcedoc-section section-signature">
-          <code>interface OrientingCognitivePedestrian&lt;T, V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;, N : ConvexGeometricShape&lt;V, A&gt;, E&gt; : OrientingPedestrian&lt;T, V, A, N, E&gt;, CognitivePedestrian&lt;T&gt;, Any</code>
+          <code>interface OrientingCognitivePedestrian&lt;T, V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;, N : ConvexGeometricShape&lt;V, A&gt;, E&gt; : OrientingPedestrian&lt;T, V, A, N, E&gt;, CognitivePedestrian&lt;T, V, A&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A heterogeneous pedestrian with cognitive and orienting capabilities.</p>
@@ -284,9 +284,9 @@ pedestrian, while delegating the decision on where to move it to a NavigationStr
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="1f38505634afddcdf9f7b957611bc02aad3a207b">
+      <tr class="sourcedoc-section section-element" id="3521e8a3cafb70b113740e37d418112e44e28a5a">
         <td class="sourcedoc-section section-signature">
-          <code>interface OrientingPedestrian&lt;T, V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;, N : ConvexGeometricShape&lt;V, A&gt;, E&gt; : Pedestrian&lt;T&gt;, OrientingAgent&lt;V, A, N, E&gt;, Any</code>
+          <code>interface OrientingPedestrian&lt;T, V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;, N : ConvexGeometricShape&lt;V, A&gt;, E&gt; : Pedestrian&lt;T, V, A&gt;, OrientingAgent&lt;V, A, N, E&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A pedestrian capable of orienting itself.</p>
@@ -294,9 +294,9 @@ pedestrian, while delegating the decision on where to move it to a NavigationStr
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="e79cd4084dbd6e78bbce06a237e482599250999b">
+      <tr class="sourcedoc-section section-element" id="78df6fa4c838a8fa343217a8e666a25d2b1c378f">
         <td class="sourcedoc-section section-signature">
-          <code>interface Pedestrian&lt;T&gt; : Node&lt;T&gt;, Any</code>
+          <code>interface Pedestrian&lt;T, S : Vector&lt;S&gt;, A : GeometricTransformation&lt;S&gt;&gt; : NodeWithShape&lt;T, S, A&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A pedestrian with any characteristic taken into consideration.</p>
@@ -304,9 +304,9 @@ pedestrian, while delegating the decision on where to move it to a NavigationStr
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="a850f2d6142d7469f0c48e6adf0b7975989fdb87">
+      <tr class="sourcedoc-section section-element" id="274a9ed86b5808cf34a7f31cfcd8ef26e3cf6517">
         <td class="sourcedoc-section section-signature">
-          <code>interface Pedestrian2D&lt;T&gt; : Pedestrian&lt;T&gt;, Any</code>
+          <code>interface Pedestrian2D&lt;T&gt; : Pedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The bidimensional representation of a pedestrian.</p>
@@ -314,9 +314,9 @@ pedestrian, while delegating the decision on where to move it to a NavigationStr
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="d4574841611a3562e3a0338393cebda588774c4b">
+      <tr class="sourcedoc-section section-element" id="d05c6d4b671a6eca1a501a8920a5b4c2429e8141">
         <td class="sourcedoc-section section-signature">
-          <code>class PedestrianGroup&lt;T&gt; </code>
+          <code>interface PedestrianGroup&lt;T, P : Vector&lt;P&gt;, A : GeometricTransformation&lt;P&gt;&gt; : Group&lt;T, Pedestrian&lt;T, P, A&gt;&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An alias for a group of pedestrians.</p>
@@ -334,9 +334,9 @@ pedestrian, while delegating the decision on where to move it to a NavigationStr
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="874e31d4b1634cf487df8c47348dab34ef2292f1">
+      <tr class="sourcedoc-section section-element" id="7c5ff5e36de35ca78c27dc924981d92e76823e72">
         <td class="sourcedoc-section section-signature">
-          <code>interface SteeringActionWithTarget&lt;T, P : Position&lt;P&gt;&gt; : SteeringAction&lt;T, P&gt;, Any</code>
+          <code>interface SteeringActionWithTarget&lt;T, P&gt; : SteeringAction&lt;T, P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A SteeringAction with a defined target.</p>
@@ -764,15 +764,6 @@ supporting any concentration type T.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="0b45ff599e46a4c60be2f823b1f8dafa3a2cfdbd">
-        <td class="sourcedoc-section section-signature">
-          <code>package it.unibo.alchemist.model.interfaces.geometry</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
       <tr class="sourcedoc-section section-element" id="098e968e2ab3776da961bd0fbea4edd62835ad2b">
         <td class="sourcedoc-section section-signature">
           <code>package it.unibo.alchemist.model.interfaces.environments</code>
@@ -782,9 +773,18 @@ supporting any concentration type T.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="30e5f31cf131ea85854ed2b07b7d76337bd0f3c9">
+      <tr class="sourcedoc-section section-element" id="0b45ff599e46a4c60be2f823b1f8dafa3a2cfdbd">
         <td class="sourcedoc-section section-signature">
-          <code>package it.unibo.alchemist.model.interfaces.graph</code>
+          <code>package it.unibo.alchemist.model.interfaces.geometry</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="507d79fc913830d415d927aee5ace9439fe98b13">
+        <td class="sourcedoc-section section-signature">
+          <code>package it.unibo.alchemist.model.interfaces.nodes</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -840,16 +840,6 @@ supporting any concentration type T.</p>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A NavigationStrategy working with euclidean spaces.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="2a7c4bc56c9958ea997527b26c7e5fd02edef9aa">
-        <td class="sourcedoc-section section-signature">
-          <code>typealias PedestrianGroup = Group</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>An alias for a group of pedestrians.</p>
 
         </td>
       </tr>
@@ -1194,7 +1184,7 @@ supporting any concentration type T.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

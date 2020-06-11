@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="3a184af87b4f0a9b25cd8c94d315286a8decf344">
+    <div class="sourcedoc-section section-element" id="38f1e6e24aeb7678eedf54d7de6ebfb1e3a265c0">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class Arrive&lt;T, P&gt; : SteeringActionWithTargetImpl&lt;T, P&gt;</code>
+        <code>open class Arrive&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : SteeringActionWithTargetImpl&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -167,6 +167,60 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
       
         
           
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ec4fc3e41cbac2a965864020a0798b547bb4170a">
+        <td class="sourcedoc-section section-signature">
+          <code>protected decelerationRadius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the distance from which the pedestrian starts to decelerate.</code></pre>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d7c99e6e1690c0f5b2b8eeeb8a35b69ed644f647">
+        <td class="sourcedoc-section section-signature">
+          <code>protected arrivalTolerance: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the distance at which the pedestrian is considered arrived to the target.</code></pre>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="366703dfb89758510c5377ab35288ba90eb0aef2">
+        <td class="sourcedoc-section section-signature">
+          <code>protected coordinates: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the coordinates of the position the pedestrian moves towards.</code></pre>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
 <div class="sourcedoc-section section-root section-level-2" id="constructors">
 
 
@@ -175,25 +229,23 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
   
 
   
-    <div class="sourcedoc-section section-element" id="642ece1ab5cdc75826f8872e1d41947f7860f73f">
+    <div class="sourcedoc-section section-element" id="85364658ee98de44d6068c30c64cbc940939b93e">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: EuclideanEnvironment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T&gt;, decelerationRadius: Double, arrivalTolerance: Double, vararg coords: Double)</code>
+        <code>constructor(env: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T, P, A&gt;, decelerationRadius: Double, arrivalTolerance: Double, vararg coordinate: Number)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Move the agent towards a target position.
-It is similar to Seek but it attempts to arrive at the target position with a zero velocity.</p>
-</div>
+      <div class="sourcedoc-section section-comments"></div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="17f9c345279c6f48bfa5f40ede719b374796cc22">
+<div class="sourcedoc-section section-root section-level-3" id="4b72be94a2f9a05dd5335f09c8c912898b7185f0">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -208,9 +260,107 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="a01a68f5c0a3a7add2a0d64dbf636b0aaecefd59">
+      <tr class="sourcedoc-section section-element" id="3e0a2c083ff5b8c0eb373be1a9a6b5948ced38d9">
         <td class="sourcedoc-section section-signature">
-          <code>env: EuclideanEnvironment&lt;T, P&gt;</code>
+          <code>env: Environment&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ea9e2ee7d64a5940bb8529e5a4e4b3f6c0b9d942">
+        <td class="sourcedoc-section section-signature">
+          <code>reaction: Reaction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="18496866fa3896ffbc38f96989f5f20bf8e0c053">
+        <td class="sourcedoc-section section-signature">
+          <code>pedestrian: Pedestrian&lt;T, P, A&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9c76180d7012001b5098d8d80e9bc4b3fec5f6ae">
+        <td class="sourcedoc-section section-signature">
+          <code>decelerationRadius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ffccd8a8a87682338d2decfb13a1f8a027fc0bfd">
+        <td class="sourcedoc-section section-signature">
+          <code>arrivalTolerance: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="93f7bd6541ef057e1d3756b2be40cd4c649778a8">
+        <td class="sourcedoc-section section-signature">
+          <code>vararg coordinate: Number</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5cb8616d992897e1b2a19ba783239feec1380edc">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(env: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T, P, A&gt;, decelerationRadius: Double, arrivalTolerance: Double, coordinates: P)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Move the agent towards a target position.
+It is similar to Seek but it attempts to arrive at the target position with a zero velocity.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4eab92b96d7016faf45a158c2d1962852ce115df">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3e0a2c083ff5b8c0eb373be1a9a6b5948ced38d9">
+        <td class="sourcedoc-section section-signature">
+          <code>env: Environment&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the environment inside which the pedestrian moves.</code></pre>
@@ -228,9 +378,9 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9f4fd9a1048d98d1647540d23605bcd7e752bfca">
+      <tr class="sourcedoc-section section-element" id="18496866fa3896ffbc38f96989f5f20bf8e0c053">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: Pedestrian&lt;T&gt;</code>
+          <code>pedestrian: Pedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the owner of this action.</code></pre>
@@ -258,13 +408,119 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="3823c6ac82f49d234bd38e8b282ffc881106ebab">
+      <tr class="sourcedoc-section section-element" id="0b76ecc8b93a429c866d84ee0d93889e23174dac">
         <td class="sourcedoc-section section-signature">
-          <code>vararg coords: Double</code>
+          <code>coordinates: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the coordinates of the position the pedestrian moves towards.</code></pre>
 
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="3dd1903e24f816350645afcd39d15553aa88c330">
+      
+      <h3 class="sourcedoc-section element-name">cloneAction</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun cloneAction(n: Node&lt;T&gt;, r: Reaction&lt;T&gt;): Arrive&lt;T, P, A&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7591c2473f16f5f0e831db495473303c0c9923ce">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="cc4adfb5c5d0a92716015df3de18f1c6492e3e71">
+        <td class="sourcedoc-section section-signature">
+          <code>n: Node&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="925d5a8d4b794b16a67f73573d9e84ab906e6a02">
+        <td class="sourcedoc-section section-signature">
+          <code>r: Reaction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="36977150e674a3f7226f759f7f3f97fdf6d4ae42">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="0d50b2cee17069eb22a4ab7f59ce8e8765bf94b6">
+        <td class="sourcedoc-section section-signature">
+          <code>Arrive&lt;T, P, A&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
         </td>
       </tr>
       
@@ -615,7 +871,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

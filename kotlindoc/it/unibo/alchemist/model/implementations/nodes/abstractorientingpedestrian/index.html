@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="833f111d37ff6f06717f00da435921a0a98711e1">
+    <div class="sourcedoc-section section-element" id="d28cf5f11568990f081be5564b4e2e8fd40da7c5">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class AbstractOrientingPedestrian&lt;T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, M : ConvexGeometricShape&lt;P, A&gt;, F&gt; : OrientingPedestrian&lt;T, P, A, N, DefaultEdge&gt;, HomogeneousPedestrianImpl&lt;T, P&gt;</code>
+        <code>abstract class AbstractOrientingPedestrian&lt;T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, M : ConvexGeometricShape&lt;P, A&gt;, E, F : GeometricShapeFactory&lt;P, A&gt;&gt; : OrientingPedestrian&lt;T, P, A, N, DefaultEdge&gt;, HomogeneousPedestrianImpl&lt;T, P, A, F&gt;</code>
       </p>
 
       
@@ -235,16 +235,6 @@ volatileMemory).</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="cd5724db8e517ad4b80c14e2e68d0df53a261e18">
-        <td class="sourcedoc-section section-signature">
-          <code>protected open environment: EnvironmentWithGraph&lt;*, T, P, A, M, F&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>The environment this pedestrian is into.</p>
-
-        </td>
-      </tr>
-      
       </tbody>
     </table>
   </div>
@@ -262,12 +252,12 @@ volatileMemory).</p>
   
 
   
-    <div class="sourcedoc-section section-element" id="fce7a516553bf1fbe9c9ccd2bd4309b5f3183520">
+    <div class="sourcedoc-section section-element" id="2d29bd96825b8681cb83e706d612b1004fd43097">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(knowledgeDegree: Double, randomGenerator: RandomGenerator, environment: EnvironmentWithGraph&lt;*, T, P, A, M, F&gt;, group: PedestrianGroup&lt;T&gt;?, minArea: Double)</code>
+        <code>constructor(knowledgeDegree: Double, randomGenerator: RandomGenerator, environment: PhysicsEnvironmentWithGraph&lt;*, T, P, A, M, E, F&gt;, group: PedestrianGroup&lt;T, P, A&gt;?, minArea: Double)</code>
       </p>
 
       
@@ -283,7 +273,7 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="be40d841cbbb76a454aa211caf76accc243f1201">
+<div class="sourcedoc-section section-root section-level-3" id="5fc4387aa641c7de6a8cc3e9b7b281552ad940a1">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -316,18 +306,18 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="00a3ee3b696fdc4c3ac60456a676652ff13caa8c">
+      <tr class="sourcedoc-section section-element" id="126466ef4ae6cb861839483f83240d61e7788459">
         <td class="sourcedoc-section section-signature">
-          <code>environment: EnvironmentWithGraph&lt;*, T, P, A, M, F&gt;</code>
+          <code>environment: PhysicsEnvironmentWithGraph&lt;*, T, P, A, M, E, F&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="4beb24106313342bb6c4fef876a00a55066b01ee">
+      <tr class="sourcedoc-section section-element" id="c8b6c293e698adb3951480f72b6a59a52b46c130">
         <td class="sourcedoc-section section-signature">
-          <code>group: PedestrianGroup&lt;T&gt;?</code>
+          <code>group: PedestrianGroup&lt;T, P, A&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -466,12 +456,12 @@ one or more destinations, the generated landmark must contain at least one of th
   
 
   
-    <div class="sourcedoc-section section-element" id="7c6eeadcbce232b0fc5bbd0b596722c74db636e0">
+    <div class="sourcedoc-section section-element" id="8a4127826995c003a25923e273815b4e4bcf7dc7">
       
       <h3 class="sourcedoc-section element-name">targetDistance</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;T, P : Position&lt;P&gt;&gt; Pedestrian&lt;T&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
+        <code>fun &lt;T, P&gt; Pedestrian&lt;T, *, *&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
       </p>
 
       
@@ -483,7 +473,7 @@ one or more destinations, the generated landmark must contain at least one of th
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="f2ca2ce3e08df31a9f3efedbb30c0f7004750742">
+<div class="sourcedoc-section section-root section-level-3" id="a8e78dc395e623f4a27be1aac592dd48ed932b45">
 
 
   <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
@@ -498,9 +488,9 @@ one or more destinations, the generated landmark must contain at least one of th
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="4b9f0b5b91d465f7c733e17c6a3919e06f9f179c">
+      <tr class="sourcedoc-section section-element" id="5dcd3c1e514b4f6a56b196f83741e0faa7d35666">
         <td class="sourcedoc-section section-signature">
-          <code>Pedestrian&lt;T&gt;</code>
+          <code>Pedestrian&lt;T, *, *&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -516,7 +506,7 @@ one or more destinations, the generated landmark must contain at least one of th
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="383f49ad659e551bb1809f9afcd05755372c88ae">
+<div class="sourcedoc-section section-root section-level-3" id="1326f492cf1f2201f7a15bbb4f6be667ad7b201f">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -560,7 +550,7 @@ one or more destinations, the generated landmark must contain at least one of th
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7d6a4bb624177c718eda828946a299d8d6ec0114">
+<div class="sourcedoc-section section-root section-level-3" id="42bb02f4fea05f5c9d60707a90b92df98ce42165">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -931,7 +921,7 @@ one or more destinations, the generated landmark must contain at least one of th
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

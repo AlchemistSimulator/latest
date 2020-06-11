@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="df4417c071e029614ee67df9ca0612274db1984a">
+    <div class="sourcedoc-section section-element" id="0f531e02a7e2682b0d7f827d30a05b2fe7b50ff2">
       
       <p class="sourcedoc-section section-signature">
-        <code>class CognitiveBehavior&lt;T&gt; : AbstractReaction&lt;T&gt;</code>
+        <code>class CognitiveBehavior&lt;T, V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;&gt; : AbstractReaction&lt;T&gt;</code>
       </p>
 
       
@@ -174,12 +174,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="86fc43c51ff0ccba004ed7c8368edaaa47bf71a6">
+    <div class="sourcedoc-section section-element" id="91c9b25d0bc18cbc947aa40b063e0d10261e562b">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(pedestrian: CognitivePedestrian&lt;T&gt;, timeDistribution: TimeDistribution&lt;T&gt;)</code>
+        <code>constructor(pedestrian: CognitivePedestrian&lt;T, V, A&gt;, timeDistribution: TimeDistribution&lt;T&gt;)</code>
       </p>
 
       
@@ -191,7 +191,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="e5bbce2c3adc52e97f60eae84feaabc58a138e4e">
+<div class="sourcedoc-section section-root section-level-3" id="e4ff4fbaf00fda3d49c0bc1bd51437b2e08b40e4">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -206,9 +206,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="ce6767367330365fb692eae11d221151068f4fb4">
+      <tr class="sourcedoc-section section-element" id="146729ddf9e18e9db740bd5c8f4e8dd7e0b0d077">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: CognitivePedestrian&lt;T&gt;</code>
+          <code>pedestrian: CognitivePedestrian&lt;T, V, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the owner of this reaction.</code></pre>
@@ -250,12 +250,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="a958c9c987620c6ac6b140a8a14d8750d9206c46">
+    <div class="sourcedoc-section section-element" id="54a328def3f5ad2e5573c4fb8eb1ef348b5c7f39">
       
       <h3 class="sourcedoc-section element-name">cloneOnNewNode</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun cloneOnNewNode(n: Node&lt;T&gt;?, currentTime: Time?): CognitiveBehavior&lt;T&gt;</code>
+        <code>fun cloneOnNewNode(n: Node&lt;T&gt;?, currentTime: Time?): CognitiveBehavior&lt;T, V, A&gt;</code>
       </p>
 
       
@@ -266,7 +266,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="b1c14d7050ca7d164042b55c57c344f33aebbe5d">
+<div class="sourcedoc-section section-root section-level-3" id="8ea1d2e578894004d365e8596f09c6026b7d69e4">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -308,7 +308,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="6bf9c703ae704ada95c73a22641b309b57a1e8f4">
+<div class="sourcedoc-section section-root section-level-3" id="f911c277eafdf094620b9233afe734e7d62c19a1">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -323,9 +323,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="0047c358b175dc83b48b9f852fa653544bffd1b1">
+      <tr class="sourcedoc-section section-element" id="922edeebdc12bf7c1b5ee6aa6eba472c5887b79a">
         <td class="sourcedoc-section section-signature">
-          <code>CognitiveBehavior&lt;T&gt;</code>
+          <code>CognitiveBehavior&lt;T, V, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -832,7 +832,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

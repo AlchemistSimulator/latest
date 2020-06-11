@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -180,9 +180,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="c1844d7b5662e980c23ac87b6d6015b28eafac30">
+      <tr class="sourcedoc-section section-element" id="770861b0f33f9b17a56a246daa854160f20d5670">
         <td class="sourcedoc-section section-signature">
-          <code>open class DistanceWeighted&lt;T&gt; : Weighted&lt;T&gt;</code>
+          <code>class DistanceWeighted&lt;T&gt; : Weighted&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Weighted steering logic where the weight of each steering action is
@@ -191,9 +191,9 @@ the inverse of the pedestrian's distance from the action's target.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="5966c9d259843f1766c1bd7b6289c6003e3104a8">
+      <tr class="sourcedoc-section section-element" id="30aa54033cf377b57956493f529e9b69a4df836a">
         <td class="sourcedoc-section section-signature">
-          <code>open class Filtered&lt;T, P : Position&lt;P&gt;&gt; : SteeringStrategy&lt;T, P&gt;, Any</code>
+          <code>open class Filtered&lt;T, P&gt; : SteeringStrategy&lt;T, P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Steering logic in which a filter is applied to the steering actions
@@ -289,12 +289,12 @@ and the final computed position is their weighted sum.</p>
   
 
   
-    <div class="sourcedoc-section section-element" id="7c6eeadcbce232b0fc5bbd0b596722c74db636e0">
+    <div class="sourcedoc-section section-element" id="8a4127826995c003a25923e273815b4e4bcf7dc7">
       
       <h3 class="sourcedoc-section element-name">targetDistance</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;T, P : Position&lt;P&gt;&gt; Pedestrian&lt;T&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
+        <code>fun &lt;T, P&gt; Pedestrian&lt;T, *, *&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
       </p>
 
       
@@ -306,7 +306,7 @@ and the final computed position is their weighted sum.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="f2ca2ce3e08df31a9f3efedbb30c0f7004750742">
+<div class="sourcedoc-section section-root section-level-3" id="a8e78dc395e623f4a27be1aac592dd48ed932b45">
 
 
   <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
@@ -321,9 +321,9 @@ and the final computed position is their weighted sum.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="4b9f0b5b91d465f7c733e17c6a3919e06f9f179c">
+      <tr class="sourcedoc-section section-element" id="5dcd3c1e514b4f6a56b196f83741e0faa7d35666">
         <td class="sourcedoc-section section-signature">
-          <code>Pedestrian&lt;T&gt;</code>
+          <code>Pedestrian&lt;T, *, *&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -339,7 +339,7 @@ and the final computed position is their weighted sum.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="383f49ad659e551bb1809f9afcd05755372c88ae">
+<div class="sourcedoc-section section-root section-level-3" id="1326f492cf1f2201f7a15bbb4f6be667ad7b201f">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -383,7 +383,7 @@ and the final computed position is their weighted sum.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7d6a4bb624177c718eda828946a299d8d6ec0114">
+<div class="sourcedoc-section section-root section-level-3" id="42bb02f4fea05f5c9d60707a90b92df98ce42165">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -418,12 +418,12 @@ and the final computed position is their weighted sum.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="6401cc95be3a7f57890dc5859a20b351d590df4f">
+    <div class="sourcedoc-section section-element" id="0415d4e58d92911649b3a58a952a16beb7314c54">
       
       <h3 class="sourcedoc-section element-name">pickNearestOrFirst</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;T&gt; List&lt;SteeringAction&lt;T, Euclidean2DPosition&gt;&gt;.pickNearestOrFirst(env: Environment&lt;T, Euclidean2DPosition&gt;, pedestrian: Pedestrian&lt;T&gt;): SteeringAction&lt;T, Euclidean2DPosition&gt;?</code>
+        <code>fun &lt;T&gt; List&lt;SteeringAction&lt;T, Euclidean2DPosition&gt;&gt;.pickNearestOrFirst(env: Environment&lt;T, Euclidean2DPosition&gt;, pedestrian: Pedestrian2D&lt;T&gt;): SteeringAction&lt;T, Euclidean2DPosition&gt;?</code>
       </p>
 
       
@@ -437,7 +437,7 @@ returned.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="17a2494ff262f7232bfcccf47e6f2eed18995cbc">
+<div class="sourcedoc-section section-root section-level-3" id="cd298f035d9b9ad19078b38e2df25504f6cd599c">
 
 
   <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
@@ -470,7 +470,7 @@ returned.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="65e2eff43ffe9e78c67c1ce27439fdf332ac1807">
+<div class="sourcedoc-section section-root section-level-3" id="1872a517644d84754c82fe8f05df3df05e6d2421">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -494,9 +494,9 @@ returned.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9f4fd9a1048d98d1647540d23605bcd7e752bfca">
+      <tr class="sourcedoc-section section-element" id="85f34be6498a4b08c031a342c683026bbe559ad3">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: Pedestrian&lt;T&gt;</code>
+          <code>pedestrian: Pedestrian2D&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -512,7 +512,7 @@ returned.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="2b427c096b0568a1083cc29b2855ffc1c35fff58">
+<div class="sourcedoc-section section-root section-level-3" id="c57c4317bff06e4df5d49719ef49b7fdb1ba59e4">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -883,7 +883,7 @@ returned.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

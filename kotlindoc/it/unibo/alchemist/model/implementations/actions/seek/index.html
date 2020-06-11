@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="f46282fa9a5568c56ac590106a9321c4bb4c269d">
+    <div class="sourcedoc-section section-element" id="e762062ca2a22f128b9a235ca3985420b500db44">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class Seek&lt;T, P&gt; : Arrive&lt;T, P&gt;</code>
+        <code>open class Seek&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : Arrive&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -174,24 +174,23 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="cd41cbd92112d4e0c618927021d19e32c01310d9">
+    <div class="sourcedoc-section section-element" id="b2f715f26d1939d338ed3db49d2f142632d7bf6e">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(environment: EuclideanEnvironment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T&gt;, vararg coords: Double)</code>
+        <code>constructor(environment: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T, P, A&gt;, vararg coordinates: Number)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Move the pedestrian towards the target position as fast as possible.</p>
-</div>
+      <div class="sourcedoc-section section-comments"></div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="70f54654c10030a00142df43ca29f928085c9293">
+<div class="sourcedoc-section section-root section-level-3" id="36ce7f2b154bdf627f3814a794ed860676f58e59">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -206,9 +205,88 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="2abf99d282e9fcf5de689b2eb68c2c2b29ad3497">
+      <tr class="sourcedoc-section section-element" id="b05772bbcfef0df0751eddcf829a82d4411da28a">
         <td class="sourcedoc-section section-signature">
-          <code>environment: EuclideanEnvironment&lt;T, P&gt;</code>
+          <code>environment: Environment&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ea9e2ee7d64a5940bb8529e5a4e4b3f6c0b9d942">
+        <td class="sourcedoc-section section-signature">
+          <code>reaction: Reaction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="18496866fa3896ffbc38f96989f5f20bf8e0c053">
+        <td class="sourcedoc-section section-signature">
+          <code>pedestrian: Pedestrian&lt;T, P, A&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6b97bcd7a65d6ebbc7a4bf53a313c58cd1b5e300">
+        <td class="sourcedoc-section section-signature">
+          <code>vararg coordinates: Number</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="92ac41ba2e99433b60e0664f6c122f5527061b65">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(environment: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T, P, A&gt;, coordinates: P)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Move the pedestrian towards the target position as fast as possible.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="65bb0eb8656b82afa2f1631c869914b4066e3296">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b05772bbcfef0df0751eddcf829a82d4411da28a">
+        <td class="sourcedoc-section section-signature">
+          <code>environment: Environment&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the environment inside which the pedestrian moves.</code></pre>
@@ -225,9 +303,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9f4fd9a1048d98d1647540d23605bcd7e752bfca">
+      <tr class="sourcedoc-section section-element" id="18496866fa3896ffbc38f96989f5f20bf8e0c053">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: Pedestrian&lt;T&gt;</code>
+          <code>pedestrian: Pedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the owner of this action.</code></pre>
@@ -235,13 +313,119 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="3823c6ac82f49d234bd38e8b282ffc881106ebab">
+      <tr class="sourcedoc-section section-element" id="0b76ecc8b93a429c866d84ee0d93889e23174dac">
         <td class="sourcedoc-section section-signature">
-          <code>vararg coords: Double</code>
+          <code>coordinates: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the coordinates of the position the pedestrian moves towards.</code></pre>
 
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="30022fb61affcf03009e952b512e04134b8ab1cf">
+      
+      <h3 class="sourcedoc-section element-name">cloneAction</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun cloneAction(n: Node&lt;T&gt;, r: Reaction&lt;T&gt;): Seek&lt;T, P, A&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e63878e3d23190dc9b206f19f682a70c6f12df0d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="cc4adfb5c5d0a92716015df3de18f1c6492e3e71">
+        <td class="sourcedoc-section section-signature">
+          <code>n: Node&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="925d5a8d4b794b16a67f73573d9e84ab906e6a02">
+        <td class="sourcedoc-section section-signature">
+          <code>r: Reaction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2dbab8aeee93d913c1f9bdd766e6ac99a122ee54">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="dc4116fdc1c826e60ea0396a187c5f35cde816f5">
+        <td class="sourcedoc-section section-signature">
+          <code>Seek&lt;T, P, A&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
         </td>
       </tr>
       
@@ -592,7 +776,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="60484e7b7ca827c2c51c7b755aad1e1fd52f2c56">
+    <div class="sourcedoc-section section-element" id="f75a3c87dcfdb6729b5a0050c61f54c3e8120440">
       
       <p class="sourcedoc-section section-signature">
-        <code>class Alone&lt;T&gt; : Group&lt;T, Pedestrian&lt;T&gt;&gt;, Any</code>
+        <code>class Alone&lt;T, S : Vector&lt;S&gt;, A : GeometricTransformation&lt;S&gt;&gt; : PedestrianGroup&lt;T, S, A&gt;, Any</code>
       </p>
 
       
@@ -208,12 +208,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="59c0e797765d2ce7a98e897c841f506e06a4bcae">
+    <div class="sourcedoc-section section-element" id="89130288865629e5b7c86a8c537bf0e432bc06eb">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(pedestrian: Pedestrian&lt;T&gt;)</code>
+        <code>constructor(pedestrian: Pedestrian&lt;T, S, A&gt;)</code>
       </p>
 
       
@@ -225,7 +225,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="36a0bd15c63b3f0ee37a8c456f9aa4a81626d968">
+<div class="sourcedoc-section section-root section-level-3" id="c5bdb65e4d01f7e1511d8f077316c8b6400240bb">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -240,9 +240,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="9f4fd9a1048d98d1647540d23605bcd7e752bfca">
+      <tr class="sourcedoc-section section-element" id="bb37b6e096cf769b4c25cd643856fb6585454b60">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: Pedestrian&lt;T&gt;</code>
+          <code>pedestrian: Pedestrian&lt;T, S, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -273,12 +273,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="5fb3c19bcf4f1fd89c8627aafd112327c5657ce8">
+    <div class="sourcedoc-section section-element" id="b870091e3d37c8b7a6151f7ff64b4c46546c29f5">
       
       <h3 class="sourcedoc-section element-name">addMember</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun addMember(node: Pedestrian&lt;T&gt;): Group&lt;T, Pedestrian&lt;T&gt;&gt;</code>
+        <code>fun addMember(node: Pedestrian&lt;T, S, A&gt;): PedestrianGroup&lt;T, S, A&gt;</code>
       </p>
 
       
@@ -290,7 +290,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="17ce81743e2b76a6f750623130035cef5ef43580">
+<div class="sourcedoc-section section-root section-level-3" id="18e499993536f83524d24baf0b21d6a31d93927a">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -305,9 +305,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="38bc0fb01830c2f0186f0fd279366244d7c4e9bc">
+      <tr class="sourcedoc-section section-element" id="d3202158f0901837699aa43a40a7f95dabdb8707">
         <td class="sourcedoc-section section-signature">
-          <code>node: Pedestrian&lt;T&gt;</code>
+          <code>node: Pedestrian&lt;T, S, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the node to add.</code></pre>
@@ -324,7 +324,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="26255e3280ff08f9890f550f26184dd5a71fa2a5">
+<div class="sourcedoc-section section-root section-level-3" id="1e68038a84b462a62cdac5246bd15013b0a4e4a3">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -339,9 +339,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="a19e9651400f90853aeca9b1fe45e47a77992bf9">
+      <tr class="sourcedoc-section section-element" id="808b87417f341ec29668fdd6aa7fad06c10c1bf0">
         <td class="sourcedoc-section section-signature">
-          <code>Group&lt;T, Pedestrian&lt;T&gt;&gt;</code>
+          <code>PedestrianGroup&lt;T, S, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -359,12 +359,12 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="851df1ffd745493f6389637de229d19a2a4913ba">
+    <div class="sourcedoc-section section-element" id="439276d2bad71fa9632c64fe5cc1c6531f6b9362">
       
       <h3 class="sourcedoc-section element-name">removeMember</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun removeMember(node: Pedestrian&lt;T&gt;): Group&lt;T, Pedestrian&lt;T&gt;&gt;</code>
+        <code>fun removeMember(node: Pedestrian&lt;T, S, A&gt;): PedestrianGroup&lt;T, S, A&gt;</code>
       </p>
 
       
@@ -376,7 +376,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="bf3155a3f4a4b996d39caaa4df8b2e1775667c84">
+<div class="sourcedoc-section section-root section-level-3" id="4224629b2d6553d58ae85017b4529d9d0864dd7f">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -391,9 +391,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="38bc0fb01830c2f0186f0fd279366244d7c4e9bc">
+      <tr class="sourcedoc-section section-element" id="d3202158f0901837699aa43a40a7f95dabdb8707">
         <td class="sourcedoc-section section-signature">
-          <code>node: Pedestrian&lt;T&gt;</code>
+          <code>node: Pedestrian&lt;T, S, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the node to remove.</code></pre>
@@ -410,7 +410,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="578e905cbf60fdbc530a31cf45159acdcd6302d7">
+<div class="sourcedoc-section section-root section-level-3" id="aa971450a49ebcbb82923f8c4732e8da373e150d">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -425,9 +425,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="a19e9651400f90853aeca9b1fe45e47a77992bf9">
+      <tr class="sourcedoc-section section-element" id="808b87417f341ec29668fdd6aa7fad06c10c1bf0">
         <td class="sourcedoc-section section-signature">
-          <code>Group&lt;T, Pedestrian&lt;T&gt;&gt;</code>
+          <code>PedestrianGroup&lt;T, S, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -781,7 +781,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

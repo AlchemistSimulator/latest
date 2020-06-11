@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="a850f2d6142d7469f0c48e6adf0b7975989fdb87">
+    <div class="sourcedoc-section section-element" id="274a9ed86b5808cf34a7f31cfcd8ef26e3cf6517">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface Pedestrian2D&lt;T&gt; : Pedestrian&lt;T&gt;, Any</code>
+        <code>interface Pedestrian2D&lt;T&gt; : Pedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation&gt;, Any</code>
       </p>
 
       
@@ -166,35 +166,10 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-2" id="methods">
+<div class="sourcedoc-section section-root section-level-2" id="fields">
 
 
-  
-    <h2 class="sourcedoc-section section-name">Methods</h2>
-  
-
-  
-    <div class="sourcedoc-section section-element" id="ded7ceb5685fdfadb90271a12c2c31097485e159">
-      
-      <h3 class="sourcedoc-section element-name">shape</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun shape(env: Physics2DEnvironment&lt;T&gt;): Euclidean2DShape</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>The shape of any pedestrian in the Euclidean world.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="29e01aec9ddccb13db5a94d0a7b25879ed322fef">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -206,12 +181,34 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b0f1eae4263e389b32eb8189b612bd69965be438">
+      <tr class="sourcedoc-section section-element" id="b90a73fc21dac53305ae54e9dcfe7dae026a525e">
         <td class="sourcedoc-section section-signature">
-          <code>env: Physics2DEnvironment&lt;T&gt;</code>
+          <code>abstract environment: Physics2DEnvironment&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <pre><code>    the environment appointed to create the shape.</code></pre>
+        <p>Access to the environment.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="1b70011be55db75a9f08593b5a899f345a3ad545">
+        <td class="sourcedoc-section section-signature">
+          <code>open shape: Euclidean2DShape</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The shape of any pedestrian in the Euclidean world.
+Implementors should override this property to prevent the continuous creation of new Euclidean2DShapes.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ca841ad760a039ddb6bf5446043f3d88ec286640">
+        <td class="sourcedoc-section section-signature">
+          <code>open fieldOfView: FieldOfView2D&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The field of view of a pedestrian in the Euclidean world.
+Implementors should override this property to prevent the continuous creation of new FieldOfView2Ds.</p>
 
         </td>
       </tr>
@@ -220,132 +217,6 @@
     </table>
   </div>
 
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="f33e5eedfb4cdff21621b5f9e5f1cebe41c18aa8">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
-        <td class="sourcedoc-section section-signature">
-          <code>Euclidean2DShape</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="181efd6e46faac8a2b2e22994600edb7ec6f2de5">
-      
-      <h3 class="sourcedoc-section element-name">fieldOfView</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun fieldOfView(env: Physics2DEnvironment&lt;T&gt;): FieldOfView2D&lt;T&gt;</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>The field of view of a pedestrian in the Euclidean world.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="def0fd7e10fbbcec9953b521e6f474747aae2119">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b0f1eae4263e389b32eb8189b612bd69965be438">
-        <td class="sourcedoc-section section-signature">
-          <code>env: Physics2DEnvironment&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <pre><code>    the environment where the pedestrian is.</code></pre>
-
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="e7f4e726b622464086edf2e578c6f6cde54eb4e3">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="20a2c3e25df63d1d2ebe89bec5636960e6395ab3">
-        <td class="sourcedoc-section section-signature">
-          <code>FieldOfView2D&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
 
 </div>
 
@@ -359,12 +230,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="7c6eeadcbce232b0fc5bbd0b596722c74db636e0">
+    <div class="sourcedoc-section section-element" id="8a4127826995c003a25923e273815b4e4bcf7dc7">
       
       <h3 class="sourcedoc-section element-name">targetDistance</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;T, P : Position&lt;P&gt;&gt; Pedestrian&lt;T&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
+        <code>fun &lt;T, P&gt; Pedestrian&lt;T, *, *&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
       </p>
 
       
@@ -376,7 +247,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="f2ca2ce3e08df31a9f3efedbb30c0f7004750742">
+<div class="sourcedoc-section section-root section-level-3" id="a8e78dc395e623f4a27be1aac592dd48ed932b45">
 
 
   <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
@@ -391,9 +262,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="4b9f0b5b91d465f7c733e17c6a3919e06f9f179c">
+      <tr class="sourcedoc-section section-element" id="5dcd3c1e514b4f6a56b196f83741e0faa7d35666">
         <td class="sourcedoc-section section-signature">
-          <code>Pedestrian&lt;T&gt;</code>
+          <code>Pedestrian&lt;T, *, *&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -409,7 +280,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="383f49ad659e551bb1809f9afcd05755372c88ae">
+<div class="sourcedoc-section section-root section-level-3" id="1326f492cf1f2201f7a15bbb4f6be667ad7b201f">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -453,7 +324,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7d6a4bb624177c718eda828946a299d8d6ec0114">
+<div class="sourcedoc-section section-root section-level-3" id="42bb02f4fea05f5c9d60707a90b92df98ce42165">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -501,12 +372,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="a850f2d6142d7469f0c48e6adf0b7975989fdb87">
+    <div class="sourcedoc-section section-element" id="274a9ed86b5808cf34a7f31cfcd8ef26e3cf6517">
       
       <h3 class="sourcedoc-section element-name">Pedestrian2D</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>interface Pedestrian2D&lt;T&gt; : Pedestrian&lt;T&gt;, Any</code>
+        <code>interface Pedestrian2D&lt;T&gt; : Pedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation&gt;, Any</code>
       </p>
 
       
@@ -518,7 +389,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="d8d285e2b1cb9f507bea50d6bec45a55789b7375">
+<div class="sourcedoc-section section-root section-level-3" id="273d5e613737e5210b3504983bb432ad12ca6f52">
 
 
   <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
@@ -910,7 +781,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

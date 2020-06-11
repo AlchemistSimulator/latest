@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="0b9e052f03e8734e732a40d69169190c96783574">
+    <div class="sourcedoc-section section-element" id="b9ed0fffd25016261d987fe35589a0e914e3e86f">
       
       <p class="sourcedoc-section section-signature">
-        <code>class Cohesion&lt;T, P&gt; : AbstractGroupSteeringAction&lt;T, P&gt;</code>
+        <code>class Cohesion&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : AbstractGroupSteeringAction&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -174,12 +174,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="8b4b245b1e5b59b8f14dcd883a6c051aae362a70">
+    <div class="sourcedoc-section section-element" id="f37d554f095f179a594a8f97c027fae97b5ed097">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T&gt;)</code>
+        <code>constructor(env: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T, P, A&gt;)</code>
       </p>
 
       
@@ -191,7 +191,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="15307ab84cf63c1e4e448e671fe6913e4fec85ab">
+<div class="sourcedoc-section section-root section-level-3" id="939fc38b8561403598eddce3c9d7bc9941342105">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -226,9 +226,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9f4fd9a1048d98d1647540d23605bcd7e752bfca">
+      <tr class="sourcedoc-section section-element" id="18496866fa3896ffbc38f96989f5f20bf8e0c053">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: Pedestrian&lt;T&gt;</code>
+          <code>pedestrian: Pedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the owner of this action.</code></pre>
@@ -260,12 +260,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="83c204ba02428a29cbefc7b8699e2a199e31ab4a">
+    <div class="sourcedoc-section section-element" id="b60d7a155bb300d513e430b045068e3ef2950493">
       
       <h3 class="sourcedoc-section element-name">cloneAction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun cloneAction(n: Node&lt;T&gt;, r: Reaction&lt;T&gt;): Action&lt;T&gt;</code>
+        <code>fun cloneAction(n: Node&lt;T&gt;, r: Reaction&lt;T&gt;): Cohesion&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -276,7 +276,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="334fe43270543aa2ae19c1c916ddfb09d3f513c6">
+<div class="sourcedoc-section section-root section-level-3" id="c4e56da1969d96d618981c80607f87a923b75748">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -318,7 +318,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="c1f017a53e2504cca9e30add494facc98e368436">
+<div class="sourcedoc-section section-root section-level-3" id="eaf817c492c08c955c8eae3fc615b65fe282780d">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -333,9 +333,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="876130d95c8c04c3612dff76ce6bc7ed03174198">
+      <tr class="sourcedoc-section section-element" id="d95220734a446ec4a1bd62063c351172965269ad">
         <td class="sourcedoc-section section-signature">
-          <code>Action&lt;T&gt;</code>
+          <code>Cohesion&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -404,12 +404,12 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="fa3e8511ee8ea12ba4c2bacc23b830adfeb27667">
+    <div class="sourcedoc-section section-element" id="44c173c3b863556d5d809af8c1378e6270b85f0f">
       
       <h3 class="sourcedoc-section element-name">group</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun group(): List&lt;Pedestrian&lt;T&gt;&gt;</code>
+        <code>fun group(): List&lt;Pedestrian&lt;T, P, *&gt;&gt;</code>
       </p>
 
       
@@ -421,7 +421,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="a17255d395c75f29985828b17714c614aabe05e8">
+<div class="sourcedoc-section section-root section-level-3" id="c795845f53efeb2f2ca187788c24e4cdafb30fa4">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -436,9 +436,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="3fc9263716bd80f59db810e1bed1512aef0011b1">
+      <tr class="sourcedoc-section section-element" id="e8cbc40e1d9261195d55d0cfa895febaca0f1a5a">
         <td class="sourcedoc-section section-signature">
-          <code>List&lt;Pedestrian&lt;T&gt;&gt;</code>
+          <code>List&lt;Pedestrian&lt;T, P, *&gt;&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -792,7 +792,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

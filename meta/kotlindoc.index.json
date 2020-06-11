@@ -5209,6 +5209,22 @@
                             "content": "<p>Euclidean physics environment with support for obstacles.<\/p>\n"
                           }]
                         },
+                        "physicsenvironmentwithgraph": {
+                          "ownKey": "physicsenvironmentwithgraph",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "kotlindoc",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "it/unibo/alchemist/model/interfaces/environments/physicsenvironmentwithgraph",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physicsenvironmentwithgraph"
+                            },
+                            "description": "",
+                            "title": "PhysicsEnvironmentWithGraph",
+                            "content": "<p>A  PhysicsEnvironment  with obstacles providing a  NavigationGraph , i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.<\/p>\n"
+                          }]
+                        },
                         "environmentwithgraph": {
                           "ownKey": "environmentwithgraph",
                           "ownPages": [{
@@ -5349,7 +5365,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.interfaces.environments",
-                        "content": "<p>Environment2DWithObstacles<\/p>\n<p>A bidimensional  EnvironmentWithObstacles .<\/p>\nEnvironmentWithGraph\n<p>An environment with obstacles providing a  NavigationGraph , i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.<\/p>\nEuclidean2DEnvironment\n<p>A bidimensional euclidean space with any concentration type  T .<\/p>\nEuclidean2DEnvironmentWithGraph\n<p>An euclidean  EnvironmentWithGraph .<\/p>\nEuclidean2DEnvironmentWithObstacles\n<p>An  Environment2DWithObstacles  using  Euclidean2DPosition s.<\/p>\nEuclideanPhysics2DEnvironmentWithGraph\n<p>An  Euclidean2DEnvironmentWithGraph  with physics.<\/p>\nEuclideanPhysics2DEnvironmentWithObstacles\n<p>Euclidean physics environment with support for obstacles.<\/p>\nPhysics2DEnvironment\n<p>Defines a bidimensional euclidean environment.<\/p>\nPhysicsEnvironment\n<p>An environment supporting physics and nodes shapes.\nNote: due to the high number of parameters its's highly recommended to not use this interface directly,\nbut to create an apposite interface extending this one instead.<\/p>\n"
+                        "content": "<p>Environment2DWithObstacles<\/p>\n<p>A bidimensional  EnvironmentWithObstacles .<\/p>\nEnvironmentWithGraph\n<p>An environment with obstacles providing a  NavigationGraph , i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.<\/p>\nEuclidean2DEnvironment\n<p>A bidimensional euclidean space with any concentration type  T .<\/p>\nEuclidean2DEnvironmentWithGraph\n<p>An euclidean  EnvironmentWithGraph .<\/p>\nEuclidean2DEnvironmentWithObstacles\n<p>An  Environment2DWithObstacles  using  Euclidean2DPosition s.<\/p>\nEuclideanPhysics2DEnvironmentWithGraph\n<p>An  Euclidean2DEnvironmentWithGraph  with physics.<\/p>\nEuclideanPhysics2DEnvironmentWithObstacles\n<p>Euclidean physics environment with support for obstacles.<\/p>\nPhysics2DEnvironment\n<p>Defines a bidimensional euclidean environment.<\/p>\nPhysicsEnvironment\n<p>An environment supporting physics and nodes shapes.\nNote: due to the high number of parameters its's highly recommended to not use this interface directly,\nbut to create an apposite interface extending this one instead.<\/p>\nPhysicsEnvironmentWithGraph\n<p>A  PhysicsEnvironment  with obstacles providing a  NavigationGraph , i.e. a graph whose\nnodes are convex shapes representing the areas of the environment traversable\nby agents (namely, walkable areas), whereas edges represent connections between\nthem. To make it easier, think that in an indoor environment, nodes should\nrepresent rooms and corridors, whereas edges should represent doors and passages.<\/p>\n"
                       }]
                     },
                     "position2d": {
@@ -5528,72 +5544,6 @@
                         "content": "<p>This interface represents a token that may generate a dependency between two reactions. Some special built-in tokens are EVERYTHING, EVERY_MOLECULE, MOVEMENT, and NEIGHBORHOOD_CHANGE. Molecules are dependencies as well.<\/p>EVERYTHING\n<p>Declares a dependency towards any other reaction in the reachable scope.<\/p>\nEVERY_MOLECULE\n<p>Declares a dependency towards any modified molecule in the reachable scope.<\/p>\nMOVEMENT\n<p>Declares a dependency on movement of nodes in the reachable scope.<\/p>\nmakesDependent\n<p>Determines whether the provided dependency depends on this dependency. The default behavior calls <code> #dependsOn(Dependency) <\/code>, and provides a bidirectional dependency.<\/p>\ndependsOn\n<p>Determines whether this dependency depends on the provided dependency. The default behavior requires equality.<\/p>\n"
                       }]
                     },
-                    "graph": {
-                      "ownKey": "graph",
-                      "childrenPages": {
-                        "euclidean2dpassage": {
-                          "ownKey": "euclidean2dpassage",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/interfaces/graph/euclidean2dpassage",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/graph/euclidean2dpassage"
-                            },
-                            "description": "",
-                            "title": "Euclidean2DPassage",
-                            "content": "<p>A passage between two  ConvexPolygon s in an euclidean bidimensional space.\nThe passage is oriented, which means it connects  tail  to  head , but the opposite is\nnot necessarily true.\n tail  and  head  can be non-adjacent (there can be some distance between them), this\nintroduces navigation issues as agents may not know which direction to follow when\ncrossing a passage.\n passageShapeOnTail  is a  Segment2D  representing the shape of the passage on  tail 's\nboundary (e.g. in an indoor environment, the segment should represent the shape of the\ndoor between two rooms).  passageShapeOnTail  must be determined so as to guarantee that\n head  is reachable by throwing a ray from any point of the segment in its normal direction.\nThis solves navigation issues as it provides agents with a direction to follow when crossing\n Euclidean2DPassage s (namely, the normal direction to  passageShapeOnTail ).<\/p>tail\n<p>head<\/p>\n<p>passageShapeOnTail<\/p>\n<p><init><\/p>\n<p>A passage between two  ConvexPolygon s in an euclidean bidimensional space.\nThe passage is oriented, which means it connects  tail  to  head , but the opposite is\nnot necessarily true.\n tail  and  head  can be non-adjacent (there can be some distance between them), this\nintroduces navigation issues as agents may not know which direction to follow when\ncrossing a passage.\n passageShapeOnTail  is a  Segment2D  representing the shape of the passage on  tail 's\nboundary (e.g. in an indoor environment, the segment should represent the shape of the\ndoor between two rooms).  passageShapeOnTail  must be determined so as to guarantee that\n head  is reachable by throwing a ray from any point of the segment in its normal direction.\nThis solves navigation issues as it provides agents with a direction to follow when crossing\n Euclidean2DPassage s (namely, the normal direction to  passageShapeOnTail ).<\/p>\ncrossingPointOnTail\n<p>Provided the  position  of an agent that may want to cross this passage, this method\ncomputes the point belonging to  passageShapeOnTail  which is more convenient to\ncross.\nNote that the agent must be inside  tail .<\/p>\ncrossingPointOnHead\n<p>Provided the  crossingPointOnTail  that an agent has reached (or will reach), this\nmethod computes the point belonging to the boundary of  head  that the agent should\npoint towards to cross the passage (i.e. the first point belonging to  head 's boundary\nthat is encountered when throwing a ray from  crossingPointOnTail  along  passageShapeOnTail 's\nnormal direction).\nNote that the returned point may not be formally contained in  head  depending on the\ndefinition of insideness used by  ConvexPolygon.contains , prefer using\n ConvexPolygon.containsBoundaryIncluded .<\/p>\ncrossingPoints\n<p>Provided the  position  of an agent that may want to cross this passage, this method\nreturns a pair containing both the  crossingPointOnTail  and the  crossingPointOnHead .<\/p>\n"
-                          }]
-                        },
-                        "euclidean2dnavigationgraph": {
-                          "ownKey": "euclidean2dnavigationgraph",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/interfaces/graph/euclidean2dnavigationgraph",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/graph/euclidean2dnavigationgraph"
-                            },
-                            "description": "",
-                            "title": "Euclidean2DNavigationGraph",
-                            "content": "<p>A  NavigationGraph  in an euclidean bidimensional space, whose nodes are  ConvexPolygon s\nand edges are  Euclidean2DPassage s. Using  Euclidean2DPassage s as edges leads to some\noverhead (as these maintain the nodes they connect, when this information is already stored\nin the navigation graph), but allows to have duplicate edges in opposite directions, which\nmeans a node n1 can be connected to another node n2 through a passage whose shape is equal\nto the one of the passage connecting n2 to n1. The two passages would not result equal\nbecause their tail and head would be swapped. On the contrary, if edges were plain segments,\nthe graph would not have allowed to have two edges so that e1.equal(e2).<\/p>\n"
-                          }]
-                        },
-                        "navigationgraph": {
-                          "ownKey": "navigationgraph",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/interfaces/graph/navigationgraph",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/graph/navigationgraph"
-                            },
-                            "description": "",
-                            "title": "NavigationGraph",
-                            "content": "<p>A graph used for navigation purposes. Nodes are  ConvexGeometricShape s,\nusually representing portions of an environment which are traversable by\nagents (the advantage of such representation is that agents can freely\nwalk around within a convex area, as it is guaranteed that no obstacle\nwill be found).\nNote that implementations of this graph must guarantee predictable\nordering for the collections they maintain, as reproducibility is a key\nfeature of Alchemist.\nBe also aware that, by contract, the <a href=\"#\">org.jgrapht.Graph<\/a> interface does\nnot allow duplicated edges (see <a href=\"#\">org.jgrapht.Graph.addEdge<\/a>).<\/p>nodeContaining\n"
-                          }]
-                        }
-                      },
-                      "ownPages": [{
-                        "reference": {
-                          "path": "kotlindoc",
-                          "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "it/unibo/alchemist/model/interfaces/graph",
-                          "extension": "html",
-                          "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/graph"
-                        },
-                        "description": "",
-                        "title": "it.unibo.alchemist.model.interfaces.graph",
-                        "content": "<p>Euclidean2DPassage<\/p>\n<p>A passage between two  ConvexPolygon s in an euclidean bidimensional space.\nThe passage is oriented, which means it connects  tail  to  head , but the opposite is\nnot necessarily true.\n tail  and  head  can be non-adjacent (there can be some distance between them), this\nintroduces navigation issues as agents may not know which direction to follow when\ncrossing a passage.\n passageShapeOnTail  is a  Segment2D  representing the shape of the passage on  tail 's\nboundary (e.g. in an indoor environment, the segment should represent the shape of the\ndoor between two rooms).  passageShapeOnTail  must be determined so as to guarantee that\n head  is reachable by throwing a ray from any point of the segment in its normal direction.\nThis solves navigation issues as it provides agents with a direction to follow when crossing\n Euclidean2DPassage s (namely, the normal direction to  passageShapeOnTail ).<\/p>\nNavigationGraph\n<p>A graph used for navigation purposes. Nodes are  ConvexGeometricShape s,\nusually representing portions of an environment which are traversable by\nagents (the advantage of such representation is that agents can freely\nwalk around within a convex area, as it is guaranteed that no obstacle\nwill be found).\nNote that implementations of this graph must guarantee predictable\nordering for the collections they maintain, as reproducibility is a key\nfeature of Alchemist.\nBe also aware that, by contract, the <a href=\"#\">org.jgrapht.Graph<\/a> interface does\nnot allow duplicated edges (see <a href=\"#\">org.jgrapht.Graph.addEdge<\/a>).<\/p>\nEuclidean2DNavigationGraph\n<p>A  NavigationGraph  in an euclidean bidimensional space, whose nodes are  ConvexPolygon s\nand edges are  Euclidean2DPassage s. Using  Euclidean2DPassage s as edges leads to some\noverhead (as these maintain the nodes they connect, when this information is already stored\nin the navigation graph), but allows to have duplicate edges in opposite directions, which\nmeans a node n1 can be connected to another node n2 through a passage whose shape is equal\nto the one of the passage connecting n2 to n1. The two passages would not result equal\nbecause their tail and head would be swapped. On the contrary, if edges were plain segments,\nthe graph would not have allowed to have two edges so that e1.equal(e2).<\/p>\nEuclidean2DNavigationGraph\n<p>A  NavigationGraph  in an euclidean bidimensional space, whose nodes are  ConvexPolygon s\nand edges are  Euclidean2DPassage s. Using  Euclidean2DPassage s as edges leads to some\noverhead (as these maintain the nodes they connect, when this information is already stored\nin the navigation graph), but allows to have duplicate edges in opposite directions, which\nmeans a node n1 can be connected to another node n2 through a passage whose shape is equal\nto the one of the passage connecting n2 to n1. The two passages would not result equal\nbecause their tail and head would be swapped. On the contrary, if edges were plain segments,\nthe graph would not have allowed to have two edges so that e1.equal(e2).<\/p>\n"
-                      }]
-                    },
                     "timedistribution": {
                       "ownKey": "timedistribution",
                       "ownPages": [{
@@ -5623,7 +5573,7 @@
                         },
                         "description": "",
                         "title": "Node",
-                        "content": "<p>contains<\/p>\n<p>Tests whether a node contains a <code> Molecule <\/code>.<\/p>\ngetChemicalSpecies\n<p>This method is usefult to know how many different chemical species may be contained in this node.<\/p>\nsetConcentration\n<p>Sets the concentration of mol to c.<\/p>\ngetId\n<p>getShape<\/p>\n<p>The shape of the node, used in environments supporting geometry and physics.<\/p>\naddReaction\n<p>Adds a reaction to this node.<\/p>\ncloneNode\n<p>Creates a new Node which is a clone of the current Node. The new Node will have all the current Node's properties, such as reactions and molecules, but it will also have a different ID.<\/p>\nremoveConcentration\n<p>getReactions<\/p>\n<p>This method allows to access all the reaction of the node.<\/p>\ngetConcentration\n<p>Calculates the concentration of a molecule.<\/p>\ngetContents\n<p>removeReaction<\/p>\n<p>Removes a reaction from this node.<\/p>\n"
+                        "content": "<p>contains<\/p>\n<p>Tests whether a node contains a <code> Molecule <\/code>.<\/p>\ngetChemicalSpecies\n<p>This method is usefult to know how many different chemical species may be contained in this node.<\/p>\nsetConcentration\n<p>Sets the concentration of mol to c.<\/p>\ngetId\n<p>addReaction<\/p>\n<p>Adds a reaction to this node.<\/p>\ncloneNode\n<p>Creates a new Node which is a clone of the current Node. The new Node will have all the current Node's properties, such as reactions and molecules, but it will also have a different ID.<\/p>\nremoveConcentration\n<p>getReactions<\/p>\n<p>This method allows to access all the reaction of the node.<\/p>\ngetConcentration\n<p>Calculates the concentration of a molecule.<\/p>\ngetContents\n<p>removeReaction<\/p>\n<p>Removes a reaction from this node.<\/p>\n"
                       }]
                     },
                     "condition": {
@@ -6252,6 +6202,38 @@
                         "content": "<p>Interface for an environment. Every environment must implement this specification.<\/p>addLayer\n<p>Add a <code> Layer <\/code> to the <code> Environment <\/code>.<\/p>\ngetLayers\n<p>Return all the Layers in this <code> Environment <\/code>.<\/p>\nsetSimulation\n<p>getSize<\/p>\n<p>This method returns the size of the environment as an array of length <code> #getDimensions() <\/code>. This method must return distance measured with the same unit used by the positions. No non-euclidean distance metrics are allowed.<\/p>\ngetDistanceBetweenNodes\n<p>Measures the distance between two nodes in the environment.<\/p>\ngetNodesWithinRange\n<p>Given a node (center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized and it's consequently <b>much<\/b> better to use <code> Environment#getNeighborhood(Node) <\/code> and filter the neighborhood if you are sure that all the nodes within the range are connected to the center.<\/p>\ngetNodesWithinRange\n<p>Given a <code> Position <\/code>(center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized.<\/p>\nmoveNodeToPosition\n<p>This method moves a node in the environment to some position. If node move is unsupported, it does nothing.<\/p>\ngetLinkingRule\n<p>setIncarnation<\/p>\n<p>removeNode<\/p>\n<p>This method allows to remove a node. If node removal is unsupported, it does nothing.<\/p>\nsetLinkingRule\n<p>getOffset<\/p>\n<p>This method allows to know which are the smallest coordinates represented.<\/p>\ngetIncarnation\n<p>getNeighborhood<\/p>\n<p>Given a node, this method returns its neighborhood.<\/p>\ngetSimulation\n<p>getNodesNumber<\/p>\n<p>isTerminated<\/p>\n<p>getNodeByID<\/p>\n<p>Allows to access a node known its id. Depending on the implementation, this method may or not be optimized (namely, id could run in constant or linear time with the number of nodes).<\/p>\ngetPosition\n<p>Calculates the position of a node.<\/p>\ngetDimensions\n<p>The number of dimensions of this environment.<\/p>\ngetNodes\n<p>All the nodes that exist in current environment.<\/p>\naddTerminator\n<p>getSizeInDistanceUnits<\/p>\n<p>This method returns the size of the environment as an array of length <code> #getDimensions() <\/code>. This method must return distance measured with the same unit used for measuring distances. It may or may not return the same result of <code> #getSize() <\/code><\/p>\ngetLayer\n<p>Get the layer associate to the given molecule. If no Layer is associated with the given molecule, return an empty optional.<\/p>\nmakePosition\n<p>addNode<\/p>\n<p>This method allows to add a new node to this environment. The environment is responsible to call the right method of the simulation in order to ensure that the reaction is properly scheduled.<\/p>\n"
                       }]
                     },
+                    "nodes": {
+                      "ownKey": "nodes",
+                      "childrenPages": {"nodewithshape": {
+                        "ownKey": "nodewithshape",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/model/interfaces/nodes/nodewithshape",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/nodes/nodewithshape"
+                          },
+                          "description": "",
+                          "title": "NodeWithShape",
+                          "content": "<p>A node with a  shape .<\/p>shape\n<p>The shape of the node.<\/p>\n"
+                        }]
+                      }},
+                      "ownPages": [{
+                        "reference": {
+                          "path": "kotlindoc",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "it/unibo/alchemist/model/interfaces/nodes",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/nodes"
+                        },
+                        "description": "",
+                        "title": "it.unibo.alchemist.model.interfaces.nodes",
+                        "content": "<p>NodeWithShape<\/p>\n<p>A node with a  shape .<\/p>\n"
+                      }]
+                    },
                     "gpstrace": {
                       "ownKey": "gpstrace",
                       "ownPages": [{
@@ -6281,7 +6263,7 @@
                         },
                         "description": "",
                         "title": "Pedestrian2D",
-                        "content": "<p>The bidimensional representation of a pedestrian.<\/p>shape\n<p>The shape of any pedestrian in the Euclidean world.<\/p>\nfieldOfView\n<p>The field of view of a pedestrian in the Euclidean world.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\nPedestrian2D\n<p>The bidimensional representation of a pedestrian.<\/p>\n"
+                        "content": "<p>The bidimensional representation of a pedestrian.<\/p>environment\n<p>Access to the  environment .<\/p>\nshape\n<p>The shape of any pedestrian in the Euclidean world.\nImplementors should override this property to prevent the continuous creation of new  Euclidean2DShape s.<\/p>\nfieldOfView\n<p>The field of view of a pedestrian in the Euclidean world.\nImplementors should override this property to prevent the continuous creation of new  FieldOfView2D s.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\nPedestrian2D\n<p>The bidimensional representation of a pedestrian.<\/p>\n"
                       }]
                     },
                     "ilsanode": {
@@ -6516,6 +6498,72 @@
                                 "content": "<p>Defines an euclidean shape in a bidimensional space.<\/p>\n"
                               }]
                             },
+                            "graph": {
+                              "ownKey": "graph",
+                              "childrenPages": {
+                                "euclidean2dpassage": {
+                                  "ownKey": "euclidean2dpassage",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "kotlindoc",
+                                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                      "fileName": "it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage"
+                                    },
+                                    "description": "",
+                                    "title": "Euclidean2DPassage",
+                                    "content": "<p>A passage between two  ConvexPolygon s in an euclidean bidimensional space.\nThe passage is oriented, which means it connects  tail  to  head , but the opposite is\nnot necessarily true.\n tail  and  head  can be non-adjacent (there can be some distance between them), this\nintroduces navigation issues as agents may not know which direction to follow when\ncrossing a passage.\n passageShapeOnTail  is a  Segment2D  representing the shape of the passage on  tail 's\nboundary (e.g. in an indoor environment, the segment should represent the shape of the\ndoor between two rooms).  passageShapeOnTail  must be determined so as to guarantee that\n head  is reachable by throwing a ray from any point of the segment in its normal direction.\nThis solves navigation issues as it provides agents with a direction to follow when crossing\n Euclidean2DPassage s (namely, the normal direction to  passageShapeOnTail ).<\/p>tail\n<p>head<\/p>\n<p>passageShapeOnTail<\/p>\n<p><init><\/p>\n<p>A passage between two  ConvexPolygon s in an euclidean bidimensional space.\nThe passage is oriented, which means it connects  tail  to  head , but the opposite is\nnot necessarily true.\n tail  and  head  can be non-adjacent (there can be some distance between them), this\nintroduces navigation issues as agents may not know which direction to follow when\ncrossing a passage.\n passageShapeOnTail  is a  Segment2D  representing the shape of the passage on  tail 's\nboundary (e.g. in an indoor environment, the segment should represent the shape of the\ndoor between two rooms).  passageShapeOnTail  must be determined so as to guarantee that\n head  is reachable by throwing a ray from any point of the segment in its normal direction.\nThis solves navigation issues as it provides agents with a direction to follow when crossing\n Euclidean2DPassage s (namely, the normal direction to  passageShapeOnTail ).<\/p>\ncrossingPointOnTail\n<p>Provided the  position  of an agent that may want to cross this passage, this method\ncomputes the point belonging to  passageShapeOnTail  which is more convenient to\ncross.\nNote that the agent must be inside  tail .<\/p>\ncrossingPointOnHead\n<p>Provided the  crossingPointOnTail  that an agent has reached (or will reach), this\nmethod computes the point belonging to the boundary of  head  that the agent should\npoint towards to cross the passage (i.e. the first point belonging to  head 's boundary\nthat is encountered when throwing a ray from  crossingPointOnTail  along  passageShapeOnTail 's\nnormal direction).\nNote that the returned point may not be formally contained in  head  depending on the\ndefinition of insideness used by  ConvexPolygon.contains , prefer using\n ConvexPolygon.containsBoundaryIncluded .<\/p>\ncrossingPoints\n<p>Provided the  position  of an agent that may want to cross this passage, this method\nreturns a pair containing both the  crossingPointOnTail  and the  crossingPointOnHead .<\/p>\n"
+                                  }]
+                                },
+                                "euclidean2dnavigationgraph": {
+                                  "ownKey": "euclidean2dnavigationgraph",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "kotlindoc",
+                                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                      "fileName": "it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dnavigationgraph",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dnavigationgraph"
+                                    },
+                                    "description": "",
+                                    "title": "Euclidean2DNavigationGraph",
+                                    "content": "<p>A  NavigationGraph  in an euclidean bidimensional space, whose nodes are  ConvexPolygon s\nand edges are  Euclidean2DPassage s. Using  Euclidean2DPassage s as edges leads to some\noverhead (as these maintain the nodes they connect, when this information is already stored\nin the navigation graph), but allows to have duplicate edges in opposite directions, which\nmeans a node n1 can be connected to another node n2 through a passage whose shape is equal\nto the one of the passage connecting n2 to n1. The two passages would not result equal\nbecause their tail and head would be swapped. On the contrary, if edges were plain segments,\nthe graph would not have allowed to have two edges so that e1.equal(e2).<\/p>\n"
+                                  }]
+                                },
+                                "navigationgraph": {
+                                  "ownKey": "navigationgraph",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "kotlindoc",
+                                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                      "fileName": "it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph"
+                                    },
+                                    "description": "",
+                                    "title": "NavigationGraph",
+                                    "content": "<p>A graph used for navigation purposes. Nodes are  ConvexGeometricShape s,\nusually representing portions of an environment which are traversable by\nagents (the advantage of such representation is that agents can freely\nwalk around within a convex area, as it is guaranteed that no obstacle\nwill be found).\nNote that implementations of this graph must guarantee predictable\nordering for the collections they maintain, as reproducibility is a key\nfeature of Alchemist.\nBe also aware that, by contract, the <a href=\"#\">org.jgrapht.Graph<\/a> interface does\nnot allow duplicated edges (see <a href=\"#\">org.jgrapht.Graph.addEdge<\/a>).<\/p>nodeContaining\n"
+                                  }]
+                                }
+                              },
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "kotlindoc",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph"
+                                },
+                                "description": "",
+                                "title": "it.unibo.alchemist.model.interfaces.geometry.euclidean2d.graph",
+                                "content": "<p>Euclidean2DPassage<\/p>\n<p>A passage between two  ConvexPolygon s in an euclidean bidimensional space.\nThe passage is oriented, which means it connects  tail  to  head , but the opposite is\nnot necessarily true.\n tail  and  head  can be non-adjacent (there can be some distance between them), this\nintroduces navigation issues as agents may not know which direction to follow when\ncrossing a passage.\n passageShapeOnTail  is a  Segment2D  representing the shape of the passage on  tail 's\nboundary (e.g. in an indoor environment, the segment should represent the shape of the\ndoor between two rooms).  passageShapeOnTail  must be determined so as to guarantee that\n head  is reachable by throwing a ray from any point of the segment in its normal direction.\nThis solves navigation issues as it provides agents with a direction to follow when crossing\n Euclidean2DPassage s (namely, the normal direction to  passageShapeOnTail ).<\/p>\nNavigationGraph\n<p>A graph used for navigation purposes. Nodes are  ConvexGeometricShape s,\nusually representing portions of an environment which are traversable by\nagents (the advantage of such representation is that agents can freely\nwalk around within a convex area, as it is guaranteed that no obstacle\nwill be found).\nNote that implementations of this graph must guarantee predictable\nordering for the collections they maintain, as reproducibility is a key\nfeature of Alchemist.\nBe also aware that, by contract, the <a href=\"#\">org.jgrapht.Graph<\/a> interface does\nnot allow duplicated edges (see <a href=\"#\">org.jgrapht.Graph.addEdge<\/a>).<\/p>\nEuclidean2DNavigationGraph\n<p>A  NavigationGraph  in an euclidean bidimensional space, whose nodes are  ConvexPolygon s\nand edges are  Euclidean2DPassage s. Using  Euclidean2DPassage s as edges leads to some\noverhead (as these maintain the nodes they connect, when this information is already stored\nin the navigation graph), but allows to have duplicate edges in opposite directions, which\nmeans a node n1 can be connected to another node n2 through a passage whose shape is equal\nto the one of the passage connecting n2 to n1. The two passages would not result equal\nbecause their tail and head would be swapped. On the contrary, if edges were plain segments,\nthe graph would not have allowed to have two edges so that e1.equal(e2).<\/p>\nEuclidean2DNavigationGraph\n<p>A  NavigationGraph  in an euclidean bidimensional space, whose nodes are  ConvexPolygon s\nand edges are  Euclidean2DPassage s. Using  Euclidean2DPassage s as edges leads to some\noverhead (as these maintain the nodes they connect, when this information is already stored\nin the navigation graph), but allows to have duplicate edges in opposite directions, which\nmeans a node n1 can be connected to another node n2 through a passage whose shape is equal\nto the one of the passage connecting n2 to n1. The two passages would not result equal\nbecause their tail and head would be swapped. On the contrary, if edges were plain segments,\nthe graph would not have allowed to have two edges so that e1.equal(e2).<\/p>\n"
+                              }]
+                            },
                             "mutableconvexpolygon": {
                               "ownKey": "mutableconvexpolygon",
                               "ownPages": [{
@@ -6576,7 +6624,7 @@
                             },
                             "description": "",
                             "title": "it.unibo.alchemist.model.interfaces.geometry.euclidean2d",
-                            "content": "<p>ConvexPolygon<\/p>\n<p>A simple polygon (i.e. not self-intersecting and without holes) in which no\nline segment between two points on the boundary ever goes outside the polygon.<\/p>\nEuclidean2DConvexShape\n<p>A convex euclidean shape in a bidimensional environment.<\/p>\nEuclidean2DShape\n<p>Defines an euclidean shape in a bidimensional space.<\/p>\nEuclidean2DShapeFactory\n<p>Defines a factory of  GeometricShape  for a bidimensional euclidean space.<\/p>\nEuclidean2DTransformation\n<p>Defines the possible transformations for a  it.unibo.alchemist.model.interfaces.geometry.GeometricShape  in a\nbidimensional euclidean space.<\/p>\nIntersection2D\n<p>Describes the result an intersection operation in an euclidean 2D space.\nType  V  must extend  Vector2D .\nThe requirement is not explicitly enforced to allow the class to work covariantly.<\/p>\nMutableConvexPolygon\n<p>A mutable  ConvexPolygon .<\/p>\nSegment2D\n<p>Defines a segment from  first  to  second  in an euclidean bidimensional space.<\/p>\nit.unibo.alchemist.model.interfaces.geometry.euclidean2d.navigator\n<p>Euclidean2DConvexShape<\/p>\n<p>A convex euclidean shape in a bidimensional environment.<\/p>\nEuclidean2DShape\n<p>Defines an euclidean shape in a bidimensional space.<\/p>\n"
+                            "content": "<p>ConvexPolygon<\/p>\n<p>A simple polygon (i.e. not self-intersecting and without holes) in which no\nline segment between two points on the boundary ever goes outside the polygon.<\/p>\nEuclidean2DConvexShape\n<p>A convex euclidean shape in a bidimensional environment.<\/p>\nEuclidean2DShape\n<p>Defines an euclidean shape in a bidimensional space.<\/p>\nEuclidean2DShapeFactory\n<p>Defines a factory of  GeometricShape  for a bidimensional euclidean space.<\/p>\nEuclidean2DTransformation\n<p>Defines the possible transformations for a  it.unibo.alchemist.model.interfaces.geometry.GeometricShape  in a\nbidimensional euclidean space.<\/p>\nIntersection2D\n<p>Describes the result an intersection operation in an euclidean 2D space.\nType  V  must extend  Vector2D .\nThe requirement is not explicitly enforced to allow the class to work covariantly.<\/p>\nMutableConvexPolygon\n<p>A mutable  ConvexPolygon .<\/p>\nSegment2D\n<p>Defines a segment from  first  to  second  in an euclidean bidimensional space.<\/p>\nit.unibo.alchemist.model.interfaces.geometry.euclidean2d.graph\n<p>it.unibo.alchemist.model.interfaces.geometry.euclidean2d.navigator<\/p>\n<p>Euclidean2DConvexShape<\/p>\n<p>A convex euclidean shape in a bidimensional environment.<\/p>\nEuclidean2DShape\n<p>Defines an euclidean shape in a bidimensional space.<\/p>\n"
                           }]
                         },
                         "vector2d": {
@@ -6703,7 +6751,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.interfaces.geometry",
-                        "content": "<p>InfluenceSphere<\/p>\n<p>Area inside which nodes exert an influence on each other.<\/p>\nConvexGeometricShape\n<p>A convex  GeometricShape .<\/p><p>This interface models a property instead of an object, this may be\nunusual but consider it as a contract: interfaces are often said to\nbe contracts the implementor has to comply, the contract defined by\nthis interface implies convexity.<\/p>\nGeometricShapeFactory\n<p>Generic factory for  GeometricShape .<\/p>\nGeometricShape\n<p>Models a generic shape.<\/p>\nGeometricTransformation\n<p>Defines a generic transformation of a generic shape.\nThe operations allowed depend on the space the shape belongs to.\nThis interface is meant to be extended.<\/p>\nVector\n<p>A generic vector in a multidimensional space.<\/p>\nVector2D\n<p>Bidimensional vector with  x  and  y  coordinates.<\/p>\nit.unibo.alchemist.model.interfaces.geometry.euclidean2d\n"
+                        "content": "<p>ConvexGeometricShape<\/p>\n<p>A convex  GeometricShape .<\/p><p>This interface models a property instead of an object, this may be\nunusual but consider it as a contract: interfaces are often said to\nbe contracts the implementor has to comply, the contract defined by\nthis interface implies convexity.<\/p>\nGeometricShapeFactory\n<p>Generic factory for  GeometricShape .<\/p>\nInfluenceSphere\n<p>Area inside which nodes exert an influence on each other.<\/p>\nGeometricShape\n<p>Models a generic shape.<\/p>\nGeometricTransformation\n<p>Defines a generic transformation of a generic shape.\nThe operations allowed depend on the space the shape belongs to.\nThis interface is meant to be extended.<\/p>\nVector\n<p>A generic vector in a multidimensional space.<\/p>\nVector2D\n<p>Bidimensional vector with  x  and  y  coordinates.<\/p>\nit.unibo.alchemist.model.interfaces.geometry.euclidean2d\n"
                       }]
                     },
                     "pedestrian": {
@@ -6782,7 +6830,7 @@
                     },
                     "description": "",
                     "title": "it.unibo.alchemist.model.interfaces",
-                    "content": "<p>CognitivePedestrian<\/p>\n<p>An heterogeneous pedestrian with cognitive capabilities too.<\/p>\nEuclideanNavigationAction\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nGroup\n<p>A group of nodes.<\/p>\nGroupSteeringAction\n<p>Steering action caused by a group of pedestrians.<\/p>\nGroupWithLeader\n<p>A group with a special member acting as a leader.<\/p>\nHeterogeneousPedestrian\n<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.<\/p>\nNavigationAction\n<p>A  SteeringAction  allowing a pedestrian to navigate an environment consciously (e.g. without\ngetting stuck in U-shaped obstacles).\nNames are inspired to indoor environments, but this interface works for outdoor ones as well.<\/p>\nNavigationStrategy\n<p>Defines what a pedestrian should do when in a new room (= environment's area), this is designed\nto be used jointly with a  NavigationAction : the latter defines how to properly move the\npedestrian, while delegating the decision on where to move it to a  NavigationStrategy .<\/p>\nOrientingCognitivePedestrian\n<p>A heterogeneous pedestrian with cognitive and orienting capabilities.<\/p>\nOrientingPedestrian\n<p>A pedestrian capable of orienting itself.<\/p>\nPedestrian\n<p>A pedestrian with any characteristic taken into consideration.<\/p>\nPedestrian2D\n<p>The bidimensional representation of a pedestrian.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\nSteeringAction\n<p>Action whose purpose is moving a node inside the environment it is in.<\/p>\nSteeringActionWithTarget\n<p>A  SteeringAction  with a defined target.<\/p>\nSteeringStrategy\n<p>Strategy interface describing how the next points of the steering actions\nare combined to calculate the next position to move on.<\/p>\nEnvironmentWithObstacles\n<p>An environment with  Obstacle s.<\/p>\nEuclideanEnvironment\n<p>An Euclidean space, where  Position s  P  are valid  Vector s,\nsupporting any concentration type  T .<\/p>\nObstacle\n<p>A generic obstacle in a vector space.<\/p>\nPosition\n<p>An interface to represent a generic coordinates system.<\/p>\nPosition2D\n<p>A bidimensional position.<\/p>\nVisibleNode\n<p>Represents a node seen by the  it.unibo.alchemist.model.implementations.actions.See  action.<\/p>\nObstacle2D\n<p>An <code> Obstacle <\/code> in a bidimensional space.<\/p>\nRoute\n<p>CircularDeformableCell<\/p>\n<p>Implements a circular deformable cell.<\/p>\nEnvironmentNode\n<p>CellWithCircularArea<\/p>\n<p>Implements a cell with a defined volume.<\/p>\nEnvironmentSupportingDeformableCells\n<p><code> Environment <\/code> supporting deformable cells.<\/p>\nCellNode\n<p>ILsaMolecule<\/p>\n<p>ILsaAction<\/p>\n<p>ILsaNode<\/p>\n<p>Interface for an LSA Node. Avoids the crappy casts.<\/p>\nILsaCondition\n<p>TimeDistribution<\/p>\n<p>This interface represents a temporal distribution for any event.<\/p>\nMolecule\n<p>Interface for a molecule.<\/p>\nLinkingRule\n<p>An interface that represent an auto-linking logic for nodes within an environment.<\/p>\nBenchmarkableEnvironment\n<p>An environment which provides a mean to get infos about its performances.<\/p>\nCondition\n<p>Node<\/p>\n<p>GeoPosition<\/p>\n<p>Represents a specific point on the Earth's surface.<\/p>\nAction\n<p>Neighborhood<\/p>\n<p>The type which describes the concentration of a molecule Interface for a neighborhood. When implementing it in a real class, please remember to correctly implement also the equals method inherited from Object.<\/p>\nReaction\n<p>Concentration<\/p>\n<p>This interface is a wrapper for concentrations.<\/p>\nIncarnation\n<p>Layer<\/p>\n<p>Interface for static layer, containing a substance or a molecule with a spatial distribution.<\/p>\nDependency\n<p>This interface represents a token that may generate a dependency between two reactions. Some special built-in tokens are EVERYTHING, EVERY_MOLECULE, MOVEMENT, and NEIGHBORHOOD_CHANGE. Molecules are dependencies as well.<\/p>\nEnvironment\n<p>Interface for an environment. Every environment must implement this specification.<\/p>\nTime\n<p>Interface for time representation.<\/p>\nContext\n<p>This enum describes the possible contexts for a given <code> Action <\/code> or <code> Condition <\/code>. A context represents the elements which are read for a <code> Condition <\/code> and the elements that may be subject of modifications for an <code> Action <\/code>. Choosing the right <code> Context <\/code> is crucial: if it's too restricted the simulation will be invalid, if it's too wide it WILL impact dramatically on performances. Contexts are used internally to better determine dependencies among reactions. See <a href=\"http://apice.unibo.it/xwiki/bin/view/Publications/PianiniMASS11\"> this paper<\/a> for further information about the usage of contexts.<\/p>\nTimedRoute\n<p>Route with total trip time to cross it.<\/p>\nGPSPoint\n<p>MapEnvironment<\/p>\n<p>Vehicle<\/p>\n<p>ObjectWithGPS<\/p>\n<p>GPSTrace<\/p>\n<p>it.unibo.alchemist.model.interfaces.geometry<\/p>\n<p>it.unibo.alchemist.model.interfaces.environments<\/p>\n<p>it.unibo.alchemist.model.interfaces.graph<\/p>\n<p>it.unibo.alchemist.model.interfaces.movestrategies<\/p>\n<p>EuclideanNavigationAction<\/p>\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\n"
+                    "content": "<p>CognitivePedestrian<\/p>\n<p>An heterogeneous pedestrian with cognitive capabilities too.<\/p>\nEuclideanNavigationAction\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\nGroup\n<p>A group of nodes.<\/p>\nGroupSteeringAction\n<p>Steering action caused by a group of pedestrians.<\/p>\nGroupWithLeader\n<p>A group with a special member acting as a leader.<\/p>\nHeterogeneousPedestrian\n<p>An heterogeneous pedestrian is a pedestrian where individual characteristics are taken into consideration.<\/p>\nNavigationAction\n<p>A  SteeringAction  allowing a pedestrian to navigate an environment consciously (e.g. without\ngetting stuck in U-shaped obstacles).\nNames are inspired to indoor environments, but this interface works for outdoor ones as well.<\/p>\nNavigationStrategy\n<p>Defines what a pedestrian should do when in a new room (= environment's area), this is designed\nto be used jointly with a  NavigationAction : the latter defines how to properly move the\npedestrian, while delegating the decision on where to move it to a  NavigationStrategy .<\/p>\nOrientingCognitivePedestrian\n<p>A heterogeneous pedestrian with cognitive and orienting capabilities.<\/p>\nOrientingPedestrian\n<p>A pedestrian capable of orienting itself.<\/p>\nPedestrian\n<p>A pedestrian with any characteristic taken into consideration.<\/p>\nPedestrian2D\n<p>The bidimensional representation of a pedestrian.<\/p>\nPedestrianGroup\n<p>An alias for a group of pedestrians.<\/p>\nSteeringAction\n<p>Action whose purpose is moving a node inside the environment it is in.<\/p>\nSteeringActionWithTarget\n<p>A  SteeringAction  with a defined target.<\/p>\nSteeringStrategy\n<p>Strategy interface describing how the next points of the steering actions\nare combined to calculate the next position to move on.<\/p>\nEnvironmentWithObstacles\n<p>An environment with  Obstacle s.<\/p>\nEuclideanEnvironment\n<p>An Euclidean space, where  Position s  P  are valid  Vector s,\nsupporting any concentration type  T .<\/p>\nObstacle\n<p>A generic obstacle in a vector space.<\/p>\nPosition\n<p>An interface to represent a generic coordinates system.<\/p>\nPosition2D\n<p>A bidimensional position.<\/p>\nVisibleNode\n<p>Represents a node seen by the  it.unibo.alchemist.model.implementations.actions.See  action.<\/p>\nObstacle2D\n<p>An <code> Obstacle <\/code> in a bidimensional space.<\/p>\nRoute\n<p>CircularDeformableCell<\/p>\n<p>Implements a circular deformable cell.<\/p>\nEnvironmentNode\n<p>CellWithCircularArea<\/p>\n<p>Implements a cell with a defined volume.<\/p>\nEnvironmentSupportingDeformableCells\n<p><code> Environment <\/code> supporting deformable cells.<\/p>\nCellNode\n<p>ILsaMolecule<\/p>\n<p>ILsaAction<\/p>\n<p>ILsaNode<\/p>\n<p>Interface for an LSA Node. Avoids the crappy casts.<\/p>\nILsaCondition\n<p>TimeDistribution<\/p>\n<p>This interface represents a temporal distribution for any event.<\/p>\nMolecule\n<p>Interface for a molecule.<\/p>\nLinkingRule\n<p>An interface that represent an auto-linking logic for nodes within an environment.<\/p>\nBenchmarkableEnvironment\n<p>An environment which provides a mean to get infos about its performances.<\/p>\nCondition\n<p>Node<\/p>\n<p>GeoPosition<\/p>\n<p>Represents a specific point on the Earth's surface.<\/p>\nAction\n<p>Neighborhood<\/p>\n<p>The type which describes the concentration of a molecule Interface for a neighborhood. When implementing it in a real class, please remember to correctly implement also the equals method inherited from Object.<\/p>\nReaction\n<p>Concentration<\/p>\n<p>This interface is a wrapper for concentrations.<\/p>\nIncarnation\n<p>Layer<\/p>\n<p>Interface for static layer, containing a substance or a molecule with a spatial distribution.<\/p>\nDependency\n<p>This interface represents a token that may generate a dependency between two reactions. Some special built-in tokens are EVERYTHING, EVERY_MOLECULE, MOVEMENT, and NEIGHBORHOOD_CHANGE. Molecules are dependencies as well.<\/p>\nEnvironment\n<p>Interface for an environment. Every environment must implement this specification.<\/p>\nTime\n<p>Interface for time representation.<\/p>\nContext\n<p>This enum describes the possible contexts for a given <code> Action <\/code> or <code> Condition <\/code>. A context represents the elements which are read for a <code> Condition <\/code> and the elements that may be subject of modifications for an <code> Action <\/code>. Choosing the right <code> Context <\/code> is crucial: if it's too restricted the simulation will be invalid, if it's too wide it WILL impact dramatically on performances. Contexts are used internally to better determine dependencies among reactions. See <a href=\"http://apice.unibo.it/xwiki/bin/view/Publications/PianiniMASS11\"> this paper<\/a> for further information about the usage of contexts.<\/p>\nTimedRoute\n<p>Route with total trip time to cross it.<\/p>\nGPSPoint\n<p>MapEnvironment<\/p>\n<p>Vehicle<\/p>\n<p>ObjectWithGPS<\/p>\n<p>GPSTrace<\/p>\n<p>it.unibo.alchemist.model.interfaces.environments<\/p>\n<p>it.unibo.alchemist.model.interfaces.geometry<\/p>\n<p>it.unibo.alchemist.model.interfaces.nodes<\/p>\n<p>it.unibo.alchemist.model.interfaces.movestrategies<\/p>\n<p>EuclideanNavigationAction<\/p>\n<p>A  NavigationAction  working with euclidean spaces.<\/p>\nEuclideanNavigationStrategy\n<p>A  NavigationStrategy  working with euclidean spaces.<\/p>\n"
                   }]
                 },
                 "biochemistryincarnation": {
@@ -6881,6 +6929,72 @@
                     "description": "",
                     "title": "it.unibo.alchemist.model.smartcam",
                     "content": "<p>VisibleNodeImpl<\/p>\n<p>Basic implementation of  VisibleNode .<\/p>\n"
+                  }]
+                },
+                "math": {
+                  "ownKey": "math",
+                  "childrenPages": {
+                    "realdistributionutil": {
+                      "ownKey": "realdistributionutil",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "kotlindoc",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "it/unibo/alchemist/model/math/realdistributionutil",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/math/realdistributionutil"
+                        },
+                        "description": "",
+                        "title": "RealDistributionUtil",
+                        "content": "<p>Utility to translate statistics names into a RealDistribution.<\/p>makeRealDistribution\n"
+                      }]
+                    },
+                    "lazymutable": {
+                      "ownKey": "lazymutable",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "kotlindoc",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "it/unibo/alchemist/model/math/lazymutable",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/math/lazymutable"
+                        },
+                        "description": "",
+                        "title": "LazyMutable",
+                        "content": "<p>A delegate allowing to lazily initialise a non-null mutable variable (= var).<\/p><init>\n<p>A delegate allowing to lazily initialise a non-null mutable variable (= var).<\/p>\ngetValue\n\nsetValue\n\n"
+                      }]
+                    },
+                    "bidimensionalgaussian": {
+                      "ownKey": "bidimensionalgaussian",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "kotlindoc",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "it/unibo/alchemist/model/math/bidimensionalgaussian",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/math/bidimensionalgaussian"
+                        },
+                        "description": "",
+                        "title": "BidimensionalGaussian",
+                        "content": "<p>A 2D gaussian function.<\/p><init>\n<p>A 2D gaussian function.<\/p>\nvalue\n\nintegral\n<p>The integral of the function.<\/p>\n"
+                      }]
+                    }
+                  },
+                  "ownPages": [{
+                    "reference": {
+                      "path": "kotlindoc",
+                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                      "fileName": "it/unibo/alchemist/model/math",
+                      "extension": "html",
+                      "usePrettyUrl": true,
+                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/math"
+                    },
+                    "description": "",
+                    "title": "it.unibo.alchemist.model.math",
+                    "content": "<p>LazyMutable<\/p>\n<p>A delegate allowing to lazily initialise a non-null mutable variable (= var).<\/p>\nBidimensionalGaussian\n<p>A 2D gaussian function.<\/p>\nRealDistributionUtil\n<p>Utility to translate statistics names into a RealDistribution.<\/p>\nlazyMutable\n<p>Creates an instance of  LazyMutable  with the given  initializer .<\/p>\n"
                   }]
                 },
                 "implementations": {
@@ -7146,7 +7260,7 @@
                             },
                             "description": "",
                             "title": "ImageEnvironmentWithGraph",
-                            "content": "<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>graph\n<p>The navigation graph.<\/p>\n<init>\n<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>\n"
+                            "content": "<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>graph\n<p><init><\/p>\n<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>\n"
                           }]
                         },
                         "infinitehalls": {
@@ -7194,6 +7308,38 @@
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.environments",
                         "content": "<p>Continuous2DEnvironment<\/p>\n<p>Implementation of  Physics2DEnvironment .<\/p>\nImageEnvironmentWithGraph\n<p>An  ImageEnvironment  providing an  Euclidean2DNavigationGraph .\nThe NaviGator algorithm is used to produce such graph (see  generateNavigationGraph ).\nThe positions where to plant initial seeds should be specified directly in the image,\nmarking each area of the environment with one or more pixels of a given color (defaults\nto blue).<\/p>\nContinuous2DObstacles\n<p>InfiniteHalls<\/p>\n<p>MuseumHall<\/p>\n<p>ImageEnvironment<\/p>\n<p>This environment loads an image from the file system, and marks as obstacles all the pixels of a given color.<\/p>\nLimitedContinuos2D\n<p>This class represents a 2D continuous environment with spatial limitations. Those limitations will prevent nodes to move in positions which are not allowed.<\/p>\nAbstractEnvironment\n<p>Very generic and basic implementation for an environment. Basically, only manages an internal set of nodes and their position.<\/p>\nAbstract2DEnvironment\n<p>Models a bidimensional environment.<\/p>\nBioRect2DEnvironmentNoOverlap\n<p>Implements a limited environment supporting cells with a defined shape, avoiding any overlapping among them.<\/p>\nBioRect2DEnvironment\n<p>OSMEnvironment<\/p>\n<p>This class serves as template for more specific implementations of environments using a map. It encloses the navigation logic, but leaves the subclasses to decide how to provide map data (e.g. loading from disk or rely on online services). The data is then stored in-memory for performance reasons.<\/p>\n"
+                      }]
+                    },
+                    "obstacles": {
+                      "ownKey": "obstacles",
+                      "childrenPages": {"rectobstacle2d": {
+                        "ownKey": "rectobstacle2d",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/model/implementations/obstacles/rectobstacle2d",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/obstacles/rectobstacle2d"
+                          },
+                          "description": "",
+                          "title": "RectObstacle2D",
+                          "content": "<p>This class implements a rectangular obstacle, whose sides are parallel to the cartesian axis.<\/p>id\n<p><init><\/p>\n<p>Builds a new RectObstacle2D, given a point, the width and the height.<\/p>\ncontains\n<p>nearestIntersection<\/p>\n<p>getMinX<\/p>\n<p>next<\/p>\n<p>getMaxX<\/p>\n<p>toString<\/p>\n<p>getMinY<\/p>\n<p>getMaxY<\/p>\n"
+                        }]
+                      }},
+                      "ownPages": [{
+                        "reference": {
+                          "path": "kotlindoc",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "it/unibo/alchemist/model/implementations/obstacles",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/obstacles"
+                        },
+                        "description": "",
+                        "title": "it.unibo.alchemist.model.implementations.obstacles",
+                        "content": "<p>RectObstacle2D<\/p>\n<p>This class implements a rectangular obstacle, whose sides are parallel to the cartesian axis.<\/p>\n"
                       }]
                     },
                     "molecules": {
@@ -7347,6 +7493,22 @@
                             "content": "<p>Group representing a pedestrian alone.<\/p>members\n<p>The list of pedestrians belonging to this group.<\/p>\n<init>\n<p>Group representing a pedestrian alone.<\/p>\naddMember\n<p>Add a node in this group if not already part of it.<\/p>\nremoveMember\n<p>Remove a node from this group.<\/p>\n"
                           }]
                         },
+                        "groupfactory": {
+                          "ownKey": "groupfactory",
+                          "ownPages": [{
+                            "reference": {
+                              "path": "kotlindoc",
+                              "baseUrl": "https://alchemistsimulator.github.io/latest",
+                              "fileName": "it/unibo/alchemist/model/implementations/groups/groupfactory",
+                              "extension": "html",
+                              "usePrettyUrl": true,
+                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/groups/groupfactory"
+                            },
+                            "description": "",
+                            "title": "GroupFactory",
+                            "content": "<p>Utility for shorter loading of groups within the Yaml files.<\/p>family\n<p>friends<\/p>\n"
+                          }]
+                        },
                         "family": {
                           "ownKey": "family",
                           "ownPages": [{
@@ -7407,7 +7569,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.groups",
-                        "content": "<p>Alone<\/p>\n<p>Group representing a pedestrian alone.<\/p>\nFamily\n<p>A  Family  is modeled as a grup of pedestrians with a leader.<\/p>\nFriends\n<p>A generic, leaderless group of pedestrians.<\/p>\nGenericGroup\n<p>Basic implementation of a group.<\/p>\n"
+                        "content": "<p>Alone<\/p>\n<p>Group representing a pedestrian alone.<\/p>\nFamily\n<p>A  Family  is modeled as a grup of pedestrians with a leader.<\/p>\nFriends\n<p>A generic, leaderless group of pedestrians.<\/p>\nGenericGroup\n<p>Basic implementation of a group.<\/p>\nGroupFactory\n<p>Utility for shorter loading of groups within the Yaml files.<\/p>\n"
                       }]
                     },
                     "positions": {
@@ -7521,7 +7683,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.positions",
-                        "content": "<p>AbstractEuclideanPosition<\/p>\n<p>N-dimensional Euclidean position.<\/p>\nAbstractPosition\n<p>N-dimensional position.<\/p>\nEuclidean2DPosition\n<p>LatLongPosition<\/p>\n<p>Unmodifiable state version of LatLng, also implementing the <code> GeoPosition <\/code> interface.<\/p>\nGPSPointImpl\n"
+                        "content": "<p>AbstractEuclideanPosition<\/p>\n<p>N-dimensional Euclidean position.<\/p>\nEuclidean2DPosition\n<p>AbstractPosition<\/p>\n<p>N-dimensional position.<\/p>\nLatLongPosition\n<p>Unmodifiable state version of LatLng, also implementing the <code> GeoPosition <\/code> interface.<\/p>\nGPSPointImpl\n"
                       }]
                     },
                     "movestrategies": {
@@ -7849,89 +8011,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.movestrategies",
-                        "content": "<p>ChangeTargetOnCollision<\/p>\n<p>Base class for  TargetSelectionStrategy  offering automatic target change\non collision and utilities for initialization.\n getCurrentPosition  should return the current position of the object to move.\n P  is the position type to use.<\/p>\nRandomTarget\n<p>Selects a target based on a random direction extracted from directionRng,\nand a random distance extracted from distanceDistribution.\n getCurrentPosition  should return the current position of the object to move.\n T  is the type of the concentration of the node.<\/p>\nZigZagRandomTarget\n<p>Strategy to move an object in a zigzag fashion. It uses euclidean geometry to determine the next position.<\/p><p> getCurrentPosition  must return the current position of the object to move.\nmakePosition must be able to create a 2D position given the X and Y coordinates in this order.\nrandomGenerator is the random number generator to use\nmaxDistance defines the maximum distance the object can move before a random change in direction is forced.\nminChangeInDirection is the minimum change in the direction (in degrees) that must be made each\ntime a new direction is chosen.<\/p><p> T  is the type of the concentration of the node used in the secondary constructor.<\/p>\nAbstractStrategyWithGPS\n<p>basic move strategy that use a <code> GPSTrace <\/code>.<\/p>\nit.unibo.alchemist.model.implementations.movestrategies.speed\n<p>it.unibo.alchemist.model.implementations.movestrategies.target<\/p>\n<p>it.unibo.alchemist.model.implementations.movestrategies.routing<\/p>\n"
-                      }]
-                    },
-                    "graph": {
-                      "ownKey": "graph",
-                      "childrenPages": {
-                        "basenavigationgraph": {
-                          "ownKey": "basenavigationgraph",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/implementations/graph/basenavigationgraph",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/graph/basenavigationgraph"
-                            },
-                            "description": "",
-                            "title": "BaseNavigationGraph",
-                            "content": "<p>An implementation of  NavigationGraph , deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<\/p><ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul><init>\n\n<init>\n<p>An implementation of  NavigationGraph , deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<\/p><ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul>\n"
-                          }]
-                        },
-                        "directedeuclidean2dnavigationgraph": {
-                          "ownKey": "directedeuclidean2dnavigationgraph",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/implementations/graph/directedeuclidean2dnavigationgraph",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/graph/directedeuclidean2dnavigationgraph"
-                            },
-                            "description": "",
-                            "title": "DirectedEuclidean2DNavigationGraph",
-                            "content": "<p>A directed  Euclidean2DNavigationGraph .<\/p>\n"
-                          }]
-                        },
-                        "undirectednavigationgraph": {
-                          "ownKey": "undirectednavigationgraph",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/implementations/graph/undirectednavigationgraph",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/graph/undirectednavigationgraph"
-                            },
-                            "description": "",
-                            "title": "UndirectedNavigationGraph",
-                            "content": "<p>An undirected unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p><init>\n<p>An undirected unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p>\n"
-                          }]
-                        },
-                        "directednavigationgraph": {
-                          "ownKey": "directednavigationgraph",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/implementations/graph/directednavigationgraph",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/graph/directednavigationgraph"
-                            },
-                            "description": "",
-                            "title": "DirectedNavigationGraph",
-                            "content": "<p>A directed unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p><init>\n<p>A directed unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p>\n"
-                          }]
-                        }
-                      },
-                      "ownPages": [{
-                        "reference": {
-                          "path": "kotlindoc",
-                          "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "it/unibo/alchemist/model/implementations/graph",
-                          "extension": "html",
-                          "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/graph"
-                        },
-                        "description": "",
-                        "title": "it.unibo.alchemist.model.implementations.graph",
-                        "content": "<p>BaseNavigationGraph<\/p>\n<p>An implementation of  NavigationGraph , deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<\/p><ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul>\nDirectedNavigationGraph\n<p>A directed unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p>\nUndirectedNavigationGraph\n<p>An undirected unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p>\nDirectedEuclidean2DNavigationGraph\n<p>A directed  Euclidean2DNavigationGraph .<\/p>\nDirectedEuclidean2DNavigationGraph\n<p>A directed  Euclidean2DNavigationGraph .<\/p>\npathExists\n<p>Checks whether a path exists between  source  and  sink .\n<a href=\"#\">DijkstraShortestPath<\/a> is used instead of <a href=\"#\">org.jgrapht.alg.connectivity.ConnectivityInspector.pathExists<\/a>,\nbecause, in case of directed graph, the latter checks whether the given vertices lay in the same weakly\nconnected component, which is not the desired behavior.\nAs unweighted graphs have a default edge weight of 1.0, shortest path algorithms can always be applied\nmeaningfully.<\/p>\n"
+                        "content": "<p>RandomTarget<\/p>\n<p>Selects a target based on a random direction extracted from directionRng,\nand a random distance extracted from distanceDistribution.\n getCurrentPosition  should return the current position of the object to move.\n T  is the type of the concentration of the node.<\/p>\nChangeTargetOnCollision\n<p>Base class for  TargetSelectionStrategy  offering automatic target change\non collision and utilities for initialization.\n getCurrentPosition  should return the current position of the object to move.\n P  is the position type to use.<\/p>\nZigZagRandomTarget\n<p>Strategy to move an object in a zigzag fashion. It uses euclidean geometry to determine the next position.<\/p><p> getCurrentPosition  must return the current position of the object to move.\nmakePosition must be able to create a 2D position given the X and Y coordinates in this order.\nrandomGenerator is the random number generator to use\nmaxDistance defines the maximum distance the object can move before a random change in direction is forced.\nminChangeInDirection is the minimum change in the direction (in degrees) that must be made each\ntime a new direction is chosen.<\/p><p> T  is the type of the concentration of the node used in the secondary constructor.<\/p>\nAbstractStrategyWithGPS\n<p>basic move strategy that use a <code> GPSTrace <\/code>.<\/p>\nit.unibo.alchemist.model.implementations.movestrategies.speed\n<p>it.unibo.alchemist.model.implementations.movestrategies.target<\/p>\n<p>it.unibo.alchemist.model.implementations.movestrategies.routing<\/p>\n"
                       }]
                     },
                     "routes": {
@@ -8048,7 +8128,7 @@
                             },
                             "description": "",
                             "title": "AbstractNode",
-                            "content": "<p>This class realizes an abstract node. You may extend it to realize your own nodes.<\/p><init>\n\ncontains\n<p>Tests whether a node contains a <code> Molecule <\/code>.<\/p>\nhashCode\n\ngetChemicalSpecies\n<p>This method is usefult to know how many different chemical species may be contained in this node.<\/p>\nequals\n\nsetConcentration\n<p>Sets the concentration of mol to c.<\/p>\ntoString\n\ngetId\n\ncompareTo\n\ncreateT\n\ngetShape\n<p>Override to provide a different shape than the default adimensional one.<\/p>\naddReaction\n\ncloneNode\n<p>Default implementation fails: override correctly calling the constructor.<\/p>\nremoveConcentration\n\ngetReactions\n\ngetConcentration\n<p>Calculates the concentration of a molecule.<\/p>\niterator\n\ngetContents\n\nforEach\n\nspliterator\n\nremoveReaction\n\n"
+                            "content": "<p>This class realizes an abstract node. You may extend it to realize your own nodes.<\/p><init>\n\ncontains\n<p>Tests whether a node contains a <code> Molecule <\/code>.<\/p>\nhashCode\n\ngetChemicalSpecies\n<p>This method is usefult to know how many different chemical species may be contained in this node.<\/p>\nequals\n\nsetConcentration\n<p>Sets the concentration of mol to c.<\/p>\ntoString\n\ngetId\n\ncompareTo\n\ncreateT\n\naddReaction\n\ncloneNode\n<p>Default implementation fails: override correctly calling the constructor.<\/p>\nremoveConcentration\n\ngetReactions\n\ngetConcentration\n<p>Calculates the concentration of a molecule.<\/p>\niterator\n\ngetContents\n\nforEach\n\nspliterator\n\nremoveReaction\n\n"
                           }]
                         },
                         "orientingcognitivepedestrian2d": {
@@ -8064,7 +8144,7 @@
                             },
                             "description": "",
                             "title": "OrientingCognitivePedestrian2D",
-                            "content": "<p>A cognitive  OrientingPedestrian  in an  EuclideanPhysics2DEnvironmentWithGraph .<\/p>compliance\n<p>Value between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.<\/p>\nage\n<p>The age of this pedestrian.<\/p>\ngender\n<p>The gender of this pedestrian.<\/p>\n<init>\n<p>Allows to specify age and gender with a string.<\/p>\n<init>\n<p>Allows to specify age with an int and gender with a string.<\/p>\n<init>\n<p>A cognitive  OrientingPedestrian  in an  EuclideanPhysics2DEnvironmentWithGraph .<\/p>\ngetShape\n\nprobabilityOfHelping\n<p>Value between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.<\/p>\ndangerBelief\n<p>Value representing the current belief of the situation dangerousness for this pedestrian.<\/p>\nfear\n<p>Value representing the level of fear of this pedestrian.<\/p>\nwantsToEvacuate\n<p>Whether or not this pedestrian intends to evacuate.<\/p>\ncognitiveCharacteristics\n<p>The list of all the cognitive characteristics of this pedestrian.<\/p>\ninfluencialPeople\n<p>A list of all the pedestrians inside at least one of the sensory spheres of this pedestrian.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
+                            "content": "<p>A cognitive  OrientingPedestrian  in an  EuclideanPhysics2DEnvironmentWithGraph .<\/p>compliance\n<p>Value between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.<\/p>\nage\n<p>The age of this pedestrian.<\/p>\ngender\n<p>The gender of this pedestrian.<\/p>\n<init>\n<p>Allows to specify age and gender with a string.<\/p>\n<init>\n<p>Allows to specify age with an int and gender with a string.<\/p>\n<init>\n<p>A cognitive  OrientingPedestrian  in an  EuclideanPhysics2DEnvironmentWithGraph .<\/p>\nprobabilityOfHelping\n<p>Value between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.<\/p>\ndangerBelief\n<p>Value representing the current belief of the situation dangerousness for this pedestrian.<\/p>\nfear\n<p>Value representing the level of fear of this pedestrian.<\/p>\nwantsToEvacuate\n<p>Whether or not this pedestrian intends to evacuate.<\/p>\ncognitiveCharacteristics\n<p>The list of all the cognitive characteristics of this pedestrian.<\/p>\ninfluencialPeople\n<p>A list of all the pedestrians inside at least one of the sensory spheres of this pedestrian.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
                           }]
                         },
                         "heterogeneouspedestrian2d": {
@@ -8080,7 +8160,7 @@
                             },
                             "description": "",
                             "title": "HeterogeneousPedestrian2D",
-                            "content": "<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<\/p><init>\n\n<init>\n\n<init>\n<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<\/p>\ngetShape\n\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
+                            "content": "<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<\/p>shape\n<p>The shape of any pedestrian in the Euclidean world.\nImplementors should override this property to prevent the continuous creation of new  Euclidean2DShape s.<\/p>\nfieldOfView\n<p>The field of view of a pedestrian in the Euclidean world.\nImplementors should override this property to prevent the continuous creation of new  FieldOfView2D s.<\/p>\nenvironment\n<pre><code>    the environment inside which this pedestrian moves.<\/code><\/pre>\n<init>\n\n<init>\n\n<init>\n<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
                           }]
                         },
                         "doublenode": {
@@ -8128,7 +8208,7 @@
                             },
                             "description": "",
                             "title": "CircleNode",
-                            "content": "<p>A  it.unibo.alchemist.model.interfaces.Node  with a circle shape meant to be added to a\n it.unibo.alchemist.model.interfaces.environments.PhysicsEnvironment .<\/p><init>\n<p>A  it.unibo.alchemist.model.interfaces.Node  with a circle shape meant to be added to a\n it.unibo.alchemist.model.interfaces.environments.PhysicsEnvironment .<\/p>\ngetShape\n<p>{@inheritDoc}.<\/p>\ncreateT\n<p>Returns null because T is unknown.<\/p>\n"
+                            "content": "<p>A  it.unibo.alchemist.model.interfaces.Node  with a circle shape meant to be added to a\n it.unibo.alchemist.model.interfaces.environments.PhysicsEnvironment .<\/p>shape\n<p>{@inheritDoc}.<\/p>\n<init>\n<p>A  it.unibo.alchemist.model.interfaces.Node  with a circle shape meant to be added to a\n it.unibo.alchemist.model.interfaces.environments.PhysicsEnvironment .<\/p>\ncreateT\n<p>Returns null because T is unknown.<\/p>\n"
                           }]
                         },
                         "environmentnodeimpl": {
@@ -8192,7 +8272,7 @@
                             },
                             "description": "",
                             "title": "AbstractOrientingPedestrian",
-                            "content": "<p>An abstract  OrientingPedestrian .\nThis class defines an algorithm capable of generating a pseudo-random  cognitiveMap \nbased on a  NavigationGraph  of the environment. The latter can be obtained from\n EnvironmentWithGraph s, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<\/p>volatileMemory\n<p>The volatile memory of the agent: it models the ability to remember areas\nof the environment already visited by the agent since the start of the\nsimulation. In particular, each area is paired with the number of visits.\nAreas are assumed to be represented as  ConvexGeometricShape s, as in\n NavigationGraph s.<\/p>\ncognitiveMap\n<p>The cognitive map of the agent. It's composed of landmarks (elements of the\nenvironment easy to remember due to their uniqueness) and spatial relations\nbetween them. It is represented using a  NavigationGraph .<\/p>\nknowledgeDegree\n<p>The knowledge degree of the agent concerning the environment, it's a Double\nvalue in <a href=\"#\">0,1<\/a> describing the percentage of the environment the agent is\nfamiliar with prior to the start of the simulation (thus it does not take\ninto account the knowledge the pedestrian will gain during it, namely the\n volatileMemory ).<\/p>\nrandomGenerator\n<p>The random generator to use in order to preserve reproducibility.<\/p>\nenvironment\n<p>The environment this pedestrian is into.<\/p>\n<init>\n<p>An abstract  OrientingPedestrian .\nThis class defines an algorithm capable of generating a pseudo-random  cognitiveMap \nbased on a  NavigationGraph  of the environment. The latter can be obtained from\n EnvironmentWithGraph s, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<\/p>\ngenerateLandmarkWithin\n<p>Generates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
+                            "content": "<p>An abstract  OrientingPedestrian .\nThis class defines an algorithm capable of generating a pseudo-random  cognitiveMap \nbased on a  NavigationGraph  of the environment. The latter can be obtained from\n EnvironmentWithGraph s, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<\/p>volatileMemory\n<p>The volatile memory of the agent: it models the ability to remember areas\nof the environment already visited by the agent since the start of the\nsimulation. In particular, each area is paired with the number of visits.\nAreas are assumed to be represented as  ConvexGeometricShape s, as in\n NavigationGraph s.<\/p>\ncognitiveMap\n<p>The cognitive map of the agent. It's composed of landmarks (elements of the\nenvironment easy to remember due to their uniqueness) and spatial relations\nbetween them. It is represented using a  NavigationGraph .<\/p>\nknowledgeDegree\n<p>The knowledge degree of the agent concerning the environment, it's a Double\nvalue in <a href=\"#\">0,1<\/a> describing the percentage of the environment the agent is\nfamiliar with prior to the start of the simulation (thus it does not take\ninto account the knowledge the pedestrian will gain during it, namely the\n volatileMemory ).<\/p>\nrandomGenerator\n<p>The random generator to use in order to preserve reproducibility.<\/p>\n<init>\n<p>An abstract  OrientingPedestrian .\nThis class defines an algorithm capable of generating a pseudo-random  cognitiveMap \nbased on a  NavigationGraph  of the environment. The latter can be obtained from\n EnvironmentWithGraph s, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<\/p>\ngenerateLandmarkWithin\n<p>Generates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
                           }]
                         },
                         "protelisnode": {
@@ -8224,7 +8304,7 @@
                             },
                             "description": "",
                             "title": "OrientingPedestrian2D",
-                            "content": "<p>An  OrientingPedestrian  in an euclidean bidimensional space.\nThis class defines the method responsible for the creation of landmarks, which\nare represented as  Ellipse s. These can represent both the human error concerning\nthe exact position of a landmark inside the ellipse and the error concerning the\nangles formed by the connections between landmarks.\nThis class accepts an environment whose graph contains nodes which are (subclasses\nof)  ConvexPolygon s.<\/p><init>\n<p>An  OrientingPedestrian  in an euclidean bidimensional space.\nThis class defines the method responsible for the creation of landmarks, which\nare represented as  Ellipse s. These can represent both the human error concerning\nthe exact position of a landmark inside the ellipse and the error concerning the\nangles formed by the connections between landmarks.\nThis class accepts an environment whose graph contains nodes which are (subclasses\nof)  ConvexPolygon s.<\/p>\ngenerateLandmarkWithin\n<p>Generates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
+                            "content": "<p>An  OrientingPedestrian  in an euclidean bidimensional space.\nThis class defines the method responsible for the creation of landmarks, which\nare represented as  Ellipse s. These can represent both the human error concerning\nthe exact position of a landmark inside the ellipse and the error concerning the\nangles formed by the connections between landmarks.\nThis class accepts an environment whose graph contains nodes which are (subclasses\nof)  ConvexPolygon s.<\/p>shape\n<p>The shape of any pedestrian in the Euclidean world.\nImplementors should override this property to prevent the continuous creation of new  Euclidean2DShape s.<\/p>\nfieldOfView\n<p>The field of view of a pedestrian in the Euclidean world.\nImplementors should override this property to prevent the continuous creation of new  FieldOfView2D s.<\/p>\nenvironment\n<pre><code>    the environment inside which this pedestrian moves.<\/code><\/pre>\n<init>\n<p>An  OrientingPedestrian  in an euclidean bidimensional space.\nThis class defines the method responsible for the creation of landmarks, which\nare represented as  Ellipse s. These can represent both the human error concerning\nthe exact position of a landmark inside the ellipse and the error concerning the\nangles formed by the connections between landmarks.\nThis class accepts an environment whose graph contains nodes which are (subclasses\nof)  ConvexPolygon s.<\/p>\ngenerateLandmarkWithin\n<p>Generates a landmark entirely contained in the given region. If such region contains\none or more destinations, the generated landmark must contain at least one of them.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
                           }]
                         },
                         "homogeneouspedestrianimpl": {
@@ -8240,7 +8320,7 @@
                             },
                             "description": "",
                             "title": "HomogeneousPedestrianImpl",
-                            "content": "<p>Implementation of a basic pedestrian.<\/p>membershipGroup\n<p>The group this pedestrian belongs to.<\/p>\nwalkingSpeed\n<p>The speed at which the pedestrian moves if it's walking.<\/p>\nrunningSpeed\n<p>The speed at which the pedestrian moves if it's running.<\/p>\nsenses\n<p>The list of influence spheres belonging to this pedestrian.<\/p>\n<init>\n<p>Implementation of a basic pedestrian.<\/p>\ncreateT\n\nspeed\n<p>The speed at which the pedestrian is moving.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
+                            "content": "<p>Implementation of a basic pedestrian.<\/p>membershipGroup\n<p>The group this pedestrian belongs to.<\/p>\nwalkingSpeed\n<p>The speed at which the pedestrian moves if it's walking.<\/p>\nrunningSpeed\n<p>The speed at which the pedestrian moves if it's running.<\/p>\nsenses\n<p>The list of influence spheres belonging to this pedestrian.<\/p>\nshape\n<p>The shape of the node.<\/p>\nenvironment\n<pre><code>    the environment inside which this pedestrian moves.<\/code><\/pre>\n<init>\n<p>Implementation of a basic pedestrian.<\/p>\ncreateT\n\nspeed\n<p>The speed at which the pedestrian is moving.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
                           }]
                         },
                         "cognitivepedestrianimpl": {
@@ -8320,23 +8400,7 @@
                             },
                             "description": "",
                             "title": "HomogeneousPedestrian2D",
-                            "content": "<p>Implementation of a basic pedestrian in the Euclidean world.<\/p><init>\n<p>Implementation of a basic pedestrian in the Euclidean world.<\/p>\ngetShape\n\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
-                          }]
-                        },
-                        "orientinghomogeneouspedestrian2d": {
-                          "ownKey": "orientinghomogeneouspedestrian2d",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/implementations/nodes/orientinghomogeneouspedestrian2d",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientinghomogeneouspedestrian2d"
-                            },
-                            "description": "",
-                            "title": "OrientingHomogeneousPedestrian2D",
-                            "content": "<p>A homogeneous  OrientingPedestrian  in an  EuclideanPhysics2DEnvironmentWithGraph .<\/p><init>\n<p>A homogeneous  OrientingPedestrian  in an  EuclideanPhysics2DEnvironmentWithGraph .<\/p>\ngetShape\n\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
+                            "content": "<p>Implementation of a basic pedestrian in the Euclidean world.<\/p>shape\n<p>The shape of the node.<\/p>\nfieldOfView\n<p>The field of view of a pedestrian in the Euclidean world.\nImplementors should override this property to prevent the continuous creation of new  FieldOfView2D s.<\/p>\nenvironment\n<pre><code>    the environment inside which this pedestrian moves.<\/code><\/pre>\n<init>\n<p>Implementation of a basic pedestrian in the Euclidean world.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
                           }]
                         },
                         "cognitivepedestrian2d": {
@@ -8352,7 +8416,7 @@
                             },
                             "description": "",
                             "title": "CognitivePedestrian2D",
-                            "content": "<p>Implementation of a cognitive pedestrian in the Euclidean world.<\/p><init>\n\n<init>\n\n<init>\n<p>Implementation of a cognitive pedestrian in the Euclidean world.<\/p>\ngetShape\n\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
+                            "content": "<p>Implementation of a cognitive pedestrian in the Euclidean world.<\/p>shape\n<p>The shape of any pedestrian in the Euclidean world.\nImplementors should override this property to prevent the continuous creation of new  Euclidean2DShape s.<\/p>\nfieldOfView\n<p>The field of view of a pedestrian in the Euclidean world.\nImplementors should override this property to prevent the continuous creation of new  FieldOfView2D s.<\/p>\nenvironment\n<pre><code>    the environment inside which this pedestrian moves.<\/code><\/pre>\n<init>\n\n<init>\n\n<init>\n<p>Implementation of a cognitive pedestrian in the Euclidean world.<\/p>\ntargetDistance\n<p>Calculate the distance between this pedestrian current position and the target of the specified steering action.<\/p>\n"
                           }]
                         }
                       },
@@ -8367,89 +8431,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.nodes",
-                        "content": "<p>AbstractOrientingPedestrian<\/p>\n<p>An abstract  OrientingPedestrian .\nThis class defines an algorithm capable of generating a pseudo-random  cognitiveMap \nbased on a  NavigationGraph  of the environment. The latter can be obtained from\n EnvironmentWithGraph s, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<\/p>\nCognitivePedestrian2D\n<p>Implementation of a cognitive pedestrian in the Euclidean world.<\/p>\nCognitivePedestrianImpl\n<p>Implementation of a cognitive pedestrian.<\/p>\nHeterogeneousPedestrian2D\n<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<\/p>\nHeterogeneousPedestrianImpl\n<p>Implementation of an heterogeneous pedestrian.<\/p>\nHomogeneousPedestrian2D\n<p>Implementation of a basic pedestrian in the Euclidean world.<\/p>\nHomogeneousPedestrianImpl\n<p>Implementation of a basic pedestrian.<\/p>\nOrientingCognitivePedestrian2D\n<p>A cognitive  OrientingPedestrian  in an  EuclideanPhysics2DEnvironmentWithGraph .<\/p>\nOrientingHomogeneousPedestrian2D\n<p>A homogeneous  OrientingPedestrian  in an  EuclideanPhysics2DEnvironmentWithGraph .<\/p>\nOrientingPedestrian2D\n<p>An  OrientingPedestrian  in an euclidean bidimensional space.\nThis class defines the method responsible for the creation of landmarks, which\nare represented as  Ellipse s. These can represent both the human error concerning\nthe exact position of a landmark inside the ellipse and the error concerning the\nangles formed by the connections between landmarks.\nThis class accepts an environment whose graph contains nodes which are (subclasses\nof)  ConvexPolygon s.<\/p>\nCircleNode\n<p>A  it.unibo.alchemist.model.interfaces.Node  with a circle shape meant to be added to a\n it.unibo.alchemist.model.interfaces.environments.PhysicsEnvironment .<\/p>\nIntNode\n<p>An integer node.<\/p>\nAbstractNode\n<p>This class realizes an abstract node. You may extend it to realize your own nodes.<\/p>\nEnvironmentNodeImpl\n<p>CellNodeImpl<\/p>\n<p>IntegerNode<\/p>\n<p>DoubleNode<\/p>\n<p>CircularDeformableCellImpl<\/p>\n<p>Implementation of a circular deformable cell.<\/p>\nProtelisNode\n<p>LsaNode<\/p>\n<p>This class realizes a node with LSA concentration.<\/p>\n"
-                      }]
-                    },
-                    "utils": {
-                      "ownKey": "utils",
-                      "childrenPages": {
-                        "realdistributionutil": {
-                          "ownKey": "realdistributionutil",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/implementations/utils/realdistributionutil",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/utils/realdistributionutil"
-                            },
-                            "description": "",
-                            "title": "RealDistributionUtil",
-                            "content": "<p>Utility to translate statistics names into a RealDistribution.<\/p>makeRealDistribution\n"
-                          }]
-                        },
-                        "lazymutable": {
-                          "ownKey": "lazymutable",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/implementations/utils/lazymutable",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/utils/lazymutable"
-                            },
-                            "description": "",
-                            "title": "LazyMutable",
-                            "content": "<p>A delegate allowing to lazily initialise a non-null mutable variable (= var).<\/p><init>\n<p>A delegate allowing to lazily initialise a non-null mutable variable (= var).<\/p>\ngetValue\n\nsetValue\n\n"
-                          }]
-                        },
-                        "bidimensionalgaussian": {
-                          "ownKey": "bidimensionalgaussian",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/implementations/utils/bidimensionalgaussian",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/utils/bidimensionalgaussian"
-                            },
-                            "description": "",
-                            "title": "BidimensionalGaussian",
-                            "content": "<p>A 2D gaussian function.<\/p><init>\n<p>A 2D gaussian function.<\/p>\nvalue\n\nintegral\n<p>The integral of the function.<\/p>\n"
-                          }]
-                        },
-                        "rectobstacle2d": {
-                          "ownKey": "rectobstacle2d",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/implementations/utils/rectobstacle2d",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/utils/rectobstacle2d"
-                            },
-                            "description": "",
-                            "title": "RectObstacle2D",
-                            "content": "<p>This class implements a rectangular obstacle, whose sides are parallel to the cartesian axis.<\/p>id\n<p><init><\/p>\n<p>Builds a new RectObstacle2D, given a point, the width and the height.<\/p>\ncontains\n<p>nearestIntersection<\/p>\n<p>getMinX<\/p>\n<p>next<\/p>\n<p>getMaxX<\/p>\n<p>toString<\/p>\n<p>getMinY<\/p>\n<p>getMaxY<\/p>\n"
-                          }]
-                        }
-                      },
-                      "ownPages": [{
-                        "reference": {
-                          "path": "kotlindoc",
-                          "baseUrl": "https://alchemistsimulator.github.io/latest",
-                          "fileName": "it/unibo/alchemist/model/implementations/utils",
-                          "extension": "html",
-                          "usePrettyUrl": true,
-                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/utils"
-                        },
-                        "description": "",
-                        "title": "it.unibo.alchemist.model.implementations.utils",
-                        "content": "<p>LazyMutable<\/p>\n<p>A delegate allowing to lazily initialise a non-null mutable variable (= var).<\/p>\nBidimensionalGaussian\n<p>A 2D gaussian function.<\/p>\nRectObstacle2D\n<p>This class implements a rectangular obstacle, whose sides are parallel to the cartesian axis.<\/p>\nRealDistributionUtil\n<p>Utility to translate statistics names into a RealDistribution.<\/p>\nlazyMutable\n<p>Creates an instance of  LazyMutable  with the given  initializer .<\/p>\nnextDouble\n<p>Generate a random double between the given bounds.<\/p>\ndirection\n<p>Generate a random Euclidean direction.<\/p>\nposition\n<p>Generate a random Euclidean position.<\/p>\nshuffled\n<p><a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\n"
+                        "content": "<p>AbstractOrientingPedestrian<\/p>\n<p>An abstract  OrientingPedestrian .\nThis class defines an algorithm capable of generating a pseudo-random  cognitiveMap \nbased on a  NavigationGraph  of the environment. The latter can be obtained from\n EnvironmentWithGraph s, which is the only type of environment this pedestrian can\nbe placed into. The creation of landmarks is left to subclasses via factory method.<\/p>\nCognitivePedestrian2D\n<p>Implementation of a cognitive pedestrian in the Euclidean world.<\/p>\nCognitivePedestrianImpl\n<p>Implementation of a cognitive pedestrian.<\/p>\nHeterogeneousPedestrian2D\n<p>Implementation of an heterogeneous pedestrian in the Euclidean world.<\/p>\nHeterogeneousPedestrianImpl\n<p>Implementation of an heterogeneous pedestrian.<\/p>\nHomogeneousPedestrian2D\n<p>Implementation of a basic pedestrian in the Euclidean world.<\/p>\nHomogeneousPedestrianImpl\n<p>Implementation of a basic pedestrian.<\/p>\nOrientingCognitivePedestrian2D\n<p>A cognitive  OrientingPedestrian  in an  EuclideanPhysics2DEnvironmentWithGraph .<\/p>\nOrientingPedestrian2D\n<p>An  OrientingPedestrian  in an euclidean bidimensional space.\nThis class defines the method responsible for the creation of landmarks, which\nare represented as  Ellipse s. These can represent both the human error concerning\nthe exact position of a landmark inside the ellipse and the error concerning the\nangles formed by the connections between landmarks.\nThis class accepts an environment whose graph contains nodes which are (subclasses\nof)  ConvexPolygon s.<\/p>\nCircleNode\n<p>A  it.unibo.alchemist.model.interfaces.Node  with a circle shape meant to be added to a\n it.unibo.alchemist.model.interfaces.environments.PhysicsEnvironment .<\/p>\nIntNode\n<p>An integer node.<\/p>\nAbstractNode\n<p>This class realizes an abstract node. You may extend it to realize your own nodes.<\/p>\nEnvironmentNodeImpl\n<p>CellNodeImpl<\/p>\n<p>IntegerNode<\/p>\n<p>DoubleNode<\/p>\n<p>CircularDeformableCellImpl<\/p>\n<p>Implementation of a circular deformable cell.<\/p>\nProtelisNode\n<p>LsaNode<\/p>\n<p>This class realizes a node with LSA concentration.<\/p>\n"
                       }]
                     },
                     "layers": {
@@ -8861,6 +8843,88 @@
                                 "title": "AbstractConvexPolygon",
                                 "content": "<p>An abstract  ConvexPolygon  providing a convexity test.<\/p><init>\n<p>An abstract  ConvexPolygon  providing a convexity test.<\/p>\nliesOnBoundary\n<p>Checks if a vector (= a point) lies on the polygon's boundary.<\/p>\ncontainsBoundaryIncluded\n<p>Checks if a vector (= a point) is contained in the polygon or lies on its boundary.<\/p>\ncontainsBoundaryExcluded\n<p>Checks if a vector (= a point) is contained in the polygon, boundary excluded.<\/p>\ncontains\n<p>Checks if the polygon contains a polygonal <a href=\"https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a> (i.e. without curved\nsegments). A polygonal shape is contained in a polygon if all of its points are\ncontained in (or lie on the boundary of) the latter.<\/p>\nisAdjacentTo\n<p>A polygon is adjacent to another if any of its points lies on the boundary of the other.<\/p>\nisAdjacentTo\n<p>Checks if the polygon is adjacent to a convex polygonal <a href=\"https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a>.<\/p>\nintersects\n<p>Checks if a segment intersects with the polygon, segments lying on the polygon's\nboundary are not considered to be intersecting.<\/p>\nclosestEdgeTo\n<p>Finds the edge of the polygon closest to the provided  segment , i.e. the first one\nthat would collide (= intersect) with the segment in case the polygon extended on\neach side.<\/p>\ntoString\n\ncircularPrevious\n<p>Finds the previous index with the respect to the given  index , restarting from the end if necessary.<\/p>\ncircularNext\n<p>Finds the next index with respect to the given  index , restarting from the beginning if necessary.<\/p>\nisConvex\n<p>Checks if the polygon is convex (see  ConvexPolygon ).\nIn order to be convex, a polygon must first be simple (not self-intersecting).\nAscertained that the polygon is simple, a rather easy convexity test consists\nin checking that every edge turns in the same direction (either left or right)\nwith respect to the previous one. If they all turn in the same direction, then\nthe polygon is convex. That is the definition of convexity of a polygon's boundary\nin this context.<\/p>\nisConvex\n<p>Checks if the polygon is convex, assuming that every edge apart from the specified\nones does not cause self-intersection.<\/p>\n"
                               }]
+                            },
+                            "graph": {
+                              "ownKey": "graph",
+                              "childrenPages": {
+                                "basenavigationgraph": {
+                                  "ownKey": "basenavigationgraph",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "kotlindoc",
+                                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                      "fileName": "it/unibo/alchemist/model/implementations/geometry/euclidean2d/graph/basenavigationgraph",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/graph/basenavigationgraph"
+                                    },
+                                    "description": "",
+                                    "title": "BaseNavigationGraph",
+                                    "content": "<p>An implementation of  NavigationGraph , deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<\/p><ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul><init>\n\n<init>\n<p>An implementation of  NavigationGraph , deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<\/p><ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul>\n"
+                                  }]
+                                },
+                                "directedeuclidean2dnavigationgraph": {
+                                  "ownKey": "directedeuclidean2dnavigationgraph",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "kotlindoc",
+                                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                      "fileName": "it/unibo/alchemist/model/implementations/geometry/euclidean2d/graph/directedeuclidean2dnavigationgraph",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/graph/directedeuclidean2dnavigationgraph"
+                                    },
+                                    "description": "",
+                                    "title": "DirectedEuclidean2DNavigationGraph",
+                                    "content": "<p>A directed  Euclidean2DNavigationGraph .<\/p>\n"
+                                  }]
+                                },
+                                "undirectednavigationgraph": {
+                                  "ownKey": "undirectednavigationgraph",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "kotlindoc",
+                                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                      "fileName": "it/unibo/alchemist/model/implementations/geometry/euclidean2d/graph/undirectednavigationgraph",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/graph/undirectednavigationgraph"
+                                    },
+                                    "description": "",
+                                    "title": "UndirectedNavigationGraph",
+                                    "content": "<p>An undirected unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p><init>\n<p>An undirected unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p>\n"
+                                  }]
+                                },
+                                "directednavigationgraph": {
+                                  "ownKey": "directednavigationgraph",
+                                  "ownPages": [{
+                                    "reference": {
+                                      "path": "kotlindoc",
+                                      "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                      "fileName": "it/unibo/alchemist/model/implementations/geometry/euclidean2d/graph/directednavigationgraph",
+                                      "extension": "html",
+                                      "usePrettyUrl": true,
+                                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/graph/directednavigationgraph"
+                                    },
+                                    "description": "",
+                                    "title": "DirectedNavigationGraph",
+                                    "content": "<p>A directed unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p><init>\n<p>A directed unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p>\n"
+                                  }]
+                                }
+                              },
+                              "ownPages": [{
+                                "reference": {
+                                  "path": "kotlindoc",
+                                  "baseUrl": "https://alchemistsimulator.github.io/latest",
+                                  "fileName": "it/unibo/alchemist/model/implementations/geometry/euclidean2d/graph",
+                                  "extension": "html",
+                                  "usePrettyUrl": true,
+                                  "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/graph"
+                                },
+                                "description": "",
+                                "title": "it.unibo.alchemist.model.implementations.geometry.euclidean2d.graph",
+                                "content": "<p>BaseNavigationGraph<\/p>\n<p>An implementation of  NavigationGraph , deriving from <a href=\"#\">AbstractBaseGraph<\/a>.\nThe user can specify the <a href=\"#\">GraphType<\/a> so as to obtain a custom graph (e.g. weighted or not,\ndirected or undirected, etc). <a href=\"#\">AbstractBaseGraph<\/a> guarantees deterministic ordering for\nthe collection it maintains, as stated in its api documentation.\nNote that vertices and edges are used as keys inside <a href=\"#\">AbstractBaseGraph<\/a>, so when choosing\ntheir types, you must follow these rules:<\/p><ul><li>You must follow the contract defined in java.lang.Object for both equals and hashCode.<\/li><li>In particular, if you override either equals or hashCode, you must override them both.<\/li><li>Your implementation for hashCode must produce a value which does not change over the\nlifetime of the object.\nFurther information available <a href=\"https://jgrapht.org/guide/VertexAndEdgeTypes\">here<\/a>.<\/li><\/ul>\nDirectedNavigationGraph\n<p>A directed unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p>\nUndirectedNavigationGraph\n<p>An undirected unweighted  NavigationGraph , allowing multiple edges between the\nsame pair of vertices and without self-loops (i.e. edges connecting a node to\nitself).<\/p>\nDirectedEuclidean2DNavigationGraph\n<p>A directed  Euclidean2DNavigationGraph .<\/p>\nDirectedEuclidean2DNavigationGraph\n<p>A directed  Euclidean2DNavigationGraph .<\/p>\npathExists\n<p>Checks whether a path exists between  source  and  sink .\n<a href=\"#\">DijkstraShortestPath<\/a> is used instead of <a href=\"#\">org.jgrapht.alg.connectivity.ConnectivityInspector.pathExists<\/a>,\nbecause, in case of directed graph, the latter checks whether the given vertices lay in the same weakly\nconnected component, which is not the desired behavior.\nAs unweighted graphs have a default edge weight of 1.0, shortest path algorithms can always be applied\nmeaningfully.<\/p>\n"
+                              }]
                             }
                           },
                           "ownPages": [{
@@ -8874,7 +8938,7 @@
                             },
                             "description": "",
                             "title": "it.unibo.alchemist.model.implementations.geometry.euclidean2d",
-                            "content": "<p>FieldOfView2D<\/p>\n<p>A sphere of influence representing the sight of a node in the Euclidean world.<\/p>\nInfluenceSphere2D\n<p>A sphere of influence in the Euclidean world.<\/p>\nAbstractConvexPolygon\n<p>An abstract  ConvexPolygon  providing a convexity test.<\/p>\nAwtMutableConvexPolygon\n<p> MutableConvexPolygon  partly delegated to AwtEuclidean2DShape and java.awt.geom.\nEach modification operation on this object has a time complexity of O(n), where n is\nthe number of vertices/edges.\nCollinear points are allowed.<\/p>\nAwtShapeExtension\n<p>Collection of extensions to Java AWT meant to simplify its usage as geometric engine.<\/p>\nEllipse\n<p>Adapter of <a href=\"https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Ellipse2D.html\">java.awt.geom.Ellipse2D<\/a> to  Euclidean2DConvexShape .<\/p>\nSegment2DImpl\n<p>Defines a segment from  first  to  second  in an euclidean bidimensional space.<\/p>\nit.unibo.alchemist.model.implementations.geometry.euclidean2d.navigator\n<p>fromShape<\/p>\n<p>Creates a MutableConvexPolygon from a java.awt.Shape.\nIf the Polygon could not be created (e.g. because of the\nnon-convexity of the given shape), an empty optional is\nreturned.\nEach curved segment of the shape will be considered as\na straight line.<\/p>\n"
+                            "content": "<p>AbstractConvexPolygon<\/p>\n<p>An abstract  ConvexPolygon  providing a convexity test.<\/p>\nAwtMutableConvexPolygon\n<p> MutableConvexPolygon  partly delegated to AwtEuclidean2DShape and java.awt.geom.\nEach modification operation on this object has a time complexity of O(n), where n is\nthe number of vertices/edges.\nCollinear points are allowed.<\/p>\nAwtShapeExtension\n<p>Collection of extensions to Java AWT meant to simplify its usage as geometric engine.<\/p>\nEllipse\n<p>Adapter of <a href=\"https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Ellipse2D.html\">java.awt.geom.Ellipse2D<\/a> to  Euclidean2DConvexShape .<\/p>\nFieldOfView2D\n<p>A sphere of influence representing the sight of a node in the Euclidean world.<\/p>\nInfluenceSphere2D\n<p>A sphere of influence in the Euclidean world.<\/p>\nSegment2DImpl\n<p>Defines a segment from  first  to  second  in an euclidean bidimensional space.<\/p>\nit.unibo.alchemist.model.implementations.geometry.euclidean2d.graph\n<p>it.unibo.alchemist.model.implementations.geometry.euclidean2d.navigator<\/p>\n<p>fromShape<\/p>\n<p>Creates a MutableConvexPolygon from a java.awt.Shape.\nIf the Polygon could not be created (e.g. because of the\nnon-convexity of the given shape), an empty optional is\nreturned.\nEach curved segment of the shape will be considered as\na straight line.<\/p>\n"
                           }]
                         },
                         "adimensionalshape": {
@@ -8937,7 +9001,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.geometry",
-                        "content": "<p>AbstractShapeFactory<\/p>\n<p>Base class for  GeometricTransformation  providing a standard implementation for\n GeometricShapeFactory.adimensional .<\/p>\nAdimensionalShape\n<p>A special shape which does not occupy space and does not intersect with any other, not even with itself.\nIt also ignores any transformation.<\/p>\nAwtShapeCompatible\n<p>Anything which can be represented as a <a href=\"https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a>.<\/p>\nit.unibo.alchemist.model.implementations.geometry.euclidean2d\n<p>rangeFromUnordered<\/p>\n<p>Creates a ClosedRange from a couple of unordered values.<\/p>\nfuzzyIn\n<p>Checks if a double value is fuzzy contained in a range.<\/p>\ncoincidesWith\n<p>Checks whether two ranges coincide. It's a different way of checking if they're equals,\nwhich doesn't depend on their actual implementation. Note that the way you obtain a range\nmay influence the actual class used, and you can have two coincident ranges which don't\nresult equals because of different classes.<\/p>\ncontains\n<p>Checks whether the range contains the  other  one.\nThis method is faster than checking if the range contains both of the endpoints of  other .<\/p>\nintersects\n<p>Checks whether the range intersects the  other  one.<\/p>\nintersect\n<p>Finds the intersection between two ranges, the resulting range may feature a single value\n(if the ranges only share an endpoint) or can be null, if they don't intersect at all.<\/p>\nintersectsBoundsExcluded\n<p>Checks whether two ranges intersect, excluding their bounds (i.e., excluding both\nClosedRange.start and ClosedRange.endInclusive). This means false is returned in\ncase the ranges share a single endpoint.<\/p>\nminus\n<p>Performs a subtraction between ranges. The operation can produce an empty list (e.g. if\nthe current range is contained in the  other  one), a list featuring a single element,\nor a list featuring two elements (e.g. if the current range contains the  other  one).<\/p>\nsubtractAll\n<p>Subtracts all the given ranges from the current one. See  ClosedRange.minus .<\/p>\nfindExtremeCoordsOnX\n<p>Given a non empty list of points represented as vectors, this method finds the extreme coordinates\n(i.e. min and max coordinates) on the X-axis, these are used to create the returned ClosedRange.<\/p>\nfindExtremeCoordsOnY\n<p>Given a non empty list of points represented as vectors, this method finds the extreme coordinates\n(i.e. min and max coordinates) on the Y-axis, these are used to create the returned ClosedRange.<\/p>\n"
+                        "content": "<p>AbstractShapeFactory<\/p>\n<p>Base class for  GeometricTransformation  providing a standard implementation for\n GeometricShapeFactory.adimensional .<\/p>\nAwtShapeCompatible\n<p>Anything which can be represented as a <a href=\"https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html\">java.awt.Shape<\/a>.<\/p>\nAdimensionalShape\n<p>A special shape which does not occupy space and does not intersect with any other, not even with itself.\nIt also ignores any transformation.<\/p>\nit.unibo.alchemist.model.implementations.geometry.euclidean2d\n"
                       }]
                     },
                     "reactions": {
@@ -9760,7 +9824,7 @@
                             },
                             "description": "",
                             "title": "Seek2D",
-                            "content": "<p> Seek  behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<\/p><init>\n<p> Seek  behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<\/p>\ninterpolatePositions\n<p>Next relative position.<\/p>\n"
+                            "content": "<p> Seek  behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<\/p>environment\n<p><init><\/p>\n<p><init><\/p>\n<p> Seek  behavior in a bidimensional environment. The actions performed are more\nsophisticated and allow the pedestrian to try to avoid other agents on its path.\nThis behavior is restricted to two dimensions because some geometry utils available\nonly in 2D are required to implement it.<\/p>\ninterpolatePositions\n<p>Next relative position.<\/p>\ncloneAction\n"
                           }]
                         },
                         "reachdestination": {
@@ -10130,7 +10194,7 @@
                             },
                             "description": "",
                             "title": "Wander",
-                            "content": "<p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<\/p><init>\n<p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<\/p>\ninterpolatePositions\n<p>Next relative position.<\/p>\n"
+                            "content": "<p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<\/p>randomGenerator\n<pre><code>    the simulation {@link RandomGenerator}.<\/code><\/pre>\noffset\n<pre><code>    the distance from the pedestrian position of the center of the circle.<\/code><\/pre>\nradius\n<pre><code>    the radius of the circle.<\/code><\/pre>\n<init>\n<p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point\nof a circumference at a given distance and with a given radius from the current pedestrian position.<\/p>\ninterpolatePositions\n<p>Next relative position.<\/p>\ncloneAction\n\n"
                           }]
                         },
                         "abstractmovenode": {
@@ -10434,7 +10498,7 @@
                             },
                             "description": "",
                             "title": "Seek",
-                            "content": "<p>Move the pedestrian towards the target position as fast as possible.<\/p><init>\n<p>Move the pedestrian towards the target position as fast as possible.<\/p>\n"
+                            "content": "<p>Move the pedestrian towards the target position as fast as possible.<\/p><init>\n\n<init>\n<p>Move the pedestrian towards the target position as fast as possible.<\/p>\ncloneAction\n\n"
                           }]
                         },
                         "randompolarization": {
@@ -10546,7 +10610,7 @@
                             },
                             "description": "",
                             "title": "Arrive",
-                            "content": "<p>Move the agent towards a target position.\nIt is similar to Seek but it attempts to arrive at the target position with a zero velocity.<\/p><init>\n<p>Move the agent towards a target position.\nIt is similar to Seek but it attempts to arrive at the target position with a zero velocity.<\/p>\n"
+                            "content": "<p>Move the agent towards a target position.\nIt is similar to Seek but it attempts to arrive at the target position with a zero velocity.<\/p>decelerationRadius\n<pre><code>    the distance from which the pedestrian starts to decelerate.<\/code><\/pre>\narrivalTolerance\n<pre><code>    the distance at which the pedestrian is considered arrived to the target.<\/code><\/pre>\ncoordinates\n<pre><code>    the coordinates of the position the pedestrian moves towards.<\/code><\/pre>\n<init>\n\n<init>\n<p>Move the agent towards a target position.\nIt is similar to Seek but it attempts to arrive at the target position with a zero velocity.<\/p>\ncloneAction\n\n"
                           }]
                         },
                         "obstacleavoidance": {
@@ -10610,7 +10674,7 @@
                             },
                             "description": "",
                             "title": "SteeringActionWithTargetImpl",
-                            "content": "<p>Implementation of a generic  SteeringActionWithTarget  in a vector space.<\/p><init>\n<p>Implementation of a generic  SteeringActionWithTarget  in a vector space.<\/p>\ncloneAction\n\ninterpolatePositions\n<p>Next relative position.<\/p>\nnextPosition\n<p>The position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.<\/p>\ntarget\n<p>The position the owner of this action moves towards, in absolute coordinates.<\/p>\n"
+                            "content": "<p>Implementation of a generic  SteeringActionWithTarget  in a vector space.<\/p>pedestrian\n<pre><code>    the owner of this action.<\/code><\/pre>\ntarget\n<pre><code>    the strategy used to compute the next target.<\/code><\/pre>\nspeed\n<pre><code>    the speed selection strategy.<\/code><\/pre>\nrouting\n<pre><code>    the routing strategy.<\/code><\/pre>\n<init>\n<p>Implementation of a generic  SteeringActionWithTarget  in a vector space.<\/p>\ncloneAction\n\ninterpolatePositions\n<p>Next relative position.<\/p>\nnextPosition\n<p>The position the owner of this action moves to when it is executed,\nin relative coordinates with respect to its current position.<\/p>\ntarget\n<p>The position the owner of this action moves towards, in absolute coordinates.<\/p>\ngetNode\n\nrequireNodeTypeAndProduce\n\n"
                           }]
                         },
                         "abstractlocalaction": {
@@ -10674,7 +10738,7 @@
                             },
                             "description": "",
                             "title": "AvoidFlowField",
-                            "content": "<p>Move the pedestrian towards positions of the environment with a low concentration of the target molecule.<\/p>pedestrian\n<pre><code>    the owner of this action.<\/code><\/pre>\n<init>\n<p>Move the pedestrian towards positions of the environment with a low concentration of the target molecule.<\/p>\ncloneAction\n\nnextPosition\n\nselectPosition\n<p>Selects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.<\/p>\n"
+                            "content": "<p>Move the pedestrian towards positions of the environment with a low concentration of the target molecule.<\/p>pedestrian\n<pre><code>    the owner of this action.<\/code><\/pre>\nviewDepth\n<pre><code>    the depth of view of the pedestrian, defaults to infinity.<\/code><\/pre>\n<init>\n<p>Move the pedestrian towards positions of the environment with a low concentration of the target molecule.<\/p>\ncloneAction\n\nnextPosition\n\nselectPosition\n<p>Selects a position from a list, given the layer and its concentration in the current position\nof the pedestrian.\nThis function contains the policy concerning how to select the most desirable position.<\/p>\n"
                           }]
                         },
                         "addjunctionincell": {
@@ -11417,22 +11481,6 @@
                             "content": "<p>accessPointId<\/p>\n<p>the id of the access point.<\/p>\n<init>\n\ncomputeNeighborhood\n\n"
                           }]
                         },
-                        "euclideandistance": {
-                          "ownKey": "euclideandistance",
-                          "ownPages": [{
-                            "reference": {
-                              "path": "kotlindoc",
-                              "baseUrl": "https://alchemistsimulator.github.io/latest",
-                              "fileName": "it/unibo/alchemist/model/implementations/linkingrules/euclideandistance",
-                              "extension": "html",
-                              "usePrettyUrl": true,
-                              "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/linkingrules/euclideandistance"
-                            },
-                            "description": "",
-                            "title": "EuclideanDistance",
-                            "content": "<p><init><\/p>\n"
-                          }]
-                        },
                         "linknodeswithinroutingrange": {
                           "ownKey": "linknodeswithinroutingrange",
                           "ownPages": [{
@@ -11477,7 +11525,7 @@
                         },
                         "description": "",
                         "title": "it.unibo.alchemist.model.implementations.linkingrules",
-                        "content": "<p>ConnectToAccessPoint<\/p>\n<p>ConnectViaAccessPoint<\/p>\n<p>FullyConnected<\/p>\n<p>This rule connects each and every node to each and every other.<\/p>\nAdaptiveRange\n<p>This linking rule dynamically searches for the best radius for each device, in such a way that it connects to a certain number of devices.<\/p>\nConnectWithinDistance\n<p>LinkingRule which connects nodes whose euclidean distance is shorter than a given radius.<\/p>\nEuclideanDistance\n<p>ConditionalClosestN<\/p>\n<p>A <code> ClosestN <\/code> rule that also checks that a <code> Molecule <\/code> has a specific concentration before allowing the connection.<\/p>\nObstaclesBreakConnection\n<p>Similar to <code> ConnectWithinDistance <\/code>, but if the environment has obstacles, the links are removed.<\/p>\nAbstractLocallyConsistentLinkingRule\n<p>NoLinks<\/p>\n<p>This rule guarantees that no links are created at all.<\/p>\nClosestN\n<p>Non local-consistent rule that connect the closest N nodes together. Two nodes get connected if either one belongs to the set of the ten devices closest to the other.<\/p>\nConnectionBeam\n<p>Connects two nodes if, throwing a beam from one to the other, there exists at least one path entirely inside the beam that connects the two nodes. This rule is ideal for environments with obstacles, where the user wants some tolerance in connection breaking.<\/p>\nSelectiveAdaptiveRange\n<p>LinkNodesWithinRoutingRange<\/p>\n"
+                        "content": "<p>ConnectToAccessPoint<\/p>\n<p>ConnectViaAccessPoint<\/p>\n<p>FullyConnected<\/p>\n<p>This rule connects each and every node to each and every other.<\/p>\nConnectionBeam\n<p>Connects two nodes if, throwing a beam from one to the other, there exists at least one path entirely inside the beam that connects the two nodes. This rule is ideal for environments with obstacles, where the user wants some tolerance in connection breaking.<\/p>\nAdaptiveRange\n<p>This linking rule dynamically searches for the best radius for each device, in such a way that it connects to a certain number of devices.<\/p>\nConnectWithinDistance\n<p>LinkingRule which connects nodes whose euclidean distance is shorter than a given radius.<\/p>\nConditionalClosestN\n<p>A <code> ClosestN <\/code> rule that also checks that a <code> Molecule <\/code> has a specific concentration before allowing the connection.<\/p>\nObstaclesBreakConnection\n<p>Similar to <code> ConnectWithinDistance <\/code>, but if the environment has obstacles, the links are removed.<\/p>\nAbstractLocallyConsistentLinkingRule\n<p>NoLinks<\/p>\n<p>This rule guarantees that no links are created at all.<\/p>\nClosestN\n<p>Non local-consistent rule that connect the closest N nodes together. Two nodes get connected if either one belongs to the set of the ten devices closest to the other.<\/p>\nSelectiveAdaptiveRange\n<p>LinkNodesWithinRoutingRange<\/p>\n"
                       }]
                     }
                   }
@@ -11510,7 +11558,7 @@
                 },
                 "description": "",
                 "title": "it.unibo.alchemist.model",
-                "content": "<p>BiochemistryIncarnation<\/p>\n<p>ProtelisIncarnation<\/p>\n<p>SAPEREIncarnation<\/p>\n<p>it.unibo.alchemist.model.cognitiveagents.characteristics<\/p>\n<p>it.unibo.alchemist.model.implementations.actions<\/p>\n<p>it.unibo.alchemist.model.implementations.conditions<\/p>\n<p>it.unibo.alchemist.model.implementations.groups<\/p>\n<p>it.unibo.alchemist.model.implementations.nodes<\/p>\n<p>it.unibo.alchemist.model.implementations.reactions<\/p>\n<p>it.unibo.alchemist.model.implementations.utils<\/p>\n<p>it.unibo.alchemist.model.interfaces<\/p>\n<p>it.unibo.alchemist.model.implementations.environments<\/p>\n<p>it.unibo.alchemist.model.implementations.geometry<\/p>\n<p>it.unibo.alchemist.model.implementations.graph<\/p>\n<p>it.unibo.alchemist.model.implementations.layers<\/p>\n<p>it.unibo.alchemist.model.implementations.linkingrules<\/p>\n<p>it.unibo.alchemist.model.implementations.movestrategies<\/p>\n<p>it.unibo.alchemist.model.implementations.neighborhoods<\/p>\n<p>it.unibo.alchemist.model.implementations.terminators<\/p>\n<p>it.unibo.alchemist.model.smartcam<\/p>\n<p>it.unibo.alchemist.model.implementations.times<\/p>\n<p>it.unibo.alchemist.model.implementations.routes<\/p>\n<p>it.unibo.alchemist.model.implementations.molecules<\/p>\n<p>it.unibo.alchemist.model.implementations.timedistributions<\/p>\n<p>it.unibo.alchemist.model.implementations.positions<\/p>\n<p>it.unibo.alchemist.model.implementations.concentrations<\/p>\n<p>randomAngle<\/p>\n<p>Generates a random value in 0..2π.<\/p>\nplus\n<p>Plus operator for  Time  and Double.<\/p>\nminus\n<p>Minus operator for  Time  and Double.<\/p>\n"
+                "content": "<p>BiochemistryIncarnation<\/p>\n<p>ProtelisIncarnation<\/p>\n<p>SAPEREIncarnation<\/p>\n<p>it.unibo.alchemist.model.cognitiveagents.characteristics<\/p>\n<p>it.unibo.alchemist.model.implementations.actions<\/p>\n<p>it.unibo.alchemist.model.implementations.conditions<\/p>\n<p>it.unibo.alchemist.model.implementations.groups<\/p>\n<p>it.unibo.alchemist.model.implementations.nodes<\/p>\n<p>it.unibo.alchemist.model.implementations.reactions<\/p>\n<p>it.unibo.alchemist.model.interfaces<\/p>\n<p>it.unibo.alchemist.model.math<\/p>\n<p>it.unibo.alchemist.model.implementations.environments<\/p>\n<p>it.unibo.alchemist.model.implementations.geometry<\/p>\n<p>it.unibo.alchemist.model.implementations.movestrategies<\/p>\n<p>it.unibo.alchemist.model.implementations.layers<\/p>\n<p>it.unibo.alchemist.model.implementations.linkingrules<\/p>\n<p>it.unibo.alchemist.model.implementations.neighborhoods<\/p>\n<p>it.unibo.alchemist.model.implementations.terminators<\/p>\n<p>it.unibo.alchemist.model.smartcam<\/p>\n<p>it.unibo.alchemist.model.implementations.obstacles<\/p>\n<p>it.unibo.alchemist.model.implementations.positions<\/p>\n<p>it.unibo.alchemist.model.implementations.times<\/p>\n<p>it.unibo.alchemist.model.implementations.routes<\/p>\n<p>it.unibo.alchemist.model.implementations.molecules<\/p>\n<p>it.unibo.alchemist.model.implementations.timedistributions<\/p>\n<p>it.unibo.alchemist.model.implementations.concentrations<\/p>\n<p>randomAngle<\/p>\n<p>Generates a random value in 0..2π.<\/p>\nplus\n<p>Plus operator for  Time  and Double.<\/p>\nminus\n<p>Minus operator for  Time  and Double.<\/p>\n"
               }]
             },
             "protelis": {
@@ -11575,7 +11623,7 @@
             },
             "description": "",
             "title": "it.unibo.alchemist",
-            "content": "<p>ClassPathScanner<\/p>\n<p>An utility class providing support for loading arbitrary subclasses available in the classpath.<\/p>\nAlchemist\n<p>Starts Alchemist.<\/p>\nAlchemistExecutionOptions\n<p>Alchemist options provided by the command line.<\/p>\nSupportedIncarnations\n<p>This enum interfaces the generic components of the graphical interface with the specific incarnation details.<\/p>\nit.unibo.alchemist.core.implementations\n<p>it.unibo.alchemist.launch<\/p>\n<p>it.unibo.alchemist.model<\/p>\n<p>it.unibo.alchemist.boundary.util<\/p>\n<p>it.unibo.alchemist.cli<\/p>\n<p>it.unibo.alchemist.grid.cluster<\/p>\n<p>it.unibo.alchemist.grid.util<\/p>\n<p>it.unibo.alchemist.grid.exceptions<\/p>\n<p>it.unibo.alchemist.grid.simulation<\/p>\n<p>it.unibo.alchemist.grid.config<\/p>\n<p>it.unibo.alchemist.exceptions<\/p>\n<p>it.unibo.alchemist.biochemistrydsl<\/p>\n<p>it.unibo.alchemist.protelis<\/p>\n<p>it.unibo.alchemist.boundary.interfaces<\/p>\n<p>it.unibo.alchemist.core.interfaces<\/p>\n<p>it.unibo.alchemist.loader<\/p>\n<p>it.unibo.alchemist.boundary.gpsload.api<\/p>\n<p>it.unibo.alchemist.boundary.gpsload.impl<\/p>\n<p>it.unibo.alchemist.utils<\/p>\n<p>it.unibo.alchemist.expressions.parser<\/p>\n<p>it.unibo.alchemist.expressions.implementations<\/p>\n<p>it.unibo.alchemist.expressions.interfaces<\/p>\n<p>it.unibo.alchemist.boundary.l10n<\/p>\n<p>it.unibo.alchemist.boundary.gui<\/p>\n<p>it.unibo.alchemist.boundary.wormhole.interfaces<\/p>\n<p>it.unibo.alchemist.boundary.wormhole.implementation<\/p>\n<p>it.unibo.alchemist.boundary.monitors<\/p>\n<p>unfold<\/p>\n<p>The opposite of <a href=\"#\">fold<\/a>.<\/p>\ntoPosition\n<p>Tries to convert a concentration  T  into a valid position of type  P  descriptor.\nTypes are bound to the  environment  types.<\/p>\n"
+            "content": "<p>ClassPathScanner<\/p>\n<p>An utility class providing support for loading arbitrary subclasses available in the classpath.<\/p>\nAlchemist\n<p>Starts Alchemist.<\/p>\nAlchemistExecutionOptions\n<p>Alchemist options provided by the command line.<\/p>\nSupportedIncarnations\n<p>This enum interfaces the generic components of the graphical interface with the specific incarnation details.<\/p>\nit.unibo.alchemist.core.implementations\n<p>it.unibo.alchemist.launch<\/p>\n<p>it.unibo.alchemist.model<\/p>\n<p>it.unibo.alchemist.boundary.util<\/p>\n<p>it.unibo.alchemist.cli<\/p>\n<p>it.unibo.alchemist.grid.cluster<\/p>\n<p>it.unibo.alchemist.grid.util<\/p>\n<p>it.unibo.alchemist.grid.exceptions<\/p>\n<p>it.unibo.alchemist.grid.simulation<\/p>\n<p>it.unibo.alchemist.grid.config<\/p>\n<p>it.unibo.alchemist.exceptions<\/p>\n<p>it.unibo.alchemist.biochemistrydsl<\/p>\n<p>it.unibo.alchemist.protelis<\/p>\n<p>it.unibo.alchemist.boundary.interfaces<\/p>\n<p>it.unibo.alchemist.core.interfaces<\/p>\n<p>it.unibo.alchemist.loader<\/p>\n<p>it.unibo.alchemist.boundary.gpsload.api<\/p>\n<p>it.unibo.alchemist.boundary.gpsload.impl<\/p>\n<p>it.unibo.alchemist.utils<\/p>\n<p>it.unibo.alchemist.expressions.parser<\/p>\n<p>it.unibo.alchemist.expressions.implementations<\/p>\n<p>it.unibo.alchemist.expressions.interfaces<\/p>\n<p>it.unibo.alchemist.boundary.l10n<\/p>\n<p>it.unibo.alchemist.boundary.gui<\/p>\n<p>it.unibo.alchemist.boundary.wormhole.interfaces<\/p>\n<p>it.unibo.alchemist.boundary.wormhole.implementation<\/p>\n<p>it.unibo.alchemist.boundary.monitors<\/p>\n<p>unfold<\/p>\n<p>The opposite of <a href=\"#\">fold<\/a>.<\/p>\ntoPosition\n<p>Tries to convert a concentration  T  into a valid position of type  P  descriptor.\nTypes are bound to the  environment  types.<\/p>\nnextDouble\n<p>Generate a random double between the given bounds.<\/p>\nrangeFromUnordered\n<p>Creates a ClosedRange from a couple of unordered values.<\/p>\nfuzzyIn\n<p>Checks if a double value is fuzzy contained in a range.<\/p>\nshuffled\n<p><a href=\"https://bit.ly/33Z3xFu\">Fisher\u2013Yates shuffle algorithm<\/a>\nusing Apache random number generator.\nMore information <a href=\"https://en.wikipedia.org/wiki/Fisher-Yates_shuffle\">on Wikipedia<\/a>.<\/p>\ncoincidesWith\n<p>Checks whether two ranges coincide. It's a different way of checking if they're equals,\nwhich doesn't depend on their actual implementation. Note that the way you obtain a range\nmay influence the actual class used, and you can have two coincident ranges which don't\nresult equals because of different classes.<\/p>\ncontains\n<p>Checks whether the range contains the  other  one.\nThis method is faster than checking if the range contains both of the endpoints of  other .<\/p>\nintersects\n<p>Checks whether the range intersects the  other  one.<\/p>\nintersect\n<p>Finds the intersection between two ranges, the resulting range may feature a single value\n(if the ranges only share an endpoint) or can be null, if they don't intersect at all.<\/p>\nintersectsBoundsExcluded\n<p>Checks whether two ranges intersect, excluding their bounds (i.e., excluding both\nClosedRange.start and ClosedRange.endInclusive). This means false is returned in\ncase the ranges share a single endpoint.<\/p>\nminus\n<p>Performs a subtraction between ranges. The operation can produce an empty list (e.g. if\nthe current range is contained in the  other  one), a list featuring a single element,\nor a list featuring two elements (e.g. if the current range contains the  other  one).<\/p>\nsubtractAll\n<p>Subtracts all the given ranges from the current one. See  ClosedRange.minus .<\/p>\nfindExtremeCoordsOnX\n<p>Given a non empty list of points represented as vectors, this method finds the extreme coordinates\n(i.e. min and max coordinates) on the X-axis, these are used to create the returned ClosedRange.<\/p>\nfindExtremeCoordsOnY\n<p>Given a non empty list of points represented as vectors, this method finds the extreme coordinates\n(i.e. min and max coordinates) on the Y-axis, these are used to create the returned ClosedRange.<\/p>\n"
           }]
         }}
       }}

@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="0275fd0197d07d0aed4a26d9d62a7aca5a6f4337">
+    <div class="sourcedoc-section section-element" id="59532324f77bd475b6f27bff687b88b87f4770a9">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class SteeringActionWithTargetImpl&lt;T, P&gt; : AbstractConfigurableMoveNode&lt;T, P&gt;, SteeringActionWithTarget&lt;T, P&gt;</code>
+        <code>open class SteeringActionWithTargetImpl&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : AbstractConfigurableMoveNode&lt;T, P&gt;, SteeringActionWithTarget&lt;T, P&gt;</code>
       </p>
 
       
@@ -166,6 +166,70 @@
       
         
           
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="626b63eefa463a58bc777b74fe8b1151adc0d873">
+        <td class="sourcedoc-section section-signature">
+          <code>protected pedestrian: Pedestrian&lt;T, P, A&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the owner of this action.</code></pre>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="07bd5c76e9307e28083a1124845f3c45f24220d3">
+        <td class="sourcedoc-section section-signature">
+          <code>protected target: TargetSelectionStrategy&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the strategy used to compute the next target.</code></pre>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="be86cead5e11918a8234f40810682db409e02355">
+        <td class="sourcedoc-section section-signature">
+          <code>protected speed: SpeedSelectionStrategy&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the speed selection strategy.</code></pre>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="626a86d6e4875c80cbb065da5ea278989ed44df0">
+        <td class="sourcedoc-section section-signature">
+          <code>protected routing: RoutingStrategy&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the routing strategy.</code></pre>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
 <div class="sourcedoc-section section-root section-level-2" id="constructors">
 
 
@@ -174,12 +238,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="251b245fb0f41b84c43620377eab27d3c6fc4e9d">
+    <div class="sourcedoc-section section-element" id="87e5cec62c830cff92b217ab33112c10c08949d2">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T&gt;, target: TargetSelectionStrategy&lt;P&gt;, speed: SpeedSelectionStrategy&lt;P&gt;, routing: RoutingStrategy&lt;P&gt;)</code>
+        <code>constructor(environment: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T, P, A&gt;, target: TargetSelectionStrategy&lt;P&gt;, speed: SpeedSelectionStrategy&lt;P&gt;, routing: RoutingStrategy&lt;P&gt;)</code>
       </p>
 
       
@@ -191,7 +255,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="8697ed21dbcfd71fc5bccdde7e9947532a2a988f">
+<div class="sourcedoc-section section-root section-level-3" id="f42eb499f284adb95c62ef8fd829ce0041367641">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -206,9 +270,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="3e0a2c083ff5b8c0eb373be1a9a6b5948ced38d9">
+      <tr class="sourcedoc-section section-element" id="b05772bbcfef0df0751eddcf829a82d4411da28a">
         <td class="sourcedoc-section section-signature">
-          <code>env: Environment&lt;T, P&gt;</code>
+          <code>environment: Environment&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the environment inside which the pedestrian moves.</code></pre>
@@ -225,9 +289,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9f4fd9a1048d98d1647540d23605bcd7e752bfca">
+      <tr class="sourcedoc-section section-element" id="18496866fa3896ffbc38f96989f5f20bf8e0c053">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: Pedestrian&lt;T&gt;</code>
+          <code>pedestrian: Pedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the owner of this action.</code></pre>
@@ -289,12 +353,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="1c95e3eaa99bc976af822efa3254e0e9b5846421">
+    <div class="sourcedoc-section section-element" id="233f887cc9a0899408680ba91c10e6f2760c1453">
       
       <h3 class="sourcedoc-section element-name">cloneAction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun cloneAction(n: Node&lt;T&gt;, r: Reaction&lt;T&gt;): SteeringActionWithTargetImpl&lt;T, P&gt;</code>
+        <code>open fun cloneAction(n: Node&lt;T&gt;, r: Reaction&lt;T&gt;): SteeringActionWithTargetImpl&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -305,7 +369,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="ed3a37cfd0baf8a95c8656d60d53f91e3a703103">
+<div class="sourcedoc-section section-root section-level-3" id="d1e2beb8b2b7613237ce84d60603f4fe93bf14e8">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -347,7 +411,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="19abb2d4cbe301c9cfb3fe6552f5d1ef33ded91b">
+<div class="sourcedoc-section section-root section-level-3" id="9e2dead549e23375bfa80c62cea7bf92dce69a91">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -362,9 +426,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="cd7b2e309174078d3090772a5eff89e97adaa668">
+      <tr class="sourcedoc-section section-element" id="714079f495d7356b4c0324f1f78168b0389f03ef">
         <td class="sourcedoc-section section-signature">
-          <code>SteeringActionWithTargetImpl&lt;T, P&gt;</code>
+          <code>SteeringActionWithTargetImpl&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -573,6 +637,150 @@ in relative coordinates with respect to its current position.</p>
       <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
         <td class="sourcedoc-section section-signature">
           <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="ef8fb13e8e75a6322e653ddaf6baa197964bf773">
+      
+      <h3 class="sourcedoc-section element-name">getNode</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun getNode(): Pedestrian&lt;T, P, A&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c9be145796ffc2fff90b131580773ea0a1b6a740">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="fbbdc9daa474724aea46f976171a6400ceed5e65">
+        <td class="sourcedoc-section section-signature">
+          <code>Pedestrian&lt;T, P, A&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="9a0ef36d6201fe4e8f25b46383afca3c5d387402">
+      
+      <h3 class="sourcedoc-section element-name">requireNodeTypeAndProduce</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>protected inline fun &lt;N : Node&lt;*&gt;, S : SteeringActionWithTargetImpl&lt;T, P, A&gt;&gt; requireNodeTypeAndProduce(node: Node&lt;*&gt;, builder: (N)-&gt;S): S</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="cf8bb682f7c83d53b6e5775801cd5a9970ef9eaa">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="229d6b62e1362e75e16735eeec791100f643b03f">
+        <td class="sourcedoc-section section-signature">
+          <code>node: Node&lt;*&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="c434c1b771d044c7fd6f3cba0723fdca237a8d91">
+        <td class="sourcedoc-section section-signature">
+          <code>builder: (N)-&gt;S</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9d5122e8c957dcb5d72b25093afd3b76427580bf">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="02aa629c8b16cd17a44f3a0efec2feed43937642">
+        <td class="sourcedoc-section section-signature">
+          <code>S</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -926,7 +1134,7 @@ in relative coordinates with respect to its current position.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

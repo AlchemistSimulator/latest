@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="ae5b7da2831275edf8052c5e08d449217f41709b">
+    <div class="sourcedoc-section section-element" id="2b5b5521cf89652a6ee2daba7268203c9587526f">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class AvoidFlowField&lt;P&gt; : FlowFieldSteeringAction&lt;P&gt;</code>
+        <code>open class AvoidFlowField: FlowFieldSteeringAction</code>
       </p>
 
       
@@ -191,6 +191,16 @@
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="fc18445db23281fa40ac6d5fc147086c6d95d9fe">
+        <td class="sourcedoc-section section-signature">
+          <code>protected viewDepth: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the depth of view of the pedestrian, defaults to infinity.</code></pre>
+
+        </td>
+      </tr>
+      
       </tbody>
     </table>
   </div>
@@ -208,12 +218,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="8d2a701d837520e1f1273b9c7bc5188c06cfe85a">
+    <div class="sourcedoc-section section-element" id="e87190dd642d5492cbaaa3b9d2f4a33e0a00ebc8">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(environment: EuclideanEnvironment&lt;Number, P&gt;, reaction: Reaction&lt;Number&gt;, pedestrian: Pedestrian2D&lt;Number&gt;, targetMolecule: Molecule, viewDepth: Double)</code>
+        <code>constructor(environment: Euclidean2DEnvironment&lt;Number&gt;, reaction: Reaction&lt;Number&gt;, pedestrian: Pedestrian2D&lt;Number&gt;, targetMolecule: Molecule, viewDepth: Double)</code>
       </p>
 
       
@@ -225,7 +235,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="b34b27abab6d3938f91bc9d769482cdb400cb102">
+<div class="sourcedoc-section section-root section-level-3" id="a9a954cce56d0a305151819dbc9fd1c4ef3f3c02">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -240,9 +250,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="013fe84191e2a8ac4a505c7ca21487eb696c6fe2">
+      <tr class="sourcedoc-section section-element" id="66d0fcd5a057302b0446568b708b0f0e2f0e711f">
         <td class="sourcedoc-section section-signature">
-          <code>environment: EuclideanEnvironment&lt;Number, P&gt;</code>
+          <code>environment: Euclidean2DEnvironment&lt;Number&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the environment inside which the pedestrian moves.</code></pre>
@@ -314,12 +324,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="c2c0dc627a5090c717a080f51a84785b36a54c1b">
+    <div class="sourcedoc-section section-element" id="56042616491c6d60b4c16620c35f1881b7e78506">
       
       <h3 class="sourcedoc-section element-name">cloneAction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun cloneAction(n: Node&lt;Number&gt;, r: Reaction&lt;Number&gt;): Action&lt;Number&gt;</code>
+        <code>open fun cloneAction(n: Node&lt;Number&gt;, r: Reaction&lt;Number&gt;): AvoidFlowField</code>
       </p>
 
       
@@ -330,7 +340,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="0cdb8769068b6556a26883ec00a09eb06bc8f087">
+<div class="sourcedoc-section section-root section-level-3" id="fe6ed83cb7d9ac0477cc6950228b95ec9a3e1da6">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -372,7 +382,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="8fe5e6003240c16cb28b5f3e22603f4d77541d7b">
+<div class="sourcedoc-section section-root section-level-3" id="4b89c65c8a0a1a3627c8fee1bd7d6dad47b649ea">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -387,9 +397,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="ec50fc5f125aab75ece95dfb256fd9713f05b3e2">
+      <tr class="sourcedoc-section section-element" id="1d8c6d5d026095900ddd8f74fb3d98578f79cd9b">
         <td class="sourcedoc-section section-signature">
-          <code>Action&lt;Number&gt;</code>
+          <code>AvoidFlowField</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -407,12 +417,12 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="2d14c11d671f530d7970a7dab1700656f04e0417">
+    <div class="sourcedoc-section section-element" id="0c27cd03e54f887f60dbb1ffacc93b336c39783e">
       
       <h3 class="sourcedoc-section element-name">nextPosition</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun nextPosition(): P</code>
+        <code>open fun nextPosition(): Euclidean2DPosition</code>
       </p>
 
       
@@ -423,7 +433,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="3b9eb99e9c7585f8734d75e288d642b3b1ac818f">
+<div class="sourcedoc-section section-root section-level-3" id="c6ed1cecd0bc67f1df7ab468d7988309ba65a516">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -438,9 +448,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+      <tr class="sourcedoc-section section-element" id="74618a2e873e80a960348cbaf6e96932fc47d169">
         <td class="sourcedoc-section section-signature">
-          <code>P</code>
+          <code>Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -458,12 +468,12 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="32aa2e57a91e82659f8cfd88e59fdba4e7580254">
+    <div class="sourcedoc-section section-element" id="0e6cff483a792190204ead69a33b201b35019d9f">
       
       <h3 class="sourcedoc-section element-name">selectPosition</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun Sequence<P>&lt;P&gt;.selectPosition(layer: Layer&lt;Number, P&gt;, currentConcentration: Double): P</code>
+        <code>open fun Sequence<Euclidean2DPosition>&lt;Euclidean2DPosition&gt;.selectPosition(layer: Layer&lt;Number, Euclidean2DPosition&gt;, currentConcentration: Double): Euclidean2DPosition</code>
       </p>
 
       
@@ -477,7 +487,7 @@ This function contains the policy concerning how to select the most desirable po
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="508b226e2789a403a3b7161ae4679188b05c4564">
+<div class="sourcedoc-section section-root section-level-3" id="8680d3e0178eb586a58e1c03dc03ccba1f0e75d5">
 
 
   <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
@@ -492,9 +502,9 @@ This function contains the policy concerning how to select the most desirable po
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="c839b5509acef0df4f6bff1ed2fd2e39ea33d533">
+      <tr class="sourcedoc-section section-element" id="f06f23f0fbc2becd2941b22cb69057fa1770b2a7">
         <td class="sourcedoc-section section-signature">
-          <code>Sequence<P>&lt;P&gt;</code>
+          <code>Sequence<Euclidean2DPosition>&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -510,7 +520,7 @@ This function contains the policy concerning how to select the most desirable po
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7513a2eb7597cef40d4f98378300844a540f6646">
+<div class="sourcedoc-section section-root section-level-3" id="dfc45dca0fde19f8ef45cf65612173b2a10569f5">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -525,9 +535,9 @@ This function contains the policy concerning how to select the most desirable po
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="807d7d856a220a29f94becca86915dd0712f2de2">
+      <tr class="sourcedoc-section section-element" id="f1bc4ab17a959bee4323c338da482a34f533d81a">
         <td class="sourcedoc-section section-signature">
-          <code>layer: Layer&lt;Number, P&gt;</code>
+          <code>layer: Layer&lt;Number, Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -552,7 +562,7 @@ This function contains the policy concerning how to select the most desirable po
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="4e48400e82e1824e29020952ea62c161d616288a">
+<div class="sourcedoc-section section-root section-level-3" id="79057f3a4760704b608d6b89a01059279186e02e">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -567,9 +577,9 @@ This function contains the policy concerning how to select the most desirable po
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+      <tr class="sourcedoc-section section-element" id="74618a2e873e80a960348cbaf6e96932fc47d169">
         <td class="sourcedoc-section section-signature">
-          <code>P</code>
+          <code>Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -923,7 +933,7 @@ This function contains the policy concerning how to select the most desirable po
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

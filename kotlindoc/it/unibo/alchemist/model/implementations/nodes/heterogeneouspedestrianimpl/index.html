@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="8fdf657be3893970d189ef8afa3c85ababd964b0">
+    <div class="sourcedoc-section section-element" id="1ad6b3a49f4c6e8e1bbce980be2abe8e0455da8b">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class HeterogeneousPedestrianImpl&lt;T, P : Position&lt;P&gt;&gt; : HomogeneousPedestrianImpl&lt;T, P&gt;, HeterogeneousPedestrian&lt;T&gt;</code>
+        <code>open class HeterogeneousPedestrianImpl&lt;T, P, A : GeometricTransformation&lt;P&gt;, F : GeometricShapeFactory&lt;P, A&gt;&gt; : HomogeneousPedestrianImpl&lt;T, P, A, F&gt;, HeterogeneousPedestrian&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -248,12 +248,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="c51f9fd17dba371a695252c7ce7981dc3779235d">
+    <div class="sourcedoc-section section-element" id="3890d588df923fa45fc4d9cfcb5c4d4b316a7642">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: Environment&lt;T, P&gt;, rg: RandomGenerator, age: Age, gender: Gender, group: PedestrianGroup&lt;T&gt;?)</code>
+        <code>constructor(environment: PhysicsEnvironment&lt;T, P, A, F&gt;, randomGenerator: RandomGenerator, age: Age, gender: Gender, group: PedestrianGroup&lt;T, P, A&gt;?)</code>
       </p>
 
       
@@ -265,7 +265,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="952c7cfdca2411c9e54066a123db78c37c1d725a">
+<div class="sourcedoc-section section-root section-level-3" id="949b452f654860986803e5b1273be26d9bc9b2e1">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -280,9 +280,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="3e0a2c083ff5b8c0eb373be1a9a6b5948ced38d9">
+      <tr class="sourcedoc-section section-element" id="cf4413ab6cd603305ddc8c7beecfac1ffc71a660">
         <td class="sourcedoc-section section-signature">
-          <code>env: Environment&lt;T, P&gt;</code>
+          <code>environment: PhysicsEnvironment&lt;T, P, A, F&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the environment inside which this pedestrian moves.</code></pre>
@@ -290,9 +290,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="1394cbe9a4affcc25c475ee6893b344c1815d5c5">
+      <tr class="sourcedoc-section section-element" id="d2022d4495e5e06fa2d5caa5f63901faffd0787c">
         <td class="sourcedoc-section section-signature">
-          <code>rg: RandomGenerator</code>
+          <code>randomGenerator: RandomGenerator</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the simulation {@link RandomGenerator}.</code></pre>
@@ -320,9 +320,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="4beb24106313342bb6c4fef876a00a55066b01ee">
+      <tr class="sourcedoc-section section-element" id="c8b6c293e698adb3951480f72b6a59a52b46c130">
         <td class="sourcedoc-section section-signature">
-          <code>group: PedestrianGroup&lt;T&gt;?</code>
+          <code>group: PedestrianGroup&lt;T, P, A&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -353,12 +353,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="5d81edab71eda931b54333425d3b3c5819130055">
+    <div class="sourcedoc-section section-element" id="c5efa571c9b0cb53bfea244b4c2ec21b621dbb02">
       
       <h3 class="sourcedoc-section element-name">probabilityOfHelping</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun probabilityOfHelping(toHelp: HeterogeneousPedestrian&lt;T&gt;): Double</code>
+        <code>open fun probabilityOfHelping(toHelp: HeterogeneousPedestrian&lt;T, P, A&gt;): Double</code>
       </p>
 
       
@@ -370,7 +370,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="ac1f8c132371c186d29f70f621e0e3a4b9054d04">
+<div class="sourcedoc-section section-root section-level-3" id="51a9e521aac00a35216554e0aab1e1988aff19b5">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -385,9 +385,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="3e7e1f90f77a5e8945cb44d01bfd6638031e6212">
+      <tr class="sourcedoc-section section-element" id="4f95737cb2ee933d8990fa59ae6dc3c4acf11598">
         <td class="sourcedoc-section section-signature">
-          <code>toHelp: HeterogeneousPedestrian&lt;T&gt;</code>
+          <code>toHelp: HeterogeneousPedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The pedestrian who needs help.</p>
@@ -404,7 +404,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="00d5ab7a21c349fbd71e9f7e47de9dd9b697b034">
+<div class="sourcedoc-section section-root section-level-3" id="c088a40b3be73ba8347b62cc8d0b6f74cd4b1570">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -452,12 +452,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="7c6eeadcbce232b0fc5bbd0b596722c74db636e0">
+    <div class="sourcedoc-section section-element" id="8a4127826995c003a25923e273815b4e4bcf7dc7">
       
       <h3 class="sourcedoc-section element-name">targetDistance</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;T, P : Position&lt;P&gt;&gt; Pedestrian&lt;T&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
+        <code>fun &lt;T, P&gt; Pedestrian&lt;T, *, *&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
       </p>
 
       
@@ -469,7 +469,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="f2ca2ce3e08df31a9f3efedbb30c0f7004750742">
+<div class="sourcedoc-section section-root section-level-3" id="a8e78dc395e623f4a27be1aac592dd48ed932b45">
 
 
   <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
@@ -484,9 +484,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="4b9f0b5b91d465f7c733e17c6a3919e06f9f179c">
+      <tr class="sourcedoc-section section-element" id="5dcd3c1e514b4f6a56b196f83741e0faa7d35666">
         <td class="sourcedoc-section section-signature">
-          <code>Pedestrian&lt;T&gt;</code>
+          <code>Pedestrian&lt;T, *, *&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -502,7 +502,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="383f49ad659e551bb1809f9afcd05755372c88ae">
+<div class="sourcedoc-section section-root section-level-3" id="1326f492cf1f2201f7a15bbb4f6be667ad7b201f">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -546,7 +546,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7d6a4bb624177c718eda828946a299d8d6ec0114">
+<div class="sourcedoc-section section-root section-level-3" id="42bb02f4fea05f5c9d60707a90b92df98ce42165">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -917,7 +917,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

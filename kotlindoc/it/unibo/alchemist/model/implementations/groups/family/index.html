@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="380ba7d3a11b3e5a6e081aebfb8630b1f59a64d7">
+    <div class="sourcedoc-section section-element" id="29afdf1079850bfc284f725930f19e08235f2a09">
       
       <p class="sourcedoc-section section-signature">
-        <code>class Family&lt;T&gt; : GenericGroup&lt;T, Pedestrian&lt;T&gt;&gt;, GroupWithLeader&lt;T, Pedestrian&lt;T&gt;&gt;</code>
+        <code>class Family&lt;T, S : Vector&lt;S&gt;, A : GeometricTransformation&lt;S&gt;&gt; : GenericGroup&lt;T, Pedestrian&lt;T, S, A&gt;&gt;, GroupWithLeader&lt;T, Pedestrian&lt;T, S, A&gt;&gt;</code>
       </p>
 
       
@@ -181,9 +181,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="3503b3e0cf5f6ef65f3ff0123e2085f197f31420">
+      <tr class="sourcedoc-section section-element" id="bd3c63a0984d7e7695056a35d1ccfbff6070b34c">
         <td class="sourcedoc-section section-signature">
-          <code>val leader: Pedestrian&lt;T&gt;</code>
+          <code>val leader: Pedestrian&lt;T, S, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The leader of the group.</p>
@@ -208,12 +208,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="555d8b669c28e65055dd4640a9b55fb6f114c3ee">
+    <div class="sourcedoc-section section-element" id="6325906b0882d6597e9833980b49a35184d09c8f">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(comparator: Comparator<Pedestrian<T>>&lt;Pedestrian&lt;T&gt;&gt;)</code>
+        <code>constructor(comparator: Comparator<Pedestrian<T, S, A>>&lt;Pedestrian&lt;T, S, A&gt;&gt;)</code>
       </p>
 
       
@@ -225,7 +225,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="edc099b18b35ea746fdb3fded940c9ca76ddd1b7">
+<div class="sourcedoc-section section-root section-level-3" id="807d81117c91fbdf20d725c3f6b23eed337250d0">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -240,9 +240,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="db5d2f24b4ae0ac48aa1b41329535f7a8624b31a">
+      <tr class="sourcedoc-section section-element" id="29dab08d1588630dcef68a492783ffaef23ee776">
         <td class="sourcedoc-section section-signature">
-          <code>comparator: Comparator<Pedestrian<T>>&lt;Pedestrian&lt;T&gt;&gt;</code>
+          <code>comparator: Comparator<Pedestrian<T, S, A>>&lt;Pedestrian&lt;T, S, A&gt;&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -596,7 +596,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

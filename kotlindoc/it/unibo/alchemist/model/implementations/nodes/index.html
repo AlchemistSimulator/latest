@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -180,9 +180,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="833f111d37ff6f06717f00da435921a0a98711e1">
+      <tr class="sourcedoc-section section-element" id="d28cf5f11568990f081be5564b4e2e8fd40da7c5">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class AbstractOrientingPedestrian&lt;T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, M : ConvexGeometricShape&lt;P, A&gt;, F&gt; : OrientingPedestrian&lt;T, P, A, N, DefaultEdge&gt;, HomogeneousPedestrianImpl&lt;T, P&gt;</code>
+          <code>abstract class AbstractOrientingPedestrian&lt;T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, M : ConvexGeometricShape&lt;P, A&gt;, E, F : GeometricShapeFactory&lt;P, A&gt;&gt; : OrientingPedestrian&lt;T, P, A, N, DefaultEdge&gt;, HomogeneousPedestrianImpl&lt;T, P, A, F&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An abstract OrientingPedestrian.
@@ -194,9 +194,9 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="57c6347022f421c5f0b57ecc7c3708c8bff3a64b">
+      <tr class="sourcedoc-section section-element" id="efe172f40d858a47b43df335b284284561ce8cfd">
         <td class="sourcedoc-section section-signature">
-          <code>class CognitivePedestrian2D&lt;T&gt; : CognitivePedestrianImpl&lt;T, Euclidean2DPosition&gt;, Pedestrian2D&lt;T&gt;</code>
+          <code>class CognitivePedestrian2D&lt;T&gt; : CognitivePedestrianImplementation&lt;T&gt;, Pedestrian2D&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Implementation of a cognitive pedestrian in the Euclidean world.</p>
@@ -204,9 +204,9 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="f3a84ced0c565d330373c4c75f7c9ef6a62674a0">
+      <tr class="sourcedoc-section section-element" id="b31a291357a44aaa4960ea5acbc8cdd5f2598a02">
         <td class="sourcedoc-section section-signature">
-          <code>open class CognitivePedestrianImpl&lt;T, P : Position&lt;P&gt;&gt; : HeterogeneousPedestrianImpl&lt;T, P&gt;, CognitivePedestrian&lt;T&gt;</code>
+          <code>open class CognitivePedestrianImpl&lt;T, P, A : GeometricTransformation&lt;P&gt;, F : GeometricShapeFactory&lt;P, A&gt;&gt; : HeterogeneousPedestrianImpl&lt;T, P, A, F&gt;, CognitivePedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Implementation of a cognitive pedestrian.</p>
@@ -214,9 +214,9 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="0f27b46bf4abfd6a3a7be1de3260574e815e275c">
+      <tr class="sourcedoc-section section-element" id="ea65e1fca70e6a57252168de795fc5505bdc1fde">
         <td class="sourcedoc-section section-signature">
-          <code>class HeterogeneousPedestrian2D&lt;T&gt; : HeterogeneousPedestrianImpl&lt;T, Euclidean2DPosition&gt;, Pedestrian2D&lt;T&gt;</code>
+          <code>class HeterogeneousPedestrian2D&lt;T&gt; : HeterogeneousPedestrianImplementation&lt;T&gt;, Pedestrian2D&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Implementation of an heterogeneous pedestrian in the Euclidean world.</p>
@@ -224,9 +224,9 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="8fdf657be3893970d189ef8afa3c85ababd964b0">
+      <tr class="sourcedoc-section section-element" id="1ad6b3a49f4c6e8e1bbce980be2abe8e0455da8b">
         <td class="sourcedoc-section section-signature">
-          <code>open class HeterogeneousPedestrianImpl&lt;T, P : Position&lt;P&gt;&gt; : HomogeneousPedestrianImpl&lt;T, P&gt;, HeterogeneousPedestrian&lt;T&gt;</code>
+          <code>open class HeterogeneousPedestrianImpl&lt;T, P, A : GeometricTransformation&lt;P&gt;, F : GeometricShapeFactory&lt;P, A&gt;&gt; : HomogeneousPedestrianImpl&lt;T, P, A, F&gt;, HeterogeneousPedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Implementation of an heterogeneous pedestrian.</p>
@@ -234,9 +234,9 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="807e3a2f80fb366293c62535d005868d8fe1c99c">
+      <tr class="sourcedoc-section section-element" id="529643b1be74f0699a77d8324dfbb4cf0d656bc1">
         <td class="sourcedoc-section section-signature">
-          <code>class HomogeneousPedestrian2D&lt;T&gt; : HomogeneousPedestrianImpl&lt;T, Euclidean2DPosition&gt;, Pedestrian2D&lt;T&gt;</code>
+          <code>class HomogeneousPedestrian2D&lt;T&gt; : HomogeneousPedestrianImpl&lt;T, Euclidean2DPosition, Euclidean2DTransformation, Euclidean2DShapeFactory&gt;, Pedestrian2D&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Implementation of a basic pedestrian in the Euclidean world.</p>
@@ -244,9 +244,9 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="e7177ef5ffd444b24d687caa5781cb1b0353e866">
+      <tr class="sourcedoc-section section-element" id="4a05c0614b32ab4cd54d5fb394cbd9580e5b66ce">
         <td class="sourcedoc-section section-signature">
-          <code>open class HomogeneousPedestrianImpl&lt;T, P : Position&lt;P&gt;&gt; : AbstractNode&lt;T&gt;, Pedestrian&lt;T&gt;</code>
+          <code>open class HomogeneousPedestrianImpl&lt;T, P, A : GeometricTransformation&lt;P&gt;, F : GeometricShapeFactory&lt;P, A&gt;&gt; : AbstractNode&lt;T&gt;, Pedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Implementation of a basic pedestrian.</p>
@@ -264,19 +264,9 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="ac0310a5c452260fa3ffdb18da470b1c5d709ed1">
+      <tr class="sourcedoc-section section-element" id="d2f3c93550f1f2990f8aafea42aff8dc0769bd5d">
         <td class="sourcedoc-section section-signature">
-          <code>class OrientingHomogeneousPedestrian2D&lt;T, M : ConvexPolygon, F&gt; : OrientingPedestrian2D&lt;T, M, F&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A homogeneous OrientingPedestrian in an EuclideanPhysics2DEnvironmentWithGraph.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="a05ef485e0e58c0bc95ff886dba3c8d002cbbad4">
-        <td class="sourcedoc-section section-signature">
-          <code>open class OrientingPedestrian2D&lt;T, M : ConvexPolygon, F&gt; : AbstractOrientingPedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation, Ellipse, M, F&gt;, Pedestrian2D&lt;T&gt;</code>
+          <code>open class OrientingPedestrian2D&lt;T, M : ConvexPolygon, E&gt; : AbstractOrientingPedestrianAlias&lt;T, M, E&gt;, Pedestrian2D&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An OrientingPedestrian in an euclidean bidimensional space.
@@ -290,9 +280,9 @@ of) ConvexPolygons.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="8c4ea41b91b3f2ec25d94ad0fd693485200beee0">
+      <tr class="sourcedoc-section section-element" id="f7e4aa85961ad81b3692df7bd01a8639f818a028">
         <td class="sourcedoc-section section-signature">
-          <code>open class CircleNode&lt;T&gt; : AbstractNode&lt;T&gt;</code>
+          <code>open class CircleNode&lt;T&gt; : AbstractNode&lt;T&gt;, NodeWithShape&lt;T, Euclidean2DPosition, Euclidean2DTransformation&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A it.unibo.alchemist.model.interfaces.Node with a circle shape meant to be added to a
@@ -726,7 +716,7 @@ it.unibo.alchemist.model.interfaces.environments.PhysicsEnvironment.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

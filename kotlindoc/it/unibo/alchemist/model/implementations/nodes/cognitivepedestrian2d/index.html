@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="57c6347022f421c5f0b57ecc7c3708c8bff3a64b">
+    <div class="sourcedoc-section section-element" id="efe172f40d858a47b43df335b284284561ce8cfd">
       
       <p class="sourcedoc-section section-signature">
-        <code>class CognitivePedestrian2D&lt;T&gt; : CognitivePedestrianImpl&lt;T, Euclidean2DPosition&gt;, Pedestrian2D&lt;T&gt;</code>
+        <code>class CognitivePedestrian2D&lt;T&gt; : CognitivePedestrianImplementation&lt;T&gt;, Pedestrian2D&lt;T&gt;</code>
       </p>
 
       
@@ -166,6 +166,62 @@
       
         
           
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9527e10b52d83f0587ae777caec670e5e4d91920">
+        <td class="sourcedoc-section section-signature">
+          <code>val shape: override</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The shape of any pedestrian in the Euclidean world.
+Implementors should override this property to prevent the continuous creation of new Euclidean2DShapes.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="888e2c78fb9e5f883292df32385469f9a6ad8ee6">
+        <td class="sourcedoc-section section-signature">
+          <code>val fieldOfView: override</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The field of view of a pedestrian in the Euclidean world.
+Implementors should override this property to prevent the continuous creation of new FieldOfView2Ds.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="1e2d083466ce77a748f48adcd9c0125440844857">
+        <td class="sourcedoc-section section-signature">
+          <code>val environment: Physics2DEnvironment&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the environment inside which this pedestrian moves.</code></pre>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
 <div class="sourcedoc-section section-root section-level-2" id="constructors">
 
 
@@ -174,12 +230,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="00512e639be2a81d66d279f97acdc47c67849c36">
+    <div class="sourcedoc-section section-element" id="cdb1166ade70a2bec5c7b96e46d370d383cc3e96">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: Physics2DEnvironment&lt;T&gt;, rg: RandomGenerator, age: String, gender: String, danger: Molecule?, group: PedestrianGroup&lt;T&gt;?)</code>
+        <code>constructor(environment: Physics2DEnvironment&lt;T&gt;, randomGenerator: RandomGenerator, age: String, gender: String, danger: Molecule?, group: Group&lt;T&gt;?)</code>
       </p>
 
       
@@ -190,7 +246,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="1433017abf7a72e0259a1087d5bb187f80e08bfe">
+<div class="sourcedoc-section section-root section-level-3" id="d4c2e9c8bd2dec365272bdf32d3ea42e8fba2749">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -205,18 +261,18 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b0f1eae4263e389b32eb8189b612bd69965be438">
+      <tr class="sourcedoc-section section-element" id="cb7a8211808c17fc2a9f695b3af645382a93e71a">
         <td class="sourcedoc-section section-signature">
-          <code>env: Physics2DEnvironment&lt;T&gt;</code>
+          <code>environment: Physics2DEnvironment&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="1394cbe9a4affcc25c475ee6893b344c1815d5c5">
+      <tr class="sourcedoc-section section-element" id="d2022d4495e5e06fa2d5caa5f63901faffd0787c">
         <td class="sourcedoc-section section-signature">
-          <code>rg: RandomGenerator</code>
+          <code>randomGenerator: RandomGenerator</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -250,9 +306,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="4beb24106313342bb6c4fef876a00a55066b01ee">
+      <tr class="sourcedoc-section section-element" id="e3ba9bafdeb6b9fae075e6ff49281d729e18d216">
         <td class="sourcedoc-section section-signature">
-          <code>group: PedestrianGroup&lt;T&gt;?</code>
+          <code>group: Group&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -270,12 +326,12 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="7733bf40b197decf2684380677961c7acf228d23">
+    <div class="sourcedoc-section section-element" id="68c91ed79fd9f9799d489fa9f64fddccf6577c8e">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: Physics2DEnvironment&lt;T&gt;, rg: RandomGenerator, age: Int, gender: String, danger: Molecule?, group: PedestrianGroup&lt;T&gt;?)</code>
+        <code>constructor(environment: Physics2DEnvironment&lt;T&gt;, randomGenerator: RandomGenerator, age: Int, gender: String, danger: Molecule?, group: Group&lt;T&gt;?)</code>
       </p>
 
       
@@ -286,7 +342,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="bb75d1e138d0b37d069129c1865330813849d7bb">
+<div class="sourcedoc-section section-root section-level-3" id="f7f1512eb32ece37b1024d099b05838dc90b1baf">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -301,18 +357,18 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b0f1eae4263e389b32eb8189b612bd69965be438">
+      <tr class="sourcedoc-section section-element" id="cb7a8211808c17fc2a9f695b3af645382a93e71a">
         <td class="sourcedoc-section section-signature">
-          <code>env: Physics2DEnvironment&lt;T&gt;</code>
+          <code>environment: Physics2DEnvironment&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="1394cbe9a4affcc25c475ee6893b344c1815d5c5">
+      <tr class="sourcedoc-section section-element" id="d2022d4495e5e06fa2d5caa5f63901faffd0787c">
         <td class="sourcedoc-section section-signature">
-          <code>rg: RandomGenerator</code>
+          <code>randomGenerator: RandomGenerator</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -346,9 +402,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="4beb24106313342bb6c4fef876a00a55066b01ee">
+      <tr class="sourcedoc-section section-element" id="e3ba9bafdeb6b9fae075e6ff49281d729e18d216">
         <td class="sourcedoc-section section-signature">
-          <code>group: PedestrianGroup&lt;T&gt;?</code>
+          <code>group: Group&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -366,12 +422,12 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="afbeb5e350bcc6e7e125f5bc2b1fa69eb7d552f7">
+    <div class="sourcedoc-section section-element" id="a0bbf81a78fe35894406624254cccada9f10fec8">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: Physics2DEnvironment&lt;T&gt;, rg: RandomGenerator, age: Age, gender: Gender, danger: Molecule?, group: PedestrianGroup&lt;T&gt;?)</code>
+        <code>constructor(environment: Physics2DEnvironment&lt;T&gt;, randomGenerator: RandomGenerator, age: Age, gender: Gender, danger: Molecule?, group: Group&lt;T&gt;?)</code>
       </p>
 
       
@@ -383,7 +439,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="6036c73e7a06c491b0af9c0a67089b5f0e1c985f">
+<div class="sourcedoc-section section-root section-level-3" id="7902d4dda39d811fe1f271e96388b98535be073d">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -398,9 +454,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b0f1eae4263e389b32eb8189b612bd69965be438">
+      <tr class="sourcedoc-section section-element" id="cb7a8211808c17fc2a9f695b3af645382a93e71a">
         <td class="sourcedoc-section section-signature">
-          <code>env: Physics2DEnvironment&lt;T&gt;</code>
+          <code>environment: Physics2DEnvironment&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the environment inside which this pedestrian moves.</code></pre>
@@ -408,9 +464,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="1394cbe9a4affcc25c475ee6893b344c1815d5c5">
+      <tr class="sourcedoc-section section-element" id="d2022d4495e5e06fa2d5caa5f63901faffd0787c">
         <td class="sourcedoc-section section-signature">
-          <code>rg: RandomGenerator</code>
+          <code>randomGenerator: RandomGenerator</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the simulation {@link RandomGenerator}.</code></pre>
@@ -448,73 +504,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="4beb24106313342bb6c4fef876a00a55066b01ee">
+      <tr class="sourcedoc-section section-element" id="e3ba9bafdeb6b9fae075e6ff49281d729e18d216">
         <td class="sourcedoc-section section-signature">
-          <code>group: PedestrianGroup&lt;T&gt;?</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-2" id="methods">
-
-
-  
-    <h2 class="sourcedoc-section section-name">Methods</h2>
-  
-
-  
-    <div class="sourcedoc-section section-element" id="443b55ff8aec6c1b69ad61aabb71b929dd066962">
-      
-      <h3 class="sourcedoc-section element-name">getShape</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun getShape(): Euclidean2DShape</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"></div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="1c2791ee75fccfb258ec5fc799c054f74cabb17b">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
-        <td class="sourcedoc-section section-signature">
-          <code>Euclidean2DShape</code>
+          <code>group: Group&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -545,12 +537,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="7c6eeadcbce232b0fc5bbd0b596722c74db636e0">
+    <div class="sourcedoc-section section-element" id="8a4127826995c003a25923e273815b4e4bcf7dc7">
       
       <h3 class="sourcedoc-section element-name">targetDistance</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;T, P : Position&lt;P&gt;&gt; Pedestrian&lt;T&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
+        <code>fun &lt;T, P&gt; Pedestrian&lt;T, *, *&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
       </p>
 
       
@@ -562,7 +554,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="f2ca2ce3e08df31a9f3efedbb30c0f7004750742">
+<div class="sourcedoc-section section-root section-level-3" id="a8e78dc395e623f4a27be1aac592dd48ed932b45">
 
 
   <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
@@ -577,9 +569,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="4b9f0b5b91d465f7c733e17c6a3919e06f9f179c">
+      <tr class="sourcedoc-section section-element" id="5dcd3c1e514b4f6a56b196f83741e0faa7d35666">
         <td class="sourcedoc-section section-signature">
-          <code>Pedestrian&lt;T&gt;</code>
+          <code>Pedestrian&lt;T, *, *&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -595,7 +587,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="383f49ad659e551bb1809f9afcd05755372c88ae">
+<div class="sourcedoc-section section-root section-level-3" id="1326f492cf1f2201f7a15bbb4f6be667ad7b201f">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -639,7 +631,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7d6a4bb624177c718eda828946a299d8d6ec0114">
+<div class="sourcedoc-section section-root section-level-3" id="42bb02f4fea05f5c9d60707a90b92df98ce42165">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1010,7 +1002,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

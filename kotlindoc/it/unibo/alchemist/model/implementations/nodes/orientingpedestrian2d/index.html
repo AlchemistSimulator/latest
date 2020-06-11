@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="a05ef485e0e58c0bc95ff886dba3c8d002cbbad4">
+    <div class="sourcedoc-section section-element" id="d2f3c93550f1f2990f8aafea42aff8dc0769bd5d">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class OrientingPedestrian2D&lt;T, M : ConvexPolygon, F&gt; : AbstractOrientingPedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation, Ellipse, M, F&gt;, Pedestrian2D&lt;T&gt;</code>
+        <code>open class OrientingPedestrian2D&lt;T, M : ConvexPolygon, E&gt; : AbstractOrientingPedestrianAlias&lt;T, M, E&gt;, Pedestrian2D&lt;T&gt;</code>
       </p>
 
       
@@ -172,6 +172,62 @@ of) ConvexPolygons.</p>
       
         
           
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="35e6197da612d0e40bbb5eb659760dd3eff678d4">
+        <td class="sourcedoc-section section-signature">
+          <code>open shape: override</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The shape of any pedestrian in the Euclidean world.
+Implementors should override this property to prevent the continuous creation of new Euclidean2DShapes.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f3a7160ae60584bea1deff009bf4af1a3d5c9d2e">
+        <td class="sourcedoc-section section-signature">
+          <code>val fieldOfView: final override</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The field of view of a pedestrian in the Euclidean world.
+Implementors should override this property to prevent the continuous creation of new FieldOfView2Ds.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a6a94be8b48c4db94e85807168ef5029ad5c7616">
+        <td class="sourcedoc-section section-signature">
+          <code>open environment: EuclideanPhysics2DEnvironmentWithGraph&lt;*, T, M, E&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the environment inside which this pedestrian moves.</code></pre>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
 <div class="sourcedoc-section section-root section-level-2" id="constructors">
 
 
@@ -180,12 +236,12 @@ of) ConvexPolygons.</p>
   
 
   
-    <div class="sourcedoc-section section-element" id="4c530d38db4cd12a6e2bf64c79cb4747e2f60df3">
+    <div class="sourcedoc-section section-element" id="0609e54ae9ef73177704df379d5f8da8965b7e0f">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(knowledgeDegree: Double, randomGenerator: RandomGenerator, environment: Euclidean2DEnvironmentWithGraph&lt;*, T, M, F&gt;, group: PedestrianGroup&lt;T&gt;?, minSide: Double, maxSide: Double)</code>
+        <code>constructor(environment: EuclideanPhysics2DEnvironmentWithGraph&lt;*, T, M, E&gt;, randomGenerator: RandomGenerator, knowledgeDegree: Double, minSide: Double, maxSide: Double, group: PedestrianGroup&lt;T, Euclidean2DPosition, Euclidean2DTransformation&gt;?)</code>
       </p>
 
       
@@ -203,7 +259,7 @@ of) ConvexPolygons.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="1020f74951a1f12c81aebfb665e95a91b52ef4e8">
+<div class="sourcedoc-section section-root section-level-3" id="a321fc9cde02639f303250b379e5103937eb79a7">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -218,9 +274,9 @@ of) ConvexPolygons.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="ba1c2d4481c3d379f37214ff6e54c05489cb724f">
+      <tr class="sourcedoc-section section-element" id="d829f14c426aedd665f035519623ad2398982786">
         <td class="sourcedoc-section section-signature">
-          <code>knowledgeDegree: Double</code>
+          <code>environment: EuclideanPhysics2DEnvironmentWithGraph&lt;*, T, M, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -236,18 +292,9 @@ of) ConvexPolygons.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="0e98002e00bfac15830f9c6438144165cac59680">
+      <tr class="sourcedoc-section section-element" id="ba1c2d4481c3d379f37214ff6e54c05489cb724f">
         <td class="sourcedoc-section section-signature">
-          <code>environment: Euclidean2DEnvironmentWithGraph&lt;*, T, M, F&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="4beb24106313342bb6c4fef876a00a55066b01ee">
-        <td class="sourcedoc-section section-signature">
-          <code>group: PedestrianGroup&lt;T&gt;?</code>
+          <code>knowledgeDegree: Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -266,6 +313,15 @@ of) ConvexPolygons.</p>
       <tr class="sourcedoc-section section-element" id="b686e04bacd694e91b7d9f7c316a3d83bfa251ee">
         <td class="sourcedoc-section section-signature">
           <code>maxSide: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="082205fce3c871754a2cd0fceaff5f1de12c8559">
+        <td class="sourcedoc-section section-signature">
+          <code>group: PedestrianGroup&lt;T, Euclidean2DPosition, Euclidean2DTransformation&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -395,12 +451,12 @@ one or more destinations, the generated landmark must contain at least one of th
   
 
   
-    <div class="sourcedoc-section section-element" id="7c6eeadcbce232b0fc5bbd0b596722c74db636e0">
+    <div class="sourcedoc-section section-element" id="8a4127826995c003a25923e273815b4e4bcf7dc7">
       
       <h3 class="sourcedoc-section element-name">targetDistance</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;T, P : Position&lt;P&gt;&gt; Pedestrian&lt;T&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
+        <code>fun &lt;T, P&gt; Pedestrian&lt;T, *, *&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
       </p>
 
       
@@ -412,7 +468,7 @@ one or more destinations, the generated landmark must contain at least one of th
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="f2ca2ce3e08df31a9f3efedbb30c0f7004750742">
+<div class="sourcedoc-section section-root section-level-3" id="a8e78dc395e623f4a27be1aac592dd48ed932b45">
 
 
   <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
@@ -427,9 +483,9 @@ one or more destinations, the generated landmark must contain at least one of th
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="4b9f0b5b91d465f7c733e17c6a3919e06f9f179c">
+      <tr class="sourcedoc-section section-element" id="5dcd3c1e514b4f6a56b196f83741e0faa7d35666">
         <td class="sourcedoc-section section-signature">
-          <code>Pedestrian&lt;T&gt;</code>
+          <code>Pedestrian&lt;T, *, *&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -445,7 +501,7 @@ one or more destinations, the generated landmark must contain at least one of th
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="383f49ad659e551bb1809f9afcd05755372c88ae">
+<div class="sourcedoc-section section-root section-level-3" id="1326f492cf1f2201f7a15bbb4f6be667ad7b201f">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -489,7 +545,7 @@ one or more destinations, the generated landmark must contain at least one of th
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7d6a4bb624177c718eda828946a299d8d6ec0114">
+<div class="sourcedoc-section section-root section-level-3" id="42bb02f4fea05f5c9d60707a90b92df98ce42165">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -860,7 +916,7 @@ one or more destinations, the generated landmark must contain at least one of th
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

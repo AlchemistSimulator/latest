@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -180,9 +180,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="cd6a37f589eebb12a68ac542a6bba2d3f0417163">
+      <tr class="sourcedoc-section section-element" id="b69421d1873b716ced41b5b736d7dca38b33b1af">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class AbstractGroupSteeringAction&lt;T, P&gt; : GroupSteeringAction&lt;T, P&gt;, AbstractSteeringAction&lt;T, P&gt;</code>
+          <code>abstract class AbstractGroupSteeringAction&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : GroupSteeringAction&lt;T, P&gt;, AbstractSteeringAction&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An abstract GroupSteeringAction.</p>
@@ -190,9 +190,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="f580ff304f10eaed72d99068e4e6b81dd92d67be">
+      <tr class="sourcedoc-section section-element" id="3397e56e819e3372f96fb4679318cb9fa86c214d">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class AbstractNavigationAction&lt;T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, E, M : ConvexGeometricShape&lt;P, A&gt;, F&gt; : AbstractSteeringAction&lt;T, P&gt;, NavigationAction&lt;T, P, A, N, E, M, F&gt;</code>
+          <code>abstract class AbstractNavigationAction&lt;T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, E, M : ConvexGeometricShape&lt;P, A&gt;, F&gt; : AbstractSteeringAction&lt;T, P, A&gt;, NavigationAction&lt;T, P, A, N, E, M, F&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An abstract NavigationAction, taking care of properly moving the pedestrian in the
@@ -201,9 +201,9 @@ environment while delegating the decision on where to move it to a NavigationStr
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="14fd1920a7dca66abe55359ba01fa488eae1c841">
+      <tr class="sourcedoc-section section-element" id="cfc5d04c8024f8398de5a25be321cf761e57a641">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class AbstractSteeringAction&lt;T, P&gt; : AbstractMoveNode&lt;T, P&gt;, SteeringAction&lt;T, P&gt;</code>
+          <code>abstract class AbstractSteeringAction&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : AbstractMoveNode&lt;T, P&gt;, SteeringAction&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A SteeringAction in a vector space. The definition of nextPosition is left to
@@ -212,9 +212,9 @@ subclasses.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="3a184af87b4f0a9b25cd8c94d315286a8decf344">
+      <tr class="sourcedoc-section section-element" id="38f1e6e24aeb7678eedf54d7de6ebfb1e3a265c0">
         <td class="sourcedoc-section section-signature">
-          <code>open class Arrive&lt;T, P&gt; : SteeringActionWithTargetImpl&lt;T, P&gt;</code>
+          <code>open class Arrive&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : SteeringActionWithTargetImpl&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Move the agent towards a target position.
@@ -223,9 +223,9 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="ae5b7da2831275edf8052c5e08d449217f41709b">
+      <tr class="sourcedoc-section section-element" id="2b5b5521cf89652a6ee2daba7268203c9587526f">
         <td class="sourcedoc-section section-signature">
-          <code>open class AvoidFlowField&lt;P&gt; : FlowFieldSteeringAction&lt;P&gt;</code>
+          <code>open class AvoidFlowField: FlowFieldSteeringAction</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Move the pedestrian towards positions of the environment with a low concentration of the target molecule.</p>
@@ -245,9 +245,9 @@ and Euclidean2DPassages as edges.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="0b9e052f03e8734e732a40d69169190c96783574">
+      <tr class="sourcedoc-section section-element" id="b9ed0fffd25016261d987fe35589a0e914e3e86f">
         <td class="sourcedoc-section section-signature">
-          <code>class Cohesion&lt;T, P&gt; : AbstractGroupSteeringAction&lt;T, P&gt;</code>
+          <code>class Cohesion&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : AbstractGroupSteeringAction&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Move the agent towards the other members of his group.</p>
@@ -255,9 +255,9 @@ and Euclidean2DPassages as edges.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="e8248caa1a01214269bdddf4f8640a5f0f73e9c3">
+      <tr class="sourcedoc-section section-element" id="49e99091608ec9dba02dba4f96d6c9e2e4fecaab">
         <td class="sourcedoc-section section-signature">
-          <code>class Combine&lt;T, P&gt; : AbstractSteeringAction&lt;T, P&gt;</code>
+          <code>class Combine&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : AbstractSteeringAction&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Combination of multiple steering actions.</p>
@@ -275,9 +275,9 @@ and Euclidean2DPassages as edges.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="840cc1bb8e62071f8a62b1c991410b499e7a51de">
+      <tr class="sourcedoc-section section-element" id="7958f82790f75daefc12080778dcd97aea89f588">
         <td class="sourcedoc-section section-signature">
-          <code>open class Flee&lt;T, P&gt; : AbstractSteeringAction&lt;T, P&gt;</code>
+          <code>open class Flee&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : AbstractSteeringAction&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Move the agent away from a target position. It's the opposite of Seek.</p>
@@ -285,9 +285,9 @@ and Euclidean2DPassages as edges.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="2a74610174e8a1222c23842871d633cec8918aab">
+      <tr class="sourcedoc-section section-element" id="9b41ce43807b4be9fd316ae8ae7bc49f27f06db6">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class FlowFieldSteeringAction&lt;P&gt; : AbstractSteeringAction&lt;Number, P&gt;</code>
+          <code>abstract class FlowFieldSteeringAction: AbstractSteeringAction&lt;Number, Euclidean2DPosition, Euclidean2DTransformation&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Generic implementation of an action influenced by the concentration of a given molecule in the environment.</p>
@@ -295,9 +295,9 @@ and Euclidean2DPassages as edges.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="196e13e0366f69a5258aeba3e761bb3afd7ab547">
+      <tr class="sourcedoc-section section-element" id="5cd02c2a51b83b132a731b4350828bfe55ae7b9a">
         <td class="sourcedoc-section section-signature">
-          <code>open class FollowFlowField&lt;P&gt; : FlowFieldSteeringAction&lt;P&gt;</code>
+          <code>open class FollowFlowField: FlowFieldSteeringAction</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Move the pedestrian towards positions of the environment with a high concentration of the target molecule.</p>
@@ -325,9 +325,9 @@ and Euclidean2DPassages as edges.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="4ce4d423c6636af9a41e80a76e4ac27bb370aeba">
+      <tr class="sourcedoc-section section-element" id="0797787feb080af4296e70779d8961d326260aa5">
         <td class="sourcedoc-section section-signature">
-          <code>class ObstacleAvoidance&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : AbstractSteeringAction&lt;T, Euclidean2DPosition&gt;</code>
+          <code>class ObstacleAvoidance&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : AbstractSteeringAction&lt;T, Euclidean2DPosition, Euclidean2DTransformation&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Move the agent avoiding potential obstacles in its path.</p>
@@ -367,9 +367,9 @@ known and unknown ones.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="f46282fa9a5568c56ac590106a9321c4bb4c269d">
+      <tr class="sourcedoc-section section-element" id="e762062ca2a22f128b9a235ca3985420b500db44">
         <td class="sourcedoc-section section-signature">
-          <code>open class Seek&lt;T, P&gt; : Arrive&lt;T, P&gt;</code>
+          <code>open class Seek&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : Arrive&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Move the pedestrian towards the target position as fast as possible.</p>
@@ -377,9 +377,9 @@ known and unknown ones.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="d3b01e8d678bbd0b3bba63db878b3e92e8d759b4">
+      <tr class="sourcedoc-section section-element" id="496f989b7b7576699988bd089236b74207d2e04c">
         <td class="sourcedoc-section section-signature">
-          <code>open class Seek2D&lt;T, P&gt; : Seek&lt;T, P&gt;</code>
+          <code>open class Seek2D&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : Seek&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Seek behavior in a bidimensional environment. The actions performed are more
@@ -390,9 +390,9 @@ only in 2D are required to implement it.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="6f2ae3d5528a13a9acd30b14a47c6e0c16ee7b43">
+      <tr class="sourcedoc-section section-element" id="e1002d785968dba678a401dc12dbec536fc1d117">
         <td class="sourcedoc-section section-signature">
-          <code>class Separation&lt;T&gt; : AbstractGroupSteeringAction&lt;T, Euclidean2DPosition&gt;</code>
+          <code>class Separation&lt;T&gt; : AbstractGroupSteeringAction&lt;T, Euclidean2DPosition, Euclidean2DTransformation&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Move the agent away from the pedestrians near to him.</p>
@@ -400,9 +400,9 @@ only in 2D are required to implement it.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="0275fd0197d07d0aed4a26d9d62a7aca5a6f4337">
+      <tr class="sourcedoc-section section-element" id="59532324f77bd475b6f27bff687b88b87f4770a9">
         <td class="sourcedoc-section section-signature">
-          <code>open class SteeringActionWithTargetImpl&lt;T, P&gt; : AbstractConfigurableMoveNode&lt;T, P&gt;, SteeringActionWithTarget&lt;T, P&gt;</code>
+          <code>open class SteeringActionWithTargetImpl&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : AbstractConfigurableMoveNode&lt;T, P&gt;, SteeringActionWithTarget&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Implementation of a generic SteeringActionWithTarget in a vector space.</p>
@@ -410,9 +410,9 @@ only in 2D are required to implement it.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="10498cf068fc8d5c231461ded94315838636b014">
+      <tr class="sourcedoc-section section-element" id="0fd932e4a85729e9a977049311ed1443e35627f5">
         <td class="sourcedoc-section section-signature">
-          <code>open class Wander&lt;T&gt; : SteeringActionWithTargetImpl&lt;T, Euclidean2DPosition&gt;</code>
+          <code>open class Wander&lt;T&gt; : SteeringActionWithTargetImpl&lt;T, Euclidean2DPosition, Euclidean2DTransformation&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Give the impression of a random walk through the environment targeting an ever changing pseudo-randomly point
@@ -1933,7 +1933,7 @@ a bidimensional environment would be transformed into a list containing position
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

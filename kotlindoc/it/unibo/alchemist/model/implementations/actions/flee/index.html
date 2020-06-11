@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="840cc1bb8e62071f8a62b1c991410b499e7a51de">
+    <div class="sourcedoc-section section-element" id="7958f82790f75daefc12080778dcd97aea89f588">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class Flee&lt;T, P&gt; : AbstractSteeringAction&lt;T, P&gt;</code>
+        <code>open class Flee&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : AbstractSteeringAction&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -174,12 +174,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="6d0071a8aa54f76fe410759d8eaf63231fd0100a">
+    <div class="sourcedoc-section section-element" id="457c300c2708b70182817a089f8168663bf9cd2d">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T&gt;, vararg coords: Double)</code>
+        <code>constructor(env: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T, P, A&gt;, vararg coords: Double)</code>
       </p>
 
       
@@ -191,7 +191,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="6b4b42d422d2af04058120e4a1d1cc3e2338d58e">
+<div class="sourcedoc-section section-root section-level-3" id="4c9cde4ab29121ad1ae7cd82c927a6459491f7ea">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -226,9 +226,9 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9f4fd9a1048d98d1647540d23605bcd7e752bfca">
+      <tr class="sourcedoc-section section-element" id="18496866fa3896ffbc38f96989f5f20bf8e0c053">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: Pedestrian&lt;T&gt;</code>
+          <code>pedestrian: Pedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the owner of this action.</code></pre>
@@ -270,12 +270,12 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="0207d34890dcb5dcd31fe8a37cbf93447017a774">
+    <div class="sourcedoc-section section-element" id="ceaa57580463dc520ad87dbe53055937d98bdcd0">
       
       <h3 class="sourcedoc-section element-name">cloneAction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun cloneAction(n: Node&lt;T&gt;, r: Reaction&lt;T&gt;): Action&lt;T&gt;</code>
+        <code>open fun cloneAction(n: Node&lt;T&gt;, r: Reaction&lt;T&gt;): Flee&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -286,7 +286,7 @@
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="1cf37d3dc8f3b900d5b9bad83ea3666073a24ff2">
+<div class="sourcedoc-section section-root section-level-3" id="696c2c4e8b692bcbadaa05c0ca5067c59a1a64b1">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -328,7 +328,7 @@
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="ce690e9726afc21c590be3a506f60d533c6e8fbf">
+<div class="sourcedoc-section section-root section-level-3" id="d04695a123fc76ed1c25e41945ea9d6fc8c0c72b">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -343,9 +343,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="876130d95c8c04c3612dff76ce6bc7ed03174198">
+      <tr class="sourcedoc-section section-element" id="aa0a781fb31f64ecdc14137a9e09ed00b66904b6">
         <td class="sourcedoc-section section-signature">
-          <code>Action&lt;T&gt;</code>
+          <code>Flee&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -752,7 +752,7 @@ in relative coordinates with respect to its current position.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

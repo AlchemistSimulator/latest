@@ -34,7 +34,7 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/16d97229/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/9e6d868b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devv6+af50f219c"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devvb+7355f4702"};
 </script>
 
 
@@ -144,10 +144,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="d3b01e8d678bbd0b3bba63db878b3e92e8d759b4">
+    <div class="sourcedoc-section section-element" id="496f989b7b7576699988bd089236b74207d2e04c">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class Seek2D&lt;T, P&gt; : Seek&lt;T, P&gt;</code>
+        <code>open class Seek2D&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : Seek&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -169,6 +169,39 @@ only in 2D are required to implement it.</p>
       
         
           
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="349e2576db1c7566af52e3c259915ed97fd7a480">
+        <td class="sourcedoc-section section-signature">
+          <code>protected environment: EuclideanEnvironment&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
 <div class="sourcedoc-section section-root section-level-2" id="constructors">
 
 
@@ -177,27 +210,23 @@ only in 2D are required to implement it.</p>
   
 
   
-    <div class="sourcedoc-section section-element" id="cd41cbd92112d4e0c618927021d19e32c01310d9">
+    <div class="sourcedoc-section section-element" id="2d348e0e180d4230c785f73276dcd7aae9e819b0">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(environment: EuclideanEnvironment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T&gt;, vararg coords: Double)</code>
+        <code>constructor(environment: EuclideanEnvironment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T, P, A&gt;, x: Number, y: Number)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Seek behavior in a bidimensional environment. The actions performed are more
-sophisticated and allow the pedestrian to try to avoid other agents on its path.
-This behavior is restricted to two dimensions because some geometry utils available
-only in 2D are required to implement it.</p>
-</div>
+      <div class="sourcedoc-section section-comments"></div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="70f54654c10030a00142df43ca29f928085c9293">
+<div class="sourcedoc-section section-root section-level-3" id="42d216d194a27d17302c43727bd66b98414f1272">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -230,18 +259,109 @@ only in 2D are required to implement it.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9f4fd9a1048d98d1647540d23605bcd7e752bfca">
+      <tr class="sourcedoc-section section-element" id="18496866fa3896ffbc38f96989f5f20bf8e0c053">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: Pedestrian&lt;T&gt;</code>
+          <code>pedestrian: Pedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="3823c6ac82f49d234bd38e8b282ffc881106ebab">
+      <tr class="sourcedoc-section section-element" id="cc1da56aa4f88dec896d48a8342a76a22281e9e5">
         <td class="sourcedoc-section section-signature">
-          <code>vararg coords: Double</code>
+          <code>x: Number</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="47cb064285e2d82ce5fa607774bb64b1307f3851">
+        <td class="sourcedoc-section section-signature">
+          <code>y: Number</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="6eebe5572685a1cfefbc19add2974ad91a16179a">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(environment: EuclideanEnvironment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T, P, A&gt;, coordinates: P)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Seek behavior in a bidimensional environment. The actions performed are more
+sophisticated and allow the pedestrian to try to avoid other agents on its path.
+This behavior is restricted to two dimensions because some geometry utils available
+only in 2D are required to implement it.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2553d005169897680367a60c8aa8f8877189575f">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2abf99d282e9fcf5de689b2eb68c2c2b29ad3497">
+        <td class="sourcedoc-section section-signature">
+          <code>environment: EuclideanEnvironment&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ea9e2ee7d64a5940bb8529e5a4e4b3f6c0b9d942">
+        <td class="sourcedoc-section section-signature">
+          <code>reaction: Reaction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="18496866fa3896ffbc38f96989f5f20bf8e0c053">
+        <td class="sourcedoc-section section-signature">
+          <code>pedestrian: Pedestrian&lt;T, P, A&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0b76ecc8b93a429c866d84ee0d93889e23174dac">
+        <td class="sourcedoc-section section-signature">
+          <code>coordinates: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -358,6 +478,99 @@ only in 2D are required to implement it.</p>
       <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
         <td class="sourcedoc-section section-signature">
           <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="093596be3251c8242cbf66cc7a5bc35094631f09">
+      
+      <h3 class="sourcedoc-section element-name">cloneAction</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun cloneAction(n: Node&lt;T&gt;, r: Reaction&lt;T&gt;): Seek2D&lt;T, P, A&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="adfd1efee8b6eb6b64f4523cbe521210fb4f87c2">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="cc4adfb5c5d0a92716015df3de18f1c6492e3e71">
+        <td class="sourcedoc-section section-signature">
+          <code>n: Node&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="925d5a8d4b794b16a67f73573d9e84ab906e6a02">
+        <td class="sourcedoc-section section-signature">
+          <code>r: Reaction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f2856cbbafb8030316223ab28ca11714f9ef2aad">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6097130ca30c33782adf4fe8092617e57adc5f42">
+        <td class="sourcedoc-section section-signature">
+          <code>Seek2D&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -711,7 +924,7 @@ only in 2D are required to implement it.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devv6+af50f219c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devvb+7355f4702. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
