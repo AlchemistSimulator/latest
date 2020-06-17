@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/6db85505/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/6db85505/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/6db85505/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/6db85505/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devw7+757cff0e5"};
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devw8+2e59b56fd"};
 </script>
 
 
@@ -579,19 +579,29 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="770af8ae9ed013a8d5b345f114ddcba061ae7ca6">
+      <tr class="sourcedoc-section section-element" id="4466ccc885519ffdc59a385340a9aeffa1fba32b">
         <td class="sourcedoc-section section-signature">
-          <code>class BrownianMove&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;T, P&gt;</code>
+          <code>abstract class AbstractAction&lt;T : Any?&gt; : Action&lt;T&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Moves the node randomly.</p>
+        <p>An abstract class facility with some generic methods implemented.</p>
 
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="a066ca105f33cdf173efac331d27c5dacfea0245">
+      <tr class="sourcedoc-section section-element" id="7caf071ece721a7f9f97de412ede12eb69e36323">
         <td class="sourcedoc-section section-signature">
-          <code>class SetLocalMoleculeConcentration&lt;T : Any?&gt; : AbstractActionOnSingleMolecule&lt;T&gt;</code>
+          <code>class FakeMove&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Fake movement class, used only to trigger the neighborhood update.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ebe48a61e62052c32024f0f9d20e3e6503ae4b5c">
+        <td class="sourcedoc-section section-signature">
+          <code>open class RemoveNode&lt;T : Any?&gt; : AbstractAction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -607,51 +617,12 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="ebe48a61e62052c32024f0f9d20e3e6503ae4b5c">
+      <tr class="sourcedoc-section section-element" id="770af8ae9ed013a8d5b345f114ddcba061ae7ca6">
         <td class="sourcedoc-section section-signature">
-          <code>open class RemoveNode&lt;T : Any?&gt; : AbstractAction&lt;T&gt;</code>
+          <code>class BrownianMove&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="8b2cc39fad25f8274c3be90c2d2350d93844e93b">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class AbstractActionOnSingleMolecule&lt;T : Any?&gt; : AbstractAction&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This class offers the basic structures to provide operations with numeric concentrations on a single molecule.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="2a857384dbc9385c0454755b97469a7107564b94">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class AbstractMoveNode&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractAction&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This action moves a node inside a given environment.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="7caf071ece721a7f9f97de412ede12eb69e36323">
-        <td class="sourcedoc-section section-signature">
-          <code>class FakeMove&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;T, P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Fake movement class, used only to trigger the neighborhood update.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="4466ccc885519ffdc59a385340a9aeffa1fba32b">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class AbstractAction&lt;T : Any?&gt; : Action&lt;T&gt;, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>An abstract class facility with some generic methods implemented.</p>
+        <p>Moves the node randomly.</p>
 
         </td>
       </tr>
@@ -662,6 +633,16 @@ distance and angle define the field of view.</p>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An abstract class that factorizes code for multiple different movements. With three strategies can be defined: the next target to be reached, the routing strategy to adopt, the speed to move at.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8b2cc39fad25f8274c3be90c2d2350d93844e93b">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractActionOnSingleMolecule&lt;T : Any?&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This class offers the basic structures to provide operations with numeric concentrations on a single molecule.</p>
 
         </td>
       </tr>
@@ -685,66 +666,28 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="5c6e474e609ebd81a9e827211c4855a13fc29a76">
+      <tr class="sourcedoc-section section-element" id="2a857384dbc9385c0454755b97469a7107564b94">
         <td class="sourcedoc-section section-signature">
-          <code>class RemoveJunctionInCell: AbstractNeighborAction&lt;Double?&gt;</code>
+          <code>abstract class AbstractMoveNode&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractAction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Represent the action of removing a junction between the current node and a neighbor. <br> This action only remove the junction reference inside this node, the neighbor totally ignore that a junction has been removed. <br> This is a part of the junction removal process. <br> See <code>RemoveJunctionInNeighbor</code> for the other part of the process</p>
+        <p>This action moves a node inside a given environment.</p>
 
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a066ca105f33cdf173efac331d27c5dacfea0245">
+        <td class="sourcedoc-section section-signature">
+          <code>class SetLocalMoleculeConcentration&lt;T : Any?&gt; : AbstractActionOnSingleMolecule&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="9d933dc9ffd7491a7b1b23a15bceef29529d96b5">
         <td class="sourcedoc-section section-signature">
           <code>class ChangeBiomolConcentrationInNeighbor: AbstractNeighborAction&lt;Double?&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="6c99b83a68792206ba1d5fb7325bc2bd2c74b1a7">
-        <td class="sourcedoc-section section-signature">
-          <code>class ChangeBiomolConcentrationInCell: AbstractActionOnSingleMolecule&lt;Double?&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="9a5b8ae66ce6e748719fde5838d971c79d1208b6">
-        <td class="sourcedoc-section section-signature">
-          <code>class ChemotacticPolarization&lt;P : Position2D&lt;P&gt;?&gt; : AbstractAction&lt;Double?&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="520907a7b8bbe1efcc3fa3f968c2a380f99ff95c">
-        <td class="sourcedoc-section section-signature">
-          <code>class AddJunctionInCell: AbstractNeighborAction&lt;Double?&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Represent the action of add a junction between the current node and a neighbor. <br> This action only create the junction reference inside this node, the neighbor totally ignore that a junction has been created. <br> This is a part of the junction creation process. <br> See <code>AddJunctionInNeighbor</code> for the other part of the process</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="314b450d3e74df043fe106f54adb4b224a051a0b">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class AbstractNeighborAction&lt;T : Any?&gt; : AbstractRandomizableAction&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Represents an action on a neighbor.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="5e86fefa786f896146a0a0f52fe1deed5cca5a8a">
-        <td class="sourcedoc-section section-signature">
-          <code>class CellMove&lt;P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;Double?, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -761,12 +704,77 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="34e3b74c891e71dfbca13417a075bebf95c11f15">
+      <tr class="sourcedoc-section section-element" id="314b450d3e74df043fe106f54adb4b224a051a0b">
         <td class="sourcedoc-section section-signature">
-          <code>class ChangeBiomolConcentrationInEnv: AbstractRandomizableAction&lt;Double?&gt;</code>
+          <code>abstract class AbstractNeighborAction&lt;T : Any?&gt; : AbstractRandomizableAction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Action implementing the changing of the concentration of a given biomolecule in environment.</p>
+        <p>Represents an action on a neighbor.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9a5b8ae66ce6e748719fde5838d971c79d1208b6">
+        <td class="sourcedoc-section section-signature">
+          <code>class ChemotacticPolarization&lt;P : Position2D&lt;P&gt;?&gt; : AbstractAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5c6e474e609ebd81a9e827211c4855a13fc29a76">
+        <td class="sourcedoc-section section-signature">
+          <code>class RemoveJunctionInCell: AbstractNeighborAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Represent the action of removing a junction between the current node and a neighbor. <br> This action only remove the junction reference inside this node, the neighbor totally ignore that a junction has been removed. <br> This is a part of the junction removal process. <br> See <code>RemoveJunctionInNeighbor</code> for the other part of the process</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6c99b83a68792206ba1d5fb7325bc2bd2c74b1a7">
+        <td class="sourcedoc-section section-signature">
+          <code>class ChangeBiomolConcentrationInCell: AbstractActionOnSingleMolecule&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d5ccddd89d34f347048a09a3bfe5d4435abfe951">
+        <td class="sourcedoc-section section-signature">
+          <code>class CellTensionPolarization&lt;P : Position2D&lt;P&gt;?&gt; : AbstractAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="655729a2adc6cf6d24f7a99d07f209287ded46bc">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class AbstractRandomizableAction&lt;T : Any?&gt; : AbstractAction&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5e86fefa786f896146a0a0f52fe1deed5cca5a8a">
+        <td class="sourcedoc-section section-signature">
+          <code>class CellMove&lt;P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;Double?, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="520907a7b8bbe1efcc3fa3f968c2a380f99ff95c">
+        <td class="sourcedoc-section section-signature">
+          <code>class AddJunctionInCell: AbstractNeighborAction&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Represent the action of add a junction between the current node and a neighbor. <br> This action only create the junction reference inside this node, the neighbor totally ignore that a junction has been created. <br> This is a part of the junction creation process. <br> See <code>AddJunctionInNeighbor</code> for the other part of the process</p>
 
         </td>
       </tr>
@@ -790,27 +798,28 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="655729a2adc6cf6d24f7a99d07f209287ded46bc">
+      <tr class="sourcedoc-section section-element" id="34e3b74c891e71dfbca13417a075bebf95c11f15">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class AbstractRandomizableAction&lt;T : Any?&gt; : AbstractAction&lt;T&gt;</code>
+          <code>class ChangeBiomolConcentrationInEnv: AbstractRandomizableAction&lt;Double?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="d5ccddd89d34f347048a09a3bfe5d4435abfe951">
-        <td class="sourcedoc-section section-signature">
-          <code>class CellTensionPolarization&lt;P : Position2D&lt;P&gt;?&gt; : AbstractAction&lt;Double?&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
+        <p>Action implementing the changing of the concentration of a given biomolecule in environment.</p>
+
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="ca3e8d37d4e8ebfee3b1f0d3a76c17c1d2faa90f">
         <td class="sourcedoc-section section-signature">
           <code>open class RunProtelisProgram&lt;P : Position&lt;P&gt;?&gt; : Action&lt;Any?&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="805c180d6b152b2bf96e4882e11b5b5676fd390a">
+        <td class="sourcedoc-section section-signature">
+          <code>class SendToNeighbor: AbstractAction&lt;Any?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -827,18 +836,167 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="805c180d6b152b2bf96e4882e11b5b5676fd390a">
+      <tr class="sourcedoc-section section-element" id="ba102a88c6b58da5fb1b9a6adb209c9e39c1f74f">
         <td class="sourcedoc-section section-signature">
-          <code>class SendToNeighbor: AbstractAction&lt;Any?&gt;</code>
+          <code>abstract class LsaAbstractAction: AbstractAction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="ba102a88c6b58da5fb1b9a6adb209c9e39c1f74f">
+      <tr class="sourcedoc-section section-element" id="780b229c7a6c0d48f92676e5e3fbcf6fd530bb77">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class LsaAbstractAction: AbstractAction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
+          <code>class SAPEREChemotaxis&lt;P : Position&lt;P&gt;?&gt; : SAPERENeighborAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This class provides a chemotaxis implementation for SAPERE, namely, an agent able to move a molecule towards a specific node.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f5a97cc6f30ef97f13e6e9a86c65c76e792bdc59">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaCountNeighborsAction: SAPERELocalAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="822fc2e1fd1c54ef7780869fb2e26d3663131121">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaAllNeighborsAction: LsaRandomNeighborAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The execution involves all neighbours. The molecule can be different from a neighbor to the other, because some special Variable (#D) are specific for each node. This is why N molecules are instanced if there are N neighbours.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a6036b2a2a0bfcc6ac80ebf4aec54000dc4a9b74">
+        <td class="sourcedoc-section section-signature">
+          <code>open class LsaStandardAction: LsaAbstractAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This action add LsaMolecule in a single node.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="65cb820d78009a04a918b742f63eeb772fe0c659">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaDeleteNodeAction: RemoveNode&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d1dd75c99a849c588f2c785211b89479bf2e2d32">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class SAPEREAgent: LsaAbstractAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="b7a2bc9dcacb7cde63562113a1059b58d4e7b7fd">
+        <td class="sourcedoc-section section-signature">
+          <code>class SAPEREWalker: MoveOnMap&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5d6193f655304c2423687346640227b3fe1f4068">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaChangeArgument: SAPERELocalAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="564208dfd6a183d5253ac057082e81832f21c7a7">
+        <td class="sourcedoc-section section-signature">
+          <code>class LsaAscendingAgent&lt;P : Position2D&lt;P&gt;?&gt; : SAPEREMoveNodeAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fe4e231e72512c3b69bf944e50ce2a4069f84b65">
+        <td class="sourcedoc-section section-signature">
+          <code>class SAPEREMoveLSAToAgent: SAPEREAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This agent matches a template, removes a single instance of it from the current node and moves the LSA to another node (specified at creation time). Please note that, since the destination could be anywhere in the system, this action has a GLOBAL <code>Context</code>, and thus may trigger a large number of updates, slowing down the whole simulation. Handle with care.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4f513b53e5ed50e3ce4e63e867478894cd77a276">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class SocialForceAgent&lt;P : Position&lt;P&gt;?&gt; : SAPEREMoveNodeAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="565ad311a0119f8de2e39f1734a6bc8d114e9acc">
+        <td class="sourcedoc-section section-signature">
+          <code>open class SocialForceOldEuropeanAgent&lt;P : Position&lt;P&gt;?&gt; : SocialForceAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="6574cc1bcf96b830d8fd143767b965e4b2f89bdd">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class SAPEREMoveNodeAgent&lt;P : Position&lt;P&gt;?&gt; : SAPERELocalAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="61231052cba153cb3e5fd852a4dd242781712e8d">
+        <td class="sourcedoc-section section-signature">
+          <code>open class SocialForceEuropeanAgent&lt;P : Position&lt;P&gt;?&gt; : SocialForceAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="78fd40db45fe8d7253eabb334bbc1580b2915795">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class SAPERENeighborAgent&lt;P : Position&lt;P&gt;?&gt; : SAPEREAgent</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A SAPERE Agent that modifies something on neighboring nodes.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="de4fa93dfd6d27cb706f0a58313e458873fe0061">
+        <td class="sourcedoc-section section-signature">
+          <code>class CrowdSteeringService&lt;P : Position2D&lt;P&gt;?&gt; : SAPEREMoveNodeAgent&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8caebd619e1add90f8e531c0a2d21493f97ad2f3">
+        <td class="sourcedoc-section section-signature">
+          <code>open class SocialForceAsianAgent&lt;P : Position&lt;P&gt;?&gt; : SocialForceAgent&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -864,47 +1022,9 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="61231052cba153cb3e5fd852a4dd242781712e8d">
+      <tr class="sourcedoc-section section-element" id="02cf000d2d30dbb841392781030734d9f10d30cc">
         <td class="sourcedoc-section section-signature">
-          <code>open class SocialForceEuropeanAgent&lt;P : Position&lt;P&gt;?&gt; : SocialForceAgent&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="65cb820d78009a04a918b742f63eeb772fe0c659">
-        <td class="sourcedoc-section section-signature">
-          <code>class LsaDeleteNodeAction: RemoveNode&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="a6036b2a2a0bfcc6ac80ebf4aec54000dc4a9b74">
-        <td class="sourcedoc-section section-signature">
-          <code>open class LsaStandardAction: LsaAbstractAction</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This action add LsaMolecule in a single node.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="78fd40db45fe8d7253eabb334bbc1580b2915795">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class SAPERENeighborAgent&lt;P : Position&lt;P&gt;?&gt; : SAPEREAgent</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A SAPERE Agent that modifies something on neighboring nodes.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="d1dd75c99a849c588f2c785211b89479bf2e2d32">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class SAPEREAgent: LsaAbstractAction</code>
+          <code>open class LsaRandomNeighborAction: LsaStandardAction</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -930,139 +1050,19 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="b7a2bc9dcacb7cde63562113a1059b58d4e7b7fd">
+      <tr class="sourcedoc-section section-element" id="9a48be035773f37fc7f96e2ceaa6cf7c1ff7dc6b">
         <td class="sourcedoc-section section-signature">
-          <code>class SAPEREWalker: MoveOnMap&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
+          <code>class GPSTraceWalker&lt;T : Any?&gt; : MoveOnMapWithGPS&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="de4fa93dfd6d27cb706f0a58313e458873fe0061">
-        <td class="sourcedoc-section section-signature">
-          <code>class CrowdSteeringService&lt;P : Position2D&lt;P&gt;?&gt; : SAPEREMoveNodeAgent&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="fe4e231e72512c3b69bf944e50ce2a4069f84b65">
-        <td class="sourcedoc-section section-signature">
-          <code>class SAPEREMoveLSAToAgent: SAPEREAgent</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This agent matches a template, removes a single instance of it from the current node and moves the LSA to another node (specified at creation time). Please note that, since the destination could be anywhere in the system, this action has a GLOBAL <code>Context</code>, and thus may trigger a large number of updates, slowing down the whole simulation. Handle with care.</p>
+        <p>A walker that follows a trace. The trace is mandatory.</p>
 
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="564208dfd6a183d5253ac057082e81832f21c7a7">
+      <tr class="sourcedoc-section section-element" id="6b179ca3a574c2f4f971d9a87e044e80a1edc41e">
         <td class="sourcedoc-section section-signature">
-          <code>class LsaAscendingAgent&lt;P : Position2D&lt;P&gt;?&gt; : SAPEREMoveNodeAgent&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="822fc2e1fd1c54ef7780869fb2e26d3663131121">
-        <td class="sourcedoc-section section-signature">
-          <code>class LsaAllNeighborsAction: LsaRandomNeighborAction</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>The execution involves all neighbours. The molecule can be different from a neighbor to the other, because some special Variable (#D) are specific for each node. This is why N molecules are instanced if there are N neighbours.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="6574cc1bcf96b830d8fd143767b965e4b2f89bdd">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class SAPEREMoveNodeAgent&lt;P : Position&lt;P&gt;?&gt; : SAPERELocalAgent</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="02cf000d2d30dbb841392781030734d9f10d30cc">
-        <td class="sourcedoc-section section-signature">
-          <code>open class LsaRandomNeighborAction: LsaStandardAction</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="8caebd619e1add90f8e531c0a2d21493f97ad2f3">
-        <td class="sourcedoc-section section-signature">
-          <code>open class SocialForceAsianAgent&lt;P : Position&lt;P&gt;?&gt; : SocialForceAgent&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="565ad311a0119f8de2e39f1734a6bc8d114e9acc">
-        <td class="sourcedoc-section section-signature">
-          <code>open class SocialForceOldEuropeanAgent&lt;P : Position&lt;P&gt;?&gt; : SocialForceAgent&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="f5a97cc6f30ef97f13e6e9a86c65c76e792bdc59">
-        <td class="sourcedoc-section section-signature">
-          <code>class LsaCountNeighborsAction: SAPERELocalAgent</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="5d6193f655304c2423687346640227b3fe1f4068">
-        <td class="sourcedoc-section section-signature">
-          <code>class LsaChangeArgument: SAPERELocalAgent</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="780b229c7a6c0d48f92676e5e3fbcf6fd530bb77">
-        <td class="sourcedoc-section section-signature">
-          <code>class SAPEREChemotaxis&lt;P : Position&lt;P&gt;?&gt; : SAPERENeighborAgent&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This class provides a chemotaxis implementation for SAPERE, namely, an agent able to move a molecule towards a specific node.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="4f513b53e5ed50e3ce4e63e867478894cd77a276">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class SocialForceAgent&lt;P : Position&lt;P&gt;?&gt; : SAPEREMoveNodeAgent&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="38a9ce393efdf5eb35a7901aac614ca6b52dd9cb">
-        <td class="sourcedoc-section section-signature">
-          <code>open class MoveOnMapWithGPS&lt;T : Any?&gt; : MoveOnMap&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>basic action that follow a <code>GPSTrace</code>.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="553f6a3bf219861b08d8e3c3507c443c15be69ef">
-        <td class="sourcedoc-section section-signature">
-          <code>open class TargetWalker&lt;T : Any?&gt; : MoveOnMap&lt;T&gt;</code>
+          <code>open class ReproduceGPSTrace&lt;T : Any?&gt; : MoveOnMapWithGPS&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1078,21 +1078,21 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="6b179ca3a574c2f4f971d9a87e044e80a1edc41e">
+      <tr class="sourcedoc-section section-element" id="553f6a3bf219861b08d8e3c3507c443c15be69ef">
         <td class="sourcedoc-section section-signature">
-          <code>open class ReproduceGPSTrace&lt;T : Any?&gt; : MoveOnMapWithGPS&lt;T&gt;</code>
+          <code>open class TargetWalker&lt;T : Any?&gt; : MoveOnMap&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9a48be035773f37fc7f96e2ceaa6cf7c1ff7dc6b">
+      <tr class="sourcedoc-section section-element" id="38a9ce393efdf5eb35a7901aac614ca6b52dd9cb">
         <td class="sourcedoc-section section-signature">
-          <code>class GPSTraceWalker&lt;T : Any?&gt; : MoveOnMapWithGPS&lt;T&gt;</code>
+          <code>open class MoveOnMapWithGPS&lt;T : Any?&gt; : MoveOnMap&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A walker that follows a trace. The trace is mandatory.</p>
+        <p>basic action that follow a <code>GPSTrace</code>.</p>
 
         </td>
       </tr>
@@ -3576,7 +3576,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/circle">Circle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/circle">Circle</a>
     </li>
     
 
@@ -3584,7 +3584,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/circle">Circle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/circle">Circle</a>
     </li>
     
 
@@ -5976,7 +5976,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
     </li>
     
 
@@ -5984,7 +5984,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d/mode">Mode</a>
     </li>
     
 
@@ -6680,7 +6680,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/rectangle">Rectangle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/rectangle">Rectangle</a>
     </li>
     
 
@@ -6688,7 +6688,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/rectangle">Rectangle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/rectangle">Rectangle</a>
     </li>
     
 
@@ -7360,7 +7360,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/time">Time</a>
     </li>
     
 
@@ -7368,7 +7368,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/time">Time</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>
     </li>
     
 
@@ -7688,7 +7688,7 @@ a bidimensional environment would be transformed into a list containing position
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devw7+757cff0e5. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devw8+2e59b56fd. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7723,9 +7723,9 @@ a bidimensional environment would be transformed into a list containing position
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/6db85505/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/6db85505/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/6db85505/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
