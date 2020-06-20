@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="cecccaa7e1d67dc76297133faa7592ff6d2890b4">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class DrawLayersValues: AbstractDrawLayers, FunctionDrawer</code>
+        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersvalues">DrawLayersValues</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/abstractdrawlayers">AbstractDrawLayers</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/functiondrawer">FunctionDrawer</a></code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>This is a basic class for all the effects meant to draw <code>it.unibo.alchemist.model.interfaces.Layer</code>s values in different points of the view. One effect could draw isolines, whereas another could represent different values with a gradient. Normally, drawing a layer's values only makes sense for "numerical" layers (i.e. layers for which the values are <code><a href="https://docs.oracle.com/javase/6/docs/api/java/lang/Number.html">Number</a></code>s). However, one could have a "non-numerical" layer whose <code>it.unibo.alchemist.model.interfaces.Layer#getValue(it.unibo.alchemist.model.interfaces.Position)</code> return type is an object from which a value can be extracted somehow. In the end, drawing a layer's values makes sense as long as there is a way to map those values to Numbers. More generally, a <code>LayerToFunctionMapper</code> is needed. As this class is not aware of which mapper to use, this responsibility is left to subclasses. When drawing layers values, it can be important to know the min and max layer values that will be drawn. This class declares gui controls that allow the user to specify such boundaries.</p>
+      <div class="sourcedoc-section section-comments"><p>This is a basic class for all the effects meant to draw <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/layer">it.unibo.alchemist.model.interfaces.Layer</a></code>s values in different points of the view. One effect could draw isolines, whereas another could represent different values with a gradient. Normally, drawing a layer's values only makes sense for "numerical" layers (i.e. layers for which the values are <code><a href="https://docs.oracle.com/javase/6/docs/api/java/lang/Number.html">Number</a></code>s). However, one could have a "non-numerical" layer whose <code>it.unibo.alchemist.model.interfaces.Layer#getValue(it.unibo.alchemist.model.interfaces.Position)</code> return type is an object from which a value can be extracted somehow. In the end, drawing a layer's values makes sense as long as there is a way to map those values to Numbers. More generally, a <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/layertofunctionmapper">LayerToFunctionMapper</a></code> is needed. As this class is not aware of which mapper to use, this responsibility is left to subclasses. When drawing layers values, it can be important to know the min and max layer values that will be drawn. This class declares gui controls that allow the user to specify such boundaries.</p>
 </div>
 
       
@@ -203,7 +203,7 @@
           <code>constructor()</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>This is a basic class for all the effects meant to draw <code>it.unibo.alchemist.model.interfaces.Layer</code>s values in different points of the view. One effect could draw isolines, whereas another could represent different values with a gradient. Normally, drawing a layer's values only makes sense for "numerical" layers (i.e. layers for which the values are <code><a href="https://docs.oracle.com/javase/6/docs/api/java/lang/Number.html">Number</a></code>s). However, one could have a "non-numerical" layer whose <code>it.unibo.alchemist.model.interfaces.Layer#getValue(it.unibo.alchemist.model.interfaces.Position)</code> return type is an object from which a value can be extracted somehow. In the end, drawing a layer's values makes sense as long as there is a way to map those values to Numbers. More generally, a <code>LayerToFunctionMapper</code> is needed. As this class is not aware of which mapper to use, this responsibility is left to subclasses. When drawing layers values, it can be important to know the min and max layer values that will be drawn. This class declares gui controls that allow the user to specify such boundaries.</p>
+        <p>This is a basic class for all the effects meant to draw <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/layer">it.unibo.alchemist.model.interfaces.Layer</a></code>s values in different points of the view. One effect could draw isolines, whereas another could represent different values with a gradient. Normally, drawing a layer's values only makes sense for "numerical" layers (i.e. layers for which the values are <code><a href="https://docs.oracle.com/javase/6/docs/api/java/lang/Number.html">Number</a></code>s). However, one could have a "non-numerical" layer whose <code>it.unibo.alchemist.model.interfaces.Layer#getValue(it.unibo.alchemist.model.interfaces.Position)</code> return type is an object from which a value can be extracted somehow. In the end, drawing a layer's values makes sense as long as there is a way to map those values to Numbers. More generally, a <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/layertofunctionmapper">LayerToFunctionMapper</a></code> is needed. As this class is not aware of which mapper to use, this responsibility is left to subclasses. When drawing layers values, it can be important to know the min and max layer values that will be drawn. This class declares gui controls that allow the user to specify such boundaries.</p>
 
         </td>
       </tr>
@@ -334,7 +334,7 @@
       <h3 class="sourcedoc-section element-name">drawLayers</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun &lt;T : Any?, P : Position2D&lt;P&gt;?&gt; drawLayers(toDraw: MutableCollection&lt;Layer&lt;T, P&gt;?&gt;?, env: Environment&lt;T, P&gt;?, g: Graphics2D?, wormhole: IWormhole2D&lt;P&gt;?)</code>
+        <code>open fun &lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; drawLayers(toDraw: MutableCollection&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/layer">Layer</a>&lt;T, P&gt;?&gt;?, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?, g: Graphics2D?, wormhole: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a>&lt;P&gt;?)</code>
       </p>
 
       
@@ -363,20 +363,20 @@
       
       <tr class="sourcedoc-section section-element" id="90ae2f4450156ef8e9f4ca9fde30da9bd2a3c610">
         <td class="sourcedoc-section section-signature">
-          <code>toDraw: MutableCollection&lt;Layer&lt;T, P&gt;?&gt;?</code>
+          <code>toDraw: MutableCollection&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/layer">Layer</a>&lt;T, P&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableCollection&lt;Layer&lt;T, P&gt;!&gt;!: - the layers to draw</p>
+        <p>MutableCollection&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/layer">Layer</a>&lt;T, P&gt;!&gt;!: - the layers to draw</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="5f36e38a592b4a94bef1b256824b2287d86c46b9">
         <td class="sourcedoc-section section-signature">
-          <code>env: Environment&lt;T, P&gt;?</code>
+          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Environment&lt;T, P&gt;!: - the environment (mainly used to create positions)</p>
+        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;!: - the environment (mainly used to create positions)</p>
 
         </td>
       </tr>
@@ -393,10 +393,10 @@
       
       <tr class="sourcedoc-section section-element" id="04e711ed9ea5a9bf9044acb7d7742d1e7271f78e">
         <td class="sourcedoc-section section-signature">
-          <code>wormhole: IWormhole2D&lt;P&gt;?</code>
+          <code>wormhole: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a>&lt;P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>IWormhole2D<P>!: - the wormhole</p>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a><P>!: - the wormhole
 
         </td>
       </tr>
@@ -535,7 +535,7 @@
       <h3 class="sourcedoc-section element-name">createMapper</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected abstract fun createMapper(): LayerToFunctionMapper?</code>
+        <code>protected abstract fun createMapper(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/layertofunctionmapper">LayerToFunctionMapper</a>?</code>
       </p>
 
       
@@ -563,10 +563,10 @@
       
       <tr class="sourcedoc-section section-element" id="493b74eb359a1498a14cc439b9ebda7ddaa1b564">
         <td class="sourcedoc-section section-signature">
-          <code>LayerToFunctionMapper?</code>
+          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/layertofunctionmapper">LayerToFunctionMapper</a>?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>LayerToFunctionMapper!: a layer to function mapper</p>
+        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/layertofunctionmapper">LayerToFunctionMapper</a>!: a layer to function mapper</p>
 
         </td>
       </tr>
@@ -861,7 +861,7 @@
       <h3 class="sourcedoc-section element-name">drawFunction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun &lt;T : Any?, P : Position2D&lt;P&gt;?&gt; drawFunction(f: Function&lt;P, Number?&gt;?, env: Environment&lt;T, P&gt;?, g: Graphics2D?, wormhole: IWormhole2D&lt;P&gt;?)</code>
+        <code>abstract fun &lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; drawFunction(f: Function&lt;P, Number?&gt;?, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?, g: Graphics2D?, wormhole: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a>&lt;P&gt;?)</code>
       </p>
 
       
@@ -900,10 +900,10 @@
       
       <tr class="sourcedoc-section section-element" id="5f36e38a592b4a94bef1b256824b2287d86c46b9">
         <td class="sourcedoc-section section-signature">
-          <code>env: Environment&lt;T, P&gt;?</code>
+          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Environment&lt;T, P&gt;!: - the environment (mainly used to make positions)</p>
+        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;!: - the environment (mainly used to make positions)</p>
 
         </td>
       </tr>
@@ -920,10 +920,10 @@
       
       <tr class="sourcedoc-section section-element" id="04e711ed9ea5a9bf9044acb7d7742d1e7271f78e">
         <td class="sourcedoc-section section-signature">
-          <code>wormhole: IWormhole2D&lt;P&gt;?</code>
+          <code>wormhole: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a>&lt;P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>IWormhole2D<P>!: - the wormhole (to map env points to view points)</p>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a><P>!: - the wormhole (to map env points to view points)
 
         </td>
       </tr>
@@ -1446,9 +1446,6 @@
 </div>
 
 </div>
-
-
-
 
 
 
@@ -7509,7 +7506,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7544,9 +7541,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

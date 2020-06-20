@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="b3122b28ed91106898da38cafecdc1a3c09119af">
       
       <p class="sourcedoc-section section-signature">
-        <code>data class Euclidean2DPassage: Any</code>
+        <code>data class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>: Any</code>
       </p>
 
       
@@ -176,18 +176,18 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A passage between two ConvexPolygons in an euclidean bidimensional space.
+      <div class="sourcedoc-section section-comments"><p>A passage between two <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>s in an euclidean bidimensional space.
 The passage is oriented, which means it connects tail to head, but the opposite is
 not necessarily true.
 tail and head can be non-adjacent (there can be some distance between them), this
 introduces navigation issues as agents may not know which direction to follow when
 crossing a passage.
-passageShapeOnTail is a Segment2D representing the shape of the passage on tail's
+passageShapeOnTail is a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a> representing the shape of the passage on tail's
 boundary (e.g. in an indoor environment, the segment should represent the shape of the
 door between two rooms). passageShapeOnTail must be determined so as to guarantee that
 head is reachable by throwing a ray from any point of the segment in its normal direction.
 This solves navigation issues as it provides agents with a direction to follow when crossing
-Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
+<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>s (namely, the normal direction to passageShapeOnTail).</p>
 </div>
 
       
@@ -211,7 +211,7 @@ Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
       
       <tr class="sourcedoc-section section-element" id="e8ebb6b504a8b560159ad8655fc00556219bfe80">
         <td class="sourcedoc-section section-signature">
-          <code>val tail: ConvexPolygon</code>
+          <code>val tail: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -220,7 +220,7 @@ Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
       
       <tr class="sourcedoc-section section-element" id="2775bc323f31bbb8d82c84282483332692371201">
         <td class="sourcedoc-section section-signature">
-          <code>val head: ConvexPolygon</code>
+          <code>val head: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -229,7 +229,7 @@ Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
       
       <tr class="sourcedoc-section section-element" id="5c70a5618c8fd19aeee17627be74aa6c2f812b08">
         <td class="sourcedoc-section section-signature">
-          <code>val passageShapeOnTail: Segment2D&lt;Euclidean2DPosition&gt;</code>
+          <code>val passageShapeOnTail: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -258,23 +258,23 @@ Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(tail: ConvexPolygon, head: ConvexPolygon, passageShapeOnTail: Segment2D&lt;Euclidean2DPosition&gt;)</code>
+        <code>constructor(tail: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, head: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, passageShapeOnTail: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A passage between two ConvexPolygons in an euclidean bidimensional space.
+      <div class="sourcedoc-section section-comments"><p>A passage between two <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>s in an euclidean bidimensional space.
 The passage is oriented, which means it connects tail to head, but the opposite is
 not necessarily true.
 tail and head can be non-adjacent (there can be some distance between them), this
 introduces navigation issues as agents may not know which direction to follow when
 crossing a passage.
-passageShapeOnTail is a Segment2D representing the shape of the passage on tail's
+passageShapeOnTail is a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a> representing the shape of the passage on tail's
 boundary (e.g. in an indoor environment, the segment should represent the shape of the
 door between two rooms). passageShapeOnTail must be determined so as to guarantee that
 head is reachable by throwing a ray from any point of the segment in its normal direction.
 This solves navigation issues as it provides agents with a direction to follow when crossing
-Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
+<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>s (namely, the normal direction to passageShapeOnTail).</p>
 </div>
 
       
@@ -298,7 +298,7 @@ Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
       
       <tr class="sourcedoc-section section-element" id="2cd83e1b0b8fd2b8a9eb89a455cca4dd20b21c2a">
         <td class="sourcedoc-section section-signature">
-          <code>tail: ConvexPolygon</code>
+          <code>tail: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -307,7 +307,7 @@ Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
       
       <tr class="sourcedoc-section section-element" id="88b93fd19294c01acbd1700d437168ca9b49ec81">
         <td class="sourcedoc-section section-signature">
-          <code>head: ConvexPolygon</code>
+          <code>head: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -316,7 +316,7 @@ Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
       
       <tr class="sourcedoc-section section-element" id="64f267bbaa9a95dfc625ed1157601e0c1ed19f0f">
         <td class="sourcedoc-section section-signature">
-          <code>passageShapeOnTail: Segment2D&lt;Euclidean2DPosition&gt;</code>
+          <code>passageShapeOnTail: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -352,7 +352,7 @@ Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
       <h3 class="sourcedoc-section element-name">crossingPointOnTail</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun crossingPointOnTail(position: Euclidean2DPosition): Euclidean2DPosition</code>
+        <code>fun crossingPointOnTail(position: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
       </p>
 
       
@@ -384,7 +384,7 @@ Note that the agent must be inside tail.</p>
       
       <tr class="sourcedoc-section section-element" id="c0efc1db2fbc69a6dd0db265cc153386020f61a3">
         <td class="sourcedoc-section section-signature">
-          <code>position: Euclidean2DPosition</code>
+          <code>position: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -417,7 +417,7 @@ Note that the agent must be inside tail.</p>
       
       <tr class="sourcedoc-section section-element" id="74618a2e873e80a960348cbaf6e96932fc47d169">
         <td class="sourcedoc-section section-signature">
-          <code>Euclidean2DPosition</code>
+          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -440,7 +440,7 @@ Note that the agent must be inside tail.</p>
       <h3 class="sourcedoc-section element-name">crossingPointOnHead</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun crossingPointOnHead(crossingPointOnTail: Euclidean2DPosition): Euclidean2DPosition</code>
+        <code>fun crossingPointOnHead(crossingPointOnTail: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
       </p>
 
       
@@ -476,7 +476,7 @@ ConvexPolygon.containsBoundaryIncluded.</p>
       
       <tr class="sourcedoc-section section-element" id="ed42f9f0d42186c544af951c109531e2286d9bb4">
         <td class="sourcedoc-section section-signature">
-          <code>crossingPointOnTail: Euclidean2DPosition</code>
+          <code>crossingPointOnTail: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -509,7 +509,7 @@ ConvexPolygon.containsBoundaryIncluded.</p>
       
       <tr class="sourcedoc-section section-element" id="74618a2e873e80a960348cbaf6e96932fc47d169">
         <td class="sourcedoc-section section-signature">
-          <code>Euclidean2DPosition</code>
+          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -532,7 +532,7 @@ ConvexPolygon.containsBoundaryIncluded.</p>
       <h3 class="sourcedoc-section element-name">crossingPoints</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun crossingPoints(position: Euclidean2DPosition): Pair<Euclidean2DPosition, Euclidean2DPosition>&lt;Euclidean2DPosition, Euclidean2DPosition&gt;</code>
+        <code>fun crossingPoints(position: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>): Pair<Euclidean2DPosition, Euclidean2DPosition>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
       </p>
 
       
@@ -562,7 +562,7 @@ returns a pair containing both the crossingPointOnTail and the crossingPointOnHe
       
       <tr class="sourcedoc-section section-element" id="c0efc1db2fbc69a6dd0db265cc153386020f61a3">
         <td class="sourcedoc-section section-signature">
-          <code>position: Euclidean2DPosition</code>
+          <code>position: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -595,7 +595,7 @@ returns a pair containing both the crossingPointOnTail and the crossingPointOnHe
       
       <tr class="sourcedoc-section section-element" id="85edadfc51556ef21cc32b6f1eef0290a07e71de">
         <td class="sourcedoc-section section-signature">
-          <code>Pair<Euclidean2DPosition, Euclidean2DPosition>&lt;Euclidean2DPosition, Euclidean2DPosition&gt;</code>
+          <code>Pair<Euclidean2DPosition, Euclidean2DPosition>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -624,9 +624,6 @@ returns a pair containing both the crossingPointOnTail and the crossingPointOnHe
 </div>
 
 </div>
-
-
-
 
 
 
@@ -6687,7 +6684,7 @@ returns a pair containing both the crossingPointOnTail and the crossingPointOnHe
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6722,9 +6719,9 @@ returns a pair containing both the crossingPointOnTail and the crossingPointOnHe
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
