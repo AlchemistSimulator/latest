@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+270ccb9c3"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="17e6501853e47676a7aaa32841e49cd4bbbcb8e8">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface OrientingAgent&lt;V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;, N : ConvexGeometricShape&lt;V, A&gt;, E&gt; : Any</code>
+        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/orientingagent">OrientingAgent</a>&lt;V : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/vector">Vector</a>&lt;V&gt;, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;V&gt;, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;V, A&gt;, E&gt; : Any</code>
       </p>
 
       
@@ -214,26 +214,26 @@ volatileMemory).</p>
       
       <tr class="sourcedoc-section section-element" id="d89facde97812f4dd103013b68460e9993ea4b9b">
         <td class="sourcedoc-section section-signature">
-          <code>abstract cognitiveMap: NavigationGraph&lt;V, A, N, E&gt;</code>
+          <code>abstract cognitiveMap: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>&lt;V, A, N, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The cognitive map of the agent. It's composed of landmarks (elements of the
 environment easy to remember due to their uniqueness) and spatial relations
-between them. It is represented using a NavigationGraph.</p>
+between them. It is represented using a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>.</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="fef71b51ebf1bcde67294a7a99faed12f62e245d">
         <td class="sourcedoc-section section-signature">
-          <code>abstract volatileMemory: MutableMap&lt;ConvexGeometricShape&lt;V, A&gt;, Int&gt;</code>
+          <code>abstract volatileMemory: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;V, A&gt;, Int&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The volatile memory of the agent: it models the ability to remember areas
 of the environment already visited by the agent since the start of the
 simulation. In particular, each area is paired with the number of visits.
-Areas are assumed to be represented as ConvexGeometricShapes, as in
-NavigationGraphs.</p>
+Areas are assumed to be represented as <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>s, as in
+<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>s.</p>
 
         </td>
       </tr>
@@ -260,7 +260,7 @@ NavigationGraphs.</p>
       <h3 class="sourcedoc-section element-name">registerVisit</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun &lt;M : ConvexGeometricShape&lt;V, A&gt;&gt; registerVisit(area: M)</code>
+        <code>open fun &lt;M : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;V, A&gt;&gt; registerVisit(area: M)</code>
       </p>
 
       
@@ -351,9 +351,6 @@ NavigationGraphs.</p>
 </div>
 
 </div>
-
-
-
 
 
 
@@ -6414,7 +6411,7 @@ NavigationGraphs.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+270ccb9c3. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6449,9 +6446,9 @@ NavigationGraphs.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

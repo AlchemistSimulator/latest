@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+270ccb9c3"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="38e69148f5a664ed63edd6de0a31c53d667bef03">
       
       <p class="sourcedoc-section section-signature">
-        <code>package it.unibo.alchemist.model.interfaces.geometry.euclidean2d.graph</code>
+        <code>package <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph">it.unibo.alchemist.model.interfaces.geometry.euclidean2d.graph</a></code>
       </p>
 
       
@@ -199,31 +199,31 @@
       
       <tr class="sourcedoc-section section-element" id="b3122b28ed91106898da38cafecdc1a3c09119af">
         <td class="sourcedoc-section section-signature">
-          <code>data class Euclidean2DPassage: Any</code>
+          <code>data class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>: Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A passage between two ConvexPolygons in an euclidean bidimensional space.
+        <p>A passage between two <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>s in an euclidean bidimensional space.
 The passage is oriented, which means it connects tail to head, but the opposite is
 not necessarily true.
 tail and head can be non-adjacent (there can be some distance between them), this
 introduces navigation issues as agents may not know which direction to follow when
 crossing a passage.
-passageShapeOnTail is a Segment2D representing the shape of the passage on tail's
+passageShapeOnTail is a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a> representing the shape of the passage on tail's
 boundary (e.g. in an indoor environment, the segment should represent the shape of the
 door between two rooms). passageShapeOnTail must be determined so as to guarantee that
 head is reachable by throwing a ray from any point of the segment in its normal direction.
 This solves navigation issues as it provides agents with a direction to follow when crossing
-Euclidean2DPassages (namely, the normal direction to passageShapeOnTail).</p>
+<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>s (namely, the normal direction to passageShapeOnTail).</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="156a86367402fabfe31351f2647c49242612387c">
         <td class="sourcedoc-section section-signature">
-          <code>interface NavigationGraph&lt;V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;, N : ConvexGeometricShape&lt;V, A&gt;, E&gt; : Any</code>
+          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>&lt;V : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/vector">Vector</a>&lt;V&gt;, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;V&gt;, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;V, A&gt;, E&gt; : Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A graph used for navigation purposes. Nodes are ConvexGeometricShapes,
+        <p>A graph used for navigation purposes. Nodes are <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>s,
 usually representing portions of an environment which are traversable by
 agents (the advantage of such representation is that agents can freely
 walk around within a convex area, as it is guaranteed that no obstacle
@@ -239,11 +239,11 @@ not allow duplicated edges (see <a href="#">org.jgrapht.Graph.addEdge</a>).</p>
       
       <tr class="sourcedoc-section section-element" id="754cbab5ffd8693a1089673093c3bb61481a9d84">
         <td class="sourcedoc-section section-signature">
-          <code>class Euclidean2DNavigationGraph</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dnavigationgraph">Euclidean2DNavigationGraph</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A NavigationGraph in an euclidean bidimensional space, whose nodes are ConvexPolygons
-and edges are Euclidean2DPassages. Using Euclidean2DPassages as edges leads to some
+        <p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a> in an euclidean bidimensional space, whose nodes are <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>s
+and edges are <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>s. Using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>s as edges leads to some
 overhead (as these maintain the nodes they connect, when this information is already stored
 in the navigation graph), but allows to have duplicate edges in opposite directions, which
 means a node n1 can be connected to another node n2 through a passage whose shape is equal
@@ -280,11 +280,11 @@ the graph would not have allowed to have two edges so that e1.equal(e2).</p>
       
       <tr class="sourcedoc-section section-element" id="1f72d24a77903567aca5b6d94732371048e3ae97">
         <td class="sourcedoc-section section-signature">
-          <code>typealias Euclidean2DNavigationGraph = NavigationGraph</code>
+          <code>typealias <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dnavigationgraph">Euclidean2DNavigationGraph</a> = <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A NavigationGraph in an euclidean bidimensional space, whose nodes are ConvexPolygons
-and edges are Euclidean2DPassages. Using Euclidean2DPassages as edges leads to some
+        <p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a> in an euclidean bidimensional space, whose nodes are <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>s
+and edges are <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>s. Using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>s as edges leads to some
 overhead (as these maintain the nodes they connect, when this information is already stored
 in the navigation graph), but allows to have duplicate edges in opposite directions, which
 means a node n1 can be connected to another node n2 through a passage whose shape is equal
@@ -310,9 +310,6 @@ the graph would not have allowed to have two edges so that e1.equal(e2).</p>
 </div>
 
 </div>
-
-
-
 
 
 
@@ -6373,7 +6370,7 @@ the graph would not have allowed to have two edges so that e1.equal(e2).</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+270ccb9c3. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6408,9 +6405,9 @@ the graph would not have allowed to have two edges so that e1.equal(e2).</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/4de59c7b/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
