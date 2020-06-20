@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="55178962eab4739659370b01e487dbaff75c1ab4">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, Any</code>
+        <code>abstract class AbstractReaction&lt;T : Any?&gt; : Reaction&lt;T&gt;, Any</code>
       </p>
 
       
@@ -196,7 +196,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, pd: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/timedistribution">TimeDistribution</a>&lt;T&gt;?)</code>
+        <code>constructor(n: Node&lt;T&gt;?, pd: TimeDistribution&lt;T&gt;?)</code>
       </p>
 
       
@@ -225,20 +225,20 @@
       
       <tr class="sourcedoc-section section-element" id="1fde94d953de8c356dade4695a2331c4546aa681">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>n: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: the node this reaction belongs to</p>
+        <p>Node<T>!: the node this reaction belongs to</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="e370b6bd8e725315b0a3d815358aa53d150f4878">
         <td class="sourcedoc-section section-signature">
-          <code>pd: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/timedistribution">TimeDistribution</a>&lt;T&gt;?</code>
+          <code>pd: TimeDistribution&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/timedistribution">TimeDistribution</a><T>!: the time distribution this reaction should follow</p>
+        <p>TimeDistribution<T>!: the time distribution this reaction should follow</p>
 
         </td>
       </tr>
@@ -272,7 +272,7 @@
       <h3 class="sourcedoc-section element-name">initializationComplete</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun initializationComplete(t: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;?)</code>
+        <code>open fun initializationComplete(t: Time?, env: Environment&lt;T, *&gt;?)</code>
       </p>
 
       
@@ -300,7 +300,7 @@
       
       <tr class="sourcedoc-section section-element" id="5a0d02a260ee4397c97942e3ccb62021f0f0018c">
         <td class="sourcedoc-section section-signature">
-          <code>t: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>t: Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -309,7 +309,7 @@
       
       <tr class="sourcedoc-section section-element" id="230def937932b42a80a7254397273237208bfc4c">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;?</code>
+          <code>env: Environment&lt;T, *&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -365,7 +365,7 @@
       <h3 class="sourcedoc-section element-name">getOutputContext</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getOutputContext(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+        <code>fun getOutputContext(): Context?</code>
       </p>
 
       
@@ -393,7 +393,7 @@
       
       <tr class="sourcedoc-section section-element" id="5e66a11414867a7afc6633feb4250ba52a57cb31">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+          <code>Context?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -467,7 +467,7 @@
       <h3 class="sourcedoc-section element-name">getConditions</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun getConditions(): MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/condition">Condition</a>&lt;T&gt;?&gt;?</code>
+        <code>open fun getConditions(): MutableList&lt;Condition&lt;T&gt;?&gt;?</code>
       </p>
 
       
@@ -496,10 +496,10 @@
       
       <tr class="sourcedoc-section section-element" id="0c8011fe5c028fa41ef56bf586224fed03860571">
         <td class="sourcedoc-section section-signature">
-          <code>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/condition">Condition</a>&lt;T&gt;?&gt;?</code>
+          <code>MutableList&lt;Condition&lt;T&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/condition">Condition</a><T>!&gt;!: the list of <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/condition">Condition</a></code>s.</p>
+        <p>MutableList&lt;Condition<T>!&gt;!: the list of <code>Condition</code>s.</p>
 
         </td>
       </tr>
@@ -573,7 +573,7 @@
       <h3 class="sourcedoc-section element-name">getTau</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getTau(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+        <code>fun getTau(): Time?</code>
       </p>
 
       
@@ -601,7 +601,7 @@
       
       <tr class="sourcedoc-section section-element" id="fb5b6d153245a2585f5561d0195adf5208150d11">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -624,7 +624,7 @@
       <h3 class="sourcedoc-section element-name">setOutputContext</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun setOutputContext(c: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?)</code>
+        <code>protected fun setOutputContext(c: Context?)</code>
       </p>
 
       
@@ -653,10 +653,10 @@
       
       <tr class="sourcedoc-section section-element" id="3e7c827422476b9841b9c0f95c65753c93ec496e">
         <td class="sourcedoc-section section-signature">
-          <code>c: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+          <code>c: Context?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>!: the new input context</p>
+        <p>Context!: the new input context</p>
 
         </td>
       </tr>
@@ -710,7 +710,7 @@
       <h3 class="sourcedoc-section element-name">update</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun update(curTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?, executed: Boolean, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;?)</code>
+        <code>fun update(curTime: Time?, executed: Boolean, env: Environment&lt;T, *&gt;?)</code>
       </p>
 
       
@@ -738,7 +738,7 @@
       
       <tr class="sourcedoc-section section-element" id="040aaf4ff8acf93a1a26cb2ac10b25e8197d9261">
         <td class="sourcedoc-section section-signature">
-          <code>curTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>curTime: Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -756,7 +756,7 @@
       
       <tr class="sourcedoc-section section-element" id="230def937932b42a80a7254397273237208bfc4c">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;?</code>
+          <code>env: Environment&lt;T, *&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -812,7 +812,7 @@
       <h3 class="sourcedoc-section element-name">updateInternalStatus</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected abstract fun updateInternalStatus(curTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?, executed: Boolean, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;?)</code>
+        <code>protected abstract fun updateInternalStatus(curTime: Time?, executed: Boolean, env: Environment&lt;T, *&gt;?)</code>
       </p>
 
       
@@ -841,10 +841,10 @@
       
       <tr class="sourcedoc-section section-element" id="040aaf4ff8acf93a1a26cb2ac10b25e8197d9261">
         <td class="sourcedoc-section section-signature">
-          <code>curTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>curTime: Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>!: the current simulation time</p>
+        <p>Time!: the current simulation time</p>
 
         </td>
       </tr>
@@ -861,10 +861,10 @@
       
       <tr class="sourcedoc-section section-element" id="230def937932b42a80a7254397273237208bfc4c">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;?</code>
+          <code>env: Environment&lt;T, *&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;!: the current environment</p>
+        <p>Environment&lt;T, *&gt;!: the current environment</p>
 
         </td>
       </tr>
@@ -971,7 +971,7 @@
       <h3 class="sourcedoc-section element-name">getNode</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getNode(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+        <code>fun getNode(): Node&lt;T&gt;?</code>
       </p>
 
       
@@ -999,7 +999,7 @@
       
       <tr class="sourcedoc-section section-element" id="977eff654676d2da0411b27d18a2fcb5d23cdebd">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1073,7 +1073,7 @@
       <h3 class="sourcedoc-section element-name">addOutboundDependency</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun addOutboundDependency(m: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/dependency">Dependency</a>?)</code>
+        <code>protected fun addOutboundDependency(m: Dependency?)</code>
       </p>
 
       
@@ -1102,10 +1102,10 @@
       
       <tr class="sourcedoc-section section-element" id="d4af6aa513076d07d3e2ad542725118d1b3c38f6">
         <td class="sourcedoc-section section-signature">
-          <code>m: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/dependency">Dependency</a>?</code>
+          <code>m: Dependency?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/dependency">Dependency</a>!: the influenced molecule</p>
+        <p>Dependency!: the influenced molecule</p>
 
         </td>
       </tr>
@@ -1346,7 +1346,7 @@
       <h3 class="sourcedoc-section element-name">compareTo</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun compareTo(other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;?): Int</code>
+        <code>fun compareTo(other: Reaction&lt;T&gt;?): Int</code>
       </p>
 
       
@@ -1374,7 +1374,7 @@
       
       <tr class="sourcedoc-section section-element" id="cc5c11874506da2a512e18d5f672d9194380915b">
         <td class="sourcedoc-section section-signature">
-          <code>other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;?</code>
+          <code>other: Reaction&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1430,7 +1430,7 @@
       <h3 class="sourcedoc-section element-name">setInputContext</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun setInputContext(c: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?)</code>
+        <code>protected fun setInputContext(c: Context?)</code>
       </p>
 
       
@@ -1459,10 +1459,10 @@
       
       <tr class="sourcedoc-section section-element" id="3e7c827422476b9841b9c0f95c65753c93ec496e">
         <td class="sourcedoc-section section-signature">
-          <code>c: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+          <code>c: Context?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>!: the new input context</p>
+        <p>Context!: the new input context</p>
 
         </td>
       </tr>
@@ -1568,7 +1568,7 @@
       <h3 class="sourcedoc-section element-name">makeClone</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun &lt;R : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;?&gt; makeClone(builder: Supplier&lt;R&gt;?): R</code>
+        <code>protected open fun &lt;R : Reaction&lt;T&gt;?&gt; makeClone(builder: Supplier&lt;R&gt;?): R</code>
       </p>
 
       
@@ -1655,7 +1655,7 @@
       <h3 class="sourcedoc-section element-name">addInboundDependency</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun addInboundDependency(m: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/dependency">Dependency</a>?)</code>
+        <code>protected fun addInboundDependency(m: Dependency?)</code>
       </p>
 
       
@@ -1684,10 +1684,10 @@
       
       <tr class="sourcedoc-section section-element" id="d4af6aa513076d07d3e2ad542725118d1b3c38f6">
         <td class="sourcedoc-section section-signature">
-          <code>m: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/dependency">Dependency</a>?</code>
+          <code>m: Dependency?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/dependency">Dependency</a>!: the molecule to add</p>
+        <p>Dependency!: the molecule to add</p>
 
         </td>
       </tr>
@@ -1741,7 +1741,7 @@
       <h3 class="sourcedoc-section element-name">getTimeDistribution</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getTimeDistribution(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/timedistribution">TimeDistribution</a>&lt;T&gt;?</code>
+        <code>fun getTimeDistribution(): TimeDistribution&lt;T&gt;?</code>
       </p>
 
       
@@ -1769,7 +1769,7 @@
       
       <tr class="sourcedoc-section section-element" id="8f29c6bd0fbc8df4324d08b000faf236083ce4a7">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/timedistribution">TimeDistribution</a>&lt;T&gt;?</code>
+          <code>TimeDistribution&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1792,7 +1792,7 @@
       <h3 class="sourcedoc-section element-name">getInputContext</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getInputContext(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+        <code>fun getInputContext(): Context?</code>
       </p>
 
       
@@ -1820,7 +1820,7 @@
       
       <tr class="sourcedoc-section section-element" id="5e66a11414867a7afc6633feb4250ba52a57cb31">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+          <code>Context?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1843,7 +1843,7 @@
       <h3 class="sourcedoc-section element-name">setConditions</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun setConditions(c: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/condition">Condition</a>&lt;T&gt;?&gt;?)</code>
+        <code>open fun setConditions(c: MutableList&lt;Condition&lt;T&gt;?&gt;?)</code>
       </p>
 
       
@@ -1872,10 +1872,10 @@
       
       <tr class="sourcedoc-section section-element" id="6fb936357dca946be47a7cf95ebc203f614a5f96">
         <td class="sourcedoc-section section-signature">
-          <code>c: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/condition">Condition</a>&lt;T&gt;?&gt;?</code>
+          <code>c: MutableList&lt;Condition&lt;T&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/condition">Condition</a><T>!&gt;!: the actions to set</p>
+        <p>MutableList&lt;Condition<T>!&gt;!: the actions to set</p>
 
         </td>
       </tr>
@@ -1929,7 +1929,7 @@
       <h3 class="sourcedoc-section element-name">getActions</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun getActions(): MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a>&lt;T&gt;?&gt;?</code>
+        <code>open fun getActions(): MutableList&lt;Action&lt;T&gt;?&gt;?</code>
       </p>
 
       
@@ -1958,10 +1958,10 @@
       
       <tr class="sourcedoc-section section-element" id="20389669bb6d7298683501b76e19305a15fc8958">
         <td class="sourcedoc-section section-signature">
-          <code>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a>&lt;T&gt;?&gt;?</code>
+          <code>MutableList&lt;Action&lt;T&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a><T>!&gt;!: the list of <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a></code>s.</p>
+        <p>MutableList&lt;Action<T>!&gt;!: the list of <code>Action</code>s.</p>
 
         </td>
       </tr>
@@ -1982,7 +1982,7 @@
       <h3 class="sourcedoc-section element-name">setActions</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun setActions(a: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a>&lt;T&gt;?&gt;?)</code>
+        <code>open fun setActions(a: MutableList&lt;Action&lt;T&gt;?&gt;?)</code>
       </p>
 
       
@@ -2011,10 +2011,10 @@
       
       <tr class="sourcedoc-section section-element" id="6a10affc574d4263d3b0378e4d8e6de5434cfb4e">
         <td class="sourcedoc-section section-signature">
-          <code>a: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a>&lt;T&gt;?&gt;?</code>
+          <code>a: MutableList&lt;Action&lt;T&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a><T>!&gt;!: the actions to set</p>
+        <p>MutableList&lt;Action<T>!&gt;!: the actions to set</p>
 
         </td>
       </tr>
@@ -2126,6 +2126,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -8186,7 +8189,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="17e6501853e47676a7aaa32841e49cd4bbbcb8e8">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/orientingagent">OrientingAgent</a>&lt;V : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/vector">Vector</a>&lt;V&gt;, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;V&gt;, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;V, A&gt;, E&gt; : Any</code>
+        <code>interface OrientingAgent&lt;V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;, N : ConvexGeometricShape&lt;V, A&gt;, E&gt; : Any</code>
       </p>
 
       
@@ -214,26 +214,26 @@ volatileMemory).</p>
       
       <tr class="sourcedoc-section section-element" id="d89facde97812f4dd103013b68460e9993ea4b9b">
         <td class="sourcedoc-section section-signature">
-          <code>abstract cognitiveMap: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>&lt;V, A, N, E&gt;</code>
+          <code>abstract cognitiveMap: NavigationGraph&lt;V, A, N, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The cognitive map of the agent. It's composed of landmarks (elements of the
 environment easy to remember due to their uniqueness) and spatial relations
-between them. It is represented using a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>.</p>
+between them. It is represented using a NavigationGraph.</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="fef71b51ebf1bcde67294a7a99faed12f62e245d">
         <td class="sourcedoc-section section-signature">
-          <code>abstract volatileMemory: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;V, A&gt;, Int&gt;</code>
+          <code>abstract volatileMemory: MutableMap&lt;ConvexGeometricShape&lt;V, A&gt;, Int&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The volatile memory of the agent: it models the ability to remember areas
 of the environment already visited by the agent since the start of the
 simulation. In particular, each area is paired with the number of visits.
-Areas are assumed to be represented as <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>s, as in
-<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>s.</p>
+Areas are assumed to be represented as ConvexGeometricShapes, as in
+NavigationGraphs.</p>
 
         </td>
       </tr>
@@ -260,7 +260,7 @@ Areas are assumed to be represented as <a href="https://alchemistsimulator.githu
       <h3 class="sourcedoc-section element-name">registerVisit</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun &lt;M : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;V, A&gt;&gt; registerVisit(area: M)</code>
+        <code>open fun &lt;M : ConvexGeometricShape&lt;V, A&gt;&gt; registerVisit(area: M)</code>
       </p>
 
       
@@ -351,6 +351,9 @@ Areas are assumed to be represented as <a href="https://alchemistsimulator.githu
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6411,7 +6414,7 @@ Areas are assumed to be represented as <a href="https://alchemistsimulator.githu
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

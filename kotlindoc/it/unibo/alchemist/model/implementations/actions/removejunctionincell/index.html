@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="5c6e474e609ebd81a9e827211c4855a13fc29a76">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removejunctionincell">RemoveJunctionInCell</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractneighboraction">AbstractNeighborAction</a>&lt;Double?&gt;</code>
+        <code>class RemoveJunctionInCell: AbstractNeighborAction&lt;Double?&gt;</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Represent the action of removing a junction between the current node and a neighbor. <br> This action only remove the junction reference inside this node, the neighbor totally ignore that a junction has been removed. <br> This is a part of the junction removal process. <br> See <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removejunctioninneighbor">RemoveJunctionInNeighbor</a></code> for the other part of the process</p>
+      <div class="sourcedoc-section section-comments"><p>Represent the action of removing a junction between the current node and a neighbor. <br> This action only remove the junction reference inside this node, the neighbor totally ignore that a junction has been removed. <br> This is a part of the junction removal process. <br> See <code>RemoveJunctionInNeighbor</code> for the other part of the process</p>
 </div>
 
       
@@ -196,7 +196,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(e: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;Double?, *&gt;?, n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Double?&gt;?, junction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?, rg: RandomGenerator?)</code>
+        <code>constructor(e: Environment&lt;Double?, *&gt;?, n: Node&lt;Double?&gt;?, junction: Junction?, rg: RandomGenerator?)</code>
       </p>
 
       
@@ -224,30 +224,30 @@
       
       <tr class="sourcedoc-section section-element" id="e4a7af3e4209188dee4ff11b7bed5c44c6b8b727">
         <td class="sourcedoc-section section-signature">
-          <code>e: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;Double?, *&gt;?</code>
+          <code>e: Environment&lt;Double?, *&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;Double!, *&gt;!: the environment</p>
+        <p>Environment&lt;Double!, *&gt;!: the environment</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="0109e2bbdfabaad4f1e648921d2504039e2b82a8">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Double?&gt;?</code>
+          <code>n: Node&lt;Double?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Double!&gt;!: the node where the action is performed</p>
+        <p>Node&lt;Double!&gt;!: the node where the action is performed</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="0b4d50177c34d646e426354161976b1ca78f5a66">
         <td class="sourcedoc-section section-signature">
-          <code>junction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?</code>
+          <code>junction: Junction?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>!: the junction</p>
+        <p>Junction!: the junction</p>
 
         </td>
       </tr>
@@ -394,7 +394,7 @@
       <h3 class="sourcedoc-section element-name">execute</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun execute(targetNode: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Double?&gt;?)</code>
+        <code>fun execute(targetNode: Node&lt;Double?&gt;?)</code>
       </p>
 
       
@@ -423,10 +423,10 @@
       
       <tr class="sourcedoc-section section-element" id="e6dd632ae99b653f20b73e7a089bd94d66a474de">
         <td class="sourcedoc-section section-signature">
-          <code>targetNode: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Double?&gt;?</code>
+          <code>targetNode: Node&lt;Double?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Double!&gt;!: the node where the action will be execute</p>
+        <p>Node&lt;Double!&gt;!: the node where the action will be execute</p>
 
         </td>
       </tr>
@@ -480,7 +480,7 @@
       <h3 class="sourcedoc-section element-name">cloneAction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun cloneAction(n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Double?&gt;?, r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;Double?&gt;?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removejunctionincell">RemoveJunctionInCell</a>?</code>
+        <code>fun cloneAction(n: Node&lt;Double?&gt;?, r: Reaction&lt;Double?&gt;?): RemoveJunctionInCell?</code>
       </p>
 
       
@@ -508,7 +508,7 @@
       
       <tr class="sourcedoc-section section-element" id="0109e2bbdfabaad4f1e648921d2504039e2b82a8">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Double?&gt;?</code>
+          <code>n: Node&lt;Double?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -517,7 +517,7 @@
       
       <tr class="sourcedoc-section section-element" id="1acbba893884733974f1b12c6daa7be41dfa7d46">
         <td class="sourcedoc-section section-signature">
-          <code>r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;Double?&gt;?</code>
+          <code>r: Reaction&lt;Double?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -550,7 +550,7 @@
       
       <tr class="sourcedoc-section section-element" id="08398ca21be7b2a973118834412de489d8c00b1c">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removejunctionincell">RemoveJunctionInCell</a>?</code>
+          <code>RemoveJunctionInCell?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -573,7 +573,7 @@
       <h3 class="sourcedoc-section element-name">getNode</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getNode(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?</code>
+        <code>fun getNode(): CellNode&lt;*&gt;?</code>
       </p>
 
       
@@ -601,7 +601,7 @@
       
       <tr class="sourcedoc-section section-element" id="61968c70424e06e683e8a4bf6184acb54a257dbb">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?</code>
+          <code>CellNode&lt;*&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -630,6 +630,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6690,7 +6693,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

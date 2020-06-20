@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="1474b73dea485e07b7d1415d0f757608fcbf835d">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/closetogpstrace">CloseToGPSTrace</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/abstractcloseto">AbstractCloseTo</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>&gt;</code>
+        <code>class CloseToGPSTrace&lt;T&gt; : AbstractCloseTo&lt;T, GeoPosition&gt;</code>
       </p>
 
       
@@ -176,9 +176,9 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>This <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/displacement">Displacement</a> displaces nodes in the proximity of a GPS trace.
+      <div class="sourcedoc-section section-comments"><p>This Displacement displaces nodes in the proximity of a GPS trace.
 Given a time interval from some time to another,
-it creates a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/impl/traceloader">TraceLoader</a>, then uses the points in the interval to generate the sources for a
+it creates a TraceLoader, then uses the points in the interval to generate the sources for a
 Gaussian bivariate function and uses its probability density to deploy.
 Higher variance spreads nodes farther away from the trace with higher probability.</p>
 </div>
@@ -213,7 +213,7 @@ Higher variance spreads nodes farther away from the trace with higher probabilit
       
       <tr class="sourcedoc-section section-element" id="5f0281c28926720bbe69ef595ac6ed29baf083c5">
         <td class="sourcedoc-section section-signature">
-          <code>val to: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a></code>
+          <code>val to: Time</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -242,14 +242,14 @@ Higher variance spreads nodes farther away from the trace with higher probabilit
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(randomGenerator: RandomGenerator, environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>&gt;, nodeCount: Int, variance: Double, from: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>, interval: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>, to: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>, gpsFilePath: String, normalizerClass: String, vararg normalizerArguments: Any)</code>
+        <code>constructor(randomGenerator: RandomGenerator, environment: Environment&lt;T, GeoPosition&gt;, nodeCount: Int, variance: Double, from: Time, interval: Time, to: Time, gpsFilePath: String, normalizerClass: String, vararg normalizerArguments: Any)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>This <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/displacement">Displacement</a> displaces nodes in the proximity of a GPS trace.
+      <div class="sourcedoc-section section-comments"><p>This Displacement displaces nodes in the proximity of a GPS trace.
 Given a time interval from some time to another,
-it creates a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/impl/traceloader">TraceLoader</a>, then uses the points in the interval to generate the sources for a
+it creates a TraceLoader, then uses the points in the interval to generate the sources for a
 Gaussian bivariate function and uses its probability density to deploy.
 Higher variance spreads nodes farther away from the trace with higher probability.</p>
 </div>
@@ -284,7 +284,7 @@ Higher variance spreads nodes farther away from the trace with higher probabilit
       
       <tr class="sourcedoc-section section-element" id="855dd0ef4551f74222356caf120409d6affcbc86">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>&gt;</code>
+          <code>environment: Environment&lt;T, GeoPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -311,7 +311,7 @@ Higher variance spreads nodes farther away from the trace with higher probabilit
       
       <tr class="sourcedoc-section section-element" id="4008b598f29cc25de4a0b1be7d3a3c56d3dd83df">
         <td class="sourcedoc-section section-signature">
-          <code>from: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a></code>
+          <code>from: Time</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -320,7 +320,7 @@ Higher variance spreads nodes farther away from the trace with higher probabilit
       
       <tr class="sourcedoc-section section-element" id="4134178c51387a2c890c90e22651ef92739bd6ca">
         <td class="sourcedoc-section section-signature">
-          <code>interval: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a></code>
+          <code>interval: Time</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -329,7 +329,7 @@ Higher variance spreads nodes farther away from the trace with higher probabilit
       
       <tr class="sourcedoc-section section-element" id="930ff493142b3c02701a47bbc7d20261f930fdf5">
         <td class="sourcedoc-section section-signature">
-          <code>to: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a></code>
+          <code>to: Time</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -385,6 +385,9 @@ Higher variance spreads nodes farther away from the trace with higher probabilit
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6445,7 +6448,7 @@ Higher variance spreads nodes farther away from the trace with higher probabilit
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

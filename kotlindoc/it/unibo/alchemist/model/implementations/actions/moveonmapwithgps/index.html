@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="38a9ce393efdf5eb35a7901aac614ca6b52dd9cb">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmapwithgps">MoveOnMapWithGPS</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmap">MoveOnMap</a>&lt;T&gt;</code>
+        <code>open class MoveOnMapWithGPS&lt;T : Any?&gt; : MoveOnMap&lt;T&gt;</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>basic action that follow a <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a></code>.</p>
+      <div class="sourcedoc-section section-comments"><p>basic action that follow a <code>GPSTrace</code>.</p>
 </div>
 
       
@@ -196,7 +196,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/mapenvironment">MapEnvironment</a>&lt;T&gt;?, node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, rt: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?, sp: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?, tg: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?, path: String?, cycle: Boolean, normalizer: String?, vararg normalizerArgs: Any?)</code>
+        <code>constructor(environment: MapEnvironment&lt;T&gt;?, node: Node&lt;T&gt;?, rt: RoutingStrategy&lt;GeoPosition?&gt;?, sp: SpeedSelectionStrategy&lt;GeoPosition?&gt;?, tg: TargetSelectionStrategy&lt;GeoPosition?&gt;?, path: String?, cycle: Boolean, normalizer: String?, vararg normalizerArgs: Any?)</code>
       </p>
 
       
@@ -224,50 +224,50 @@
       
       <tr class="sourcedoc-section section-element" id="da66237ccff1bf7583c2066275553561691b495b">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/mapenvironment">MapEnvironment</a>&lt;T&gt;?</code>
+          <code>environment: MapEnvironment&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/mapenvironment">MapEnvironment</a><T>!: the environment</p>
+        <p>MapEnvironment<T>!: the environment</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: the node</p>
+        <p>Node<T>!: the node</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="dd8289a9989917bfc8c0f8b2e6085835206ef965">
         <td class="sourcedoc-section section-signature">
-          <code>rt: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>rt: RoutingStrategy&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: the <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a></code></p>
+        <p>RoutingStrategy&lt;GeoPosition!&gt;!: the <code>RoutingStrategy</code></p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="27d6ed60f9c189b0ba3349bf9a6beef893ee6894">
         <td class="sourcedoc-section section-signature">
-          <code>sp: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>sp: SpeedSelectionStrategy&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: the <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a></code></p>
+        <p>SpeedSelectionStrategy&lt;GeoPosition!&gt;!: the <code>SpeedSelectionStrategy</code></p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="fcdf35127b87966e7d10f772409c2d47b90ee5ff">
         <td class="sourcedoc-section section-signature">
-          <code>tg: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>tg: TargetSelectionStrategy&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a></code></p>
+        <p>TargetSelectionStrategy&lt;GeoPosition!&gt;!: <code>TargetSelectionStrategy</code></p>
 
         </td>
       </tr>
@@ -328,7 +328,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/mapenvironment">MapEnvironment</a>&lt;T&gt;?, node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, rt: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?, sp: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?, tg: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?, trace: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?)</code>
+        <code>constructor(environment: MapEnvironment&lt;T&gt;?, node: Node&lt;T&gt;?, rt: RoutingStrategy&lt;GeoPosition?&gt;?, sp: SpeedSelectionStrategy&lt;GeoPosition?&gt;?, tg: TargetSelectionStrategy&lt;GeoPosition?&gt;?, trace: GPSTrace?)</code>
       </p>
 
       
@@ -356,60 +356,60 @@
       
       <tr class="sourcedoc-section section-element" id="da66237ccff1bf7583c2066275553561691b495b">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/mapenvironment">MapEnvironment</a>&lt;T&gt;?</code>
+          <code>environment: MapEnvironment&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/mapenvironment">MapEnvironment</a><T>!: the environment</p>
+        <p>MapEnvironment<T>!: the environment</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: the node</p>
+        <p>Node<T>!: the node</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="dd8289a9989917bfc8c0f8b2e6085835206ef965">
         <td class="sourcedoc-section section-signature">
-          <code>rt: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>rt: RoutingStrategy&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: the <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a></code></p>
+        <p>RoutingStrategy&lt;GeoPosition!&gt;!: the <code>RoutingStrategy</code></p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="27d6ed60f9c189b0ba3349bf9a6beef893ee6894">
         <td class="sourcedoc-section section-signature">
-          <code>sp: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>sp: SpeedSelectionStrategy&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: the <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a></code></p>
+        <p>SpeedSelectionStrategy&lt;GeoPosition!&gt;!: the <code>SpeedSelectionStrategy</code></p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="fcdf35127b87966e7d10f772409c2d47b90ee5ff">
         <td class="sourcedoc-section section-signature">
-          <code>tg: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>tg: TargetSelectionStrategy&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a></code></p>
+        <p>TargetSelectionStrategy&lt;GeoPosition!&gt;!: <code>TargetSelectionStrategy</code></p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="3986c251d5513b2cd842344246c760f73598c244">
         <td class="sourcedoc-section section-signature">
-          <code>trace: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?</code>
+          <code>trace: GPSTrace?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>!: <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">to follow</a></code></p>
+        <p>GPSTrace!: <code>to follow</code></p>
 
         </td>
       </tr>
@@ -443,7 +443,7 @@
       <h3 class="sourcedoc-section element-name">getTrace</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun getTrace(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?</code>
+        <code>protected open fun getTrace(): GPSTrace?</code>
       </p>
 
       
@@ -471,10 +471,10 @@
       
       <tr class="sourcedoc-section section-element" id="77342ec7dc5aa0689e30b20aec47f9e3f798d6be">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?</code>
+          <code>GPSTrace?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>!: <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a></code> followed by this action</p>
+        <p>GPSTrace!: <code>GPSTrace</code> followed by this action</p>
 
         </td>
       </tr>
@@ -495,7 +495,7 @@
       <h3 class="sourcedoc-section element-name">traceFor</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open static fun traceFor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/mapenvironment">MapEnvironment</a>&lt;*&gt;?, path: String?, cycle: Boolean, normalizer: String?, vararg normalizerArgs: Any?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?</code>
+        <code>open static fun traceFor(environment: MapEnvironment&lt;*&gt;?, path: String?, cycle: Boolean, normalizer: String?, vararg normalizerArgs: Any?): GPSTrace?</code>
       </p>
 
       
@@ -523,10 +523,10 @@
       
       <tr class="sourcedoc-section section-element" id="23132f944ffb3493eb08b6703d80bed6e5041ad8">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/mapenvironment">MapEnvironment</a>&lt;*&gt;?</code>
+          <code>environment: MapEnvironment&lt;*&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/mapenvironment">MapEnvironment</a>&lt;*&gt;!: the environment</p>
+        <p>MapEnvironment&lt;*&gt;!: the environment</p>
 
         </td>
       </tr>
@@ -597,10 +597,10 @@
       
       <tr class="sourcedoc-section section-element" id="77342ec7dc5aa0689e30b20aec47f9e3f798d6be">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?</code>
+          <code>GPSTrace?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>!: the GPSTrace</p>
+        <p>GPSTrace!: the GPSTrace</p>
 
         </td>
       </tr>
@@ -627,6 +627,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6687,7 +6690,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

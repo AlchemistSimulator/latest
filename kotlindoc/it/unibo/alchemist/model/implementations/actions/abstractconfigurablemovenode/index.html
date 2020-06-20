@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="cb452552d9356a1aa899a3bc3c59bec9c4ad63cd">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractconfigurablemovenode">AbstractConfigurableMoveNode</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;T, P&gt;</code>
+        <code>abstract class AbstractConfigurableMoveNode&lt;T : Any?, P : Position&lt;P&gt;?&gt; : AbstractMoveNode&lt;T, P&gt;</code>
       </p>
 
       
@@ -196,7 +196,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected constructor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?, node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, routing: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;P&gt;?, target: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;P&gt;?, speed: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;P&gt;?)</code>
+        <code>protected constructor(environment: Environment&lt;T, P&gt;?, node: Node&lt;T&gt;?, routing: RoutingStrategy&lt;P&gt;?, target: TargetSelectionStrategy&lt;P&gt;?, speed: SpeedSelectionStrategy&lt;P&gt;?)</code>
       </p>
 
       
@@ -225,50 +225,50 @@
       
       <tr class="sourcedoc-section section-element" id="2c0dd2590fd11fdd563b077ebb5220f604d710c7">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?</code>
+          <code>environment: Environment&lt;T, P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;!: The environment where to move</p>
+        <p>Environment&lt;T, P&gt;!: The environment where to move</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: The node to which this action belongs</p>
+        <p>Node<T>!: The node to which this action belongs</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="c916bd11bfb69d088045aeb2697621b1e3b0b456">
         <td class="sourcedoc-section section-signature">
-          <code>routing: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;P&gt;?</code>
+          <code>routing: RoutingStrategy&lt;P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a><P>!: the routing strategy
+        <p>RoutingStrategy<P>!: the routing strategy</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="cfa9160972f471d9524a638e50bab3e597e467cc">
         <td class="sourcedoc-section section-signature">
-          <code>target: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;P&gt;?</code>
+          <code>target: TargetSelectionStrategy&lt;P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a><P>!: the strategy used to compute the next target
+        <p>TargetSelectionStrategy<P>!: the strategy used to compute the next target</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="2933470cdc5b432c1f817e4317ec2dc7b8959a26">
         <td class="sourcedoc-section section-signature">
-          <code>speed: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;P&gt;?</code>
+          <code>speed: SpeedSelectionStrategy&lt;P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a><P>!: the speed selection strategy
+        <p>SpeedSelectionStrategy<P>!: the speed selection strategy</p>
 
         </td>
       </tr>
@@ -289,7 +289,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected constructor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?, node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, routing: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;P&gt;?, target: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;P&gt;?, speed: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;P&gt;?, isAbsolute: Boolean)</code>
+        <code>protected constructor(environment: Environment&lt;T, P&gt;?, node: Node&lt;T&gt;?, routing: RoutingStrategy&lt;P&gt;?, target: TargetSelectionStrategy&lt;P&gt;?, speed: SpeedSelectionStrategy&lt;P&gt;?, isAbsolute: Boolean)</code>
       </p>
 
       
@@ -317,50 +317,50 @@
       
       <tr class="sourcedoc-section section-element" id="2c0dd2590fd11fdd563b077ebb5220f604d710c7">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?</code>
+          <code>environment: Environment&lt;T, P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;!: The environment where to move</p>
+        <p>Environment&lt;T, P&gt;!: The environment where to move</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: The node to which this action belongs</p>
+        <p>Node<T>!: The node to which this action belongs</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="c916bd11bfb69d088045aeb2697621b1e3b0b456">
         <td class="sourcedoc-section section-signature">
-          <code>routing: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;P&gt;?</code>
+          <code>routing: RoutingStrategy&lt;P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a><P>!: the routing strategy
+        <p>RoutingStrategy<P>!: the routing strategy</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="cfa9160972f471d9524a638e50bab3e597e467cc">
         <td class="sourcedoc-section section-signature">
-          <code>target: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;P&gt;?</code>
+          <code>target: TargetSelectionStrategy&lt;P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a><P>!: the strategy used to compute the next target
+        <p>TargetSelectionStrategy<P>!: the strategy used to compute the next target</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="2933470cdc5b432c1f817e4317ec2dc7b8959a26">
         <td class="sourcedoc-section section-signature">
-          <code>speed: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;P&gt;?</code>
+          <code>speed: SpeedSelectionStrategy&lt;P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a><P>!: the speed selection strategy
+        <p>SpeedSelectionStrategy<P>!: the speed selection strategy</p>
 
         </td>
       </tr>
@@ -563,7 +563,7 @@
       <h3 class="sourcedoc-section element-name">getCurrentRoute</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun getCurrentRoute(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;*&gt;?</code>
+        <code>protected fun getCurrentRoute(): Route&lt;*&gt;?</code>
       </p>
 
       
@@ -591,10 +591,10 @@
       
       <tr class="sourcedoc-section section-element" id="1a615793980f75430df4431b9e10fbdd3f3f68d3">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;*&gt;?</code>
+          <code>Route&lt;*&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;*&gt;!: the current route, or null if no route is currently being followed</p>
+        <p>Route&lt;*&gt;!: the current route, or null if no route is currently being followed</p>
 
         </td>
       </tr>
@@ -809,6 +809,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6869,7 +6872,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

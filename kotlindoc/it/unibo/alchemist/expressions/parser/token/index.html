@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="2f1d1553924402e7280e2620de5d47ce7da4d0bd">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/parser/token">Token</a>: Serializable, Any</code>
+        <code>open class Token: Serializable, Any</code>
       </p>
 
       
@@ -260,7 +260,7 @@
       
       <tr class="sourcedoc-section section-element" id="b5ddafe1f14756f4afbd9dc7a640a9fd9f17f48c">
         <td class="sourcedoc-section section-signature">
-          <code>var next: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/parser/token">Token</a>?</code>
+          <code>var next: Token?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A reference to the next regular (non-special) token from the input stream. If this is the last token from the input stream, or if the token manager has not read tokens beyond this one, this field is set to null. This is true only if this token is also a regular token. Otherwise, see below for a description of the contents of this field.</p>
@@ -270,7 +270,7 @@
       
       <tr class="sourcedoc-section section-element" id="6da09653fc1a8a51d674dab8247c6c77ce9fc4ba">
         <td class="sourcedoc-section section-signature">
-          <code>var specialToken: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/parser/token">Token</a>?</code>
+          <code>var specialToken: Token?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>This field is used to access special tokens that occur prior to this token, but after the immediately preceding regular (non-special) token. If there are no such special tokens, this field is set to null. When there are more than one such special token, this field refers to the last of these special tokens, which in turn refers to the next previous special token through its specialToken field, and so on until the first special token (whose specialToken field is null). The next fields of special tokens refer to other special tokens that immediately follow it (without an intervening regular token). If there is no such token, this field is null.</p>
@@ -547,7 +547,7 @@
       <h3 class="sourcedoc-section element-name">newToken</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open static fun newToken(ofKind: Int, image: String?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/parser/token">Token</a>?</code>
+        <code>open static fun newToken(ofKind: Int, image: String?): Token?</code>
       </p>
 
       
@@ -618,7 +618,7 @@
       
       <tr class="sourcedoc-section section-element" id="c099d2f988de6e13759cc948953bb3da0bf2dc88">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/parser/token">Token</a>?</code>
+          <code>Token?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -641,7 +641,7 @@
       <h3 class="sourcedoc-section element-name">newToken</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open static fun newToken(ofKind: Int): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/parser/token">Token</a>?</code>
+        <code>open static fun newToken(ofKind: Int): Token?</code>
       </p>
 
       
@@ -702,7 +702,7 @@
       
       <tr class="sourcedoc-section section-element" id="c099d2f988de6e13759cc948953bb3da0bf2dc88">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/parser/token">Token</a>?</code>
+          <code>Token?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -731,6 +731,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6791,7 +6794,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

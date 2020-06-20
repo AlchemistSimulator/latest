@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="e1217ff6445bab69cfac5acf8f398005c23efc3c">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>: Enum&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?&gt;</code>
+        <code>class Context: Enum&lt;Context?&gt;</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>This enum describes the possible contexts for a given <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a></code> or <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/condition">Condition</a></code>. A context represents the elements which are read for a <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/condition">Condition</a></code> and the elements that may be subject of modifications for an <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a></code>. Choosing the right <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a></code> is crucial: if it's too restricted the simulation will be invalid, if it's too wide it WILL impact dramatically on performances. Contexts are used internally to better determine dependencies among reactions. See <a href="http://apice.unibo.it/xwiki/bin/view/Publications/PianiniMASS11"> this paper</a> for further information about the usage of contexts.</p>
+      <div class="sourcedoc-section section-comments"><p>This enum describes the possible contexts for a given <code>Action</code> or <code>Condition</code>. A context represents the elements which are read for a <code>Condition</code> and the elements that may be subject of modifications for an <code>Action</code>. Choosing the right <code>Context</code> is crucial: if it's too restricted the simulation will be invalid, if it's too wide it WILL impact dramatically on performances. Contexts are used internally to better determine dependencies among reactions. See <a href="http://apice.unibo.it/xwiki/bin/view/Publications/PianiniMASS11"> this paper</a> for further information about the usage of contexts.</p>
 </div>
 
       
@@ -247,7 +247,7 @@
       <h3 class="sourcedoc-section element-name">getWider</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>static fun getWider(c1: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?, c2: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+        <code>static fun getWider(c1: Context?, c2: Context?): Context?</code>
       </p>
 
       
@@ -275,20 +275,20 @@
       
       <tr class="sourcedoc-section section-element" id="93342f61d5946c13114b4763ec88bdcc7aee59c3">
         <td class="sourcedoc-section section-signature">
-          <code>c1: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+          <code>c1: Context?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>!: context to compare</p>
+        <p>Context!: context to compare</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="3952bf04ab4e72386687d08efbc94724df9cf62c">
         <td class="sourcedoc-section section-signature">
-          <code>c2: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+          <code>c2: Context?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>!: other context to compare</p>
+        <p>Context!: other context to compare</p>
 
         </td>
       </tr>
@@ -319,10 +319,10 @@
       
       <tr class="sourcedoc-section section-element" id="5e66a11414867a7afc6633feb4250ba52a57cb31">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+          <code>Context?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>!: the wider (more general) between the two: if either one is <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">#GLOBAL</a></code>, then <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">#GLOBAL</a></code> is returned. Otherwise, if either one is <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">#NEIGHBORHOOD</a></code>, <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">#NEIGHBORHOOD</a></code> is returned. Otherwise, <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">#LOCAL</a></code> is returned.</p>
+        <p>Context!: the wider (more general) between the two: if either one is <code>#GLOBAL</code>, then <code>#GLOBAL</code> is returned. Otherwise, if either one is <code>#NEIGHBORHOOD</code>, <code>#NEIGHBORHOOD</code> is returned. Otherwise, <code>#LOCAL</code> is returned.</p>
 
         </td>
       </tr>
@@ -349,6 +349,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6409,7 +6412,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

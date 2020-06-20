@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="fe46d44b5b54541fbb6c8ac01c4eee053f4c9413">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/routefollowing">RouteFollowing</a>&lt;T, N, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/dynamicpursuing">DynamicPursuing</a>&lt;T, N, E&gt;</code>
+        <code>open class RouteFollowing&lt;T, N, E&gt; : DynamicPursuing&lt;T, N, E&gt;</code>
       </p>
 
       
@@ -176,10 +176,10 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a> allowing to follow a given route.
+      <div class="sourcedoc-section section-comments"><p>A NavigationStrategy allowing to follow a given route.
 The route consists of a list of positions (= waypoints) that may or may not be in sight of each
 other (i.e. the path leading from a waypoint to the next one may or may not be representable
-as a single segment), for this reason <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/pursuing">Pursuing</a> behavior is used to reach each waypoint.
+as a single segment), for this reason Pursuing behavior is used to reach each waypoint.
 In this context, a waypoint is considered reached when it's inside the current room (not when the
 pedestrian reach that exact position), apart from the last waypoint which is actually approached.
 Cuts to the route are allowed (i.e. if the pedestrian finds a waypoint which is farther than the
@@ -207,7 +207,7 @@ expected next one, he/she skips all the waypoints in between).</p>
       
       <tr class="sourcedoc-section section-element" id="58627ecfc9c3bc1ee351b02a94f1a8223fcccf9c">
         <td class="sourcedoc-section section-signature">
-          <code>protected open route: List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>protected open route: List&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The route to follow.</p>
@@ -237,15 +237,15 @@ expected next one, he/she skips all the waypoints in between).</p>
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>&lt;T, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;, route: List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;)</code>
+        <code>constructor(action: EuclideanNavigationAction&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;, route: List&lt;Euclidean2DPosition&gt;)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a> allowing to follow a given route.
+      <div class="sourcedoc-section section-comments"><p>A NavigationStrategy allowing to follow a given route.
 The route consists of a list of positions (= waypoints) that may or may not be in sight of each
 other (i.e. the path leading from a waypoint to the next one may or may not be representable
-as a single segment), for this reason <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/pursuing">Pursuing</a> behavior is used to reach each waypoint.
+as a single segment), for this reason Pursuing behavior is used to reach each waypoint.
 In this context, a waypoint is considered reached when it's inside the current room (not when the
 pedestrian reach that exact position), apart from the last waypoint which is actually approached.
 Cuts to the route are allowed (i.e. if the pedestrian finds a waypoint which is farther than the
@@ -273,7 +273,7 @@ expected next one, he/she skips all the waypoints in between).</p>
       
       <tr class="sourcedoc-section section-element" id="9ad4379bba96ae3b912992400762e619f35244a1">
         <td class="sourcedoc-section section-signature">
-          <code>action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>&lt;T, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;</code>
+          <code>action: EuclideanNavigationAction&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -282,7 +282,7 @@ expected next one, he/she skips all the waypoints in between).</p>
       
       <tr class="sourcedoc-section section-element" id="edc5d403f80655ef1564e2181e81f9c58679c593">
         <td class="sourcedoc-section section-signature">
-          <code>route: List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>route: List&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -318,7 +318,7 @@ expected next one, he/she skips all the waypoints in between).</p>
       <h3 class="sourcedoc-section element-name">inUnexpectedNewRoom</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun inUnexpectedNewRoom(previousRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, expectedNewRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, actualNewRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>): override</code>
+        <code>open fun inUnexpectedNewRoom(previousRoom: ConvexPolygon, expectedNewRoom: ConvexPolygon, actualNewRoom: ConvexPolygon): override</code>
       </p>
 
       
@@ -348,7 +348,7 @@ route correctly.</p>
       
       <tr class="sourcedoc-section section-element" id="068a29971edaebd954ab2ac27e6cbe1be2e77804">
         <td class="sourcedoc-section section-signature">
-          <code>previousRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>previousRoom: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -357,7 +357,7 @@ route correctly.</p>
       
       <tr class="sourcedoc-section section-element" id="f973afbe797f58433f8558975520ca6179089ca3">
         <td class="sourcedoc-section section-signature">
-          <code>expectedNewRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>expectedNewRoom: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -366,7 +366,7 @@ route correctly.</p>
       
       <tr class="sourcedoc-section section-element" id="34d68e03b6b9feb2bd77dc51a268757780c971aa">
         <td class="sourcedoc-section section-signature">
-          <code>actualNewRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>actualNewRoom: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -422,7 +422,7 @@ route correctly.</p>
       <h3 class="sourcedoc-section element-name">inNewRoom</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun inNewRoom(newRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>)</code>
+        <code>open fun inNewRoom(newRoom: ConvexPolygon)</code>
       </p>
 
       
@@ -451,7 +451,7 @@ route correctly.</p>
       
       <tr class="sourcedoc-section section-element" id="3f75d62837d5a4db11cb0546a31c0e70a4ca2a7c">
         <td class="sourcedoc-section section-signature">
-          <code>newRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>newRoom: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -507,7 +507,7 @@ route correctly.</p>
       <h3 class="sourcedoc-section element-name">waypointReached</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun waypointReached(currentRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>): Boolean</code>
+        <code>protected fun waypointReached(currentRoom: ConvexPolygon): Boolean</code>
       </p>
 
       
@@ -536,7 +536,7 @@ route correctly.</p>
       
       <tr class="sourcedoc-section section-element" id="e1a16dad8d578d69c28984425de9958677235b1b">
         <td class="sourcedoc-section section-signature">
-          <code>currentRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>currentRoom: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -592,7 +592,7 @@ route correctly.</p>
       <h3 class="sourcedoc-section element-name">isReached</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun isReached(waypoint: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, currentRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>): Boolean</code>
+        <code>protected open fun isReached(waypoint: Euclidean2DPosition, currentRoom: ConvexPolygon): Boolean</code>
       </p>
 
       
@@ -621,7 +621,7 @@ route correctly.</p>
       
       <tr class="sourcedoc-section section-element" id="500231dbedf651f5df5c51065603d8a5539bdbc9">
         <td class="sourcedoc-section section-signature">
-          <code>waypoint: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>waypoint: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -630,7 +630,7 @@ route correctly.</p>
       
       <tr class="sourcedoc-section section-element" id="e1a16dad8d578d69c28984425de9958677235b1b">
         <td class="sourcedoc-section section-signature">
-          <code>currentRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>currentRoom: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -692,6 +692,9 @@ route correctly.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6752,7 +6755,7 @@ route correctly.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

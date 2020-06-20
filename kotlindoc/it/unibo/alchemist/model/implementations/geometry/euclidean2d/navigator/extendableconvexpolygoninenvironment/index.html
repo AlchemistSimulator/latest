@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="c2eadd1d9d7aa81c41c60ed82bd54edf004e3a21">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/navigator/extendableconvexpolygoninenvironment">ExtendableConvexPolygonInEnvironment</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/awtmutableconvexpolygon">AwtMutableConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/navigator/extendableconvexpolygon">ExtendableConvexPolygon</a></code>
+        <code>class ExtendableConvexPolygonInEnvironment: AwtMutableConvexPolygon, ExtendableConvexPolygon</code>
       </p>
 
       
@@ -176,12 +176,12 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>An <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/navigator/extendableconvexpolygon">ExtendableConvexPolygon</a> located inside an environment with obstacles.
+      <div class="sourcedoc-section section-comments"><p>An ExtendableConvexPolygon located inside an environment with obstacles.
 Obstacles, as well as the environment's boundaries, are taken into account when the polygon is
 extended (i.e. the polygon is prevented from intersecting an obstacle or growing beyond such
 boundaries).
 A rectangular region is assumed, its origin, width and height are to be specified. Both
-<a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>s and <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>s can be specified as obstacles (see awtObstacles
+<a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>s and ConvexPolygons can be specified as obstacles (see awtObstacles
 and polygonalObstacles).
 This class is explicitly designed for the algorithm contained in generateNavigationGraph.
 TODO(improve the quality of this class)</p>
@@ -208,10 +208,10 @@ TODO(improve the quality of this class)</p>
       
       <tr class="sourcedoc-section section-element" id="f8cb2473ffe4a3e8ead2148cca9d6ff552a69043">
         <td class="sourcedoc-section section-signature">
-          <code>lateinit var polygonalObstacles: List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>&gt;</code>
+          <code>lateinit var polygonalObstacles: List&lt;ConvexPolygon&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Obstacles represented as <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>s, are assumed to be mutable but limited to the extension
+        <p>Obstacles represented as ConvexPolygons, are assumed to be mutable but limited to the extension
 (i.e. they can only grow, not shrink). This is the behavior of seeds used by generateNavigationGraph,
 making this assumption allows to cache useful data such as whether an edge can still advance or
 an obstacle has already been encountered. This is a var but is assumed to be set only once before
@@ -242,17 +242,17 @@ starting to extend this polygon.</p>
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(vertices: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, origin: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, width: Double, height: Double, awtObstacles: List&lt;Shape&gt;)</code>
+        <code>constructor(vertices: MutableList&lt;Euclidean2DPosition&gt;, origin: Euclidean2DPosition, width: Double, height: Double, awtObstacles: List&lt;Shape&gt;)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>An <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/navigator/extendableconvexpolygon">ExtendableConvexPolygon</a> located inside an environment with obstacles.
+      <div class="sourcedoc-section section-comments"><p>An ExtendableConvexPolygon located inside an environment with obstacles.
 Obstacles, as well as the environment's boundaries, are taken into account when the polygon is
 extended (i.e. the polygon is prevented from intersecting an obstacle or growing beyond such
 boundaries).
 A rectangular region is assumed, its origin, width and height are to be specified. Both
-<a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>s and <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>s can be specified as obstacles (see awtObstacles
+<a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>s and ConvexPolygons can be specified as obstacles (see awtObstacles
 and polygonalObstacles).
 This class is explicitly designed for the algorithm contained in generateNavigationGraph.
 TODO(improve the quality of this class)</p>
@@ -279,7 +279,7 @@ TODO(improve the quality of this class)</p>
       
       <tr class="sourcedoc-section section-element" id="9c30f9b03751b81c5a0119e18b002b3334e754f4">
         <td class="sourcedoc-section section-signature">
-          <code>vertices: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>vertices: MutableList&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -288,7 +288,7 @@ TODO(improve the quality of this class)</p>
       
       <tr class="sourcedoc-section section-element" id="23663f25a8f0f2f32bf7e29d10637881d94a113e">
         <td class="sourcedoc-section section-signature">
-          <code>origin: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>origin: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -649,7 +649,7 @@ TODO(improve the quality of this class)</p>
       <h3 class="sourcedoc-section element-name">replaceEdge</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun replaceEdge(index: Int, newEdge: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;): Boolean</code>
+        <code>fun replaceEdge(index: Int, newEdge: Segment2D&lt;Euclidean2DPosition&gt;): Boolean</code>
       </p>
 
       
@@ -688,7 +688,7 @@ TODO(improve the quality of this class)</p>
       
       <tr class="sourcedoc-section section-element" id="53b38bd349be4c88a7c593f16f3d2e615006bc7a">
         <td class="sourcedoc-section section-signature">
-          <code>newEdge: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>newEdge: Segment2D&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the new edge</p>
@@ -1078,6 +1078,9 @@ side of the obstacle.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -7138,7 +7141,7 @@ side of the obstacle.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

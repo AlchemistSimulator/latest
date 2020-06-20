@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="357b335ab417a515997bbbc31d593e0fad7da9a3">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/lsaabstractcondition">LsaAbstractCondition</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/abstractcondition">AbstractCondition</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsacondition">ILsaCondition</a></code>
+        <code>abstract class LsaAbstractCondition: AbstractCondition&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaCondition</code>
       </p>
 
       
@@ -195,7 +195,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, m: MutableSet&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?)</code>
+        <code>constructor(node: ILsaNode?, m: MutableSet&lt;ILsaMolecule?&gt;?)</code>
       </p>
 
       
@@ -223,20 +223,20 @@
       
       <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?</code>
+          <code>node: ILsaNode?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>!: the node hosting this action</p>
+        <p>ILsaNode!: the node hosting this action</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="4e86fb64f5c10e52049a83775a1d5b851a392637">
         <td class="sourcedoc-section section-signature">
-          <code>m: MutableSet&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?</code>
+          <code>m: MutableSet&lt;ILsaMolecule?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableSet&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!: the set of molecules on which this actions act</p>
+        <p>MutableSet&lt;ILsaMolecule!&gt;!: the set of molecules on which this actions act</p>
 
         </td>
       </tr>
@@ -270,7 +270,7 @@
       <h3 class="sourcedoc-section element-name">cloneCondition</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun cloneCondition(n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?, r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/lsaabstractcondition">LsaAbstractCondition</a>?</code>
+        <code>abstract fun cloneCondition(n: Node&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?, r: Reaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?): LsaAbstractCondition?</code>
       </p>
 
       
@@ -298,7 +298,7 @@
       
       <tr class="sourcedoc-section section-element" id="6aa6ae52875b1131ecd36bfda5d1e25d8aecd8ae">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?</code>
+          <code>n: Node&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -307,7 +307,7 @@
       
       <tr class="sourcedoc-section section-element" id="f9a98366b6cc4144b2af14e61dee2120cbb774fa">
         <td class="sourcedoc-section section-signature">
-          <code>r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?</code>
+          <code>r: Reaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -340,7 +340,7 @@
       
       <tr class="sourcedoc-section section-element" id="7635213140572d3be27721579e06146e146c1b17">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/lsaabstractcondition">LsaAbstractCondition</a>?</code>
+          <code>LsaAbstractCondition?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -414,7 +414,7 @@
       <h3 class="sourcedoc-section element-name">getNode</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getNode(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?</code>
+        <code>fun getNode(): ILsaNode?</code>
       </p>
 
       
@@ -442,7 +442,7 @@
       
       <tr class="sourcedoc-section section-element" id="ac7b685b092a1d1f607f63d1072aaeee320206aa">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?</code>
+          <code>ILsaNode?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -465,7 +465,7 @@
       <h3 class="sourcedoc-section element-name">calculateMatches</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open static fun calculateMatches(partialInstance: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/iexpression">IExpression</a>?&gt;?, duplicateVariables: Boolean, lsaSpace: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?, alreadyRemoved: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?): MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?</code>
+        <code>protected open static fun calculateMatches(partialInstance: MutableList&lt;IExpression?&gt;?, duplicateVariables: Boolean, lsaSpace: MutableList&lt;ILsaMolecule?&gt;?, alreadyRemoved: MutableList&lt;ILsaMolecule?&gt;?): MutableList&lt;ILsaMolecule?&gt;?</code>
       </p>
 
       
@@ -493,10 +493,10 @@
       
       <tr class="sourcedoc-section section-element" id="b929d876fbf366b46c4884065462fb6c5098a95b">
         <td class="sourcedoc-section section-signature">
-          <code>partialInstance: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/iexpression">IExpression</a>?&gt;?</code>
+          <code>partialInstance: MutableList&lt;IExpression?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/iexpression">IExpression</a>!&gt;!: the template, possibly partly instanced</p>
+        <p>MutableList&lt;IExpression!&gt;!: the template, possibly partly instanced</p>
 
         </td>
       </tr>
@@ -513,20 +513,20 @@
       
       <tr class="sourcedoc-section section-element" id="dda9fe5ff7c017126386e33576e6cf37a7c931e5">
         <td class="sourcedoc-section section-signature">
-          <code>lsaSpace: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?</code>
+          <code>lsaSpace: MutableList&lt;ILsaMolecule?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!: the LSA space of the node on which this function is working on</p>
+        <p>MutableList&lt;ILsaMolecule!&gt;!: the LSA space of the node on which this function is working on</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="9bb8da6815412c78683069438c2b26f1033fa7bc">
         <td class="sourcedoc-section section-signature">
-          <code>alreadyRemoved: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?</code>
+          <code>alreadyRemoved: MutableList&lt;ILsaMolecule?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!: the list of the molecules already removed from this node.</p>
+        <p>MutableList&lt;ILsaMolecule!&gt;!: the list of the molecules already removed from this node.</p>
 
         </td>
       </tr>
@@ -557,10 +557,10 @@
       
       <tr class="sourcedoc-section section-element" id="7ac8a972630ddea1e2e7541f7a97e91eb69b58fa">
         <td class="sourcedoc-section section-signature">
-          <code>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?</code>
+          <code>MutableList&lt;ILsaMolecule?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!: the list of molecules in this LSA space that match the partialInstance, excluding all those which have been already removed.</p>
+        <p>MutableList&lt;ILsaMolecule!&gt;!: the list of molecules in this LSA space that match the partialInstance, excluding all those which have been already removed.</p>
 
         </td>
       </tr>
@@ -581,7 +581,7 @@
       <h3 class="sourcedoc-section element-name">createMatches</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open static fun createMatches(template: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?, n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, matchesList: MutableList&lt;MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?&gt;?, retrieved: MutableList&lt;MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?&gt;?)</code>
+        <code>protected open static fun createMatches(template: ILsaMolecule?, n: ILsaNode?, matchesList: MutableList&lt;MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?&gt;?, retrieved: MutableList&lt;MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?&gt;?)</code>
       </p>
 
       
@@ -609,40 +609,40 @@
       
       <tr class="sourcedoc-section section-element" id="8e59ad9e4dada210c5f1fbb9686178f5d926a975">
         <td class="sourcedoc-section section-signature">
-          <code>template: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?</code>
+          <code>template: ILsaMolecule?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!: the template molecule</p>
+        <p>ILsaMolecule!: the template molecule</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="119526d72b6fba0dc91906d360596ade4162d358">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?</code>
+          <code>n: ILsaNode?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>!: the node on which this function is working</p>
+        <p>ILsaNode!: the node on which this function is working</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="96e6b08667cc3ed73dce32127ee896d96a019ec3">
         <td class="sourcedoc-section section-signature">
-          <code>matchesList: MutableList&lt;MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?&gt;?</code>
+          <code>matchesList: MutableList&lt;MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;MutableMap&lt;HashString!, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;!&gt;!&gt;!: the list of matches to populate (theoretically, it should always be empty when calling this method)</p>
+        <p>MutableList&lt;MutableMap&lt;HashString!, ITreeNode&lt;*&gt;!&gt;!&gt;!: the list of matches to populate (theoretically, it should always be empty when calling this method)</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="cec8be12358ba37f9c127aebe930b61df92e713e">
         <td class="sourcedoc-section section-signature">
-          <code>retrieved: MutableList&lt;MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?&gt;?</code>
+          <code>retrieved: MutableList&lt;MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>!, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!&gt;!&gt;!: the list of the molecules removed from each node (theoretically, it should always be empty when calling this method)</p>
+        <p>MutableList&lt;MutableMap&lt;ILsaNode!, MutableList&lt;ILsaMolecule!&gt;!&gt;!&gt;!: the list of the molecules removed from each node (theoretically, it should always be empty when calling this method)</p>
 
         </td>
       </tr>
@@ -696,7 +696,7 @@
       <h3 class="sourcedoc-section element-name">updateMap</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open static fun updateMap(map: MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?, instance: MutableIterable&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/iexpression">IExpression</a>?&gt;?, template: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?)</code>
+        <code>protected open static fun updateMap(map: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?, instance: MutableIterable&lt;IExpression?&gt;?, template: ILsaMolecule?)</code>
       </p>
 
       
@@ -725,30 +725,30 @@
       
       <tr class="sourcedoc-section section-element" id="182f94bfb51262eba71d4b49cd3e8ca5332d7c18">
         <td class="sourcedoc-section section-signature">
-          <code>map: MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?</code>
+          <code>map: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;HashString!, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;!&gt;!: : the map to update</p>
+        <p>MutableMap&lt;HashString!, ITreeNode&lt;*&gt;!&gt;!: : the map to update</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="006d479b62c732eceb58e54029d95902ab8c0bce">
         <td class="sourcedoc-section section-signature">
-          <code>instance: MutableIterable&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/iexpression">IExpression</a>?&gt;?</code>
+          <code>instance: MutableIterable&lt;IExpression?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableIterable&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/iexpression">IExpression</a>!&gt;!: : LsaMolecule instance (contain variable values)</p>
+        <p>MutableIterable&lt;IExpression!&gt;!: : LsaMolecule instance (contain variable values)</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="8e59ad9e4dada210c5f1fbb9686178f5d926a975">
         <td class="sourcedoc-section section-signature">
-          <code>template: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?</code>
+          <code>template: ILsaMolecule?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!: : LsaMolecule template (contain variable names)</p>
+        <p>ILsaMolecule!: : LsaMolecule template (contain variable names)</p>
 
         </td>
       </tr>
@@ -802,7 +802,7 @@
       <h3 class="sourcedoc-section element-name">incorporateNewMatches</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open static fun incorporateNewMatches(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, otherMatches: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?, oldMatches: MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?, template: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?, matchesList: MutableList&lt;MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?&gt;?, alreadyRemoved: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?, retrieved: MutableList&lt;MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?&gt;?)</code>
+        <code>protected open static fun incorporateNewMatches(node: ILsaNode?, otherMatches: MutableList&lt;ILsaMolecule?&gt;?, oldMatches: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?, template: ILsaMolecule?, matchesList: MutableList&lt;MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?&gt;?, alreadyRemoved: MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?, retrieved: MutableList&lt;MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?&gt;?)</code>
       </p>
 
       
@@ -830,70 +830,70 @@
       
       <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?</code>
+          <code>node: ILsaNode?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>!: The node on which the condition has been verified</p>
+        <p>ILsaNode!: The node on which the condition has been verified</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="25bdef5d17609bd926f795e7c2e899c96130370b">
         <td class="sourcedoc-section section-signature">
-          <code>otherMatches: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?</code>
+          <code>otherMatches: MutableList&lt;ILsaMolecule?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!: The list of new matches that have been calculated</p>
+        <p>MutableList&lt;ILsaMolecule!&gt;!: The list of new matches that have been calculated</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="d8a3f3b2a785cdcd2bad94673d94dfb733250680">
         <td class="sourcedoc-section section-signature">
-          <code>oldMatches: MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?</code>
+          <code>oldMatches: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;HashString!, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;!&gt;!: The previous matches</p>
+        <p>MutableMap&lt;HashString!, ITreeNode&lt;*&gt;!&gt;!: The previous matches</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="8e59ad9e4dada210c5f1fbb9686178f5d926a975">
         <td class="sourcedoc-section section-signature">
-          <code>template: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?</code>
+          <code>template: ILsaMolecule?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!: The molecule template which has been verified</p>
+        <p>ILsaMolecule!: The molecule template which has been verified</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="96e6b08667cc3ed73dce32127ee896d96a019ec3">
         <td class="sourcedoc-section section-signature">
-          <code>matchesList: MutableList&lt;MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?&gt;?</code>
+          <code>matchesList: MutableList&lt;MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;MutableMap&lt;HashString!, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;!&gt;!&gt;!: The list of all the valid matches. If more than one valid match has been found, new entries will be added</p>
+        <p>MutableList&lt;MutableMap&lt;HashString!, ITreeNode&lt;*&gt;!&gt;!&gt;!: The list of all the valid matches. If more than one valid match has been found, new entries will be added</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="85e10c7791789f8732623ddb4312820608bcc30f">
         <td class="sourcedoc-section section-signature">
-          <code>alreadyRemoved: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?</code>
+          <code>alreadyRemoved: MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>!, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!&gt;!: the map of the lists of molecules already removed from each node for the current match</p>
+        <p>MutableMap&lt;ILsaNode!, MutableList&lt;ILsaMolecule!&gt;!&gt;!: the map of the lists of molecules already removed from each node for the current match</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="cec8be12358ba37f9c127aebe930b61df92e713e">
         <td class="sourcedoc-section section-signature">
-          <code>retrieved: MutableList&lt;MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?&gt;?</code>
+          <code>retrieved: MutableList&lt;MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>!, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!&gt;!&gt;!: the list of all the maps that lists the molecules removed from each node</p>
+        <p>MutableList&lt;MutableMap&lt;ILsaNode!, MutableList&lt;ILsaMolecule!&gt;!&gt;!&gt;!: the list of all the maps that lists the molecules removed from each node</p>
 
         </td>
       </tr>
@@ -947,7 +947,7 @@
       <h3 class="sourcedoc-section element-name">incorporateNewMatches</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open static fun incorporateNewMatches(otherMatchesMap: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?, oldMatches: MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?, template: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?, matchesList: MutableList&lt;MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?&gt;?, alreadyRemoved: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?, retrieved: MutableList&lt;MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?&gt;?)</code>
+        <code>protected open static fun incorporateNewMatches(otherMatchesMap: MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?, oldMatches: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?, template: ILsaMolecule?, matchesList: MutableList&lt;MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?&gt;?, alreadyRemoved: MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?, retrieved: MutableList&lt;MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?&gt;?)</code>
       </p>
 
       
@@ -976,60 +976,60 @@
       
       <tr class="sourcedoc-section section-element" id="4050bd5ff4ddcea912374a5057eedbf4278e13ec">
         <td class="sourcedoc-section section-signature">
-          <code>otherMatchesMap: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?</code>
+          <code>otherMatchesMap: MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>!, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!&gt;!: Other matches map</p>
+        <p>MutableMap&lt;ILsaNode!, MutableList&lt;ILsaMolecule!&gt;!&gt;!: Other matches map</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="d8a3f3b2a785cdcd2bad94673d94dfb733250680">
         <td class="sourcedoc-section section-signature">
-          <code>oldMatches: MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?</code>
+          <code>oldMatches: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;HashString!, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;!&gt;!: The previous matches</p>
+        <p>MutableMap&lt;HashString!, ITreeNode&lt;*&gt;!&gt;!: The previous matches</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="8e59ad9e4dada210c5f1fbb9686178f5d926a975">
         <td class="sourcedoc-section section-signature">
-          <code>template: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?</code>
+          <code>template: ILsaMolecule?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!: The molecule template which has been verified</p>
+        <p>ILsaMolecule!: The molecule template which has been verified</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="96e6b08667cc3ed73dce32127ee896d96a019ec3">
         <td class="sourcedoc-section section-signature">
-          <code>matchesList: MutableList&lt;MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?&gt;?</code>
+          <code>matchesList: MutableList&lt;MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;MutableMap&lt;HashString!, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;!&gt;!&gt;!: The list of all the valid matches. If more than one valid match has been found, new entries will be added</p>
+        <p>MutableList&lt;MutableMap&lt;HashString!, ITreeNode&lt;*&gt;!&gt;!&gt;!: The list of all the valid matches. If more than one valid match has been found, new entries will be added</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="85e10c7791789f8732623ddb4312820608bcc30f">
         <td class="sourcedoc-section section-signature">
-          <code>alreadyRemoved: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?</code>
+          <code>alreadyRemoved: MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>!, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!&gt;!: the map of the lists of molecules already removed from each node for the current match</p>
+        <p>MutableMap&lt;ILsaNode!, MutableList&lt;ILsaMolecule!&gt;!&gt;!: the map of the lists of molecules already removed from each node for the current match</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="cec8be12358ba37f9c127aebe930b61df92e713e">
         <td class="sourcedoc-section section-signature">
-          <code>retrieved: MutableList&lt;MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?&gt;?</code>
+          <code>retrieved: MutableList&lt;MutableMap&lt;ILsaNode?, MutableList&lt;ILsaMolecule?&gt;?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>!, MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!&gt;!&gt;!: the list of all the maps that lists the molecules removed from each node</p>
+        <p>MutableList&lt;MutableMap&lt;ILsaNode!, MutableList&lt;ILsaMolecule!&gt;!&gt;!&gt;!: the list of all the maps that lists the molecules removed from each node</p>
 
         </td>
       </tr>
@@ -1089,6 +1089,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -7149,7 +7152,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

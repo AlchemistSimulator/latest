@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="972dc666a11513c7f27d0c54d425b8fc6a31d509">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/goalorientedexplore">GoalOrientedExplore</a>&lt;T, N, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/baseeuclideannavigationaction">BaseEuclideanNavigationAction</a>&lt;T, N, E&gt;</code>
+        <code>class GoalOrientedExplore&lt;T, N, E&gt; : BaseEuclideanNavigationAction&lt;T, N, E&gt;</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a> using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/goalorientedexploring">GoalOrientedExploring</a> navigation strategy.</p>
+      <div class="sourcedoc-section section-comments"><p>A NavigationAction using GoalOrientedExploring navigation strategy.</p>
 </div>
 
       
@@ -196,12 +196,12 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph">Euclidean2DEnvironmentWithGraph</a>&lt;*, T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;, reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dtransformation">Euclidean2DTransformation</a>, N, E&gt;, vararg unknownDestinations: Number)</code>
+        <code>constructor(environment: Euclidean2DEnvironmentWithGraph&lt;*, T, ConvexPolygon, Euclidean2DPassage&gt;, reaction: Reaction&lt;T&gt;, pedestrian: OrientingPedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation, N, E&gt;, vararg unknownDestinations: Number)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a> using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/goalorientedexploring">GoalOrientedExploring</a> navigation strategy.</p>
+      <div class="sourcedoc-section section-comments"><p>A NavigationAction using GoalOrientedExploring navigation strategy.</p>
 </div>
 
       
@@ -225,7 +225,7 @@
       
       <tr class="sourcedoc-section section-element" id="b44244e91d3daede8124045c857564e482d91a43">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph">Euclidean2DEnvironmentWithGraph</a>&lt;*, T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;</code>
+          <code>environment: Euclidean2DEnvironmentWithGraph&lt;*, T, ConvexPolygon, Euclidean2DPassage&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -234,7 +234,7 @@
       
       <tr class="sourcedoc-section section-element" id="ea9e2ee7d64a5940bb8529e5a4e4b3f6c0b9d942">
         <td class="sourcedoc-section section-signature">
-          <code>reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;</code>
+          <code>reaction: Reaction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -243,7 +243,7 @@
       
       <tr class="sourcedoc-section section-element" id="4c8d6b1d3a1c8dcbe545829ebd13e2d96f140bcb">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dtransformation">Euclidean2DTransformation</a>, N, E&gt;</code>
+          <code>pedestrian: OrientingPedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation, N, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -281,6 +281,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6341,7 +6344,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

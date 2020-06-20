@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="60d15ff4ff0dbe30611c55b9c3a33aad02e939d7">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/exponentialtime">ExponentialTime</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/abstractdistribution">AbstractDistribution</a>&lt;T&gt;</code>
+        <code>open class ExponentialTime&lt;T : Any?&gt; : AbstractDistribution&lt;T&gt;</code>
       </p>
 
       
@@ -258,7 +258,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(markovianRate: Double, start: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?, random: RandomGenerator?)</code>
+        <code>constructor(markovianRate: Double, start: Time?, random: RandomGenerator?)</code>
       </p>
 
       
@@ -296,10 +296,10 @@
       
       <tr class="sourcedoc-section section-element" id="61f565565149c2c020b1a6bbd3aa3c0746b8a6e3">
         <td class="sourcedoc-section section-signature">
-          <code>start: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>start: Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>!: initial time</p>
+        <p>Time!: initial time</p>
 
         </td>
       </tr>
@@ -343,7 +343,7 @@
       <h3 class="sourcedoc-section element-name">updateStatus</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun updateStatus(curTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?, executed: Boolean, newpropensity: Double, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;?)</code>
+        <code>fun updateStatus(curTime: Time?, executed: Boolean, newpropensity: Double, env: Environment&lt;T, *&gt;?)</code>
       </p>
 
       
@@ -371,7 +371,7 @@
       
       <tr class="sourcedoc-section section-element" id="040aaf4ff8acf93a1a26cb2ac10b25e8197d9261">
         <td class="sourcedoc-section section-signature">
-          <code>curTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>curTime: Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -398,7 +398,7 @@
       
       <tr class="sourcedoc-section section-element" id="230def937932b42a80a7254397273237208bfc4c">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;?</code>
+          <code>env: Environment&lt;T, *&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -454,7 +454,7 @@
       <h3 class="sourcedoc-section element-name">clone</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun clone(currentTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/exponentialtime">ExponentialTime</a>&lt;T&gt;?</code>
+        <code>open fun clone(currentTime: Time?): ExponentialTime&lt;T&gt;?</code>
       </p>
 
       
@@ -483,10 +483,10 @@
       
       <tr class="sourcedoc-section section-element" id="4928d5cbbc20d5604936360495c9b43a7ce33727">
         <td class="sourcedoc-section section-signature">
-          <code>currentTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>currentTime: Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>!: the time at which the time distribution was cloned</p>
+        <p>Time!: the time at which the time distribution was cloned</p>
 
         </td>
       </tr>
@@ -517,10 +517,10 @@
       
       <tr class="sourcedoc-section section-element" id="96dd4958e2362c5bc8fa02a6234259a61cbbef4f">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/exponentialtime">ExponentialTime</a>&lt;T&gt;?</code>
+          <code>ExponentialTime&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/exponentialtime">ExponentialTime</a><T>!: a new ExponentialTime</p>
+        <p>ExponentialTime<T>!: a new ExponentialTime</p>
 
         </td>
       </tr>
@@ -541,7 +541,7 @@
       <h3 class="sourcedoc-section element-name">genTime</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun genTime(propensity: Double): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+        <code>protected open fun genTime(propensity: Double): Time?</code>
       </p>
 
       
@@ -603,10 +603,10 @@
       
       <tr class="sourcedoc-section section-element" id="fb5b6d153245a2585f5561d0195adf5208150d11">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>!: the next occurrence time for the reaction, in case this is the reaction which have been executed.</p>
+        <p>Time!: the next occurrence time for the reaction, in case this is the reaction which have been executed.</p>
 
         </td>
       </tr>
@@ -685,6 +685,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6745,7 +6748,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

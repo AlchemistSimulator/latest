@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="35f71ec12519f64b80a4353aad0327748107d8dd">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersisolines">DrawLayersIsolines</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersvalues">DrawLayersValues</a></code>
+        <code>abstract class DrawLayersIsolines: DrawLayersValues</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Draw layers isolines. The user must specify: - the number of isolines to draw - the min layer value - the max layer value - the distribution, used to space isoline values between min and max This class defines the DrawLayersIsolines#drawFunction(Function, Environment, Graphics2D, IWormhole2D) method, which is capable of drawing a layer's isolines given a function. The only responsibility left to subclasses is to provide a <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/layertofunctionmapper">LayerToFunctionMapper</a></code>.</p>
+      <div class="sourcedoc-section section-comments"><p>Draw layers isolines. The user must specify: - the number of isolines to draw - the min layer value - the max layer value - the distribution, used to space isoline values between min and max This class defines the DrawLayersIsolines#drawFunction(Function, Environment, Graphics2D, IWormhole2D) method, which is capable of drawing a layer's isolines given a function. The only responsibility left to subclasses is to provide a <code>LayerToFunctionMapper</code>.</p>
 </div>
 
       
@@ -196,7 +196,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(algorithm: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/isolinesfinder">IsolinesFinder</a>?)</code>
+        <code>constructor(algorithm: IsolinesFinder?)</code>
       </p>
 
       
@@ -225,10 +225,10 @@
       
       <tr class="sourcedoc-section section-element" id="ac29d1aab844e5fafbbc763c1785b38a12f861e4">
         <td class="sourcedoc-section section-signature">
-          <code>algorithm: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/isolinesfinder">IsolinesFinder</a>?</code>
+          <code>algorithm: IsolinesFinder?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/isolinesfinder">IsolinesFinder</a>!: - the algorithm used to extract isolines</p>
+        <p>IsolinesFinder!: - the algorithm used to extract isolines</p>
 
         </td>
       </tr>
@@ -366,7 +366,7 @@
       <h3 class="sourcedoc-section element-name">setDistribution</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun setDistribution(distribution: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersisolines/distribution">Distribution</a>?)</code>
+        <code>open fun setDistribution(distribution: Distribution?)</code>
       </p>
 
       
@@ -394,7 +394,7 @@
       
       <tr class="sourcedoc-section section-element" id="f4f465a764d357fbe37794d1d9e1126c66db6eb3">
         <td class="sourcedoc-section section-signature">
-          <code>distribution: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersisolines/distribution">Distribution</a>?</code>
+          <code>distribution: Distribution?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Distribution!: to set</p>
@@ -451,7 +451,7 @@
       <h3 class="sourcedoc-section element-name">getIsolinesFinder</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun getIsolinesFinder(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/isolinesfinder">IsolinesFinder</a>?</code>
+        <code>protected open fun getIsolinesFinder(): IsolinesFinder?</code>
       </p>
 
       
@@ -479,10 +479,10 @@
       
       <tr class="sourcedoc-section section-element" id="ce0017d5df4a140ff7874f15ef79bc8e1551d84e">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/isolinesfinder">IsolinesFinder</a>?</code>
+          <code>IsolinesFinder?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/isolinesfinder">IsolinesFinder</a>!: the algorithm used to extract isolines</p>
+        <p>IsolinesFinder!: the algorithm used to extract isolines</p>
 
         </td>
       </tr>
@@ -588,7 +588,7 @@
       <h3 class="sourcedoc-section element-name">drawFunction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun &lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; drawFunction(f: Function&lt;P, Number?&gt;?, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?, g: Graphics2D?, wormhole: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a>&lt;P&gt;?)</code>
+        <code>open fun &lt;T : Any?, P : Position2D&lt;P&gt;?&gt; drawFunction(f: Function&lt;P, Number?&gt;?, env: Environment&lt;T, P&gt;?, g: Graphics2D?, wormhole: IWormhole2D&lt;P&gt;?)</code>
       </p>
 
       
@@ -627,10 +627,10 @@
       
       <tr class="sourcedoc-section section-element" id="5f36e38a592b4a94bef1b256824b2287d86c46b9">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?</code>
+          <code>env: Environment&lt;T, P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;!: - the environment (mainly used to make positions)</p>
+        <p>Environment&lt;T, P&gt;!: - the environment (mainly used to make positions)</p>
 
         </td>
       </tr>
@@ -647,10 +647,10 @@
       
       <tr class="sourcedoc-section section-element" id="04e711ed9ea5a9bf9044acb7d7742d1e7271f78e">
         <td class="sourcedoc-section section-signature">
-          <code>wormhole: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a>&lt;P&gt;?</code>
+          <code>wormhole: IWormhole2D&lt;P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a><P>!: - the wormhole (to map env points to view points)
+        <p>IWormhole2D<P>!: - the wormhole (to map env points to view points)</p>
 
         </td>
       </tr>
@@ -704,7 +704,7 @@
       <h3 class="sourcedoc-section element-name">getDistribution</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun getDistribution(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersisolines/distribution">Distribution</a>?</code>
+        <code>open fun getDistribution(): Distribution?</code>
       </p>
 
       
@@ -732,7 +732,7 @@
       
       <tr class="sourcedoc-section section-element" id="c2f38320d7afa4d882b9084ee83a0d5f6b2bf58a">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersisolines/distribution">Distribution</a>?</code>
+          <code>Distribution?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Distribution!: the current distribution</p>
@@ -1071,6 +1071,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -7131,7 +7134,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

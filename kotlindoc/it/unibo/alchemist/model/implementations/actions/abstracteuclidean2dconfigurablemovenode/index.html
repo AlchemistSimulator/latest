@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="a9e1143f567198d7f55fb7e3c09f5bdccda7931a">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclidean2dconfigurablemovenode">AbstractEuclidean2DConfigurableMoveNode</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractconfigurablemovenode">AbstractConfigurableMoveNode</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+        <code>abstract class AbstractEuclidean2DConfigurableMoveNode&lt;T&gt; : AbstractConfigurableMoveNode&lt;T, Euclidean2DPosition&gt;</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>It's an <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractconfigurablemovenode">AbstractConfigurableMoveNode</a> for <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a> which provides a default interpolatePositions
+      <div class="sourcedoc-section section-comments"><p>It's an AbstractConfigurableMoveNode for Euclidean2DPosition which provides a default interpolatePositions
 that is accurate with respect to the target given and the current maximum speed.</p>
 </div>
 
@@ -197,12 +197,12 @@ that is accurate with respect to the target given and the current maximum speed.
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, routing: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, target: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, speed: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;)</code>
+        <code>constructor(environment: Environment&lt;T, Euclidean2DPosition&gt;, node: Node&lt;T&gt;, routing: RoutingStrategy&lt;Euclidean2DPosition&gt;, target: TargetSelectionStrategy&lt;Euclidean2DPosition&gt;, speed: SpeedSelectionStrategy&lt;Euclidean2DPosition&gt;)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>It's an <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractconfigurablemovenode">AbstractConfigurableMoveNode</a> for <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a> which provides a default interpolatePositions
+      <div class="sourcedoc-section section-comments"><p>It's an AbstractConfigurableMoveNode for Euclidean2DPosition which provides a default interpolatePositions
 that is accurate with respect to the target given and the current maximum speed.</p>
 </div>
 
@@ -227,7 +227,7 @@ that is accurate with respect to the target given and the current maximum speed.
       
       <tr class="sourcedoc-section section-element" id="dcdca93a0453c4e57b6a4fedaae0690333b8ccf3">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>environment: Environment&lt;T, Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -236,7 +236,7 @@ that is accurate with respect to the target given and the current maximum speed.
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -245,7 +245,7 @@ that is accurate with respect to the target given and the current maximum speed.
       
       <tr class="sourcedoc-section section-element" id="254c1253e790012dcbf95759c7be4fe80b25ae82">
         <td class="sourcedoc-section section-signature">
-          <code>routing: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/routingstrategy">RoutingStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>routing: RoutingStrategy&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -254,7 +254,7 @@ that is accurate with respect to the target given and the current maximum speed.
       
       <tr class="sourcedoc-section section-element" id="232ad29a1e9d16d369626d72ac888d0cb4c5bf38">
         <td class="sourcedoc-section section-signature">
-          <code>target: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/targetselectionstrategy">TargetSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>target: TargetSelectionStrategy&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -263,7 +263,7 @@ that is accurate with respect to the target given and the current maximum speed.
       
       <tr class="sourcedoc-section section-element" id="f61bb37f5c3cb029d5ff2408a71b0979b7d7b395">
         <td class="sourcedoc-section section-signature">
-          <code>speed: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>speed: SpeedSelectionStrategy&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -299,7 +299,7 @@ that is accurate with respect to the target given and the current maximum speed.
       <h3 class="sourcedoc-section element-name">interpolatePositions</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun interpolatePositions(current: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, target: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, maxWalk: Double): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+        <code>protected open fun interpolatePositions(current: Euclidean2DPosition, target: Euclidean2DPosition, maxWalk: Double): Euclidean2DPosition</code>
       </p>
 
       
@@ -329,7 +329,7 @@ without going farther.</p>
       
       <tr class="sourcedoc-section section-element" id="ad4a8d51fd521f7c4a5d4fd9592e4cfefcdba32f">
         <td class="sourcedoc-section section-signature">
-          <code>current: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>current: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -338,7 +338,7 @@ without going farther.</p>
       
       <tr class="sourcedoc-section section-element" id="53ecb4dd35d537db850bd872c2ee373d6087b0a4">
         <td class="sourcedoc-section section-signature">
-          <code>target: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>target: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -380,7 +380,7 @@ without going farther.</p>
       
       <tr class="sourcedoc-section section-element" id="74618a2e873e80a960348cbaf6e96932fc47d169">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -409,6 +409,9 @@ without going farther.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6469,7 +6472,7 @@ without going farther.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

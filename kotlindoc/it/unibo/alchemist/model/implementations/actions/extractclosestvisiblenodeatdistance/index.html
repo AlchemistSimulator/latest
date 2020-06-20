@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="818e1b99ef9d03f5946f533902b031fe0ce21970">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/extractclosestvisiblenodeatdistance">ExtractClosestVisibleNodeAtDistance</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;Any&gt;</code>
+        <code>class ExtractClosestVisibleNodeAtDistance: AbstractAction&lt;Any&gt;</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Extracts the closest <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/visiblenode">VisibleNode</a> to the position at the given distance from the given node's position
+      <div class="sourcedoc-section section-comments"><p>Extracts the closest VisibleNode to the position at the given distance from the given node's position
 in the direction of the node's heading.</p>
 </div>
 
@@ -197,12 +197,12 @@ in the direction of the node's heading.</p>
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Any&gt;, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physics2denvironment">Physics2DEnvironment</a>&lt;Any&gt;, distance: Double, visionMolecule: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/molecule">Molecule</a>, targetMolecule: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/molecule">Molecule</a>)</code>
+        <code>constructor(node: Node&lt;Any&gt;, env: Physics2DEnvironment&lt;Any&gt;, distance: Double, visionMolecule: Molecule, targetMolecule: Molecule)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>visionMolecule is expected to contain a list of <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/visiblenode">VisibleNode</a>.
+      <div class="sourcedoc-section section-comments"><p>visionMolecule is expected to contain a list of VisibleNode.
 If there are no visible nodes then targetMolecule will be removed from <a href="#">node</a>,
 otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
 </div>
@@ -228,7 +228,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
       
       <tr class="sourcedoc-section section-element" id="3da30d36cf771b6756f22ffd2097fd5665a8e131">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Any&gt;</code>
+          <code>node: Node&lt;Any&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -237,7 +237,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
       
       <tr class="sourcedoc-section section-element" id="a38b9a70f16337332a31554150f1b4416c97c49a">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physics2denvironment">Physics2DEnvironment</a>&lt;Any&gt;</code>
+          <code>env: Physics2DEnvironment&lt;Any&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -255,7 +255,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
       
       <tr class="sourcedoc-section section-element" id="fb7b37c7c1cea73f37b55689063a97da103b261b">
         <td class="sourcedoc-section section-signature">
-          <code>visionMolecule: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/molecule">Molecule</a></code>
+          <code>visionMolecule: Molecule</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -264,7 +264,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
       
       <tr class="sourcedoc-section section-element" id="6e9faefb2ded154715481ce5328d6792b4ecbf3f">
         <td class="sourcedoc-section section-signature">
-          <code>targetMolecule: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/molecule">Molecule</a></code>
+          <code>targetMolecule: Molecule</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -300,7 +300,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
       <h3 class="sourcedoc-section element-name">cloneAction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun cloneAction(n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Any&gt;, r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;Any&gt;): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/extractclosestvisiblenodeatdistance">ExtractClosestVisibleNodeAtDistance</a></code>
+        <code>fun cloneAction(n: Node&lt;Any&gt;, r: Reaction&lt;Any&gt;): ExtractClosestVisibleNodeAtDistance</code>
       </p>
 
       
@@ -328,7 +328,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
       
       <tr class="sourcedoc-section section-element" id="8cda0e4d3791374502df0c4ca5b34ed840a6b77f">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Any&gt;</code>
+          <code>n: Node&lt;Any&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -337,7 +337,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
       
       <tr class="sourcedoc-section section-element" id="315ce216e912c2377e0e5307ca3f3574c545ace2">
         <td class="sourcedoc-section section-signature">
-          <code>r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;Any&gt;</code>
+          <code>r: Reaction&lt;Any&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -370,7 +370,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
       
       <tr class="sourcedoc-section section-element" id="70f233d25c16f795648a96538babf472ae852d3d">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/extractclosestvisiblenodeatdistance">ExtractClosestVisibleNodeAtDistance</a></code>
+          <code>ExtractClosestVisibleNodeAtDistance</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -444,7 +444,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
       <h3 class="sourcedoc-section element-name">getContext</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getContext(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a></code>
+        <code>fun getContext(): Context</code>
       </p>
 
       
@@ -472,7 +472,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
       
       <tr class="sourcedoc-section section-element" id="cc11b3a28fa30ae6d3d3ad1438824cbd5224ba5c">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a></code>
+          <code>Context</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -501,6 +501,9 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6561,7 +6564,7 @@ otherwise the VisibleNode's position will be inserted in targetMolecule.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

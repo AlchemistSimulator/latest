@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="d427c5bf52e244aa936a8f8ea5f07fde9ebedfea">
       
       <p class="sourcedoc-section section-signature">
-        <code>package <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api">it.unibo.alchemist.boundary.gpsload.api</a></code>
+        <code>package it.unibo.alchemist.boundary.gpsload.api</code>
       </p>
 
       
@@ -199,7 +199,7 @@
       
       <tr class="sourcedoc-section section-element" id="9f42ab54f82cacefb81f9953e50ff20625b4cca8">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/abstractgpstimealignment">AbstractGPSTimeAlignment</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/gpstimealignment">GPSTimeAlignment</a>, Any</code>
+          <code>abstract class AbstractGPSTimeAlignment: GPSTimeAlignment, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -208,7 +208,7 @@
       
       <tr class="sourcedoc-section section-element" id="6da5106e756d7c7d50d9d2e0b823e3a07a81c360">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/aligntosimulationtime">AlignToSimulationTime</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/abstractgpstimealignment">AbstractGPSTimeAlignment</a></code>
+          <code>class AlignToSimulationTime: AbstractGPSTimeAlignment</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Aligns all traces at the initial simulation time. If you have two traces, the first trace start with time = 2 and second point with time = 5, the second trace start with time = 4 and second point with time = 6, the result will be: - first trace start with time = 0 and second point with time = 3 - second trace start with time = 0 and second point with time = 2</p>
@@ -218,7 +218,7 @@
       
       <tr class="sourcedoc-section section-element" id="9a45b94f75a2577359e51b45ae72c124246021ae">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/noalignment">NoAlignment</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/abstractgpstimealignment">AbstractGPSTimeAlignment</a></code>
+          <code>class NoAlignment: AbstractGPSTimeAlignment</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>No alignment is performed. If you have two traces, the first trace start with time = 2 and second point with time = 5, the second trace start with time = 4 and second point with time = 6, the result will be: - first trace start with time = 2 and second point with time = 5 - second trace start with time = 4 and second point with time = 6</p>
@@ -228,7 +228,7 @@
       
       <tr class="sourcedoc-section section-element" id="d854a811d762a47d2360c05a1c58e8daaeee65ba">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/aligntofirsttrace">AlignToFirstTrace</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/abstractgpstimealignment">AbstractGPSTimeAlignment</a></code>
+          <code>class AlignToFirstTrace: AbstractGPSTimeAlignment</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Aligns all traces at the start time of the first trace. If you have two traces, the first trace start with time = 2 and second point with time = 5, the second trace start with time = 4 and second point with time = 6, the result will be: - first trace start with time = 0 and second point with time = 3 - second trace start with time = 2 and second point with time = 4</p>
@@ -238,7 +238,7 @@
       
       <tr class="sourcedoc-section section-element" id="c2efec834c8030000698f0d380ca63fcf06983ab">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/gpsfileloader">GPSFileLoader</a>: Any</code>
+          <code>interface GPSFileLoader: Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Strategy to read GPSTrace from file.</p>
@@ -248,7 +248,7 @@
       
       <tr class="sourcedoc-section section-element" id="d78095eb4aaab0746107ee5019d53ab10802e68d">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/gpstimealignment">GPSTimeAlignment</a>: Any</code>
+          <code>interface GPSTimeAlignment: Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Strategy to define how align the time of all trace.</p>
@@ -258,7 +258,7 @@
       
       <tr class="sourcedoc-section section-element" id="f36422ac8f88ede4f5d8ae843b1e8d58e65fa91f">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/aligntotime">AlignToTime</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/abstractgpstimealignment">AbstractGPSTimeAlignment</a></code>
+          <code>class AlignToTime: AbstractGPSTimeAlignment</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Alings the traces with the given time in seconds from Epoch. All points before such time will be discarded. All points after the provided time will be shifted back. Summarizing, the time that is provided represents in the real world the time zero of the simulation.</p>
@@ -281,6 +281,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6341,7 +6344,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

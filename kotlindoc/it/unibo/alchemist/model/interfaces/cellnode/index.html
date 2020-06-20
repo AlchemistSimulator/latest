@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="57d4ba465ea612ab3fa48fd152c7562bd162bf38">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;Double?&gt;, Any</code>
+        <code>interface CellNode&lt;P : Position&lt;P&gt;?&gt; : Node&lt;Double?&gt;, Any</code>
       </p>
 
       
@@ -247,7 +247,7 @@
       <h3 class="sourcedoc-section element-name">removeJunction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun removeJunction(j: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?, neighbor: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?)</code>
+        <code>abstract fun removeJunction(j: Junction?, neighbor: CellNode&lt;*&gt;?)</code>
       </p>
 
       
@@ -276,20 +276,20 @@
       
       <tr class="sourcedoc-section section-element" id="1966e327863a7ed6205d64a97535d8b78e730775">
         <td class="sourcedoc-section section-signature">
-          <code>j: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?</code>
+          <code>j: Junction?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>!: the junction to remove</p>
+        <p>Junction!: the junction to remove</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="69509b57281f56021453f358b30caa7c3f01c96b">
         <td class="sourcedoc-section section-signature">
-          <code>neighbor: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?</code>
+          <code>neighbor: CellNode&lt;*&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;!: the node at the other side of the junction.</p>
+        <p>CellNode&lt;*&gt;!: the node at the other side of the junction.</p>
 
         </td>
       </tr>
@@ -343,7 +343,7 @@
       <h3 class="sourcedoc-section element-name">getNeighborsLinkWithJunction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun getNeighborsLinkWithJunction(j: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?): MutableSet&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?&gt;?</code>
+        <code>abstract fun getNeighborsLinkWithJunction(j: Junction?): MutableSet&lt;CellNode&lt;*&gt;?&gt;?</code>
       </p>
 
       
@@ -372,10 +372,10 @@
       
       <tr class="sourcedoc-section section-element" id="1966e327863a7ed6205d64a97535d8b78e730775">
         <td class="sourcedoc-section section-signature">
-          <code>j: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?</code>
+          <code>j: Junction?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>!: the junction</p>
+        <p>Junction!: the junction</p>
 
         </td>
       </tr>
@@ -406,10 +406,10 @@
       
       <tr class="sourcedoc-section section-element" id="7e27e242dff1396e6f0df40b804c7228131b5e37">
         <td class="sourcedoc-section section-signature">
-          <code>MutableSet&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?&gt;?</code>
+          <code>MutableSet&lt;CellNode&lt;*&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableSet&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;!&gt;!: a set of ICellNode which are linked with the current node by a junction of the type j</p>
+        <p>MutableSet&lt;CellNode&lt;*&gt;!&gt;!: a set of ICellNode which are linked with the current node by a junction of the type j</p>
 
         </td>
       </tr>
@@ -430,7 +430,7 @@
       <h3 class="sourcedoc-section element-name">containsJunction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun containsJunction(j: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?): Boolean</code>
+        <code>abstract fun containsJunction(j: Junction?): Boolean</code>
       </p>
 
       
@@ -459,10 +459,10 @@
       
       <tr class="sourcedoc-section section-element" id="1966e327863a7ed6205d64a97535d8b78e730775">
         <td class="sourcedoc-section section-signature">
-          <code>j: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?</code>
+          <code>j: Junction?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>!: the junction</p>
+        <p>Junction!: the junction</p>
 
         </td>
       </tr>
@@ -549,7 +549,7 @@
           <code>v: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>P: The <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a></code> representing the new polarization versor. Note: v MUST be a versor, so a vector with module = 1.</p>
+        <p>P: The <code>Position</code> representing the new polarization versor. Note: v MUST be a versor, so a vector with module = 1.</p>
 
         </td>
       </tr>
@@ -603,7 +603,7 @@
       <h3 class="sourcedoc-section element-name">getJunctions</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun getJunctions(): MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?, MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?, Int?&gt;?&gt;?</code>
+        <code>abstract fun getJunctions(): MutableMap&lt;Junction?, MutableMap&lt;CellNode&lt;*&gt;?, Int?&gt;?&gt;?</code>
       </p>
 
       
@@ -631,10 +631,10 @@
       
       <tr class="sourcedoc-section section-element" id="5121dd2d82bf9265216cfa5f63b47b1b7c58db03">
         <td class="sourcedoc-section section-signature">
-          <code>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?, MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?, Int?&gt;?&gt;?</code>
+          <code>MutableMap&lt;Junction?, MutableMap&lt;CellNode&lt;*&gt;?, Int?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>!, MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;!, Int!&gt;!&gt;!: the map junction - node - quantity</p>
+        <p>MutableMap&lt;Junction!, MutableMap&lt;CellNode&lt;*&gt;!, Int!&gt;!&gt;!: the map junction - node - quantity</p>
 
         </td>
       </tr>
@@ -686,7 +686,7 @@
           <code>P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>P: the <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a></code> representing the direction of cell polarization.</p>
+        <p>P: the <code>Position</code> representing the direction of cell polarization.</p>
 
         </td>
       </tr>
@@ -707,7 +707,7 @@
       <h3 class="sourcedoc-section element-name">getAllNodesLinkWithJunction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun getAllNodesLinkWithJunction(): MutableSet&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?&gt;?</code>
+        <code>abstract fun getAllNodesLinkWithJunction(): MutableSet&lt;CellNode&lt;*&gt;?&gt;?</code>
       </p>
 
       
@@ -735,10 +735,10 @@
       
       <tr class="sourcedoc-section section-element" id="7e27e242dff1396e6f0df40b804c7228131b5e37">
         <td class="sourcedoc-section section-signature">
-          <code>MutableSet&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?&gt;?</code>
+          <code>MutableSet&lt;CellNode&lt;*&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableSet&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;!&gt;!: A set of nodes which are linked by a junction with the current node</p>
+        <p>MutableSet&lt;CellNode&lt;*&gt;!&gt;!: A set of nodes which are linked by a junction with the current node</p>
 
         </td>
       </tr>
@@ -759,7 +759,7 @@
       <h3 class="sourcedoc-section element-name">addJunction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun addJunction(j: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?, neighbor: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?)</code>
+        <code>abstract fun addJunction(j: Junction?, neighbor: CellNode&lt;*&gt;?)</code>
       </p>
 
       
@@ -788,20 +788,20 @@
       
       <tr class="sourcedoc-section section-element" id="1966e327863a7ed6205d64a97535d8b78e730775">
         <td class="sourcedoc-section section-signature">
-          <code>j: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?</code>
+          <code>j: Junction?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>!: the junction</p>
+        <p>Junction!: the junction</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="69509b57281f56021453f358b30caa7c3f01c96b">
         <td class="sourcedoc-section section-signature">
-          <code>neighbor: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;?</code>
+          <code>neighbor: CellNode&lt;*&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cellnode">CellNode</a>&lt;*&gt;!: the neighbor node at the other side of the junction</p>
+        <p>CellNode&lt;*&gt;!: the neighbor node at the other side of the junction</p>
 
         </td>
       </tr>
@@ -947,6 +947,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -7007,7 +7010,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

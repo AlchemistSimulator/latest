@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="d015f85fe700f3b9e442d910147dc4cfd0e3d47b">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/concentrationchanged">ConcentrationChanged</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/abstractcondition">AbstractCondition</a>&lt;T&gt;</code>
+        <code>class ConcentrationChanged&lt;T : Any?&gt; : AbstractCondition&lt;T&gt;</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A condition that holds true only if the tracked <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/molecule">Molecule</a></code> changed its <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/concentration">it.unibo.alchemist.model.interfaces.Concentration</a></code>.</p>
+      <div class="sourcedoc-section section-comments"><p>A condition that holds true only if the tracked <code>Molecule</code> changed its <code>it.unibo.alchemist.model.interfaces.Concentration</code>.</p>
 </div>
 
       
@@ -196,7 +196,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, target: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/molecule">Molecule</a>?)</code>
+        <code>constructor(node: Node&lt;T&gt;?, target: Molecule?)</code>
       </p>
 
       
@@ -224,20 +224,20 @@
       
       <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: the node</p>
+        <p>Node<T>!: the node</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="45368d241073e0dbc486c74a084eeb54b84f8d8e">
         <td class="sourcedoc-section section-signature">
-          <code>target: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/molecule">Molecule</a>?</code>
+          <code>target: Molecule?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/molecule">Molecule</a>!: the molecule whose concentration may change</p>
+        <p>Molecule!: the molecule whose concentration may change</p>
 
         </td>
       </tr>
@@ -271,7 +271,7 @@
       <h3 class="sourcedoc-section element-name">cloneCondition</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun cloneCondition(n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/concentrationchanged">ConcentrationChanged</a>&lt;T&gt;?</code>
+        <code>fun cloneCondition(n: Node&lt;T&gt;?, r: Reaction&lt;T&gt;?): ConcentrationChanged&lt;T&gt;?</code>
       </p>
 
       
@@ -299,7 +299,7 @@
       
       <tr class="sourcedoc-section section-element" id="1fde94d953de8c356dade4695a2331c4546aa681">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>n: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -308,7 +308,7 @@
       
       <tr class="sourcedoc-section section-element" id="1d0f8f242140feeec2209fadac2c04adc0cf3244">
         <td class="sourcedoc-section section-signature">
-          <code>r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;?</code>
+          <code>r: Reaction&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -341,7 +341,7 @@
       
       <tr class="sourcedoc-section section-element" id="679675253e54448f176585c8ffe2a0b0b6d4d0b2">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/concentrationchanged">ConcentrationChanged</a>&lt;T&gt;?</code>
+          <code>ConcentrationChanged&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -517,7 +517,7 @@
       <h3 class="sourcedoc-section element-name">getContext</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getContext(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+        <code>fun getContext(): Context?</code>
       </p>
 
       
@@ -545,7 +545,7 @@
       
       <tr class="sourcedoc-section section-element" id="5e66a11414867a7afc6633feb4250ba52a57cb31">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/context">Context</a>?</code>
+          <code>Context?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -574,6 +574,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6634,7 +6637,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

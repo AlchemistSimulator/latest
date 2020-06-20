@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="32c3f3dcb77dd83c2a6d8c88ec5582209f1b6c60">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/environments/continuous2denvironment">Continuous2DEnvironment</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironment">Euclidean2DEnvironment</a>&lt;T&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/environments/abstract2denvironment">Abstract2DEnvironment</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physics2denvironment">Physics2DEnvironment</a>&lt;T&gt;</code>
+        <code>open class Continuous2DEnvironment&lt;T&gt; : Euclidean2DEnvironment&lt;T&gt;, Abstract2DEnvironment&lt;T, Euclidean2DPosition&gt;, Physics2DEnvironment&lt;T&gt;</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Implementation of <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physics2denvironment">Physics2DEnvironment</a>.</p>
+      <div class="sourcedoc-section section-comments"><p>Implementation of Physics2DEnvironment.</p>
 </div>
 
       
@@ -200,7 +200,7 @@
       
       <tr class="sourcedoc-section section-element" id="f1b886a8e4f966c9e866db594ec26479e39bc3f1">
         <td class="sourcedoc-section section-signature">
-          <code>open shapeFactory: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshapefactory">Euclidean2DShapeFactory</a></code>
+          <code>open shapeFactory: Euclidean2DShapeFactory</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A factory of shapes compatible with this environment.</p>
@@ -237,7 +237,7 @@
           <code>constructor()</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Implementation of <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physics2denvironment">Physics2DEnvironment</a>.</p>
+        <p>Implementation of Physics2DEnvironment.</p>
 
         </td>
       </tr>
@@ -264,7 +264,7 @@
       <h3 class="sourcedoc-section element-name">getNodesWithin</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun getNodesWithin(shape: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshape">Euclidean2DShape</a>): List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;&gt;</code>
+        <code>open fun getNodesWithin(shape: Euclidean2DShape): List&lt;Node&lt;T&gt;&gt;</code>
       </p>
 
       
@@ -293,7 +293,7 @@
       
       <tr class="sourcedoc-section section-element" id="5c2b1026dcdad01bfee5c7a7e2bfaa4e7ce5c4f5">
         <td class="sourcedoc-section section-signature">
-          <code>shape: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshape">Euclidean2DShape</a></code>
+          <code>shape: Euclidean2DShape</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the shape</p>
@@ -327,7 +327,7 @@
       
       <tr class="sourcedoc-section section-element" id="720b7a50489f4ca37f817e304468aed708c01053">
         <td class="sourcedoc-section section-signature">
-          <code>List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;&gt;</code>
+          <code>List&lt;Node&lt;T&gt;&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the set of nodes colliding with the given shape</p>
@@ -351,7 +351,7 @@
       <h3 class="sourcedoc-section element-name">getHeading</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun getHeading(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;): (node: Node<T>)</code>
+        <code>open fun getHeading(node: Node&lt;T&gt;): (node: Node<T>)</code>
       </p>
 
       
@@ -380,7 +380,7 @@
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The node</p>
@@ -438,7 +438,7 @@
       <h3 class="sourcedoc-section element-name">setHeading</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun setHeading(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, direction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>)</code>
+        <code>open fun setHeading(node: Node&lt;T&gt;, direction: Euclidean2DPosition)</code>
       </p>
 
       
@@ -467,7 +467,7 @@
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The node</p>
@@ -477,7 +477,7 @@
       
       <tr class="sourcedoc-section section-element" id="7ea98f006d9354e97f686f17c7ba0a928635568e">
         <td class="sourcedoc-section section-signature">
-          <code>direction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>direction: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The direction vector.</p>
@@ -534,7 +534,7 @@
       <h3 class="sourcedoc-section element-name">getShape</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun getShape(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshape">Euclidean2DShape</a></code>
+        <code>open fun getShape(node: Node&lt;T&gt;): Euclidean2DShape</code>
       </p>
 
       
@@ -563,7 +563,7 @@
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The node</p>
@@ -597,7 +597,7 @@
       
       <tr class="sourcedoc-section section-element" id="b3d66270f11cffb4acb945fc0974f2bf42314647">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshape">Euclidean2DShape</a></code>
+          <code>Euclidean2DShape</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Its shape</p>
@@ -621,7 +621,7 @@
       <h3 class="sourcedoc-section element-name">nodeAdded</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun nodeAdded(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, position: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, neighborhood: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a>&lt;T&gt;)</code>
+        <code>protected open fun nodeAdded(node: Node&lt;T&gt;, position: Euclidean2DPosition, neighborhood: Neighborhood&lt;T&gt;)</code>
       </p>
 
       
@@ -650,7 +650,7 @@
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -659,7 +659,7 @@
       
       <tr class="sourcedoc-section section-element" id="c0efc1db2fbc69a6dd0db265cc153386020f61a3">
         <td class="sourcedoc-section section-signature">
-          <code>position: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>position: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -668,7 +668,7 @@
       
       <tr class="sourcedoc-section section-element" id="6991fde047624c59eb3f2372f76edb88e35cce08">
         <td class="sourcedoc-section section-signature">
-          <code>neighborhood: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a>&lt;T&gt;</code>
+          <code>neighborhood: Neighborhood&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -724,7 +724,7 @@
       <h3 class="sourcedoc-section element-name">nodeRemoved</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun nodeRemoved(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, neighborhood: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a>&lt;T&gt;): override</code>
+        <code>protected open fun nodeRemoved(node: Node&lt;T&gt;, neighborhood: Neighborhood&lt;T&gt;): override</code>
       </p>
 
       
@@ -753,7 +753,7 @@
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -762,7 +762,7 @@
       
       <tr class="sourcedoc-section section-element" id="6991fde047624c59eb3f2372f76edb88e35cce08">
         <td class="sourcedoc-section section-signature">
-          <code>neighborhood: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a>&lt;T&gt;</code>
+          <code>neighborhood: Neighborhood&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -818,7 +818,7 @@
       <h3 class="sourcedoc-section element-name">moveNodeToPosition</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun moveNodeToPosition(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, newpos: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>)</code>
+        <code>open fun moveNodeToPosition(node: Node&lt;T&gt;, newpos: Euclidean2DPosition)</code>
       </p>
 
       
@@ -847,7 +847,7 @@
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -856,7 +856,7 @@
       
       <tr class="sourcedoc-section section-element" id="0478b9f057895bf626d332daafe3d82dd0ac9129">
         <td class="sourcedoc-section section-signature">
-          <code>newpos: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>newpos: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -912,7 +912,7 @@
       <h3 class="sourcedoc-section element-name">nodeShouldBeAdded</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun nodeShouldBeAdded(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, position: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>): Boolean</code>
+        <code>protected open fun nodeShouldBeAdded(node: Node&lt;T&gt;, position: Euclidean2DPosition): Boolean</code>
       </p>
 
       
@@ -942,7 +942,7 @@ limits.</p>
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -951,7 +951,7 @@ limits.</p>
       
       <tr class="sourcedoc-section section-element" id="c0efc1db2fbc69a6dd0db265cc153386020f61a3">
         <td class="sourcedoc-section section-signature">
-          <code>position: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>position: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1094,7 +1094,7 @@ limits.</p>
       <h3 class="sourcedoc-section element-name">canNodeFitPosition</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun canNodeFitPosition(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, position: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>): (node: Node<T>, position: Euclidean2DPosition)</code>
+        <code>open fun canNodeFitPosition(node: Node&lt;T&gt;, position: Euclidean2DPosition): (node: Node<T>, position: Euclidean2DPosition)</code>
       </p>
 
       
@@ -1123,7 +1123,7 @@ limits.</p>
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the node to move.</code></pre>
@@ -1133,7 +1133,7 @@ limits.</p>
       
       <tr class="sourcedoc-section section-element" id="c0efc1db2fbc69a6dd0db265cc153386020f61a3">
         <td class="sourcedoc-section section-signature">
-          <code>position: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>position: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the position you want to move the node to.</code></pre>
@@ -1196,6 +1196,9 @@ limits.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -7256,7 +7259,7 @@ limits.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

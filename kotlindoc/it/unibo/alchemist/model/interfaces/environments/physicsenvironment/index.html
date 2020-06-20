@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="a60e61e88b38768e78820ec706012695472dc3c8">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physicsenvironment">PhysicsEnvironment</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, F : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometricshapefactory">GeometricShapeFactory</a>&lt;P, A&gt;&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideanenvironment">EuclideanEnvironment</a>&lt;T, P&gt;, Any</code>
+        <code>interface PhysicsEnvironment&lt;T, P, A : GeometricTransformation&lt;P&gt;, F : GeometricShapeFactory&lt;P, A&gt;&gt; : EuclideanEnvironment&lt;T, P&gt;, Any</code>
       </p>
 
       
@@ -232,7 +232,7 @@ but to create an apposite interface extending this one instead.</p>
       <h3 class="sourcedoc-section element-name">getHeading</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun getHeading(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;): P</code>
+        <code>abstract fun getHeading(node: Node&lt;T&gt;): P</code>
       </p>
 
       
@@ -261,7 +261,7 @@ but to create an apposite interface extending this one instead.</p>
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The node</p>
@@ -319,7 +319,7 @@ but to create an apposite interface extending this one instead.</p>
       <h3 class="sourcedoc-section element-name">setHeading</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun setHeading(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, direction: P)</code>
+        <code>abstract fun setHeading(node: Node&lt;T&gt;, direction: P)</code>
       </p>
 
       
@@ -348,7 +348,7 @@ but to create an apposite interface extending this one instead.</p>
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The node</p>
@@ -415,7 +415,7 @@ but to create an apposite interface extending this one instead.</p>
       <h3 class="sourcedoc-section element-name">getShape</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun getShape(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometricshape">GeometricShape</a>&lt;P, A&gt;</code>
+        <code>abstract fun getShape(node: Node&lt;T&gt;): GeometricShape&lt;P, A&gt;</code>
       </p>
 
       
@@ -444,7 +444,7 @@ but to create an apposite interface extending this one instead.</p>
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The node</p>
@@ -478,7 +478,7 @@ but to create an apposite interface extending this one instead.</p>
       
       <tr class="sourcedoc-section section-element" id="62d0eaae0105afebbe9ca21286408d4564b79353">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometricshape">GeometricShape</a>&lt;P, A&gt;</code>
+          <code>GeometricShape&lt;P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Its shape</p>
@@ -502,7 +502,7 @@ but to create an apposite interface extending this one instead.</p>
       <h3 class="sourcedoc-section element-name">getNodesWithin</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun getNodesWithin(shape: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometricshape">GeometricShape</a>&lt;P, A&gt;): List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;&gt;</code>
+        <code>abstract fun getNodesWithin(shape: GeometricShape&lt;P, A&gt;): List&lt;Node&lt;T&gt;&gt;</code>
       </p>
 
       
@@ -531,7 +531,7 @@ but to create an apposite interface extending this one instead.</p>
       
       <tr class="sourcedoc-section section-element" id="52d4f7aa1bd0c049fb9f98ef56ca7c4543a372cb">
         <td class="sourcedoc-section section-signature">
-          <code>shape: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometricshape">GeometricShape</a>&lt;P, A&gt;</code>
+          <code>shape: GeometricShape&lt;P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the shape</p>
@@ -565,7 +565,7 @@ but to create an apposite interface extending this one instead.</p>
       
       <tr class="sourcedoc-section section-element" id="720b7a50489f4ca37f817e304468aed708c01053">
         <td class="sourcedoc-section section-signature">
-          <code>List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;&gt;</code>
+          <code>List&lt;Node&lt;T&gt;&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the set of nodes colliding with the given shape</p>
@@ -589,7 +589,7 @@ but to create an apposite interface extending this one instead.</p>
       <h3 class="sourcedoc-section element-name">canNodeFitPosition</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun canNodeFitPosition(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, position: P): Boolean</code>
+        <code>abstract fun canNodeFitPosition(node: Node&lt;T&gt;, position: P): Boolean</code>
       </p>
 
       
@@ -618,7 +618,7 @@ but to create an apposite interface extending this one instead.</p>
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the node to move.</code></pre>
@@ -691,6 +691,9 @@ but to create an apposite interface extending this one instead.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6751,7 +6754,7 @@ but to create an apposite interface extending this one instead.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

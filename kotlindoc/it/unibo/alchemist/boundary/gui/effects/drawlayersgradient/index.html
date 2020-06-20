@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="bf26e14b7a8ae05651af4eca0fa6d3bcd48704c1">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersgradient">DrawLayersGradient</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersvalues">DrawLayersValues</a></code>
+        <code>abstract class DrawLayersGradient: DrawLayersValues</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Draw layers values as background in the gui. The higher is the layer concentration in a point, the higher is the alpha channel for the background in that point. The user must specify: - the number of samples for each side, basically more samples correspond to a smoother and more detailed background - the min layer value - the max layer value The purpose and structure of this class is similar to <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersisolines">DrawLayersIsolines</a></code>.</p>
+      <div class="sourcedoc-section section-comments"><p>Draw layers values as background in the gui. The higher is the layer concentration in a point, the higher is the alpha channel for the background in that point. The user must specify: - the number of samples for each side, basically more samples correspond to a smoother and more detailed background - the min layer value - the max layer value The purpose and structure of this class is similar to <code>DrawLayersIsolines</code>.</p>
 </div>
 
       
@@ -203,7 +203,7 @@
           <code>constructor()</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Draw layers values as background in the gui. The higher is the layer concentration in a point, the higher is the alpha channel for the background in that point. The user must specify: - the number of samples for each side, basically more samples correspond to a smoother and more detailed background - the min layer value - the max layer value The purpose and structure of this class is similar to <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawlayersisolines">DrawLayersIsolines</a></code>.</p>
+        <p>Draw layers values as background in the gui. The higher is the layer concentration in a point, the higher is the alpha channel for the background in that point. The user must specify: - the number of samples for each side, basically more samples correspond to a smoother and more detailed background - the min layer value - the max layer value The purpose and structure of this class is similar to <code>DrawLayersIsolines</code>.</p>
 
         </td>
       </tr>
@@ -315,7 +315,7 @@
       <h3 class="sourcedoc-section element-name">createMapper</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected abstract fun createMapper(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/layertofunctionmapper">LayerToFunctionMapper</a>?</code>
+        <code>protected abstract fun createMapper(): LayerToFunctionMapper?</code>
       </p>
 
       
@@ -343,10 +343,10 @@
       
       <tr class="sourcedoc-section section-element" id="493b74eb359a1498a14cc439b9ebda7ddaa1b564">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/layertofunctionmapper">LayerToFunctionMapper</a>?</code>
+          <code>LayerToFunctionMapper?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/layertofunctionmapper">LayerToFunctionMapper</a>!: a layer to function mapper</p>
+        <p>LayerToFunctionMapper!: a layer to function mapper</p>
 
         </td>
       </tr>
@@ -419,7 +419,7 @@
       <h3 class="sourcedoc-section element-name">drawFunction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun &lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; drawFunction(f: Function&lt;P, Number?&gt;?, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?, g: Graphics2D?, wormhole: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a>&lt;P&gt;?)</code>
+        <code>open fun &lt;T : Any?, P : Position2D&lt;P&gt;?&gt; drawFunction(f: Function&lt;P, Number?&gt;?, env: Environment&lt;T, P&gt;?, g: Graphics2D?, wormhole: IWormhole2D&lt;P&gt;?)</code>
       </p>
 
       
@@ -458,10 +458,10 @@
       
       <tr class="sourcedoc-section section-element" id="5f36e38a592b4a94bef1b256824b2287d86c46b9">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;?</code>
+          <code>env: Environment&lt;T, P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;!: - the environment (mainly used to make positions)</p>
+        <p>Environment&lt;T, P&gt;!: - the environment (mainly used to make positions)</p>
 
         </td>
       </tr>
@@ -478,10 +478,10 @@
       
       <tr class="sourcedoc-section section-element" id="04e711ed9ea5a9bf9044acb7d7742d1e7271f78e">
         <td class="sourcedoc-section section-signature">
-          <code>wormhole: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a>&lt;P&gt;?</code>
+          <code>wormhole: IWormhole2D&lt;P&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/iwormhole2d">IWormhole2D</a><P>!: - the wormhole (to map env points to view points)
+        <p>IWormhole2D<P>!: - the wormhole (to map env points to view points)</p>
 
         </td>
       </tr>
@@ -668,6 +668,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6728,7 +6731,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

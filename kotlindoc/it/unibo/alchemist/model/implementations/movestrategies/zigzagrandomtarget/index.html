@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwk+fefba491f"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+22a4fc6b1"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="7e921f2674a0507c573747321dfb84ff28d00687">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/zigzagrandomtarget">ZigZagRandomTarget</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/changetargetoncollision">ChangeTargetOnCollision</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+        <code>class ZigZagRandomTarget&lt;T&gt; : ChangeTargetOnCollision&lt;Euclidean2DPosition&gt;</code>
       </p>
 
       
@@ -201,7 +201,7 @@ time a new direction is chosen.</p><p>T is the type of the concentration of the 
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, rng: RandomGenerator, maxDistance: Double, minChangeInDirection: Double)</code>
+        <code>constructor(node: Node&lt;T&gt;, env: Environment&lt;T, Euclidean2DPosition&gt;, rng: RandomGenerator, maxDistance: Double, minChangeInDirection: Double)</code>
       </p>
 
       
@@ -232,7 +232,7 @@ maxDistance defines the maximum distance the object can move before a random cha
       
       <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>node: Node&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -241,7 +241,7 @@ maxDistance defines the maximum distance the object can move before a random cha
       
       <tr class="sourcedoc-section section-element" id="50dd75d6bfe70ba2673bc62ec7e3a39ba9193a01">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>env: Environment&lt;T, Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -291,7 +291,7 @@ maxDistance defines the maximum distance the object can move before a random cha
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(getCurrentPosition: ()-&gt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, makePosition: (Double, Double)-&gt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, randomGenerator: RandomGenerator, maxDistance: Double, minChangeInDirection: Double)</code>
+        <code>constructor(getCurrentPosition: ()-&gt;Euclidean2DPosition, makePosition: (Double, Double)-&gt;Euclidean2DPosition, randomGenerator: RandomGenerator, maxDistance: Double, minChangeInDirection: Double)</code>
       </p>
 
       
@@ -325,7 +325,7 @@ time a new direction is chosen.</p><p>T is the type of the concentration of the 
       
       <tr class="sourcedoc-section section-element" id="f3dca731e0b40aeb7ef8cd25b6d37f47416533f1">
         <td class="sourcedoc-section section-signature">
-          <code>getCurrentPosition: ()-&gt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>getCurrentPosition: ()-&gt;Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -334,7 +334,7 @@ time a new direction is chosen.</p><p>T is the type of the concentration of the 
       
       <tr class="sourcedoc-section section-element" id="847fefeb4a992cc3b22a8d1f3b4e00c29ee26d15">
         <td class="sourcedoc-section section-signature">
-          <code>makePosition: (Double, Double)-&gt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>makePosition: (Double, Double)-&gt;Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -397,7 +397,7 @@ time a new direction is chosen.</p><p>T is the type of the concentration of the 
       <h3 class="sourcedoc-section element-name">initializePositions</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun initializePositions(currentPosition: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>)</code>
+        <code>protected fun initializePositions(currentPosition: Euclidean2DPosition)</code>
       </p>
 
       
@@ -427,7 +427,7 @@ It is guaranteed to be called before shouldChangeTarget and chooseTarget.</p>
       
       <tr class="sourcedoc-section section-element" id="ebc28dca1aa5e297b63a352e7d95e73e7239813e">
         <td class="sourcedoc-section section-signature">
-          <code>currentPosition: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>currentPosition: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -596,6 +596,9 @@ Returns the new target to reach.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6656,7 +6659,7 @@ Returns the new target to reach.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwk+fefba491f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+22a4fc6b1. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
