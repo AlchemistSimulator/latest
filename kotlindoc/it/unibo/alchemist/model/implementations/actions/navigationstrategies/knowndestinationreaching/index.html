@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/cfc8bef5/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/cfc8bef5/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/cfc8bef5/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/cfc8bef5/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+efe39cca8"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwm+e5f00aeae"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="7aaba22c2c54282b4b79e369f53e4e201d9a3490">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class KnownDestinationReaching&lt;T, N, E&gt; : RouteFollowing&lt;T, N, E&gt;</code>
+        <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/knowndestinationreaching">KnownDestinationReaching</a>&lt;T, N, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/routefollowing">RouteFollowing</a>&lt;T, N, E&gt;</code>
       </p>
 
       
@@ -176,10 +176,10 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A NavigationStrategy allowing to reach a known (static) destination (see Pursuing).
+      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a> allowing to reach a known (static) destination (see <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/pursuing">Pursuing</a>).
 The client can specify a list of known destinations, the pedestrian will try to reach the
 closest one for which a valid path leading there is known.
-The difference between this behavior and Pursuing is that the latter assumes no route
+The difference between this behavior and <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/pursuing">Pursuing</a> is that the latter assumes no route
 leading to the destination is known, whereas this behavior tries to exploit the pedestrian's
 cognitive map to obtain a route to follow.</p>
 </div>
@@ -205,7 +205,7 @@ cognitive map to obtain a route to follow.</p>
       
       <tr class="sourcedoc-section section-element" id="8aba93712f15c12102c00fde6cec812f7ec9b5ba">
         <td class="sourcedoc-section section-signature">
-          <code>protected route: List&lt;Euclidean2DPosition&gt;</code>
+          <code>protected route: List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The route to follow.</p>
@@ -215,7 +215,7 @@ cognitive map to obtain a route to follow.</p>
       
       <tr class="sourcedoc-section section-element" id="da546ba691b59d7078f0bb38ae760a48f9e67e7f">
         <td class="sourcedoc-section section-signature">
-          <code>protected environment: Euclidean2DEnvironmentWithGraph&lt;*, T, ConvexPolygon, Euclidean2DPassage&gt;</code>
+          <code>protected environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph">Euclidean2DEnvironmentWithGraph</a>&lt;*, T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Shortcut to get the environment.</p>
@@ -245,15 +245,15 @@ cognitive map to obtain a route to follow.</p>
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(action: EuclideanNavigationAction&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;, destinations: List&lt;Euclidean2DPosition&gt;)</code>
+        <code>constructor(action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>&lt;T, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;, destinations: List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A NavigationStrategy allowing to reach a known (static) destination (see Pursuing).
+      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a> allowing to reach a known (static) destination (see <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/pursuing">Pursuing</a>).
 The client can specify a list of known destinations, the pedestrian will try to reach the
 closest one for which a valid path leading there is known.
-The difference between this behavior and Pursuing is that the latter assumes no route
+The difference between this behavior and <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/pursuing">Pursuing</a> is that the latter assumes no route
 leading to the destination is known, whereas this behavior tries to exploit the pedestrian's
 cognitive map to obtain a route to follow.</p>
 </div>
@@ -279,7 +279,7 @@ cognitive map to obtain a route to follow.</p>
       
       <tr class="sourcedoc-section section-element" id="9ad4379bba96ae3b912992400762e619f35244a1">
         <td class="sourcedoc-section section-signature">
-          <code>action: EuclideanNavigationAction&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;</code>
+          <code>action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>&lt;T, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -288,7 +288,7 @@ cognitive map to obtain a route to follow.</p>
       
       <tr class="sourcedoc-section section-element" id="5de7a3112b769b8754a67b62cf5fc7d8eafb7f4d">
         <td class="sourcedoc-section section-signature">
-          <code>destinations: List&lt;Euclidean2DPosition&gt;</code>
+          <code>destinations: List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -324,7 +324,7 @@ cognitive map to obtain a route to follow.</p>
       <h3 class="sourcedoc-section element-name">isReached</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun isReached(waypoint: Euclidean2DPosition, currentRoom: ConvexPolygon): Boolean</code>
+        <code>protected open fun isReached(waypoint: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, currentRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>): Boolean</code>
       </p>
 
       
@@ -353,7 +353,7 @@ cognitive map to obtain a route to follow.</p>
       
       <tr class="sourcedoc-section section-element" id="500231dbedf651f5df5c51065603d8a5539bdbc9">
         <td class="sourcedoc-section section-signature">
-          <code>waypoint: Euclidean2DPosition</code>
+          <code>waypoint: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -362,7 +362,7 @@ cognitive map to obtain a route to follow.</p>
       
       <tr class="sourcedoc-section section-element" id="e1a16dad8d578d69c28984425de9958677235b1b">
         <td class="sourcedoc-section section-signature">
-          <code>currentRoom: ConvexPolygon</code>
+          <code>currentRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -424,9 +424,6 @@ cognitive map to obtain a route to follow.</p>
 </div>
 
 </div>
-
-
-
 
 
 
@@ -6487,7 +6484,7 @@ cognitive map to obtain a route to follow.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+efe39cca8. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwm+e5f00aeae. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6522,9 +6519,9 @@ cognitive map to obtain a route to follow.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/cfc8bef5/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/cfc8bef5/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/cfc8bef5/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/5213824e/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
