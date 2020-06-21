@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="cfc5d04c8024f8398de5a25be321cf761e57a641">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringaction">AbstractSteeringAction</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;T, P&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringaction">SteeringAction</a>&lt;T, P&gt;</code>
+        <code>abstract class AbstractSteeringAction&lt;T, P, A : GeometricTransformation&lt;P&gt;&gt; : AbstractMoveNode&lt;T, P&gt;, SteeringAction&lt;T, P&gt;</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringaction">SteeringAction</a> in a vector space. The definition of nextPosition is left to
+      <div class="sourcedoc-section section-comments"><p>A SteeringAction in a vector space. The definition of nextPosition is left to
 subclasses.</p>
 </div>
 
@@ -201,7 +201,7 @@ subclasses.</p>
       
       <tr class="sourcedoc-section section-element" id="3b8cf86dd10e8a8744f403c8851d90cba686eaa6">
         <td class="sourcedoc-section section-signature">
-          <code>protected open reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;</code>
+          <code>protected open reaction: Reaction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The reaction in which this action is executed.</p>
@@ -211,7 +211,7 @@ subclasses.</p>
       
       <tr class="sourcedoc-section section-element" id="34e6e0a85bd448133b3f35b2aef24206a8c61dba">
         <td class="sourcedoc-section section-signature">
-          <code>protected open pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, P, A&gt;</code>
+          <code>protected open pedestrian: Pedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The owner of this action.</p>
@@ -241,12 +241,12 @@ subclasses.</p>
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;, reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, P, A&gt;)</code>
+        <code>constructor(env: Environment&lt;T, P&gt;, reaction: Reaction&lt;T&gt;, pedestrian: Pedestrian&lt;T, P, A&gt;)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringaction">SteeringAction</a> in a vector space. The definition of nextPosition is left to
+      <div class="sourcedoc-section section-comments"><p>A SteeringAction in a vector space. The definition of nextPosition is left to
 subclasses.</p>
 </div>
 
@@ -271,7 +271,7 @@ subclasses.</p>
       
       <tr class="sourcedoc-section section-element" id="3e0a2c083ff5b8c0eb373be1a9a6b5948ced38d9">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;</code>
+          <code>env: Environment&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -280,7 +280,7 @@ subclasses.</p>
       
       <tr class="sourcedoc-section section-element" id="ea9e2ee7d64a5940bb8529e5a4e4b3f6c0b9d942">
         <td class="sourcedoc-section section-signature">
-          <code>reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;</code>
+          <code>reaction: Reaction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -289,7 +289,7 @@ subclasses.</p>
       
       <tr class="sourcedoc-section section-element" id="18496866fa3896ffbc38f96989f5f20bf8e0c053">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, P, A&gt;</code>
+          <code>pedestrian: Pedestrian&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -522,6 +522,9 @@ returned.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6582,7 +6585,7 @@ returned.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6617,9 +6620,9 @@ returned.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

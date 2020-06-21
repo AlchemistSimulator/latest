@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="db079ddf8839ae02fe0145dedc2fed06e8317183">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/exploring">Exploring</a>&lt;T, N, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationstrategy">EuclideanNavigationStrategy</a>&lt;T, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;, Any</code>
+        <code>open class Exploring&lt;T, N, E&gt; : EuclideanNavigationStrategy&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;, Any</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a> allowing to explore the environment.
+      <div class="sourcedoc-section section-comments"><p>A NavigationStrategy allowing to explore the environment.
 In order to choose which direction to take, a weighting system is used: every time the
 pedestrian enters a new room all the visible doors are weighted, the one with minimum
 weight is then crossed. The weighting system used here is derived from the one by
@@ -204,7 +204,7 @@ weight is then crossed. The weighting system used here is derived from the one b
       
       <tr class="sourcedoc-section section-element" id="bc5f7cfb2802d26678221b9c3ea9bfe7bb75b5e9">
         <td class="sourcedoc-section section-signature">
-          <code>protected pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dtransformation">Euclidean2DTransformation</a>, N, E&gt;</code>
+          <code>protected pedestrian: OrientingPedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation, N, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Shortcut to obtain the pedestrian.</p>
@@ -214,7 +214,7 @@ weight is then crossed. The weighting system used here is derived from the one b
       
       <tr class="sourcedoc-section section-element" id="4a10f49672e48f9b14a25cd83cd989546155921e">
         <td class="sourcedoc-section section-signature">
-          <code>protected open comparator: Comparator<in Euclidean2DPassage>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;</code>
+          <code>protected open comparator: Comparator<in Euclidean2DPassage>&lt;Euclidean2DPassage&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The comparator used to determine which passage to cross, a nearest door heuristic
@@ -225,10 +225,10 @@ is used when multiple passages have the same weight.</p>
       
       <tr class="sourcedoc-section section-element" id="a29ea62eb4f09faa640d5ff87b69224894f5b6f3">
         <td class="sourcedoc-section section-signature">
-          <code>open action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>&lt;T, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;</code>
+          <code>open action: EuclideanNavigationAction&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>The <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a> used to navigate the environment.</p>
+        <p>The NavigationAction used to navigate the environment.</p>
 
         </td>
       </tr>
@@ -255,12 +255,12 @@ is used when multiple passages have the same weight.</p>
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>&lt;T, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;, knownImpasseWeight: Double)</code>
+        <code>constructor(action: EuclideanNavigationAction&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;, knownImpasseWeight: Double)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a> allowing to explore the environment.
+      <div class="sourcedoc-section section-comments"><p>A NavigationStrategy allowing to explore the environment.
 In order to choose which direction to take, a weighting system is used: every time the
 pedestrian enters a new room all the visible doors are weighted, the one with minimum
 weight is then crossed. The weighting system used here is derived from the one by
@@ -288,7 +288,7 @@ weight is then crossed. The weighting system used here is derived from the one b
       
       <tr class="sourcedoc-section section-element" id="9ad4379bba96ae3b912992400762e619f35244a1">
         <td class="sourcedoc-section section-signature">
-          <code>action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>&lt;T, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;</code>
+          <code>action: EuclideanNavigationAction&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -333,7 +333,7 @@ weight is then crossed. The weighting system used here is derived from the one b
       <h3 class="sourcedoc-section element-name">distanceToPedestrian</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>.distanceToPedestrian(): Double</code>
+        <code>protected open fun Euclidean2DPassage.distanceToPedestrian(): Double</code>
       </p>
 
       
@@ -362,7 +362,7 @@ weight is then crossed. The weighting system used here is derived from the one b
       
       <tr class="sourcedoc-section section-element" id="f3d4c909142e98c5c67a142b585e2bc2287073c0">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a></code>
+          <code>Euclidean2DPassage</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -418,7 +418,7 @@ weight is then crossed. The weighting system used here is derived from the one b
       <h3 class="sourcedoc-section element-name">inNewRoom</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun inNewRoom(newRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>): (newRoom: ConvexPolygon)</code>
+        <code>open fun inNewRoom(newRoom: ConvexPolygon): (newRoom: ConvexPolygon)</code>
       </p>
 
       
@@ -447,7 +447,7 @@ weight is then crossed. The weighting system used here is derived from the one b
       
       <tr class="sourcedoc-section section-element" id="3f75d62837d5a4db11cb0546a31c0e70a4ca2a7c">
         <td class="sourcedoc-section section-signature">
-          <code>newRoom: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>newRoom: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -503,7 +503,7 @@ weight is then crossed. The weighting system used here is derived from the one b
       <h3 class="sourcedoc-section element-name">weight</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun weight(door: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>): Double</code>
+        <code>protected open fun weight(door: Euclidean2DPassage): Double</code>
       </p>
 
       
@@ -534,7 +534,7 @@ three factors: volatileMemoryFactor, congestionFactor and impasseFactor.</p>
       
       <tr class="sourcedoc-section section-element" id="583b8a752e939b4112bd6f4eaf37a7a25e8d02b6">
         <td class="sourcedoc-section section-signature">
-          <code>door: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a></code>
+          <code>door: Euclidean2DPassage</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -590,7 +590,7 @@ three factors: volatileMemoryFactor, congestionFactor and impasseFactor.</p>
       <h3 class="sourcedoc-section element-name">volatileMemoryFactor</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun volatileMemoryFactor(head: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>): Double</code>
+        <code>protected open fun volatileMemoryFactor(head: ConvexPolygon): Double</code>
       </p>
 
       
@@ -621,7 +621,7 @@ words, less visited rooms are preferred).</p>
       
       <tr class="sourcedoc-section section-element" id="88b93fd19294c01acbd1700d437168ca9b49ec81">
         <td class="sourcedoc-section section-signature">
-          <code>head: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>head: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -677,7 +677,7 @@ words, less visited rooms are preferred).</p>
       <h3 class="sourcedoc-section element-name">congestionFactor</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun congestionFactor(head: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>): Double</code>
+        <code>protected open fun congestionFactor(head: ConvexPolygon): Double</code>
       </p>
 
       
@@ -708,7 +708,7 @@ as density of the area + 1, so as to have a value in <a href="#">1,2</a> (less c
       
       <tr class="sourcedoc-section section-element" id="88b93fd19294c01acbd1700d437168ca9b49ec81">
         <td class="sourcedoc-section section-signature">
-          <code>head: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>head: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -764,7 +764,7 @@ as density of the area + 1, so as to have a value in <a href="#">1,2</a> (less c
       <h3 class="sourcedoc-section element-name">impasseFactor</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun impasseFactor(head: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>): Double</code>
+        <code>protected open fun impasseFactor(head: ConvexPolygon): Double</code>
       </p>
 
       
@@ -795,7 +795,7 @@ this factor assumes unitary value.</p>
       
       <tr class="sourcedoc-section section-element" id="88b93fd19294c01acbd1700d437168ca9b49ec81">
         <td class="sourcedoc-section section-signature">
-          <code>head: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>head: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -936,7 +936,7 @@ this factor assumes unitary value.</p>
       <h3 class="sourcedoc-section element-name">isKnownImpasse</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>.isKnownImpasse(): Boolean</code>
+        <code>protected open fun ConvexPolygon.isKnownImpasse(): Boolean</code>
       </p>
 
       
@@ -965,7 +965,7 @@ this factor assumes unitary value.</p>
       
       <tr class="sourcedoc-section section-element" id="477f10d8ae4287548f372a29365e6024ed4ee8b0">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1034,12 +1034,12 @@ this factor assumes unitary value.</p>
       <h3 class="sourcedoc-section element-name">Exploring</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/exploring">Exploring</a>&lt;T, N, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationstrategy">EuclideanNavigationStrategy</a>&lt;T, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;, Any</code>
+        <code>open class Exploring&lt;T, N, E&gt; : EuclideanNavigationStrategy&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;, Any</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a> allowing to explore the environment.
+      <div class="sourcedoc-section section-comments"><p>A NavigationStrategy allowing to explore the environment.
 In order to choose which direction to take, a weighting system is used: every time the
 pedestrian enters a new room all the visible doors are weighted, the one with minimum
 weight is then crossed. The weighting system used here is derived from the one by
@@ -1097,6 +1097,9 @@ weight is then crossed. The weighting system used here is derived from the one b
 </div>
 
 </div>
+
+
+
 
 
 
@@ -7157,7 +7160,7 @@ weight is then crossed. The weighting system used here is derived from the one b
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7192,9 +7195,9 @@ weight is then crossed. The weighting system used here is derived from the one b
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

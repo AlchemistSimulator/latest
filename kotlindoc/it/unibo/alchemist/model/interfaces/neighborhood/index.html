@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="5027c2d1be0ea1d46d60ceff0d417e4dd9cf80a8">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a>&lt;T : Any?&gt; : Serializable, Cloneable, MutableIterable&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?&gt;, Any</code>
+        <code>interface Neighborhood&lt;T : Any?&gt; : Serializable, Cloneable, MutableIterable&lt;Node&lt;T&gt;?&gt;, Any</code>
       </p>
 
       
@@ -196,7 +196,7 @@
       <h3 class="sourcedoc-section element-name">contains</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun contains(n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?): Boolean</code>
+        <code>abstract fun contains(n: Node&lt;T&gt;?): Boolean</code>
       </p>
 
       
@@ -225,10 +225,10 @@
       
       <tr class="sourcedoc-section section-element" id="1fde94d953de8c356dade4695a2331c4546aa681">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>n: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: the node to be searched</p>
+        <p>Node<T>!: the node to be searched</p>
 
         </td>
       </tr>
@@ -283,7 +283,7 @@
       <h3 class="sourcedoc-section element-name">getCenter</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun getCenter(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+        <code>abstract fun getCenter(): Node&lt;T&gt;?</code>
       </p>
 
       
@@ -312,10 +312,10 @@
       
       <tr class="sourcedoc-section section-element" id="977eff654676d2da0411b27d18a2fcb5d23cdebd">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: the central node, namely the node whose neighbors are represented by this structure.</p>
+        <p>Node<T>!: the central node, namely the node whose neighbors are represented by this structure.</p>
 
         </td>
       </tr>
@@ -441,7 +441,7 @@
       <h3 class="sourcedoc-section element-name">remove</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun remove(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a>&lt;T&gt;?</code>
+        <code>abstract fun remove(node: Node&lt;T&gt;?): Neighborhood&lt;T&gt;?</code>
       </p>
 
       
@@ -469,10 +469,10 @@
       
       <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: the <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a></code> to remove</p>
+        <p>Node<T>!: the <code>Node</code> to remove</p>
 
         </td>
       </tr>
@@ -503,10 +503,10 @@
       
       <tr class="sourcedoc-section section-element" id="e057a70edaccba6ec55536122f289736371fc260">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a>&lt;T&gt;?</code>
+          <code>Neighborhood&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a><T>!: a new <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a></code> with the same center without the provided <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a></code></p>
+        <p>Neighborhood<T>!: a new <code>Neighborhood</code> with the same center without the provided <code>Node</code></p>
 
         </td>
       </tr>
@@ -527,7 +527,7 @@
       <h3 class="sourcedoc-section element-name">add</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun add(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a>&lt;T&gt;?</code>
+        <code>abstract fun add(node: Node&lt;T&gt;?): Neighborhood&lt;T&gt;?</code>
       </p>
 
       
@@ -555,10 +555,10 @@
       
       <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: the <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a></code> to add</p>
+        <p>Node<T>!: the <code>Node</code> to add</p>
 
         </td>
       </tr>
@@ -589,10 +589,10 @@
       
       <tr class="sourcedoc-section section-element" id="e057a70edaccba6ec55536122f289736371fc260">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a>&lt;T&gt;?</code>
+          <code>Neighborhood&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a><T>!: a new <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/neighborhood">Neighborhood</a></code> with the same center and the new node among its neighbors</p>
+        <p>Neighborhood<T>!: a new <code>Neighborhood</code> with the same center and the new node among its neighbors</p>
 
         </td>
       </tr>
@@ -613,7 +613,7 @@
       <h3 class="sourcedoc-section element-name">getNeighborByNumber</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun getNeighborByNumber(num: Int): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+        <code>abstract fun getNeighborByNumber(num: Int): Node&lt;T&gt;?</code>
       </p>
 
       
@@ -676,10 +676,10 @@
       
       <tr class="sourcedoc-section section-element" id="977eff654676d2da0411b27d18a2fcb5d23cdebd">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: the num-th neighbor</p>
+        <p>Node<T>!: the num-th neighbor</p>
 
         </td>
       </tr>
@@ -758,6 +758,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6818,7 +6821,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6853,9 +6856,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

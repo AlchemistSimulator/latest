@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="7b635084d591b33840ebe1272b6633c126216bde">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/sapereexponentialtime">SAPEREExponentialTime</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/exponentialtime">ExponentialTime</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/saperetimedistribution">SAPERETimeDistribution</a></code>
+        <code>class SAPEREExponentialTime: ExponentialTime&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, SAPERETimeDistribution</code>
       </p>
 
       
@@ -258,7 +258,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(rateEquation: String?, start: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?, random: RandomGenerator?)</code>
+        <code>constructor(rateEquation: String?, start: Time?, random: RandomGenerator?)</code>
       </p>
 
       
@@ -296,10 +296,10 @@
       
       <tr class="sourcedoc-section section-element" id="61f565565149c2c020b1a6bbd3aa3c0746b8a6e3">
         <td class="sourcedoc-section section-signature">
-          <code>start: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>start: Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>!: initial time</p>
+        <p>Time!: initial time</p>
 
         </td>
       </tr>
@@ -343,7 +343,7 @@
       <h3 class="sourcedoc-section element-name">setMatches</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun setMatches(match: MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?)</code>
+        <code>fun setMatches(match: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?)</code>
       </p>
 
       
@@ -371,7 +371,7 @@
       
       <tr class="sourcedoc-section section-element" id="636f5935c2d9e73fe895991e47f3996f21f53b5f">
         <td class="sourcedoc-section section-signature">
-          <code>match: MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?</code>
+          <code>match: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -427,7 +427,7 @@
       <h3 class="sourcedoc-section element-name">getRateEquation</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getRateEquation(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/iexpression">IExpression</a>?</code>
+        <code>fun getRateEquation(): IExpression?</code>
       </p>
 
       
@@ -455,7 +455,7 @@
       
       <tr class="sourcedoc-section section-element" id="e73c30e3df74a02c8a378d5da95594c01350aa4f">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/iexpression">IExpression</a>?</code>
+          <code>IExpression?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -586,6 +586,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6646,7 +6649,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6681,9 +6684,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

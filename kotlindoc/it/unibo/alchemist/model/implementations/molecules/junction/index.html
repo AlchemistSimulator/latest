@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="7581f04cf4356c976318c9b8505a649b80d363c8">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/simplemolecule">SimpleMolecule</a></code>
+        <code>class Junction: SimpleMolecule</code>
       </p>
 
       
@@ -196,7 +196,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(name: String?, moleculesInCurrentNode: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>?, Double?&gt;?, moleculesInNeighborNode: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>?, Double?&gt;?)</code>
+        <code>constructor(name: String?, moleculesInCurrentNode: MutableMap&lt;Biomolecule?, Double?&gt;?, moleculesInNeighborNode: MutableMap&lt;Biomolecule?, Double?&gt;?)</code>
       </p>
 
       
@@ -235,20 +235,20 @@
       
       <tr class="sourcedoc-section section-element" id="3961c343501af107c77a21804e6c80c5699bcda8">
         <td class="sourcedoc-section section-signature">
-          <code>moleculesInCurrentNode: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>?, Double?&gt;?</code>
+          <code>moleculesInCurrentNode: MutableMap&lt;Biomolecule?, Double?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>!, Double!&gt;!: A map of molecules (with their concentration) which was in the current node. When the junction is removed the molecules will be released in the current node.</p>
+        <p>MutableMap&lt;Biomolecule!, Double!&gt;!: A map of molecules (with their concentration) which was in the current node. When the junction is removed the molecules will be released in the current node.</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="9086f1c1f848f2331109fbdde8cea152a5a3a16e">
         <td class="sourcedoc-section section-signature">
-          <code>moleculesInNeighborNode: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>?, Double?&gt;?</code>
+          <code>moleculesInNeighborNode: MutableMap&lt;Biomolecule?, Double?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>!, Double!&gt;!: A map of molecules (with their concentration) which was in the current node. When the junction is removed the molecules will be released in the current node.</p>
+        <p>MutableMap&lt;Biomolecule!, Double!&gt;!: A map of molecules (with their concentration) which was in the current node. When the junction is removed the molecules will be released in the current node.</p>
 
         </td>
       </tr>
@@ -269,7 +269,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(toClone: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?)</code>
+        <code>constructor(toClone: Junction?)</code>
       </p>
 
       
@@ -298,10 +298,10 @@
       
       <tr class="sourcedoc-section section-element" id="90bec8e687671408c36daa1c366ca0453de19e29">
         <td class="sourcedoc-section section-signature">
-          <code>toClone: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?</code>
+          <code>toClone: Junction?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>!: the junction to clone.</p>
+        <p>Junction!: the junction to clone.</p>
 
         </td>
       </tr>
@@ -335,7 +335,7 @@
       <h3 class="sourcedoc-section element-name">reverse</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun reverse(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?</code>
+        <code>fun reverse(): Junction?</code>
       </p>
 
       
@@ -364,10 +364,10 @@
       
       <tr class="sourcedoc-section section-element" id="129dbf5a20fc4f7515cf7ae72646439b163816ce">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>?</code>
+          <code>Junction?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/junction">Junction</a>!: the reversed junction</p>
+        <p>Junction!: the reversed junction</p>
 
         </td>
       </tr>
@@ -388,7 +388,7 @@
       <h3 class="sourcedoc-section element-name">getMoleculesInCurrentNode</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getMoleculesInCurrentNode(): MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>?, Double?&gt;?</code>
+        <code>fun getMoleculesInCurrentNode(): MutableMap&lt;Biomolecule?, Double?&gt;?</code>
       </p>
 
       
@@ -416,10 +416,10 @@
       
       <tr class="sourcedoc-section section-element" id="d3c7a5e425111549f1c48d29773a28ad0f467dda">
         <td class="sourcedoc-section section-signature">
-          <code>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>?, Double?&gt;?</code>
+          <code>MutableMap&lt;Biomolecule?, Double?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>!, Double!&gt;!: a map of molecules and concentrations associated with this junction in the current node.</p>
+        <p>MutableMap&lt;Biomolecule!, Double!&gt;!: a map of molecules and concentrations associated with this junction in the current node.</p>
 
         </td>
       </tr>
@@ -440,7 +440,7 @@
       <h3 class="sourcedoc-section element-name">getMoleculesInNeighborNode</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun getMoleculesInNeighborNode(): MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>?, Double?&gt;?</code>
+        <code>fun getMoleculesInNeighborNode(): MutableMap&lt;Biomolecule?, Double?&gt;?</code>
       </p>
 
       
@@ -468,10 +468,10 @@
       
       <tr class="sourcedoc-section section-element" id="d3c7a5e425111549f1c48d29773a28ad0f467dda">
         <td class="sourcedoc-section section-signature">
-          <code>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>?, Double?&gt;?</code>
+          <code>MutableMap&lt;Biomolecule?, Double?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/molecules/biomolecule">Biomolecule</a>!, Double!&gt;!: a map of molecules and concentrations associated with this junction in the neighbor node.</p>
+        <p>MutableMap&lt;Biomolecule!, Double!&gt;!: a map of molecules and concentrations associated with this junction in the neighbor node.</p>
 
         </td>
       </tr>
@@ -492,7 +492,7 @@
       <h3 class="sourcedoc-section element-name">dependsOn</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun dependsOn(mol: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/dependency">Dependency</a>?): Boolean</code>
+        <code>fun dependsOn(mol: Dependency?): Boolean</code>
       </p>
 
       
@@ -520,7 +520,7 @@
       
       <tr class="sourcedoc-section section-element" id="d847358d5ef3f851e44e2baf66699ecaf581dc73">
         <td class="sourcedoc-section section-signature">
-          <code>mol: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/dependency">Dependency</a>?</code>
+          <code>mol: Dependency?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -582,6 +582,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6642,7 +6645,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6677,9 +6680,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

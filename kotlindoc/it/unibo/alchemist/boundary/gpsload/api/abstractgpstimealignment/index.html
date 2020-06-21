@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="9f42ab54f82cacefb81f9953e50ff20625b4cca8">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/abstractgpstimealignment">AbstractGPSTimeAlignment</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/gpstimealignment">GPSTimeAlignment</a>, Any</code>
+        <code>abstract class AbstractGPSTimeAlignment: GPSTimeAlignment, Any</code>
       </p>
 
       
@@ -195,7 +195,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected constructor(policy: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/abstractgpstimealignment/singlepointbehavior">SinglePointBehavior</a>?)</code>
+        <code>protected constructor(policy: SinglePointBehavior?)</code>
       </p>
 
       
@@ -223,7 +223,7 @@
       
       <tr class="sourcedoc-section section-element" id="59e8727638658f442c244c9596b9f5e9fdd04e31">
         <td class="sourcedoc-section section-signature">
-          <code>policy: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gpsload/api/abstractgpstimealignment/singlepointbehavior">SinglePointBehavior</a>?</code>
+          <code>policy: SinglePointBehavior?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>SinglePointBehavior!: define policy for trace with single point</p>
@@ -260,7 +260,7 @@
       <h3 class="sourcedoc-section element-name">computeStartTime</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected abstract fun computeStartTime(allTraces: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?&gt;?, currentTrace: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+        <code>protected abstract fun computeStartTime(allTraces: MutableList&lt;GPSTrace?&gt;?, currentTrace: GPSTrace?): Time?</code>
       </p>
 
       
@@ -288,20 +288,20 @@
       
       <tr class="sourcedoc-section section-element" id="e0b43c76b4c226e77ef2db8dce13f7e3804f1d49">
         <td class="sourcedoc-section section-signature">
-          <code>allTraces: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?&gt;?</code>
+          <code>allTraces: MutableList&lt;GPSTrace?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>!&gt;!: all <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a></code> to normalize</p>
+        <p>MutableList&lt;GPSTrace!&gt;!: all <code>GPSTrace</code> to normalize</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="8e339e602219cbdb6b966707145bae019ad59127">
         <td class="sourcedoc-section section-signature">
-          <code>currentTrace: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?</code>
+          <code>currentTrace: GPSTrace?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>!: current <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a></code> to normalize</p>
+        <p>GPSTrace!: current <code>GPSTrace</code> to normalize</p>
 
         </td>
       </tr>
@@ -332,10 +332,10 @@
       
       <tr class="sourcedoc-section section-element" id="fb5b6d153245a2585f5561d0195adf5208150d11">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>!: the time from which the trace should begin</p>
+        <p>Time!: the time from which the trace should begin</p>
 
         </td>
       </tr>
@@ -356,7 +356,7 @@
       <h3 class="sourcedoc-section element-name">alignTime</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun alignTime(traces: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?&gt;?): ImmutableList?</code>
+        <code>open fun alignTime(traces: MutableList&lt;GPSTrace?&gt;?): ImmutableList?</code>
       </p>
 
       
@@ -384,10 +384,10 @@
       
       <tr class="sourcedoc-section section-element" id="1e17346a436cb4fc537f1540d916fd081b16e70e">
         <td class="sourcedoc-section section-signature">
-          <code>traces: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>?&gt;?</code>
+          <code>traces: MutableList&lt;GPSTrace?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/gpstrace">GPSTrace</a>!&gt;!: map trace with time to align</p>
+        <p>MutableList&lt;GPSTrace!&gt;!: map trace with time to align</p>
 
         </td>
       </tr>
@@ -448,6 +448,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6508,7 +6511,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6543,9 +6546,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

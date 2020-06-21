@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="7644b177b7bb9bf4bba9713870f7a5b154229263">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/mapenvironment">MapEnvironment</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/benchmarkableenvironment">BenchmarkableEnvironment</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;, Any</code>
+        <code>interface MapEnvironment&lt;T : Any?&gt; : BenchmarkableEnvironment&lt;T, GeoPosition?&gt;, Any</code>
       </p>
 
       
@@ -199,7 +199,7 @@
       
       <tr class="sourcedoc-section section-element" id="64fc33e8c34ba3fb204cd527e5c259e796d2b91c">
         <td class="sourcedoc-section section-signature">
-          <code>static DEFAULT_VEHICLE: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/vehicle">Vehicle</a>?</code>
+          <code>static DEFAULT_VEHICLE: Vehicle?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The default vehicle.</p>
@@ -229,12 +229,12 @@
       <h3 class="sourcedoc-section element-name">computeRoute</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun computeRoute(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, node2: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+        <code>abstract fun computeRoute(node: Node&lt;T&gt;?, node2: Node&lt;T&gt;?): Route&lt;GeoPosition?&gt;?</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a></code> calling this method to effectively move nodes along the path. It uses the fastest path as metric.</p>
+      <div class="sourcedoc-section section-comments"><p>This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific <code>Action</code> calling this method to effectively move nodes along the path. It uses the fastest path as metric.</p>
 </div>
 
       
@@ -258,20 +258,20 @@
       
       <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: The start node</p>
+        <p>Node<T>!: The start node</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="f9b9f1910adc896868d2d7eb548f6ea661b6b811">
         <td class="sourcedoc-section section-signature">
-          <code>node2: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node2: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: the second node's position will be used as destination</p>
+        <p>Node<T>!: the second node's position will be used as destination</p>
 
         </td>
       </tr>
@@ -302,10 +302,10 @@
       
       <tr class="sourcedoc-section section-element" id="6cbeed82fc914998d6dd6d275e6a1bb35fd9142e">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>Route&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: A <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a></code> object describing the path the node should follow</p>
+        <p>Route&lt;GeoPosition!&gt;!: A <code>Route</code> object describing the path the node should follow</p>
 
         </td>
       </tr>
@@ -326,12 +326,12 @@
       <h3 class="sourcedoc-section element-name">computeRoute</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun computeRoute(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, coord: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+        <code>abstract fun computeRoute(node: Node&lt;T&gt;?, coord: GeoPosition?): Route&lt;GeoPosition?&gt;?</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a></code> calling this method to effectively move nodes along the path.</p>
+      <div class="sourcedoc-section section-comments"><p>This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific <code>Action</code> calling this method to effectively move nodes along the path.</p>
 </div>
 
       
@@ -355,20 +355,20 @@
       
       <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: The <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a></code> to move</p>
+        <p>Node<T>!: The <code>Node</code> to move</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="3c1e4029d806b0da54977caddc796048ab4b9ecf">
         <td class="sourcedoc-section section-signature">
-          <code>coord: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?</code>
+          <code>coord: GeoPosition?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!: The absolute coordinate where this node wants to move to</p>
+        <p>GeoPosition!: The absolute coordinate where this node wants to move to</p>
 
         </td>
       </tr>
@@ -399,10 +399,10 @@
       
       <tr class="sourcedoc-section section-element" id="6cbeed82fc914998d6dd6d275e6a1bb35fd9142e">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>Route&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: A <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a></code> object describing the path the node should follow</p>
+        <p>Route&lt;GeoPosition!&gt;!: A <code>Route</code> object describing the path the node should follow</p>
 
         </td>
       </tr>
@@ -423,12 +423,12 @@
       <h3 class="sourcedoc-section element-name">computeRoute</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun computeRoute(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, coord: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?, vehicle: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/vehicle">Vehicle</a>?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+        <code>abstract fun computeRoute(node: Node&lt;T&gt;?, coord: GeoPosition?, vehicle: Vehicle?): Route&lt;GeoPosition?&gt;?</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a></code> calling this method to effectively move nodes along the path.</p>
+      <div class="sourcedoc-section section-comments"><p>This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific <code>Action</code> calling this method to effectively move nodes along the path.</p>
 </div>
 
       
@@ -452,30 +452,30 @@
       
       <tr class="sourcedoc-section section-element" id="7d7ef16d2a578a77a3aa26f6162fe219d4aef26c">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>node: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a><T>!: The <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a></code> to move</p>
+        <p>Node<T>!: The <code>Node</code> to move</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="3c1e4029d806b0da54977caddc796048ab4b9ecf">
         <td class="sourcedoc-section section-signature">
-          <code>coord: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?</code>
+          <code>coord: GeoPosition?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!: The absolute coordinate where this node wants to move to</p>
+        <p>GeoPosition!: The absolute coordinate where this node wants to move to</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="2ca95887dbca170731bdfb2153d77482a999d8f7">
         <td class="sourcedoc-section section-signature">
-          <code>vehicle: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/vehicle">Vehicle</a>?</code>
+          <code>vehicle: Vehicle?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/vehicle">Vehicle</a>!: The vehicle tipe for this route</p>
+        <p>Vehicle!: The vehicle tipe for this route</p>
 
         </td>
       </tr>
@@ -506,10 +506,10 @@
       
       <tr class="sourcedoc-section section-element" id="6cbeed82fc914998d6dd6d275e6a1bb35fd9142e">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>Route&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: A <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a></code> object describing the path the node should follow</p>
+        <p>Route&lt;GeoPosition!&gt;!: A <code>Route</code> object describing the path the node should follow</p>
 
         </td>
       </tr>
@@ -530,12 +530,12 @@
       <h3 class="sourcedoc-section element-name">computeRoute</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun computeRoute(p1: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?, p2: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+        <code>abstract fun computeRoute(p1: GeoPosition?, p2: GeoPosition?): Route&lt;GeoPosition?&gt;?</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a></code> calling this method to effectively move nodes along the path.</p>
+      <div class="sourcedoc-section section-comments"><p>This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific <code>Action</code> calling this method to effectively move nodes along the path.</p>
 </div>
 
       
@@ -559,20 +559,20 @@
       
       <tr class="sourcedoc-section section-element" id="a8355a4ede153b332b3c2b3730ce1c7a1fb554eb">
         <td class="sourcedoc-section section-signature">
-          <code>p1: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?</code>
+          <code>p1: GeoPosition?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!: start position</p>
+        <p>GeoPosition!: start position</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="916b9ac4cf55d4da4d8cf80a29323aeffec930d3">
         <td class="sourcedoc-section section-signature">
-          <code>p2: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?</code>
+          <code>p2: GeoPosition?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!: end position The absolute coordinate where this node wants to move to</p>
+        <p>GeoPosition!: end position The absolute coordinate where this node wants to move to</p>
 
         </td>
       </tr>
@@ -603,10 +603,10 @@
       
       <tr class="sourcedoc-section section-element" id="6cbeed82fc914998d6dd6d275e6a1bb35fd9142e">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>Route&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: A <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a></code> object describing the path the node should follow</p>
+        <p>Route&lt;GeoPosition!&gt;!: A <code>Route</code> object describing the path the node should follow</p>
 
         </td>
       </tr>
@@ -627,12 +627,12 @@
       <h3 class="sourcedoc-section element-name">computeRoute</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun computeRoute(p1: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?, p2: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?, vehicle: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/vehicle">Vehicle</a>?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+        <code>abstract fun computeRoute(p1: GeoPosition?, p2: GeoPosition?, vehicle: Vehicle?): Route&lt;GeoPosition?&gt;?</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a></code> calling this method to effectively move nodes along the path.</p>
+      <div class="sourcedoc-section section-comments"><p>This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific <code>Action</code> calling this method to effectively move nodes along the path.</p>
 </div>
 
       
@@ -656,30 +656,30 @@
       
       <tr class="sourcedoc-section section-element" id="a8355a4ede153b332b3c2b3730ce1c7a1fb554eb">
         <td class="sourcedoc-section section-signature">
-          <code>p1: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?</code>
+          <code>p1: GeoPosition?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!: start position</p>
+        <p>GeoPosition!: start position</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="916b9ac4cf55d4da4d8cf80a29323aeffec930d3">
         <td class="sourcedoc-section section-signature">
-          <code>p2: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?</code>
+          <code>p2: GeoPosition?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!: end position The absolute coordinate where this node wants to move to</p>
+        <p>GeoPosition!: end position The absolute coordinate where this node wants to move to</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="2ca95887dbca170731bdfb2153d77482a999d8f7">
         <td class="sourcedoc-section section-signature">
-          <code>vehicle: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/vehicle">Vehicle</a>?</code>
+          <code>vehicle: Vehicle?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/vehicle">Vehicle</a>!: vehicle to use. Different vehicles may use different paths, e.g. pedestrians can't go along a highway, but can walk the parks</p>
+        <p>Vehicle!: vehicle to use. Different vehicles may use different paths, e.g. pedestrians can't go along a highway, but can walk the parks</p>
 
         </td>
       </tr>
@@ -710,10 +710,10 @@
       
       <tr class="sourcedoc-section section-element" id="6cbeed82fc914998d6dd6d275e6a1bb35fd9142e">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;?</code>
+          <code>Route&lt;GeoPosition?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>!&gt;!: A <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/route">Route</a></code> object describing the path the node should follow</p>
+        <p>Route&lt;GeoPosition!&gt;!: A <code>Route</code> object describing the path the node should follow</p>
 
         </td>
       </tr>
@@ -740,6 +740,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6800,7 +6803,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6835,9 +6838,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

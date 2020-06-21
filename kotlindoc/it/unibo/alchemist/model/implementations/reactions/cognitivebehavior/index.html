@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="0f531e02a7e2682b0d7f827d30a05b2fe7b50ff2">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/cognitivebehavior">CognitiveBehavior</a>&lt;T, V : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/vector">Vector</a>&lt;V&gt;, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;V&gt;&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;T&gt;</code>
+        <code>class CognitiveBehavior&lt;T, V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;&gt; : AbstractReaction&lt;T&gt;</code>
       </p>
 
       
@@ -196,7 +196,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cognitivepedestrian">CognitivePedestrian</a>&lt;T, V, A&gt;, timeDistribution: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/timedistribution">TimeDistribution</a>&lt;T&gt;)</code>
+        <code>constructor(pedestrian: CognitivePedestrian&lt;T, V, A&gt;, timeDistribution: TimeDistribution&lt;T&gt;)</code>
       </p>
 
       
@@ -225,7 +225,7 @@
       
       <tr class="sourcedoc-section section-element" id="146729ddf9e18e9db740bd5c8f4e8dd7e0b0d077">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cognitivepedestrian">CognitivePedestrian</a>&lt;T, V, A&gt;</code>
+          <code>pedestrian: CognitivePedestrian&lt;T, V, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the owner of this reaction.</code></pre>
@@ -235,7 +235,7 @@
       
       <tr class="sourcedoc-section section-element" id="9c2a25956ccaad38ad01e17d7a82d90c2e9a8c67">
         <td class="sourcedoc-section section-signature">
-          <code>timeDistribution: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/timedistribution">TimeDistribution</a>&lt;T&gt;</code>
+          <code>timeDistribution: TimeDistribution&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the time distribution according to this the reaction executes.</code></pre>
@@ -272,7 +272,7 @@
       <h3 class="sourcedoc-section element-name">cloneOnNewNode</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun cloneOnNewNode(n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?, currentTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/cognitivebehavior">CognitiveBehavior</a>&lt;T, V, A&gt;</code>
+        <code>fun cloneOnNewNode(n: Node&lt;T&gt;?, currentTime: Time?): CognitiveBehavior&lt;T, V, A&gt;</code>
       </p>
 
       
@@ -300,7 +300,7 @@
       
       <tr class="sourcedoc-section section-element" id="1fde94d953de8c356dade4695a2331c4546aa681">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;?</code>
+          <code>n: Node&lt;T&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -309,7 +309,7 @@
       
       <tr class="sourcedoc-section section-element" id="4928d5cbbc20d5604936360495c9b43a7ce33727">
         <td class="sourcedoc-section section-signature">
-          <code>currentTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>currentTime: Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -342,7 +342,7 @@
       
       <tr class="sourcedoc-section section-element" id="922edeebdc12bf7c1b5ee6aa6eba472c5887b79a">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/cognitivebehavior">CognitiveBehavior</a>&lt;T, V, A&gt;</code>
+          <code>CognitiveBehavior&lt;T, V, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -416,7 +416,7 @@
       <h3 class="sourcedoc-section element-name">updateInternalStatus</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected fun updateInternalStatus(curTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?, executed: Boolean, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;?)</code>
+        <code>protected fun updateInternalStatus(curTime: Time?, executed: Boolean, env: Environment&lt;T, *&gt;?)</code>
       </p>
 
       
@@ -444,7 +444,7 @@
       
       <tr class="sourcedoc-section section-element" id="040aaf4ff8acf93a1a26cb2ac10b25e8197d9261">
         <td class="sourcedoc-section section-signature">
-          <code>curTime: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>?</code>
+          <code>curTime: Time?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -462,7 +462,7 @@
       
       <tr class="sourcedoc-section section-element" id="230def937932b42a80a7254397273237208bfc4c">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, *&gt;?</code>
+          <code>env: Environment&lt;T, *&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -524,6 +524,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6584,7 +6587,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6619,9 +6622,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

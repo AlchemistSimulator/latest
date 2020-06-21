@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="591912234fb77b1e9a4a14af9eafd4c6c77c4874">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/reachdestination">ReachDestination</a>&lt;T, N, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/baseeuclideannavigationaction">BaseEuclideanNavigationAction</a>&lt;T, N, E&gt;</code>
+        <code>class ReachDestination&lt;T, N, E&gt; : BaseEuclideanNavigationAction&lt;T, N, E&gt;</code>
       </p>
 
       
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a> using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/destinationreaching">DestinationReaching</a> navigation strategy.
+      <div class="sourcedoc-section section-comments"><p>A NavigationAction using DestinationReaching navigation strategy.
 Accepts an array of coordinates representing the destinations and uses inferIsKnown to partition them into
 known and unknown ones.</p>
 </div>
@@ -202,7 +202,7 @@ known and unknown ones.</p>
       
       <tr class="sourcedoc-section section-element" id="43c713d793c402db16f98c4ad5751d39fced452b">
         <td class="sourcedoc-section section-signature">
-          <code>protected var strategy: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationstrategy">EuclideanNavigationStrategy</a>&lt;T, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;</code>
+          <code>protected var strategy: EuclideanNavigationStrategy&lt;T, N, E, ConvexPolygon, Euclidean2DPassage&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The strategy used to navigate the environment.</p>
@@ -232,12 +232,12 @@ known and unknown ones.</p>
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph">Euclidean2DEnvironmentWithGraph</a>&lt;*, T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;, reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dtransformation">Euclidean2DTransformation</a>, N, E&gt;, vararg destinations: Number)</code>
+        <code>constructor(environment: Euclidean2DEnvironmentWithGraph&lt;*, T, ConvexPolygon, Euclidean2DPassage&gt;, reaction: Reaction&lt;T&gt;, pedestrian: OrientingPedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation, N, E&gt;, vararg destinations: Number)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a> using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationstrategies/destinationreaching">DestinationReaching</a> navigation strategy.
+      <div class="sourcedoc-section section-comments"><p>A NavigationAction using DestinationReaching navigation strategy.
 Accepts an array of coordinates representing the destinations and uses inferIsKnown to partition them into
 known and unknown ones.</p>
 </div>
@@ -263,7 +263,7 @@ known and unknown ones.</p>
       
       <tr class="sourcedoc-section section-element" id="b44244e91d3daede8124045c857564e482d91a43">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph">Euclidean2DEnvironmentWithGraph</a>&lt;*, T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dpassage">Euclidean2DPassage</a>&gt;</code>
+          <code>environment: Euclidean2DEnvironmentWithGraph&lt;*, T, ConvexPolygon, Euclidean2DPassage&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -272,7 +272,7 @@ known and unknown ones.</p>
       
       <tr class="sourcedoc-section section-element" id="ea9e2ee7d64a5940bb8529e5a4e4b3f6c0b9d942">
         <td class="sourcedoc-section section-signature">
-          <code>reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;</code>
+          <code>reaction: Reaction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -281,7 +281,7 @@ known and unknown ones.</p>
       
       <tr class="sourcedoc-section section-element" id="4c8d6b1d3a1c8dcbe545829ebd13e2d96f140bcb">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dtransformation">Euclidean2DTransformation</a>, N, E&gt;</code>
+          <code>pedestrian: OrientingPedestrian&lt;T, Euclidean2DPosition, Euclidean2DTransformation, N, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -319,6 +319,9 @@ known and unknown ones.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6379,7 +6382,7 @@ known and unknown ones.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6414,9 +6417,9 @@ known and unknown ones.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

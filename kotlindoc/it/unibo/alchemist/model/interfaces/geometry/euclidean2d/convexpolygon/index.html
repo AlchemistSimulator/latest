@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="5c8fa2fd39edee18ee38b6fa2da1264094f6af6c">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dconvexshape">Euclidean2DConvexShape</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/awtshapecompatible">AwtShapeCompatible</a>, Any</code>
+        <code>interface ConvexPolygon: Euclidean2DConvexShape, AwtShapeCompatible, Any</code>
       </p>
 
       
@@ -197,7 +197,7 @@ line segment between two points on the boundary ever goes outside the polygon.</
       <h3 class="sourcedoc-section element-name">vertices</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun vertices(): List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+        <code>abstract fun vertices(): List&lt;Euclidean2DPosition&gt;</code>
       </p>
 
       
@@ -225,7 +225,7 @@ line segment between two points on the boundary ever goes outside the polygon.</
       
       <tr class="sourcedoc-section section-element" id="23e337354ea4ebf08504b5b97f4b4443eddf28b6">
         <td class="sourcedoc-section section-signature">
-          <code>List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>List&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -248,7 +248,7 @@ line segment between two points on the boundary ever goes outside the polygon.</
       <h3 class="sourcedoc-section element-name">edges</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun edges(): List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;&gt;</code>
+        <code>abstract fun edges(): List&lt;Segment2D&lt;Euclidean2DPosition&gt;&gt;</code>
       </p>
 
       
@@ -276,7 +276,7 @@ line segment between two points on the boundary ever goes outside the polygon.</
       
       <tr class="sourcedoc-section section-element" id="083efc54d1462e1e8b5260e5e09ce143e96fde46">
         <td class="sourcedoc-section section-signature">
-          <code>List&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;&gt;</code>
+          <code>List&lt;Segment2D&lt;Euclidean2DPosition&gt;&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -299,7 +299,7 @@ line segment between two points on the boundary ever goes outside the polygon.</
       <h3 class="sourcedoc-section element-name">getEdge</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun getEdge(index: Int): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+        <code>abstract fun getEdge(index: Int): Segment2D&lt;Euclidean2DPosition&gt;</code>
       </p>
 
       
@@ -363,7 +363,7 @@ line segment between two points on the boundary ever goes outside the polygon.</
       
       <tr class="sourcedoc-section section-element" id="756ff732d3b4bbbc1742efc9d16b04bd2e754767">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>Segment2D&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -386,7 +386,7 @@ line segment between two points on the boundary ever goes outside the polygon.</
       <h3 class="sourcedoc-section element-name">contains</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun contains(vector: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>): Boolean</code>
+        <code>abstract fun contains(vector: Euclidean2DPosition): Boolean</code>
       </p>
 
       
@@ -418,7 +418,7 @@ and containsBoundaryExcluded.</p>
       
       <tr class="sourcedoc-section section-element" id="c11a8b0f418dcc0c1fc87c206b617fc85cbaa4d0">
         <td class="sourcedoc-section section-signature">
-          <code>vector: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>vector: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the vector (= point)</p>
@@ -563,7 +563,7 @@ contained in (or lie on the boundary of) the latter.</p>
       <h3 class="sourcedoc-section element-name">liesOnBoundary</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun liesOnBoundary(vector: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>): Boolean</code>
+        <code>abstract fun liesOnBoundary(vector: Euclidean2DPosition): Boolean</code>
       </p>
 
       
@@ -592,7 +592,7 @@ contained in (or lie on the boundary of) the latter.</p>
       
       <tr class="sourcedoc-section section-element" id="c11a8b0f418dcc0c1fc87c206b617fc85cbaa4d0">
         <td class="sourcedoc-section section-signature">
-          <code>vector: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>vector: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the vector (= point)</p>
@@ -649,7 +649,7 @@ contained in (or lie on the boundary of) the latter.</p>
       <h3 class="sourcedoc-section element-name">containsBoundaryIncluded</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun containsBoundaryIncluded(vector: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>): Boolean</code>
+        <code>abstract fun containsBoundaryIncluded(vector: Euclidean2DPosition): Boolean</code>
       </p>
 
       
@@ -678,7 +678,7 @@ contained in (or lie on the boundary of) the latter.</p>
       
       <tr class="sourcedoc-section section-element" id="c11a8b0f418dcc0c1fc87c206b617fc85cbaa4d0">
         <td class="sourcedoc-section section-signature">
-          <code>vector: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>vector: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the vector (= point)</p>
@@ -735,7 +735,7 @@ contained in (or lie on the boundary of) the latter.</p>
       <h3 class="sourcedoc-section element-name">containsBoundaryExcluded</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun containsBoundaryExcluded(vector: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>): Boolean</code>
+        <code>abstract fun containsBoundaryExcluded(vector: Euclidean2DPosition): Boolean</code>
       </p>
 
       
@@ -764,7 +764,7 @@ contained in (or lie on the boundary of) the latter.</p>
       
       <tr class="sourcedoc-section section-element" id="c11a8b0f418dcc0c1fc87c206b617fc85cbaa4d0">
         <td class="sourcedoc-section section-signature">
-          <code>vector: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>vector: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the vector (= point)</p>
@@ -908,7 +908,7 @@ considered to be intersecting.</p>
       <h3 class="sourcedoc-section element-name">intersects</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun intersects(segment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;): Boolean</code>
+        <code>abstract fun intersects(segment: Segment2D&lt;Euclidean2DPosition&gt;): Boolean</code>
       </p>
 
       
@@ -938,7 +938,7 @@ boundary are not considered to be intersecting.</p>
       
       <tr class="sourcedoc-section section-element" id="fb97cfd15be54299cd7ad5369c85ee053cc523d7">
         <td class="sourcedoc-section section-signature">
-          <code>segment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>segment: Segment2D&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the segment</p>
@@ -995,7 +995,7 @@ boundary are not considered to be intersecting.</p>
       <h3 class="sourcedoc-section element-name">isAdjacentTo</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun isAdjacentTo(other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>): Boolean</code>
+        <code>abstract fun isAdjacentTo(other: ConvexPolygon): Boolean</code>
       </p>
 
       
@@ -1024,7 +1024,7 @@ boundary are not considered to be intersecting.</p>
       
       <tr class="sourcedoc-section section-element" id="f0e2a7c2d4b4dedbc19700985801d29a5a31048f">
         <td class="sourcedoc-section section-signature">
-          <code>other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a></code>
+          <code>other: ConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the other polygon</p>
@@ -1167,7 +1167,7 @@ boundary are not considered to be intersecting.</p>
       <h3 class="sourcedoc-section element-name">closestEdgeTo</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun closestEdgeTo(segment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+        <code>abstract fun closestEdgeTo(segment: Segment2D&lt;Euclidean2DPosition&gt;): Segment2D&lt;Euclidean2DPosition&gt;</code>
       </p>
 
       
@@ -1198,7 +1198,7 @@ each side.</p>
       
       <tr class="sourcedoc-section section-element" id="fb97cfd15be54299cd7ad5369c85ee053cc523d7">
         <td class="sourcedoc-section section-signature">
-          <code>segment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>segment: Segment2D&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>the segment</p>
@@ -1232,7 +1232,7 @@ each side.</p>
       
       <tr class="sourcedoc-section section-element" id="756ff732d3b4bbbc1742efc9d16b04bd2e754767">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>Segment2D&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1261,6 +1261,9 @@ each side.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -7321,7 +7324,7 @@ each side.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7356,9 +7359,9 @@ each side.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

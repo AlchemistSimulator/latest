@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="098e968e2ab3776da961bd0fbea4edd62835ad2b">
       
       <p class="sourcedoc-section section-signature">
-        <code>package <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments">it.unibo.alchemist.model.interfaces.environments</a></code>
+        <code>package it.unibo.alchemist.model.interfaces.environments</code>
       </p>
 
       
@@ -199,20 +199,20 @@
       
       <tr class="sourcedoc-section section-element" id="282b286115bda04179b570ac37cb1ec97eaa8624">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environment2dwithobstacles">Environment2DWithObstacles</a>&lt;W : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/obstacle2d">Obstacle2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environmentwithobstacles">EnvironmentWithObstacles</a>&lt;W, T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironment">Euclidean2DEnvironment</a>&lt;T&gt;, Any</code>
+          <code>interface Environment2DWithObstacles&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : EnvironmentWithObstacles&lt;W, T, Euclidean2DPosition&gt;, Euclidean2DEnvironment&lt;T&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A bidimensional <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environmentwithobstacles">EnvironmentWithObstacles</a>.</p>
+        <p>A bidimensional EnvironmentWithObstacles.</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="7d6b48dedd68fb1b797f1bf8bb8a305bb6c69faf">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;W : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/obstacle">Obstacle</a>&lt;P&gt;, T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environmentwithobstacles">EnvironmentWithObstacles</a>&lt;W, T, P&gt;, Any</code>
+          <code>interface EnvironmentWithGraph&lt;W : Obstacle&lt;P&gt;, T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, E&gt; : EnvironmentWithObstacles&lt;W, T, P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>An environment with obstacles providing a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>, i.e. a graph whose
+        <p>An environment with obstacles providing a NavigationGraph, i.e. a graph whose
 nodes are convex shapes representing the areas of the environment traversable
 by agents (namely, walkable areas), whereas edges represent connections between
 them. To make it easier, think that in an indoor environment, nodes should
@@ -223,7 +223,7 @@ represent rooms and corridors, whereas edges should represent doors and passages
       
       <tr class="sourcedoc-section section-element" id="0987a1d6843928b1f95f1ecc8757dab847cb6cec">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironment">Euclidean2DEnvironment</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideanenvironment">EuclideanEnvironment</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, Any</code>
+          <code>interface Euclidean2DEnvironment&lt;T&gt; : EuclideanEnvironment&lt;T, Euclidean2DPosition&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A bidimensional euclidean space with any concentration type T.</p>
@@ -233,37 +233,37 @@ represent rooms and corridors, whereas edges should represent doors and passages
       
       <tr class="sourcedoc-section section-element" id="0f24767f5fac8a1b0e266dde127a05475f5b0a33">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph">Euclidean2DEnvironmentWithGraph</a>&lt;W : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/obstacle2d">Obstacle2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, T, N, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;W, T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dtransformation">Euclidean2DTransformation</a>, N, E&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithobstacles">Euclidean2DEnvironmentWithObstacles</a>&lt;W, T&gt;, Any</code>
+          <code>interface Euclidean2DEnvironmentWithGraph&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T, N, E&gt; : EnvironmentWithGraph&lt;W, T, Euclidean2DPosition, Euclidean2DTransformation, N, E&gt;, Euclidean2DEnvironmentWithObstacles&lt;W, T&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>An euclidean <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>.</p>
+        <p>An euclidean EnvironmentWithGraph.</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="692061ce2cc5ef653a873c2b51997f5db9f8c546">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithobstacles">Euclidean2DEnvironmentWithObstacles</a>&lt;W : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/obstacle2d">Obstacle2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironment">Euclidean2DEnvironment</a>&lt;T&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environment2dwithobstacles">Environment2DWithObstacles</a>&lt;W, T&gt;, Any</code>
+          <code>interface Euclidean2DEnvironmentWithObstacles&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : Euclidean2DEnvironment&lt;T&gt;, Environment2DWithObstacles&lt;W, T&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>An <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environment2dwithobstacles">Environment2DWithObstacles</a> using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>s.</p>
+        <p>An Environment2DWithObstacles using Euclidean2DPositions.</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="2277b6694043382006b386c7eac88a377f6eb21f">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclideanphysics2denvironmentwithgraph">EuclideanPhysics2DEnvironmentWithGraph</a>&lt;W : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/obstacle2d">Obstacle2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, T, N, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph">Euclidean2DEnvironmentWithGraph</a>&lt;W, T, N, E&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclideanphysics2denvironmentwithobstacles">EuclideanPhysics2DEnvironmentWithObstacles</a>&lt;W, T&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physicsenvironmentwithgraph">PhysicsEnvironmentWithGraph</a>&lt;W, T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dtransformation">Euclidean2DTransformation</a>, N, E, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshapefactory">Euclidean2DShapeFactory</a>&gt;, Any</code>
+          <code>interface EuclideanPhysics2DEnvironmentWithGraph&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T, N, E&gt; : Euclidean2DEnvironmentWithGraph&lt;W, T, N, E&gt;, EuclideanPhysics2DEnvironmentWithObstacles&lt;W, T&gt;, PhysicsEnvironmentWithGraph&lt;W, T, Euclidean2DPosition, Euclidean2DTransformation, N, E, Euclidean2DShapeFactory&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>An <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithgraph">Euclidean2DEnvironmentWithGraph</a> with physics.</p>
+        <p>An Euclidean2DEnvironmentWithGraph with physics.</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="8e2fb3d8061ff990397e2636e635e113b66d2088">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclideanphysics2denvironmentwithobstacles">EuclideanPhysics2DEnvironmentWithObstacles</a>&lt;W : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/obstacle2d">Obstacle2D</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclidean2denvironmentwithobstacles">Euclidean2DEnvironmentWithObstacles</a>&lt;W, T&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physics2denvironment">Physics2DEnvironment</a>&lt;T&gt;, Any</code>
+          <code>interface EuclideanPhysics2DEnvironmentWithObstacles&lt;W : Obstacle2D&lt;Euclidean2DPosition&gt;, T&gt; : Euclidean2DEnvironmentWithObstacles&lt;W, T&gt;, Physics2DEnvironment&lt;T&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Euclidean physics environment with support for obstacles.</p>
@@ -273,7 +273,7 @@ represent rooms and corridors, whereas edges should represent doors and passages
       
       <tr class="sourcedoc-section section-element" id="38d567339afd7b89a36dc13e224c329b1a774ba1">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physics2denvironment">Physics2DEnvironment</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physicsenvironment">PhysicsEnvironment</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dtransformation">Euclidean2DTransformation</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/euclidean2dshapefactory">Euclidean2DShapeFactory</a>&gt;, Any</code>
+          <code>interface Physics2DEnvironment&lt;T&gt; : PhysicsEnvironment&lt;T, Euclidean2DPosition, Euclidean2DTransformation, Euclidean2DShapeFactory&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Defines a bidimensional euclidean environment.</p>
@@ -283,7 +283,7 @@ represent rooms and corridors, whereas edges should represent doors and passages
       
       <tr class="sourcedoc-section section-element" id="a60e61e88b38768e78820ec706012695472dc3c8">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physicsenvironment">PhysicsEnvironment</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, F : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometricshapefactory">GeometricShapeFactory</a>&lt;P, A&gt;&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideanenvironment">EuclideanEnvironment</a>&lt;T, P&gt;, Any</code>
+          <code>interface PhysicsEnvironment&lt;T, P, A : GeometricTransformation&lt;P&gt;, F : GeometricShapeFactory&lt;P, A&gt;&gt; : EuclideanEnvironment&lt;T, P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An environment supporting physics and nodes shapes.
@@ -295,10 +295,10 @@ but to create an apposite interface extending this one instead.</p>
       
       <tr class="sourcedoc-section section-element" id="a6579c380f115688902eff22bfc6d4f913aa7789">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physicsenvironmentwithgraph">PhysicsEnvironmentWithGraph</a>&lt;W : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/obstacle">Obstacle</a>&lt;P&gt;, T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, E, F : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometricshapefactory">GeometricShapeFactory</a>&lt;P, A&gt;&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;W, T, P, A, N, E&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physicsenvironment">PhysicsEnvironment</a>&lt;T, P, A, F&gt;, Any</code>
+          <code>interface PhysicsEnvironmentWithGraph&lt;W : Obstacle&lt;P&gt;, T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, E, F : GeometricShapeFactory&lt;P, A&gt;&gt; : EnvironmentWithGraph&lt;W, T, P, A, N, E&gt;, PhysicsEnvironment&lt;T, P, A, F&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physicsenvironment">PhysicsEnvironment</a> with obstacles providing a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>, i.e. a graph whose
+        <p>A PhysicsEnvironment with obstacles providing a NavigationGraph, i.e. a graph whose
 nodes are convex shapes representing the areas of the environment traversable
 by agents (namely, walkable areas), whereas edges represent connections between
 them. To make it easier, think that in an indoor environment, nodes should
@@ -322,6 +322,9 @@ represent rooms and corridors, whereas edges should represent doors and passages
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6382,7 +6385,7 @@ represent rooms and corridors, whereas edges should represent doors and passages
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6417,9 +6420,9 @@ represent rooms and corridors, whereas edges should represent doors and passages
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

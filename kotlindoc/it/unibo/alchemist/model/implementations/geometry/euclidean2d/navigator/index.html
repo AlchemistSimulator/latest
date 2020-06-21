@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="10cbcf0c003a5d68311bb86f724e99190ab11e41">
       
       <p class="sourcedoc-section section-signature">
-        <code>package <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/navigator">it.unibo.alchemist.model.implementations.geometry.euclidean2d.navigator</a></code>
+        <code>package it.unibo.alchemist.model.implementations.geometry.euclidean2d.navigator</code>
       </p>
 
       
@@ -199,15 +199,15 @@
       
       <tr class="sourcedoc-section section-element" id="c2eadd1d9d7aa81c41c60ed82bd54edf004e3a21">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/navigator/extendableconvexpolygoninenvironment">ExtendableConvexPolygonInEnvironment</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/awtmutableconvexpolygon">AwtMutableConvexPolygon</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/navigator/extendableconvexpolygon">ExtendableConvexPolygon</a></code>
+          <code>class ExtendableConvexPolygonInEnvironment: AwtMutableConvexPolygon, ExtendableConvexPolygon</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>An <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/navigator/extendableconvexpolygon">ExtendableConvexPolygon</a> located inside an environment with obstacles.
+        <p>An ExtendableConvexPolygon located inside an environment with obstacles.
 Obstacles, as well as the environment's boundaries, are taken into account when the polygon is
 extended (i.e. the polygon is prevented from intersecting an obstacle or growing beyond such
 boundaries).
 A rectangular region is assumed, its origin, width and height are to be specified. Both
-<a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>s and <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>s can be specified as obstacles (see awtObstacles
+<a href="https://docs.oracle.com/javase/6/docs/api/java/awt/Shape.html">java.awt.Shape</a>s and ConvexPolygons can be specified as obstacles (see awtObstacles
 and polygonalObstacles).
 This class is explicitly designed for the algorithm contained in generateNavigationGraph.
 TODO(improve the quality of this class)</p>
@@ -237,13 +237,13 @@ TODO(improve the quality of this class)</p>
       <h3 class="sourcedoc-section element-name">generateNavigationGraph</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun generateNavigationGraph(origin: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>, width: Double, height: Double, obstacles: List&lt;Shape&gt;, rooms: Collection&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, unity: Double): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dnavigationgraph">Euclidean2DNavigationGraph</a></code>
+        <code>fun generateNavigationGraph(origin: Euclidean2DPosition, width: Double, height: Double, obstacles: List&lt;Shape&gt;, rooms: Collection&lt;Euclidean2DPosition&gt;, unity: Double): Euclidean2DNavigationGraph</code>
       </p>
 
       
 
       <div class="sourcedoc-section section-comments"><p>NaviGator (Navigation Graphs Generator) is an algorithm capable of generating an
-<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dnavigationgraph">Euclidean2DNavigationGraph</a> of a given environment with obstacles. The nodes of
+Euclidean2DNavigationGraph of a given environment with obstacles. The nodes of
 the produced graph are convex polygons representing the areas of the environment
 traversable by agents (namely, walkable areas), whereas edges represent connections
 between them.</p><p>NaviGator works with rectangular-shaped bidimensional environments with euclidean
@@ -277,7 +277,7 @@ the grown seeds.</p>
       
       <tr class="sourcedoc-section section-element" id="23663f25a8f0f2f32bf7e29d10637881d94a113e">
         <td class="sourcedoc-section section-signature">
-          <code>origin: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a></code>
+          <code>origin: Euclidean2DPosition</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the origin of the environment, defaults to (0,0).</code></pre>
@@ -318,7 +318,7 @@ the grown seeds.</p>
       
       <tr class="sourcedoc-section section-element" id="ec8721d72f1538bda567d7f33db6ac820a373e49">
         <td class="sourcedoc-section section-signature">
-          <code>rooms: Collection&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
+          <code>rooms: Collection&lt;Euclidean2DPosition&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    a collection of positions where to plant initial seeds. In indoor
@@ -368,7 +368,7 @@ the grown seeds.</p>
       
       <tr class="sourcedoc-section section-element" id="81706086f93b94462a7ab99e4977b164fe33c69c">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/euclidean2dnavigationgraph">Euclidean2DNavigationGraph</a></code>
+          <code>Euclidean2DNavigationGraph</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -397,6 +397,9 @@ the grown seeds.</p>
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6457,7 +6460,7 @@ the grown seeds.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6492,9 +6495,9 @@ the grown seeds.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

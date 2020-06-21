@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="d28cf5f11568990f081be5564b4e2e8fd40da7c5">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractorientingpedestrian">AbstractOrientingPedestrian</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, M : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, E, F : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometricshapefactory">GeometricShapeFactory</a>&lt;P, A&gt;&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, P, A, N, DefaultEdge&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrianimpl">HomogeneousPedestrianImpl</a>&lt;T, P, A, F&gt;</code>
+        <code>abstract class AbstractOrientingPedestrian&lt;T, P, A : GeometricTransformation&lt;P&gt;, N : ConvexGeometricShape&lt;P, A&gt;, M : ConvexGeometricShape&lt;P, A&gt;, E, F : GeometricShapeFactory&lt;P, A&gt;&gt; : OrientingPedestrian&lt;T, P, A, N, DefaultEdge&gt;, HomogeneousPedestrianImpl&lt;T, P, A, F&gt;</code>
       </p>
 
       
@@ -176,10 +176,10 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>An abstract <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>.
+      <div class="sourcedoc-section section-comments"><p>An abstract OrientingPedestrian.
 This class defines an algorithm capable of generating a pseudo-random cognitiveMap
-based on a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a> of the environment. The latter can be obtained from
-<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>s, which is the only type of environment this pedestrian can
+based on a NavigationGraph of the environment. The latter can be obtained from
+EnvironmentWithGraphs, which is the only type of environment this pedestrian can
 be placed into. The creation of landmarks is left to subclasses via factory method.</p>
 </div>
 
@@ -204,26 +204,26 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
       
       <tr class="sourcedoc-section section-element" id="30910f7c97eb67ea049014ffa1b3dff2acf420f5">
         <td class="sourcedoc-section section-signature">
-          <code>open volatileMemory: MutableMap&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, Int&gt;</code>
+          <code>open volatileMemory: MutableMap&lt;ConvexGeometricShape&lt;P, A&gt;, Int&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The volatile memory of the agent: it models the ability to remember areas
 of the environment already visited by the agent since the start of the
 simulation. In particular, each area is paired with the number of visits.
-Areas are assumed to be represented as <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>s, as in
-<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>s.</p>
+Areas are assumed to be represented as ConvexGeometricShapes, as in
+NavigationGraphs.</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="e450d687a837fd7309fffe4402e18cf116e0338f">
         <td class="sourcedoc-section section-signature">
-          <code>open cognitiveMap: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>&lt;P, A, N, DefaultEdge&gt;</code>
+          <code>open cognitiveMap: NavigationGraph&lt;P, A, N, DefaultEdge&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The cognitive map of the agent. It's composed of landmarks (elements of the
 environment easy to remember due to their uniqueness) and spatial relations
-between them. It is represented using a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>.</p>
+between them. It is represented using a NavigationGraph.</p>
 
         </td>
       </tr>
@@ -274,15 +274,15 @@ volatileMemory).</p>
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(knowledgeDegree: Double, randomGenerator: RandomGenerator, environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physicsenvironmentwithgraph">PhysicsEnvironmentWithGraph</a>&lt;*, T, P, A, M, E, F&gt;, group: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup">PedestrianGroup</a>&lt;T, P, A&gt;?, minArea: Double)</code>
+        <code>constructor(knowledgeDegree: Double, randomGenerator: RandomGenerator, environment: PhysicsEnvironmentWithGraph&lt;*, T, P, A, M, E, F&gt;, group: PedestrianGroup&lt;T, P, A&gt;?, minArea: Double)</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>An abstract <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>.
+      <div class="sourcedoc-section section-comments"><p>An abstract OrientingPedestrian.
 This class defines an algorithm capable of generating a pseudo-random cognitiveMap
-based on a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a> of the environment. The latter can be obtained from
-<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>s, which is the only type of environment this pedestrian can
+based on a NavigationGraph of the environment. The latter can be obtained from
+EnvironmentWithGraphs, which is the only type of environment this pedestrian can
 be placed into. The creation of landmarks is left to subclasses via factory method.</p>
 </div>
 
@@ -325,7 +325,7 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
       
       <tr class="sourcedoc-section section-element" id="126466ef4ae6cb861839483f83240d61e7788459">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/physicsenvironmentwithgraph">PhysicsEnvironmentWithGraph</a>&lt;*, T, P, A, M, E, F&gt;</code>
+          <code>environment: PhysicsEnvironmentWithGraph&lt;*, T, P, A, M, E, F&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -334,7 +334,7 @@ be placed into. The creation of landmarks is left to subclasses via factory meth
       
       <tr class="sourcedoc-section section-element" id="c8b6c293e698adb3951480f72b6a59a52b46c130">
         <td class="sourcedoc-section section-signature">
-          <code>group: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup">PedestrianGroup</a>&lt;T, P, A&gt;?</code>
+          <code>group: PedestrianGroup&lt;T, P, A&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -478,7 +478,7 @@ one or more destinations, the generated landmark must contain at least one of th
       <h3 class="sourcedoc-section element-name">targetDistance</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;T, P&gt; <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, *, *&gt;.targetDistance(env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;, action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>&lt;T, P&gt;): Double</code>
+        <code>fun &lt;T, P&gt; Pedestrian&lt;T, *, *&gt;.targetDistance(env: Environment&lt;T, P&gt;, action: SteeringActionWithTarget&lt;T, P&gt;): Double</code>
       </p>
 
       
@@ -507,7 +507,7 @@ one or more destinations, the generated landmark must contain at least one of th
       
       <tr class="sourcedoc-section section-element" id="5dcd3c1e514b4f6a56b196f83741e0faa7d35666">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, *, *&gt;</code>
+          <code>Pedestrian&lt;T, *, *&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -540,7 +540,7 @@ one or more destinations, the generated landmark must contain at least one of th
       
       <tr class="sourcedoc-section section-element" id="3e0a2c083ff5b8c0eb373be1a9a6b5948ced38d9">
         <td class="sourcedoc-section section-signature">
-          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;</code>
+          <code>env: Environment&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the environment in which the pedestrian moves.</code></pre>
@@ -550,7 +550,7 @@ one or more destinations, the generated landmark must contain at least one of th
       
       <tr class="sourcedoc-section section-element" id="90e2c8b9ac8caab1aef3f133c1909c3c5f65d365">
         <td class="sourcedoc-section section-signature">
-          <code>action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>&lt;T, P&gt;</code>
+          <code>action: SteeringActionWithTarget&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <pre><code>    the steering action you want to the target position.</code></pre>
@@ -613,6 +613,9 @@ one or more destinations, the generated landmark must contain at least one of th
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6673,7 +6676,7 @@ one or more destinations, the generated landmark must contain at least one of th
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6708,9 +6711,9 @@ one or more destinations, the generated landmark must contain at least one of th
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="a1c3597b797054d6a322394b1849203f334c2819">
       
       <p class="sourcedoc-section section-signature">
-        <code>package <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions">it.unibo.alchemist.model.implementations.reactions</a></code>
+        <code>package it.unibo.alchemist.model.implementations.reactions</code>
       </p>
 
       
@@ -199,7 +199,7 @@
       
       <tr class="sourcedoc-section section-element" id="7d42f5647c6ab0c61d7244d99bcbe0459e841ab7">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/blendedsteering">BlendedSteering</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/steeringbehavior">SteeringBehavior</a>&lt;T&gt;</code>
+          <code>class BlendedSteering&lt;T&gt; : SteeringBehavior&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Steering behavior which sums all the actions with a different weight based on their target distance.</p>
@@ -209,7 +209,7 @@
       
       <tr class="sourcedoc-section section-element" id="0f531e02a7e2682b0d7f827d30a05b2fe7b50ff2">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/cognitivebehavior">CognitiveBehavior</a>&lt;T, V : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/vector">Vector</a>&lt;V&gt;, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;V&gt;&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;T&gt;</code>
+          <code>class CognitiveBehavior&lt;T, V : Vector&lt;V&gt;, A : GeometricTransformation&lt;V&gt;&gt; : AbstractReaction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Reaction representing the cognitive behavior of a pedestrian.</p>
@@ -219,18 +219,18 @@
       
       <tr class="sourcedoc-section section-element" id="f46a4d9b3b61584b833797ba665bd98753973f0f">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/navigationprioritisedsteering">NavigationPrioritisedSteering</a>&lt;T, M : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/steeringbehavior">SteeringBehavior</a>&lt;T&gt;</code>
+          <code>class NavigationPrioritisedSteering&lt;T, M : ConvexPolygon&gt; : SteeringBehavior&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/steeringbehavior">SteeringBehavior</a> using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/singleprevalent">SinglePrevalent</a> steering strategy and accepting a collection of actions
-containing a single <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>, which is used as the prevalent one.</p>
+        <p>A SteeringBehavior using SinglePrevalent steering strategy and accepting a collection of actions
+containing a single EuclideanNavigationAction, which is used as the prevalent one.</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="c144bcc305e3d2313c5c3d3e964ecc963d1eb602">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/prioritysteering">PrioritySteering</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/steeringbehavior">SteeringBehavior</a>&lt;T&gt;</code>
+          <code>class PrioritySteering&lt;T&gt; : SteeringBehavior&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Steering behavior where only the action whose target is the nearest to the current pedestrian position is executed.</p>
@@ -240,7 +240,7 @@ containing a single <a href="https://alchemistsimulator.github.io/latest/kotlind
       
       <tr class="sourcedoc-section section-element" id="720b3c3b5ba71b05a8a750c94d61350fa04b76f4">
         <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/steeringbehavior">SteeringBehavior</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;T&gt;</code>
+          <code>open class SteeringBehavior&lt;T&gt; : AbstractReaction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Reaction representing the steering behavior of a pedestrian.</p>
@@ -250,17 +250,17 @@ containing a single <a href="https://alchemistsimulator.github.io/latest/kotlind
       
       <tr class="sourcedoc-section section-element" id="afe35b686dbd617f66209fecec57d074f49dd26d">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/event">Event</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;T&gt;</code>
+          <code>class Event&lt;T : Any?&gt; : AbstractReaction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>This reaction completely ignores the propensity conditioning of the conditions, and tries to run every time the <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/timedistribution">TimeDistribution</a></code> wants to.</p>
+        <p>This reaction completely ignores the propensity conditioning of the conditions, and tries to run every time the <code>TimeDistribution</code> wants to.</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="cf45d1bfe3839cf3bd3b8d7a17be5d6f70e79a85">
         <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/chemicalreaction">ChemicalReaction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;T&gt;</code>
+          <code>open class ChemicalReaction&lt;T : Any?&gt; : AbstractReaction&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -269,7 +269,7 @@ containing a single <a href="https://alchemistsimulator.github.io/latest/kotlind
       
       <tr class="sourcedoc-section section-element" id="55178962eab4739659370b01e487dbaff75c1ab4">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, Any</code>
+          <code>abstract class AbstractReaction&lt;T : Any?&gt; : Reaction&lt;T&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The type which describes the concentration of a molecule This class offers a partial implementation of Reaction. In particular, it allows to write new reaction specifying only which distribution time to adopt</p>
@@ -279,7 +279,7 @@ containing a single <a href="https://alchemistsimulator.github.io/latest/kotlind
       
       <tr class="sourcedoc-section section-element" id="ab2bd5d99071fb5785698874d7c5943d6b5bb37c">
         <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/biochemicalreactionbuilder">BiochemicalReactionBuilder</a>&lt;P&gt; : Any</code>
+          <code>open class BiochemicalReactionBuilder&lt;P&gt; : Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>This class implements a builder for chemical reactions.</p>
@@ -289,7 +289,7 @@ containing a single <a href="https://alchemistsimulator.github.io/latest/kotlind
       
       <tr class="sourcedoc-section section-element" id="c63596a698d6cc982583d15265f65c9f07a579ee">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/biochemicalreaction">BiochemicalReaction</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/chemicalreaction">ChemicalReaction</a>&lt;Double?&gt;</code>
+          <code>class BiochemicalReaction: ChemicalReaction&lt;Double?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A biochemical Reaction.</p>
@@ -299,7 +299,7 @@ containing a single <a href="https://alchemistsimulator.github.io/latest/kotlind
       
       <tr class="sourcedoc-section section-element" id="7c8da97c1b929204be993fc6cee095f9c785907c">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/saperereaction">SAPEREReaction</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;</code>
+          <code>class SAPEREReaction: AbstractReaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>This class realizes a reaction with Lsa concentrations.</p>
@@ -309,7 +309,7 @@ containing a single <a href="https://alchemistsimulator.github.io/latest/kotlind
       
       <tr class="sourcedoc-section section-element" id="4bc5e168ba1554a9f92dc3432323d6579da831e6">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/saperegradient">SAPEREGradient</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;</code>
+          <code>class SAPEREGradient&lt;P : Position&lt;P&gt;?&gt; : AbstractReaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>This class provides a fast and stable gradient implementation, inspired on the NBR construct used in Proto.</p>
@@ -332,6 +332,9 @@ containing a single <a href="https://alchemistsimulator.github.io/latest/kotlind
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6392,7 +6395,7 @@ containing a single <a href="https://alchemistsimulator.github.io/latest/kotlind
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6427,9 +6430,9 @@ containing a single <a href="https://alchemistsimulator.github.io/latest/kotlind
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

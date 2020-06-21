@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+7e1a0e03a"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwl+86057eafe"};
 </script>
 
 
@@ -164,7 +164,7 @@
     <div class="sourcedoc-section section-element" id="65cb820d78009a04a918b742f63eeb772fe0c659">
       
       <p class="sourcedoc-section section-signature">
-        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsadeletenodeaction">LsaDeleteNodeAction</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removenode">RemoveNode</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsaaction">ILsaAction</a></code>
+        <code>class LsaDeleteNodeAction: RemoveNode&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;, ILsaAction</code>
       </p>
 
       
@@ -195,7 +195,7 @@
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?, *&gt;?, node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?)</code>
+        <code>constructor(environment: Environment&lt;MutableList&lt;ILsaMolecule?&gt;?, *&gt;?, node: ILsaNode?)</code>
       </p>
 
       
@@ -223,20 +223,20 @@
       
       <tr class="sourcedoc-section section-element" id="f5d7986f7812f4f5fd51cc42ca33e4fba6862110">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?, *&gt;?</code>
+          <code>environment: Environment&lt;MutableList&lt;ILsaMolecule?&gt;?, *&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>!&gt;!, *&gt;!: the current environment</p>
+        <p>Environment&lt;MutableList&lt;ILsaMolecule!&gt;!, *&gt;!: the current environment</p>
 
         </td>
       </tr>
       
       <tr class="sourcedoc-section section-element" id="3e5f63e08114f9ea8af58006e06a21abf730b646">
         <td class="sourcedoc-section section-signature">
-          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?</code>
+          <code>node: ILsaNode?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>!: the node for this action</p>
+        <p>ILsaNode!: the node for this action</p>
 
         </td>
       </tr>
@@ -270,7 +270,7 @@
       <h3 class="sourcedoc-section element-name">cloneAction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun cloneAction(n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?, r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsadeletenodeaction">LsaDeleteNodeAction</a>?</code>
+        <code>fun cloneAction(n: Node&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?, r: Reaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?): LsaDeleteNodeAction?</code>
       </p>
 
       
@@ -298,7 +298,7 @@
       
       <tr class="sourcedoc-section section-element" id="6aa6ae52875b1131ecd36bfda5d1e25d8aecd8ae">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?</code>
+          <code>n: Node&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -307,7 +307,7 @@
       
       <tr class="sourcedoc-section section-element" id="f9a98366b6cc4144b2af14e61dee2120cbb774fa">
         <td class="sourcedoc-section section-signature">
-          <code>r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;?</code>
+          <code>r: Reaction&lt;MutableList&lt;ILsaMolecule?&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -340,7 +340,7 @@
       
       <tr class="sourcedoc-section section-element" id="1b31df508fff146e44751349d45b86138da9339f">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsadeletenodeaction">LsaDeleteNodeAction</a>?</code>
+          <code>LsaDeleteNodeAction?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -363,7 +363,7 @@
       <h3 class="sourcedoc-section element-name">setExecutionContext</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun setExecutionContext(matches: MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?, nodes: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?&gt;?)</code>
+        <code>fun setExecutionContext(matches: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?, nodes: MutableList&lt;ILsaNode?&gt;?)</code>
       </p>
 
       
@@ -391,7 +391,7 @@
       
       <tr class="sourcedoc-section section-element" id="4ca57846fe14daf3e7dcc858d6af8015c8fa6fac">
         <td class="sourcedoc-section section-signature">
-          <code>matches: MutableMap&lt;HashString?, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/interfaces/itreenode">ITreeNode</a>&lt;*&gt;?&gt;?</code>
+          <code>matches: MutableMap&lt;HashString?, ITreeNode&lt;*&gt;?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -400,7 +400,7 @@
       
       <tr class="sourcedoc-section section-element" id="132a6d137e19cfd5ef782bfb72b867d2c7d13ae0">
         <td class="sourcedoc-section section-signature">
-          <code>nodes: MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsanode">ILsaNode</a>?&gt;?</code>
+          <code>nodes: MutableList&lt;ILsaNode?&gt;?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -462,6 +462,9 @@
 </div>
 
 </div>
+
+
+
 
 
 
@@ -6522,7 +6525,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwl+7e1a0e03a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devwl+86057eafe. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -6557,9 +6560,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/5acf933c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/793aca4d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
