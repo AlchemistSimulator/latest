@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwt+f6d800101"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devy7+9e95f2fa5"};
 </script>
 
 
@@ -161,10 +161,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="3397e56e819e3372f96fb4679318cb9fa86c214d">
+    <div class="sourcedoc-section section-element" id="8c01c81d0c589ea8f325503a6e3d7c802eb32b44">
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractnavigationaction">AbstractNavigationAction</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, E, M : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, F&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringaction">AbstractSteeringAction</a>&lt;T, P, A&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a>&lt;T, P, A, N, E, M, F&gt;</code>
+        <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractnavigationaction">AbstractNavigationAction</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, L : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, R, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringaction">AbstractSteeringAction</a>&lt;T, P, A&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a>&lt;T, P, A, L, R, N, E&gt;</code>
       </p>
 
       
@@ -199,9 +199,9 @@ environment while delegating the decision on where to move it to a <a href="http
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="3e771092933c5eb59388ecccb44b2f7b416872bf">
+      <tr class="sourcedoc-section section-element" id="9782994e8870fd24e5a8883192079d74bd3003d2">
         <td class="sourcedoc-section section-signature">
-          <code>protected open lateinit var strategy: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>&lt;T, P, A, N, E, M, F&gt;</code>
+          <code>protected open lateinit var strategy: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>&lt;T, P, A, L, R, N, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The strategy used to navigate the environment.</p>
@@ -220,9 +220,9 @@ every time update is called so as to avoid potentially costly re-computations.</
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="01af1becf2fcb98ec9eee715f7327567840d7906">
+      <tr class="sourcedoc-section section-element" id="8d0fd0cb21e02c06a5a21e391d056e46e5d6f4a6">
         <td class="sourcedoc-section section-signature">
-          <code>open var currentRoom: M?</code>
+          <code>open var currentRoom: N?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The room (= environment's area) the pedestrian is into, this is cached and updated
@@ -253,9 +253,9 @@ shape. In the future, something better could be done.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="5ba8530db26dcd76cfc0c1d2e980ea344c6058ea">
+      <tr class="sourcedoc-section section-element" id="d2ab8f1356736690fa62d8d920f91fa3feb9956c">
         <td class="sourcedoc-section section-signature">
-          <code>protected var previousRoom: M?</code>
+          <code>protected var previousRoom: N?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Caches the room the pedestrian is into when he/she starts moving. When the pedestrian is crossing a door, it
@@ -275,9 +275,9 @@ was (and should be) into. It's used to detect if the pedestrian ended up in an u
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="3212348057660904e61a8e747998037f98e4e72c">
+      <tr class="sourcedoc-section section-element" id="303052dab50c2072b6a625b0dcf620006446f687">
         <td class="sourcedoc-section section-signature">
-          <code>protected var expectedNewRoom: M?</code>
+          <code>protected var expectedNewRoom: N?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Defined when crossing a door.</p>
@@ -295,9 +295,9 @@ was (and should be) into. It's used to detect if the pedestrian ended up in an u
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9e710fda22de2f708ca8227b1ca4b881cc7688f2">
+      <tr class="sourcedoc-section section-element" id="1ecef445ccbcbd34005275f8b0d22a425537f8c6">
         <td class="sourcedoc-section section-signature">
-          <code>protected open target: M</code>
+          <code>protected open target: N</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The target of a directed edge of the environment's graph.</p>
@@ -315,9 +315,9 @@ was (and should be) into. It's used to detect if the pedestrian ended up in an u
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="d1d567b93d67e1e5044540975437801b788fb9ef">
+      <tr class="sourcedoc-section section-element" id="03d62ca9c7a6a039a0ba470835925da326c47b23">
         <td class="sourcedoc-section section-signature">
-          <code>open environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;*, T, P, A, M, F&gt;</code>
+          <code>open environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;*, T, P, A, N, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The environment the pedestrian is into.</p>
@@ -335,9 +335,9 @@ was (and should be) into. It's used to detect if the pedestrian ended up in an u
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="b6240d9ba9c2f0bfa5bfab3cf88cbff00aa09303">
+      <tr class="sourcedoc-section section-element" id="63280f9d7f8a8ac5a200325e213973cf30189c21">
         <td class="sourcedoc-section section-signature">
-          <code>val pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, P, A, N, E&gt;</code>
+          <code>val pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, P, A, L, R&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The owner of this action.</p>
@@ -362,12 +362,12 @@ was (and should be) into. It's used to detect if the pedestrian ended up in an u
   
 
   
-    <div class="sourcedoc-section section-element" id="28ef406d5fd1edd2142009b1aca4eba92bb4c585">
+    <div class="sourcedoc-section section-element" id="9c3ff9151d190256951bf8d1d89f07d545da5a8b">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;*, T, P, A, M, F&gt;, reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, P, A, N, E&gt;)</code>
+        <code>constructor(environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;*, T, P, A, N, E&gt;, reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, P, A, L, R&gt;)</code>
       </p>
 
       
@@ -380,7 +380,7 @@ environment while delegating the decision on where to move it to a <a href="http
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="86904f8e41d0dd99a908c9b370fb7405d40f9394">
+<div class="sourcedoc-section section-root section-level-3" id="f0571e7adab9d11e1102005324e1f1a12973c9a7">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -395,9 +395,9 @@ environment while delegating the decision on where to move it to a <a href="http
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="00a3ee3b696fdc4c3ac60456a676652ff13caa8c">
+      <tr class="sourcedoc-section section-element" id="afd1d965dcd2e7aacf68c6e9f6e399a4427532ee">
         <td class="sourcedoc-section section-signature">
-          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;*, T, P, A, M, F&gt;</code>
+          <code>environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;*, T, P, A, N, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -413,9 +413,9 @@ environment while delegating the decision on where to move it to a <a href="http
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="39e85b247a27234e6bd2acf3b2a178383ec175dd">
+      <tr class="sourcedoc-section section-element" id="05e030878b0ad98a08393084e12e273b42575598">
         <td class="sourcedoc-section section-signature">
-          <code>pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, P, A, N, E&gt;</code>
+          <code>pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, P, A, L, R&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -722,12 +722,12 @@ Otherwise the first room containing pedestrianPosition is used.</li></ul>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="99a9ec08dfe3b5c240a78ea602a8ad47e3ccd593">
+    <div class="sourcedoc-section section-element" id="478afd8740e111a3b21533fb1d9f4275e619f0a8">
       
       <h3 class="sourcedoc-section element-name">doorsInSight</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun doorsInSight(): List&lt;F&gt;</code>
+        <code>open fun doorsInSight(): List&lt;E&gt;</code>
       </p>
 
       
@@ -738,7 +738,7 @@ Otherwise the first room containing pedestrianPosition is used.</li></ul>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="c70f1be6989cf9a0de180e3b7e3097d4bbca7b19">
+<div class="sourcedoc-section section-root section-level-3" id="ed71deb99d8e4a234c6bb546c648b8865d06ca47">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -753,9 +753,9 @@ Otherwise the first room containing pedestrianPosition is used.</li></ul>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b53ce755465e5c662024f57d35196d60a1ca7d4e">
+      <tr class="sourcedoc-section section-element" id="78b20ef916c25a1f6d4e316938a98591b5c91a44">
         <td class="sourcedoc-section section-signature">
-          <code>List&lt;F&gt;</code>
+          <code>List&lt;E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -773,12 +773,12 @@ Otherwise the first room containing pedestrianPosition is used.</li></ul>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="eb12299a420a47515814b87eff0be98b6654454c">
+    <div class="sourcedoc-section section-element" id="331dc09614f2a1a5c138af8b259312ae8ad01cbd">
       
       <h3 class="sourcedoc-section element-name">crossDoor</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>protected open fun crossDoor(door: F, crossingPoints: Pair<P, P>&lt;P, P&gt;)</code>
+        <code>protected open fun crossDoor(door: E, crossingPoints: Pair<P, P>&lt;P, P&gt;)</code>
       </p>
 
       
@@ -792,7 +792,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="b7b539ef65118b5501b166cc08e402e248a053fa">
+<div class="sourcedoc-section section-root section-level-3" id="d4b958e5f344c45570d7d799b2f049a7d413b6ec">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -807,9 +807,9 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b82cc77695aefe070bb03257f1202d01955b5bc3">
+      <tr class="sourcedoc-section section-element" id="d63ebfed6356b9430dbcbdc8521228d54ac62888">
         <td class="sourcedoc-section section-signature">
-          <code>door: F</code>
+          <code>door: E</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -834,7 +834,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="4e823014d786a64927d6d6f4cff9371d30f10c2f">
+<div class="sourcedoc-section section-root section-level-3" id="3cd2566e1affcdd5fa7d512895cd23947ba3cc56">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -2112,6 +2112,14 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractcognitivepedestrian">AbstractCognitivePedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/abstractcondition">AbstractCondition</a>
     </li>
     
@@ -2160,7 +2168,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclidean2dconfigurablemovenode">AbstractEuclidean2DConfigurableMove...</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclideanconfigurablemovenode">AbstractEuclideanConfigurableMoveNode</a>
     </li>
     
 
@@ -2192,7 +2200,31 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractheterogeneouspedestrian">AbstractHeterogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstracthomogeneouspedestrian">AbstractHomogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/abstractlauncher">AbstractLauncher</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractlayeraction">AbstractLayerAction</a>
     </li>
     
 
@@ -2321,6 +2353,14 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringaction">AbstractSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringactionwithtarget">AbstractSteeringActionWithTarget</a>
     </li>
     
 
@@ -2552,7 +2592,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidflowfield">AvoidFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidlayer">AvoidLayer</a>
     </li>
     
 
@@ -2577,14 +2617,6 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/awtshapeextension">AwtShapeExtension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/baseeuclideannavigationaction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -3136,6 +3168,14 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitiveorientingpedestrian2d">CognitiveOrientingPedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cognitivepedestrian">CognitivePedestrian</a>
     </li>
     
@@ -3145,14 +3185,6 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrian2d">CognitivePedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrianimpl">CognitivePedestrianImpl</a>
     </li>
     
 
@@ -3984,22 +4016,6 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationstrategy">EuclideanNavigationStrategy</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclideanphysics2denvironmentwithgraph">EuclideanPhysics2DEnvironmentWithGr...</a>
     </li>
     
@@ -4232,14 +4248,6 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/flowfieldsteeringaction">FlowFieldSteeringAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followatdistance">FollowAtDistance</a>
     </li>
     
@@ -4248,7 +4256,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followflowfield">FollowFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followlayer">FollowLayer</a>
     </li>
     
 
@@ -4257,6 +4265,14 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followroute">FollowRoute</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followscalarfield">FollowScalarField</a>
     </li>
     
 
@@ -4616,14 +4632,6 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/heterogeneouspedestrianimpl">HeterogeneousPedestrianImpl</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/priority/high">High</a>
     </li>
     
@@ -4632,7 +4640,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneousorientingpedestrian2d">HomogeneousOrientingPedestrian2D</a>
     </li>
     
 
@@ -4640,7 +4648,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrianimpl">HomogeneousPedestrianImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
     </li>
     
 
@@ -4777,6 +4785,14 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/environments/infinitehalls">InfiniteHalls</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/infinitepoints">InfinitePoints</a>
     </li>
     
 
@@ -5152,7 +5168,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/line">Line</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/line2d">Line2D</a>
     </li>
     
 
@@ -5528,6 +5544,22 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction2d">NavigationAction2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationaction2dimpl">NavigationAction2DImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>
     </li>
     
@@ -5553,6 +5585,14 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy2d">NavigationStrategy2D</a>
     </li>
     
 
@@ -5760,23 +5800,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/orientingagent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingcognitivepedestrian">OrientingCognitivePedestrian</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingcognitivepedestrian2d">OrientingCognitivePedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingagent">OrientingAgent</a>
     </li>
     
 
@@ -5792,7 +5816,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingpedestrian2d">OrientingPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian2d">OrientingPedestrian2D</a>
     </li>
     
 
@@ -5833,6 +5857,14 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup">PedestrianGroup</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup2d">PedestrianGroup2D</a>
     </li>
     
 
@@ -6392,14 +6424,6 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/segment">Segment</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
@@ -6600,6 +6624,14 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/slopeinterceptline2d">SlopeInterceptLine2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/socialforceagent">SocialForceAgent</a>
     </li>
     
@@ -6721,14 +6753,6 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringactionwithtargetimpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -7128,7 +7152,7 @@ reaching the former one. crossingPoints may coincide if the two rooms are adjace
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwt+f6d800101. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devy7+9e95f2fa5. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

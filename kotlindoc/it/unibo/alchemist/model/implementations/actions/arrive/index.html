@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwt+f6d800101"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devy7+9e95f2fa5"};
 </script>
 
 
@@ -161,10 +161,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="38f1e6e24aeb7678eedf54d7de6ebfb1e3a265c0">
+    <div class="sourcedoc-section section-element" id="3c6ab02fc563b30f4ac1a46b57f47ee35a62abd5">
       
       <p class="sourcedoc-section section-signature">
-        <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/arrive">Arrive</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringactionwithtargetimpl">SteeringActionWithTargetImpl</a>&lt;T, P, A&gt;</code>
+        <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/arrive">Arrive</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringactionwithtarget">AbstractSteeringActionWithTarget</a>&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -177,7 +177,7 @@
       
 
       <div class="sourcedoc-section section-comments"><p>Move the agent towards a target position.
-It is similar to Seek but it attempts to arrive at the target position with a zero velocity.</p>
+It is similar to Seek but attempts to arrive at the target position with a zero velocity.</p>
 </div>
 
       
@@ -199,6 +199,26 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
       </thead>
       <tbody>
       
+      <tr class="sourcedoc-section section-element" id="aaca81aa2d75f9f6c8cb2b1b136f18c66f3ae246">
+        <td class="sourcedoc-section section-signature">
+          <code>open maxWalk: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The maximum distance the pedestrian can walk, this is a length.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="be760bd5377696c80a30c05f5f722c53579703c4">
+        <td class="sourcedoc-section section-signature">
+          <code>protected env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <pre><code>    the environment inside which the pedestrian moves.</code></pre>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="ec4fc3e41cbac2a965864020a0798b547bb4170a">
         <td class="sourcedoc-section section-signature">
           <code>protected decelerationRadius: Double</code>
@@ -219,12 +239,12 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="366703dfb89758510c5377ab35288ba90eb0aef2">
+      <tr class="sourcedoc-section section-element" id="3e7a07be3912408a6492663013f503600810f4af">
         <td class="sourcedoc-section section-signature">
-          <code>protected coordinates: P</code>
+          <code>protected target: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <pre><code>    the coordinates of the position the pedestrian moves towards.</code></pre>
+        <pre><code>    the position the pedestrian moves towards.</code></pre>
 
         </td>
       </tr>
@@ -246,12 +266,12 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
   
 
   
-    <div class="sourcedoc-section section-element" id="85364658ee98de44d6068c30c64cbc940939b93e">
+    <div class="sourcedoc-section section-element" id="972130be6dee8034d58a1cee67dde7e0cab52e83">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;, reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, P, A&gt;, decelerationRadius: Double, arrivalTolerance: Double, vararg coordinate: Number)</code>
+        <code>constructor(env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;, reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, P, A&gt;, decelerationRadius: Double, arrivalTolerance: Double, vararg coordinates: Number)</code>
       </p>
 
       
@@ -262,7 +282,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="4b72be94a2f9a05dd5335f09c8c912898b7185f0">
+<div class="sourcedoc-section section-root section-level-3" id="f60f70cf62ab657d9106873a2b28aabff4b2efa0">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -322,9 +342,9 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="93f7bd6541ef057e1d3756b2be40cd4c649778a8">
+      <tr class="sourcedoc-section section-element" id="6b97bcd7a65d6ebbc7a4bf53a313c58cd1b5e300">
         <td class="sourcedoc-section section-signature">
-          <code>vararg coordinate: Number</code>
+          <code>vararg coordinates: Number</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -342,25 +362,25 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="5cb8616d992897e1b2a19ba783239feec1380edc">
+    <div class="sourcedoc-section section-element" id="bf3369edc6a551b454d0e9c96070c72b993f39b4">
       
       <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>constructor(env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;, reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, P, A&gt;, decelerationRadius: Double, arrivalTolerance: Double, coordinates: P)</code>
+        <code>constructor(env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;, reaction: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, P, A&gt;, decelerationRadius: Double, arrivalTolerance: Double, target: P)</code>
       </p>
 
       
 
       <div class="sourcedoc-section section-comments"><p>Move the agent towards a target position.
-It is similar to Seek but it attempts to arrive at the target position with a zero velocity.</p>
+It is similar to Seek but attempts to arrive at the target position with a zero velocity.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="4eab92b96d7016faf45a158c2d1962852ce115df">
+<div class="sourcedoc-section section-root section-level-3" id="2348a079fe9936c6b0c0193c23b21b5249b1498a">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -425,12 +445,12 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="0b76ecc8b93a429c866d84ee0d93889e23174dac">
+      <tr class="sourcedoc-section section-element" id="e7a4bfc9d1b26f2f372b42e5508ef83a24628493">
         <td class="sourcedoc-section section-signature">
-          <code>coordinates: P</code>
+          <code>target: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <pre><code>    the coordinates of the position the pedestrian moves towards.</code></pre>
+        <pre><code>    the position the pedestrian moves towards.</code></pre>
 
         </td>
       </tr>
@@ -459,12 +479,12 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
   
 
   
-    <div class="sourcedoc-section section-element" id="3dd1903e24f816350645afcd39d15553aa88c330">
+    <div class="sourcedoc-section section-element" id="25436cdc48ed11a660d1f8dd7536d4377673fe69">
       
       <h3 class="sourcedoc-section element-name">cloneAction</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun cloneAction(n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/arrive">Arrive</a>&lt;T, P, A&gt;</code>
+        <code>protected open fun cloneAction(n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, P, A&gt;, r: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/arrive">Arrive</a>&lt;T, P, A&gt;</code>
       </p>
 
       
@@ -475,7 +495,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="7591c2473f16f5f0e831db495473303c0c9923ce">
+<div class="sourcedoc-section section-root section-level-3" id="f9242ee51316bc0deedab304c37d4e0d72351998">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -490,9 +510,9 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="cc4adfb5c5d0a92716015df3de18f1c6492e3e71">
+      <tr class="sourcedoc-section section-element" id="8931b8192d12ff3f6fe2d07af1d6e1f11e570708">
         <td class="sourcedoc-section section-signature">
-          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+          <code>n: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, P, A&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -517,7 +537,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="36977150e674a3f7226f759f7f3f97fdf6d4ae42">
+<div class="sourcedoc-section section-root section-level-3" id="a53170928700885b17d2f6f60ac33414a8d20adb">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -535,6 +555,146 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
       <tr class="sourcedoc-section section-element" id="0d50b2cee17069eb22a4ab7f59ce8e8765bf94b6">
         <td class="sourcedoc-section section-signature">
           <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/arrive">Arrive</a>&lt;T, P, A&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="extensions">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Extensions</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="fad785f2ebd75138550e9b0269b130cf79a6c535">
+      
+      <h3 class="sourcedoc-section element-name">targetDistanceTo</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun &lt;T, P&gt; <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>&lt;T, P&gt;.targetDistanceTo(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;): Double</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Computes the distance between this action's target and the given node.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="cb177cae7b7cc2e38bf7e90e50afdbcfb2a3367c">
+
+
+  <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f8b6ea95067e08d2e1b7ad4af1e96a26d27d80b9">
+        <td class="sourcedoc-section section-signature">
+          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="923d88a72a6c5eb469647126e6cb73371d590bee">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
+        <td class="sourcedoc-section section-signature">
+          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3e0a2c083ff5b8c0eb373be1a9a6b5948ced38d9">
+        <td class="sourcedoc-section section-signature">
+          <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5b58dbcf4b1043264d7e7e41acb8ce88caf7fbaa">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="81581597044514bf54d4f97266022fc991f3915e">
+        <td class="sourcedoc-section section-signature">
+          <code>Double</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1607,6 +1767,14 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractcognitivepedestrian">AbstractCognitivePedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/abstractcondition">AbstractCondition</a>
     </li>
     
@@ -1655,7 +1823,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclidean2dconfigurablemovenode">AbstractEuclidean2DConfigurableMove...</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclideanconfigurablemovenode">AbstractEuclideanConfigurableMoveNode</a>
     </li>
     
 
@@ -1687,7 +1855,31 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractheterogeneouspedestrian">AbstractHeterogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstracthomogeneouspedestrian">AbstractHomogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/abstractlauncher">AbstractLauncher</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractlayeraction">AbstractLayerAction</a>
     </li>
     
 
@@ -1816,6 +2008,14 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringaction">AbstractSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringactionwithtarget">AbstractSteeringActionWithTarget</a>
     </li>
     
 
@@ -2047,7 +2247,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidflowfield">AvoidFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidlayer">AvoidLayer</a>
     </li>
     
 
@@ -2072,14 +2272,6 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/awtshapeextension">AwtShapeExtension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/baseeuclideannavigationaction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -2631,6 +2823,14 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitiveorientingpedestrian2d">CognitiveOrientingPedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cognitivepedestrian">CognitivePedestrian</a>
     </li>
     
@@ -2640,14 +2840,6 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrian2d">CognitivePedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrianimpl">CognitivePedestrianImpl</a>
     </li>
     
 
@@ -3479,22 +3671,6 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationstrategy">EuclideanNavigationStrategy</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclideanphysics2denvironmentwithgraph">EuclideanPhysics2DEnvironmentWithGr...</a>
     </li>
     
@@ -3727,14 +3903,6 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/flowfieldsteeringaction">FlowFieldSteeringAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followatdistance">FollowAtDistance</a>
     </li>
     
@@ -3743,7 +3911,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followflowfield">FollowFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followlayer">FollowLayer</a>
     </li>
     
 
@@ -3752,6 +3920,14 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followroute">FollowRoute</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followscalarfield">FollowScalarField</a>
     </li>
     
 
@@ -4111,14 +4287,6 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/heterogeneouspedestrianimpl">HeterogeneousPedestrianImpl</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/priority/high">High</a>
     </li>
     
@@ -4127,7 +4295,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneousorientingpedestrian2d">HomogeneousOrientingPedestrian2D</a>
     </li>
     
 
@@ -4135,7 +4303,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrianimpl">HomogeneousPedestrianImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
     </li>
     
 
@@ -4272,6 +4440,14 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/environments/infinitehalls">InfiniteHalls</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/infinitepoints">InfinitePoints</a>
     </li>
     
 
@@ -4647,7 +4823,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/line">Line</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/line2d">Line2D</a>
     </li>
     
 
@@ -5023,6 +5199,22 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction2d">NavigationAction2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationaction2dimpl">NavigationAction2DImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>
     </li>
     
@@ -5048,6 +5240,14 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy2d">NavigationStrategy2D</a>
     </li>
     
 
@@ -5255,23 +5455,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/orientingagent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingcognitivepedestrian">OrientingCognitivePedestrian</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingcognitivepedestrian2d">OrientingCognitivePedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingagent">OrientingAgent</a>
     </li>
     
 
@@ -5287,7 +5471,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingpedestrian2d">OrientingPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian2d">OrientingPedestrian2D</a>
     </li>
     
 
@@ -5328,6 +5512,14 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup">PedestrianGroup</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup2d">PedestrianGroup2D</a>
     </li>
     
 
@@ -5887,14 +6079,6 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/segment">Segment</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
@@ -6095,6 +6279,14 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/slopeinterceptline2d">SlopeInterceptLine2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/socialforceagent">SocialForceAgent</a>
     </li>
     
@@ -6216,14 +6408,6 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringactionwithtargetimpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6623,7 +6807,7 @@ It is similar to Seek but it attempts to arrive at the target position with a ze
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwt+f6d800101. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devy7+9e95f2fa5. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

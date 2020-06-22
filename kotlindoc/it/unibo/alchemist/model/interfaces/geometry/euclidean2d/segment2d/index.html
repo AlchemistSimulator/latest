@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwt+f6d800101"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devy7+9e95f2fa5"};
 </script>
 
 
@@ -176,7 +176,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Defines a segment from first to second in an euclidean bidimensional space.</p>
+      <div class="sourcedoc-section section-comments"><p>Defines a line segment in a cartesian plane, endpoints are included.</p>
 </div>
 
       
@@ -203,7 +203,7 @@
           <code>abstract first: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>First point.</p>
+        <p>The first endpoint of the segment.</p>
 
         </td>
       </tr>
@@ -213,57 +213,7 @@
           <code>abstract second: P</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Second point.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="2e1935eba3e955501b8f58ce477cf11a25728758">
-        <td class="sourcedoc-section section-signature">
-          <code>open intercept: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>The intercept of the line passing through first and second.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="28bd53ffdeacb1487b8ee29145215a57cceacdbf">
-        <td class="sourcedoc-section section-signature">
-          <code>open isDegenerate: Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A segment is degenerate if its points coincide.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="bf896bf50901a1a0a306589ce13359b7d75eb922">
-        <td class="sourcedoc-section section-signature">
-          <code>open isHorizontal: Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Indicates if the segment is aligned to the x axis.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="2526c47b01d1941850d3f857ef28d9a389dc4a18">
-        <td class="sourcedoc-section section-signature">
-          <code>open isVertical: Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Indicates if the segment is aligned to the y axis.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="99ab4225536059948496e8586751a3a3ac8f2232">
-        <td class="sourcedoc-section section-signature">
-          <code>open isAlignedToAnyAxis: Boolean</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Indicates if the segment is axis-aligned.</p>
+        <p>The second endpoint of the segment.</p>
 
         </td>
       </tr>
@@ -278,12 +228,32 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="73c645bf66e532a8dc7eef461ab624b909de0ba2">
+      <tr class="sourcedoc-section section-element" id="28bd53ffdeacb1487b8ee29145215a57cceacdbf">
         <td class="sourcedoc-section section-signature">
-          <code>open slope: Double</code>
+          <code>open isDegenerate: Boolean</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>The slope of the segment. If the two points coincide, this is Double.NaN.</p>
+        <p>Indicates if the two endpoints coincide (= segment has zero length).</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bf896bf50901a1a0a306589ce13359b7d75eb922">
+        <td class="sourcedoc-section section-signature">
+          <code>open isHorizontal: Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Indicates if the segment is aligned to the x-axis, this is true if isDegenerate.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2526c47b01d1941850d3f857ef28d9a389dc4a18">
+        <td class="sourcedoc-section section-signature">
+          <code>open isVertical: Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Indicates if the segment is aligned to the y-axis, this is true if isDegenerate.</p>
 
         </td>
       </tr>
@@ -294,6 +264,16 @@
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The medium point of the segment.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="678ea7829eeb1a99aca2c08113ab967657925212">
+        <td class="sourcedoc-section section-signature">
+          <code>open toVector: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The vector representing the movement from first to second.</p>
 
         </td>
       </tr>
@@ -315,57 +295,23 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="9736be1ae215013c9343cf9b1d6c97c1c5d81de9">
+    <div class="sourcedoc-section section-element" id="6c2d214fa855fe65a344205d76bc6a451cb67143">
       
-      <h3 class="sourcedoc-section element-name">closestPointTo</h3>
+      <h3 class="sourcedoc-section element-name">toLine</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun closestPointTo(point: P): P</code>
+        <code>open fun toLine(): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/line2d">Line2D</a>&lt;P&gt;</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Finds the point of the segment which is closest to the provided position.</p>
-</div>
+      <div class="sourcedoc-section section-comments"></div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="bde8acd96dbdb588a7df00e2cded30639116e4ff">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="f3243ae1b83211c8f307e73f62054d49df18d93b">
-        <td class="sourcedoc-section section-signature">
-          <code>point: P</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="9bf144bea0ae2c220abafdfd77f48e0df4a0e380">
+<div class="sourcedoc-section section-root section-level-3" id="706a744075d52d68e3e37bd94e9779c59386f106">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -380,9 +326,9 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+      <tr class="sourcedoc-section section-element" id="f744c3fa011c7cfe2a446c12b45e42e950feea73">
         <td class="sourcedoc-section section-signature">
-          <code>P</code>
+          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/line2d">Line2D</a>&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -504,8 +450,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Checks if the segment contains a point. Doubles are not directly compared,
-<a href="#">MathUtils.fuzzyEquals</a> is used instead.</p>
+      <div class="sourcedoc-section section-comments"><p>Checks if the segment contains a point.</p>
 </div>
 
       
@@ -580,6 +525,91 @@
       
     </div>
   
+    <div class="sourcedoc-section section-element" id="9736be1ae215013c9343cf9b1d6c97c1c5d81de9">
+      
+      <h3 class="sourcedoc-section element-name">closestPointTo</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun closestPointTo(point: P): P</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Finds the point of the segment which is closest to the provided point.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="bde8acd96dbdb588a7df00e2cded30639116e4ff">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f3243ae1b83211c8f307e73f62054d49df18d93b">
+        <td class="sourcedoc-section section-signature">
+          <code>point: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9bf144bea0ae2c220abafdfd77f48e0df4a0e380">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="511993d3c99719e38a6779073019dacd7178ddb9">
+        <td class="sourcedoc-section section-signature">
+          <code>P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
     <div class="sourcedoc-section section-element" id="cf0ba8a16a5c3139a9914ea8ca8c22dbba4ab865">
       
       <h3 class="sourcedoc-section element-name">distanceTo</h3>
@@ -590,7 +620,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Computes the distance between the segment and a given point.</p>
+      <div class="sourcedoc-section section-comments"><p>Computes the shortest distance between the segment and the given point.</p>
 </div>
 
       
@@ -675,7 +705,7 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Computes the (minimum) distance between two segments.</p>
+      <div class="sourcedoc-section section-comments"><p>Computes the shortest distance between two segments (= the shortest distance between any two of their points).</p>
 </div>
 
       
@@ -750,26 +780,25 @@
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="c3e484fbf076baa3a7639aeace81bcf85846f095">
+    <div class="sourcedoc-section section-element" id="2b149e8cace4f16b8b4fb9d27bd03cfc98adc4e1">
       
-      <h3 class="sourcedoc-section element-name">intersectAsLines</h3>
+      <h3 class="sourcedoc-section element-name">isParallelTo</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun intersectAsLines(other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;P&gt;): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d">Intersection2D</a>&lt;P&gt;</code>
+        <code>open fun isParallelTo(other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;P&gt;): Boolean</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Finds the intersection of two lines represented by segments.
-Degenerate segments (of zero
-length) are not supported.</p>
+      <div class="sourcedoc-section section-comments"><p>Checks if two segments are parallel. Throws an <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/UnsupportedOperationException.html">UnsupportedOperationException</a> if any of the two segment
+isDegenerate.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="421c883b86eb0d2708262d72ccd5eb416fde6c91">
+<div class="sourcedoc-section section-root section-level-3" id="66bf3eda3268c898e4403cf33960c98a20c6c39b">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -802,7 +831,7 @@ length) are not supported.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="712c2f74e9090f1c3e8f1e1c806b238e7d9fa14b">
+<div class="sourcedoc-section section-root section-level-3" id="3f797ab39f7af598768807ffa35d900422071f05">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -817,95 +846,9 @@ length) are not supported.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="2ffb2ffdcbe653fcde0227cccb69d01232ae35fb">
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d">Intersection2D</a>&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="43ae8dc0789d95aa48e15496b4ed5e16e16fbee1">
-      
-      <h3 class="sourcedoc-section element-name">intersectSegment</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun intersectSegment(other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;P&gt;): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d">Intersection2D</a>&lt;P&gt;</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"><p>Finds the intersection point of two given segments. This method is able to deal with degenerate
-and collinear segments.</p>
-</div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="b6bf1851d8141fa804a1ddecd739518ebf58dde9">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="ac9cffb6bba30f2d6ce222982b073ded49d43d3f">
-        <td class="sourcedoc-section section-signature">
-          <code>other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="29dae70ddce50325b0db2a1727bdd2167fc81b59">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="2ffb2ffdcbe653fcde0227cccb69d01232ae35fb">
-        <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d">Intersection2D</a>&lt;P&gt;</code>
+          <code>Boolean</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -933,8 +876,7 @@ and collinear segments.</p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Determines if a segment built from the second point of this segment to the provided point
-is collinear (forms a line) with this segment.</p>
+      <div class="sourcedoc-section section-comments"><p>Checks if first, second and point lie on a single line.</p>
 </div>
 
       
@@ -1009,25 +951,24 @@ is collinear (forms a line) with this segment.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="a42bb82b07196a2daf2dc83a5a5de732ad225cd9">
+    <div class="sourcedoc-section section-element" id="44ebd71f596409bdbe9c330386e9b9e1cc2c239d">
       
-      <h3 class="sourcedoc-section element-name">isInRectangle</h3>
+      <h3 class="sourcedoc-section element-name">isCollinearWith</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun isInRectangle(origin: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/vector2d">Vector2D</a>&lt;*&gt;, width: Double, height: Double): Boolean</code>
+        <code>open fun isCollinearWith(other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;P&gt;): Boolean</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Checks whether this segment is inside a rectangular region described by an origin
-point and width and height values (must be positive).</p>
+      <div class="sourcedoc-section section-comments"><p>Checks if two segments lie on a single line.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="9215b316e104588d497383e4778950fd1686dfcb">
+<div class="sourcedoc-section section-root section-level-3" id="0126f5e296ad6d71750def434f6b199e57e41907">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -1042,27 +983,9 @@ point and width and height values (must be positive).</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="29778fcc4d11844f85be13335b93c90d5d613645">
+      <tr class="sourcedoc-section section-element" id="ac9cffb6bba30f2d6ce222982b073ded49d43d3f">
         <td class="sourcedoc-section section-signature">
-          <code>origin: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/vector2d">Vector2D</a>&lt;*&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="2629f5a557b0dd8b96f3ee9959ee5de306c22051">
-        <td class="sourcedoc-section section-signature">
-          <code>width: Double</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="59df897769a819b06081194c76845e01f68216ac">
-        <td class="sourcedoc-section section-signature">
-          <code>height: Double</code>
+          <code>other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1078,7 +1001,7 @@ point and width and height values (must be positive).</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="c5bfe05eb9c54c8f1714c19670de5a734ca18af4">
+<div class="sourcedoc-section section-root section-level-3" id="881028fe479b4a58bc8ffacbaaedabfd68d5d0e9">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1096,6 +1019,270 @@ point and width and height values (must be positive).</p>
       <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
         <td class="sourcedoc-section section-signature">
           <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="32a660465ce28b4472aa7fa0315912ac34daebd2">
+      
+      <h3 class="sourcedoc-section element-name">overlapsWith</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun overlapsWith(other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;P&gt;): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Checks if two segments overlap (= are collinear and share one or more points).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="94398c23fd47b56f0dd3707c539e8fa785c9d7e6">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ac9cffb6bba30f2d6ce222982b073ded49d43d3f">
+        <td class="sourcedoc-section section-signature">
+          <code>other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="810889166d7ace059a20d2b09395b3f5a7ef73f6">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="999d2cbd2a2e8379512d985bc98af03a7fda805d">
+      
+      <h3 class="sourcedoc-section element-name">intersect</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun intersect(other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;P&gt;): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d">Intersection2D</a>&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Intersects two segments.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="6e2530e6b50d6cfaf7808fcb64dd72b3c5d3d9f1">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="ac9cffb6bba30f2d6ce222982b073ded49d43d3f">
+        <td class="sourcedoc-section section-signature">
+          <code>other: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5cb55bb6f0cd8843fa9442cb51fa0c15f6b83455">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2ffb2ffdcbe653fcde0227cccb69d01232ae35fb">
+        <td class="sourcedoc-section section-signature">
+          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d">Intersection2D</a>&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="930ff4404a48ad1418c22db0bfbc6498df2b1b4c">
+      
+      <h3 class="sourcedoc-section element-name">intersectCircle</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun intersectCircle(center: P, radius: Double): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d">Intersection2D</a>&lt;P&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Intersects a segment and a circle.</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="37baf2657f3d15300ecddc2a25788cde1d6d8224">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="302d443e6a70562013d7cb84b9d23d695d149cd1">
+        <td class="sourcedoc-section section-signature">
+          <code>center: P</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4464c1c91b6fd66bab23f822a1cf8cc68da5febb">
+        <td class="sourcedoc-section section-signature">
+          <code>radius: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="4e03ea73791addeedecdd2befd1a6b7d6492cfd7">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="2ffb2ffdcbe653fcde0227cccb69d01232ae35fb">
+        <td class="sourcedoc-section section-signature">
+          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d">Intersection2D</a>&lt;P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1197,6 +1384,110 @@ point and width and height values (must be positive).</p>
       
     </div>
   
+    <div class="sourcedoc-section section-element" id="a42bb82b07196a2daf2dc83a5a5de732ad225cd9">
+      
+      <h3 class="sourcedoc-section element-name">isInRectangle</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>open fun isInRectangle(origin: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/vector2d">Vector2D</a>&lt;*&gt;, width: Double, height: Double): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>Checks if this segment is inside a rectangular region described by an origin, width and
+height (must be positive).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9215b316e104588d497383e4778950fd1686dfcb">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="29778fcc4d11844f85be13335b93c90d5d613645">
+        <td class="sourcedoc-section section-signature">
+          <code>origin: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/vector2d">Vector2D</a>&lt;*&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="2629f5a557b0dd8b96f3ee9959ee5de306c22051">
+        <td class="sourcedoc-section section-signature">
+          <code>width: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="59df897769a819b06081194c76845e01f68216ac">
+        <td class="sourcedoc-section section-signature">
+          <code>height: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c5bfe05eb9c54c8f1714c19670de5a734ca18af4">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
     <div class="sourcedoc-section section-element" id="552f415e8f229307636a655f2381b0e5f343f789">
       
       <h3 class="sourcedoc-section element-name">toRange</h3>
@@ -1209,7 +1500,7 @@ point and width and height values (must be positive).</p>
 
       <div class="sourcedoc-section section-comments"><p>Maps the segment a ClosedRange, this is done by extracting either the X coordinates or
 the Y coordinates of the two endpoints of the segment. getXCoords indicates which pair
-of coordinates should be extracted.
+of coordinates should be extracted (defaults to isHorizontal).
 This can be useful e.g. to represent portions of axis-aligned segments without creating
 new ones.</p>
 </div>
@@ -1269,57 +1560,6 @@ new ones.</p>
       <tr class="sourcedoc-section section-element" id="9f569e7925f7e3d4e027bb969d8df8a5ee9b95b1">
         <td class="sourcedoc-section section-signature">
           <code>ClosedRange&lt;Double&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="5cad22334a70f0acdc488a125818afa47df43847">
-      
-      <h3 class="sourcedoc-section element-name">toVector</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>open fun toVector(): @JvmDefault</code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"></div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="98ce2d7f67985b982c1494622140b5a22290040f">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="a85269ecc4d736bf7f756267a46b4cd70390de5b">
-        <td class="sourcedoc-section section-signature">
-          <code>@JvmDefault</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -2392,6 +2632,14 @@ new ones.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractcognitivepedestrian">AbstractCognitivePedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/abstractcondition">AbstractCondition</a>
     </li>
     
@@ -2440,7 +2688,7 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclidean2dconfigurablemovenode">AbstractEuclidean2DConfigurableMove...</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclideanconfigurablemovenode">AbstractEuclideanConfigurableMoveNode</a>
     </li>
     
 
@@ -2472,7 +2720,31 @@ new ones.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractheterogeneouspedestrian">AbstractHeterogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstracthomogeneouspedestrian">AbstractHomogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/abstractlauncher">AbstractLauncher</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractlayeraction">AbstractLayerAction</a>
     </li>
     
 
@@ -2601,6 +2873,14 @@ new ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringaction">AbstractSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringactionwithtarget">AbstractSteeringActionWithTarget</a>
     </li>
     
 
@@ -2832,7 +3112,7 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidflowfield">AvoidFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidlayer">AvoidLayer</a>
     </li>
     
 
@@ -2857,14 +3137,6 @@ new ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/awtshapeextension">AwtShapeExtension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/baseeuclideannavigationaction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -3416,6 +3688,14 @@ new ones.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitiveorientingpedestrian2d">CognitiveOrientingPedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cognitivepedestrian">CognitivePedestrian</a>
     </li>
     
@@ -3425,14 +3705,6 @@ new ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrian2d">CognitivePedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrianimpl">CognitivePedestrianImpl</a>
     </li>
     
 
@@ -4264,22 +4536,6 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationstrategy">EuclideanNavigationStrategy</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclideanphysics2denvironmentwithgraph">EuclideanPhysics2DEnvironmentWithGr...</a>
     </li>
     
@@ -4512,14 +4768,6 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/flowfieldsteeringaction">FlowFieldSteeringAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followatdistance">FollowAtDistance</a>
     </li>
     
@@ -4528,7 +4776,7 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followflowfield">FollowFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followlayer">FollowLayer</a>
     </li>
     
 
@@ -4537,6 +4785,14 @@ new ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followroute">FollowRoute</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followscalarfield">FollowScalarField</a>
     </li>
     
 
@@ -4896,14 +5152,6 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/heterogeneouspedestrianimpl">HeterogeneousPedestrianImpl</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/priority/high">High</a>
     </li>
     
@@ -4912,7 +5160,7 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneousorientingpedestrian2d">HomogeneousOrientingPedestrian2D</a>
     </li>
     
 
@@ -4920,7 +5168,7 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrianimpl">HomogeneousPedestrianImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
     </li>
     
 
@@ -5057,6 +5305,14 @@ new ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/environments/infinitehalls">InfiniteHalls</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/infinitepoints">InfinitePoints</a>
     </li>
     
 
@@ -5432,7 +5688,7 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/line">Line</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/line2d">Line2D</a>
     </li>
     
 
@@ -5808,6 +6064,22 @@ new ones.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction2d">NavigationAction2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationaction2dimpl">NavigationAction2DImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>
     </li>
     
@@ -5833,6 +6105,14 @@ new ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy2d">NavigationStrategy2D</a>
     </li>
     
 
@@ -6040,23 +6320,7 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/orientingagent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingcognitivepedestrian">OrientingCognitivePedestrian</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingcognitivepedestrian2d">OrientingCognitivePedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingagent">OrientingAgent</a>
     </li>
     
 
@@ -6072,7 +6336,7 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingpedestrian2d">OrientingPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian2d">OrientingPedestrian2D</a>
     </li>
     
 
@@ -6113,6 +6377,14 @@ new ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup">PedestrianGroup</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup2d">PedestrianGroup2D</a>
     </li>
     
 
@@ -6672,14 +6944,6 @@ new ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/segment">Segment</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
@@ -6880,6 +7144,14 @@ new ones.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/slopeinterceptline2d">SlopeInterceptLine2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/socialforceagent">SocialForceAgent</a>
     </li>
     
@@ -7001,14 +7273,6 @@ new ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringactionwithtargetimpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -7408,7 +7672,7 @@ new ones.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwt+f6d800101. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devy7+9e95f2fa5. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

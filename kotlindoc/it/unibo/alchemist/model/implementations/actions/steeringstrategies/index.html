@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwt+f6d800101"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devy7+9e95f2fa5"};
 </script>
 
 
@@ -202,8 +202,9 @@
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/distanceweighted">DistanceWeighted</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/weighted">Weighted</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Weighted steering logic where the weight of each steering action is
-the inverse of the pedestrian's distance from the action's target.</p>
+        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/weighted">Weighted</a> strategy where the weight of each steering action is the inverse of the pedestrian's distance from the
+action's target (the closer the target, the more important the action). defaultWeight is used for actions without
+a target.</p>
 
         </td>
       </tr>
@@ -213,8 +214,7 @@ the inverse of the pedestrian's distance from the action's target.</p>
           <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/filtered">Filtered</a>&lt;T, P&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringstrategy">SteeringStrategy</a>&lt;T, P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Steering logic in which a filter is applied to the steering actions
-in order to execute another steering logic with only some of these.</p>
+        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringstrategy">SteeringStrategy</a> decorator applying a filter to the list of steering actions (see computeNextPosition).</p>
 
         </td>
       </tr>
@@ -224,15 +224,15 @@ in order to execute another steering logic with only some of these.</p>
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/nearest">Nearest</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/filtered">Filtered</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Steering logic where only the "simple" steering action and the group steering action (if present) whose targets
-are the nearest to the pedestrian's current position are considered.</p>
+        <p><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/filtered">Filtered</a> strategy considering only the group steering action and the non-group steering action whose targets are
+nearest to the pedestrian's position. The two actions are combined using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/distanceweighted">DistanceWeighted</a> strategy.</p>
 
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="0df18a399151f412460fae13acc29fcff3e90fd1">
+      <tr class="sourcedoc-section section-element" id="5af4fe35d81fffcdf7725c37b57a5eb42b0ba487">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/singleprevalent">SinglePrevalent</a>&lt;T, M : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/weighted">Weighted</a>&lt;T&gt;</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/singleprevalent">SinglePrevalent</a>&lt;T, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/convexpolygon">ConvexPolygon</a>&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/weighted">Weighted</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringstrategy">SteeringStrategy</a> in which one action is prevalent. Only <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a>s can be prevalent, because
@@ -271,9 +271,8 @@ s(0) = g(0)</p>
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/typebased">TypeBased</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/weighted">Weighted</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Steering strategy which gives a weight based on the type of steering action you are considering.
-For each type,
-only the action with the target nearest to the current pedestrian position is taken into consideration.</p>
+        <p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/weighted">Weighted</a> steering strategy assigning weights based on actions' types (each type has its own weight, specified
+by the client).</p>
 
         </td>
       </tr>
@@ -283,8 +282,7 @@ only the action with the target nearest to the current pedestrian position is ta
           <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringstrategies/weighted">Weighted</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringstrategy">SteeringStrategy</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/positions/euclidean2dposition">Euclidean2DPosition</a>&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Steering logic where each steering action is associated to a weight
-and the final computed position is their weighted sum.</p>
+        <p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringstrategy">SteeringStrategy</a> performing a weighted sum of steering actions (see computeNextPosition).</p>
 
         </td>
       </tr>
@@ -306,24 +304,24 @@ and the final computed position is their weighted sum.</p>
   
 
   
-    <div class="sourcedoc-section section-element" id="8a4127826995c003a25923e273815b4e4bcf7dc7">
+    <div class="sourcedoc-section section-element" id="fad785f2ebd75138550e9b0269b130cf79a6c535">
       
-      <h3 class="sourcedoc-section element-name">targetDistance</h3>
+      <h3 class="sourcedoc-section element-name">targetDistanceTo</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun &lt;T, P&gt; <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, *, *&gt;.targetDistance(env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;, action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>&lt;T, P&gt;): Double</code>
+        <code>fun &lt;T, P&gt; <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>&lt;T, P&gt;.targetDistanceTo(node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;, env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;): Double</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Calculate the distance between this pedestrian current position and the target of the specified steering action.</p>
+      <div class="sourcedoc-section section-comments"><p>Computes the distance between this action's target and the given node.</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="a8e78dc395e623f4a27be1aac592dd48ed932b45">
+<div class="sourcedoc-section section-root section-level-3" id="cb177cae7b7cc2e38bf7e90e50afdbcfb2a3367c">
 
 
   <p class="sourcedoc-section section-name"><strong>Receiver</strong></p>
@@ -338,9 +336,9 @@ and the final computed position is their weighted sum.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="5dcd3c1e514b4f6a56b196f83741e0faa7d35666">
+      <tr class="sourcedoc-section section-element" id="f8b6ea95067e08d2e1b7ad4af1e96a26d27d80b9">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestrian">Pedestrian</a>&lt;T, *, *&gt;</code>
+          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -356,7 +354,7 @@ and the final computed position is their weighted sum.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="1326f492cf1f2201f7a15bbb4f6be667ad7b201f">
+<div class="sourcedoc-section section-root section-level-3" id="923d88a72a6c5eb469647126e6cb73371d590bee">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -371,23 +369,21 @@ and the final computed position is their weighted sum.</p>
       </thead>
       <tbody>
       
+      <tr class="sourcedoc-section section-element" id="9bfc21d3980d61ed2582dbfb03673548e76bc9cf">
+        <td class="sourcedoc-section section-signature">
+          <code>node: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/node">Node</a>&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="3e0a2c083ff5b8c0eb373be1a9a6b5948ced38d9">
         <td class="sourcedoc-section section-signature">
           <code>env: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a>&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <pre><code>    the environment in which the pedestrian moves.</code></pre>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="90e2c8b9ac8caab1aef3f133c1909c3c5f65d365">
-        <td class="sourcedoc-section section-signature">
-          <code>action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>&lt;T, P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <pre><code>    the steering action you want to the target position.</code></pre>
-
+        
         </td>
       </tr>
       
@@ -400,7 +396,7 @@ and the final computed position is their weighted sum.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="42bb02f4fea05f5c9d60707a90b92df98ce42165">
+<div class="sourcedoc-section section-root section-level-3" id="5b58dbcf4b1043264d7e7e41acb8ce88caf7fbaa">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -445,9 +441,8 @@ and the final computed position is their weighted sum.</p>
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Picks the <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a> whose target is nearest to the pedestrian's current position,
-or the first simple <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringaction">SteeringAction</a> if none of them has a target. If the list is empty, null is
-returned.</p>
+      <div class="sourcedoc-section section-comments"><p>Picks the <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a> whose target is nearest to the pedestrian's current position, or the first
+action of the list if none of them has a defined target. If the list is empty, null is returned.</p>
 </div>
 
       
@@ -1619,6 +1614,14 @@ returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractcognitivepedestrian">AbstractCognitivePedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/abstractcondition">AbstractCondition</a>
     </li>
     
@@ -1667,7 +1670,7 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclidean2dconfigurablemovenode">AbstractEuclidean2DConfigurableMove...</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclideanconfigurablemovenode">AbstractEuclideanConfigurableMoveNode</a>
     </li>
     
 
@@ -1699,7 +1702,31 @@ returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractheterogeneouspedestrian">AbstractHeterogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstracthomogeneouspedestrian">AbstractHomogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/abstractlauncher">AbstractLauncher</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractlayeraction">AbstractLayerAction</a>
     </li>
     
 
@@ -1828,6 +1855,14 @@ returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringaction">AbstractSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringactionwithtarget">AbstractSteeringActionWithTarget</a>
     </li>
     
 
@@ -2059,7 +2094,7 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidflowfield">AvoidFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidlayer">AvoidLayer</a>
     </li>
     
 
@@ -2084,14 +2119,6 @@ returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/awtshapeextension">AwtShapeExtension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/baseeuclideannavigationaction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -2643,6 +2670,14 @@ returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitiveorientingpedestrian2d">CognitiveOrientingPedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cognitivepedestrian">CognitivePedestrian</a>
     </li>
     
@@ -2652,14 +2687,6 @@ returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrian2d">CognitivePedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrianimpl">CognitivePedestrianImpl</a>
     </li>
     
 
@@ -3491,22 +3518,6 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationstrategy">EuclideanNavigationStrategy</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclideanphysics2denvironmentwithgraph">EuclideanPhysics2DEnvironmentWithGr...</a>
     </li>
     
@@ -3739,14 +3750,6 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/flowfieldsteeringaction">FlowFieldSteeringAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followatdistance">FollowAtDistance</a>
     </li>
     
@@ -3755,7 +3758,7 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followflowfield">FollowFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followlayer">FollowLayer</a>
     </li>
     
 
@@ -3764,6 +3767,14 @@ returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followroute">FollowRoute</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followscalarfield">FollowScalarField</a>
     </li>
     
 
@@ -4123,14 +4134,6 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/heterogeneouspedestrianimpl">HeterogeneousPedestrianImpl</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/priority/high">High</a>
     </li>
     
@@ -4139,7 +4142,7 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneousorientingpedestrian2d">HomogeneousOrientingPedestrian2D</a>
     </li>
     
 
@@ -4147,7 +4150,7 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrianimpl">HomogeneousPedestrianImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
     </li>
     
 
@@ -4284,6 +4287,14 @@ returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/environments/infinitehalls">InfiniteHalls</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/infinitepoints">InfinitePoints</a>
     </li>
     
 
@@ -4659,7 +4670,7 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/line">Line</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/line2d">Line2D</a>
     </li>
     
 
@@ -5035,6 +5046,22 @@ returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction2d">NavigationAction2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationaction2dimpl">NavigationAction2DImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>
     </li>
     
@@ -5060,6 +5087,14 @@ returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy2d">NavigationStrategy2D</a>
     </li>
     
 
@@ -5267,23 +5302,7 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/orientingagent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingcognitivepedestrian">OrientingCognitivePedestrian</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingcognitivepedestrian2d">OrientingCognitivePedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingagent">OrientingAgent</a>
     </li>
     
 
@@ -5299,7 +5318,7 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingpedestrian2d">OrientingPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian2d">OrientingPedestrian2D</a>
     </li>
     
 
@@ -5340,6 +5359,14 @@ returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup">PedestrianGroup</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup2d">PedestrianGroup2D</a>
     </li>
     
 
@@ -5899,14 +5926,6 @@ returned.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/segment">Segment</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
@@ -6107,6 +6126,14 @@ returned.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/slopeinterceptline2d">SlopeInterceptLine2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/socialforceagent">SocialForceAgent</a>
     </li>
     
@@ -6228,14 +6255,6 @@ returned.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringactionwithtargetimpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6635,7 +6654,7 @@ returned.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwt+f6d800101. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devy7+9e95f2fa5. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

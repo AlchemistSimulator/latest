@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwt+f6d800101"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devy7+9e95f2fa5"};
 </script>
 
 
@@ -161,10 +161,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="37c37305aa524512072935b64d13323a0d420846">
+    <div class="sourcedoc-section section-element" id="e6ff292f64b673cf003a68786bbfbf4d758cc597">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, E, M : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, F&gt; : Any</code>
+        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, L : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, R, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, E&gt; : Any</code>
       </p>
 
       
@@ -176,9 +176,9 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Defines what a pedestrian should do when in a new room (= environment's area), this is designed
-to be used jointly with a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a>: the latter defines how to properly move the
-pedestrian, while delegating the decision on where to move it to a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>.</p>
+      <div class="sourcedoc-section section-comments"><p>Defines what a pedestrian should do when in a new room (= environment's area), this is designed to be used jointly
+with a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a>: the latter defines how to properly move the pedestrian, while delegating the decision on
+where to move it to a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>.</p>
 </div>
 
       
@@ -200,9 +200,9 @@ pedestrian, while delegating the decision on where to move it to a <a href="http
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="807ba3e56e7e64cfb6a61ea3def28b85be1bdc3b">
+      <tr class="sourcedoc-section section-element" id="b51e7394a062974edd2612fb8b62e54542a09ab5">
         <td class="sourcedoc-section section-signature">
-          <code>abstract action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a>&lt;T, P, A, N, E, M, F&gt;</code>
+          <code>abstract action: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a>&lt;T, P, A, L, R, N, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a> used to navigate the environment.</p>
@@ -227,12 +227,12 @@ pedestrian, while delegating the decision on where to move it to a <a href="http
   
 
   
-    <div class="sourcedoc-section section-element" id="32a4f9bc717504c61275d77bd1236f97501b4400">
+    <div class="sourcedoc-section section-element" id="0f8bb155adafda446b62875eb063fd17a99b7fed">
       
       <h3 class="sourcedoc-section element-name">inNewRoom</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun inNewRoom(newRoom: M)</code>
+        <code>abstract fun inNewRoom(newRoom: N)</code>
       </p>
 
       
@@ -244,7 +244,7 @@ pedestrian, while delegating the decision on where to move it to a <a href="http
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="9e242d24e92d5ebb87491813118c34938c03b679">
+<div class="sourcedoc-section section-root section-level-3" id="afbdd786bd3bc95468f401c896c25b07f4d04643">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -259,9 +259,9 @@ pedestrian, while delegating the decision on where to move it to a <a href="http
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="3273cd1a2359970b770a0cd771088caa389c9c73">
+      <tr class="sourcedoc-section section-element" id="e0f64e2f7cd4b3e7e6a6b7915ecaf1f16667bf72">
         <td class="sourcedoc-section section-signature">
-          <code>newRoom: M</code>
+          <code>newRoom: N</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -277,7 +277,7 @@ pedestrian, while delegating the decision on where to move it to a <a href="http
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="8813d34fc1b99a06e8395c8bfab54b63a9c7690b">
+<div class="sourcedoc-section section-root section-level-3" id="c9a0f3f507c75433c42f30ab3c1544f59c6bddaa">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -312,12 +312,12 @@ pedestrian, while delegating the decision on where to move it to a <a href="http
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="5bb9ffb1d1d2a68275983e47256073fae0a38633">
+    <div class="sourcedoc-section section-element" id="7d86b1e3715c3939a9998168140bb806b9ddbd53">
       
       <h3 class="sourcedoc-section element-name">inUnexpectedNewRoom</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>open fun inUnexpectedNewRoom(previousRoom: M, expectedNewRoom: M, actualNewRoom: M)</code>
+        <code>open fun inUnexpectedNewRoom(previousRoom: N, expectedNewRoom: N, actualNewRoom: N)</code>
       </p>
 
       
@@ -330,7 +330,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="9608ceddfee068e53fd320c3385d44cb615f59fc">
+<div class="sourcedoc-section section-root section-level-3" id="38d24b7d4cec199af6d6da62483c0d8695a19fe2">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -345,27 +345,27 @@ By default, unexpected rooms are treated just like expected ones.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="d5edc6597ebb70475cf2d96a1ec4480ec8d1f467">
+      <tr class="sourcedoc-section section-element" id="d6562e61499079d75aa1afa32dc600b74502bc77">
         <td class="sourcedoc-section section-signature">
-          <code>previousRoom: M</code>
+          <code>previousRoom: N</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="ad57f332ff8b5ea5b80539042461e979cf8d0ddf">
+      <tr class="sourcedoc-section section-element" id="ebccdf89d6b1039b45728e83d1b37b41ac0027d8">
         <td class="sourcedoc-section section-signature">
-          <code>expectedNewRoom: M</code>
+          <code>expectedNewRoom: N</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="e048bc6bed3641e13c574eec7e67457a6fdd9c5b">
+      <tr class="sourcedoc-section section-element" id="0185f476cc4ca978199eb537898b166af04c541f">
         <td class="sourcedoc-section section-signature">
-          <code>actualNewRoom: M</code>
+          <code>actualNewRoom: N</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -381,7 +381,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="3bdc643d38eeff9606f218046d5eb8f9f1958447">
+<div class="sourcedoc-section section-root section-level-3" id="ecc7cd41e92a38fc1bbc43d38e47e47129f1bac0">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1471,6 +1471,14 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractcognitivepedestrian">AbstractCognitivePedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/abstractcondition">AbstractCondition</a>
     </li>
     
@@ -1519,7 +1527,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclidean2dconfigurablemovenode">AbstractEuclidean2DConfigurableMove...</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclideanconfigurablemovenode">AbstractEuclideanConfigurableMoveNode</a>
     </li>
     
 
@@ -1551,7 +1559,31 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractheterogeneouspedestrian">AbstractHeterogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstracthomogeneouspedestrian">AbstractHomogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/abstractlauncher">AbstractLauncher</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractlayeraction">AbstractLayerAction</a>
     </li>
     
 
@@ -1680,6 +1712,14 @@ By default, unexpected rooms are treated just like expected ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringaction">AbstractSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringactionwithtarget">AbstractSteeringActionWithTarget</a>
     </li>
     
 
@@ -1911,7 +1951,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidflowfield">AvoidFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidlayer">AvoidLayer</a>
     </li>
     
 
@@ -1936,14 +1976,6 @@ By default, unexpected rooms are treated just like expected ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/awtshapeextension">AwtShapeExtension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/baseeuclideannavigationaction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -2495,6 +2527,14 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitiveorientingpedestrian2d">CognitiveOrientingPedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cognitivepedestrian">CognitivePedestrian</a>
     </li>
     
@@ -2504,14 +2544,6 @@ By default, unexpected rooms are treated just like expected ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrian2d">CognitivePedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrianimpl">CognitivePedestrianImpl</a>
     </li>
     
 
@@ -3343,22 +3375,6 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationstrategy">EuclideanNavigationStrategy</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclideanphysics2denvironmentwithgraph">EuclideanPhysics2DEnvironmentWithGr...</a>
     </li>
     
@@ -3591,14 +3607,6 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/flowfieldsteeringaction">FlowFieldSteeringAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followatdistance">FollowAtDistance</a>
     </li>
     
@@ -3607,7 +3615,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followflowfield">FollowFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followlayer">FollowLayer</a>
     </li>
     
 
@@ -3616,6 +3624,14 @@ By default, unexpected rooms are treated just like expected ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followroute">FollowRoute</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followscalarfield">FollowScalarField</a>
     </li>
     
 
@@ -3975,14 +3991,6 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/heterogeneouspedestrianimpl">HeterogeneousPedestrianImpl</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/priority/high">High</a>
     </li>
     
@@ -3991,7 +3999,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneousorientingpedestrian2d">HomogeneousOrientingPedestrian2D</a>
     </li>
     
 
@@ -3999,7 +4007,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrianimpl">HomogeneousPedestrianImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
     </li>
     
 
@@ -4136,6 +4144,14 @@ By default, unexpected rooms are treated just like expected ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/environments/infinitehalls">InfiniteHalls</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/infinitepoints">InfinitePoints</a>
     </li>
     
 
@@ -4511,7 +4527,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/line">Line</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/line2d">Line2D</a>
     </li>
     
 
@@ -4887,6 +4903,22 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction2d">NavigationAction2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationaction2dimpl">NavigationAction2DImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>
     </li>
     
@@ -4912,6 +4944,14 @@ By default, unexpected rooms are treated just like expected ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy2d">NavigationStrategy2D</a>
     </li>
     
 
@@ -5119,23 +5159,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/orientingagent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingcognitivepedestrian">OrientingCognitivePedestrian</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingcognitivepedestrian2d">OrientingCognitivePedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingagent">OrientingAgent</a>
     </li>
     
 
@@ -5151,7 +5175,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingpedestrian2d">OrientingPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian2d">OrientingPedestrian2D</a>
     </li>
     
 
@@ -5192,6 +5216,14 @@ By default, unexpected rooms are treated just like expected ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup">PedestrianGroup</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup2d">PedestrianGroup2D</a>
     </li>
     
 
@@ -5751,14 +5783,6 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/segment">Segment</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
@@ -5959,6 +5983,14 @@ By default, unexpected rooms are treated just like expected ones.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/slopeinterceptline2d">SlopeInterceptLine2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/socialforceagent">SocialForceAgent</a>
     </li>
     
@@ -6080,14 +6112,6 @@ By default, unexpected rooms are treated just like expected ones.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringactionwithtargetimpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6487,7 +6511,7 @@ By default, unexpected rooms are treated just like expected ones.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwt+f6d800101. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devy7+9e95f2fa5. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

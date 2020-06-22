@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devwt+f6d800101"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"9.3.0-devy7+9e95f2fa5"};
 </script>
 
 
@@ -161,10 +161,10 @@
   
 
   
-    <div class="sourcedoc-section section-element" id="f6c7cf210505d0ab0b76735090bf65918bfe6f71">
+    <div class="sourcedoc-section section-element" id="cb7e68131e97884c598f006d6860d57ea4c8586f">
       
       <p class="sourcedoc-section section-signature">
-        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, E, M : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, F&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringaction">SteeringAction</a>&lt;T, P&gt;, Any</code>
+        <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction">NavigationAction</a>&lt;T, P, A : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/geometrictransformation">GeometricTransformation</a>&lt;P&gt;, L : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, R, N : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/convexgeometricshape">ConvexGeometricShape</a>&lt;P, A&gt;, E&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringaction">SteeringAction</a>&lt;T, P&gt;, Any</code>
       </p>
 
       
@@ -176,9 +176,8 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringaction">SteeringAction</a> allowing a pedestrian to navigate an environment consciously (e.g. without
-getting stuck in U-shaped obstacles).
-Names are inspired to indoor environments, but this interface works for outdoor ones as well.</p>
+      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringaction">SteeringAction</a> allowing a pedestrian to navigate an environment consciously (e.g. without getting stuck in
+U-shaped obstacles). Names are inspired to indoor environments, but this interface works for outdoor ones as well.</p>
 </div>
 
       
@@ -200,9 +199,9 @@ Names are inspired to indoor environments, but this interface works for outdoor 
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="58e971cd5260477f4962535caacdcde206a38b4f">
+      <tr class="sourcedoc-section section-element" id="bce0975a820df323c7e39963492973f04abd347e">
         <td class="sourcedoc-section section-signature">
-          <code>abstract pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, P, A, N, E&gt;</code>
+          <code>abstract pedestrian: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian">OrientingPedestrian</a>&lt;T, P, A, L, R&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The pedestrian to move.</p>
@@ -210,9 +209,9 @@ Names are inspired to indoor environments, but this interface works for outdoor 
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="414c6e7199b26d5a142d5ac0ae234046958604d7">
+      <tr class="sourcedoc-section section-element" id="a53a63b35454e0d387cfd1a3c384aafa033ce98b">
         <td class="sourcedoc-section section-signature">
-          <code>abstract environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;*, T, P, A, M, F&gt;</code>
+          <code>abstract environment: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/environmentwithgraph">EnvironmentWithGraph</a>&lt;*, T, P, A, N, E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The environment the pedestrian is into.</p>
@@ -230,9 +229,9 @@ Names are inspired to indoor environments, but this interface works for outdoor 
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="09c1c5f8b4022095743b0573e968de2af21ed210">
+      <tr class="sourcedoc-section section-element" id="ebd5256da4256717e427db2a25571bc3aed661dd">
         <td class="sourcedoc-section section-signature">
-          <code>abstract currentRoom: M?</code>
+          <code>abstract currentRoom: N?</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>The room (= environment's area) the pedestrian is into.</p>
@@ -257,12 +256,12 @@ Names are inspired to indoor environments, but this interface works for outdoor 
   
 
   
-    <div class="sourcedoc-section section-element" id="1af5ac06071d3af820bd425555d5f1ed9a8b2951">
+    <div class="sourcedoc-section section-element" id="91414b490b8393ec48eb41496622303c45999e67">
       
       <h3 class="sourcedoc-section element-name">doorsInSight</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun doorsInSight(): List&lt;F&gt;</code>
+        <code>abstract fun doorsInSight(): List&lt;E&gt;</code>
       </p>
 
       
@@ -273,7 +272,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="22306a531bf2171e509d768f8e47044cc25605cc">
+<div class="sourcedoc-section section-root section-level-3" id="723f9c0097fa8707a4fe96328ced58c45f2e9690">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -288,9 +287,9 @@ Names are inspired to indoor environments, but this interface works for outdoor 
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b53ce755465e5c662024f57d35196d60a1ca7d4e">
+      <tr class="sourcedoc-section section-element" id="78b20ef916c25a1f6d4e316938a98591b5c91a44">
         <td class="sourcedoc-section section-signature">
-          <code>List&lt;F&gt;</code>
+          <code>List&lt;E&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -308,12 +307,12 @@ Names are inspired to indoor environments, but this interface works for outdoor 
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="46da8803c76cb2ba5b97a5fb7b9d8b0c71772866">
+    <div class="sourcedoc-section section-element" id="82243e341de2fad6b1bf758e899f2c94c6fb8768">
       
       <h3 class="sourcedoc-section element-name">crossDoor</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>abstract fun crossDoor(door: F)</code>
+        <code>abstract fun crossDoor(door: E)</code>
       </p>
 
       
@@ -325,7 +324,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="dad28c44a57c4c7027d226c3fb00e5742b9c27b0">
+<div class="sourcedoc-section section-root section-level-3" id="b31e1b6b0031c84e67775ff64b719a830b3b7237">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -340,9 +339,9 @@ Names are inspired to indoor environments, but this interface works for outdoor 
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="b82cc77695aefe070bb03257f1202d01955b5bc3">
+      <tr class="sourcedoc-section section-element" id="d63ebfed6356b9430dbcbdc8521228d54ac62888">
         <td class="sourcedoc-section section-signature">
-          <code>door: F</code>
+          <code>door: E</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -358,7 +357,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="318fc3065eda8d30ab96180aef292c2417e0bec8">
+<div class="sourcedoc-section section-root section-level-3" id="33eef9e74121b1844b4b0427877443f89050975d">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -1585,6 +1584,14 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractcognitivepedestrian">AbstractCognitivePedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/abstractcondition">AbstractCondition</a>
     </li>
     
@@ -1633,7 +1640,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclidean2dconfigurablemovenode">AbstractEuclidean2DConfigurableMove...</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstracteuclideanconfigurablemovenode">AbstractEuclideanConfigurableMoveNode</a>
     </li>
     
 
@@ -1665,7 +1672,31 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstractheterogeneouspedestrian">AbstractHeterogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/abstracthomogeneouspedestrian">AbstractHomogeneousPedestrian</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/abstractlauncher">AbstractLauncher</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractlayeraction">AbstractLayerAction</a>
     </li>
     
 
@@ -1794,6 +1825,14 @@ Names are inspired to indoor environments, but this interface works for outdoor 
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringaction">AbstractSteeringAction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractsteeringactionwithtarget">AbstractSteeringActionWithTarget</a>
     </li>
     
 
@@ -2025,7 +2064,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidflowfield">AvoidFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/avoidlayer">AvoidLayer</a>
     </li>
     
 
@@ -2050,14 +2089,6 @@ Names are inspired to indoor environments, but this interface works for outdoor 
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/awtshapeextension">AwtShapeExtension</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/baseeuclideannavigationaction">BaseEuclideanNavigationAction</a>
     </li>
     
 
@@ -2609,6 +2640,14 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitiveorientingpedestrian2d">CognitiveOrientingPedestrian2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/cognitivepedestrian">CognitivePedestrian</a>
     </li>
     
@@ -2618,14 +2657,6 @@ Names are inspired to indoor environments, but this interface works for outdoor 
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrian2d">CognitivePedestrian2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/cognitivepedestrianimpl">CognitivePedestrianImpl</a>
     </li>
     
 
@@ -3457,22 +3488,6 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationaction">EuclideanNavigationAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/euclideannavigationstrategy">EuclideanNavigationStrategy</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environments/euclideanphysics2denvironmentwithgraph">EuclideanPhysics2DEnvironmentWithGr...</a>
     </li>
     
@@ -3705,14 +3720,6 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/flowfieldsteeringaction">FlowFieldSteeringAction</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followatdistance">FollowAtDistance</a>
     </li>
     
@@ -3721,7 +3728,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followflowfield">FollowFlowField</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followlayer">FollowLayer</a>
     </li>
     
 
@@ -3730,6 +3737,14 @@ Names are inspired to indoor environments, but this interface works for outdoor 
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followroute">FollowRoute</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/followscalarfield">FollowScalarField</a>
     </li>
     
 
@@ -4089,14 +4104,6 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/heterogeneouspedestrianimpl">HeterogeneousPedestrianImpl</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/launch/priority/high">High</a>
     </li>
     
@@ -4105,7 +4112,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneousorientingpedestrian2d">HomogeneousOrientingPedestrian2D</a>
     </li>
     
 
@@ -4113,7 +4120,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrianimpl">HomogeneousPedestrianImpl</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/homogeneouspedestrian2d">HomogeneousPedestrian2D</a>
     </li>
     
 
@@ -4250,6 +4257,14 @@ Names are inspired to indoor environments, but this interface works for outdoor 
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/environments/infinitehalls">InfiniteHalls</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/infinitepoints">InfinitePoints</a>
     </li>
     
 
@@ -4625,7 +4640,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/line">Line</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/line2d">Line2D</a>
     </li>
     
 
@@ -5001,6 +5016,22 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationaction2d">NavigationAction2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/navigationaction2dimpl">NavigationAction2DImpl</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/graph/navigationgraph">NavigationGraph</a>
     </li>
     
@@ -5026,6 +5057,14 @@ Names are inspired to indoor environments, but this interface works for outdoor 
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy">NavigationStrategy</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/navigationstrategy2d">NavigationStrategy2D</a>
     </li>
     
 
@@ -5233,23 +5272,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/cognitiveagents/characteristics/cognitive/orientingagent">OrientingAgent</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingcognitivepedestrian">OrientingCognitivePedestrian</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingcognitivepedestrian2d">OrientingCognitivePedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingagent">OrientingAgent</a>
     </li>
     
 
@@ -5265,7 +5288,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/orientingpedestrian2d">OrientingPedestrian2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/orientingpedestrian2d">OrientingPedestrian2D</a>
     </li>
     
 
@@ -5306,6 +5329,14 @@ Names are inspired to indoor environments, but this interface works for outdoor 
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup">PedestrianGroup</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/pedestriangroup2d">PedestrianGroup2D</a>
     </li>
     
 
@@ -5865,14 +5896,6 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/intersection2d/segment">Segment</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
@@ -6073,6 +6096,14 @@ Names are inspired to indoor environments, but this interface works for outdoor 
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/geometry/euclidean2d/slopeinterceptline2d">SlopeInterceptLine2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/socialforceagent">SocialForceAgent</a>
     </li>
     
@@ -6194,14 +6225,6 @@ Names are inspired to indoor environments, but this interface works for outdoor 
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/steeringactionwithtarget">SteeringActionWithTarget</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/steeringactionwithtargetimpl">SteeringActionWithTargetImpl</a>
     </li>
     
 
@@ -6601,7 +6624,7 @@ Names are inspired to indoor environments, but this interface works for outdoor 
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 9.3.0-devwt+f6d800101. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 9.3.0-devy7+9e95f2fa5. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
