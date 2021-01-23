@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/d7798f8/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/d7798f8/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/d7798f8/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/d7798f8/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.0-dev0d+e80d0b13c"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.0-dev0e+2077b1c7f"};
 </script>
 
 
@@ -197,32 +197,12 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="632cc6e6deda76d06da1e9b282759be5a4e9c17a">
+      <tr class="sourcedoc-section section-element" id="a81fd4d4513720722b4e4aadc244340d010a39d2">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/zoommanager">ZoomManager</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/slideinputmanager">SlideInputManager</a>, Any</code>
+          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/anglemanager">AngleManager</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/slideinputmanager">SlideInputManager</a>, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A class that implements the <code>IZoomManager</code> interface is able to convert the sliding of any physical/virtual device/control into a positive <code>double</code> value that represents a zoom rate.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="d9643ebe8fde98204a6dc33c64a7e69202452ff1">
-        <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d">Wormhole2D</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A Wormhole (in this context) is an entity that "connects" two worlds: the "environment" and the "view". Above all it provides services to convert coordinates from the "environment-space" to the "view-space". <code>IWormhole2D</code> is the type of a wormhole whose both environment and view are bi-dimensional spaces. <br> <br> <b>Terminology:</b> <br> <br> - "Environment" is the 'rectangle' we need to render ON the view.<br> - "View" is a 'window' that let us see the environment.<br> - "Environment-space" is the algebraic space on which 'lies' the environment.<br> - "View-space" is the algebraic space on which 'lies' the view.<br> - "Env" before a point's name => it refers to a point into the environment-space.<br> - "View" before a point's name => it refers to a point into the view-space.<br> - "Position" is the point of the view-space every transformation applied to the environment refers to: e.g. if I want to move the environment, I have to change the position; it is also the point the environment rotates around.<br> - "EnvOffset" is the vector from (0; 0) into env-space to the left-bottom corner of the part of the environment we want to render. E.g. if I am representing a map with Earth-coordinates (16; 48), the intersection between the prime meridian and the equator is (0; 0), so I have to set the envOffset to (16; 48) in order to see the "beginning" of the map on the left-bottom corner of the view.<br></p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="f8c6a8676293a249e5a6028b4eedab11d91c05ac">
-        <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/pointerspeed">PointerSpeed</a>: Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Base type for any pointing device: it provides services to analyze the pointer's movement.</p>
+        <p>A class that implements the <code>IAngleManager</code> interface is able to convert the sliding of any physical/virtual device/control into a positive <code>double</code> value that represents an angle.</p>
 
         </td>
       </tr>
@@ -237,6 +217,16 @@
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="632cc6e6deda76d06da1e9b282759be5a4e9c17a">
+        <td class="sourcedoc-section section-signature">
+          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/zoommanager">ZoomManager</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/slideinputmanager">SlideInputManager</a>, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A class that implements the <code>IZoomManager</code> interface is able to convert the sliding of any physical/virtual device/control into a positive <code>double</code> value that represents a zoom rate.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="c79eb5c43d4ebd5eac84dd62de1029c848d0625a">
         <td class="sourcedoc-section section-signature">
           <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/viewport">ViewPort</a>: Any</code>
@@ -247,12 +237,22 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="a81fd4d4513720722b4e4aadc244340d010a39d2">
+      <tr class="sourcedoc-section section-element" id="f8c6a8676293a249e5a6028b4eedab11d91c05ac">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/anglemanager">AngleManager</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/slideinputmanager">SlideInputManager</a>, Any</code>
+          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/pointerspeed">PointerSpeed</a>: Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A class that implements the <code>IAngleManager</code> interface is able to convert the sliding of any physical/virtual device/control into a positive <code>double</code> value that represents an angle.</p>
+        <p>Base type for any pointing device: it provides services to analyze the pointer's movement.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d9643ebe8fde98204a6dc33c64a7e69202452ff1">
+        <td class="sourcedoc-section section-signature">
+          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d">Wormhole2D</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A Wormhole (in this context) is an entity that "connects" two worlds: the "environment" and the "view". Above all it provides services to convert coordinates from the "environment-space" to the "view-space". <code>IWormhole2D</code> is the type of a wormhole whose both environment and view are bi-dimensional spaces. <br> <br> <b>Terminology:</b> <br> <br> - "Environment" is the 'rectangle' we need to render ON the view.<br> - "View" is a 'window' that let us see the environment.<br> - "Environment-space" is the algebraic space on which 'lies' the environment.<br> - "View-space" is the algebraic space on which 'lies' the view.<br> - "Env" before a point's name => it refers to a point into the environment-space.<br> - "View" before a point's name => it refers to a point into the view-space.<br> - "Position" is the point of the view-space every transformation applied to the environment refers to: e.g. if I want to move the environment, I have to change the position; it is also the point the environment rotates around.<br> - "EnvOffset" is the vector from (0; 0) into env-space to the left-bottom corner of the part of the environment we want to render. E.g. if I am representing a map with Earth-coordinates (16; 48), the intersection between the prime meridian and the equator is (0; 0), so I have to set the envOffset to (16; 48) in order to see the "beginning" of the map on the left-bottom corner of the view.<br></p>
 
         </td>
       </tr>
@@ -6494,7 +6494,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
     </li>
     
 
@@ -6502,7 +6502,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
 
@@ -6830,7 +6830,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
     </li>
     
 
@@ -6838,7 +6838,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
     </li>
     
 
@@ -6942,7 +6942,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/time">Time</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>
     </li>
     
 
@@ -6950,7 +6950,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/time">Time</a>
     </li>
     
 
@@ -7046,7 +7046,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/tape/jtapefeaturestack/type">Type</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/implementations/type">Type</a>
     </li>
     
 
@@ -7054,7 +7054,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/expressions/implementations/type">Type</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/tape/jtapefeaturestack/type">Type</a>
     </li>
     
 
@@ -7294,7 +7294,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.0-dev0d+e80d0b13c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.0-dev0e+2077b1c7f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7329,9 +7329,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/d7798f8/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/d7798f8/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/d7798f8/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
