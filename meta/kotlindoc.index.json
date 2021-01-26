@@ -13,20 +13,20 @@
               "ownKey": "math3",
               "childrenPages": {"distribution": {
                 "ownKey": "distribution",
-                "childrenPages": {"diracdeltaasdistribution": {
-                  "ownKey": "diracdeltaasdistribution",
+                "childrenPages": {"diracdeltadistribution": {
+                  "ownKey": "diracdeltadistribution",
                   "ownPages": [{
                     "reference": {
                       "path": "kotlindoc",
                       "baseUrl": "https://alchemistsimulator.github.io/latest",
-                      "fileName": "org/apache/commons/math3/distribution/diracdeltaasdistribution",
+                      "fileName": "org/apache/commons/math3/distribution/diracdeltadistribution",
                       "extension": "html",
                       "usePrettyUrl": true,
-                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/org/apache/commons/math3/distribution/diracdeltaasdistribution"
+                      "link": "https://alchemistsimulator.github.io/latest/kotlindoc/org/apache/commons/math3/distribution/diracdeltadistribution"
                     },
                     "description": "",
-                    "title": "DiracDeltaAsDistribution",
-                    "content": "<p>Models a Real Distribution backed by a Dirac Delta Function.\nThis is similar to a Logistic probability function with a shape whose value tends to zero.<\/p><p>In practice, samples from this function return the provided  value  as a constant.\nThe variance is zero, there is no randomness involved, and most of the useful information of a real distribution\nare actually lost.\nHowever, this utility can transform tools meant to work with a probability function in such a way that\nthey work with a constant value (e.g., random walks with a constant step).<\/p>value\n<p><init><\/p>\n<p>Models a Real Distribution backed by a Dirac Delta Function.\nThis is similar to a Logistic probability function with a shape whose value tends to zero.<\/p><p>In practice, samples from this function return the provided  value  as a constant.\nThe variance is zero, there is no randomness involved, and most of the useful information of a real distribution\nare actually lost.\nHowever, this utility can transform tools meant to work with a probability function in such a way that\nthey work with a constant value (e.g., random walks with a constant step).<\/p>\nprobability\n<p>density<\/p>\n<p>cumulativeProbability<\/p>\n<p>cumulativeProbability<\/p>\n<p>inverseCumulativeProbability<\/p>\n<p>getNumericalMean<\/p>\n<p>getNumericalVariance<\/p>\n<p>getSupportLowerBound<\/p>\n<p>getSupportUpperBound<\/p>\n<p>isSupportLowerBoundInclusive<\/p>\n<p>isSupportUpperBoundInclusive<\/p>\n<p>isSupportConnected<\/p>\n<p>reseedRandomGenerator<\/p>\n<p>sample<\/p>\n<p>sample<\/p>\n"
+                    "title": "DiracDeltaDistribution",
+                    "content": "<p>Models a Real Distribution backed by a Dirac Delta Function.\nThis is similar to a Logistic probability function with a shape whose value tends to zero.<\/p><p>In practice, samples from this function return the provided  value  as a constant.\nThe variance is zero, there is no randomness involved, and most of the useful information of a real distribution\nare actually lost.\nHowever, this utility can transform tools meant to work with a probability function in such a way that\nthey work with a constant value (e.g., random walks with a constant step).<\/p>value\n<p><init><\/p>\n<p>This constructor is meant for reflection compatibility only.\n randomGenerator  is unused.<\/p>\n<init>\n<p>Models a Real Distribution backed by a Dirac Delta Function.\nThis is similar to a Logistic probability function with a shape whose value tends to zero.<\/p><p>In practice, samples from this function return the provided  value  as a constant.\nThe variance is zero, there is no randomness involved, and most of the useful information of a real distribution\nare actually lost.\nHowever, this utility can transform tools meant to work with a probability function in such a way that\nthey work with a constant value (e.g., random walks with a constant step).<\/p>\nprobability\n\ndensity\n\ncumulativeProbability\n\ncumulativeProbability\n\ninverseCumulativeProbability\n\ngetNumericalMean\n\ngetNumericalVariance\n\ngetSupportLowerBound\n\ngetSupportUpperBound\n\nisSupportLowerBoundInclusive\n\nisSupportUpperBoundInclusive\n\nisSupportConnected\n\nreseedRandomGenerator\n\nsample\n\nsample\n\n"
                   }]
                 }},
                 "ownPages": [{
@@ -40,7 +40,7 @@
                   },
                   "description": "",
                   "title": "org.apache.commons.math3.distribution",
-                  "content": "<p>DiracDeltaAsDistribution<\/p>\n<p>Models a Real Distribution backed by a Dirac Delta Function.\nThis is similar to a Logistic probability function with a shape whose value tends to zero.<\/p><p>In practice, samples from this function return the provided  value  as a constant.\nThe variance is zero, there is no randomness involved, and most of the useful information of a real distribution\nare actually lost.\nHowever, this utility can transform tools meant to work with a probability function in such a way that\nthey work with a constant value (e.g., random walks with a constant step).<\/p>\n"
+                  "content": "<p>DiracDeltaDistribution<\/p>\n<p>Models a Real Distribution backed by a Dirac Delta Function.\nThis is similar to a Logistic probability function with a shape whose value tends to zero.<\/p><p>In practice, samples from this function return the provided  value  as a constant.\nThe variance is zero, there is no randomness involved, and most of the useful information of a real distribution\nare actually lost.\nHowever, this utility can transform tools meant to work with a probability function in such a way that\nthey work with a constant value (e.g., random walks with a constant step).<\/p>\n"
                 }]
               }}
             }}
@@ -10546,7 +10546,7 @@
                               },
                               "description": "",
                               "title": "AnyRealDistribution",
-                              "content": "<p>This class is able to use any distribution provided by Apache Math 3 as a subclass of RealDistribution. Being generic, however, it does not allow for dynamic rate tuning (namely, it can't be used to generate events with varying frequency based on <code> it.unibo.alchemist.model.interfaces.Condition#getPropensityContribution() <\/code>.<\/p><init>\n\n<init>\n\n<init>\n\n<init>\n\nupdateStatus\n\nclone\n\ngetRate\n\n"
+                              "content": "<p>This class is able to use any distribution provided by Apache Math 3 as a subclass of RealDistribution, blocking the execution if <code> it.unibo.alchemist.model.interfaces.Condition#getPropensityContribution() <\/code> returns zero for any condition.<\/p><init>\n\n<init>\n\n<init>\n\n<init>\n\nupdateStatus\n\nclone\n\ngetRate\n\n"
                             }]
                           },
                           "trigger": {
@@ -10625,7 +10625,7 @@
                           },
                           "description": "",
                           "title": "it.unibo.alchemist.model.implementations.timedistributions",
-                          "content": "<p>WeibullDistributedWeibullTime<\/p>\n<p>Weibull distributed events, with different (Weibull distributed) mean.<\/p>\nAbstractDistribution\n<p>This class provides, through a template method pattern, an utility that ensures that the distribution does not trigger events before its initial scheduling time.<\/p>\nRandomDiracComb\n<p>A <code> DiracComb <\/code> whose rate is determined (uniformly) randomly within the provided bounds.<\/p>\nAnyRealDistribution\n<p>This class is able to use any distribution provided by Apache Math 3 as a subclass of RealDistribution. Being generic, however, it does not allow for dynamic rate tuning (namely, it can't be used to generate events with varying frequency based on <code> it.unibo.alchemist.model.interfaces.Condition#getPropensityContribution() <\/code>.<\/p>\nWeibullTime\n<p>Weibull distributed events.<\/p>\nExponentialTime\n<p>Markovian events.<\/p>\nTrigger\n<p>DiracComb<\/p>\n<p>A DiracComb is a sequence of events that happen every fixed time interval.<\/p>\nSAPEREExponentialTime\n<p>Allows for a Markovian event whose lambda is computed dynamically using a rate equation.<\/p>\nSAPERETimeDistribution\n<p>Interface for TimeDistribution that need matches.<\/p>\n"
+                          "content": "<p>WeibullDistributedWeibullTime<\/p>\n<p>Weibull distributed events, with different (Weibull distributed) mean.<\/p>\nAbstractDistribution\n<p>This class provides, through a template method pattern, an utility that ensures that the distribution does not trigger events before its initial scheduling time.<\/p>\nRandomDiracComb\n<p>A <code> DiracComb <\/code> whose rate is determined (uniformly) randomly within the provided bounds.<\/p>\nAnyRealDistribution\n<p>This class is able to use any distribution provided by Apache Math 3 as a subclass of RealDistribution, blocking the execution if <code> it.unibo.alchemist.model.interfaces.Condition#getPropensityContribution() <\/code> returns zero for any condition.<\/p>\nWeibullTime\n<p>Weibull distributed events.<\/p>\nExponentialTime\n<p>Markovian events.<\/p>\nTrigger\n<p>DiracComb<\/p>\n<p>A DiracComb is a sequence of events that happen every fixed time interval.<\/p>\nSAPEREExponentialTime\n<p>Allows for a Markovian event whose lambda is computed dynamically using a rate equation.<\/p>\nSAPERETimeDistribution\n<p>Interface for TimeDistribution that need matches.<\/p>\n"
                         }]
                       },
                       "geometry": {
