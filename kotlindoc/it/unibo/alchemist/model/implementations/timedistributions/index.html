@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/510f5166/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/510f5166/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/510f5166/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/510f5166/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.0-dev0u+e829d9bf2"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.0-dev0w+79721be0b"};
 </script>
 
 
@@ -196,6 +196,23 @@
       </tr>
       </thead>
       <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4f41710f76c77148d413b48b08be462fa5966453">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/moleculecontrolledtimedistribution">MoleculeControlledTimeDistribution</a>&lt;T&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/anyrealdistribution">AnyRealDistribution</a>&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A special TimeDistribution that schedules the reaction after start,
+according to the value of a molecule which contains the delta time.
+If a property is specified, the value to be interpreted as time delta is read from the incarnation.
+Otherwise, the node is accessed directly for reading the value.</p><p>It's possible to associate an errorDistribution to this time distribution, whose samples will be used
+to shift the time samples.</p><p>There are some conditions to be satisfied:</p><ul><li>molecule must be modified exclusively by the reaction being scheduled</li><li>molecule must exist in the node. If it does not and the environment returns null, it is assumed to be zero</li><li>molecule must have a positive or zero value associated.</li><li>molecule's concentration must have a type which is understandable as a positive number
+(Number, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>, or a parse-able String).</li><li>the errorDistribution's samples plus the value of the molecule concentration (or property value)
+<b>must</b> always be greater than zero. It is thus recommended to use an errorDistribution whose
+support lower bound is zero or greater</li></ul>
+
+        </td>
+      </tr>
       
       <tr class="sourcedoc-section section-element" id="ba641e40c17cad30c98533e6601c31fab0367e7b">
         <td class="sourcedoc-section section-signature">
@@ -5469,6 +5486,14 @@
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/moleculecontrolledtimedistribution">MoleculeControlledTimeDistribution</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/conditions/moleculehasconcentration">MoleculeHasConcentration</a>
     </li>
     
@@ -7333,7 +7358,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.0-dev0u+e829d9bf2. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.0-dev0w+79721be0b. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7368,9 +7393,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/510f5166/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/510f5166/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/510f5166/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
