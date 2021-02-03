@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.0-dev1c+71535fd70"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.0-dev1f+2b4b72bef"};
 </script>
 
 
@@ -282,10 +282,24 @@ If you need to access the documentation for any older stable version, <a href="h
 </ul>
 </li>
 </ul>
+<h4 id="forking-the-project"><a href="#forking-the-project" id="forking-the-project" class="anchor"></a>Forking the project</h4>
+<p>To contribute to this project we suggest to fork it and work on your copy.
+Working on your copy allows you to:</p>
+<ul>
+<li>push all your commits and save your work in remote</li>
+<li>use CI jobs to check the project status</li>
+<li>open pull request easily directly from GitHub</li>
+</ul>
+<p>This project defines several CI jobs. One of them (<code>automerge</code>) requires a secret with:</p>
+<ul>
+<li>name = AUTOMERGE_TOKEN</li>
+<li>value = a github token with <code>public_repo</code> scope. If you already have a token with the required scope, then you can use it, otherwise you have to <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">create a new token</a></li>
+</ul>
+<p>If you don't provide it, then the CI workflow will fail even though the project status is correct.</p>
 <h4 id="importing-the-project-1"><a href="#importing-the-project-1" id="importing-the-project-1" class="anchor"></a>Importing the project</h4>
 <ol start="0">
 <li>Windows user should perform an additional first step: before cloning the repository, make sure that the autocrlf feature of git is disabled, by issuing <code>git config --global core.autocrlf false</code>. If the step is not performed, git will automatically insert CRLF line endings, violating the project's Checkstyle rules (which are rather strict, and prevent the build from succeeding).</li>
-<li>Clone this repository in a folder of your preference using <code>git clone</code> appropriately</li>
+<li>Clone this repository in a folder of your preference using <code>git clone --recurse-submodules</code> appropriately</li>
 <li>Open IntellJ. If a project opens automatically, select &quot;Close project&quot;. You should be on the welcome screen of IntelliJ idea.</li>
 <li>Select &quot;Import Project&quot;</li>
 <li>Navigate your file system and find the folder where you cloned the repository. <strong>Do not select it</strong>. Open the folder, and you should find a lowercase <code>alchemist</code> folder. That is the correct project folder, not the outermost <code>Alchemist</code> folder (created by <code>git</code> in case you cloned without specifying a different folder name). Once the correct folder has been selected, click <kbd>Ok</kbd></li>
@@ -7348,7 +7362,7 @@ If you want to generate the artifacts, you can rely on Gradle. Just point a term
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.0-dev1c+71535fd70. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.0-dev1f+2b4b72bef. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
