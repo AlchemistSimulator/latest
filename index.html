@@ -72,7 +72,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.0-dev1f+2b4b72bef"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.0-dev1r+723ca7218"};
 </script>
 
 
@@ -262,9 +262,23 @@ Add this dependency to your build, substituting <code>ALCHEMIST_VERSION</code> w
 <h3 id="javadocs"><a href="#javadocs" id="javadocs" class="anchor"></a>Javadocs</h3>
 <p>Javadocs are available for both <a href="http://alchemist-doc.surge.sh/">the latest stable version</a> and <a href="http://alchemist-unstable-doc.surge.sh/">the latest development snapshot</a>.
 If you need to access the documentation for any older stable version, <a href="https://www.javadoc.io/doc/it.unibo.alchemist/alchemist/">javadoc.io</a> is probably the right place to search in.</p>
-<h3 id="importing-the-project"><a href="#importing-the-project" id="importing-the-project" class="anchor"></a>Importing the project</h3>
+<h3 id="developing-alchemist-namely-evolving-the-simulator-not-using-it-for-simulating-stuff"><a href="#developing-alchemist-namely-evolving-the-simulator-not-using-it-for-simulating-stuff" id="developing-alchemist-namely-evolving-the-simulator-not-using-it-for-simulating-stuff" class="anchor"></a>Developing Alchemist (namely evolving the simulator, not using it for simulating stuff)</h3>
+<h4 id="forking-the-project"><a href="#forking-the-project" id="forking-the-project" class="anchor"></a>Forking the project</h4>
+<p>To contribute to this project we recommend to fork it and work on your own copy so that you can:</p>
+<ul>
+<li>push all your commits, saving your work on the cloud;</li>
+<li>exploit the included continuous integration jobs to check the project status;</li>
+<li>contribute back to the main project via pull requests directly from GitHub.</li>
+</ul>
+<p>This project defines several CI jobs.
+Some rely on an automatic merge system (<a href="https://github.com/marketplace/actions/yet-another-automerge-github-action">YAAGHA</a>) which requires a repository secret with:</p>
+<ul>
+<li>name = AUTOMERGE_TOKEN</li>
+<li>value = a github token with <code>public_repo</code> scope (or <code>repo</code>, if your fork is private). If you already have a token with the required scope, then you can reuse it, otherwise you have to <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">create a new token</a>.</li>
+</ul>
+<p>If you don't provide it, then the CI workflow is likely to fail even though the project status is correct.</p>
+<h4 id="recommended-ide-configuration"><a href="#recommended-ide-configuration" id="recommended-ide-configuration" class="anchor"></a>Recommended IDE configuration</h4>
 <p>The project is easiest to import in IntelliJ Idea.</p>
-<h4 id="recommended-configuration"><a href="#recommended-configuration" id="recommended-configuration" class="anchor"></a>Recommended configuration</h4>
 <p>Install the following plugins (use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>, then search for &quot;Plugins&quot;):</p>
 <ul>
 <li>From the main list:
@@ -282,36 +296,29 @@ If you need to access the documentation for any older stable version, <a href="h
 </ul>
 </li>
 </ul>
-<h4 id="forking-the-project"><a href="#forking-the-project" id="forking-the-project" class="anchor"></a>Forking the project</h4>
-<p>To contribute to this project we suggest to fork it and work on your copy.
-Working on your copy allows you to:</p>
-<ul>
-<li>push all your commits and save your work in remote</li>
-<li>use CI jobs to check the project status</li>
-<li>open pull request easily directly from GitHub</li>
-</ul>
-<p>This project defines several CI jobs. One of them (<code>automerge</code>) requires a secret with:</p>
-<ul>
-<li>name = AUTOMERGE_TOKEN</li>
-<li>value = a github token with <code>public_repo</code> scope. If you already have a token with the required scope, then you can use it, otherwise you have to <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token">create a new token</a></li>
-</ul>
-<p>If you don't provide it, then the CI workflow will fail even though the project status is correct.</p>
-<h4 id="importing-the-project-1"><a href="#importing-the-project-1" id="importing-the-project-1" class="anchor"></a>Importing the project</h4>
-<ol start="0">
-<li>Windows user should perform an additional first step: before cloning the repository, make sure that the autocrlf feature of git is disabled, by issuing <code>git config --global core.autocrlf false</code>. If the step is not performed, git will automatically insert CRLF line endings, violating the project's Checkstyle rules (which are rather strict, and prevent the build from succeeding).</li>
-<li>Clone this repository in a folder of your preference using <code>git clone --recurse-submodules</code> appropriately</li>
-<li>Open IntellJ. If a project opens automatically, select &quot;Close project&quot;. You should be on the welcome screen of IntelliJ idea.</li>
-<li>Select &quot;Import Project&quot;</li>
-<li>Navigate your file system and find the folder where you cloned the repository. <strong>Do not select it</strong>. Open the folder, and you should find a lowercase <code>alchemist</code> folder. That is the correct project folder, not the outermost <code>Alchemist</code> folder (created by <code>git</code> in case you cloned without specifying a different folder name). Once the correct folder has been selected, click <kbd>Ok</kbd></li>
-<li>Select &quot;Import Project from external model&quot;</li>
-<li>Make sure &quot;Gradle&quot; is selected as external model tool</li>
-<li>Click <kbd>Finish</kbd></li>
-<li>If prompted to override any .idea file, try to answer <kbd>No</kbd>. It's possible that IntelliJ refuses to proceed, in which case click <kbd>Finish</kbd> again, then select <kbd>Yes</kbd>.</li>
-<li>A dialog stating that &quot;IntelliJ IDEA found a Gradle build script&quot; may appear, in such case answer <kbd>Import Gradle Project</kbd>.</li>
-<li>Wait for the IDE to import the project from Gradle. The process may take several minutes, due to the amount of dependencies. Should the synchronization fail, make sure that the IDE's Gradle is configured correctly:</li>
-<li>In 'Settings -&gt; Build, Execution, Deployment -&gt; Build Tools &gt; Gradle', for the option 'Use Gradle from' select 'gradle-wrapper.properties file'. Enabling auto-import is also recommended.</li>
-<li><strong>Important:</strong> Alchemist requires java 11+, so make sure the 'Gradle JVM' option points to such a version (if you don't have a JDK 11+ installed make sure to get one).</li>
-<li>Once imported, the project may still be unable to compile, due to missing sources in incarnation-biochemistry. This problem can be solved by opening the IntelliJ terminal (e.g. with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>, typing &quot;terminal&quot; and pressing <kbd>Enter</kbd>), and issue:</li>
+<h4 id="importing-the-project"><a href="#importing-the-project" id="importing-the-project" class="anchor"></a>Importing the project</h4>
+<ol>
+<li>
+<p>Clone this repository in a folder of your preference using <code>git clone --recurse-submodules &lt;ALCHEMIST_REPO_URI&gt;</code>.</p>
+</li>
+<li>
+<p>Right click on <code>settings.gradle.kts</code>, select &quot;Open With&quot; and use IntelliJ Idea.
+The procedure may be slightly different depending on your operating system and desktop environment.
+If you have a terminal, and if you can launch idea from there, just:</p>
+<ol>
+<li><code>cd &lt;LOCATION_WHERE_YOU_CLONED_THE REPOSITORY&gt;</code></li>
+<li><code>idea .</code> (we are assuming that you can launch IntelliJ Idea with the <code>idea</code> command, replace it with the correct one for your syustem</li>
+</ol>
+</li>
+<li>
+<p>In 'Settings -&gt; Build, Execution, Deployment -&gt; Build Tools &gt; Gradle', for the option 'Use Gradle from' select 'gradle-wrapper.properties file'. Enabling auto-import is also recommended.</p>
+</li>
+<li>
+<p><strong>Important:</strong> Alchemist requires java 11+, so make sure the 'Gradle JVM' option points to such a version (if you don't have a JDK 11+ installed make sure to get one).</p>
+</li>
+<li>
+<p>Once imported, the project may still be unable to compile, due to missing sources in incarnation-biochemistry. This problem can be solved by opening the IntelliJ terminal (e.g. with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>, typing &quot;terminal&quot; and pressing <kbd>Enter</kbd>), and issue:</p>
+</li>
 </ol>
 <ul>
 <li>On Unix: <code>./gradlew alchemist-incarnation-biochemistry:generateGrammarSource</code></li>
@@ -7362,7 +7369,7 @@ If you want to generate the artifacts, you can rely on Gradle. Just point a term
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.0-dev1f+2b4b72bef. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.0-dev1r+723ca7218. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
