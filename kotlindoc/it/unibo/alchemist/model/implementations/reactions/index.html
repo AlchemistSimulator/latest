@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.0-dev1w+6bd95595c"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev02+5985f85cb"};
 </script>
 
 
@@ -281,6 +281,16 @@ is used to combine steering actions and physical forces.</p>
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="55178962eab4739659370b01e487dbaff75c1ab4">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>The type which describes the concentration of a molecule This class offers a partial implementation of Reaction. In particular, it allows to write new reaction specifying only which distribution time to adopt</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="cf45d1bfe3839cf3bd3b8d7a17be5d6f70e79a85">
         <td class="sourcedoc-section section-signature">
           <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/chemicalreaction">ChemicalReaction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;T&gt;</code>
@@ -290,12 +300,12 @@ is used to combine steering actions and physical forces.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="55178962eab4739659370b01e487dbaff75c1ab4">
+      <tr class="sourcedoc-section section-element" id="ab2bd5d99071fb5785698874d7c5943d6b5bb37c">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a>&lt;T&gt;, Any</code>
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/biochemicalreactionbuilder">BiochemicalReactionBuilder</a>&lt;P&gt; : Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>The type which describes the concentration of a molecule This class offers a partial implementation of Reaction. In particular, it allows to write new reaction specifying only which distribution time to adopt</p>
+        <p>This class implements a builder for chemical reactions.</p>
 
         </td>
       </tr>
@@ -310,12 +320,12 @@ is used to combine steering actions and physical forces.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="ab2bd5d99071fb5785698874d7c5943d6b5bb37c">
+      <tr class="sourcedoc-section section-element" id="4bc5e168ba1554a9f92dc3432323d6579da831e6">
         <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/biochemicalreactionbuilder">BiochemicalReactionBuilder</a>&lt;P&gt; : Any</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/saperegradient">SAPEREGradient</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>This class implements a builder for chemical reactions.</p>
+        <p>This class provides a fast and stable gradient implementation, inspired on the NBR construct used in Proto.</p>
 
         </td>
       </tr>
@@ -326,16 +336,6 @@ is used to combine steering actions and physical forces.</p>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>This class realizes a reaction with Lsa concentrations.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="4bc5e168ba1554a9f92dc3432323d6579da831e6">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/saperegradient">SAPEREGradient</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/reactions/abstractreaction">AbstractReaction</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This class provides a fast and stable gradient implementation, inspired on the NBR construct used in Proto.</p>
 
         </td>
       </tr>
@@ -5489,7 +5489,7 @@ is used to combine steering actions and physical forces.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d/mode">Mode</a>
     </li>
     
 
@@ -5497,7 +5497,7 @@ is used to combine steering actions and physical forces.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
     </li>
     
 
@@ -6585,7 +6585,7 @@ is used to combine steering actions and physical forces.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
 
@@ -6593,7 +6593,7 @@ is used to combine steering actions and physical forces.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
     </li>
     
 
@@ -7385,7 +7385,7 @@ is used to combine steering actions and physical forces.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.0-dev1w+6bd95595c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.1-dev02+5985f85cb. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7420,9 +7420,9 @@ is used to combine steering actions and physical forces.</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/7ef973e5/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/47372a38/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
