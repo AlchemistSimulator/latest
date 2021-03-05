@@ -3368,7 +3368,7 @@
                       },
                       "description": "",
                       "title": "YamlLoader",
-                      "content": "<p>Loads a properly formatted YAML file and provides method for instancing a batch of scenarios.<\/p><init>\n\n<init>\n\n<init>\n\ngetVariables\n\ngetDefault\n\ngetWith\n\ngetConstants\n\ngetDependencies\n\ngetDependentVariables\n\ngetDataExtractors\n\n"
+                      "content": "<p>Loads a properly formatted YAML file and provides method for instancing a batch of scenarios.<\/p><init>\n\n<init>\n\n<init>\n\ngetVariables\n\ngetRemoteDependencies\n\ngetDefault\n\ngetWith\n\ngetConstants\n\ngetDependentVariables\n\ngetDataExtractors\n\n"
                     }]
                   },
                   "graphstreamsupport": {
@@ -3436,6 +3436,22 @@
                           "description": "",
                           "title": "ArbitraryVariable",
                           "content": "<p>A variable spanning over an arbitrary set of values.<\/p><init>\n\n<init>\n\ngetDefault\n\nstream\n\n"
+                        }]
+                      },
+                      "constant": {
+                        "ownKey": "constant",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/loader/variables/constant",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/constant"
+                          },
+                          "description": "",
+                          "title": "Constant",
+                          "content": "<p>A constant  value , expressed as a variable to promote code reuse in Alchemist specifications.<\/p>value\n<p><init><\/p>\n<p>A constant  value , expressed as a variable to promote code reuse in Alchemist specifications.<\/p>\ngetWith\n"
                         }]
                       },
                       "flag": {
@@ -3546,7 +3562,7 @@
                       },
                       "description": "",
                       "title": "it.unibo.alchemist.loader.variables",
-                      "content": "<p>JSR223Variable<\/p>\n<p>This variable loads any <a href=\"http://archive.fo/PGdk8\">JSR-233<\/a> language available in the classpath.<\/p>\nVariable\n<p>A variable simulation value, that provides a range of values for batches, and a default value for single-shot runs.<\/p>\nNumericConstant\n<p>A numeric constant.<\/p>\nFlag\n<p>This variable is a flag. Being booleans not a valid data type in charts, this variable just outputs 0 and 1. This is equivalent to a <code> LinearVariable <\/code> with two samples ranging from 0 to 1.<\/p>\nPrintableVariable\n<p>A variable stub, with a default <code> #toString() <\/code> method.<\/p>\nGeometricVariable\n<p>A variable ranging geometrically (exponentially) in a range. Ideal for log-scale comparisons. e.g. a <code> GeometricVariable <\/code> with minimum = 1, maximum = 100 and samples = 5 will range over [1, ~3.16, 10, ~31.62 100]. Both min and max must be strictly bigger than 0.<\/p>\nLinearVariable\n<p>This class represents a linear variable, namely a variable whose values span linearly between minimum and maximum.<\/p>\nDependentVariable\n<p>A dependent variable, namely a variable whose value can be obtained given the values of other variables.<\/p>\nArbitraryVariable\n<p>A variable spanning over an arbitrary set of values.<\/p>\n"
+                      "content": "<p>Constant<\/p>\n<p>A constant  value , expressed as a variable to promote code reuse in Alchemist specifications.<\/p>\nJSR223Variable\n<p>This variable loads any <a href=\"http://archive.fo/PGdk8\">JSR-233<\/a> language available in the classpath.<\/p>\nVariable\n<p>A variable simulation value, that provides a range of values for batches, and a default value for single-shot runs.<\/p>\nNumericConstant\n<p>A numeric constant.<\/p>\nFlag\n<p>This variable is a flag. Being booleans not a valid data type in charts, this variable just outputs 0 and 1. This is equivalent to a <code> LinearVariable <\/code> with two samples ranging from 0 to 1.<\/p>\nPrintableVariable\n<p>A variable stub, with a default <code> #toString() <\/code> method.<\/p>\nGeometricVariable\n<p>A variable ranging geometrically (exponentially) in a range. Ideal for log-scale comparisons. e.g. a <code> GeometricVariable <\/code> with minimum = 1, maximum = 100 and samples = 5 will range over [1, ~3.16, 10, ~31.62 100]. Both min and max must be strictly bigger than 0.<\/p>\nLinearVariable\n<p>This class represents a linear variable, namely a variable whose values span linearly between minimum and maximum.<\/p>\nDependentVariable\n<p>A dependent variable, namely a variable whose value can be obtained given the values of other variables.<\/p>\nArbitraryVariable\n<p>A variable spanning over an arbitrary set of values.<\/p>\n"
                     }]
                   },
                   "shapes": {
@@ -3644,7 +3660,7 @@
                       },
                       "description": "",
                       "title": "Loader",
-                      "content": "<p>An entity which is able to produce an Alchemist <code> Environment <\/code>, possibly with user defined variable values.<\/p>getDefault\n<p>getVariables<\/p>\n<p>getWith<\/p>\n<p>getConstants<\/p>\n<p>Allows to access the currently defined constants, namely variables defined in the simulation file whose value is constant and does not depend on the value of any free variable (directly or indirectly).<\/p>\ngetDependencies\n<p>getDependentVariables<\/p>\n<p>Allows to access the currently defined dependent variable (those variables whose value can be determined given a valid set of values for the free variables).<\/p>\ngetDataExtractors\n"
+                      "content": "<p>An entity which is able to produce an Alchemist <code> Environment <\/code>, possibly with user defined variable values.<\/p>getDefault\n<p>getVariables<\/p>\n<p>getWith<\/p>\n<p>getConstants<\/p>\n<p>Allows to access the currently defined constants, namely variables defined in the simulation file whose value is constant and does not depend on the value of any free variable (directly or indirectly).<\/p>\ngetDependentVariables\n<p>Allows to access the currently defined dependent variable (those variables whose value can be determined given a valid set of values for the free variables).<\/p>\ngetDataExtractors\n<p>getRemoteDependencies<\/p>\n"
                     }]
                   },
                   "displacements": {
@@ -4162,6 +4178,104 @@
                       "title": "it.unibo.alchemist.loader.export",
                       "content": "<p>Time<\/p>\n<p>Exports a column with the current time.<\/p>\nExecutionTime\n<p>An extractor which provides informations about the running time of the simulation.<\/p>\nMoleculeReader\n<p>Reads the value of a molecule and logs it.<\/p>\nExporter\n<p>Writes on file data provided by a number of <code> Extractor <\/code>s. Produces a CSV with '#' as comment character. Even though this class implements <code> OutputMonitor <\/code>, it is not <code><a href=\"https://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html\">java.io.Serializable<\/a><\/code>.<\/p>\nStatUtil\n<p>Utility to translate statistics names into a UnivariateStatistic.<\/p>\nExtractor\n<p>An object that is able to extract numeric informations from an Alchemist <code> Environment <\/code>, given the current <code> it.unibo.alchemist.core.interfaces.Simulation <\/code> <code> Time <\/code>, the last <code> Reaction <\/code> executed and the current simulation step.<\/p>\nMeanSquaredError\n<p>Exports the Mean Squared Error for the concentration of some molecule, given another molecule that carries the correct result. The correct value is extracted from every node, then the provided UnivariateStatistic is applied to get a single, global correct value. Then, the actual value is extracted from every node, its value is compared (subtracted) to the computed correct value, it gets squared, and then logged.<\/p>\nFilteringPolicy\n<p>Expresses a flat map operation over a double.<\/p>\nNumberOfNodes\n<p>Logs the number of nodes in the scenario.<\/p>\nit.unibo.alchemist.loader.export.statistic\n<p>it.unibo.alchemist.loader.export.filters<\/p>\n"
                     }]
+                  },
+                  "konf": {
+                    "ownKey": "konf",
+                    "childrenPages": {
+                      "simulationmodelvisitor": {
+                        "ownKey": "simulationmodelvisitor",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/loader/konf/simulationmodelvisitor",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/simulationmodelvisitor"
+                          },
+                          "description": "",
+                          "title": "SimulationModelVisitor",
+                          "content": "<p>Contains the model-to-model translation between the Alchemist YAML specification and the\nloading system.<\/p>logger\n<p>visitYaml<\/p>\n<p>visitYaml<\/p>\n<p>visitYaml<\/p>\n<p>visitYaml<\/p>\n<p>visitRoot<\/p>\n"
+                        }]
+                      },
+                      "namedparametersconstructor": {
+                        "ownKey": "namedparametersconstructor",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/loader/konf/namedparametersconstructor",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/namedparametersconstructor"
+                          },
+                          "description": "",
+                          "title": "NamedParametersConstructor",
+                          "content": "<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p><init>\n<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p>\nparametersFor\n<p>provided a  target  class, extracts the parameters as an ordered list.<\/p>\ntoString\n\n"
+                        }]
+                      },
+                      "jvmconstructor": {
+                        "ownKey": "jvmconstructor",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/loader/konf/jvmconstructor",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/jvmconstructor"
+                          },
+                          "description": "",
+                          "title": "JVMConstructor",
+                          "content": "<p>A constructor for a JVM class of type  typeName .<\/p>typeName\n<p>parametersFor<\/p>\n<p>provided a  target  class, extracts the parameters as an ordered list.<\/p>\nbuildAny\n<p>Provided a JIRF  factory , builds an instance of the requested type  T  or fails gracefully,\nreturning a <a href=\"#\">Result<\/a>.<\/p>\nbuildAny\n<p>Provided a JIRF  factory , builds an instance of the requested  type  T or fails gracefully,\nreturning a <a href=\"#\">Result<\/a>.<\/p>\n"
+                        }]
+                      },
+                      "orderedparametersconstructor": {
+                        "ownKey": "orderedparametersconstructor",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/loader/konf/orderedparametersconstructor",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/orderedparametersconstructor"
+                          },
+                          "description": "",
+                          "title": "OrderedParametersConstructor",
+                          "content": "<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p><init>\n<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p>\nparametersFor\n<p>provided a  target  class, extracts the parameters as an ordered list.<\/p>\ntoString\n\n"
+                        }]
+                      },
+                      "objectfactory": {
+                        "ownKey": "objectfactory",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/loader/konf/objectfactory",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/objectfactory"
+                          },
+                          "description": "",
+                          "title": "ObjectFactory",
+                          "content": "<p>makeBaseFactory<\/p>\n"
+                        }]
+                      }
+                    },
+                    "ownPages": [{
+                      "reference": {
+                        "path": "kotlindoc",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "it/unibo/alchemist/loader/konf",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf"
+                      },
+                      "description": "",
+                      "title": "it.unibo.alchemist.loader.konf",
+                      "content": "<p>OrderedParametersConstructor<\/p>\n<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p>\nNamedParametersConstructor\n<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p>\nJVMConstructor\n<p>A constructor for a JVM class of type  typeName .<\/p>\nObjectFactory\n<p>SimulationModelVisitor<\/p>\n<p>Contains the model-to-model translation between the Alchemist YAML specification and the\nloading system.<\/p>\nleftOrNull\n<p>Returns the left of this <a href=\"#\">Either<\/a> if it is left, and null otherwise.<\/p>\nrightOrNull\n<p>Returns the right of this <a href=\"#\">Either<\/a> if it is right, and null otherwise.<\/p>\n"
+                    }]
                   }
                 },
                 "ownPages": [{
@@ -4175,7 +4289,7 @@
                   },
                   "description": "",
                   "title": "it.unibo.alchemist.loader",
-                  "content": "<p>GraphStreamSupport<\/p>\n<p>Support class for GraphStream, composed of a  linkingRule  and a  displacement .<\/p>\nIllegalAlchemistYAMLException\n<p>This exception is thrown when the Alchemist YAML does not conform to the specification.<\/p>\nYamlLoader\n<p>Loads a properly formatted YAML file and provides method for instancing a batch of scenarios.<\/p>\nLoader\n<p>An entity which is able to produce an Alchemist <code> Environment <\/code>, possibly with user defined variable values.<\/p>\nit.unibo.alchemist.loader.displacements\n<p>it.unibo.alchemist.loader.variables<\/p>\n<p>it.unibo.alchemist.loader.shapes<\/p>\n<p>it.unibo.alchemist.loader.export<\/p>\n"
+                  "content": "<p>GraphStreamSupport<\/p>\n<p>Support class for GraphStream, composed of a  linkingRule  and a  displacement .<\/p>\nIllegalAlchemistYAMLException\n<p>This exception is thrown when the Alchemist YAML does not conform to the specification.<\/p>\nYamlLoader\n<p>Loads a properly formatted YAML file and provides method for instancing a batch of scenarios.<\/p>\nLoader\n<p>An entity which is able to produce an Alchemist <code> Environment <\/code>, possibly with user defined variable values.<\/p>\nit.unibo.alchemist.loader.displacements\n<p>it.unibo.alchemist.loader.konf<\/p>\n<p>it.unibo.alchemist.loader.variables<\/p>\n<p>it.unibo.alchemist.loader.shapes<\/p>\n<p>it.unibo.alchemist.loader.export<\/p>\n"
                 }]
               },
               "launch": {
