@@ -23,7 +23,7 @@
 
 
 
-<title>SimulationModelVisitor</title>
+<title>NamedParametersConstructor</title>
 
 
 <meta name="description" content="An extensible simulator for doing science and engineering in pervasive, bio-inspired, and aggregate computing.">
@@ -57,7 +57,7 @@
 <!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
 <!-- Layout: index -->
 <!-- Resolved Layout: templates/layouts/index.peb -->
-<!-- Page Template: kotlindocObject, sourceDocPage, classes, page -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
 <!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
 
 <!-- RESOURCE -->
@@ -66,7 +66,7 @@
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/loader/konf/simulationmodelvisitor","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/simulationmodelvisitor"},"description":"","title":"SimulationModelVisitor"};
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"it/unibo/alchemist/loader/yaml/namedparametersconstructor","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml/namedparametersconstructor"},"description":"","title":"NamedParametersConstructor"};
 </script>
 
 <!-- end:debug info -->
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev17+804964978"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev19+0ab62fd27"};
 </script>
 
 
@@ -144,7 +144,7 @@
             
             
                 <section id="pageContent">
-                    <header class="major"><h2>SimulationModelVisitor</h2></header>
+                    <header class="major"><h2>NamedParametersConstructor</h2></header>
                     <article>
                         
     <!-- start:inject components -->
@@ -155,16 +155,16 @@
                     
                         <div class="sourcedoc-page orchid-sourcedoc content">
   
-<div class="sourcedoc-section section-root section-level-1" id="SimulationModelVisitor">
+<div class="sourcedoc-section section-root section-level-1" id="NamedParametersConstructor">
 
 
   
 
   
-    <div class="sourcedoc-section section-element" id="61dfd19f61384e88927e444efee40ddd3cf032f9">
+    <div class="sourcedoc-section section-element" id="bd8bc3a74d11b1795b5844d56f77c6aa1687aa0a">
       
       <p class="sourcedoc-section section-signature">
-        <code>object <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/simulationmodelvisitor">SimulationModelVisitor</a>: Any</code>
+        <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml/namedparametersconstructor">NamedParametersConstructor</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml/jvmconstructor">JVMConstructor</a></code>
       </p>
 
       
@@ -176,18 +176,46 @@
 
       
 
-      <div class="sourcedoc-section section-comments"><p>Contains the model-to-model translation between the Alchemist YAML specification and the
-loading system.</p>
+      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml/jvmconstructor">JVMConstructor</a> whose parameters are named
+and hence stored in a parametersMap
+(no pure Java class works with named parameters now, Kotlin-only).</p>
 </div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-2" id="fields">
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
 
 
-  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="986dd69f7493a7ee6c6f02bb979a6df18965323e">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(type: String, parametersMap: Map&lt;*, *&gt;)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>A <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml/jvmconstructor">JVMConstructor</a> whose parameters are named
+and hence stored in a parametersMap
+(no pure Java class works with named parameters now, Kotlin-only).</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="7ada7041cf0fedd80f0aca905a5b056b1e3fbc25">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
 
   <div class="table-container">
     <table class="table is-fullwidth is-bordered">
@@ -199,9 +227,18 @@ loading system.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="4bb43243bbfd7fdb6dbf44c858a2716e28dc3b5a">
+      <tr class="sourcedoc-section section-element" id="7833d6294c99ba226565ed518783e813a281ea88">
         <td class="sourcedoc-section section-signature">
-          <code>val logger: LoggerFactory.getLogger(SimulationModelVisitor::class.java)</code>
+          <code>type: String</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9dc9ca5fdd613551b6ad626bdb0c2c99938ee9a1">
+        <td class="sourcedoc-section section-signature">
+          <code>parametersMap: Map&lt;*, *&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -212,6 +249,13 @@ loading system.</p>
     </table>
   </div>
 
+
+</div>
+
+        
+      
+    </div>
+  
 
 </div>
 
@@ -225,23 +269,24 @@ loading system.</p>
   
 
   
-    <div class="sourcedoc-section section-element" id="6e5fddb157d3b4d852bf65d605b5efa06684ba84">
+    <div class="sourcedoc-section section-element" id="53fc9d2cc8f6414b67b4cf80ddb06c80e790357f">
       
-      <h3 class="sourcedoc-section element-name">visitYaml</h3>
+      <h3 class="sourcedoc-section element-name">parametersFor</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun visitYaml(yaml: String): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a></code>
+        <code>fun &lt;T : Any&gt; parametersFor(target: KClass&lt;T&gt;): List&lt;*&gt;</code>
       </p>
 
       
 
-      <div class="sourcedoc-section section-comments"></div>
+      <div class="sourcedoc-section section-comments"><p>provided a target class, extracts the parameters as an ordered list.</p>
+</div>
 
       
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="4f7d99e03356d45c0e1180225bd98ff01aaceb70">
+<div class="sourcedoc-section section-root section-level-3" id="34190c725697c1ffa21362eed45157bf5be58424">
 
 
   <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
@@ -256,9 +301,9 @@ loading system.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="950ac8deb50dd64bde3ed433e1e171629428ed13">
+      <tr class="sourcedoc-section section-element" id="b9e155225430c018f828d184323da182ce3d6344">
         <td class="sourcedoc-section section-signature">
-          <code>yaml: String</code>
+          <code>target: KClass&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -274,7 +319,7 @@ loading system.</p>
 
         
           
-<div class="sourcedoc-section section-root section-level-3" id="12c7994fdf2191ad558b712af3177b57b3b30cc6">
+<div class="sourcedoc-section section-root section-level-3" id="ba3336be7206fc0a6c4d24214a2abe67cb98395c">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -289,9 +334,9 @@ loading system.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="ec6f9069daa80029e880d76fc3bf6a0698a7d554">
+      <tr class="sourcedoc-section section-element" id="d6b1ca1e8e0ee45218b6b55b89eb1e82696f9c37">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a></code>
+          <code>List&lt;*&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -309,12 +354,12 @@ loading system.</p>
       
     </div>
   
-    <div class="sourcedoc-section section-element" id="fb70fab341301ecdc4b017f05ee45d87f09752dd">
+    <div class="sourcedoc-section section-element" id="01d86357db616e3d839e73745db55c033ca70ffb">
       
-      <h3 class="sourcedoc-section element-name">visitYaml</h3>
+      <h3 class="sourcedoc-section element-name">toString</h3>
       
       <p class="sourcedoc-section section-signature">
-        <code>fun visitYaml(yaml: Reader): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a></code>
+        <code>fun toString(): String</code>
       </p>
 
       
@@ -325,40 +370,7 @@ loading system.</p>
       
         
           
-<div class="sourcedoc-section section-root section-level-3" id="3f71dd734b1417db728cbe98169376ad05dc9f0e">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="a237e533555717b12dbd522f309babe39d6249ed">
-        <td class="sourcedoc-section section-signature">
-          <code>yaml: Reader</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="14a3c65b4feec576c43049f5112a6e3fcdb66f8f">
+<div class="sourcedoc-section section-root section-level-3" id="51cc9ed56b4c58e53a7efded8900e33c932371be">
 
 
   <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
@@ -373,261 +385,9 @@ loading system.</p>
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="ec6f9069daa80029e880d76fc3bf6a0698a7d554">
+      <tr class="sourcedoc-section section-element" id="3df63b7acb0522da685dad5fe84b81fdd7b25264">
         <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a></code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="281dbd2a86282943582a8815c55ff26f381385ca">
-      
-      <h3 class="sourcedoc-section element-name">visitYaml</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun visitYaml(yaml: InputStream): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a></code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"></div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="57e9bf475e33dbd945de61ebe537e12fec9a2a07">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="676cd7d196ce78f6abe99318bc28a4fa7f28c234">
-        <td class="sourcedoc-section section-signature">
-          <code>yaml: InputStream</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="04add5a653f986d94742e035707ae81e1ad96876">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="ec6f9069daa80029e880d76fc3bf6a0698a7d554">
-        <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a></code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="eafe7afb045688e4ee2da45487908b6328647b8e">
-      
-      <h3 class="sourcedoc-section element-name">visitYaml</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun visitYaml(yaml: URL): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a></code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"></div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="c6e35109c6dd8b8a92edcdb1e18d1bd5cf2da5b7">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="009824f820f0c86807b1fc7b5634283c10b2a436">
-        <td class="sourcedoc-section section-signature">
-          <code>yaml: URL</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="c1a6b5379449c82f46e62be19d91edbb837e3c62">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="ec6f9069daa80029e880d76fc3bf6a0698a7d554">
-        <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a></code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-      
-    </div>
-  
-    <div class="sourcedoc-section section-element" id="c3ae81dfbc657d62bccf0d4cd43c7c38702eaab2">
-      
-      <h3 class="sourcedoc-section element-name">visitRoot</h3>
-      
-      <p class="sourcedoc-section section-signature">
-        <code>fun visitRoot(root: Map&lt;String, Any&gt;): <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a></code>
-      </p>
-
-      
-
-      <div class="sourcedoc-section section-comments"></div>
-
-      
-      
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="48ccb85c79f652eeee6ee7a73c525a3e824cdf72">
-
-
-  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="18623d6ea189026bdf12ad8f42b656f993d9f044">
-        <td class="sourcedoc-section section-signature">
-          <code>root: Map&lt;String, Any&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-
-        
-          
-<div class="sourcedoc-section section-root section-level-3" id="ee2f4e387925281d4b337fa0cdd8b0ec9bf763da">
-
-
-  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
-
-  <div class="table-container">
-    <table class="table is-fullwidth is-bordered">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      
-      <tr class="sourcedoc-section section-element" id="ec6f9069daa80029e880d76fc3bf6a0698a7d554">
-        <td class="sourcedoc-section section-signature">
-          <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a></code>
+          <code>String</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1405,14 +1165,6 @@ loading system.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf">it.unibo.alchemist.loader.konf</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes">it.unibo.alchemist.loader.shapes</a>
     </li>
     
@@ -1422,6 +1174,14 @@ loading system.</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables">it.unibo.alchemist.loader.variables</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml">it.unibo.alchemist.loader.yaml</a>
     </li>
     
 
@@ -4142,6 +3902,14 @@ loading system.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/environmentandexports">EnvironmentAndExports</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environmentnode">EnvironmentNode</a>
     </li>
     
@@ -5102,6 +4870,14 @@ loading system.</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/initializedenvironment">InitializedEnvironment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/nodes/intnode">IntNode</a>
     </li>
     
@@ -5286,7 +5062,7 @@ loading system.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/jvmconstructor">JVMConstructor</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml/jvmconstructor">JVMConstructor</a>
     </li>
     
 
@@ -5974,7 +5750,7 @@ loading system.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/namedparametersconstructor">NamedParametersConstructor</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml/namedparametersconstructor">NamedParametersConstructor</a>
     </li>
     
 
@@ -6214,7 +5990,7 @@ loading system.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/objectfactory">ObjectFactory</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml/objectfactory">ObjectFactory</a>
     </li>
     
 
@@ -6286,7 +6062,7 @@ loading system.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/orderedparametersconstructor">OrderedParametersConstructor</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml/orderedparametersconstructor">OrderedParametersConstructor</a>
     </li>
     
 
@@ -7126,7 +6902,7 @@ loading system.</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/konf/simulationmodelvisitor">SimulationModelVisitor</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yaml/simulationmodel">SimulationModel</a>
     </li>
     
 
@@ -7742,7 +7518,7 @@ loading system.</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.1-dev17+804964978. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.1-dev19+0ab62fd27. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
