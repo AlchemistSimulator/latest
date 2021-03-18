@@ -76,7 +76,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev1n+6acee4ab2"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev21+035345800"};
 </script>
 
 
@@ -165,9 +165,8 @@
 <h4 id="homogeneous-pedestrian"><a href="#homogeneous-pedestrian" id="homogeneous-pedestrian" class="anchor"></a>Homogeneous Pedestrian</h4>
 <p>Homogeneous pedestrians are <em>Nodes</em> with no peculiar characteristic each other.</p>
 <pre><code class="language-yaml">displacements:
-  - in:
-      type: Circle
-      parameters: [100, 0, 0, 20]
+  - type: Circle
+    parameters: [100, 0, 0, 20]
     nodes:
       type: HomogeneousPedestrian2D
 </code></pre>
@@ -175,39 +174,35 @@
 <p>Heterogeneous pedestrians have an age and a gender, based on which their speed, compliance and social attitudes are computed.
 The age groups available are: <em>child</em>, <em>adult</em>, <em>elderly</em>; alternatively you can specify the exact age. The genders available are: <em>male</em>, <em>female</em>.</p>
 <pre><code class="language-yaml">displacements:
-  - in:
-      type: Circle
-      parameters: [50, 0, 0, 20]
+  - type: Circle
+    parameters: [50, 0, 0, 20]
     nodes:
       type: HeterogeneousPedestrian2D
       parameters: [&quot;elderly&quot;, &quot;female&quot;]
-  - in:
-      type: Circle
-      parameters: [50, 0, 0, 20]
+  - type: Circle
+    parameters: [50, 0, 0, 20]
     nodes:
       type: HeterogeneousPedestrian2D
       parameters: [&quot;child&quot;, &quot;male&quot;]
 </code></pre>
 <h4 id="cognitive-pedestrian"><a href="#cognitive-pedestrian" id="cognitive-pedestrian" class="anchor"></a>Cognitive Pedestrian</h4>
 <p>Cognitive pedestrians are heterogeneous pedestrians with cognitive capabilities. They have an emotional state and are able to influence and be influenced by others with the same capabilities. As an example, cognitive pedestrians can perceive fear via social contagion (e.g. seeing other people fleeing may cause them flee as well despite they haven't directly seen the danger).</p>
-<pre><code class="language-yaml">reactions: &amp;behavior
+<pre><code class="language-yaml">_reactions: &amp;behavior
   - time-distribution:
       type: DiracComb
       parameters: [1.0]
     type: CognitiveBehavior
 
 displacements:
-  - in:
-      type: Circle
-      parameters: [50, 0, 0, 20]
+  - type: Circle
+    parameters: [50, 0, 0, 20]
     nodes:
       type: CognitivePedestrian2D
       parameters: [&quot;adult&quot;, &quot;male&quot;]
     programs:
       - *behavior
-  - in:
-      type: Circle
-      parameters: [50, 0, 0, 20]
+  - type: Circle
+    parameters: [50, 0, 0, 20]
     nodes:
       type: CognitivePedestrian2D
       parameters: [&quot;adult&quot;, &quot;female&quot;]
@@ -219,25 +214,23 @@ displacements:
 <h4 id="homogeneous-orienting-pedestrian"><a href="#homogeneous-orienting-pedestrian" id="homogeneous-orienting-pedestrian" class="anchor"></a>Homogeneous orienting pedestrian</h4>
 <p>These are homogeneous pedestrians that can be equipped with a given knowledge degree of the environment. Such quantity is a <code>Double</code> value in [0,1] describing the percentage of environment the pedestrian is familiar with prior to the start of the simulation (thus it does not take into account the knowledge the pedestrian will gain during it). Note that despite their name (&quot;homogeneous&quot;), knowledge degrees of different homogeneous orienting pedestrians may differ, and even pedestrians with the same knowledge degree can be different as each one can be familiar with different portions of the environment. Be also aware that orienting pedestrians can only be placed in an <code>EnvironmentWithGraph</code>, which is a type of environment providing a navigation graph (see <a href="navigation-graphs.md">how to generate navigation graphs</a>).</p>
 <pre><code class="language-yaml">displacements:
-  - in:
-      type: Point
-      parameters: [15, 15]
+  - type: Point
+    parameters: [15, 15]
     nodes:
       type: HomogeneousOrientingPedestrian2D
       parameters: [0.5]
 </code></pre>
 <h4 id="cognitive-orienting-pedestrian"><a href="#cognitive-orienting-pedestrian" id="cognitive-orienting-pedestrian" class="anchor"></a>Cognitive orienting pedestrian</h4>
 <p>As you may guess, these are cognitive pedestrians equipable with a given knowledge degree of the environment. Cognitive orienting pedestrians can be instanced providing their knowledge degree as first parameter.</p>
-<pre><code class="language-yaml">reactions: &amp;behavior
+<pre><code class="language-yaml">_reactions: &amp;behavior
   - time-distribution:
       type: DiracComb
       parameters: [1.0]
     type: CognitiveBehavior
 
 displacements:
-  - in:
-      type: Point
-      parameters: [0, 0]
+  - type: Point
+    parameters: [0, 0]
     nodes:
       type: CognitiveOrientingPedestrian2D
       parameters: [0.5, &quot;adult&quot;, &quot;male&quot;]
@@ -262,15 +255,13 @@ variables:
     language: kotlin
 
 displacements:
-  - in:
-      type: Circle
-      parameters: [10, 0, 0, 20]
+  - type: Circle
+    parameters: [10, 0, 0, 20]
     nodes:
       type: HomogeneousPedestrian2D
       parameters: [*group1]
-  - in:
-      type: Circle
-      parameters: [15, 0, 0, 20]
+  - type: Circle
+    parameters: [15, 0, 0, 20]
     nodes:
       type: HomogeneousPedestrian2D
       parameters: [*group2]
@@ -289,7 +280,7 @@ environment:
   type: ImageEnvironment
   parameters: [...]
 
-reactions: &amp;behavior
+_reactions: &amp;behavior
   - time-distribution:
       type: DiracComb
       parameters: [3.0]
@@ -302,9 +293,8 @@ reactions: &amp;behavior
         parameters: [4]
 
 displacements:
-  - in:
-      type: Circle
-      parameters: [50, 0, 0, 25]
+  - type: Circle
+    parameters: [50, 0, 0, 25]
     nodes:
       type: HomogeneousPedestrian2D
 </code></pre>
@@ -324,7 +314,7 @@ can result in unpredictable behaviors, so pay attention.</p>
 environment:
   type: Continuous2DEnvironment
 
-reactions: &amp;behavior
+_reactions: &amp;behavior
   - time-distribution:
       type: DiracComb
       parameters: [1.0]
@@ -336,9 +326,8 @@ reactions: &amp;behavior
         parameters: [500, -500]
 
 displacements:
-  - in:
-      type: Point
-      parameters: [0, 0]
+  - type: Point
+    parameters: [0, 0]
     nodes:
       type: HomogeneousPedestrian2D
     programs:
@@ -368,7 +357,7 @@ layers:
     molecule: *danger
     parameters: [0.0, 0.0, 20.0, 15.0]
 
-reactions: &amp;behavior
+_reactions: &amp;behavior
   - time-distribution:
       type: DiracComb
       parameters: [1.0]
@@ -378,9 +367,8 @@ reactions: &amp;behavior
         parameters: [*danger]
 
 displacements:
-  - in:
-      type: Circle
-      parameters: [100, 0, 0, 50]
+  - type: Circle
+    parameters: [100, 0, 0, 50]
     nodes:
       type: CognitivePedestrian2D
       parameters: [&quot;adult&quot;, &quot;female&quot;, *danger]
@@ -424,7 +412,7 @@ displacements:
 environment:
   type: Continuous2DEnvironment
 
-reactions: &amp;behavior
+_reactions: &amp;behavior
   - time-distribution:
       type: DiracComb
       parameters: [1.0]
@@ -436,9 +424,8 @@ reactions: &amp;behavior
         parameters: [500, -500]
 
 displacements:
-  - in:
-      type: Point
-      parameters: [0, 0]
+  - type: Point
+    parameters: [0, 0]
     nodes:
       type: HomogeneousPhysicalPedestrian2D
     programs:
@@ -1206,6 +1193,14 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/statistic">i.u.alchemist.loader.export.statistic</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/providers">it.unibo.alchemist.loader.providers</a>
     </li>
     
 
@@ -2127,6 +2122,14 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/alchemistexecutionoptions">AlchemistExecutionOptions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/alchemistmodelprovider">AlchemistModelProvider</a>
     </li>
     
 
@@ -5438,6 +5441,14 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loadalchemist">LoadAlchemist</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a>
     </li>
     
@@ -7534,7 +7545,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yamlloader">YamlLoader</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/providers/yamlprovider">YamlProvider</a>
     </li>
     
 
@@ -7558,7 +7569,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.1-dev1n+6acee4ab2. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.1-dev21+035345800. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

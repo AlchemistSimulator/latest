@@ -3371,20 +3371,20 @@
                       "content": "<p>Support class for GraphStream, composed of a  linkingRule  and a  displacement .<\/p>linkingRule\n<p>displacement<\/p>\n<p><init><\/p>\n<p>Support class for GraphStream, composed of a  linkingRule  and a  displacement .<\/p>\nGraphStreamSupport\n<p>Support class for GraphStream, composed of a  linkingRule  and a  displacement .<\/p>\n"
                     }]
                   },
-                  "yamlloader": {
-                    "ownKey": "yamlloader",
+                  "alchemistmodelprovider": {
+                    "ownKey": "alchemistmodelprovider",
                     "ownPages": [{
                       "reference": {
                         "path": "kotlindoc",
                         "baseUrl": "https://alchemistsimulator.github.io/latest",
-                        "fileName": "it/unibo/alchemist/loader/yamlloader",
+                        "fileName": "it/unibo/alchemist/loader/alchemistmodelprovider",
                         "extension": "html",
                         "usePrettyUrl": true,
-                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yamlloader"
+                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/alchemistmodelprovider"
                       },
                       "description": "",
-                      "title": "YamlLoader",
-                      "content": "<p>Loads a properly formatted YAML file and provides method for instancing a batch of scenarios.<\/p><init>\n\n<init>\n\n<init>\n\ngetVariables\n\ngetRemoteDependencies\n\ngetWith\n\ngetConstants\n\ngetDependentVariables\n\n"
+                      "title": "AlchemistModelProvider",
+                      "content": "<p>Translates inputs to a Map representing the Alchemist model.<\/p>fileExtensions\n<p>A <a href=\"#\">Regex<\/a> matching the file extensions supported by this provider.<\/p>\nfrom\n<p>Reads  input  from a String.<\/p>\nfrom\n<p>Reads  input  from a <a href=\"https://docs.oracle.com/javase/6/docs/api/java/io/Reader.html\">Reader<\/a>.<\/p>\nfrom\n<p>Reads  input  from an <a href=\"https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html\">InputStream<\/a>.<\/p>\nfrom\n<p>Reads  input  from a <a href=\"https://docs.oracle.com/javase/6/docs/api/java/net/URL.html\">URL<\/a>.<\/p>\n"
                     }]
                   },
                   "variables": {
@@ -3658,7 +3658,7 @@
                       },
                       "description": "",
                       "title": "SimulationModel",
-                      "content": "<p>Converts a representation of an Alchemist simulation into an executable simulation.<\/p>logger\n<p>fromYaml<\/p>\n<p>fromYaml<\/p>\n<p>fromYaml<\/p>\n<p>fromYaml<\/p>\n<p>fromMap<\/p>\n"
+                      "content": "<p>Converts a representation of an Alchemist simulation into an executable simulation.<\/p>fromMap\n"
                     }]
                   },
                   "initializedenvironment": {
@@ -3791,7 +3791,7 @@
                           },
                           "description": "",
                           "title": "GraphStreamDisplacement",
-                          "content": "<p>A deployment based on a <a href=\"https://graphstream-project.org/\">GraphStream<\/a> graph.<\/p>associatedLinkingRule\n<p>The  LinkingRule  associated with this  GraphStreamDisplacement ,\nor null if the displacement has been created without static linking.<\/p>\n<init>\n<p>Builds a new GraphStream-based deployment, given the  nodeCount ,\nwhether or not the arcs of such graph shoud be links ( createLinks ),\nthe  generatorName  (must be the name of a subclass of BaseGenerator),\nand its  parameters .<\/p>\n<init>\n<p>A deployment based on a <a href=\"https://graphstream-project.org/\">GraphStream<\/a> graph.<\/p>\n"
+                          "content": "<p>A deployment based on a <a href=\"https://graphstream-project.org/\">GraphStream<\/a> graph.<\/p><init>\n<p>Builds a new GraphStream-based deployment, given the  nodeCount ,\nwhether or not the arcs of such graph shoud be links ( createLinks ),\nthe  generatorName  (must be the name of a subclass of BaseGenerator),\nand its  parameters .<\/p>\n<init>\n<p>A deployment based on a <a href=\"https://graphstream-project.org/\">GraphStream<\/a> graph.<\/p>\ngetAssociatedLinkingRule\n<p>The  LinkingRule  associated with this  GraphStreamDisplacement ,\nor null if the displacement has been created without static linking.<\/p>\n"
                         }]
                       },
                       "fromgpstrace": {
@@ -3935,7 +3935,7 @@
                           },
                           "description": "",
                           "title": "Displacement",
-                          "content": "<p>stream<\/p>\n<p>iterator<\/p>\n"
+                          "content": "<p>stream<\/p>\n<p>iterator<\/p>\n<p>getAssociatedLinkingRule<\/p>\n"
                         }]
                       },
                       "rectangle": {
@@ -4047,6 +4047,22 @@
                       "description": "",
                       "title": "it.unibo.alchemist.loader.displacements",
                       "content": "<p>AbstractCloseTo<\/p>\n<p>A generic  Displacement  that displaces a certain  nodeCount  of nodes in the proximity of a number of  sources .\nHigher  variance  implies higher dispersion.\nSubclasses must identify the  sources <\/p>\nAbstractRandomDisplacement\n<p>CircularArc<\/p>\n<p>Displaces the nodes in the  environment  in a circular arc, given a  nodeCount ,\nthe coordinates of the circle's center  centerX  and  centerY ,\nthe circle's radius  radius ,\nperturbation randomness (uniform, generated via  randomGenerator )\nfor radius  radiusRandomness  and for angle  angleRandomness ,\na  startAngle , and an  endAngle .<\/p><p>Default values generate a uniform displacement on a circumference.<\/p>\nCloseToAlreadyDisplaced\n<p>This  Displacement  places new nodes in the proximity of those already included in the environment.\nBehaviour if there are no nodes already inserted is undefined.<\/p>\nGraphStreamDisplacement\n<p>A deployment based on a <a href=\"https://graphstream-project.org/\">GraphStream<\/a> graph.<\/p>\nGrid\n<p>A (possibly randomized) grid of nodes.<\/p>\nPoint2D\n<p>Alias for using pairs as bidimensional points.<\/p>\nPolygon\n<p>Creates a new Polygon with the given points.<\/p>\nSpecificPositions\n<p>Given an environment and a list of list of numbers, it creates a list of the right position type for the environment.<\/p>\nCloseToGPSTrace\n<p>This  Displacement  displaces nodes in the proximity of a GPS trace.\nGiven a time interval from some time  to  another,\nit creates a  TraceLoader , then uses the points in the interval to generate the sources for a\nGaussian bivariate function and uses its probability density to deploy.\nHigher  variance  spreads nodes farther away from the trace with higher probability.<\/p>\nGeometricGradientRectangle\n<p>Distributes nodes geometrically within a rectangular shape.<\/p>\nRectangle\n<p>Circle<\/p>\n<p>Displacement<\/p>\n<p>Point<\/p>\n<p>A single node in a single point.<\/p>\nFromGPSTrace\n<p>Distributes nodes in the first positions of <code> it.unibo.alchemist.model.interfaces.GPSTrace <\/code>.<\/p>\nPoint2D\n<p>Alias for using pairs as bidimensional points.<\/p>\n"
+                    }]
+                  },
+                  "loadalchemist": {
+                    "ownKey": "loadalchemist",
+                    "ownPages": [{
+                      "reference": {
+                        "path": "kotlindoc",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "it/unibo/alchemist/loader/loadalchemist",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loadalchemist"
+                      },
+                      "description": "",
+                      "title": "LoadAlchemist",
+                      "content": "<p>Loads Alchemist simulations from a variety of resources.<\/p>from\n<p>from<\/p>\n<p>from<\/p>\n<p>from<\/p>\n<p>from<\/p>\n<p>from<\/p>\n<p>from<\/p>\n"
                     }]
                   },
                   "orderedparametersconstructor": {
@@ -4290,6 +4306,38 @@
                       "title": "it.unibo.alchemist.loader.export",
                       "content": "<p>Exporter<\/p>\n<p>Writes on file data provided by a number of <code> Extractor <\/code>s. Produces a CSV with '#' as comment character. Even though this class implements <code> OutputMonitor <\/code>, it is not <code><a href=\"https://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html\">java.io.Serializable<\/a><\/code>.<\/p>\nMoleculeReader\n<p>Reads the value of a molecule and logs it.<\/p>\nTime\n<p>Exports a column with the current time.<\/p>\nExecutionTime\n<p>An extractor which provides informations about the running time of the simulation.<\/p>\nFilteringPolicy\n<p>Expresses a flat map operation over a double.<\/p>\nExtractor\n<p>An object that is able to extract numeric informations from an Alchemist <code> Environment <\/code>, given the current <code> it.unibo.alchemist.core.interfaces.Simulation <\/code> <code> Time <\/code>, the last <code> Reaction <\/code> executed and the current simulation step.<\/p>\nMeanSquaredError\n<p>Exports the Mean Squared Error for the concentration of some molecule, given another molecule that carries the correct result. The correct value is extracted from every node, then the provided UnivariateStatistic is applied to get a single, global correct value. Then, the actual value is extracted from every node, its value is compared (subtracted) to the computed correct value, it gets squared, and then logged.<\/p>\nNumberOfNodes\n<p>Logs the number of nodes in the scenario.<\/p>\nStatUtil\n<p>Utility to translate statistics names into a UnivariateStatistic.<\/p>\nit.unibo.alchemist.loader.export.statistic\n<p>it.unibo.alchemist.loader.export.filters<\/p>\n"
                     }]
+                  },
+                  "providers": {
+                    "ownKey": "providers",
+                    "childrenPages": {"yamlprovider": {
+                      "ownKey": "yamlprovider",
+                      "ownPages": [{
+                        "reference": {
+                          "path": "kotlindoc",
+                          "baseUrl": "https://alchemistsimulator.github.io/latest",
+                          "fileName": "it/unibo/alchemist/loader/providers/yamlprovider",
+                          "extension": "html",
+                          "usePrettyUrl": true,
+                          "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/providers/yamlprovider"
+                        },
+                        "description": "",
+                        "title": "YamlProvider",
+                        "content": "<p>Loads YAML files via SnakeYAML.<\/p>fileExtensions\n<p>A <a href=\"#\">Regex<\/a> matching the file extensions supported by this provider.<\/p>\nfrom\n<p>Reads  input  from a String.<\/p>\nfrom\n<p>Reads  input  from a <a href=\"https://docs.oracle.com/javase/6/docs/api/java/io/Reader.html\">Reader<\/a>.<\/p>\nfrom\n<p>Reads  input  from an <a href=\"https://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html\">InputStream<\/a>.<\/p>\nfrom\n<p>Reads  input  from a <a href=\"https://docs.oracle.com/javase/6/docs/api/java/net/URL.html\">URL<\/a>.<\/p>\n"
+                      }]
+                    }},
+                    "ownPages": [{
+                      "reference": {
+                        "path": "kotlindoc",
+                        "baseUrl": "https://alchemistsimulator.github.io/latest",
+                        "fileName": "it/unibo/alchemist/loader/providers",
+                        "extension": "html",
+                        "usePrettyUrl": true,
+                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/providers"
+                      },
+                      "description": "",
+                      "title": "it.unibo.alchemist.loader.providers",
+                      "content": "<p>YamlProvider<\/p>\n<p>Loads YAML files via SnakeYAML.<\/p>\n"
+                    }]
                   }
                 },
                 "ownPages": [{
@@ -4303,7 +4351,7 @@
                   },
                   "description": "",
                   "title": "it.unibo.alchemist.loader",
-                  "content": "<p>EnvironmentAndExports<\/p>\n<p>Pair-like implementation of  InitializedEnvironment .<\/p>\nGraphStreamSupport\n<p>Support class for GraphStream, composed of a  linkingRule  and a  displacement .<\/p>\nInitializedEnvironment\n<p>The result of the loading of an  environment  with all the free variables instanced,\nalso providing access to  dataExtractors .<\/p>\nOrderedParametersConstructor\n<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p>\nNamedParametersConstructor\n<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p>\nJVMConstructor\n<p>A constructor for a JVM class of type  typeName .<\/p>\nObjectFactory\n<p>SimulationModel<\/p>\n<p>Converts a representation of an Alchemist simulation into an executable simulation.<\/p>\nYamlLoader\n<p>Loads a properly formatted YAML file and provides method for instancing a batch of scenarios.<\/p>\nIllegalAlchemistYAMLException\n<p>This exception is thrown when the Alchemist YAML does not conform to the specification.<\/p>\nLoader\n<p>An entity which is able to produce an Alchemist <code> InitializedEnvironment <\/code>, resolving user defined variable values.<\/p>\nit.unibo.alchemist.loader.displacements\n<p>it.unibo.alchemist.loader.variables<\/p>\n<p>it.unibo.alchemist.loader.shapes<\/p>\n<p>it.unibo.alchemist.loader.export<\/p>\n"
+                  "content": "<p>AlchemistModelProvider<\/p>\n<p>Translates inputs to a Map representing the Alchemist model.<\/p>\nEnvironmentAndExports\n<p>Pair-like implementation of  InitializedEnvironment .<\/p>\nGraphStreamSupport\n<p>Support class for GraphStream, composed of a  linkingRule  and a  displacement .<\/p>\nInitializedEnvironment\n<p>The result of the loading of an  environment  with all the free variables instanced,\nalso providing access to  dataExtractors .<\/p>\nOrderedParametersConstructor\n<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p>\nNamedParametersConstructor\n<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p>\nJVMConstructor\n<p>A constructor for a JVM class of type  typeName .<\/p>\nLoadAlchemist\n<p>Loads Alchemist simulations from a variety of resources.<\/p>\nObjectFactory\n<p>SimulationModel<\/p>\n<p>Converts a representation of an Alchemist simulation into an executable simulation.<\/p>\nIllegalAlchemistYAMLException\n<p>This exception is thrown when the Alchemist YAML does not conform to the specification.<\/p>\nLoader\n<p>An entity which is able to produce an Alchemist <code> InitializedEnvironment <\/code>, resolving user defined variable values.<\/p>\nit.unibo.alchemist.loader.displacements\n<p>it.unibo.alchemist.loader.providers<\/p>\n<p>it.unibo.alchemist.loader.variables<\/p>\n<p>it.unibo.alchemist.loader.shapes<\/p>\n<p>it.unibo.alchemist.loader.export<\/p>\n"
                 }]
               },
               "launch": {

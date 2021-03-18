@@ -76,7 +76,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev1n+6acee4ab2"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev21+035345800"};
 </script>
 
 
@@ -458,9 +458,8 @@ The YAML key associated to displacements is <code>in</code>.</p>
 <p>The following example places a single node in the (0, 0) <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/point">Point</a>.</p>
 <pre><code class="language-yaml">displacements:
   # &quot;in&quot; entries, where each entry defines a group of nodes
-  - in:
-      type: Point
-      # Using a constructor taking (x,y) coordinates
+  - type: Point
+    parameters    # Using a constructor taking (x,y) coordinates
       parameters: [0, 0]
 </code></pre>
 <h3 id="displacing-multiple-nodes-on-specific-positions"><a href="#displacing-multiple-nodes-on-specific-positions" id="displacing-multiple-nodes-on-specific-positions" class="anchor"></a>Displacing multiple nodes on specific positions</h3>
@@ -472,16 +471,14 @@ The YAML key associated to displacements is <code>in</code>.</p>
 <h3 id="displacing-multiple-nodes-at-once"><a href="#displacing-multiple-nodes-at-once" id="displacing-multiple-nodes-at-once" class="anchor"></a>Displacing multiple nodes at once</h3>
 <p>This example places 10000 nodes randomly in a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/circle">Circle</a> with center in (0, 0) and radius 10.</p>
 <pre><code class="language-yaml">displacements:
-  - in:
-      type: Circle
-      parameters: [10000, 0, 0, 10]
+  - type: Circle
+    parameters: [10000, 0, 0, 10]
 </code></pre>
 <p>Here instead nodes are located in a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/grid">Grid</a> centered in (0, 0), with nodes distanced of 0.25 both
 horizontally and vertically, and whose position is not exact but randomly perturbed (±0.1 distance units).</p>
 <pre><code class="language-yaml">displacements:
-  - in:
-      type: Grid
-      parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
+  - type: Grid
+    parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
 </code></pre>
 <h3 id="customizing-the-node-type"><a href="#customizing-the-node-type" id="customizing-the-node-type" class="anchor"></a>Customizing the node type</h3>
 <p>In order to specify a particular node implementation you want to put inside the environment you can use the <code>nodes</code> key
@@ -489,18 +486,16 @@ followed by the name of the class and the parameters required to build it.</p>
 <p>100 <code>MyCustomNodeImpl</code> nodes, whose constructor needs only the environment, placed in a circle with center in (0, 0) and
 radius 20.</p>
 <pre><code class="language-yaml">displacements:
-  - in:
-      type: Circle
-      parameters: [100, 0, 0, 20]
+  - type: Circle
+    parameters: [100, 0, 0, 20]
     nodes:
       type: MyCustomNodeImpl
       parameters: []
 </code></pre>
 <p>The empty parameters section can be omitted (as per custom class loading mechanism):</p>
 <pre><code class="language-yaml">displacements:
-  - in:
-      type: Circle
-      parameters: [100, 0, 0, 20]
+  - type: Circle
+    parameters: [100, 0, 0, 20]
     nodes:
       type: MyCustomNodeImpl
 </code></pre>
@@ -513,9 +508,8 @@ concentration <code>1</code>.
 As stated before, it would only make sense if the incarnation supports integer concentrations and it's able to produce
 a valid molecule from the <code>&quot;foo&quot;</code> String.</p>
 <pre><code class="language-yaml">displacements:
-  - in:
-      type: Grid
-      parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
+  - type: Grid
+    parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
     contents:
       - molecule: foo
         concentration: 1
@@ -524,9 +518,8 @@ a valid molecule from the <code>&quot;foo&quot;</code> String.</p>
 if we want to also have a molecule named <code>bar</code> with value <code>0</code> along with <code>foo</code>,
 we can just add another entry to the list:</p>
 <pre><code class="language-yaml">displacements:
-  - in:
-      type: Grid
-      parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
+  - type: Grid
+    parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
     contents:
       - molecule: foo
         concentration: 1
@@ -538,9 +531,8 @@ To do so, you can a filter with the <code>in keyword</code>.
 In the following example, only the nodes inside the <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/rectangle">Rectangle</a> area contain
 the <code>source</code> molecule.</p>
 <pre><code class="language-yaml">displacements:
-  - in:
-      type: Grid
-      parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
+  - type: Grid
+    parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
     contents:
       - in:
           type: Rectangle
@@ -558,9 +550,8 @@ gradient: &amp;gradient
     program: program:package:distanceTo
   - program: send
 displacements:
-  - in:
-      type: Grid
-      parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
+  - type: Grid
+    parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
     programs:
       # Reference to the &quot;gradient&quot; list of programs. This program is executed in all
       # the grid nodes
@@ -1382,6 +1373,14 @@ The following code snippet exemplifies its usage:</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/statistic">i.u.alchemist.loader.export.statistic</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/providers">it.unibo.alchemist.loader.providers</a>
     </li>
     
 
@@ -2303,6 +2302,14 @@ The following code snippet exemplifies its usage:</p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/alchemistexecutionoptions">AlchemistExecutionOptions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/alchemistmodelprovider">AlchemistModelProvider</a>
     </li>
     
 
@@ -5614,6 +5621,14 @@ The following code snippet exemplifies its usage:</p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loadalchemist">LoadAlchemist</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/loader">Loader</a>
     </li>
     
@@ -7710,7 +7725,7 @@ The following code snippet exemplifies its usage:</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/yamlloader">YamlLoader</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/providers/yamlprovider">YamlProvider</a>
     </li>
     
 
@@ -7734,7 +7749,7 @@ The following code snippet exemplifies its usage:</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.1-dev1n+6acee4ab2. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.1-dev21+035345800. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
