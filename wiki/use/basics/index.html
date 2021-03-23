@@ -37,10 +37,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
@@ -64,11 +64,11 @@
 
 <!-- RESOURCE -->
 <!-- Class: com.eden.orchid.api.resources.resource.FileResource -->
-<!-- Source Filename: wiki/use/yaml.md -->
+<!-- Source Filename: wiki/use/basics.md -->
 
 <!-- COMPLETE PAGE CONFIGURATION -->
 <script>
-    window.allData = {"reference":{"path":"wiki/use","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"yaml","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/use/yaml"},"next":{"path":"wiki/use","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"dry","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/use/dry"},"previous":{"path":"wiki","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"use","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/use"},"description":"","title":"Basics of an Alchemist simulation"};
+    window.allData = {"reference":{"path":"wiki/use","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"basics","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/use/basics"},"next":{"path":"wiki/use","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"dry","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/use/dry"},"previous":{"path":"wiki","baseUrl":"https://alchemistsimulator.github.io/latest","fileName":"use","extension":"html","usePrettyUrl":true,"link":"https://alchemistsimulator.github.io/latest/wiki/use"},"description":"","title":"Basics of an Alchemist simulation"};
 </script>
 
 <!-- end:debug info -->
@@ -76,7 +76,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev2f+e55ce86ed"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev2k+09bfd772e"};
 </script>
 
 
@@ -236,116 +236,40 @@ you can load it using the <code>type</code>/<code>parameters</code> syntax.</p>
 <p>The environments shipped with the distribution can be found in the package
 <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/environments">it.unibo.alchemist.model.implementations.environments</a>.</p>
 <h2 id="displacing-nodes"><a href="#displacing-nodes" id="displacing-nodes" class="anchor"></a>Displacing nodes</h2>
-<p>Once the environment is defined</p>
-<h2 id="connecting-nodes"><a href="#connecting-nodes" id="connecting-nodes" class="anchor"></a>Connecting nodes</h2>
-<h4 id="multiline-programs"><a href="#multiline-programs" id="multiline-programs" class="anchor"></a>Multiline programs</h4>
-<p>Sometimes data manipulation can get tricky and trivial scripting may no longer be enough.
-In such cases, and especially with modern languages that allow for a reduced usage of cerimonial semicolons (such as Kotlin and Scala), it can be useful to write multiline programs.
-This can be achieved in YAML by using the pipe <code>|</code> operator, as exemplified in the following snippet:</p>
-<pre><code class="language-yaml">variables:
-  a:
-    formula: 22 + 1
-    language: kt
-  test:
-    formula: |
-      import com.google.common.reflect.TypeToken
-      import com.google.gson.Gson
-      Gson().fromJson&lt;Map&lt;String, List&lt;List&lt;List&lt;Double&gt;&gt;&gt;&gt;&gt;(
-          ClassLoader.getSystemResourceAsStream(&quot;explorable-area.json&quot;)?.reader(),
-          object: TypeToken&lt;Map&lt;String, List&lt;List&lt;List&lt;Double&gt;&gt;&gt;&gt;&gt;() {}.type
-      )
-      .get(&quot;coordinates&quot;)!!
-      .first()
-      .map { Pair(it.last(), it.first()) }
-    language: kotlin
-</code></pre>
-<p>If the string begins with a <code>|</code>, its contents preserve newlines, thus allowing for multiline scripts of arbitrary complexity.</p>
-<h3 id="using-variables"><a href="#using-variables" id="using-variables" class="anchor"></a>Using variables</h3>
-<h2 id="controlling-the-reproducibility"><a href="#controlling-the-reproducibility" id="controlling-the-reproducibility" class="anchor"></a>Controlling the reproducibility</h2>
-<p>Alchemist simulations can be reproduced by feeding them the same random number generator.
-This assumption is true as far as the custom component in use:</p>
-<ul>
-<li>do not use any other random generator but the one provided by the simulation framework</li>
-<li>do not iterate over collections with no predicible iteration order (i.e., <code>Set</code> and <code>Map</code>) containing elements (or
-keys) whose <code>hashCode()</code> has not been overridden to return the same value regardless of the specific JVM in use.</li>
-<li>do not run operations in parallel</li>
-</ul>
-<p>The <code>seeds</code> section may contain two optional values: <code>scenario</code> and <code>simulation</code>.
-The former is the seed of the pseudo-random generator used during the creation of the simulation, e.g. for displacing
-nodes in random arrangements.
-The latter is the seed of the pseudo-random generator used during the simulation, e.g. for computing time distributions
-or generating random positions.
-A typical example in which one may want to have different values, is to keep the same random displacement of devices in
-some scenario but allow events to happen with different timings.</p>
-<p>A typical <code>seed</code> section may look like:</p>
-<pre><code class="language-yaml">seeds:
-  scenario: 0
-  simulation: 1
-</code></pre>
-<p>Usually, in batches, you wan to run multiple runs per experiment, varying the simulation seed, in order to get more
-reliable data (and appropriate error bars).
-As per any other value, variables can be feeded as random generator seeds.
-In the following example, 100 simulations are generated with different seeds (both for environment configuration and
-simulation execution)</p>
-<pre><code class="language-yaml">variables:
-  random: &amp;random
-    min: 0
-    max: 9
-    step: 1
-    default: 0
-seeds:
-  # reference to the `random` variable
-  scenario: *random
-  simulation: *random
-</code></pre>
-<h2 id="defining-the-network"><a href="#defining-the-network" id="defining-the-network" class="anchor"></a>Defining the network</h2>
-<p>The <code>network-model</code> key is used to load the implementation of <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/linkingrule">LinkingRule</a> to be used in the simulation,
-which determines the neighborhood of every node.
-The key is optional, but defaults to <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/linkingrules/nolinks">NoLinks</a>, so if unspecified nodes in the environment don't get
-connected.
-Omitting such key is equivalent to writing any of the following:</p>
-<pre><code class="language-yaml">network-model:
-  type: NoLinks
-</code></pre>
-<pre><code class="language-yaml">network-model:
-  type: it.unibo.alchemist.model.implementations.linkingrules.NoLinks
-  parameters: []
-</code></pre>
-<pre><code class="language-yaml">network-model:
-  type: NoLinks
-  parameters: []
-</code></pre>
-<p>If no fully qualified linking rule name is provided for class loading, Alchemist uses the package
-<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/linkingrules">it.unibo.alchemist.model.implementations.linkingrules</a> to search for the class.</p>
-<h3 id="linking-nodes-based-on-distance"><a href="#linking-nodes-based-on-distance" id="linking-nodes-based-on-distance" class="anchor"></a>Linking nodes based on distance</h3>
-<p>One of the most common ways of linking nodes is to connect those which are close enough to each other. To do so, you can
-use the class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/linkingrules/connectwithindistance">ConnectWithinDistance</a>, passing a parameter representing the maximum connection distance.
-Note that such distance depends on the environment: while the definition of distance is straightforward for euclidean
-spaces, it's not so for <a href="https://en.wikipedia.org/wiki/Riemannian_geometry">Riemannian manifolds</a>, which is a fancy
-name to define geometries such as the one typical of a urban map (you can roughly interpret it as a euclidean space
-&quot;with holes&quot;).
-For instance, in case of environments using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>, the distance is computed in meters, so the
-distance between <code>[44.133254, 12.237770]</code> and <code>[44.146680, 12.258627]</code> is about <code>2240</code> (meters).</p>
-<pre><code class="language-yaml">network-model:
-  type: ConnectWithinDistance
-  # Link together all the nodes closer than 100 according to the distance function
-  parameters: [100]
-</code></pre>
-<h2 id="displacing-nodes-1"><a href="#displacing-nodes-1" id="displacing-nodes-1" class="anchor"></a>Displacing nodes</h2>
-<p>The <code>displacements</code> section lists the node locations at the beginning of the simulation.
-Each displacement type extends the interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/displacement">Displacement</a>. If no fully qualified displacement name is
-provided for class loading,
-Alchemist uses the package <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements">it.unibo.alchemist.loader.displacements</a> to search for the class.
-The YAML key associated to displacements is <code>in</code>.</p>
+<p>Once the environment is set up, it is time to populate it with nodes.
+The <code>displacements</code> section lists the node locations at the beginning of the simulation.
+Each displacement type extends the interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/displacement">Displacement</a>.</p>
 <h3 id="displacing-on-specific-positions"><a href="#displacing-on-specific-positions" id="displacing-on-specific-positions" class="anchor"></a>Displacing on specific positions</h3>
 <p>The following example places a single node in the (0, 0) <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/point">Point</a>.</p>
-<pre><code class="language-yaml">displacements:
-  # &quot;in&quot; entries, where each entry defines a group of nodes
-  - type: Point
-    parameters    # Using a constructor taking (x,y) coordinates
-      parameters: [0, 0]
+<pre><code class="language-yaml">incarnation: protelis
+displacements:
+  type: Point
+  parameters: [0, 0]
 </code></pre>
 <h3 id="displacing-multiple-nodes-on-specific-positions"><a href="#displacing-multiple-nodes-on-specific-positions" id="displacing-multiple-nodes-on-specific-positions" class="anchor"></a>Displacing multiple nodes on specific positions</h3>
+<p>Multiple nodes can be set up by listing them in YAML list, or in a YAML map,
+or in an arbitrarily nested combination of the two.</p>
+<pre><code class="language-yaml">incarnation: protelis
+displacements:
+  - type: Point
+    parameters: [0, 0]
+  - type: Point
+    parameters: [0.5, 0.85]
+  - type: Point
+    parameters: [-0.5, 0.85]
+</code></pre>
+<p>The Alchemist loading system is smart enough to search for displacements recursively.</p>
+<pre><code class="language-yaml">incarnation: protelis
+displacements:
+  the_bottom_point:
+    type: Point
+    parameters: [0, 0]
+  the_top_points:
+    - type: Point
+      parameters: [0.5, 0.85]
+    - type: Point
+      parameters: [-0.5, 0.85]
+</code></pre>
 <pre><code class="language-yaml">displacements:
   - in:
       type: SpecificPositions
@@ -422,6 +346,39 @@ the <code>source</code> molecule.</p>
           parameters: [-6, -6, 2, 2]
         molecule: source
         concentration: true
+</code></pre>
+<h2 id="defining-the-network"><a href="#defining-the-network" id="defining-the-network" class="anchor"></a>Defining the network</h2>
+<p>The <code>network-model</code> key is used to load the implementation of <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/linkingrule">LinkingRule</a> to be used in the simulation,
+which determines the neighborhood of every node.
+The key is optional, but defaults to <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/linkingrules/nolinks">NoLinks</a>, so if unspecified nodes in the environment don't get
+connected.
+Omitting such key is equivalent to writing any of the following:</p>
+<pre><code class="language-yaml">network-model:
+  type: NoLinks
+</code></pre>
+<pre><code class="language-yaml">network-model:
+  type: it.unibo.alchemist.model.implementations.linkingrules.NoLinks
+  parameters: []
+</code></pre>
+<pre><code class="language-yaml">network-model:
+  type: NoLinks
+  parameters: []
+</code></pre>
+<p>If no fully qualified linking rule name is provided for class loading, Alchemist uses the package
+<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/linkingrules">it.unibo.alchemist.model.implementations.linkingrules</a> to search for the class.</p>
+<h3 id="linking-nodes-based-on-distance"><a href="#linking-nodes-based-on-distance" id="linking-nodes-based-on-distance" class="anchor"></a>Linking nodes based on distance</h3>
+<p>One of the most common ways of linking nodes is to connect those which are close enough to each other. To do so, you can
+use the class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/linkingrules/connectwithindistance">ConnectWithinDistance</a>, passing a parameter representing the maximum connection distance.
+Note that such distance depends on the environment: while the definition of distance is straightforward for euclidean
+spaces, it's not so for <a href="https://en.wikipedia.org/wiki/Riemannian_geometry">Riemannian manifolds</a>, which is a fancy
+name to define geometries such as the one typical of a urban map (you can roughly interpret it as a euclidean space
+&quot;with holes&quot;).
+For instance, in case of environments using <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>, the distance is computed in meters, so the
+distance between <code>[44.133254, 12.237770]</code> and <code>[44.146680, 12.258627]</code> is about <code>2240</code> (meters).</p>
+<pre><code class="language-yaml">network-model:
+  type: ConnectWithinDistance
+  # Link together all the nodes closer than 100 according to the distance function
+  parameters: [100]
 </code></pre>
 <h2 id="writing-behaviors-reactions"><a href="#writing-behaviors-reactions" id="writing-behaviors-reactions" class="anchor"></a>Writing behaviors (Reactions)</h2>
 <p>Nodes can be programmed using reactions.
@@ -503,6 +460,43 @@ The following code snippet exemplifies its usage:</p>
   # simulation steps. If no change is detected, then the simulation is intended as concluded.
   - type: StableForSteps
     parameters: [100, 10]
+</code></pre>
+<h2 id="controlling-the-reproducibility"><a href="#controlling-the-reproducibility" id="controlling-the-reproducibility" class="anchor"></a>Controlling the reproducibility</h2>
+<p>Alchemist simulations can be reproduced by feeding them the same random number generator.
+This assumption is true as far as the custom component in use:</p>
+<ul>
+<li>do not use any other random generators but the one provided by the simulation framework (all the standard components are guaranteed to do so);</li>
+<li>do not iterate over collections with no predicible iteration order (i.e., <code>Set</code> and <code>Map</code>) containing elements (or
+keys) whose <code>hashCode()</code> has not been overridden to return the same value regardless of the specific JVM in use;</li>
+<li>do not run operations in parallel.</li>
+</ul>
+<p>The <code>seeds</code> section may contain two optional values: <code>scenario</code> and <code>simulation</code>.
+The former is the seed of the pseudo-random generator used during the creation of the simulation, e.g. for displacing
+nodes in random arrangements.
+The latter is the seed of the pseudo-random generator used during the simulation, e.g. for computing time distributions
+or generating random positions.
+A typical example in which one may want to have different values, is to keep the same random displacement of devices in
+some scenario but allow events to happen with different timings.</p>
+<p>A typical <code>seed</code> section may look like:</p>
+<pre><code class="language-yaml">seeds:
+  scenario: 0
+  simulation: 1
+</code></pre>
+<p>Usually, in batches, you wan to run multiple runs per experiment, varying the simulation seed, in order to get more
+reliable data (and appropriate error bars).
+As per any other value, variables can be feeded as random generator seeds.
+In the following example, 100 simulations are generated with different seeds (both for environment configuration and
+simulation execution)</p>
+<pre><code class="language-yaml">variables:
+  random: &amp;random
+    min: 0
+    max: 9
+    step: 1
+    default: 0
+seeds:
+  # reference to the `random` variable
+  scenario: *random
+  simulation: *random
 </code></pre>
 
                     
@@ -668,7 +662,7 @@ The following code snippet exemplifies its usage:</p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/use/yaml">Basics of an Alchemist simulation</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/use/basics">Basics of an Alchemist simulation</a>
     </li>
     
 
@@ -7691,7 +7685,7 @@ The following code snippet exemplifies its usage:</p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.1-dev2f+e55ce86ed. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.1-dev2k+09bfd772e. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7726,9 +7720,9 @@ The following code snippet exemplifies its usage:</p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
