@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/8aba7b21/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/8aba7b21/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/8aba7b21/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/8aba7b21/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev2p+e9cbaa819"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev2q+2430fe48f"};
 </script>
 
 
@@ -197,42 +197,12 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="e889ddbbc54674928fa703b072cbd2e6a1e4ded3">
+      <tr class="sourcedoc-section section-element" id="6402729c397710009a599ad88bfaac7294af972d">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/exporter">Exporter</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/interfaces/outputmonitor">OutputMonitor</a>&lt;T, P&gt;, Any</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/statutil">StatUtil</a>: Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Writes on file data provided by a number of <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a></code>s. Produces a CSV with '#' as comment character. Even though this class implements <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/interfaces/outputmonitor">OutputMonitor</a></code>, it is not <code><a href="https://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html">java.io.Serializable</a></code>.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="a0211a48cf9c9e2aa976dcc52726b2e24988e026">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/moleculereader">MoleculeReader</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Reads the value of a molecule and logs it.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="ebf1ea5435551f333f88284923e9a5c3ced8eefa">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/time">Time</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Exports a column with the current time.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="0a57bc66cd8edf2ddf9e004b2b7038a75a85bb4b">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/executiontime">ExecutionTime</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>An extractor which provides informations about the running time of the simulation.</p>
+        <p>Utility to translate statistics names into a UnivariateStatistic.</p>
 
         </td>
       </tr>
@@ -247,12 +217,22 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="45a97004333b7798be5085d96e3c8e30c7f6469e">
+      <tr class="sourcedoc-section section-element" id="bcdffe03227b77df8e9cad2211305efe53dd3832">
         <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>: Any</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/numberofnodes">NumberOfNodes</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>An object that is able to extract numeric informations from an Alchemist <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a></code>, given the current <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/simulation">it.unibo.alchemist.core.interfaces.Simulation</a></code> <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a></code>, the last <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a></code> executed and the current simulation step.</p>
+        <p>Logs the number of nodes in the scenario.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0a57bc66cd8edf2ddf9e004b2b7038a75a85bb4b">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/executiontime">ExecutionTime</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An extractor which provides informations about the running time of the simulation.</p>
 
         </td>
       </tr>
@@ -267,22 +247,42 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="bcdffe03227b77df8e9cad2211305efe53dd3832">
+      <tr class="sourcedoc-section section-element" id="a0211a48cf9c9e2aa976dcc52726b2e24988e026">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/numberofnodes">NumberOfNodes</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/moleculereader">MoleculeReader</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Logs the number of nodes in the scenario.</p>
+        <p>Reads the value of a molecule and logs it.</p>
 
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="6402729c397710009a599ad88bfaac7294af972d">
+      <tr class="sourcedoc-section section-element" id="e889ddbbc54674928fa703b072cbd2e6a1e4ded3">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/statutil">StatUtil</a>: Any</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/exporter">Exporter</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/interfaces/outputmonitor">OutputMonitor</a>&lt;T, P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Utility to translate statistics names into a UnivariateStatistic.</p>
+        <p>Writes on file data provided by a number of <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a></code>s. Produces a CSV with '#' as comment character. Even though this class implements <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/interfaces/outputmonitor">OutputMonitor</a></code>, it is not <code><a href="https://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html">java.io.Serializable</a></code>.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ebf1ea5435551f333f88284923e9a5c3ced8eefa">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/time">Time</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Exports a column with the current time.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="45a97004333b7798be5085d96e3c8e30c7f6469e">
+        <td class="sourcedoc-section section-signature">
+          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>: Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An object that is able to extract numeric informations from an Alchemist <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a></code>, given the current <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/simulation">it.unibo.alchemist.core.interfaces.Simulation</a></code> <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a></code>, the last <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a></code> executed and the current simulation step.</p>
 
         </td>
       </tr>
@@ -5593,7 +5593,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d/mode">Mode</a>
     </li>
     
 
@@ -5601,7 +5601,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
     </li>
     
 
@@ -7169,7 +7169,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/time">Time</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>
     </li>
     
 
@@ -7177,7 +7177,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/time">Time</a>
     </li>
     
 
@@ -7521,7 +7521,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.1-dev2p+e9cbaa819. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.1-dev2q+2430fe48f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7556,9 +7556,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/8aba7b21/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/8aba7b21/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/8aba7b21/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
