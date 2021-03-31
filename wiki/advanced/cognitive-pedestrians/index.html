@@ -37,10 +37,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3382835c/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3382835c/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3382835c/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/3382835c/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
@@ -76,7 +76,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev3k+c8eb8a946"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev3l+661c0be5e"};
 </script>
 
 
@@ -167,7 +167,7 @@ and <a href="https://alchemistsimulator.github.io/latest/wiki/advanced/navigatio
 <p>There are three basic types of pedestrian, each representing a more sophisticated version of the previous one. These are derived from the work of <a href="https://doi.org/10.1007/978-3-319-70647-4_11">van der Wal et al</a>.</p>
 <h4 id="homogeneous-pedestrian"><a href="#homogeneous-pedestrian" id="homogeneous-pedestrian" class="anchor"></a>Homogeneous Pedestrian</h4>
 <p>Homogeneous pedestrians are <em>Nodes</em> with no peculiar characteristic each other.</p>
-<pre><code class="language-yaml">displacements:
+<pre><code class="language-yaml">deployments:
   - type: Circle
     parameters: [100, 0, 0, 20]
     nodes:
@@ -176,7 +176,7 @@ and <a href="https://alchemistsimulator.github.io/latest/wiki/advanced/navigatio
 <h4 id="heterogeneous-pedestrian"><a href="#heterogeneous-pedestrian" id="heterogeneous-pedestrian" class="anchor"></a>Heterogeneous Pedestrian</h4>
 <p>Heterogeneous pedestrians have an age and a gender, based on which their speed, compliance and social attitudes are computed.
 The age groups available are: <em>child</em>, <em>adult</em>, <em>elderly</em>; alternatively you can specify the exact age. The genders available are: <em>male</em>, <em>female</em>.</p>
-<pre><code class="language-yaml">displacements:
+<pre><code class="language-yaml">deployments:
   - type: Circle
     parameters: [50, 0, 0, 20]
     nodes:
@@ -196,7 +196,7 @@ The age groups available are: <em>child</em>, <em>adult</em>, <em>elderly</em>; 
       parameters: [1.0]
     type: CognitiveBehavior
 
-displacements:
+deployments:
   - type: Circle
     parameters: [50, 0, 0, 20]
     nodes:
@@ -216,7 +216,7 @@ displacements:
 <p>As shown in the animation on the top of the page, pedestrians can be equipped with different knowledge degrees of the environment. To do so, a particular type of pedestrian called orienting pedestrian is required: this is derived from the work of <a href="https://www.tandfonline.com/doi/full/10.1080/23249935.2018.1432717">Andresen et al</a>. There are two available types of orienting pedestrian, described below.</p>
 <h4 id="homogeneous-orienting-pedestrian"><a href="#homogeneous-orienting-pedestrian" id="homogeneous-orienting-pedestrian" class="anchor"></a>Homogeneous orienting pedestrian</h4>
 <p>These are homogeneous pedestrians that can be equipped with a given knowledge degree of the environment. Such quantity is a <code>Double</code> value in [0,1] describing the percentage of environment the pedestrian is familiar with prior to the start of the simulation (thus it does not take into account the knowledge the pedestrian will gain during it). Note that despite their name (&quot;homogeneous&quot;), knowledge degrees of different homogeneous orienting pedestrians may differ, and even pedestrians with the same knowledge degree can be different as each one can be familiar with different portions of the environment. Be also aware that orienting pedestrians can only be placed in an <code>EnvironmentWithGraph</code>, which is a type of environment providing a navigation graph (see <a href="navigation-graphs.md">how to generate navigation graphs</a>).</p>
-<pre><code class="language-yaml">displacements:
+<pre><code class="language-yaml">deployments:
   - type: Point
     parameters: [15, 15]
     nodes:
@@ -231,7 +231,7 @@ displacements:
       parameters: [1.0]
     type: CognitiveBehavior
 
-displacements:
+deployments:
   - type: Point
     parameters: [0, 0]
     nodes:
@@ -257,7 +257,7 @@ variables:
     formula: it.unibo.alchemist.model.implementations.groups.Friends&lt;Any&gt;()
     language: kotlin
 
-displacements:
+deployments:
   - type: Circle
     parameters: [10, 0, 0, 20]
     nodes:
@@ -295,7 +295,7 @@ _reactions: &amp;behavior
       - type: CognitiveAgentObstacleAvoidance
         parameters: [4]
 
-displacements:
+deployments:
   - type: Circle
     parameters: [50, 0, 0, 25]
     nodes:
@@ -328,7 +328,7 @@ _reactions: &amp;behavior
       - type: CognitiveAgentFlee
         parameters: [500, -500]
 
-displacements:
+deployments:
   - type: Point
     parameters: [0, 0]
     nodes:
@@ -369,7 +369,7 @@ _reactions: &amp;behavior
       - type: CognitiveAgentCognitiveAgentAvoidLayer
         parameters: [*danger]
 
-displacements:
+deployments:
   - type: Circle
     parameters: [100, 0, 0, 50]
     nodes:
@@ -426,7 +426,7 @@ _reactions: &amp;behavior
       - type: CognitiveAgentFlee
         parameters: [500, -500]
 
-displacements:
+deployments:
   - type: Point
     parameters: [0, 0]
     nodes:
@@ -624,7 +624,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/wiki/use/tutorial">Step-by-step tutorial</a>
+        <a href="https://alchemistsimulator.github.io/latest/wiki/use/tutorial">Tutorial</a>
     </li>
     
 
@@ -1230,7 +1230,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements">i.unibo.alchemist.loader.displacements</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments">it.unibo.alchemist.loader.deployments</a>
     </li>
     
 
@@ -1743,7 +1743,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/abstractcloseto">AbstractCloseTo</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/abstractcloseto">AbstractCloseTo</a>
     </li>
     
 
@@ -1991,7 +1991,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/abstractrandomdisplacement">AbstractRandomDisplacement</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/abstractrandomdeployment">AbstractRandomDeployment</a>
     </li>
     
 
@@ -2807,7 +2807,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/circle">Circle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/circle">Circle</a>
     </li>
     
 
@@ -2815,7 +2815,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/circle">Circle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/circle">Circle</a>
     </li>
     
 
@@ -2831,7 +2831,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/circulararc">CircularArc</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/circulararc">CircularArc</a>
     </li>
     
 
@@ -2871,7 +2871,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/closetoalreadydisplaced">CloseToAlreadyDisplaced</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/closetoalreadydeployed">CloseToAlreadyDeployed</a>
     </li>
     
 
@@ -2879,7 +2879,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/closetogpstrace">CloseToGPSTrace</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/closetogpstrace">CloseToGPSTrace</a>
     </li>
     
 
@@ -3535,6 +3535,14 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/deployment">Deployment</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/cognitiveagents/impact/cognitive/desireevacuate">DesireEvacuate</a>
     </li>
     
@@ -3600,14 +3608,6 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
     
     <li>
         <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/interactions/direction2d">Direction2D</a>
-    </li>
-    
-
-        
-            
-    
-    <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/displacement">Displacement</a>
     </li>
     
 
@@ -4431,7 +4431,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/fromgpstrace">FromGPSTrace</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/fromgpstrace">FromGPSTrace</a>
     </li>
     
 
@@ -4583,7 +4583,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/geometricgradientrectangle">GeometricGradientRectangle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/geometricgradientrectangle">GeometricGradientRectangle</a>
     </li>
     
 
@@ -4647,7 +4647,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/graphstreamdisplacement">GraphStreamDisplacement</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/graphstreamdeployment">GraphStreamDeployment</a>
     </li>
     
 
@@ -4679,7 +4679,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/grid">Grid</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/grid">Grid</a>
     </li>
     
 
@@ -6335,7 +6335,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/point">Point</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/point">Point</a>
     </li>
     
 
@@ -6343,7 +6343,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/point2d">Point2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/point2d">Point2D</a>
     </li>
     
 
@@ -6375,7 +6375,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/polygon">Polygon</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/polygon">Polygon</a>
     </li>
     
 
@@ -6559,7 +6559,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/rectangle">Rectangle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/rectangle">Rectangle</a>
     </li>
     
 
@@ -6567,7 +6567,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/rectangle">Rectangle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/rectangle">Rectangle</a>
     </li>
     
 
@@ -7111,7 +7111,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/displacements/specificpositions">SpecificPositions</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/specificpositions">SpecificPositions</a>
     </li>
     
 
@@ -7631,7 +7631,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.1-dev3k+c8eb8a946. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.1-dev3l+661c0be5e. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7666,9 +7666,9 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/239e78f9/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/3382835c/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/3382835c/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/3382835c/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
