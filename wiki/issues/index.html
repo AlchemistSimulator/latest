@@ -76,7 +76,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev3m+24c6a3d40"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev3n+7b0913f0b"};
 </script>
 
 
@@ -177,36 +177,6 @@ This is due to Alchemist using OpenGL as rendering backend for Swing, in order t
 Otherwise, you can try to disable Swing OpenGL support by <a href="https://alchemistsimulator.github.io/latest/wiki/advanced/customization">writing a custom component</a>
 which sets Swing non-accelerated mode, by invoking the following Java code:</p>
 <pre><code class="language-java">System.setProperty(&quot;sun.java2d.opengl&quot;,&quot;false&quot;);
-</code></pre>
-<h3 id="writing-simulations"><a href="#writing-simulations" id="writing-simulations" class="anchor"></a>Writing simulations</h3>
-<h4 id="use-of-formula-based-vars-as-the-basis-for-other-vars"><a href="#use-of-formula-based-vars-as-the-basis-for-other-vars" id="use-of-formula-based-vars-as-the-basis-for-other-vars" class="anchor"></a>Use of formula-based vars as the basis for other vars</h4>
-<h4 id="can-i-use-formula-based-variables-for-other-variables"><a href="#can-i-use-formula-based-variables-for-other-variables" id="can-i-use-formula-based-variables-for-other-variables" class="anchor"></a>Can I use formula-based variables for other variables?</h4>
-<p>Problem</p>
-<pre><code class="language-yaml">variables:
-  episodes: &amp;episodes
-    formula: 5
-  episode: &amp;episode
-    min: 0
-    max: *episodes
-    step: 1
-    default: 0
-  learn: &amp;learn
-    formula: 'episode==episodes'
-</code></pre>
-<p>Error: <code>Exception in thread &quot;main&quot; java.lang.IllegalArgumentException: Unable to convert {formula=5, name=episodes} to class java.lang.Number</code></p>
-<p>Solution</p>
-<pre><code class="language-yaml">episodes: &amp;episodes 5
-
-variables:
-  episodes:
-    formula: *episodes
-  episode: &amp;episode
-    min: 0
-    max: *episodes
-    step: 1
-    default: 0
-  learn: &amp;learn
-    formula: 'episode==episodes'
 </code></pre>
 
                     
@@ -7395,7 +7365,7 @@ variables:
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.1-dev3m+24c6a3d40. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.1-dev3n+7b0913f0b. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
