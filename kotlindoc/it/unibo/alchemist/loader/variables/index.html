@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/8de8ce9/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/8de8ce9/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/8de8ce9/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/8de8ce9/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev3t+c9810b718"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev3u+bca15091a"};
 </script>
 
 
@@ -217,6 +217,26 @@
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="372806183f73f315cf6dd83c801821110a29310b">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/numericconstant">NumericConstant</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/dependentvariable">DependentVariable</a>&lt;Number?&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A numeric constant.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="084fc87797e4550da2ce6e80253f885c18480631">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/geometricvariable">GeometricVariable</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A variable ranging geometrically (exponentially) in a range. Ideal for log-scale comparisons. e.g. a <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/geometricvariable">GeometricVariable</a></code> with minimum = 1, maximum = 100 and samples = 5 will range over [1, ~3.16, 10, ~31.62 100]. Both min and max must be strictly bigger than 0.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="be3082574838fc249c6138cf2463ec03bcc88071">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/arbitraryvariable">ArbitraryVariable</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;Serializable?&gt;</code>
@@ -237,26 +257,6 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="b9bc416e6b7b589e6e8ba6de45be0fd475371f23">
-        <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/variable">Variable</a>&lt;V : Serializable?&gt; : Serializable, MutableIterable&lt;V&gt;, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A variable simulation value, that provides a range of values for batches, and a default value for single-shot runs.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="fa84feda1813ca7fc385ea6c948051744a3f66a5">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;V : Serializable?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/variable">Variable</a>&lt;V&gt;, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A variable stub, with a default <code>#toString()</code> method.</p>
-
-        </td>
-      </tr>
-      
       <tr class="sourcedoc-section section-element" id="43031cd3e324b20d6cc238df54cd1b14437238ce">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/flag">Flag</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;Boolean?&gt;</code>
@@ -267,12 +267,12 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="372806183f73f315cf6dd83c801821110a29310b">
+      <tr class="sourcedoc-section section-element" id="b9bc416e6b7b589e6e8ba6de45be0fd475371f23">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/numericconstant">NumericConstant</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/dependentvariable">DependentVariable</a>&lt;Number?&gt;, Any</code>
+          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/variable">Variable</a>&lt;V : Serializable?&gt; : Serializable, MutableIterable&lt;V&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A numeric constant.</p>
+        <p>A variable simulation value, that provides a range of values for batches, and a default value for single-shot runs.</p>
 
         </td>
       </tr>
@@ -287,12 +287,12 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="084fc87797e4550da2ce6e80253f885c18480631">
+      <tr class="sourcedoc-section section-element" id="fa84feda1813ca7fc385ea6c948051744a3f66a5">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/geometricvariable">GeometricVariable</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;Double?&gt;</code>
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;V : Serializable?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/variable">Variable</a>&lt;V&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>A variable ranging geometrically (exponentially) in a range. Ideal for log-scale comparisons. e.g. a <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/geometricvariable">GeometricVariable</a></code> with minimum = 1, maximum = 100 and samples = 5 will range over [1, ~3.16, 10, ~31.62 100]. Both min and max must be strictly bigger than 0.</p>
+        <p>A variable stub, with a default <code>#toString()</code> method.</p>
 
         </td>
       </tr>
@@ -2657,7 +2657,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/circle">Circle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/circle">Circle</a>
     </li>
     
 
@@ -2665,7 +2665,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/circle">Circle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/circle">Circle</a>
     </li>
     
 
@@ -6409,7 +6409,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/rectangle">Rectangle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/rectangle">Rectangle</a>
     </li>
     
 
@@ -6417,7 +6417,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/rectangle">Rectangle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/rectangle">Rectangle</a>
     </li>
     
 
@@ -7017,7 +7017,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
     </li>
     
 
@@ -7025,7 +7025,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
     </li>
     
 
@@ -7481,7 +7481,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.1-dev3t+c9810b718. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.1-dev3u+bca15091a. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7516,9 +7516,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/8de8ce9/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/8de8ce9/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/8de8ce9/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
