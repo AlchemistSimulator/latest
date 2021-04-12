@@ -37,10 +37,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <!-- end:inject styles -->
 
@@ -76,7 +76,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev3x+fdb1c8d0b"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"10.0.1-dev3y+b8ff9e79c"};
 </script>
 
 
@@ -270,24 +270,38 @@ deployments:
     - type: Point
       parameters: [-0.5, 0.85]
 </code></pre>
-<h3 id="deploying-multiple-nodes-at-once"><a href="#deploying-multiple-nodes-at-once" id="deploying-multiple-nodes-at-once" class="anchor"></a>Deploying multiple nodes at once</h3>
 <p>If multiple nodes are to be deployed with the same contents and program in multiple arbitrarily picked locations,
-a dedicated Deployment is present:</p>
+a dedicated Deployment with arbitrary positions is present:</p>
 <pre><code class="language-yaml">incarnation: sapere
 deployments:
   type: SpecificPositions
   parameters: [[0,1],[2,2],[3,4]]
 </code></pre>
+<h3 id="deploying-a-grid-of-nodes"><a href="#deploying-a-grid-of-nodes" id="deploying-a-grid-of-nodes" class="anchor"></a>Deploying a grid of nodes</h3>
+<p>Here instead nodes are located in a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/grid">Grid</a> centered in (0, 0), with nodes distanced of 0.25 both
+horizontally and vertically.</p>
+<pre><code class="language-yaml">incarnation: sapere
+deployments:
+  type: Grid
+  parameters: [-5, -5, 5, 5, 0.25, 0.25]
+</code></pre>
+<p>Often however, symmetric structures may induce corner behaviors in self-organising systems,
+and real-world &quot;grid&quot; deployments are not usually geometrically perfect.
+It is easy in Alchemist to create a perturbed grid, for instance in the following example nodes' positions
+are not exactly in the grid, but randomly perturbed (±0.1 distance units).</p>
+<pre><code class="language-yaml">incarnation: sapere
+deployments:
+  type: Grid
+  parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
+</code></pre>
+<h3 id="deploying-nodes-randomly-inside-a-shape"><a href="#deploying-nodes-randomly-inside-a-shape" id="deploying-nodes-randomly-inside-a-shape" class="anchor"></a>Deploying nodes randomly inside a shape</h3>
+<p>Sometimes it is useful to deploy a bunch of nodes randomly inside some area marked by a shape.
+Circles and polygons are first-class citizens,
+but of course users may create their own deployments by implementing <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/deployment">Deployment</a>.</p>
 <p>This example places 10000 nodes randomly in a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/circle">Circle</a> with center in (0, 0) and radius 10.</p>
 <pre><code class="language-yaml">deployments:
   - type: Circle
     parameters: [10000, 0, 0, 10]
-</code></pre>
-<p>Here instead nodes are located in a <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/grid">Grid</a> centered in (0, 0), with nodes distanced of 0.25 both
-horizontally and vertically, and whose position is not exact but randomly perturbed (±0.1 distance units).</p>
-<pre><code class="language-yaml">deployments:
-  - type: Grid
-    parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
 </code></pre>
 <h3 id="customizing-the-node-type"><a href="#customizing-the-node-type" id="customizing-the-node-type" class="anchor"></a>Customizing the node type</h3>
 <p>In order to specify a particular node implementation you want to put inside the environment you can use the <code>nodes</code> key
@@ -7679,7 +7693,7 @@ seeds:
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 10.0.1-dev3x+fdb1c8d0b. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 10.0.1-dev3y+b8ff9e79c. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7714,9 +7728,9 @@ seeds:
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/1282233c/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/a9ccd902/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
