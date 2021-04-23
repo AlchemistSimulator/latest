@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.0.0-dev05+85600d27d"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.0.0-dev06+549b27433"};
 </script>
 
 
@@ -197,12 +197,12 @@
       </thead>
       <tbody>
       
-      <tr class="sourcedoc-section section-element" id="ed2bca7d1776a8d84e6e0a9501b76e0911ac86e4">
+      <tr class="sourcedoc-section section-element" id="ea1591b314684d21e2a9481bd58d0fad2997ac6a">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/json/effectserializer">EffectSerializer</a>: Any</code>
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/json/colorserializationadapter">ColorSerializationAdapter</a>: JsonSerializer, JsonDeserializer</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Serialize Alchemist <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/effectgroup">effect groups</a></code> from/to file in human readable format (JSON). </p><p> This class can be considered a clean boundary between Google Gson library and the needs of this project, providing methods to serialize and deserialize from JSON files instances of EffectGroup. </p><p> The Gson object used for serialization is statically updated at runtime with all available <code>TypeAdapters</code> and <code>RuntimeTypeAdapter</code>.</p>
+        <p>This class should be registered in a com.google.gson.GsonBuilder to serialize and deserialize JavaFX Color objects.</p>
 
         </td>
       </tr>
@@ -217,12 +217,12 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="ea1591b314684d21e2a9481bd58d0fad2997ac6a">
+      <tr class="sourcedoc-section section-element" id="ed2bca7d1776a8d84e6e0a9501b76e0911ac86e4">
         <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/json/colorserializationadapter">ColorSerializationAdapter</a>: JsonSerializer, JsonDeserializer</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/json/effectserializer">EffectSerializer</a>: Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>This class should be registered in a com.google.gson.GsonBuilder to serialize and deserialize JavaFX Color objects.</p>
+        <p>Serialize Alchemist <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/effectgroup">effect groups</a></code> from/to file in human readable format (JSON). </p><p> This class can be considered a clean boundary between Google Gson library and the needs of this project, providing methods to serialize and deserialize from JSON files instances of EffectGroup. </p><p> The Gson object used for serialization is statically updated at runtime with all available <code>TypeAdapters</code> and <code>RuntimeTypeAdapter</code>.</p>
 
         </td>
       </tr>
@@ -6603,7 +6603,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
 
@@ -6611,7 +6611,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
     </li>
     
 
@@ -6947,7 +6947,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
     </li>
     
 
@@ -6955,7 +6955,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
     </li>
     
 
@@ -7059,7 +7059,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/time">Time</a>
     </li>
     
 
@@ -7067,7 +7067,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/time">Time</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a>
     </li>
     
 
@@ -7411,7 +7411,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 11.0.0-dev05+85600d27d. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 11.0.0-dev06+549b27433. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
