@@ -3581,36 +3581,70 @@
                       "content": "<p>An entity which is able to produce an Alchemist <code> InitializedEnvironment <\/code>, resolving user defined variable values.<\/p>getDefault\n<p>getVariables<\/p>\n<p>getWith<\/p>\n<p>getConstants<\/p>\n<p>Allows to access the currently defined constants, namely variables defined in the simulation file whose value is constant and does not depend on the value of any free variable (directly or indirectly).<\/p>\ngetDependentVariables\n<p>Allows to access the currently defined dependent variable (those variables whose value can be determined given a valid set of values for the free variables).<\/p>\ngetRemoteDependencies\n"
                     }]
                   },
-                  "namedparametersconstructor": {
-                    "ownKey": "namedparametersconstructor",
+                  "m2m": {
+                    "ownKey": "m2m",
+                    "childrenPages": {
+                      "namedparametersconstructor": {
+                        "ownKey": "namedparametersconstructor",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/loader/m2m/namedparametersconstructor",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/m2m/namedparametersconstructor"
+                          },
+                          "description": "",
+                          "title": "NamedParametersConstructor",
+                          "content": "<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p><init>\n<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p>\nparametersFor\n<p>provided a  target  class, extracts the parameters as an ordered list.<\/p>\ntoString\n\n"
+                        }]
+                      },
+                      "jvmconstructor": {
+                        "ownKey": "jvmconstructor",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/loader/m2m/jvmconstructor",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/m2m/jvmconstructor"
+                          },
+                          "description": "",
+                          "title": "JVMConstructor",
+                          "content": "<p>A constructor for a JVM class of type  typeName .<\/p>typeName\n<p>parametersFor<\/p>\n<p>provided a  target  class, extracts the parameters as an ordered list.<\/p>\nbuildAny\n<p>Provided a JIRF  factory , builds an instance of the requested type  T  or fails gracefully,\nreturning a <a href=\"#\">Result<\/a>.<\/p>\nbuildAny\n<p>Provided a JIRF  factory , builds an instance of the requested  type  T or fails gracefully,\nreturning a <a href=\"#\">Result<\/a>.<\/p>\n"
+                        }]
+                      },
+                      "orderedparametersconstructor": {
+                        "ownKey": "orderedparametersconstructor",
+                        "ownPages": [{
+                          "reference": {
+                            "path": "kotlindoc",
+                            "baseUrl": "https://alchemistsimulator.github.io/latest",
+                            "fileName": "it/unibo/alchemist/loader/m2m/orderedparametersconstructor",
+                            "extension": "html",
+                            "usePrettyUrl": true,
+                            "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/m2m/orderedparametersconstructor"
+                          },
+                          "description": "",
+                          "title": "OrderedParametersConstructor",
+                          "content": "<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p><init>\n<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p>\nparametersFor\n<p>provided a  target  class, extracts the parameters as an ordered list.<\/p>\ntoString\n\n"
+                        }]
+                      }
+                    },
                     "ownPages": [{
                       "reference": {
                         "path": "kotlindoc",
                         "baseUrl": "https://alchemistsimulator.github.io/latest",
-                        "fileName": "it/unibo/alchemist/loader/namedparametersconstructor",
+                        "fileName": "it/unibo/alchemist/loader/m2m",
                         "extension": "html",
                         "usePrettyUrl": true,
-                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/namedparametersconstructor"
+                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/m2m"
                       },
                       "description": "",
-                      "title": "NamedParametersConstructor",
-                      "content": "<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p><init>\n<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p>\nparametersFor\n<p>provided a  target  class, extracts the parameters as an ordered list.<\/p>\ntoString\n\n"
-                    }]
-                  },
-                  "jvmconstructor": {
-                    "ownKey": "jvmconstructor",
-                    "ownPages": [{
-                      "reference": {
-                        "path": "kotlindoc",
-                        "baseUrl": "https://alchemistsimulator.github.io/latest",
-                        "fileName": "it/unibo/alchemist/loader/jvmconstructor",
-                        "extension": "html",
-                        "usePrettyUrl": true,
-                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/jvmconstructor"
-                      },
-                      "description": "",
-                      "title": "JVMConstructor",
-                      "content": "<p>A constructor for a JVM class of type  typeName .<\/p>typeName\n<p>parametersFor<\/p>\n<p>provided a  target  class, extracts the parameters as an ordered list.<\/p>\nbuildAny\n<p>Provided a JIRF  factory , builds an instance of the requested type  T  or fails gracefully,\nreturning a <a href=\"#\">Result<\/a>.<\/p>\nbuildAny\n<p>Provided a JIRF  factory , builds an instance of the requested  type  T or fails gracefully,\nreturning a <a href=\"#\">Result<\/a>.<\/p>\n"
+                      "title": "it.unibo.alchemist.loader.m2m",
+                      "content": "<p>OrderedParametersConstructor<\/p>\n<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p>\nNamedParametersConstructor\n<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p>\nJVMConstructor\n<p>A constructor for a JVM class of type  typeName .<\/p>\n"
                     }]
                   },
                   "illegalalchemistyamlexception": {
@@ -3627,38 +3661,6 @@
                       "description": "",
                       "title": "IllegalAlchemistYAMLException",
                       "content": "<p>This exception is thrown when the Alchemist YAML does not conform to the specification.<\/p><init>\n\n<init>\n\n"
-                    }]
-                  },
-                  "objectfactory": {
-                    "ownKey": "objectfactory",
-                    "ownPages": [{
-                      "reference": {
-                        "path": "kotlindoc",
-                        "baseUrl": "https://alchemistsimulator.github.io/latest",
-                        "fileName": "it/unibo/alchemist/loader/objectfactory",
-                        "extension": "html",
-                        "usePrettyUrl": true,
-                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/objectfactory"
-                      },
-                      "description": "",
-                      "title": "ObjectFactory",
-                      "content": "<p>makeBaseFactory<\/p>\n"
-                    }]
-                  },
-                  "simulationmodel": {
-                    "ownKey": "simulationmodel",
-                    "ownPages": [{
-                      "reference": {
-                        "path": "kotlindoc",
-                        "baseUrl": "https://alchemistsimulator.github.io/latest",
-                        "fileName": "it/unibo/alchemist/loader/simulationmodel",
-                        "extension": "html",
-                        "usePrettyUrl": true,
-                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/simulationmodel"
-                      },
-                      "description": "",
-                      "title": "SimulationModel",
-                      "content": "<p>Converts a representation of an Alchemist simulation into an executable simulation.<\/p>fromMap\n<p>Converts an alchemist model defined as a Map into a loadable simulation environment and relative exports.<\/p>\n"
                     }]
                   },
                   "deployments": {
@@ -4065,22 +4067,6 @@
                       "content": "<p>Loads Alchemist simulations from a variety of resources.<\/p>from\n<p>from<\/p>\n<p>from<\/p>\n<p>from<\/p>\n<p>from<\/p>\n<p>from<\/p>\n<p>from<\/p>\n"
                     }]
                   },
-                  "orderedparametersconstructor": {
-                    "ownKey": "orderedparametersconstructor",
-                    "ownPages": [{
-                      "reference": {
-                        "path": "kotlindoc",
-                        "baseUrl": "https://alchemistsimulator.github.io/latest",
-                        "fileName": "it/unibo/alchemist/loader/orderedparametersconstructor",
-                        "extension": "html",
-                        "usePrettyUrl": true,
-                        "link": "https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/orderedparametersconstructor"
-                      },
-                      "description": "",
-                      "title": "OrderedParametersConstructor",
-                      "content": "<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p><init>\n<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p>\nparametersFor\n<p>provided a  target  class, extracts the parameters as an ordered list.<\/p>\ntoString\n\n"
-                    }]
-                  },
                   "export": {
                     "ownKey": "export",
                     "childrenPages": {
@@ -4351,7 +4337,7 @@
                   },
                   "description": "",
                   "title": "it.unibo.alchemist.loader",
-                  "content": "<p>AlchemistModelProvider<\/p>\n<p>Translates inputs to a Map representing the Alchemist model.<\/p>\nEnvironmentAndExports\n<p>Pair-like implementation of  InitializedEnvironment .<\/p>\nGraphStreamSupport\n<p>Support class for GraphStream, composed of a  linkingRule  and a  deployment .<\/p>\nInitializedEnvironment\n<p>The result of the loading of an  environment  with all the free variables instanced,\nalso providing access to  dataExtractors .<\/p>\nOrderedParametersConstructor\n<p>A  JVMConstructor  whose parameters are an ordered list (common case for any JVM language).<\/p>\nNamedParametersConstructor\n<p>A  JVMConstructor  whose parameters are named\nand hence stored in a parametersMap\n(no pure Java class works with named parameters now, Kotlin-only).<\/p>\nJVMConstructor\n<p>A constructor for a JVM class of type  typeName .<\/p>\nLoadAlchemist\n<p>Loads Alchemist simulations from a variety of resources.<\/p>\nObjectFactory\n<p>SimulationModel<\/p>\n<p>Converts a representation of an Alchemist simulation into an executable simulation.<\/p>\nLoader\n<p>An entity which is able to produce an Alchemist <code> InitializedEnvironment <\/code>, resolving user defined variable values.<\/p>\nIllegalAlchemistYAMLException\n<p>This exception is thrown when the Alchemist YAML does not conform to the specification.<\/p>\nit.unibo.alchemist.loader.deployments\n<p>it.unibo.alchemist.loader.providers<\/p>\n<p>it.unibo.alchemist.loader.variables<\/p>\n<p>it.unibo.alchemist.loader.export<\/p>\n<p>it.unibo.alchemist.loader.shapes<\/p>\n"
+                  "content": "<p>AlchemistModelProvider<\/p>\n<p>Translates inputs to a Map representing the Alchemist model.<\/p>\nEnvironmentAndExports\n<p>Pair-like implementation of  InitializedEnvironment .<\/p>\nGraphStreamSupport\n<p>Support class for GraphStream, composed of a  linkingRule  and a  deployment .<\/p>\nInitializedEnvironment\n<p>The result of the loading of an  environment  with all the free variables instanced,\nalso providing access to  dataExtractors .<\/p>\nLoadAlchemist\n<p>Loads Alchemist simulations from a variety of resources.<\/p>\nLoader\n<p>An entity which is able to produce an Alchemist <code> InitializedEnvironment <\/code>, resolving user defined variable values.<\/p>\nIllegalAlchemistYAMLException\n<p>This exception is thrown when the Alchemist YAML does not conform to the specification.<\/p>\nit.unibo.alchemist.loader.deployments\n<p>it.unibo.alchemist.loader.m2m<\/p>\n<p>it.unibo.alchemist.loader.providers<\/p>\n<p>it.unibo.alchemist.loader.variables<\/p>\n<p>it.unibo.alchemist.loader.export<\/p>\n<p>it.unibo.alchemist.loader.shapes<\/p>\n"
                 }]
               },
               "launch": {
