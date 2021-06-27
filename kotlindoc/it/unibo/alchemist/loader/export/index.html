@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.2.0-dev14+1effc6fa6"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.2.0-dev15+0d6af9f4f"};
 </script>
 
 
@@ -207,12 +207,12 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="a0211a48cf9c9e2aa976dcc52726b2e24988e026">
+      <tr class="sourcedoc-section section-element" id="45a97004333b7798be5085d96e3c8e30c7f6469e">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/moleculereader">MoleculeReader</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
+          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>: Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Reads the value of a molecule and logs it.</p>
+        <p>An object that is able to extract numeric informations from an Alchemist <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a></code>, given the current <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/simulation">it.unibo.alchemist.core.interfaces.Simulation</a></code> <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a></code>, the last <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a></code> executed and the current simulation step.</p>
 
         </td>
       </tr>
@@ -223,26 +223,6 @@
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>An extractor which provides informations about the running time of the simulation.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="d9b41fc162ba50caf8ffff269fae682ea1ee4dfc">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/meansquarederror">MeanSquaredError</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Exports the Mean Squared Error for the concentration of some molecule, given another molecule that carries the correct result. The correct value is extracted from every node, then the provided UnivariateStatistic is applied to get a single, global correct value. Then, the actual value is extracted from every node, its value is compared (subtracted) to the computed correct value, it gets squared, and then logged.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="45a97004333b7798be5085d96e3c8e30c7f6469e">
-        <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>: Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>An object that is able to extract numeric informations from an Alchemist <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/environment">Environment</a></code>, given the current <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/simulation">it.unibo.alchemist.core.interfaces.Simulation</a></code> <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/time">Time</a></code>, the last <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/reaction">Reaction</a></code> executed and the current simulation step.</p>
 
         </td>
       </tr>
@@ -277,12 +257,32 @@
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="d9b41fc162ba50caf8ffff269fae682ea1ee4dfc">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/meansquarederror">MeanSquaredError</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Exports the Mean Squared Error for the concentration of some molecule, given another molecule that carries the correct result. The correct value is extracted from every node, then the provided UnivariateStatistic is applied to get a single, global correct value. Then, the actual value is extracted from every node, its value is compared (subtracted) to the computed correct value, it gets squared, and then logged.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="e889ddbbc54674928fa703b072cbd2e6a1e4ded3">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/exporter">Exporter</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/interfaces/outputmonitor">OutputMonitor</a>&lt;T, P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Writes on file data provided by a number of <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a></code>s. Produces a CSV with '#' as comment character. Even though this class implements <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/interfaces/outputmonitor">OutputMonitor</a></code>, it is not <code><a href="https://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html">java.io.Serializable</a></code>.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="a0211a48cf9c9e2aa976dcc52726b2e24988e026">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/moleculereader">MoleculeReader</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/export/extractor">Extractor</a>, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Reads the value of a molecule and logs it.</p>
 
         </td>
       </tr>
@@ -6705,7 +6705,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
     </li>
     
 
@@ -6713,7 +6713,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
 
@@ -7041,7 +7041,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
     </li>
     
 
@@ -7049,7 +7049,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
     </li>
     
 
@@ -7505,7 +7505,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 11.2.0-dev14+1effc6fa6. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 11.2.0-dev15+0d6af9f4f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7540,9 +7540,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>

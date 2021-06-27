@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.2.0-dev14+1effc6fa6"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.2.0-dev15+0d6af9f4f"};
 </script>
 
 
@@ -581,32 +581,22 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="2a857384dbc9385c0454755b97469a7107564b94">
+      <tr class="sourcedoc-section section-element" id="8b2cc39fad25f8274c3be90c2d2350d93844e93b">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;T&gt;</code>
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractactiononsinglemolecule">AbstractActionOnSingleMolecule</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>This action moves a node inside a given environment.</p>
+        <p>This class offers the basic structures to provide operations with numeric concentrations on a single molecule.</p>
 
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="4466ccc885519ffdc59a385340a9aeffa1fba32b">
+      <tr class="sourcedoc-section section-element" id="cb452552d9356a1aa899a3bc3c59bec9c4ad63cd">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a>&lt;T&gt;, Any</code>
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractconfigurablemovenode">AbstractConfigurableMoveNode</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>An abstract class facility with some generic methods implemented.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="a715b6f696ff1c5f102dd3d091b368a6d90a70d6">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removenode">RemoveNode</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Removes the current node from the environment.</p>
+        <p>An abstract class that factorizes code for multiple different movements. With three strategies can be defined: the next target to be reached, the routing strategy to adopt, the speed to move at.</p>
 
         </td>
       </tr>
@@ -617,16 +607,6 @@ distance and angle define the field of view.</p>
         </td>
         <td class="sourcedoc-section section-comments content">
         
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="770af8ae9ed013a8d5b345f114ddcba061ae7ca6">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/brownianmove">BrownianMove</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;T, P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Moves the node randomly.</p>
-
         </td>
       </tr>
       
@@ -649,26 +629,6 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="cb452552d9356a1aa899a3bc3c59bec9c4ad63cd">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractconfigurablemovenode">AbstractConfigurableMoveNode</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;T, P&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>An abstract class that factorizes code for multiple different movements. With three strategies can be defined: the next target to be reached, the routing strategy to adopt, the speed to move at.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="8b2cc39fad25f8274c3be90c2d2350d93844e93b">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractactiononsinglemolecule">AbstractActionOnSingleMolecule</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This class offers the basic structures to provide operations with numeric concentrations on a single molecule.</p>
-
-        </td>
-      </tr>
-      
       <tr class="sourcedoc-section section-element" id="1539077b0ee20b4307bd93a054c5d9bddcee7baf">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveforwardandteleport">MoveForwardAndTeleport</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;T, P&gt;</code>
@@ -679,39 +639,42 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="c26d869574874cd48ffba105285204dbb2c05b0f">
+      <tr class="sourcedoc-section section-element" id="a715b6f696ff1c5f102dd3d091b368a6d90a70d6">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/randompolarization">RandomPolarization</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractrandomizableaction">AbstractRandomizableAction</a>&lt;Double?&gt;</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removenode">RemoveNode</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <p>Removes the current node from the environment.</p>
+
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="d5ccddd89d34f347048a09a3bfe5d4435abfe951">
+      <tr class="sourcedoc-section section-element" id="2a857384dbc9385c0454755b97469a7107564b94">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/celltensionpolarization">CellTensionPolarization</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;Double?&gt;</code>
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <p>This action moves a node inside a given environment.</p>
+
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="655729a2adc6cf6d24f7a99d07f209287ded46bc">
+      <tr class="sourcedoc-section section-element" id="4466ccc885519ffdc59a385340a9aeffa1fba32b">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractrandomizableaction">AbstractRandomizableAction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;T&gt;</code>
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/action">Action</a>&lt;T&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <p>An abstract class facility with some generic methods implemented.</p>
+
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="5c6e474e609ebd81a9e827211c4855a13fc29a76">
+      <tr class="sourcedoc-section section-element" id="770af8ae9ed013a8d5b345f114ddcba061ae7ca6">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removejunctionincell">RemoveJunctionInCell</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractneighboraction">AbstractNeighborAction</a>&lt;Double?&gt;</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/brownianmove">BrownianMove</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;T, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Represent the action of removing a junction between the current node and a neighbor. This action only remove the junction reference inside this node, the neighbor totally ignore that a junction has been removed. This is a part of the junction removal process. See <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removejunctioninneighbor">RemoveJunctionInNeighbor</a></code> for the other part of the process</p>
+        <p>Moves the node randomly.</p>
 
         </td>
       </tr>
@@ -726,16 +689,6 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="314b450d3e74df043fe106f54adb4b224a051a0b">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractneighboraction">AbstractNeighborAction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractrandomizableaction">AbstractRandomizableAction</a>&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Represents an action on a neighbor.</p>
-
-        </td>
-      </tr>
-      
       <tr class="sourcedoc-section section-element" id="520907a7b8bbe1efcc3fa3f968c2a380f99ff95c">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/addjunctionincell">AddJunctionInCell</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractneighboraction">AbstractNeighborAction</a>&lt;Double?&gt;</code>
@@ -743,6 +696,15 @@ distance and angle define the field of view.</p>
         <td class="sourcedoc-section section-comments content">
         <p>Represent the action of add a junction between the current node and a neighbor. This action only create the junction reference inside this node, the neighbor totally ignore that a junction has been created. This is a part of the junction creation process. See <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/addjunctioninneighbor">AddJunctionInNeighbor</a></code> for the other part of the process</p>
 
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="9d933dc9ffd7491a7b1b23a15bceef29529d96b5">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/changebiomolconcentrationinneighbor">ChangeBiomolConcentrationInNeighbor</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractneighboraction">AbstractNeighborAction</a>&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
         </td>
       </tr>
       
@@ -756,9 +718,18 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9a5b8ae66ce6e748719fde5838d971c79d1208b6">
+      <tr class="sourcedoc-section section-element" id="6c99b83a68792206ba1d5fb7325bc2bd2c74b1a7">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/chemotacticpolarization">ChemotacticPolarization</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;Double?&gt;</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/changebiomolconcentrationincell">ChangeBiomolConcentrationInCell</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractactiononsinglemolecule">AbstractActionOnSingleMolecule</a>&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5e86fefa786f896146a0a0f52fe1deed5cca5a8a">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/cellmove">CellMove</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;Double?, P&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -775,30 +746,59 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="6c99b83a68792206ba1d5fb7325bc2bd2c74b1a7">
+      <tr class="sourcedoc-section section-element" id="655729a2adc6cf6d24f7a99d07f209287ded46bc">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/changebiomolconcentrationincell">ChangeBiomolConcentrationInCell</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractactiononsinglemolecule">AbstractActionOnSingleMolecule</a>&lt;Double?&gt;</code>
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractrandomizableaction">AbstractRandomizableAction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="9d933dc9ffd7491a7b1b23a15bceef29529d96b5">
+      <tr class="sourcedoc-section section-element" id="d5ccddd89d34f347048a09a3bfe5d4435abfe951">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/changebiomolconcentrationinneighbor">ChangeBiomolConcentrationInNeighbor</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractneighboraction">AbstractNeighborAction</a>&lt;Double?&gt;</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/celltensionpolarization">CellTensionPolarization</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;Double?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="5e86fefa786f896146a0a0f52fe1deed5cca5a8a">
+      <tr class="sourcedoc-section section-element" id="9a5b8ae66ce6e748719fde5838d971c79d1208b6">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/cellmove">CellMove</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractmovenode">AbstractMoveNode</a>&lt;Double?, P&gt;</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/chemotacticpolarization">ChemotacticPolarization</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractaction">AbstractAction</a>&lt;Double?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="c26d869574874cd48ffba105285204dbb2c05b0f">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/randompolarization">RandomPolarization</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractrandomizableaction">AbstractRandomizableAction</a>&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="5c6e474e609ebd81a9e827211c4855a13fc29a76">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removejunctionincell">RemoveJunctionInCell</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractneighboraction">AbstractNeighborAction</a>&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Represent the action of removing a junction between the current node and a neighbor. This action only remove the junction reference inside this node, the neighbor totally ignore that a junction has been removed. This is a part of the junction removal process. See <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/removejunctioninneighbor">RemoveJunctionInNeighbor</a></code> for the other part of the process</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="314b450d3e74df043fe106f54adb4b224a051a0b">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractneighboraction">AbstractNeighborAction</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractrandomizableaction">AbstractRandomizableAction</a>&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Represents an action on a neighbor.</p>
+
         </td>
       </tr>
       
@@ -820,12 +820,13 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="f5a97cc6f30ef97f13e6e9a86c65c76e792bdc59">
+      <tr class="sourcedoc-section section-element" id="a6036b2a2a0bfcc6ac80ebf4aec54000dc4a9b74">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsacountneighborsaction">LsaCountNeighborsAction</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperelocalagent">SAPERELocalAgent</a></code>
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsastandardaction">LsaStandardAction</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsaabstractaction">LsaAbstractAction</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <p>This action add LsaMolecule in a single node.</p>
+
         </td>
       </tr>
       
@@ -847,48 +848,18 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="5d6193f655304c2423687346640227b3fe1f4068">
+      <tr class="sourcedoc-section section-element" id="02cf000d2d30dbb841392781030734d9f10d30cc">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsachangeargument">LsaChangeArgument</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperelocalagent">SAPERELocalAgent</a></code>
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsarandomneighboraction">LsaRandomNeighborAction</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsastandardaction">LsaStandardAction</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="a9eb8149e294c4dd31758d32d4309e168cab11b2">
+      <tr class="sourcedoc-section section-element" id="b7a2bc9dcacb7cde63562113a1059b58d4e7b7fd">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperelocalagent">SAPERELocalAgent</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/sapereagent">SAPEREAgent</a></code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A SAPERE Agent that does not do actions on neighbors.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="78fd40db45fe8d7253eabb334bbc1580b2915795">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/sapereneighboragent">SAPERENeighborAgent</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/sapereagent">SAPEREAgent</a></code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A SAPERE Agent that modifies something on neighboring nodes.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="a6036b2a2a0bfcc6ac80ebf4aec54000dc4a9b74">
-        <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsastandardaction">LsaStandardAction</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsaabstractaction">LsaAbstractAction</a></code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This action add LsaMolecule in a single node.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="626b6d8f27bbffe9839c157ec0c81b6aa4a84b2c">
-        <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperewalkerrisegradient">SAPEREWalkerRiseGradient</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmap">MoveOnMap</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperewalker">SAPEREWalker</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmap">MoveOnMap</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsaaction">ILsaAction</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -905,9 +876,18 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="d1dd75c99a849c588f2c785211b89479bf2e2d32">
+      <tr class="sourcedoc-section section-element" id="5d6193f655304c2423687346640227b3fe1f4068">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/sapereagent">SAPEREAgent</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsaabstractaction">LsaAbstractAction</a></code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsachangeargument">LsaChangeArgument</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperelocalagent">SAPERELocalAgent</a></code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f5a97cc6f30ef97f13e6e9a86c65c76e792bdc59">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsacountneighborsaction">LsaCountNeighborsAction</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperelocalagent">SAPERELocalAgent</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -924,12 +904,13 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="02cf000d2d30dbb841392781030734d9f10d30cc">
+      <tr class="sourcedoc-section section-element" id="a9eb8149e294c4dd31758d32d4309e168cab11b2">
         <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsarandomneighboraction">LsaRandomNeighborAction</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsastandardaction">LsaStandardAction</a></code>
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperelocalagent">SAPERELocalAgent</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/sapereagent">SAPEREAgent</a></code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        
+        <p>A SAPERE Agent that does not do actions on neighbors.</p>
+
         </td>
       </tr>
       
@@ -940,15 +921,6 @@ distance and angle define the field of view.</p>
         <td class="sourcedoc-section section-comments content">
         <p>The execution involves all neighbours. The molecule can be different from a neighbor to the other, because some special Variable (#D) are specific for each node. This is why N molecules are instanced if there are N neighbours.</p>
 
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="b7a2bc9dcacb7cde63562113a1059b58d4e7b7fd">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperewalker">SAPEREWalker</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmap">MoveOnMap</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsaaction">ILsaAction</a></code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
         </td>
       </tr>
       
@@ -970,6 +942,34 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="d1dd75c99a849c588f2c785211b89479bf2e2d32">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/sapereagent">SAPEREAgent</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/lsaabstractaction">LsaAbstractAction</a></code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="626b6d8f27bbffe9839c157ec0c81b6aa4a84b2c">
+        <td class="sourcedoc-section section-signature">
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/saperewalkerrisegradient">SAPEREWalkerRiseGradient</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmap">MoveOnMap</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="78fd40db45fe8d7253eabb334bbc1580b2915795">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/sapereneighboragent">SAPERENeighborAgent</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/sapereagent">SAPEREAgent</a></code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A SAPERE Agent that modifies something on neighboring nodes.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="9a48be035773f37fc7f96e2ceaa6cf7c1ff7dc6b">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/gpstracewalker">GPSTraceWalker</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmapwithgps">MoveOnMapWithGPS</a>&lt;T&gt;</code>
@@ -980,18 +980,9 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="4b54de4ec1b424e1c615059dadeeb25617956120">
+      <tr class="sourcedoc-section section-element" id="6b179ca3a574c2f4f971d9a87e044e80a1edc41e">
         <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmap">MoveOnMap</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractconfigurablemovenode">AbstractConfigurableMoveNode</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="553f6a3bf219861b08d8e3c3507c443c15be69ef">
-        <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/targetwalker">TargetWalker</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmap">MoveOnMap</a>&lt;T&gt;</code>
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/reproducegpstrace">ReproduceGPSTrace</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmapwithgps">MoveOnMapWithGPS</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -1008,9 +999,18 @@ distance and angle define the field of view.</p>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="6b179ca3a574c2f4f971d9a87e044e80a1edc41e">
+      <tr class="sourcedoc-section section-element" id="553f6a3bf219861b08d8e3c3507c443c15be69ef">
         <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/reproducegpstrace">ReproduceGPSTrace</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmapwithgps">MoveOnMapWithGPS</a>&lt;T&gt;</code>
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/targetwalker">TargetWalker</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmap">MoveOnMap</a>&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="4b54de4ec1b424e1c615059dadeeb25617956120">
+        <td class="sourcedoc-section section-signature">
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/moveonmap">MoveOnMap</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/actions/abstractconfigurablemovenode">AbstractConfigurableMoveNode</a>&lt;T, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         
@@ -7812,7 +7812,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
     </li>
     
 
@@ -7820,7 +7820,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
 
@@ -8148,7 +8148,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
     </li>
     
 
@@ -8156,7 +8156,7 @@ a bidimensional environment would be transformed into a list containing position
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
     </li>
     
 
@@ -8612,7 +8612,7 @@ a bidimensional environment would be transformed into a list containing position
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 11.2.0-dev14+1effc6fa6. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 11.2.0-dev15+0d6af9f4f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -8647,9 +8647,9 @@ a bidimensional environment would be transformed into a list containing position
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/e619a893/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/7549033d/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
