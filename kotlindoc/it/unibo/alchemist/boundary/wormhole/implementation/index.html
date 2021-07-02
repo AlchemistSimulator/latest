@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.2.0-dev1b+a99dadb0e"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.2.0-dev1c+3a8887c76"};
 </script>
 
 
@@ -197,6 +197,16 @@
       </thead>
       <tbody>
       
+      <tr class="sourcedoc-section section-element" id="ba8d85b87a3168ba146915b9ddd067ba9b7e9a6e">
+        <td class="sourcedoc-section section-signature">
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/wormholeswing">WormholeSwing</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/abstractwormhole2d">AbstractWormhole2D</a>&lt;P&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An implementation of [AbstractWormhole2D] for Swing.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="65bf20b0b7ad6341fdeb75636ae1d949bf26c7ed">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/mapwormhole">MapWormhole</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/wormholeswing">WormholeSwing</a>&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geoposition">GeoPosition</a>?&gt;</code>
@@ -217,32 +227,12 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="ba8d85b87a3168ba146915b9ddd067ba9b7e9a6e">
+      <tr class="sourcedoc-section section-element" id="15e66aeb7e67ee071703eea547bb317b52a3123e">
         <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/wormholeswing">WormholeSwing</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/abstractwormhole2d">AbstractWormhole2D</a>&lt;P&gt;</code>
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/abstractwormhole2d">AbstractWormhole2D</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d">Wormhole2D</a>&lt;P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>An implementation of [AbstractWormhole2D] for Swing.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="4fdc2cece9fe227c698c91db0d3710bf5fb1a984">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/exponentialzoommanager">ExponentialZoomManager</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/abstractslideinputmanager">AbstractSlideInputManager</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/zoommanager">ZoomManager</a></code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>An <code>ExpZoomManager</code> converts the sliding of any physical/virtual device/control into a zoom rate through an exponential function (in this way I am sure to not see negative values ;-).<br> Zoom = base ^ (amount of slides / normalization value).</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="e20217701b695c08f090d173e124d2c840349ce6">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/doubledimension">DoubleDimension</a>: Dimension2D</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Implementation of the <code><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Dimension2D.html">Dimension2D</a></code> abstract class with double precision.</p>
+        <p>Partial, abstract, implementation for the interface <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d">Wormhole2D</a></code>. This implementation considers the particular case of the view as an entity into the sceern-space: the y-axis grows on the bottom side of the screen. This abstract class is independent from the 2D graphical component wrapped.</p>
 
         </td>
       </tr>
@@ -257,6 +247,16 @@
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="4fdc2cece9fe227c698c91db0d3710bf5fb1a984">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/exponentialzoommanager">ExponentialZoomManager</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/abstractslideinputmanager">AbstractSlideInputManager</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/zoommanager">ZoomManager</a></code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>An <code>ExpZoomManager</code> converts the sliding of any physical/virtual device/control into a zoom rate through an exponential function (in this way I am sure to not see negative values ;-).<br> Zoom = base ^ (amount of slides / normalization value).</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="f8fc5133bb3c2f8208bf2fb2ba1d7bc4a5d53029">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/linearzoommanager">LinearZoomManager</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/abstractslideinputmanager">AbstractSlideInputManager</a>, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/zoommanager">ZoomManager</a></code>
@@ -267,22 +267,22 @@
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="e20217701b695c08f090d173e124d2c840349ce6">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/doubledimension">DoubleDimension</a>: Dimension2D</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Implementation of the <code><a href="https://docs.oracle.com/javase/6/docs/api/java/awt/geom/Dimension2D.html">Dimension2D</a></code> abstract class with double precision.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="6910b0d5f4e9c3975f663ffcb91a2575854e25bd">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/pointadapter">PointAdapter</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : Serializable, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Adapts various representations of bidimensional positions.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="15e66aeb7e67ee071703eea547bb317b52a3123e">
-        <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/implementation/abstractwormhole2d">AbstractWormhole2D</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position2d">Position2D</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d">Wormhole2D</a>&lt;P&gt;, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Partial, abstract, implementation for the interface <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d">Wormhole2D</a></code>. This implementation considers the particular case of the view as an entity into the sceern-space: the y-axis grows on the bottom side of the screen. This abstract class is independent from the 2D graphical component wrapped.</p>
 
         </td>
       </tr>
@@ -5594,7 +5594,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d/mode">Mode</a>
     </li>
     
 
@@ -5602,7 +5602,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
     </li>
     
 
@@ -7506,7 +7506,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 11.2.0-dev1b+a99dadb0e. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 11.2.0-dev1c+3a8887c76. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

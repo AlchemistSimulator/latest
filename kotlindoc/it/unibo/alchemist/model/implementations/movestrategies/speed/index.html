@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.2.0-dev1b+a99dadb0e"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.2.0-dev1c+3a8887c76"};
 </script>
 
 
@@ -217,16 +217,6 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="7164abd8bd34dbc021a84d36a038557d4cf844d8">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/interactwithothers">InteractWithOthers</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;P&gt;, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This strategy slows down nodes depending on how many "interacting" nodes are found in the surroundings. It is an attempt at modeling crowding slow-downs.</p>
-
-        </td>
-      </tr>
-      
       <tr class="sourcedoc-section section-element" id="abd2eb3dc343048a4b44fc3ff93c5953d4aa90f3">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/constantspeed">ConstantSpeed</a>&lt;P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;P&gt;, Any</code>
@@ -237,12 +227,22 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="fa05c8d7d3f9d9064c698add76255aa8b1f9857b">
+      <tr class="sourcedoc-section section-element" id="7164abd8bd34dbc021a84d36a038557d4cf844d8">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/straightlinetracedependantspeed">StraightLineTraceDependantSpeed</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/tracedependantspeed">TraceDependantSpeed</a>&lt;T&gt;</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/interactwithothers">InteractWithOthers</a>&lt;T : Any?, P : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/position">Position</a>&lt;P&gt;?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/movestrategies/speedselectionstrategy">SpeedSelectionStrategy</a>&lt;P&gt;, Any</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>This <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/tracedependantspeed">TraceDependantSpeed</a></code> uses the distance between coordinates for estimating the distance.</p>
+        <p>This strategy slows down nodes depending on how many "interacting" nodes are found in the surroundings. It is an attempt at modeling crowding slow-downs.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7508bf0c67c7891b7612be199ecdcd96309499e2">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/routingtracedependantspeed">RoutingTraceDependantSpeed</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/tracedependantspeed">TraceDependantSpeed</a>&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/tracedependantspeed">TraceDependantSpeed</a></code> strategy computes the remaining distance by relying on maps data for a selected <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/vehicle">Vehicle</a></code>.</p>
 
         </td>
       </tr>
@@ -257,12 +257,12 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="7508bf0c67c7891b7612be199ecdcd96309499e2">
+      <tr class="sourcedoc-section section-element" id="fa05c8d7d3f9d9064c698add76255aa8b1f9857b">
         <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/routingtracedependantspeed">RoutingTraceDependantSpeed</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/tracedependantspeed">TraceDependantSpeed</a>&lt;T&gt;</code>
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/straightlinetracedependantspeed">StraightLineTraceDependantSpeed</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/tracedependantspeed">TraceDependantSpeed</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>This <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/tracedependantspeed">TraceDependantSpeed</a></code> strategy computes the remaining distance by relying on maps data for a selected <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/vehicle">Vehicle</a></code>.</p>
+        <p>This <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/movestrategies/speed/tracedependantspeed">TraceDependantSpeed</a></code> uses the distance between coordinates for estimating the distance.</p>
 
         </td>
       </tr>
@@ -5531,7 +5531,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d/mode">Mode</a>
     </li>
     
 
@@ -5539,7 +5539,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
     </li>
     
 
@@ -7443,7 +7443,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 11.2.0-dev1b+a99dadb0e. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 11.2.0-dev1c+3a8887c76. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 

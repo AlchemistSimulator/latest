@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.2.0-dev1b+a99dadb0e"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.2.0-dev1c+3a8887c76"};
 </script>
 
 
@@ -214,41 +214,12 @@ support lower bound is zero or greater</li></ul>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="bf87b9bf0a691d82e68d650120da92a581081fff">
+      <tr class="sourcedoc-section section-element" id="ba641e40c17cad30c98533e6601c31fab0367e7b">
         <td class="sourcedoc-section section-signature">
-          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/abstractdistribution">AbstractDistribution</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/timedistribution">TimeDistribution</a>&lt;T&gt;, Any</code>
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/weibulldistributedweibulltime">WeibullDistributedWeibullTime</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/weibulltime">WeibullTime</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>This class provides, through a template method pattern, an utility that ensures that the distribution does not trigger events before its initial scheduling time.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="30e3c9241979ee3aaa3f0e53e1f68971a0e37a70">
-        <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/randomdiraccomb">RandomDiracComb</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/diraccomb">DiracComb</a>&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/diraccomb">DiracComb</a></code> whose rate is determined (uniformly) randomly within the provided bounds.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="a9b265bc1ada1b4cdc1c0ca567c6810e2e2d48de">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/trigger">Trigger</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/abstractdistribution">AbstractDistribution</a>&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="b220bd20d7714688f099eabacd07c04806770f19">
-        <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/anyrealdistribution">AnyRealDistribution</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/abstractdistribution">AbstractDistribution</a>&lt;T&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This class is able to use any distribution provided by Apache Math 3 as a subclass of RealDistribution, blocking the execution if <code>it.unibo.alchemist.model.interfaces.Condition#getPropensityContribution()</code> returns zero for any condition.</p>
+        <p>Weibull distributed events, with different (Weibull distributed) mean.</p>
 
         </td>
       </tr>
@@ -273,6 +244,35 @@ support lower bound is zero or greater</li></ul>
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="a9b265bc1ada1b4cdc1c0ca567c6810e2e2d48de">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/trigger">Trigger</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/abstractdistribution">AbstractDistribution</a>&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bf87b9bf0a691d82e68d650120da92a581081fff">
+        <td class="sourcedoc-section section-signature">
+          <code>abstract class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/abstractdistribution">AbstractDistribution</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/timedistribution">TimeDistribution</a>&lt;T&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This class provides, through a template method pattern, an utility that ensures that the distribution does not trigger events before its initial scheduling time.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="b220bd20d7714688f099eabacd07c04806770f19">
+        <td class="sourcedoc-section section-signature">
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/anyrealdistribution">AnyRealDistribution</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/abstractdistribution">AbstractDistribution</a>&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This class is able to use any distribution provided by Apache Math 3 as a subclass of RealDistribution, blocking the execution if <code>it.unibo.alchemist.model.interfaces.Condition#getPropensityContribution()</code> returns zero for any condition.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="60d15ff4ff0dbe30611c55b9c3a33aad02e939d7">
         <td class="sourcedoc-section section-signature">
           <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/exponentialtime">ExponentialTime</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/abstractdistribution">AbstractDistribution</a>&lt;T&gt;</code>
@@ -283,22 +283,12 @@ support lower bound is zero or greater</li></ul>
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="ba641e40c17cad30c98533e6601c31fab0367e7b">
+      <tr class="sourcedoc-section section-element" id="30e3c9241979ee3aaa3f0e53e1f68971a0e37a70">
         <td class="sourcedoc-section section-signature">
-          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/weibulldistributedweibulltime">WeibullDistributedWeibullTime</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/weibulltime">WeibullTime</a>&lt;T&gt;</code>
+          <code>open class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/randomdiraccomb">RandomDiracComb</a>&lt;T : Any?&gt; : <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/diraccomb">DiracComb</a>&lt;T&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
-        <p>Weibull distributed events, with different (Weibull distributed) mean.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="7b635084d591b33840ebe1272b6633c126216bde">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/sapereexponentialtime">SAPEREExponentialTime</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/exponentialtime">ExponentialTime</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/saperetimedistribution">SAPERETimeDistribution</a></code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>Allows for a Markovian event whose lambda is computed dynamically using a rate equation.</p>
+        <p>A <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/diraccomb">DiracComb</a></code> whose rate is determined (uniformly) randomly within the provided bounds.</p>
 
         </td>
       </tr>
@@ -309,6 +299,16 @@ support lower bound is zero or greater</li></ul>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>Interface for TimeDistribution that need matches.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="7b635084d591b33840ebe1272b6633c126216bde">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/sapereexponentialtime">SAPEREExponentialTime</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/exponentialtime">ExponentialTime</a>&lt;MutableList&lt;<a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/ilsamolecule">ILsaMolecule</a>?&gt;?&gt;, <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/implementations/timedistributions/saperetimedistribution">SAPERETimeDistribution</a></code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>Allows for a Markovian event whose lambda is computed dynamically using a rate equation.</p>
 
         </td>
       </tr>
@@ -5577,7 +5577,7 @@ support lower bound is zero or greater</li></ul>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d/mode">Mode</a>
     </li>
     
 
@@ -5585,7 +5585,7 @@ support lower bound is zero or greater</li></ul>
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/wormhole/interfaces/wormhole2d/mode">Mode</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/effects/drawshape/mode">Mode</a>
     </li>
     
 
@@ -7489,7 +7489,7 @@ support lower bound is zero or greater</li></ul>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 11.2.0-dev1b+a99dadb0e. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 11.2.0-dev1c+3a8887c76. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
