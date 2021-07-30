@@ -33,10 +33,10 @@
 
 
 <!-- start:inject styles -->
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/6e5ccc5a/assets/css/editorial_main.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/6e5ccc5a/assets/css/editorial_orchidCustomizations.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/6e5ccc5a/assets/css/orchidSearch.css"  />
-<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/6e5ccc5a/assets/css/pygments.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/27820e9f/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/27820e9f/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/27820e9f/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/Editorial/27820e9f/assets/css/pygments.css"  />
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidSourceDoc.css"  />
 <link rel="stylesheet" type="text/css" href="https://alchemistsimulator.github.io/latest/assets/css/orchidKotlindoc.css"  />
@@ -74,7 +74,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.3.1-dev03+09a6374c7"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.3.1-dev04+fba99ad2f"};
 </script>
 
 
@@ -217,52 +217,12 @@
         </td>
       </tr>
       
-      <tr class="sourcedoc-section section-element" id="c1aa164812159beb79c2500b62190ea9c5875824">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/linearvariable">LinearVariable</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;Double?&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This class represents a linear variable, namely a variable whose values span linearly between minimum and maximum.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="43031cd3e324b20d6cc238df54cd1b14437238ce">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/flag">Flag</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;Boolean?&gt;</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>This variable is a flag. Being booleans not a valid data type in charts, this variable just outputs 0 and 1. This is equivalent to a <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/linearvariable">LinearVariable</a></code> with two samples ranging from 0 to 1.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="372806183f73f315cf6dd83c801821110a29310b">
-        <td class="sourcedoc-section section-signature">
-          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/numericconstant">NumericConstant</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/dependentvariable">DependentVariable</a>&lt;Number?&gt;, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A numeric constant.</p>
-
-        </td>
-      </tr>
-      
       <tr class="sourcedoc-section section-element" id="084fc87797e4550da2ce6e80253f885c18480631">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/geometricvariable">GeometricVariable</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;Double?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A variable ranging geometrically (exponentially) in a range. Ideal for log-scale comparisons. e.g. a <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/geometricvariable">GeometricVariable</a></code> with minimum = 1, maximum = 100 and samples = 5 will range over [1, ~3.16, 10, ~31.62 100]. Both min and max must be strictly bigger than 0.</p>
-
-        </td>
-      </tr>
-      
-      <tr class="sourcedoc-section section-element" id="0f871a68bb7e5471c64bf70c1ed54201a57feb41">
-        <td class="sourcedoc-section section-signature">
-          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/dependentvariable">DependentVariable</a>&lt;V : Any?&gt; : Serializable, Any</code>
-        </td>
-        <td class="sourcedoc-section section-comments content">
-        <p>A dependent variable, namely a variable whose value can be obtained given the values of other variables.</p>
 
         </td>
       </tr>
@@ -277,12 +237,52 @@
         </td>
       </tr>
       
+      <tr class="sourcedoc-section section-element" id="0f871a68bb7e5471c64bf70c1ed54201a57feb41">
+        <td class="sourcedoc-section section-signature">
+          <code>interface <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/dependentvariable">DependentVariable</a>&lt;V : Any?&gt; : Serializable, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A dependent variable, namely a variable whose value can be obtained given the values of other variables.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="372806183f73f315cf6dd83c801821110a29310b">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/numericconstant">NumericConstant</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/dependentvariable">DependentVariable</a>&lt;Number?&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>A numeric constant.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="43031cd3e324b20d6cc238df54cd1b14437238ce">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/flag">Flag</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;Boolean?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This variable is a flag. Being booleans not a valid data type in charts, this variable just outputs 0 and 1. This is equivalent to a <code><a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/linearvariable">LinearVariable</a></code> with two samples ranging from 0 to 1.</p>
+
+        </td>
+      </tr>
+      
       <tr class="sourcedoc-section section-element" id="be3082574838fc249c6138cf2463ec03bcc88071">
         <td class="sourcedoc-section section-signature">
           <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/arbitraryvariable">ArbitraryVariable</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;Serializable?&gt;</code>
         </td>
         <td class="sourcedoc-section section-comments content">
         <p>A variable spanning over an arbitrary set of values.</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="c1aa164812159beb79c2500b62190ea9c5875824">
+        <td class="sourcedoc-section section-signature">
+          <code>class <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/linearvariable">LinearVariable</a>: <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/variables/printablevariable">PrintableVariable</a>&lt;Double?&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>This class represents a linear variable, namely a variable whose values span linearly between minimum and maximum.</p>
 
         </td>
       </tr>
@@ -2665,7 +2665,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/circle">Circle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/circle">Circle</a>
     </li>
     
 
@@ -2673,7 +2673,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/circle">Circle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/circle">Circle</a>
     </li>
     
 
@@ -6401,7 +6401,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/rectangle">Rectangle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/rectangle">Rectangle</a>
     </li>
     
 
@@ -6409,7 +6409,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/shapes/rectangle">Rectangle</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/loader/deployments/rectangle">Rectangle</a>
     </li>
     
 
@@ -6665,7 +6665,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
     </li>
     
 
@@ -6673,7 +6673,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/isolines/segment2d">Segment2D</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/model/interfaces/geometry/euclidean2d/segment2d">Segment2D</a>
     </li>
     
 
@@ -7001,7 +7001,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
     </li>
     
 
@@ -7009,7 +7009,7 @@
             
     
     <li>
-        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/boundary/gui/reactivitypanel/status">Status</a>
+        <a href="https://alchemistsimulator.github.io/latest/kotlindoc/it/unibo/alchemist/core/interfaces/status">Status</a>
     </li>
     
 
@@ -7465,7 +7465,7 @@
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 11.3.1-dev03+09a6374c7. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 11.3.1-dev04+fba99ad2f. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
@@ -7500,9 +7500,9 @@
 <!-- start:inject scripts -->
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/6e5ccc5a/assets/js/editorial_util.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/6e5ccc5a/assets/js/editorial_main.js"></script>
-<script  src="https://alchemistsimulator.github.io/latest/Editorial/6e5ccc5a/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/27820e9f/assets/js/editorial_util.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/27820e9f/assets/js/editorial_main.js"></script>
+<script  src="https://alchemistsimulator.github.io/latest/Editorial/27820e9f/assets/js/editorial_orchidCustomizations.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-kotlin.min.js"></script>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-java.min.js"></script>
