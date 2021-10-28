@@ -1,0 +1,10 @@
+//[alchemist](../../../index.md)/[it.unibo.alchemist.model.interfaces](../index.md)/[Environment](index.md)/[getLinkingRule](get-linking-rule.md)
+
+# getLinkingRule
+
+[jvm]\
+abstract fun [getLinkingRule](get-linking-rule.md)(): [LinkingRule](../-linking-rule/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
+
+#### Return
+
+the current linking rule

@@ -1,0 +1,40 @@
+//[alchemist](../../../index.md)/[it.unibo.alchemist.model.interfaces.geometry.euclidean2d](../index.md)/[ConvexPolygon](index.md)
+
+# ConvexPolygon
+
+[jvm]\
+interface [ConvexPolygon](index.md) : [ConvexGeometricShape](../../it.unibo.alchemist.model.interfaces.geometry/-convex-geometric-shape/index.md)<[Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md), [Euclidean2DTransformation](../-euclidean2-d-transformation/index.md)> , [AwtShapeCompatible](../../it.unibo.alchemist.model.implementations.geometry/-awt-shape-compatible/index.md)
+
+A simple polygon (i.e. not self-intersecting and without holes) in which no line segment between two points on the boundary ever goes outside the polygon.
+
+## Functions
+
+| Name | Summary |
+|---|---|
+| [asAwtShape](../../it.unibo.alchemist.model.implementations.geometry/-awt-shape-compatible/as-awt-shape.md) | [jvm]<br>abstract fun [asAwtShape](../../it.unibo.alchemist.model.implementations.geometry/-awt-shape-compatible/as-awt-shape.md)(): [Shape](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html) |
+| [closestEdgeTo](closest-edge-to.md) | [jvm]<br>abstract fun [closestEdgeTo](closest-edge-to.md)(segment: [Segment2D](../-segment2-d/index.md)<[Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>): [Segment2D](../-segment2-d/index.md)<[Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)><br>Finds the edge of the polygon closest to the provided [segment](closest-edge-to.md), i.e. |
+| [contains](contains.md) | [jvm]<br>abstract override fun [contains](contains.md)(vector: [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Checks if the polygon contains a vector (= a point).<br>[jvm]<br>abstract fun [contains](contains.md)(shape: [Shape](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Checks if the polygon contains a polygonal [java.awt.Shape](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html) (i.e. |
+| [containsBoundaryExcluded](contains-boundary-excluded.md) | [jvm]<br>abstract fun [containsBoundaryExcluded](contains-boundary-excluded.md)(vector: [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Checks if a vector (= a point) is contained in the polygon, boundary excluded. |
+| [containsBoundaryIncluded](contains-boundary-included.md) | [jvm]<br>abstract fun [containsBoundaryIncluded](contains-boundary-included.md)(vector: [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Checks if a vector (= a point) is contained in the polygon or lies on its boundary. |
+| [edges](edges.md) | [jvm]<br>abstract fun [edges](edges.md)(): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)<[Segment2D](../-segment2-d/index.md)<[Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>> |
+| [getEdge](get-edge.md) | [jvm]<br>abstract fun [getEdge](get-edge.md)(index: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [Segment2D](../-segment2-d/index.md)<[Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)><br>Depending on the implementation, this may be faster than [edges](edges.md). |
+| [intersects](intersects.md) | [jvm]<br>abstract fun [intersects](intersects.md)(segment: [Segment2D](../-segment2-d/index.md)<[Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Checks if a segment intersects with the polygon, segments lying on the polygon's boundary are not considered to be intersecting.<br>[jvm]<br>abstract fun [intersects](intersects.md)(shape: [Shape](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Checks if a [java.awt.Shape](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html) intersects the polygon, adjacent shapes are not considered to be intersecting.<br>[jvm]<br>abstract fun [intersects](../../it.unibo.alchemist.model.interfaces.geometry.euclidean2d.navigator/-extendable-convex-polygon/index.md#1376856404%2FFunctions%2F-267951372)(other: [GeometricShape](../../it.unibo.alchemist.model.interfaces.geometry/-geometric-shape/index.md)<[Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md), [Euclidean2DTransformation](../-euclidean2-d-transformation/index.md)>): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [isAdjacentTo](is-adjacent-to.md) | [jvm]<br>abstract fun [isAdjacentTo](is-adjacent-to.md)(other: [ConvexPolygon](index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>A polygon is adjacent to another if any of its points lies on the boundary of the other. |
+| [liesOnBoundary](lies-on-boundary.md) | [jvm]<br>abstract fun [liesOnBoundary](lies-on-boundary.md)(vector: [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Checks if a vector (= a point) lies on the polygon's boundary. |
+| [transformed](../../it.unibo.alchemist.model.interfaces.geometry.euclidean2d.navigator/-extendable-convex-polygon/index.md#-452661544%2FFunctions%2F-267951372) | [jvm]<br>abstract fun [transformed](../../it.unibo.alchemist.model.interfaces.geometry.euclidean2d.navigator/-extendable-convex-polygon/index.md#-452661544%2FFunctions%2F-267951372)(transformation: [Euclidean2DTransformation](../-euclidean2-d-transformation/index.md).() -> [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)): [GeometricShape](../../it.unibo.alchemist.model.interfaces.geometry/-geometric-shape/index.md)<[Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md), [Euclidean2DTransformation](../-euclidean2-d-transformation/index.md)> |
+| [vertices](vertices.md) | [jvm]<br>abstract fun [vertices](vertices.md)(): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)<[Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)> |
+
+## Properties
+
+| Name | Summary |
+|---|---|
+| [centroid](index.md#25438885%2FProperties%2F-267951372) | [jvm]<br>abstract val [centroid](index.md#25438885%2FProperties%2F-267951372): [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md) |
+| [diameter](index.md#1530322040%2FProperties%2F-267951372) | [jvm]<br>abstract val [diameter](index.md#1530322040%2FProperties%2F-267951372): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |
+| [radius](index.md#1695329811%2FProperties%2F-267951372) | [jvm]<br>open val [radius](index.md#1695329811%2FProperties%2F-267951372): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |
+
+## Inheritors
+
+| Name |
+|---|
+| [AbstractConvexPolygon](../../it.unibo.alchemist.model.implementations.geometry.euclidean2d/-abstract-convex-polygon/index.md) |
+| [MutableConvexPolygon](../-mutable-convex-polygon/index.md) |

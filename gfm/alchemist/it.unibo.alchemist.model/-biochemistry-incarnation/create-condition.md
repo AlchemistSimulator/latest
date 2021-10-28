@@ -1,0 +1,6 @@
+//[alchemist](../../../index.md)/[it.unibo.alchemist.model](../index.md)/[BiochemistryIncarnation](index.md)/[createCondition](create-condition.md)
+
+# createCondition
+
+[jvm]\
+open fun [createCondition](create-condition.md)(randomGenerator: RandomGenerator, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model.implementations.reactions/-biochemical-reaction-builder/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>, time: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>, additionalParameters: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [Condition](../../it.unibo.alchemist.model.interfaces/-condition/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>
