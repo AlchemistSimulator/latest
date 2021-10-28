@@ -3,7 +3,7 @@
 # visitArgList
 
 [jvm]\
-abstract fun [visitArgList](visit-arg-list.md)(ctx: [BiochemistrydslParser.ArgListContext](../-biochemistrydsl-parser/-arg-list-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+abstract fun [visitArgList](visit-arg-list.md)(ctx: [BiochemistrydslParser.ArgListContext](../-biochemistrydsl-parser/-arg-list-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.md)
 
 Visit a parse tree produced by [argList](../-biochemistrydsl-parser/arg-list.md).
 

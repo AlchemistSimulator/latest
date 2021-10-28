@@ -10,7 +10,7 @@ title: reactionRemoved
 
 
 [jvm]\
-open fun [reactionRemoved](reaction-removed.html)(reactionToRemove: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-array-indexed-priority-queue/index.html)>)
+open fun [reactionRemoved](reaction-removed.html)(reactionToRemove: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](index.html)>)
 
 
 

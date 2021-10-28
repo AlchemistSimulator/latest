@@ -3,4 +3,4 @@
 # getNextPosition
 
 [jvm]\
-open fun [getNextPosition](get-next-position.md)(): [P](../../it.unibo.alchemist.model.implementations.reactions/-biochemical-reaction-builder/index.md)
+open fun [getNextPosition](get-next-position.md)(): [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)

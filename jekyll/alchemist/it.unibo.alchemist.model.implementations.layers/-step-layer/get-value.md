@@ -10,7 +10,7 @@ title: getValue
 
 
 [jvm]\
-open fun [getValue](get-value.html)(p: [P](index.html)): [T](index.html)
+open fun [getValue](get-value.html)(p: [P](../-uniform-layer/index.html)): [T](../-uniform-layer/index.html)
 
 
 

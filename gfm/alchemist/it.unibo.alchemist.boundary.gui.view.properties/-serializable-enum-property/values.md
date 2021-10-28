@@ -3,7 +3,7 @@
 # values
 
 [jvm]\
-open fun [values](values.md)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>
+open fun [values](values.md)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](index.md)>
 
 Returns the elements of the enum class wrapped by this javafx.beans.property.Property.
 

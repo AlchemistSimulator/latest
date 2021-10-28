@@ -3,7 +3,7 @@
 # getActions
 
 [jvm]\
-abstract fun [getActions](get-actions.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Action](../-action/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>
+abstract fun [getActions](get-actions.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Action](../-action/index.md)<[T](../-action/index.md)>>
 
 #### Return
 

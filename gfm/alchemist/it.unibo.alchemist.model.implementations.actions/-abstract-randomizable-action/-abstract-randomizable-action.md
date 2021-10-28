@@ -3,7 +3,7 @@
 # AbstractRandomizableAction
 
 [jvm]\
-open fun [AbstractRandomizableAction](-abstract-randomizable-action.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)>, random: RandomGenerator)
+open fun [AbstractRandomizableAction](-abstract-randomizable-action.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.md)>, random: RandomGenerator)
 
 ## Parameters
 

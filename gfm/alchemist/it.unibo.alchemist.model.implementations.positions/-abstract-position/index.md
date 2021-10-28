@@ -3,7 +3,7 @@
 # AbstractPosition
 
 [jvm]\
-abstract class [AbstractPosition](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-constant-speed/index.md)>?> : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-constant-speed/index.md)> 
+abstract class [AbstractPosition](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>?> : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)> 
 
 N-dimensional position.
 
@@ -19,7 +19,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [boundingBox](bounding-box.md) | [jvm]<br>fun [boundingBox](bounding-box.md)(range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-constant-speed/index.md)> |
+| [boundingBox](bounding-box.md) | [jvm]<br>fun [boundingBox](bounding-box.md)(range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)> |
 | [distanceTo](distance-to.md) | [jvm]<br>fun [distanceTo](distance-to.md)(@NotNull()other: @NotNull()[P](index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |
 | [div](div.md) | [jvm]<br>@NotNull()<br>fun [div](div.md)(other: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): @NotNull()[P](index.md)<br>Division by a number. |
 | [equals](equals.md) | [jvm]<br>fun [equals](equals.md)(o: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |

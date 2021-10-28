@@ -11,7 +11,7 @@ Interface for time representation.
 
 | Name | Summary |
 |---|---|
-| [compareTo](../-g-p-s-point/index.md#-1554281679%2FFunctions%2F-267951372) | [jvm]<br>abstract fun [compareTo](../-g-p-s-point/index.md#-1554281679%2FFunctions%2F-267951372)(p: [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [compareTo](../-g-p-s-point/index.md#-1554281679%2FFunctions%2F-267951372) | [jvm]<br>abstract fun [compareTo](../-g-p-s-point/index.md#-1554281679%2FFunctions%2F-267951372)(p: [T](../-action/index.md)): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [isInfinite](is-infinite.md) | [jvm]<br>abstract fun [isInfinite](is-infinite.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Verifies if the [Time](index.md) is set at infinite, namely if the event will never happen. |
 | [minus](minus.md) | [jvm]<br>abstract fun [minus](minus.md)(dt: [Time](index.md)): [Time](index.md)<br>Allows to subtract a [Time](index.md) to this [Time](index.md). |
 | [plus](plus.md) | [jvm]<br>abstract fun [plus](plus.md)(dt: [Time](index.md)): [Time](index.md)<br>Allows to add a [Time](index.md) to this [Time](index.md). |

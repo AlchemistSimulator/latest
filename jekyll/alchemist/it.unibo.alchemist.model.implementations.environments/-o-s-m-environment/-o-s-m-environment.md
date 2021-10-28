@@ -10,7 +10,7 @@ title: OSMEnvironment
 
 
 [jvm]\
-open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>)
+open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>)
 
 
 
@@ -32,7 +32,7 @@ jvm
 
 
 [jvm]\
-open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, file: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))
+open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, file: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))
 
 
 
@@ -55,7 +55,7 @@ jvm
 
 
 [jvm]\
-open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, file: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), onStreets: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))
+open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, file: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), onStreets: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))
 
 
 
@@ -75,7 +75,7 @@ jvm
 
 
 [jvm]\
-open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, file: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), onStreets: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), onlyOnStreets: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))
+open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, file: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), onStreets: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), onlyOnStreets: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))
 
 
 
@@ -96,7 +96,7 @@ jvm
 
 
 [jvm]\
-open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, file: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), approximation: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))
+open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, file: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), approximation: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))
 
 
 
@@ -116,7 +116,7 @@ jvm
 
 
 [jvm]\
-open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, file: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), approximation: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), onStreets: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), onlyOnStreets: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))
+open fun [OSMEnvironment](-o-s-m-environment.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, file: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), approximation: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), onStreets: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), onlyOnStreets: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))
 
 
 

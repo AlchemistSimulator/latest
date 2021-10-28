@@ -10,7 +10,7 @@ title: visitArg
 
 
 [jvm]\
-abstract fun [visitArg](visit-arg.html)(ctx: [BiochemistrydslParser.ArgContext](../-biochemistrydsl-parser/-arg-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.html)
+abstract fun [visitArg](visit-arg.html)(ctx: [BiochemistrydslParser.ArgContext](../-biochemistrydsl-parser/-arg-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
 
 
 

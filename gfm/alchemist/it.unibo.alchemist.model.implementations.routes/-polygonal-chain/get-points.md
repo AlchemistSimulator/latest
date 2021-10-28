@@ -3,7 +3,7 @@
 # getPoints
 
 [jvm]\
-fun [getPoints](get-points.md)(): ImmutableList<[P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-constant-speed/index.md)>
+fun [getPoints](get-points.md)(): ImmutableList<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>
 
 #### Return
 

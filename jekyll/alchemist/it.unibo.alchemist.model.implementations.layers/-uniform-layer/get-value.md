@@ -10,7 +10,7 @@ title: getValue
 
 
 [jvm]\
-open fun [getValue](get-value.html)(p: [P](../-step-layer/index.html)): [T](../-step-layer/index.html)
+open fun [getValue](get-value.html)(p: [P](index.html)): [T](index.html)
 
 
 

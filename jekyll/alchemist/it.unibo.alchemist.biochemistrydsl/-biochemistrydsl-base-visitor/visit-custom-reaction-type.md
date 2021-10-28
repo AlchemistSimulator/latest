@@ -10,7 +10,7 @@ title: visitCustomReactionType
 
 
 [jvm]\
-open fun [visitCustomReactionType](visit-custom-reaction-type.html)(ctx: [BiochemistrydslParser.CustomReactionTypeContext](../-biochemistrydsl-parser/-custom-reaction-type-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.html)
+open fun [visitCustomReactionType](visit-custom-reaction-type.html)(ctx: [BiochemistrydslParser.CustomReactionTypeContext](../-biochemistrydsl-parser/-custom-reaction-type-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
 
 
 

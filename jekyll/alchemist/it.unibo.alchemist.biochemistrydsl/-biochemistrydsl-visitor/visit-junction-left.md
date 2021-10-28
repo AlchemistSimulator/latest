@@ -10,7 +10,7 @@ title: visitJunctionLeft
 
 
 [jvm]\
-abstract fun [visitJunctionLeft](visit-junction-left.html)(ctx: [BiochemistrydslParser.JunctionLeftContext](../-biochemistrydsl-parser/-junction-left-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.html)
+abstract fun [visitJunctionLeft](visit-junction-left.html)(ctx: [BiochemistrydslParser.JunctionLeftContext](../-biochemistrydsl-parser/-junction-left-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
 
 
 

@@ -3,7 +3,7 @@
 # FollowTargetOnMap
 
 [jvm]\
-open fun [FollowTargetOnMap](-follow-target-on-map.md)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, targetMolecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md))
+open fun [FollowTargetOnMap](-follow-target-on-map.md)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.routing/-on-streets/index.md), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.routing/-on-streets/index.md)>, targetMolecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md))
 
 ## Parameters
 

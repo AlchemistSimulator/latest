@@ -3,7 +3,7 @@
 # visitCustomConditions
 
 [jvm]\
-open fun [visitCustomConditions](visit-custom-conditions.md)(ctx: [BiochemistrydslParser.CustomConditionsContext](../-biochemistrydsl-parser/-custom-conditions-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+open fun [visitCustomConditions](visit-custom-conditions.md)(ctx: [BiochemistrydslParser.CustomConditionsContext](../-biochemistrydsl-parser/-custom-conditions-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.md)
 
 Visit a parse tree produced by BiochemistrydslParser#customConditions. 
 

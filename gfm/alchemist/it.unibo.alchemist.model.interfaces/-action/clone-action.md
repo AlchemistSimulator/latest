@@ -3,7 +3,7 @@
 # cloneAction
 
 [jvm]\
-abstract fun [cloneAction](clone-action.md)(node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, reaction: [Reaction](../-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>): [Action](index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
+abstract fun [cloneAction](clone-action.md)(node: [Node](../-node/index.md)<[T](index.md)>, reaction: [Reaction](../-reaction/index.md)<[T](index.md)>): [Action](index.md)<[T](index.md)>
 
 This method allows to clone this action on a new node. It may result useful to support runtime creation of nodes with the same reaction programming, e.g. for morphogenesis.
 

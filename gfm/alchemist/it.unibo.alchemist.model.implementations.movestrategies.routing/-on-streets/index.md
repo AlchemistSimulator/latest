@@ -19,7 +19,7 @@ jvm
 
 | | |
 |---|---|
-| [OnStreets](-on-streets.md) | [jvm]<br>open fun [OnStreets](-on-streets.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md))<br>the environment |
+| [OnStreets](-on-streets.md) | [jvm]<br>open fun [OnStreets](-on-streets.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](index.md)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md))<br>the environment |
 
 ## Functions
 

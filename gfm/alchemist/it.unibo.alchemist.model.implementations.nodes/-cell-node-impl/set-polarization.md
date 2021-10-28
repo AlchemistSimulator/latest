@@ -3,7 +3,7 @@
 # setPolarization
 
 [jvm]\
-fun [setPolarization](set-polarization.md)(v: [P](../../it.unibo.alchemist.model.implementations.reactions/-biochemical-reaction-builder/index.md))
+fun [setPolarization](set-polarization.md)(v: [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md))
 
 set the polarization versor, e.g. a versor indicating the direction in which the cell will move the next time.
 

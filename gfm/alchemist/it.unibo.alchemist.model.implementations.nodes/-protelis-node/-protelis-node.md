@@ -3,7 +3,7 @@
 # ProtelisNode
 
 [jvm]\
-open fun [ProtelisNode](-protelis-node.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../../it.unibo.alchemist.model/-protelis-incarnation/index.md)>)
+open fun [ProtelisNode](-protelis-node.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../../it.unibo.alchemist.protelis/-alchemist-execution-context/index.md)>)
 
 Builds a new [ProtelisNode](index.md).
 

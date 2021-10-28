@@ -28,7 +28,7 @@ open class [OperatorTreeNode](index.html) : [ATreeNode](../-a-tree-node/index.ht
 | Name | Summary |
 |---|---|
 | [equals](../-a-tree-node/equals.html) | [jvm]<br>open fun [equals](../-a-tree-node/equals.html)(t: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [getData](index.html#1261515164%2FFunctions%2F-134779887) | [jvm]<br>open fun [getData](index.html#1261515164%2FFunctions%2F-134779887)(): [T](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.html)<br>the object embedded in this node |
+| [getData](index.html#1261515164%2FFunctions%2F-134779887) | [jvm]<br>open fun [getData](index.html#1261515164%2FFunctions%2F-134779887)(): [T](../-a-tree-node/index.html)<br>the object embedded in this node |
 | [getLeftChild](../-a-tree-node/get-left-child.html) | [jvm]<br>open fun [getLeftChild](../-a-tree-node/get-left-child.html)(): [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.html)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)><br>the left child (if any) |
 | [getNumberOfChildren](../-a-tree-node/get-number-of-children.html) | [jvm]<br>open fun [getNumberOfChildren](../-a-tree-node/get-number-of-children.html)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>the number of first level children. |
 | [getRightChild](../-a-tree-node/get-right-child.html) | [jvm]<br>open fun [getRightChild](../-a-tree-node/get-right-child.html)(): [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.html)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)><br>the righr child (if any) |

@@ -10,7 +10,7 @@ title: nodes
 
 
 [jvm]\
-private val [nodes](nodes.html): ListSet<[Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>>
+private val [nodes](nodes.html): ListSet<[Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>>
 
 
 

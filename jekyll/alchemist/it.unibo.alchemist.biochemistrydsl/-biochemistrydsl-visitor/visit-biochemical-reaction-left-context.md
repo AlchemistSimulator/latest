@@ -10,7 +10,7 @@ title: visitBiochemicalReactionLeftContext
 
 
 [jvm]\
-abstract fun [visitBiochemicalReactionLeftContext](visit-biochemical-reaction-left-context.html)(ctx: [BiochemistrydslParser.BiochemicalReactionLeftContextContext](../-biochemistrydsl-parser/-biochemical-reaction-left-context-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.html)
+abstract fun [visitBiochemicalReactionLeftContext](visit-biochemical-reaction-left-context.html)(ctx: [BiochemistrydslParser.BiochemicalReactionLeftContextContext](../-biochemistrydsl-parser/-biochemical-reaction-left-context-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
 
 
 

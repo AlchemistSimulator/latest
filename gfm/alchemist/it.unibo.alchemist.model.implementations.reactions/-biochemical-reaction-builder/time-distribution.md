@@ -3,7 +3,7 @@
 # timeDistribution
 
 [jvm]\
-open fun [timeDistribution](time-distribution.md)(td: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>): [BiochemicalReactionBuilder](index.md)<[P](index.md)>
+open fun [timeDistribution](time-distribution.md)(td: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>
 
 Set the time distribution to the passed object.
 

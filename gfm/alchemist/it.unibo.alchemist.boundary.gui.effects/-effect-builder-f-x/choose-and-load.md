@@ -3,7 +3,7 @@
 # chooseAndLoad
 
 [jvm]\
-open fun <[P](choose-and-load.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>?> [chooseAndLoad](choose-and-load.md)(): [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>
+open fun <[P](choose-and-load.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>?> [chooseAndLoad](choose-and-load.md)(): [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>
 
 Asks the user to chose an effect and returns a new instance of the desired class. 
 

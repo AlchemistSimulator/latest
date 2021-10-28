@@ -3,7 +3,7 @@
 # moveNodeToPosition
 
 [jvm]\
-abstract fun [moveNodeToPosition](move-node-to-position.md)(node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, position: [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md))
+abstract fun [moveNodeToPosition](move-node-to-position.md)(node: [Node](../-node/index.md)<[T](../-action/index.md)>, position: [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md))
 
 This method moves a node in the environment to some position. If node move is unsupported, it does nothing.
 

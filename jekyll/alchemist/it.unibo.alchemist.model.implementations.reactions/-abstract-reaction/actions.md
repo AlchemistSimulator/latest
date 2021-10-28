@@ -10,7 +10,7 @@ title: actions
 
 
 [jvm]\
-private open var [actions](actions.html): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<out [Action](../../it.unibo.alchemist.model.interfaces/-action/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>>
+private open var [actions](actions.html): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<out [Action](../../it.unibo.alchemist.model.interfaces/-action/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>>
 
 
 

@@ -3,7 +3,7 @@
 # CellTensionPolarization
 
 [jvm]\
-open fun [CellTensionPolarization](-cell-tension-polarization.md)(environment: [EnvironmentSupportingDeformableCells](../../it.unibo.alchemist.model.interfaces/-environment-supporting-deformable-cells/index.md)<[P](../../it.unibo.alchemist.model.implementations.reactions/-biochemical-reaction-builder/index.md)>, node: [CircularDeformableCell](../../it.unibo.alchemist.model.interfaces/-circular-deformable-cell/index.md)<[P](../../it.unibo.alchemist.model.implementations.reactions/-biochemical-reaction-builder/index.md)>)
+open fun [CellTensionPolarization](-cell-tension-polarization.md)(environment: [EnvironmentSupportingDeformableCells](../../it.unibo.alchemist.model.interfaces/-environment-supporting-deformable-cells/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>, node: [CircularDeformableCell](../../it.unibo.alchemist.model.interfaces/-circular-deformable-cell/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>)
 
 ## Parameters
 

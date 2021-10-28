@@ -3,7 +3,7 @@
 # getTarget
 
 [jvm]\
-fun [getTarget](get-target.md)(): [P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-constant-speed/index.md)
+fun [getTarget](get-target.md)(): [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)
 
 #### Return
 

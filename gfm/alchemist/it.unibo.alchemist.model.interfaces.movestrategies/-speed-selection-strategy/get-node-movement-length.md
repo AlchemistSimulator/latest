@@ -3,7 +3,7 @@
 # getNodeMovementLength
 
 [jvm]\
-abstract fun [getNodeMovementLength](get-node-movement-length.md)(target: [P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-constant-speed/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
+abstract fun [getNodeMovementLength](get-node-movement-length.md)(target: [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
 
 #### Return
 

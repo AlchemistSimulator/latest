@@ -3,7 +3,7 @@
 # createConcentration
 
 [jvm]\
-abstract fun [createConcentration](create-concentration.md)(s: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)
+abstract fun [createConcentration](create-concentration.md)(s: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [T](../-action/index.md)
 
 Creates a new concentration object of a specific concrete type.
 

@@ -10,7 +10,7 @@ title: ConnectionBeam
 
 
 [jvm]\
-class [ConnectionBeam](index.html)<[T](index.html)> : [ConnectWithinDistance](../-connect-within-distance/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-museum-hall/index.html), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.html)> 
+class [ConnectionBeam](index.html)<[T](index.html)> : [ConnectWithinDistance](../-connect-within-distance/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.html), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.html)> 
 
 Connects two nodes if, throwing a beam from one to the other, there exists at least one path entirely inside the beam that connects the two nodes. This rule is ideal for environments with obstacles, where the user wants some tolerance in connection breaking.
 
@@ -40,6 +40,6 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [computeNeighborhood](compute-neighborhood.html) | [jvm]<br>open fun [computeNeighborhood](compute-neighborhood.html)(center: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-museum-hall/index.html)>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-museum-hall/index.html), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.html)>): [Neighborhood](../../it.unibo.alchemist.model.interfaces/-neighborhood/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-museum-hall/index.html)> |
+| [computeNeighborhood](compute-neighborhood.html) | [jvm]<br>open fun [computeNeighborhood](compute-neighborhood.html)(center: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.html)>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.html), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.html)>): [Neighborhood](../../it.unibo.alchemist.model.interfaces/-neighborhood/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.html)> |
 | [isLocallyConsistent](../-abstract-locally-consistent-linking-rule/is-locally-consistent.html) | [jvm]<br>fun [isLocallyConsistent](../-abstract-locally-consistent-linking-rule/is-locally-consistent.html)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
 

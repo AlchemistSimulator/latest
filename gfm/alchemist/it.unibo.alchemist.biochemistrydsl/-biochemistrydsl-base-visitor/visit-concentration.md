@@ -3,7 +3,7 @@
 # visitConcentration
 
 [jvm]\
-open fun [visitConcentration](visit-concentration.md)(ctx: [BiochemistrydslParser.ConcentrationContext](../-biochemistrydsl-parser/-concentration-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+open fun [visitConcentration](visit-concentration.md)(ctx: [BiochemistrydslParser.ConcentrationContext](../-biochemistrydsl-parser/-concentration-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.md)
 
 Visit a parse tree produced by BiochemistrydslParser#concentration. 
 

@@ -10,7 +10,7 @@ title: addLayer
 
 
 [jvm]\
-fun [addLayer](add-layer.html)(m: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), l: [Layer](../../it.unibo.alchemist.model.interfaces/-layer/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html), [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>)
+fun [addLayer](add-layer.html)(m: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), l: [Layer](../../it.unibo.alchemist.model.interfaces/-layer/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html), [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>)
 
 
 

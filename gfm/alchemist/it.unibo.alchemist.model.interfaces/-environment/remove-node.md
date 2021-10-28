@@ -3,7 +3,7 @@
 # removeNode
 
 [jvm]\
-abstract fun [removeNode](remove-node.md)(node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)
+abstract fun [removeNode](remove-node.md)(node: [Node](../-node/index.md)<[T](../-action/index.md)>)
 
 This method allows to remove a node. If node removal is unsupported, it does nothing.
 

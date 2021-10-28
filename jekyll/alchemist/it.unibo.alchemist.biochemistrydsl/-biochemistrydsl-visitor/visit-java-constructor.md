@@ -10,7 +10,7 @@ title: visitJavaConstructor
 
 
 [jvm]\
-abstract fun [visitJavaConstructor](visit-java-constructor.html)(ctx: [BiochemistrydslParser.JavaConstructorContext](../-biochemistrydsl-parser/-java-constructor-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.html)
+abstract fun [visitJavaConstructor](visit-java-constructor.html)(ctx: [BiochemistrydslParser.JavaConstructorContext](../-biochemistrydsl-parser/-java-constructor-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
 
 
 

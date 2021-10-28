@@ -3,7 +3,7 @@
 # visitDecimal
 
 [jvm]\
-open fun [visitDecimal](visit-decimal.md)(ctx: [BiochemistrydslParser.DecimalContext](../-biochemistrydsl-parser/-decimal-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+open fun [visitDecimal](visit-decimal.md)(ctx: [BiochemistrydslParser.DecimalContext](../-biochemistrydsl-parser/-decimal-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.md)
 
 Visit a parse tree produced by BiochemistrydslParser#decimal. 
 

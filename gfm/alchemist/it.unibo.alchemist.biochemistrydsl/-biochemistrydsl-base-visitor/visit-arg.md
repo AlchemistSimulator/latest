@@ -3,7 +3,7 @@
 # visitArg
 
 [jvm]\
-open fun [visitArg](visit-arg.md)(ctx: [BiochemistrydslParser.ArgContext](../-biochemistrydsl-parser/-arg-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+open fun [visitArg](visit-arg.md)(ctx: [BiochemistrydslParser.ArgContext](../-biochemistrydsl-parser/-arg-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.md)
 
 Visit a parse tree produced by BiochemistrydslParser#arg. 
 

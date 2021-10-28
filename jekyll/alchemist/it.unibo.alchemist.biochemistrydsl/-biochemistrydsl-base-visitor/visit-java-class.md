@@ -10,7 +10,7 @@ title: visitJavaClass
 
 
 [jvm]\
-open fun [visitJavaClass](visit-java-class.html)(ctx: [BiochemistrydslParser.JavaClassContext](../-biochemistrydsl-parser/-java-class-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.html)
+open fun [visitJavaClass](visit-java-class.html)(ctx: [BiochemistrydslParser.JavaClassContext](../-biochemistrydsl-parser/-java-class-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
 
 
 

@@ -10,7 +10,7 @@ title: SetLocalMoleculeConcentration
 
 
 [jvm]\
-class [SetLocalMoleculeConcentration](index.html)<[T](index.html)> : [AbstractActionOnSingleMolecule](../-abstract-action-on-single-molecule/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>
+class [SetLocalMoleculeConcentration](index.html)<[T](index.html)> : [AbstractActionOnSingleMolecule](../-abstract-action-on-single-molecule/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>
 
 
 
@@ -30,7 +30,7 @@ jvm
 
 | | |
 |---|---|
-| [SetLocalMoleculeConcentration](-set-local-molecule-concentration.html) | [jvm]<br>open fun [SetLocalMoleculeConcentration](-set-local-molecule-concentration.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>, target: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), value: [T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html))<br>The node to which this action belongs |
+| [SetLocalMoleculeConcentration](-set-local-molecule-concentration.html) | [jvm]<br>open fun [SetLocalMoleculeConcentration](-set-local-molecule-concentration.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>, target: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), value: [T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html))<br>The node to which this action belongs |
 
 
 ## Functions
@@ -38,7 +38,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [cloneAction](clone-action.html) | [jvm]<br>open fun [cloneAction](clone-action.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>): [Action](../../it.unibo.alchemist.model.interfaces/-action/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)> |
+| [cloneAction](clone-action.html) | [jvm]<br>open fun [cloneAction](clone-action.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>): [Action](../../it.unibo.alchemist.model.interfaces/-action/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)> |
 | [execute](execute.html) | [jvm]<br>open fun [execute](execute.html)() |
 | [getContext](get-context.html) | [jvm]<br>open fun [getContext](get-context.html)(): [Context](../../it.unibo.alchemist.model.interfaces/-context/index.html) |
 | [getMolecule](../-abstract-action-on-single-molecule/get-molecule.html) | [jvm]<br>open fun [getMolecule](../-abstract-action-on-single-molecule/get-molecule.html)(): [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html)<br>the molecule which whose concentration will be modified y the execution of this action |

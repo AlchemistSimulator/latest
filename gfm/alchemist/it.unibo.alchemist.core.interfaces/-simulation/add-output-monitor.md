@@ -3,7 +3,7 @@
 # addOutputMonitor
 
 [jvm]\
-abstract fun [addOutputMonitor](add-output-monitor.md)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)
+abstract fun [addOutputMonitor](add-output-monitor.md)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md), [P](index.md)>)
 
 Adds an [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md) to this simulation.
 

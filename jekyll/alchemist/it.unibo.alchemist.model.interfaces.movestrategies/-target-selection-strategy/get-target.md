@@ -10,7 +10,7 @@ title: getTarget
 
 
 [jvm]\
-abstract fun [getTarget](get-target.html)(): [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)
+abstract fun [getTarget](get-target.html)(): [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)
 
 
 

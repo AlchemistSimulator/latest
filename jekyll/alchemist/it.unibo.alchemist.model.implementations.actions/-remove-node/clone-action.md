@@ -10,7 +10,7 @@ title: cloneAction
 
 
 [jvm]\
-open fun [cloneAction](clone-action.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>): [RemoveNode](index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>
+open fun [cloneAction](clone-action.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>): [RemoveNode](index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>
 
 
 

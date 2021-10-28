@@ -3,4 +3,4 @@
 # getNode
 
 [jvm]\
-open fun [getNode](get-node.md)(): [CircularDeformableCell](../../it.unibo.alchemist.model.interfaces/-circular-deformable-cell/index.md)<[P](../../it.unibo.alchemist.model.implementations.reactions/-biochemical-reaction-builder/index.md)>
+open fun [getNode](get-node.md)(): [CircularDeformableCell](../../it.unibo.alchemist.model.interfaces/-circular-deformable-cell/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>

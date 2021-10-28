@@ -3,7 +3,7 @@
 # addPolarization
 
 [jvm]\
-abstract fun [addPolarization](add-polarization.md)(v: [P](../../it.unibo.alchemist.model.implementations.reactions/-biochemical-reaction-builder/index.md))
+abstract fun [addPolarization](add-polarization.md)(v: [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md))
 
 add v to the polarization versor inside the cell; useful for considering the combination of various stimuli in a cell.
 

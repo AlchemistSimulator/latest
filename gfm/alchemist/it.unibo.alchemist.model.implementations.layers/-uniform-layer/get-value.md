@@ -3,4 +3,4 @@
 # getValue
 
 [jvm]\
-open fun [getValue](get-value.md)(p: [P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-constant-speed/index.md)): [T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)
+open fun [getValue](get-value.md)(p: [P](../-step-layer/index.md)): [T](../-step-layer/index.md)

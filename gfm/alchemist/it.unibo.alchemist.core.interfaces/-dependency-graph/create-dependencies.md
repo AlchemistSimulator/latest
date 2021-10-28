@@ -3,7 +3,7 @@
 # createDependencies
 
 [jvm]\
-abstract fun [createDependencies](create-dependencies.md)(rh: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)
+abstract fun [createDependencies](create-dependencies.md)(rh: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md)>)
 
 This method creates the dependencies when a new reaction is added to the environment. Please be careful when building the environment and populating the existing reactions map: this method assumes that all the dependencies among the existing reactions are correct and up to date.
 

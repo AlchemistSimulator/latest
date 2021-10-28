@@ -10,7 +10,7 @@ title: timeDistribution
 
 
 [jvm]\
-private val [timeDistribution](time-distribution.html): [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>
+private val [timeDistribution](time-distribution.html): [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>
 
 
 

@@ -10,7 +10,7 @@ title: visitReaction
 
 
 [jvm]\
-open fun [visitReaction](visit-reaction.html)(ctx: [BiochemistrydslParser.ReactionContext](../-biochemistrydsl-parser/-reaction-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.html)
+open fun [visitReaction](visit-reaction.html)(ctx: [BiochemistrydslParser.ReactionContext](../-biochemistrydsl-parser/-reaction-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
 
 
 
