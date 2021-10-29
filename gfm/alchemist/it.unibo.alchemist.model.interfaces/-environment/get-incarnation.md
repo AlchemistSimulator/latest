@@ -3,7 +3,7 @@
 # getIncarnation
 
 [jvm]\
-abstract fun [getIncarnation](get-incarnation.md)(): [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)<[Incarnation](../-incarnation/index.md)<[T](../-action/index.md), [P](../-layer/index.md)>>
+abstract fun [getIncarnation](get-incarnation.md)(): [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)<[Incarnation](../-incarnation/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>
 
 #### Return
 

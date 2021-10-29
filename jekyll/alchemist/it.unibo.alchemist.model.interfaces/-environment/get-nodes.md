@@ -10,7 +10,7 @@ title: getNodes
 
 
 [jvm]\
-abstract fun [getNodes](get-nodes.html)(): ListSet<[Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
+abstract fun [getNodes](get-nodes.html)(): ListSet<[Node](../-node/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>>
 
 
 

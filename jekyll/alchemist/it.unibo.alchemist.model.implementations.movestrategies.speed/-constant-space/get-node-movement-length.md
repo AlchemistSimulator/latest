@@ -10,7 +10,7 @@ title: getNodeMovementLength
 
 
 [jvm]\
-open fun [getNodeMovementLength](get-node-movement-length.html)(target: [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
+open fun [getNodeMovementLength](get-node-movement-length.html)(target: [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
 
 
 

@@ -7,7 +7,7 @@
 | Name | Summary |
 |---|---|
 | [AST](-a-s-t/index.md) | [jvm]<br>class [AST](-a-s-t/index.md) : [ITree](../it.unibo.alchemist.expressions.interfaces/-i-tree/index.md) |
-| [ATreeNode](-a-tree-node/index.md) | [jvm]<br>abstract class [ATreeNode](-a-tree-node/index.md)<[T](-a-tree-node/index.md)> : [ITreeNode](../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<[T](-a-tree-node/index.md)> <br>concentration type |
+| [ATreeNode](-a-tree-node/index.md) | [jvm]<br>abstract class [ATreeNode](-a-tree-node/index.md)<[T](-a-tree-node/index.md)> : [ITreeNode](../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<[T](../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)> <br>concentration type |
 | [ComparatorTreeNode](-comparator-tree-node/index.md) | [jvm]<br>class [ComparatorTreeNode](-comparator-tree-node/index.md) : [ATreeNode](-a-tree-node/index.md)<HashString> |
 | [ConstTreeNode](-const-tree-node/index.md) | [jvm]<br>open class [ConstTreeNode](-const-tree-node/index.md) : [ATreeNode](-a-tree-node/index.md)<HashString> |
 | [Expression](-expression/index.md) | [jvm]<br>class [Expression](-expression/index.md) : [IExpression](../it.unibo.alchemist.expressions.interfaces/-i-expression/index.md) |

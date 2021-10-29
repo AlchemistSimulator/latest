@@ -10,7 +10,7 @@ title: getContents
 
 
 [jvm]\
-abstract fun [getContents](get-contents.html)(): [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[Molecule](../-molecule/index.html), [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
+abstract fun [getContents](get-contents.html)(): [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[Molecule](../-molecule/index.html), [T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>
 
 
 

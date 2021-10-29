@@ -10,7 +10,7 @@ title: setConditions
 
 
 [jvm]\
-abstract fun [setConditions](set-conditions.html)(conditions: [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Condition](../-condition/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>)
+abstract fun [setConditions](set-conditions.html)(conditions: [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Condition](../-condition/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>>)
 
 
 

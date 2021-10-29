@@ -3,7 +3,7 @@
 # getNodesWithinRange
 
 [jvm]\
-abstract fun [getNodesWithinRange](get-nodes-within-range.md)(center: [Node](../-node/index.md)<[T](../-action/index.md)>, range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): ListSet<[Node](../-node/index.md)<[T](../-action/index.md)>>
+abstract fun [getNodesWithinRange](get-nodes-within-range.md)(center: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): ListSet<[Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>
 
 Given a node (center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized and it's consequently **much** better to use [getNeighborhood](get-neighborhood.md) and filter the neighborhood if you are sure that all the nodes within the range are connected to the center.
 
@@ -21,7 +21,7 @@ jvm
 | range | the exploration range |
 
 [jvm]\
-abstract fun [getNodesWithinRange](get-nodes-within-range.md)(center: [P](../-layer/index.md), range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): ListSet<[Node](../-node/index.md)<[T](../-action/index.md)>>
+abstract fun [getNodesWithinRange](get-nodes-within-range.md)(center: [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): ListSet<[Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>
 
 Given a [Position](../-position/index.md)(center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized.
 

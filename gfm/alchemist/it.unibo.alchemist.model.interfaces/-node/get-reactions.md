@@ -3,7 +3,7 @@
 # getReactions
 
 [jvm]\
-abstract fun [getReactions](get-reactions.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Reaction](../-reaction/index.md)<[T](../-action/index.md)>>
+abstract fun [getReactions](get-reactions.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Reaction](../-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>
 
 This method allows to access all the reaction of the node.
 

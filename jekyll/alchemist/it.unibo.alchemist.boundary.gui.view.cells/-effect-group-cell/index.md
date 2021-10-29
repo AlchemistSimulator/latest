@@ -10,7 +10,7 @@ title: EffectGroupCell
 
 
 [jvm]\
-open class [EffectGroupCell](index.html)<[P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>?> : [AbstractEffectCell](../-abstract-effect-cell/index.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>> 
+open class [EffectGroupCell](index.html)<[P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>?> : [AbstractEffectCell](../-abstract-effect-cell/index.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>> 
 
 This ListView cell implements the [AbstractEffectCell](../-abstract-effect-cell/index.html) for containing an [EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html). It has a name that identifies the EffectGroup and when clicked should open a javafx.scene.control.ListView to show the [effects](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.html) the group is composed of.
 

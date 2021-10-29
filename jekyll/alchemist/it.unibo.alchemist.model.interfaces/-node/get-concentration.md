@@ -10,7 +10,7 @@ title: getConcentration
 
 
 [jvm]\
-abstract fun [getConcentration](get-concentration.html)(mol: [Molecule](../-molecule/index.html)): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)
+abstract fun [getConcentration](get-concentration.html)(mol: [Molecule](../-molecule/index.html)): [T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)
 
 
 

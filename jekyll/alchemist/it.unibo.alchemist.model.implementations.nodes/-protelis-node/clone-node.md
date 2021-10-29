@@ -10,7 +10,7 @@ title: cloneNode
 
 
 [jvm]\
-open fun [cloneNode](clone-node.html)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [ProtelisNode](index.html)<[P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)>
+open fun [cloneNode](clone-node.html)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [ProtelisNode](index.html)<[P](../../it.unibo.alchemist.protelis/-alchemist-execution-context/index.html)>
 
 
 

@@ -3,7 +3,7 @@
 # ATreeNode
 
 [jvm]\
-abstract class [ATreeNode](index.md)<[T](index.md)> : [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<[T](index.md)>
+abstract class [ATreeNode](index.md)<[T](index.md)> : [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<[T](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)>
 
 ## Parameters
 
@@ -17,7 +17,7 @@ jvm
 
 | | |
 |---|---|
-| [ATreeNode](-a-tree-node.md) | [jvm]<br>open fun [ATreeNode](-a-tree-node.md)(dat: [T](index.md), l: [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, r: [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)<br>Builds the internals of a tree node. |
+| [ATreeNode](-a-tree-node.md) | [jvm]<br>open fun [ATreeNode](-a-tree-node.md)(dat: [T](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md), l: [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, r: [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)<br>Builds the internals of a tree node. |
 
 ## Functions
 
@@ -28,7 +28,7 @@ jvm
 | [getNumberOfChildren](get-number-of-children.md) | [jvm]<br>open fun [getNumberOfChildren](get-number-of-children.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>the number of first level children. |
 | [getRightChild](get-right-child.md) | [jvm]<br>open fun [getRightChild](get-right-child.md)(): [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)><br>the righr child (if any) |
 | [getType](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/get-type.md) | [jvm]<br>abstract fun [getType](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/get-type.md)(): [Type](../-type/index.md)<br>the type of this node |
-| [getValue](get-value.md) | [jvm]<br>abstract fun [getValue](get-value.md)(mp: [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<HashString, [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>>): [T](index.md)<br>the matches map. |
+| [getValue](get-value.md) | [jvm]<br>abstract fun [getValue](get-value.md)(mp: [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<HashString, [ITreeNode](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>>): [T](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)<br>the matches map. |
 | [hashCode](hash-code.md) | [jvm]<br>open fun [hashCode](hash-code.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [toHashString](to-hash-string.md) | [jvm]<br>open fun [toHashString](to-hash-string.md)(): HashString<br>Similar to toString(), but returns a HashString. |
 | [toString](to-string.md) | [jvm]<br>abstract fun [toString](to-string.md)(): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html) |
@@ -37,7 +37,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [data](data.md) | [jvm]<br>private val [data](data.md): [T](index.md) |
+| [data](data.md) | [jvm]<br>private val [data](data.md): [T](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md) |
 
 ## Inheritors
 

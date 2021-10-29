@@ -10,7 +10,7 @@ title: setVisibilityOf
 
 
 [jvm]\
-abstract fun [setVisibilityOf](set-visibility-of.html)(effect: [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>, visibility: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))
+abstract fun [setVisibilityOf](set-visibility-of.html)(effect: [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>, visibility: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))
 
 
 

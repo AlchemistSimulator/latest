@@ -10,7 +10,7 @@ title: getLayer
 
 
 [jvm]\
-abstract fun [getLayer](get-layer.html)(m: [Molecule](../-molecule/index.html)): [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)<[Layer](../-layer/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
+abstract fun [getLayer](get-layer.html)(m: [Molecule](../-molecule/index.html)): [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)<[Layer](../-layer/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html), [P](../-position2-d/index.html)>>
 
 
 

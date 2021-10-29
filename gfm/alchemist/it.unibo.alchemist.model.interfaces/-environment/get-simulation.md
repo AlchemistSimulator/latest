@@ -3,7 +3,7 @@
 # getSimulation
 
 [jvm]\
-abstract fun [getSimulation](get-simulation.md)(): [Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)<[T](../-action/index.md), [P](../-layer/index.md)>
+abstract fun [getSimulation](get-simulation.md)(): [Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
 
 #### Return
 

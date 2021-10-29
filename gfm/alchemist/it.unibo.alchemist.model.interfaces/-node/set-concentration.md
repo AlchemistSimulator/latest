@@ -3,7 +3,7 @@
 # setConcentration
 
 [jvm]\
-abstract fun [setConcentration](set-concentration.md)(mol: [Molecule](../-molecule/index.md), c: [T](../-action/index.md))
+abstract fun [setConcentration](set-concentration.md)(mol: [Molecule](../-molecule/index.md), c: [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md))
 
 Sets the concentration of mol to c.
 

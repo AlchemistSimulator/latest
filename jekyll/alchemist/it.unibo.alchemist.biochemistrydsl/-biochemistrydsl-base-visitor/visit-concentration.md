@@ -10,7 +10,7 @@ title: visitConcentration
 
 
 [jvm]\
-open fun [visitConcentration](visit-concentration.html)(ctx: [BiochemistrydslParser.ConcentrationContext](../-biochemistrydsl-parser/-concentration-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
+open fun [visitConcentration](visit-concentration.html)(ctx: [BiochemistrydslParser.ConcentrationContext](../-biochemistrydsl-parser/-concentration-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.html)
 
 
 

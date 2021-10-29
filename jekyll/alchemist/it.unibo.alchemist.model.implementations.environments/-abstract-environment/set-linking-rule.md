@@ -10,7 +10,7 @@ title: setLinkingRule
 
 
 [jvm]\
-fun [setLinkingRule](set-linking-rule.html)(r: [LinkingRule](../../it.unibo.alchemist.model.interfaces/-linking-rule/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html), [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)>)
+fun [setLinkingRule](set-linking-rule.html)(r: [LinkingRule](../../it.unibo.alchemist.model.interfaces/-linking-rule/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html), [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>)
 
 
 

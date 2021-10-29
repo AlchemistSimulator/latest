@@ -21,7 +21,7 @@ No arguments constructor. Current [Simulation](../../it.unibo.alchemist.core.int
 
 
 [jvm]\
-open fun [PlayPauseMonitor](-play-pause-monitor.html)(@Nullable()simulation: @Nullable()[Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.html)<[T](../-f-x-step-monitor/index.html), [P](../-f-x-step-monitor/index.html)>)
+open fun [PlayPauseMonitor](-play-pause-monitor.html)(@Nullable()simulation: @Nullable()[Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.html)<[T](../-f-x-step-monitor/index.html), [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>)
 
 
 

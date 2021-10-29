@@ -3,7 +3,7 @@
 # getDevicePosition
 
 [jvm]\
-open fun [getDevicePosition](get-device-position.md)(): [P](index.md)
+open fun [getDevicePosition](get-device-position.md)(): [P](../../it.unibo.alchemist.model/-protelis-incarnation/index.md)
 
 #### Return
 

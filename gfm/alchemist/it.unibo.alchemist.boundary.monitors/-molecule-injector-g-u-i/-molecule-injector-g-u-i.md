@@ -3,7 +3,7 @@
 # MoleculeInjectorGUI
 
 [jvm]\
-open fun [MoleculeInjectorGUI](-molecule-injector-g-u-i.md)(nodes: [Set](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html)<[Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](index.md)>>)
+open fun [MoleculeInjectorGUI](-molecule-injector-g-u-i.md)(nodes: [Set](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html)<[Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-graphical2-d-output-monitor/index.md)>>)
 
 ## Parameters
 

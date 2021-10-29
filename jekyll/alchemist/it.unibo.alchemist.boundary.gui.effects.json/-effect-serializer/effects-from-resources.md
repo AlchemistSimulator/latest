@@ -10,7 +10,7 @@ title: effectsFromResources
 
 
 [jvm]\
-open fun <[P](effects-from-resources.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>?> [effectsFromResources](effects-from-resources.html)(resource: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>
+open fun <[P](effects-from-resources.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../-effect-group-adapter/index.html)>?> [effectsFromResources](effects-from-resources.html)(resource: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../-effect-group-adapter/index.html)>
 
 
 

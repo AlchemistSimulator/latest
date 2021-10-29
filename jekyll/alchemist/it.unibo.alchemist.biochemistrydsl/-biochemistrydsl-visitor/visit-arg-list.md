@@ -10,7 +10,7 @@ title: visitArgList
 
 
 [jvm]\
-abstract fun [visitArgList](visit-arg-list.html)(ctx: [BiochemistrydslParser.ArgListContext](../-biochemistrydsl-parser/-arg-list-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
+abstract fun [visitArgList](visit-arg-list.html)(ctx: [BiochemistrydslParser.ArgListContext](../-biochemistrydsl-parser/-arg-list-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.html)
 
 
 

@@ -10,7 +10,7 @@ title: addNeighbor
 
 
 [jvm]\
-abstract fun [addNeighbor](add-neighbor.html)(n1: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>, n2: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)
+abstract fun [addNeighbor](add-neighbor.html)(n1: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-scheduler/index.html)>, n2: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-scheduler/index.html)>)
 
 
 

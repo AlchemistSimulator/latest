@@ -3,7 +3,7 @@
 # getPosition
 
 [jvm]\
-abstract fun [getPosition](get-position.md)(node: [Node](../-node/index.md)<[T](../-action/index.md)>): [P](../-layer/index.md)
+abstract fun [getPosition](get-position.md)(node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>): [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)
 
 Calculates the position of a node.
 

@@ -10,7 +10,7 @@ title: monitor
 
 
 [jvm]\
-private val [monitor](monitor.html): [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-graphical2-d-output-monitor/index.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>
+private val [monitor](monitor.html): [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)<[T](../../it.unibo.alchemist.boundary.gui.effects/-function-drawer/draw-function.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>
 
 
 

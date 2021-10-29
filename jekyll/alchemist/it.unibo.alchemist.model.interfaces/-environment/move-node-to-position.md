@@ -10,7 +10,7 @@ title: moveNodeToPosition
 
 
 [jvm]\
-abstract fun [moveNodeToPosition](move-node-to-position.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>, position: [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html))
+abstract fun [moveNodeToPosition](move-node-to-position.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>, position: [P](../-position2-d/index.html))
 
 
 

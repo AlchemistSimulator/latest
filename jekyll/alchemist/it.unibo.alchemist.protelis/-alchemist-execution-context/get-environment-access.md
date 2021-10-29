@@ -10,7 +10,7 @@ title: getEnvironmentAccess
 
 
 [jvm]\
-open fun [getEnvironmentAccess](get-environment-access.html)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)>
+open fun [getEnvironmentAccess](get-environment-access.html)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](index.html)>
 
 
 

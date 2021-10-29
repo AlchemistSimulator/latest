@@ -3,7 +3,7 @@
 # visitReaction
 
 [jvm]\
-abstract fun [visitReaction](visit-reaction.md)(ctx: [BiochemistrydslParser.ReactionContext](../-biochemistrydsl-parser/-reaction-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+abstract fun [visitReaction](visit-reaction.md)(ctx: [BiochemistrydslParser.ReactionContext](../-biochemistrydsl-parser/-reaction-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)
 
 Visit a parse tree produced by [reaction](../-biochemistrydsl-parser/reaction.md).
 

@@ -10,7 +10,7 @@ title: visitReaction
 
 
 [jvm]\
-abstract fun [visitReaction](visit-reaction.html)(ctx: [BiochemistrydslParser.ReactionContext](../-biochemistrydsl-parser/-reaction-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
+abstract fun [visitReaction](visit-reaction.html)(ctx: [BiochemistrydslParser.ReactionContext](../-biochemistrydsl-parser/-reaction-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.html)
 
 
 

@@ -10,7 +10,7 @@ title: visitCustomConditions
 
 
 [jvm]\
-abstract fun [visitCustomConditions](visit-custom-conditions.html)(ctx: [BiochemistrydslParser.CustomConditionsContext](../-biochemistrydsl-parser/-custom-conditions-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
+abstract fun [visitCustomConditions](visit-custom-conditions.html)(ctx: [BiochemistrydslParser.CustomConditionsContext](../-biochemistrydsl-parser/-custom-conditions-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.html)
 
 
 

@@ -10,7 +10,7 @@ title: remove
 
 
 [jvm]\
-abstract fun [remove](remove.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>): [Neighborhood](index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
+abstract fun [remove](remove.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>): [Neighborhood](index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>
 
 
 

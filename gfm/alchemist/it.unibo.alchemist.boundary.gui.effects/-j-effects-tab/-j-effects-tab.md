@@ -3,7 +3,7 @@
 # JEffectsTab
 
 [jvm]\
-open fun [JEffectsTab](-j-effects-tab.md)(main: [GraphicalOutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-graphical-output-monitor/index.md)<[T](../../it.unibo.alchemist.boundary.monitors/-molecule-injector-g-u-i/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, displayPaintLinks: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))
+open fun [JEffectsTab](-j-effects-tab.md)(main: [GraphicalOutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-graphical-output-monitor/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-graphical2-d-output-monitor/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, displayPaintLinks: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html))
 
 Initialize the component.
 

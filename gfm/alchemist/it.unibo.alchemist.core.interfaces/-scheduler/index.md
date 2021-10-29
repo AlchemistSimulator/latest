@@ -19,10 +19,10 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [addReaction](add-reaction.md) | [jvm]<br>abstract fun [addReaction](add-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md)>)<br>Adds a reaction to the data structure. |
-| [getNext](get-next.md) | [jvm]<br>abstract fun [getNext](get-next.md)(): [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md)><br>Allows to access the next reaction to be executed. |
-| [removeReaction](remove-reaction.md) | [jvm]<br>abstract fun [removeReaction](remove-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md)>)<br>Removes a reaction from the structure. |
-| [updateReaction](update-reaction.md) | [jvm]<br>abstract fun [updateReaction](update-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md)>)<br>Notifies the structure that the reaction r has changed. |
+| [addReaction](add-reaction.md) | [jvm]<br>abstract fun [addReaction](add-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)<br>Adds a reaction to the data structure. |
+| [getNext](get-next.md) | [jvm]<br>abstract fun [getNext](get-next.md)(): [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)><br>Allows to access the next reaction to be executed. |
+| [removeReaction](remove-reaction.md) | [jvm]<br>abstract fun [removeReaction](remove-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)<br>Removes a reaction from the structure. |
+| [updateReaction](update-reaction.md) | [jvm]<br>abstract fun [updateReaction](update-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)<br>Notifies the structure that the reaction r has changed. |
 
 ## Inheritors
 

@@ -10,7 +10,7 @@ title: ButtonsBarController
 
 
 [jvm]\
-open class [ButtonsBarController](index.html)<[P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>?> : Initializable
+open class [ButtonsBarController](index.html)<[P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>?> : Initializable
 
 This class models a JavaFX controller for ButtonsBarLayout.fxml.
 
@@ -43,7 +43,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getObservableEffectsList](get-observable-effects-list.html) | [jvm]<br>open fun [getObservableEffectsList](get-observable-effects-list.html)(): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>><br>Getter method for the {@code List} of groups of [effects](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.html) in the side drawer. |
+| [getObservableEffectsList](get-observable-effects-list.html) | [jvm]<br>open fun [getObservableEffectsList](get-observable-effects-list.html)(): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>><br>Getter method for the {@code List} of groups of [effects](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.html) in the side drawer. |
 | [initialize](initialize.html) | [jvm]<br>open fun [initialize](initialize.html)(location: [URL](https://docs.oracle.com/javase/8/docs/api/java/net/URL.html), resources: [ResourceBundle](https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html)) |
 | [setStepMonitor](set-step-monitor.html) | [jvm]<br>fun [setStepMonitor](set-step-monitor.html)(stepMonitor: Label)<br>Sets the step monitor label. |
 | [setTimeMonitor](set-time-monitor.html) | [jvm]<br>fun [setTimeMonitor](set-time-monitor.html)(timeMonitor: Label)<br>Sets the time monitor label. |

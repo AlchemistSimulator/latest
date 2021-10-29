@@ -10,7 +10,7 @@ title: outboundDependencies
 
 
 [jvm]\
-abstract fun [outboundDependencies](outbound-dependencies.html)(reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>): ListSet<[Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
+abstract fun [outboundDependencies](outbound-dependencies.html)(reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-scheduler/index.html)>): ListSet<[Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-scheduler/index.html)>>
 
 
 

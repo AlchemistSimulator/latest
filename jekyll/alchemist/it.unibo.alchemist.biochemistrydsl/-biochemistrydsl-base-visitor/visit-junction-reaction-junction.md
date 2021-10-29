@@ -10,7 +10,7 @@ title: visitJunctionReactionJunction
 
 
 [jvm]\
-open fun [visitJunctionReactionJunction](visit-junction-reaction-junction.html)(ctx: [BiochemistrydslParser.JunctionReactionJunctionContext](../-biochemistrydsl-parser/-junction-reaction-junction-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
+open fun [visitJunctionReactionJunction](visit-junction-reaction-junction.html)(ctx: [BiochemistrydslParser.JunctionReactionJunctionContext](../-biochemistrydsl-parser/-junction-reaction-junction-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.html)
 
 
 

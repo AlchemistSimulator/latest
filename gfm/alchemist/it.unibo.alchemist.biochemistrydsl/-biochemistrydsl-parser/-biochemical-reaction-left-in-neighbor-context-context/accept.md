@@ -3,4 +3,4 @@
 # accept
 
 [jvm]\
-open fun <[T](accept.md)> [accept](accept.md)(visitor: ParseTreeVisitor<out [T](../../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)>): [T](../../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+open fun <[T](accept.md)> [accept](accept.md)(visitor: ParseTreeVisitor<out [T](../../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)>): [T](../../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)

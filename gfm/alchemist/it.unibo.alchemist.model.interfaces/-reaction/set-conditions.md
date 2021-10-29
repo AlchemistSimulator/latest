@@ -3,7 +3,7 @@
 # setConditions
 
 [jvm]\
-abstract fun [setConditions](set-conditions.md)(conditions: [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Condition](../-condition/index.md)<[T](../-action/index.md)>>)
+abstract fun [setConditions](set-conditions.md)(conditions: [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Condition](../-condition/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>)
 
 Sets the [Condition](../-condition/index.md)s list. Some implementations may not allow to change it at runtime.
 

@@ -10,7 +10,7 @@ title: GenericMoleculeUnderLevel
 
 
 [jvm]\
-open fun [GenericMoleculeUnderLevel](-generic-molecule-under-level.html)(n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-generic-molecule-present/index.html)>, mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), quantity: [T](../-generic-molecule-present/index.html))
+open fun [GenericMoleculeUnderLevel](-generic-molecule-under-level.html)(n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.html)>, mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), quantity: [T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.html))
 
 
 

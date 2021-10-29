@@ -10,7 +10,7 @@ title: getNodesWithinRange
 
 
 [jvm]\
-abstract fun [getNodesWithinRange](get-nodes-within-range.html)(center: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>, range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): ListSet<[Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
+abstract fun [getNodesWithinRange](get-nodes-within-range.html)(center: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>, range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): ListSet<[Node](../-node/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>>
 
 
 
@@ -41,7 +41,7 @@ jvm
 
 
 [jvm]\
-abstract fun [getNodesWithinRange](get-nodes-within-range.html)(center: [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): ListSet<[Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
+abstract fun [getNodesWithinRange](get-nodes-within-range.html)(center: [P](../-position2-d/index.html), range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): ListSet<[Node](../-node/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>>
 
 
 

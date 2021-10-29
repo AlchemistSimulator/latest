@@ -10,7 +10,7 @@ title: removeDependencies
 
 
 [jvm]\
-abstract fun [removeDependencies](remove-dependencies.html)(rh: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)
+abstract fun [removeDependencies](remove-dependencies.html)(rh: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-scheduler/index.html)>)
 
 
 

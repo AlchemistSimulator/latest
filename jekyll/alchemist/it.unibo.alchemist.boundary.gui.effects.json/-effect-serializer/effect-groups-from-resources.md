@@ -10,7 +10,7 @@ title: effectGroupsFromResources
 
 
 [jvm]\
-open fun <[P](effect-groups-from-resources.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>?> [effectGroupsFromResources](effect-groups-from-resources.html)(resource: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>>
+open fun <[P](effect-groups-from-resources.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../-effect-group-adapter/index.html)>?> [effectGroupsFromResources](effect-groups-from-resources.html)(resource: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../-effect-group-adapter/index.html)>>
 
 
 

@@ -10,7 +10,7 @@ title: getObservableEffectsList
 
 
 [jvm]\
-open fun [getObservableEffectsList](get-observable-effects-list.html)(): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>>
+open fun [getObservableEffectsList](get-observable-effects-list.html)(): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>>
 
 
 

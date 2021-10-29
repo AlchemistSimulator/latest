@@ -10,7 +10,7 @@ title: getValidNeighbors
 
 
 [jvm]\
-fun [getValidNeighbors](get-valid-neighbors.html)(): [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-generic-molecule-present/index.html)>, [Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>
+fun [getValidNeighbors](get-valid-neighbors.html)(): [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.html)>, [Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>
 
 
 

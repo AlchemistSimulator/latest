@@ -19,7 +19,7 @@ jvm
 
 | | |
 |---|---|
-| [TraceDependantSpeed](-trace-dependant-speed.md) | [jvm]<br>open fun [TraceDependantSpeed](-trace-dependant-speed.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../-straight-line-trace-dependant-speed/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../-straight-line-trace-dependant-speed/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../-straight-line-trace-dependant-speed/index.md)>)<br>the environment |
+| [TraceDependantSpeed](-trace-dependant-speed.md) | [jvm]<br>open fun [TraceDependantSpeed](-trace-dependant-speed.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.md)>)<br>the environment |
 
 ## Functions
 

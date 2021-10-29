@@ -10,7 +10,7 @@ title: nodeAdded
 
 
 [jvm]\
-abstract fun [nodeAdded](node-added.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)
+abstract fun [nodeAdded](node-added.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-scheduler/index.html)>)
 
 
 

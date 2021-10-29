@@ -3,7 +3,7 @@
 # program
 
 [jvm]\
-open fun [program](program.md)(program: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>
+open fun [program](program.md)(program: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.environments/-abstract2-d-environment/index.md)>
 
 Set the reaction to the passed program string.
 

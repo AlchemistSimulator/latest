@@ -10,7 +10,7 @@ title: MoveForwardAndTeleport
 
 
 [jvm]\
-open fun [MoveForwardAndTeleport](-move-forward-and-teleport.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html), [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>, deltaX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), minX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), maxX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+open fun [MoveForwardAndTeleport](-move-forward-and-teleport.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html), [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>, deltaX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), minX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), maxX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 
 

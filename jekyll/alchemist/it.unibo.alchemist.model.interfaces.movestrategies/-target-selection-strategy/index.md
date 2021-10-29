@@ -14,7 +14,7 @@ title: TargetSelectionStrategy
 
 
 
-interface [TargetSelectionStrategy](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<out [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
+interface [TargetSelectionStrategy](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<out [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
 
 This interface models a strategy for selecting positions where to move.
 
@@ -36,7 +36,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getTarget](get-target.html) | [jvm]<br>abstract fun [getTarget](get-target.html)(): [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)<br>the next target where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.html) is directed |
+| [getTarget](get-target.html) | [jvm]<br>abstract fun [getTarget](get-target.html)(): [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)<br>the next target where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.html) is directed |
 
 
 ## Inheritors

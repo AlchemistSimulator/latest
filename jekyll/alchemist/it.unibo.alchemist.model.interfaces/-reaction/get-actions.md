@@ -10,7 +10,7 @@ title: getActions
 
 
 [jvm]\
-abstract fun [getActions](get-actions.html)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Action](../-action/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
+abstract fun [getActions](get-actions.html)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Action](../-action/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>>
 
 
 

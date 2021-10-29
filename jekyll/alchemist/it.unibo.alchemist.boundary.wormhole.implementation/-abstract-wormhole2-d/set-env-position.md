@@ -10,7 +10,7 @@ title: setEnvPosition
 
 
 [jvm]\
-open fun [setEnvPosition](set-env-position.html)(envPoint: [P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.html))
+open fun [setEnvPosition](set-env-position.html)(envPoint: [P](../-point-adapter/index.html))
 
 
 

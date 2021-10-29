@@ -3,7 +3,7 @@
 # addReaction
 
 [jvm]\
-abstract fun [addReaction](add-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md)>)
+abstract fun [addReaction](add-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)
 
 Adds a reaction to the data structure.
 

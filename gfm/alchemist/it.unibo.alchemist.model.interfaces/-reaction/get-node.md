@@ -3,7 +3,7 @@
 # getNode
 
 [jvm]\
-abstract fun [getNode](get-node.md)(): [Node](../-node/index.md)<[T](../-action/index.md)>
+abstract fun [getNode](get-node.md)(): [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
 
 #### Return
 

@@ -10,7 +10,7 @@ title: AbstractPosition
 
 
 [jvm]\
-abstract class [AbstractPosition](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../../it.unibo.alchemist.model.interfaces/-route/index.html)>?> : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../../it.unibo.alchemist.model.interfaces/-route/index.html)> 
+abstract class [AbstractPosition](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>?> : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)> 
 
 N-dimensional position.
 
@@ -32,7 +32,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [boundingBox](bounding-box.html) | [jvm]<br>fun [boundingBox](bounding-box.html)(range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](../../it.unibo.alchemist.model.interfaces/-route/index.html)> |
+| [boundingBox](bounding-box.html) | [jvm]<br>fun [boundingBox](bounding-box.html)(range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)> |
 | [distanceTo](distance-to.html) | [jvm]<br>fun [distanceTo](distance-to.html)(@NotNull()other: @NotNull()[P](index.html)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |
 | [div](div.html) | [jvm]<br>@NotNull()<br>fun [div](div.html)(other: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): @NotNull()[P](index.html)<br>Division by a number. |
 | [equals](equals.html) | [jvm]<br>fun [equals](equals.html)(o: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |

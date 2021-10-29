@@ -3,7 +3,7 @@
 # getData
 
 [jvm]\
-abstract fun [getData](get-data.md)(): [T](../../it.unibo.alchemist.expressions.implementations/-a-tree-node/index.md)
+abstract fun [getData](get-data.md)(): [T](index.md)
 
 #### Return
 

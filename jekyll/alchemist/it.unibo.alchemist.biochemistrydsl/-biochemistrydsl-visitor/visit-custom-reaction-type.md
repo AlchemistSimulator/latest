@@ -10,7 +10,7 @@ title: visitCustomReactionType
 
 
 [jvm]\
-abstract fun [visitCustomReactionType](visit-custom-reaction-type.html)(ctx: [BiochemistrydslParser.CustomReactionTypeContext](../-biochemistrydsl-parser/-custom-reaction-type-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
+abstract fun [visitCustomReactionType](visit-custom-reaction-type.html)(ctx: [BiochemistrydslParser.CustomReactionTypeContext](../-biochemistrydsl-parser/-custom-reaction-type-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.html)
 
 
 

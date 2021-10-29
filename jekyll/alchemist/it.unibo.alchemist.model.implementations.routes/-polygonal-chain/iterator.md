@@ -10,7 +10,7 @@ title: iterator
 
 
 [jvm]\
-fun [iterator](iterator.html)(): [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)<[P](../../it.unibo.alchemist.model.interfaces/-route/index.html)>
+fun [iterator](iterator.html)(): [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>
 
 
 

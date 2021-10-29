@@ -3,7 +3,7 @@
 # visitJavaClass
 
 [jvm]\
-open fun [visitJavaClass](visit-java-class.md)(ctx: [BiochemistrydslParser.JavaClassContext](../-biochemistrydsl-parser/-java-class-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+open fun [visitJavaClass](visit-java-class.md)(ctx: [BiochemistrydslParser.JavaClassContext](../-biochemistrydsl-parser/-java-class-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)
 
 Visit a parse tree produced by BiochemistrydslParser#javaClass. 
 

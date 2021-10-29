@@ -3,7 +3,7 @@
 # getEnvironmentAccess
 
 [jvm]\
-open fun [getEnvironmentAccess](get-environment-access.md)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](index.md)>
+open fun [getEnvironmentAccess](get-environment-access.md)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../../it.unibo.alchemist.model/-protelis-incarnation/index.md)>
 
 #### Return
 

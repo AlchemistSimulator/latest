@@ -10,7 +10,7 @@ title: update
 
 
 [jvm]\
-abstract fun [update](update.html)(currentTime: [Time](../-time/index.html), hasBeenExecuted: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), environment: [Environment](../-environment/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
+abstract fun [update](update.html)(currentTime: [Time](../-time/index.html), hasBeenExecuted: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), environment: [Environment](../-environment/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
 
 
 

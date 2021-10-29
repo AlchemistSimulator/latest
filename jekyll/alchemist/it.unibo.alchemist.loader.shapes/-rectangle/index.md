@@ -10,7 +10,7 @@ title: Rectangle
 
 
 [jvm]\
-open class [Rectangle](index.html)<[P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<[P](index.html)>?> : [Abstract2DShape](../-abstract2-d-shape/index.html)<[P](index.html)> 
+open class [Rectangle](index.html)<[P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<[P](../-circle/index.html)>?> : [Abstract2DShape](../-abstract2-d-shape/index.html)<[P](../-circle/index.html)> 
 
 A Rectangle.
 
@@ -40,6 +40,6 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [contains](../-abstract2-d-shape/contains.html) | [jvm]<br>fun [contains](../-abstract2-d-shape/contains.html)(position: [P](index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>abstract fun [contains](../-shape/contains.html)(position: [P](index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>the position |
+| [contains](../-abstract2-d-shape/contains.html) | [jvm]<br>fun [contains](../-abstract2-d-shape/contains.html)(position: [P](../-circle/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>abstract fun [contains](../-shape/contains.html)(position: [P](../-circle/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>the position |
 | [toString](../-abstract2-d-shape/to-string.html) | [jvm]<br>open fun [toString](../-abstract2-d-shape/to-string.html)(): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html) |
 

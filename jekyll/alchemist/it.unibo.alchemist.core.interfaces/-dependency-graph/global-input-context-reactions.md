@@ -10,7 +10,7 @@ title: globalInputContextReactions
 
 
 [jvm]\
-abstract fun [globalInputContextReactions](global-input-context-reactions.html)(): ListSet<[Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
+abstract fun [globalInputContextReactions](global-input-context-reactions.html)(): ListSet<[Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-scheduler/index.html)>>
 
 
 

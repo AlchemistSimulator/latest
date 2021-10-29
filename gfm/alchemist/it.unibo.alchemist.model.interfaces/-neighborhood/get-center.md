@@ -3,7 +3,7 @@
 # getCenter
 
 [jvm]\
-abstract fun [getCenter](get-center.md)(): [Node](../-node/index.md)<[T](../-action/index.md)>
+abstract fun [getCenter](get-center.md)(): [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
 
 Allows to access the central node.
 

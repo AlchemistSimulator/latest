@@ -3,7 +3,7 @@
 # RoutingTraceDependantSpeed
 
 [jvm]\
-class [RoutingTraceDependantSpeed](index.md)<[T](index.md)> : [TraceDependantSpeed](../-trace-dependant-speed/index.md)<[T](../-straight-line-trace-dependant-speed/index.md)> 
+class [RoutingTraceDependantSpeed](index.md)<[T](index.md)> : [TraceDependantSpeed](../-trace-dependant-speed/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.md)> 
 
 This [TraceDependantSpeed](../-trace-dependant-speed/index.md) strategy computes the remaining distance by relying on maps data for a selected [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md).
 
@@ -19,7 +19,7 @@ jvm
 
 | | |
 |---|---|
-| [RoutingTraceDependantSpeed](-routing-trace-dependant-speed.md) | [jvm]<br>open fun [RoutingTraceDependantSpeed](-routing-trace-dependant-speed.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../-straight-line-trace-dependant-speed/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../-straight-line-trace-dependant-speed/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../-straight-line-trace-dependant-speed/index.md)>, vehicle: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md))<br>the environment |
+| [RoutingTraceDependantSpeed](-routing-trace-dependant-speed.md) | [jvm]<br>open fun [RoutingTraceDependantSpeed](-routing-trace-dependant-speed.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.md)>, vehicle: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md))<br>the environment |
 
 ## Functions
 

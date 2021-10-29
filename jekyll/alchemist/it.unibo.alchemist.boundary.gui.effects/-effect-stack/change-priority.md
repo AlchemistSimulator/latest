@@ -10,7 +10,7 @@ title: changePriority
 
 
 [jvm]\
-open fun [changePriority](change-priority.html)(effect: [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>, offset: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))
+open fun [changePriority](change-priority.html)(effect: [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>, offset: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))
 
 
 

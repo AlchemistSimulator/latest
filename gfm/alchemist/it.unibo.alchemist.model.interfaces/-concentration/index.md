@@ -21,7 +21,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getContent](get-content.md) | [jvm]<br>abstract fun [getContent](get-content.md)(): [T](../-action/index.md)<br>Allows to access the content of the concentration. |
+| [getContent](get-content.md) | [jvm]<br>abstract fun [getContent](get-content.md)(): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<br>Allows to access the content of the concentration. |
 
 ## Inheritors
 

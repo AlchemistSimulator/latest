@@ -10,7 +10,7 @@ title: StepLayer
 
 
 [jvm]\
-class [StepLayer](index.html)<[T](index.html), [P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)>?> : [Layer](../../it.unibo.alchemist.model.interfaces/-layer/index.html)<[T](index.html), [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)> 
+class [StepLayer](index.html)<[T](index.html), [P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](index.html)>?> : [Layer](../../it.unibo.alchemist.model.interfaces/-layer/index.html)<[T](index.html), [P](index.html)> 
 
 Implements a [Layer](../../it.unibo.alchemist.model.interfaces/-layer/index.html) with a discontinue spatial distribution: the plane is divided in two parts, both with a constant concentration but with a different in value.
 
@@ -42,5 +42,5 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getValue](get-value.html) | [jvm]<br>open fun [getValue](get-value.html)(p: [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)): [T](index.html) |
+| [getValue](get-value.html) | [jvm]<br>open fun [getValue](get-value.html)(p: [P](index.html)): [T](index.html) |
 

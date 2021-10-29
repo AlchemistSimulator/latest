@@ -10,7 +10,7 @@ title: getQuantity
 
 
 [jvm]\
-open fun [getQuantity](get-quantity.html)(): [T](index.html)
+open fun [getQuantity](get-quantity.html)(): [T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.html)
 
 
 

@@ -10,7 +10,7 @@ title: initialized
 
 
 [jvm]\
-abstract fun [initialized](initialized.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](index.html), [P](index.html)>)
+abstract fun [initialized](initialized.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html), [P](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)>)
 
 
 

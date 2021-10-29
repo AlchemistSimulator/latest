@@ -19,7 +19,7 @@ jvm
 
 | | |
 |---|---|
-| [OnStreets](-on-streets.md) | [jvm]<br>open fun [OnStreets](-on-streets.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.md)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md))<br>the environment |
+| [OnStreets](-on-streets.md) | [jvm]<br>open fun [OnStreets](-on-streets.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.md)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md))<br>the environment |
 
 ## Functions
 

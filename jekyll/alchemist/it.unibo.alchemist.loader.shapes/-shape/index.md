@@ -14,7 +14,7 @@ title: Shape
 
 
 
-interface [Shape](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../-rectangle/index.html)>?>
+interface [Shape](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../-circle/index.html)>?>
 
 A Shape, representing an partition of the space where a [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html) may lie in.
 
@@ -36,7 +36,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [contains](contains.html) | [jvm]<br>abstract fun [contains](contains.html)(position: [P](../-rectangle/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>the position |
+| [contains](contains.html) | [jvm]<br>abstract fun [contains](contains.html)(position: [P](../-circle/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>the position |
 
 
 ## Inheritors

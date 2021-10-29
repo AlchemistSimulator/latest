@@ -3,7 +3,7 @@
 # getConcentration
 
 [jvm]\
-abstract fun [getConcentration](get-concentration.md)(mol: [Molecule](../-molecule/index.md)): [T](../-action/index.md)
+abstract fun [getConcentration](get-concentration.md)(mol: [Molecule](../-molecule/index.md)): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)
 
 Calculates the concentration of a molecule.
 

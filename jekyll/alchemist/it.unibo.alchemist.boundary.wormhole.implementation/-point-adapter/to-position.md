@@ -10,7 +10,7 @@ title: toPosition
 
 
 [jvm]\
-open fun [toPosition](to-position.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.html)>): [P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.html)
+open fun [toPosition](to-position.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](index.html)>): [P](index.html)
 
 
 

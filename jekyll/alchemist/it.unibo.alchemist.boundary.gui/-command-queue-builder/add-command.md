@@ -10,7 +10,7 @@ title: addCommand
 
 
 [jvm]\
-open fun [addCommand](add-command.html)(doOnJFXThread: [DrawCommand](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>): [CommandQueueBuilder](index.html)
+open fun [addCommand](add-command.html)(doOnJFXThread: [DrawCommand](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>): [CommandQueueBuilder](index.html)
 
 
 

@@ -10,7 +10,7 @@ title: getNextPosition
 
 
 [jvm]\
-fun [getNextPosition](get-next-position.html)(): [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)
+fun [getNextPosition](get-next-position.html)(): [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)
 
 
 

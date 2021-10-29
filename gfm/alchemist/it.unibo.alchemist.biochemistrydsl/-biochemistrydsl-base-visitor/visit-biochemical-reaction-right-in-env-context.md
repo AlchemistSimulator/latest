@@ -3,7 +3,7 @@
 # visitBiochemicalReactionRightInEnvContext
 
 [jvm]\
-open fun [visitBiochemicalReactionRightInEnvContext](visit-biochemical-reaction-right-in-env-context.md)(ctx: [BiochemistrydslParser.BiochemicalReactionRightInEnvContextContext](../-biochemistrydsl-parser/-biochemical-reaction-right-in-env-context-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+open fun [visitBiochemicalReactionRightInEnvContext](visit-biochemical-reaction-right-in-env-context.md)(ctx: [BiochemistrydslParser.BiochemicalReactionRightInEnvContextContext](../-biochemistrydsl-parser/-biochemical-reaction-right-in-env-context-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)
 
 Visit a parse tree produced by BiochemistrydslParser#biochemicalReactionRightInEnvContext. 
 

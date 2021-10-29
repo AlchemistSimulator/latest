@@ -3,4 +3,4 @@
 # simulation
 
 [jvm]\
-private open var [simulation](simulation.md): [Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md), [P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)>
+private open var [simulation](simulation.md): [Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md), [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>

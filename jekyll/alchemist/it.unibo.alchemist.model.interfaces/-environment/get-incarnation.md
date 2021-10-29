@@ -10,7 +10,7 @@ title: getIncarnation
 
 
 [jvm]\
-abstract fun [getIncarnation](get-incarnation.html)(): [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)<[Incarnation](../-incarnation/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
+abstract fun [getIncarnation](get-incarnation.html)(): [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)<[Incarnation](../-incarnation/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html), [P](../-position2-d/index.html)>>
 
 
 

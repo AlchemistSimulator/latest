@@ -10,7 +10,7 @@ title: createConcentration
 
 
 [jvm]\
-abstract fun [createConcentration](create-concentration.html)(s: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)
+abstract fun [createConcentration](create-concentration.html)(s: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)
 
 
 

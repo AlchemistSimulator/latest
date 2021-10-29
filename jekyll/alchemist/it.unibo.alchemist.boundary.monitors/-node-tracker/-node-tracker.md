@@ -10,7 +10,7 @@ title: NodeTracker
 
 
 [jvm]\
-open fun [NodeTracker](-node-tracker.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-graphical2-d-output-monitor/index.html)>)
+open fun [NodeTracker](-node-tracker.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.boundary.gui.effects/-function-drawer/draw-function.html)>)
 
 
 

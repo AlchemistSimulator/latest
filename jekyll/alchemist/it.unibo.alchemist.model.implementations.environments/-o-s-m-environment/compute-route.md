@@ -73,7 +73,7 @@ jvm
 
 
 [jvm]\
-open fun [computeRoute](compute-route.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-trace-dependant-speed/index.html)>, coord: [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.html)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>
+open fun [computeRoute](compute-route.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.html)>, coord: [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.html)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>
 
 
 
@@ -104,7 +104,7 @@ jvm
 
 
 [jvm]\
-open fun [computeRoute](compute-route.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-trace-dependant-speed/index.html)>, coord: [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html), vehicle: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.html)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.html)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>
+open fun [computeRoute](compute-route.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.html)>, coord: [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html), vehicle: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.html)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.html)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>
 
 
 
@@ -136,7 +136,7 @@ jvm
 
 
 [jvm]\
-open fun [computeRoute](compute-route.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-trace-dependant-speed/index.html)>, node2: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-trace-dependant-speed/index.html)>): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.html)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>
+open fun [computeRoute](compute-route.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.html)>, node2: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.html)>): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.html)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>
 
 
 

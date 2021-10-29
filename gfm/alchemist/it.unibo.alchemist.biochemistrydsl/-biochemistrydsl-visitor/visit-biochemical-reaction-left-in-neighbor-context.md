@@ -3,7 +3,7 @@
 # visitBiochemicalReactionLeftInNeighborContext
 
 [jvm]\
-abstract fun [visitBiochemicalReactionLeftInNeighborContext](visit-biochemical-reaction-left-in-neighbor-context.md)(ctx: [BiochemistrydslParser.BiochemicalReactionLeftInNeighborContextContext](../-biochemistrydsl-parser/-biochemical-reaction-left-in-neighbor-context-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+abstract fun [visitBiochemicalReactionLeftInNeighborContext](visit-biochemical-reaction-left-in-neighbor-context.md)(ctx: [BiochemistrydslParser.BiochemicalReactionLeftInNeighborContextContext](../-biochemistrydsl-parser/-biochemical-reaction-left-in-neighbor-context-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)
 
 Visit a parse tree produced by [biochemicalReactionLeftInNeighborContext](../-biochemistrydsl-parser/biochemical-reaction-left-in-neighbor-context.md).
 

@@ -10,7 +10,7 @@ title: SingleRunApp
 
 
 [jvm]\
-open class [SingleRunApp](index.html)<[T](index.html), [P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>?> : Application
+open class [SingleRunApp](index.html)<[T](index.html), [P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>?> : Application
 
 The class models a non-reusable GUI for simulation display.
 
@@ -33,7 +33,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [addEffectGroups](add-effect-groups.html) | [jvm]<br>open fun [addEffectGroups](add-effect-groups.html)(path: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))<br>Adds effect from a file.<br>[jvm]<br>open fun [addEffectGroups](add-effect-groups.html)(effectGroups: [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>>)<br>Adds the effects to the current effects. |
+| [addEffectGroups](add-effect-groups.html) | [jvm]<br>open fun [addEffectGroups](add-effect-groups.html)(path: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))<br>Adds effect from a file.<br>[jvm]<br>open fun [addEffectGroups](add-effect-groups.html)(effectGroups: [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>>)<br>Adds the effects to the current effects. |
 | [addParam](add-param.html) | [jvm]<br>open fun [addParam](add-param.html)(name: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), value: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))<br>The method adds a new named parameter. |
 | [getHostServices](../../it.unibo.alchemist.boundary/-keybinder/index.html#792481849%2FFunctions%2F-134779887) | [jvm]<br>fun [getHostServices](../../it.unibo.alchemist.boundary/-keybinder/index.html#792481849%2FFunctions%2F-134779887)(): HostServices |
 | [getParameters](../../it.unibo.alchemist.boundary/-keybinder/index.html#-807279243%2FFunctions%2F-134779887) | [jvm]<br>fun [getParameters](../../it.unibo.alchemist.boundary/-keybinder/index.html#-807279243%2FFunctions%2F-134779887)(): Application.Parameters |
@@ -51,11 +51,11 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [effectGroups](effect-groups.html) | [jvm]<br>private open var [effectGroups](effect-groups.html): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>> |
+| [effectGroups](effect-groups.html) | [jvm]<br>private open var [effectGroups](effect-groups.html): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>> |
 | [PARAMETER_NAME_END](-p-a-r-a-m-e-t-e-r_-n-a-m-e_-e-n-d.html) | [jvm]<br>val [PARAMETER_NAME_END](-p-a-r-a-m-e-t-e-r_-n-a-m-e_-e-n-d.html): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)<br>Default parameter end string. |
 | [PARAMETER_NAME_START](-p-a-r-a-m-e-t-e-r_-n-a-m-e_-s-t-a-r-t.html) | [jvm]<br>val [PARAMETER_NAME_START](-p-a-r-a-m-e-t-e-r_-n-a-m-e_-s-t-a-r-t.html): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)<br>Default parameter start string. |
 | [params](params.html) | [jvm]<br>private var [params](params.html): [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)> |
 | [ROOT_LAYOUT](-r-o-o-t_-l-a-y-o-u-t.html) | [jvm]<br>val [ROOT_LAYOUT](-r-o-o-t_-l-a-y-o-u-t.html): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)<br>Main layout without nested layouts. |
-| [simulation](simulation.html) | [jvm]<br>@Nullable()<br>private open var [simulation](simulation.html): @Nullable()[Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.html)<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html), [P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)> |
+| [simulation](simulation.html) | [jvm]<br>@Nullable()<br>private open var [simulation](simulation.html): @Nullable()[Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.html)<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html), [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)> |
 | [USE_EFFECT_GROUPS_FROM_FILE](-u-s-e_-e-f-f-e-c-t_-g-r-o-u-p-s_-f-r-o-m_-f-i-l-e.html) | [jvm]<br>val [USE_EFFECT_GROUPS_FROM_FILE](-u-s-e_-e-f-f-e-c-t_-g-r-o-u-p-s_-f-r-o-m_-f-i-l-e.html): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)<br>Effect pass param name. |
 

@@ -3,7 +3,7 @@
 # visitJunctionRight
 
 [jvm]\
-open fun [visitJunctionRight](visit-junction-right.md)(ctx: [BiochemistrydslParser.JunctionRightContext](../-biochemistrydsl-parser/-junction-right-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
+open fun [visitJunctionRight](visit-junction-right.md)(ctx: [BiochemistrydslParser.JunctionRightContext](../-biochemistrydsl-parser/-junction-right-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)
 
 Visit a parse tree produced by BiochemistrydslParser#junctionRight. 
 
