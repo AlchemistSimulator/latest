@@ -30,7 +30,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [cloneAction](clone-action.html) | [jvm]<br>abstract fun [cloneAction](clone-action.html)(node: [Node](../-node/index.html)<[T](../-node/index.html)>, reaction: [Reaction](../-reaction/index.html)<[T](../-node/index.html)>): [Action](index.html)<[T](../-node/index.html)><br>This method allows to clone this action on a new node. |
+| [cloneAction](clone-action.html) | [jvm]<br>abstract fun [cloneAction](clone-action.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>, reaction: [Reaction](../-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>): [Action](index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)><br>This method allows to clone this action on a new node. |
 | [execute](execute.html) | [jvm]<br>abstract fun [execute](execute.html)()<br>Effectively executes this action. |
 | [getContext](get-context.html) | [jvm]<br>abstract fun [getContext](get-context.html)(): [Context](../-context/index.html)<br>The context for this action. |
 | [getOutboundDependencies](get-outbound-dependencies.html) | [jvm]<br>abstract fun [getOutboundDependencies](get-outbound-dependencies.html)(): ListSet<out [Dependency](../-dependency/index.html)><br>The list of the dependencies that this action generates. |

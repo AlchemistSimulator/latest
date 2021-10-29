@@ -10,7 +10,7 @@ title: cloneNode
 
 
 [jvm]\
-open fun [cloneNode](clone-node.html)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [AbstractNode](index.html)<[T](../../it.unibo.alchemist/-supported-incarnations/get.html)>
+open fun [cloneNode](clone-node.html)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [AbstractNode](index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>
 
 
 

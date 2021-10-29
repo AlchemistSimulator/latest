@@ -8,7 +8,7 @@ open fun [execute](execute.md)()
 Execute the action on a random neighbor if the node has a neighborhood. Otherwise do nothing.
 
 [jvm]\
-abstract fun [execute](execute.md)(targetNode: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md)>)
+abstract fun [execute](execute.md)(targetNode: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)>)
 
 Execute the action on the given target node. NOTE, it is NOT guaranteed that this method checks if the target node is in the actual neighborhood of the node.
 

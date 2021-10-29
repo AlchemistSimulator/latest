@@ -3,7 +3,7 @@
 # wrap
 
 [jvm]\
-open fun [wrap](wrap.md)(booleanSupplier: [Supplier](https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)<[Boolean](https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html)>): [DrawCommand](index.md)<[P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>
+open fun [wrap](wrap.md)(booleanSupplier: [Supplier](https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)<[Boolean](https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html)>): [DrawCommand](index.md)<[P](index.md)>
 
 Wrapper method that wraps this [DrawCommand](index.md) into another that checks if should execute or not the [accept](accept.md) method.
 

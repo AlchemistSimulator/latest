@@ -10,7 +10,7 @@ title: getPoint
 
 
 [jvm]\
-fun [getPoint](get-point.html)(step: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [P](../../it.unibo.alchemist/-supported-incarnations/get.html)
+fun [getPoint](get-point.html)(step: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)
 
 
 

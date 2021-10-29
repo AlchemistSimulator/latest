@@ -10,7 +10,7 @@ title: ChemicalReaction
 
 
 [jvm]\
-open fun [ChemicalReaction](-chemical-reaction.html)(n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist/-supported-incarnations/get.html)>, pd: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.html)<[T](../../it.unibo.alchemist/-supported-incarnations/get.html)>)
+open fun [ChemicalReaction](-chemical-reaction.html)(n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>, pd: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>)
 
 
 

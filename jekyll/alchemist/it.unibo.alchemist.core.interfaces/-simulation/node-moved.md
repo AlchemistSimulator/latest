@@ -10,7 +10,7 @@ title: nodeMoved
 
 
 [jvm]\
-abstract fun [nodeMoved](node-moved.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.interfaces/-node/index.html)>)
+abstract fun [nodeMoved](node-moved.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)
 
 
 

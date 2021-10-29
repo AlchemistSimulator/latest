@@ -10,7 +10,7 @@ title: computeNeighborhood
 
 
 [jvm]\
-abstract fun [computeNeighborhood](compute-neighborhood.html)(center: [Node](../-node/index.html)<[T](../-node/index.html)>, environment: [Environment](../-environment/index.html)<[T](../-node/index.html), [P](../-position2-d/index.html)>): [Neighborhood](../-neighborhood/index.html)<[T](../-node/index.html)>
+abstract fun [computeNeighborhood](compute-neighborhood.html)(center: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>, environment: [Environment](../-environment/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>): [Neighborhood](../-neighborhood/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

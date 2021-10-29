@@ -10,7 +10,7 @@ title: stream
 
 
 [jvm]\
-fun [stream](stream.html)(): [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)<[P](../../it.unibo.alchemist/-supported-incarnations/get.html)>
+fun [stream](stream.html)(): [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>
 
 
 

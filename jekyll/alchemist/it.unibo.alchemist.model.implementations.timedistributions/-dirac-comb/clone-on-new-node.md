@@ -10,7 +10,7 @@ title: cloneOnNewNode
 
 
 [jvm]\
-fun [cloneOnNewNode](clone-on-new-node.html)(destination: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist/-supported-incarnations/get.html)>, currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [DiracComb](index.html)<[T](../../it.unibo.alchemist/-supported-incarnations/get.html)>
+fun [cloneOnNewNode](clone-on-new-node.html)(destination: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>, currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [DiracComb](index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>
 
 
 

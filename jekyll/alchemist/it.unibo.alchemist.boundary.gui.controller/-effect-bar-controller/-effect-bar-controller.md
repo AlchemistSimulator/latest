@@ -10,7 +10,7 @@ title: EffectBarController
 
 
 [jvm]\
-open fun [EffectBarController](-effect-bar-controller.html)(parentCell: [EffectGroupCell](../../it.unibo.alchemist.boundary.gui.view.cells/-effect-group-cell/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>, stack: JFXDrawersStack, thisDrawer: JFXDrawer)
+open fun [EffectBarController](-effect-bar-controller.html)(parentCell: [EffectGroupCell](../../it.unibo.alchemist.boundary.gui.view.cells/-effect-group-cell/index.html)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>, stack: JFXDrawersStack, thisDrawer: JFXDrawer)
 
 
 
@@ -34,7 +34,7 @@ jvm
 
 
 [jvm]\
-open fun [EffectBarController](-effect-bar-controller.html)(@Nullable()displayMonitor: @Nullable()[FXOutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-f-x-output-monitor/index.html)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, parentCell: [EffectGroupCell](../../it.unibo.alchemist.boundary.gui.view.cells/-effect-group-cell/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>, stack: JFXDrawersStack, thisDrawer: JFXDrawer)
+open fun [EffectBarController](-effect-bar-controller.html)(@Nullable()displayMonitor: @Nullable()[FXOutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-f-x-output-monitor/index.html)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, parentCell: [EffectGroupCell](../../it.unibo.alchemist.boundary.gui.view.cells/-effect-group-cell/index.html)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>, stack: JFXDrawersStack, thisDrawer: JFXDrawer)
 
 
 

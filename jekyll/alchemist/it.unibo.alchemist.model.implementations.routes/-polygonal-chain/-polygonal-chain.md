@@ -18,9 +18,9 @@ title: PolygonalChain
 
 
 
-open fun [PolygonalChain](-polygonal-chain.html)(positions: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[P](../../it.unibo.alchemist/-supported-incarnations/get.html)>)
+open fun [PolygonalChain](-polygonal-chain.html)(positions: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>)
 
-open fun [PolygonalChain](-polygonal-chain.html)(positions: [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](../../it.unibo.alchemist/-supported-incarnations/get.html)>)
+open fun [PolygonalChain](-polygonal-chain.html)(positions: [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>)
 
 
 

@@ -10,7 +10,7 @@ title: addEffectGroup
 
 
 [jvm]\
-abstract fun [addEffectGroup](add-effect-group.html)(effects: [EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>)
+abstract fun [addEffectGroup](add-effect-group.html)(effects: [EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../-draw-command/index.html)>)
 
 
 

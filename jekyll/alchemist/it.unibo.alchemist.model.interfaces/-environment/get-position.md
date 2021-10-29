@@ -10,7 +10,7 @@ title: getPosition
 
 
 [jvm]\
-abstract fun [getPosition](get-position.html)(node: [Node](../-node/index.html)<[T](../-node/index.html)>): [P](../-position2-d/index.html)
+abstract fun [getPosition](get-position.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>): [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)
 
 
 

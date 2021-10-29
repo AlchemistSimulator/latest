@@ -3,7 +3,7 @@
 # setActions
 
 [jvm]\
-abstract fun [setActions](set-actions.md)(actions: [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Action](../-action/index.md)<[T](../-node/index.md)>>)
+abstract fun [setActions](set-actions.md)(actions: [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Action](../-action/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>)
 
 Sets the [Action](../-action/index.md)s list. Some implementations may not allow to change it at runtime.
 

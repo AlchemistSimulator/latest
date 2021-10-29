@@ -10,7 +10,7 @@ title: getNeighbors
 
 
 [jvm]\
-abstract fun [getNeighbors](get-neighbors.html)(): ListSet<out [Node](../-node/index.html)<[T](../-node/index.html)>>
+abstract fun [getNeighbors](get-neighbors.html)(): ListSet<out [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
 
 
 

@@ -10,7 +10,7 @@ title: getEnvironment
 
 
 [jvm]\
-fun [getEnvironment](get-environment.html)(): [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>
+fun [getEnvironment](get-environment.html)(): [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-routing-trace-dependant-speed/index.html)>
 
 
 

@@ -10,7 +10,7 @@ title: get
 
 
 [jvm]\
-open fun <[T](get.html), [P](get.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<out [P](get.html)>?> [get](get.html)(s: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)<[Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](get.html), [P](get.html)>>
+open fun <[T](get.html), [P](get.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<out [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>?> [get](get.html)(s: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)<[Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html), [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>>
 
 
 

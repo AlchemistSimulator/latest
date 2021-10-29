@@ -10,7 +10,7 @@ title: getDistanceBetweenNodes
 
 
 [jvm]\
-abstract fun [getDistanceBetweenNodes](get-distance-between-nodes.html)(n1: [Node](../-node/index.html)<[T](../-node/index.html)>, n2: [Node](../-node/index.html)<[T](../-node/index.html)>): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
+abstract fun [getDistanceBetweenNodes](get-distance-between-nodes.html)(n1: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>, n2: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
 
 
 

@@ -3,7 +3,7 @@
 # contains
 
 [jvm]\
-abstract fun [contains](contains.md)(n: [Node](../-node/index.md)<[T](../-node/index.md)>): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+abstract fun [contains](contains.md)(n: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
 
 Verifies if a node is contained inside a neighborhood.
 

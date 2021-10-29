@@ -3,7 +3,7 @@
 # getQuantity
 
 [jvm]\
-open fun [getQuantity](get-quantity.md)(): [T](../-abstract-condition/index.md)
+open fun [getQuantity](get-quantity.md)(): [T](index.md)
 
 Allows to access the threshold.
 

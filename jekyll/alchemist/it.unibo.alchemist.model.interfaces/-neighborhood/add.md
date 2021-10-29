@@ -10,7 +10,7 @@ title: add
 
 
 [jvm]\
-abstract fun [add](add.html)(node: [Node](../-node/index.html)<[T](../-node/index.html)>): [Neighborhood](index.html)<[T](../-node/index.html)>
+abstract fun [add](add.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>): [Neighborhood](index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

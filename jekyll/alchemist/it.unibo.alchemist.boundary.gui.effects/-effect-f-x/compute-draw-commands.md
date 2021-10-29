@@ -10,7 +10,7 @@ title: computeDrawCommands
 
 
 [jvm]\
-abstract fun <[T](compute-draw-commands.html)> [computeDrawCommands](compute-draw-commands.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<T, [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>): [Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)<[DrawCommand](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>>
+abstract fun <[T](compute-draw-commands.html)> [computeDrawCommands](compute-draw-commands.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.boundary.gui.view.properties/-property-type-adapter/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>): [Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)<[DrawCommand](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>>
 
 
 

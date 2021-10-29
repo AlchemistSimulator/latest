@@ -3,4 +3,4 @@
 # cloneOnNewNode
 
 [jvm]\
-open fun [cloneOnNewNode](clone-on-new-node.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>, currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)): [ChemicalReaction](index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>
+open fun [cloneOnNewNode](clone-on-new-node.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md)>, currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)): [ChemicalReaction](index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md)>

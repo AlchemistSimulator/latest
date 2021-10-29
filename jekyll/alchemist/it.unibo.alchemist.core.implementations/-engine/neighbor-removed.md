@@ -10,7 +10,7 @@ title: neighborRemoved
 
 
 [jvm]\
-open fun [neighborRemoved](neighbor-removed.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-array-indexed-priority-queue/index.html)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-array-indexed-priority-queue/index.html)>)
+open fun [neighborRemoved](neighbor-removed.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](index.html)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](index.html)>)
 
 
 

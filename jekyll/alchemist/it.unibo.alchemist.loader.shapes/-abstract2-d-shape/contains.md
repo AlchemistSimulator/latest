@@ -10,7 +10,7 @@ title: contains
 
 
 [jvm]\
-fun [contains](contains.html)(position: [P](../../it.unibo.alchemist.loader.deployments/-circle/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+fun [contains](contains.html)(position: [P](../-circle/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
 
 
 

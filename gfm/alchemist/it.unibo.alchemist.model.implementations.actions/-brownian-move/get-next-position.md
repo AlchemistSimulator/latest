@@ -3,7 +3,7 @@
 # getNextPosition
 
 [jvm]\
-open fun [getNextPosition](get-next-position.md)(): [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)
+open fun [getNextPosition](get-next-position.md)(): [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)
 
 #### Return
 

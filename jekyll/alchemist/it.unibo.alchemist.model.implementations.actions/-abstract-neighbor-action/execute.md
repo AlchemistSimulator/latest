@@ -21,7 +21,7 @@ Execute the action on a random neighbor if the node has a neighborhood. Otherwis
 
 
 [jvm]\
-abstract fun [execute](execute.html)(targetNode: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.interfaces/-environment/index.html)>)
+abstract fun [execute](execute.html)(targetNode: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)>)
 
 
 

@@ -10,7 +10,7 @@ title: cloneAction
 
 
 [jvm]\
-abstract fun [cloneAction](clone-action.html)(node: [Node](../-node/index.html)<[T](../-node/index.html)>, reaction: [Reaction](../-reaction/index.html)<[T](../-node/index.html)>): [Action](index.html)<[T](../-node/index.html)>
+abstract fun [cloneAction](clone-action.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>, reaction: [Reaction](../-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>): [Action](index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

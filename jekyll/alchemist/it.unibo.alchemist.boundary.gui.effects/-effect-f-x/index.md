@@ -10,7 +10,7 @@ title: EffectFX
 
 
 [jvm]\
-interface [EffectFX](index.html)<[P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
+interface [EffectFX](index.html)<[P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
 
 Graphical visualization of something happening in the environment.
 
@@ -32,7 +32,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [computeDrawCommands](compute-draw-commands.html) | [jvm]<br>abstract fun <[T](compute-draw-commands.html)> [computeDrawCommands](compute-draw-commands.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<T, [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>): [Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)<[DrawCommand](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>><br>Computes a queue of commands to Draw something. |
+| [computeDrawCommands](compute-draw-commands.html) | [jvm]<br>abstract fun <[T](compute-draw-commands.html)> [computeDrawCommands](compute-draw-commands.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.boundary.gui.view.properties/-property-type-adapter/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>): [Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)<[DrawCommand](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>><br>Computes a queue of commands to Draw something. |
 | [getName](get-name.html) | [jvm]<br>abstract fun [getName](get-name.html)(): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)<br>Gets the name of the effect. |
 | [isVisible](is-visible.html) | [jvm]<br>abstract fun [isVisible](is-visible.html)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Gets the visibility of the effect. |
 | [setName](set-name.html) | [jvm]<br>abstract fun [setName](set-name.html)(name: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))<br>Sets the name of the effect. |

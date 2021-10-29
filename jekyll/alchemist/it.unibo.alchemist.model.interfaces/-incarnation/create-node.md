@@ -10,7 +10,7 @@ title: createNode
 
 
 [jvm]\
-abstract fun [createNode](create-node.html)(randomGenerator: RandomGenerator, environment: [Environment](../-environment/index.html)<[T](../-node/index.html), [P](../-position2-d/index.html)>, @Nullable()parameter: @Nullable()[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [Node](../-node/index.html)<[T](../-node/index.html)>
+abstract fun [createNode](create-node.html)(randomGenerator: RandomGenerator, environment: [Environment](../-environment/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>, @Nullable()parameter: @Nullable()[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

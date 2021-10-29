@@ -19,10 +19,10 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [cloneOnNewNode](clone-on-new-node.md) | [jvm]<br>abstract fun [cloneOnNewNode](clone-on-new-node.md)(destination: [Node](../-node/index.md)<[T](../-node/index.md)>, currentTime: [Time](../-time/index.md)): [TimeDistribution](index.md)<[T](../-node/index.md)><br>the node where the newly created time distribution will be placed |
+| [cloneOnNewNode](clone-on-new-node.md) | [jvm]<br>abstract fun [cloneOnNewNode](clone-on-new-node.md)(destination: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, currentTime: [Time](../-time/index.md)): [TimeDistribution](index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)><br>the node where the newly created time distribution will be placed |
 | [getNextOccurence](get-next-occurence.md) | [jvm]<br>abstract fun [getNextOccurence](get-next-occurence.md)(): [Time](../-time/index.md)<br>the next time at which the event will occur |
 | [getRate](get-rate.md) | [jvm]<br>abstract fun [getRate](get-rate.md)(): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>how many times per time unit the event will happen on average |
-| [update](update.md) | [jvm]<br>abstract fun [update](update.md)(currentTime: [Time](../-time/index.md), executed: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), param: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), environment: [Environment](../-environment/index.md)<[T](../-node/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)<br>Updates the internal status. |
+| [update](update.md) | [jvm]<br>abstract fun [update](update.md)(currentTime: [Time](../-time/index.md), executed: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), param: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), environment: [Environment](../-environment/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)<br>Updates the internal status. |
 
 ## Inheritors
 

@@ -3,7 +3,7 @@
 # MoveForwardAndTeleport
 
 [jvm]\
-open fun [MoveForwardAndTeleport](-move-forward-and-teleport.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md), [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>, deltaX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), minX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), maxX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+open fun [MoveForwardAndTeleport](-move-forward-and-teleport.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md), [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md)>, deltaX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), minX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), maxX: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 ## Parameters
 

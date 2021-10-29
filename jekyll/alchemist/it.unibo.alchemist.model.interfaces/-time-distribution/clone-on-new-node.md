@@ -10,7 +10,7 @@ title: cloneOnNewNode
 
 
 [jvm]\
-abstract fun [cloneOnNewNode](clone-on-new-node.html)(destination: [Node](../-node/index.html)<[T](../-node/index.html)>, currentTime: [Time](../-time/index.html)): [TimeDistribution](index.html)<[T](../-node/index.html)>
+abstract fun [cloneOnNewNode](clone-on-new-node.html)(destination: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>, currentTime: [Time](../-time/index.html)): [TimeDistribution](index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

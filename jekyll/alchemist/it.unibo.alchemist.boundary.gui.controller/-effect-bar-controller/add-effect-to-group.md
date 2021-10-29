@@ -10,7 +10,7 @@ title: addEffectToGroup
 
 
 [jvm]\
-open fun [addEffectToGroup](add-effect-to-group.html)(effect: [EffectFX](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>)
+open fun [addEffectToGroup](add-effect-to-group.html)(effect: [EffectFX](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>)
 
 
 

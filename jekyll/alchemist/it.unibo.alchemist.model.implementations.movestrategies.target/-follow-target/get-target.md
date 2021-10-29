@@ -10,7 +10,7 @@ title: getTarget
 
 
 [jvm]\
-fun [getTarget](get-target.html)(): [P](../../it.unibo.alchemist/-supported-incarnations/get.html)
+fun [getTarget](get-target.html)(): [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)
 
 
 

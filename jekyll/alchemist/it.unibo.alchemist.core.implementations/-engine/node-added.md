@@ -10,7 +10,7 @@ title: nodeAdded
 
 
 [jvm]\
-open fun [nodeAdded](node-added.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-array-indexed-priority-queue/index.html)>)
+open fun [nodeAdded](node-added.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](index.html)>)
 
 
 

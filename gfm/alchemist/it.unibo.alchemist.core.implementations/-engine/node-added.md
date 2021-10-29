@@ -3,4 +3,4 @@
 # nodeAdded
 
 [jvm]\
-open fun [nodeAdded](node-added.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../-array-indexed-priority-queue/index.md)>)
+open fun [nodeAdded](node-added.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](index.md)>)

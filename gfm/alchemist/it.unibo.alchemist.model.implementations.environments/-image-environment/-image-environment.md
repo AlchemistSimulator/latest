@@ -3,7 +3,7 @@
 # ImageEnvironment
 
 [jvm]\
-open fun [ImageEnvironment](-image-environment.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](../-limited-continuos2-d/index.md), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>, path: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))
+open fun [ImageEnvironment](-image-environment.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-connection-beam/index.md), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>, path: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))
 
 ## Parameters
 
@@ -21,7 +21,7 @@ jvm
 | [java.io.IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) | if image file cannot be found, or if you disconnected your hard drive while this method was running. |
 
 [jvm]\
-open fun [ImageEnvironment](-image-environment.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](../-limited-continuos2-d/index.md), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>, path: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), zoom: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+open fun [ImageEnvironment](-image-environment.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-connection-beam/index.md), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>, path: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), zoom: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 ## Parameters
 
@@ -40,7 +40,7 @@ jvm
 | [java.io.IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) | if image file cannot be found, or if you disconnected your hard drive while this method was running. |
 
 [jvm]\
-open fun [ImageEnvironment](-image-environment.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](../-limited-continuos2-d/index.md), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>, path: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), zoom: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), dx: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), dy: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+open fun [ImageEnvironment](-image-environment.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-connection-beam/index.md), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>, path: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), zoom: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), dx: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), dy: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 ## Parameters
 
@@ -61,7 +61,7 @@ jvm
 | [java.io.IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) | if image file cannot be found, or if you disconnected your hard drive while this method was running. |
 
 [jvm]\
-open fun [ImageEnvironment](-image-environment.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](../-limited-continuos2-d/index.md), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>, obstacleColor: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), path: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), zoom: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), dx: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), dy: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+open fun [ImageEnvironment](-image-environment.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-connection-beam/index.md), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>, obstacleColor: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), path: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), zoom: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), dx: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), dy: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 ## Parameters
 

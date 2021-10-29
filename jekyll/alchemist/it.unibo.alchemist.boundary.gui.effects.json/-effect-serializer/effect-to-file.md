@@ -10,7 +10,7 @@ title: effectToFile
 
 
 [jvm]\
-open fun <[P](effect-to-file.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](effect-from-file.html)>?> [effectToFile](effect-to-file.html)(effectFile: [File](https://docs.oracle.com/javase/8/docs/api/java/io/File.html), effect: [EffectFX](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.html)<[P](effect-from-file.html)>)
+open fun <[P](effect-to-file.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>?> [effectToFile](effect-to-file.html)(effectFile: [File](https://docs.oracle.com/javase/8/docs/api/java/io/File.html), effect: [EffectFX](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>)
 
 
 

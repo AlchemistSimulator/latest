@@ -10,7 +10,7 @@ title: Engine
 
 
 [jvm]\
-open fun [Engine](-engine.html)(e: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../-array-indexed-priority-queue/index.html), [P](index.html)>)
+open fun [Engine](-engine.html)(e: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](index.html), [P](index.html)>)
 
 
 
@@ -32,7 +32,7 @@ jvm
 
 
 [jvm]\
-open fun [Engine](-engine.html)(e: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../-array-indexed-priority-queue/index.html), [P](index.html)>, maxSteps: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html))
+open fun [Engine](-engine.html)(e: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](index.html), [P](index.html)>, maxSteps: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html))
 
 
 
@@ -55,7 +55,7 @@ jvm
 
 
 [jvm]\
-open fun [Engine](-engine.html)(e: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../-array-indexed-priority-queue/index.html), [P](index.html)>, maxSteps: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html), t: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html))
+open fun [Engine](-engine.html)(e: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](index.html), [P](index.html)>, maxSteps: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html), t: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html))
 
 
 
@@ -79,7 +79,7 @@ jvm
 
 
 [jvm]\
-open fun [Engine](-engine.html)(e: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../-array-indexed-priority-queue/index.html), [P](index.html)>, t: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html))
+open fun [Engine](-engine.html)(e: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](index.html), [P](index.html)>, t: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html))
 
 
 

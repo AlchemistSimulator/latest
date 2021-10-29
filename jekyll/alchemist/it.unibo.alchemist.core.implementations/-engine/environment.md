@@ -10,7 +10,7 @@ title: environment
 
 
 [jvm]\
-private val [environment](environment.html): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../-array-indexed-priority-queue/index.html), [P](index.html)>
+private val [environment](environment.html): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](index.html), [P](index.html)>
 
 
 

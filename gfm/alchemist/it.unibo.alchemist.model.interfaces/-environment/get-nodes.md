@@ -3,7 +3,7 @@
 # getNodes
 
 [jvm]\
-abstract fun [getNodes](get-nodes.md)(): ListSet<[Node](../-node/index.md)<[T](../-node/index.md)>>
+abstract fun [getNodes](get-nodes.md)(): ListSet<[Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>
 
 All the nodes that exist in current environment.
 

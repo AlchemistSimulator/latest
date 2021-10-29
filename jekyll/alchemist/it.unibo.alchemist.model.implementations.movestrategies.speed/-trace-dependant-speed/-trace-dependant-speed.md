@@ -10,7 +10,7 @@ title: TraceDependantSpeed
 
 
 [jvm]\
-open fun [TraceDependantSpeed](-trace-dependant-speed.html)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>)
+open fun [TraceDependantSpeed](-trace-dependant-speed.html)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../-routing-trace-dependant-speed/index.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-routing-trace-dependant-speed/index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-routing-trace-dependant-speed/index.html)>)
 
 
 

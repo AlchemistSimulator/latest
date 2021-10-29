@@ -10,7 +10,7 @@ title: instantiateEffect
 
 
 [jvm]\
-open fun <[P](instantiate-effect.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>?> [instantiateEffect](instantiate-effect.html)(clazz: [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<out [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>>): [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>
+open fun <[P](instantiate-effect.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>?> [instantiateEffect](instantiate-effect.html)(clazz: [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<out [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>>): [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>
 
 
 

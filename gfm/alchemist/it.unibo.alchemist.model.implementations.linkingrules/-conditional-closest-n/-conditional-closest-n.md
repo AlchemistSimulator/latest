@@ -3,7 +3,7 @@
 # ConditionalClosestN
 
 [jvm]\
-open fun [ConditionalClosestN](-conditional-closest-n.md)(n: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), expectedNodes: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), value: [T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md))
+open fun [ConditionalClosestN](-conditional-closest-n.md)(n: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), expectedNodes: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), value: [T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md))
 
 ## Parameters
 
@@ -17,7 +17,7 @@ jvm
 | value | the value that identifies an active node |
 
 [jvm]\
-open fun [ConditionalClosestN](-conditional-closest-n.md)(n: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), value: [T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md))
+open fun [ConditionalClosestN](-conditional-closest-n.md)(n: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), value: [T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md))
 
 ## Parameters
 

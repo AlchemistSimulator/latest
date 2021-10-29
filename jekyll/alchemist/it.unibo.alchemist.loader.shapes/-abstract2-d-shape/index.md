@@ -10,7 +10,7 @@ title: Abstract2DShape
 
 
 [jvm]\
-abstract class [Abstract2DShape](index.html)<[P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<[P](../../it.unibo.alchemist.loader.deployments/-circle/index.html)>?> : [Shape](../-shape/index.html)<[P](../../it.unibo.alchemist.loader.deployments/-circle/index.html)> 
+abstract class [Abstract2DShape](index.html)<[P](index.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<[P](../-circle/index.html)>?> : [Shape](../-shape/index.html)<[P](../-circle/index.html)> 
 
 A bidimensional Alchemist [Shape](../-shape/index.html) that relies on AWT [java.awt.Shape](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html).
 
@@ -32,7 +32,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [contains](contains.html) | [jvm]<br>fun [contains](contains.html)(position: [P](../../it.unibo.alchemist.loader.deployments/-circle/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>the position |
+| [contains](contains.html) | [jvm]<br>fun [contains](contains.html)(position: [P](../-circle/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>the position |
 | [toString](to-string.html) | [jvm]<br>open fun [toString](to-string.html)(): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html) |
 
 

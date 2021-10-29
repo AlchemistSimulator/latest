@@ -10,7 +10,7 @@ title: initialized
 
 
 [jvm]\
-open fun [initialized](initialized.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<T, [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>)
+open fun [initialized](initialized.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.boundary.gui.view.properties/-property-type-adapter/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>)
 
 
 

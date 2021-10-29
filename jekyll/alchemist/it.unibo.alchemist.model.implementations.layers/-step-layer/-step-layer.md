@@ -10,7 +10,7 @@ title: StepLayer
 
 
 [jvm]\
-open fun [StepLayer](-step-layer.html)(mx: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), my: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), maxValue: [T](../../it.unibo.alchemist/-supported-incarnations/get.html), minValue: [T](../../it.unibo.alchemist/-supported-incarnations/get.html))
+open fun [StepLayer](-step-layer.html)(mx: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), my: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), maxValue: [T](../-uniform-layer/index.html), minValue: [T](../-uniform-layer/index.html))
 
 
 
@@ -35,7 +35,7 @@ jvm
 
 
 [jvm]\
-open fun [StepLayer](-step-layer.html)(maxValue: [T](../../it.unibo.alchemist/-supported-incarnations/get.html), minValue: [T](../../it.unibo.alchemist/-supported-incarnations/get.html))
+open fun [StepLayer](-step-layer.html)(maxValue: [T](../-uniform-layer/index.html), minValue: [T](../-uniform-layer/index.html))
 
 
 

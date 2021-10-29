@@ -10,7 +10,7 @@ title: ProtelisNode
 
 
 [jvm]\
-class [ProtelisNode](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<out [P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)>?> : [AbstractNode](../-abstract-node/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)> , DeviceUID, ExecutionEnvironment
+class [ProtelisNode](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<out [P](../../it.unibo.alchemist.protelis/-alchemist-execution-context/index.html)>?> : [AbstractNode](../-abstract-node/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)> , DeviceUID, ExecutionEnvironment
 
 
 
@@ -30,7 +30,7 @@ jvm
 
 | | |
 |---|---|
-| [ProtelisNode](-protelis-node.html) | [jvm]<br>open fun [ProtelisNode](-protelis-node.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)>)<br>Builds a new [ProtelisNode](index.html). |
+| [ProtelisNode](-protelis-node.html) | [jvm]<br>open fun [ProtelisNode](-protelis-node.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../../it.unibo.alchemist.protelis/-alchemist-execution-context/index.html)>)<br>Builds a new [ProtelisNode](index.html). |
 
 
 ## Functions
@@ -40,7 +40,7 @@ jvm
 |---|---|
 | [addNetworkManger](add-network-manger.html) | [jvm]<br>open fun [addNetworkManger](add-network-manger.html)(program: [RunProtelisProgram](../../it.unibo.alchemist.model.implementations.actions/-run-protelis-program/index.html)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, networkManager: [AlchemistNetworkManager](../../it.unibo.alchemist.protelis/-alchemist-network-manager/index.html))<br>Adds a new [AlchemistNetworkManager](../../it.unibo.alchemist.protelis/-alchemist-network-manager/index.html). |
 | [addReaction](../-abstract-node/add-reaction.html) | [jvm]<br>fun [addReaction](../-abstract-node/add-reaction.html)(reactionToAdd: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.html)>) |
-| [cloneNode](clone-node.html) | [jvm]<br>open fun [cloneNode](clone-node.html)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [ProtelisNode](index.html)<[P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)><br>abstract fun [cloneNode](../../it.unibo.alchemist.model.interfaces/-node/clone-node.html)(p: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.html)> |
+| [cloneNode](clone-node.html) | [jvm]<br>open fun [cloneNode](clone-node.html)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [ProtelisNode](index.html)<[P](../../it.unibo.alchemist.protelis/-alchemist-execution-context/index.html)><br>abstract fun [cloneNode](../../it.unibo.alchemist.model.interfaces/-node/clone-node.html)(p: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.html)> |
 | [commit](commit.html) | [jvm]<br>open fun [commit](commit.html)() |
 | [compareTo](../-abstract-node/compare-to.html) | [jvm]<br>fun [compareTo](../-abstract-node/compare-to.html)(other: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.html)>): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [contains](../-abstract-node/contains.html) | [jvm]<br>open fun [contains](../-abstract-node/contains.html)(molecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |

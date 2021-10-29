@@ -10,7 +10,7 @@ title: OnStreets
 
 
 [jvm]\
-open fun [OnStreets](-on-streets.html)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.html))
+open fun [OnStreets](-on-streets.html)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-routing-trace-dependant-speed/index.html)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.html))
 
 
 

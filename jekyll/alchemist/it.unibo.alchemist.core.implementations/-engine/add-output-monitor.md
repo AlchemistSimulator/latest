@@ -10,7 +10,7 @@ title: addOutputMonitor
 
 
 [jvm]\
-open fun [addOutputMonitor](add-output-monitor.html)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)<[T](../-array-indexed-priority-queue/index.html), [P](index.html)>)
+open fun [addOutputMonitor](add-output-monitor.html)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)<[T](index.html), [P](index.html)>)
 
 
 

@@ -21,7 +21,7 @@ The constructor of {@code ObjectPropertyBase}.
 
 
 [jvm]\
-open fun [SerializableEnumProperty](-serializable-enum-property.html)(initialValue: T)
+open fun [SerializableEnumProperty](-serializable-enum-property.html)(initialValue: [T](../-property-type-adapter/index.html))
 
 
 
@@ -65,7 +65,7 @@ jvm
 
 
 [jvm]\
-open fun [SerializableEnumProperty](-serializable-enum-property.html)(name: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), initialValue: T)
+open fun [SerializableEnumProperty](-serializable-enum-property.html)(name: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), initialValue: [T](../-property-type-adapter/index.html))
 
 
 

@@ -3,4 +3,4 @@
 # addAll
 
 [jvm]\
-open fun [addAll](add-all.md)(c: [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)<out [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>>): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+open fun [addAll](add-all.md)(c: [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)<out [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>>): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)

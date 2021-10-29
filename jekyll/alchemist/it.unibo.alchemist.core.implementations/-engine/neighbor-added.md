@@ -10,7 +10,7 @@ title: neighborAdded
 
 
 [jvm]\
-open fun [neighborAdded](neighbor-added.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-array-indexed-priority-queue/index.html)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-array-indexed-priority-queue/index.html)>)
+open fun [neighborAdded](neighbor-added.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](index.html)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](index.html)>)
 
 
 

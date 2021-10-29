@@ -10,7 +10,7 @@ title: AlchemistExecutionContext
 
 
 [jvm]\
-class [AlchemistExecutionContext](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)>?> : AbstractExecutionContext<[AlchemistExecutionContext](index.html)<[P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)>> , SpatiallyEmbeddedDevice<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)> , LocalizedDevice, TimeAwareDevice
+class [AlchemistExecutionContext](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](index.html)>?> : AbstractExecutionContext<[AlchemistExecutionContext](index.html)<[P](index.html)>> , SpatiallyEmbeddedDevice<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)> , LocalizedDevice, TimeAwareDevice
 
 
 
@@ -30,7 +30,7 @@ jvm
 
 | | |
 |---|---|
-| [AlchemistExecutionContext](-alchemist-execution-context.html) | [jvm]<br>open fun [AlchemistExecutionContext](-alchemist-execution-context.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)>, localNode: [ProtelisNode](../../it.unibo.alchemist.model.implementations.nodes/-protelis-node/index.html)<[P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, random: RandomGenerator, networkManager: [AlchemistNetworkManager](../-alchemist-network-manager/index.html))<br>the simulation [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html) |
+| [AlchemistExecutionContext](-alchemist-execution-context.html) | [jvm]<br>open fun [AlchemistExecutionContext](-alchemist-execution-context.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](index.html)>, localNode: [ProtelisNode](../../it.unibo.alchemist.model.implementations.nodes/-protelis-node/index.html)<[P](index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, random: RandomGenerator, networkManager: [AlchemistNetworkManager](../-alchemist-network-manager/index.html))<br>the simulation [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html) |
 
 
 ## Functions
@@ -46,9 +46,9 @@ jvm
 | [getCoordinates](get-coordinates.html) | [jvm]<br>open fun [getCoordinates](get-coordinates.html)(): Tuple |
 | [getCurrentTime](get-current-time.html) | [jvm]<br>open fun [getCurrentTime](get-current-time.html)(): [Number](https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html) |
 | [getDeltaTime](index.html#323610300%2FFunctions%2F-134779887) | [jvm]<br>open fun [getDeltaTime](index.html#323610300%2FFunctions%2F-134779887)(): [Number](https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html) |
-| [getDevicePosition](get-device-position.html) | [jvm]<br>open fun [getDevicePosition](get-device-position.html)(): [P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)<br>the device position, in form of [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html) |
+| [getDevicePosition](get-device-position.html) | [jvm]<br>open fun [getDevicePosition](get-device-position.html)(): [P](index.html)<br>the device position, in form of [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html) |
 | [getDeviceUID](get-device-u-i-d.html) | [jvm]<br>open fun [getDeviceUID](get-device-u-i-d.html)(): DeviceUID |
-| [getEnvironmentAccess](get-environment-access.html) | [jvm]<br>open fun [getEnvironmentAccess](get-environment-access.html)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)><br>experimental access to the simulated environment, for building oracles |
+| [getEnvironmentAccess](get-environment-access.html) | [jvm]<br>open fun [getEnvironmentAccess](get-environment-access.html)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](index.html)><br>experimental access to the simulated environment, for building oracles |
 | [getExecutionEnvironment](index.html#820522942%2FFunctions%2F-134779887) | [jvm]<br>fun [getExecutionEnvironment](index.html#820522942%2FFunctions%2F-134779887)(): ExecutionEnvironment |
 | [getPersistent](index.html#1845817213%2FFunctions%2F-134779887) | [jvm]<br>fun <[S](index.html#1845817213%2FFunctions%2F-134779887)> [getPersistent](index.html#1845817213%2FFunctions%2F-134779887)(ifAbsent: [Supplier](https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)<[S](index.html#1845817213%2FFunctions%2F-134779887)>): [S](index.html#1845817213%2FFunctions%2F-134779887) |
 | [getStoredState](index.html#-2085107245%2FFunctions%2F-134779887) | [jvm]<br>fun [getStoredState](index.html#-2085107245%2FFunctions%2F-134779887)(): [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<CodePath, [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)> |

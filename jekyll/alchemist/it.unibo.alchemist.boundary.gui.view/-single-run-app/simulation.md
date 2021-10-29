@@ -18,7 +18,7 @@ title: simulation
 
 
 
-private open var [simulation](simulation.html): @Nullable()[Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.html)<T, [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>
+private open var [simulation](simulation.html): @Nullable()[Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.html)<[T](../../it.unibo.alchemist.boundary.gui.view.properties/-property-type-adapter/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.html)>
 
 
 

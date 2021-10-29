@@ -10,7 +10,7 @@ title: initializationComplete
 
 
 [jvm]\
-abstract fun [initializationComplete](initialization-complete.html)(atTime: [Time](../-time/index.html), environment: [Environment](../-environment/index.html)<[T](../-node/index.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
+abstract fun [initializationComplete](initialization-complete.html)(atTime: [Time](../-time/index.html), environment: [Environment](../-environment/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
 
 
 

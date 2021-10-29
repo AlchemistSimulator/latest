@@ -10,7 +10,7 @@ title: reactionRemoved
 
 
 [jvm]\
-abstract fun [reactionRemoved](reaction-removed.html)(reactionToRemove: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.interfaces/-node/index.html)>)
+abstract fun [reactionRemoved](reaction-removed.html)(reactionToRemove: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)
 
 
 

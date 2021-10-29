@@ -10,7 +10,7 @@ title: getLayout
 
 
 [jvm]\
-open fun <[T](get-layout.html) : Node?> [getLayout](get-layout.html)(controller: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), layoutName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): T
+open fun <[T](get-layout.html) : Node?> [getLayout](get-layout.html)(controller: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), layoutName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [T](../../it.unibo.alchemist.boundary.gui.view.properties/-property-type-adapter/index.html)
 
 
 
@@ -50,7 +50,7 @@ jvm
 
 
 [jvm]\
-open fun <[T](get-layout.html) : Node?> [getLayout](get-layout.html)(layoutName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): T
+open fun <[T](get-layout.html) : Node?> [getLayout](get-layout.html)(layoutName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [T](../../it.unibo.alchemist.boundary.gui.view.properties/-property-type-adapter/index.html)
 
 
 

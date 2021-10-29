@@ -14,8 +14,4 @@ open fun [moveNodeToPosition](move-node-to-position.html)(node: [Node](../../it.
 
 
 
-Moves the [node](../-continuous2-d-environment/move-node-to-position.html) to the [farthestPositionReachable](../-continuous2-d-environment/farthest-position-reachable.html) towards the desired [newpos](../-continuous2-d-environment/move-node-to-position.html). If the node is shapeless, it is simply moved to [newpos](../-continuous2-d-environment/move-node-to-position.html).
-
-
-
 

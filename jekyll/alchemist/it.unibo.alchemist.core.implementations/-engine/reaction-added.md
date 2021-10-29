@@ -10,7 +10,7 @@ title: reactionAdded
 
 
 [jvm]\
-open fun [reactionAdded](reaction-added.html)(reactionToAdd: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-array-indexed-priority-queue/index.html)>)
+open fun [reactionAdded](reaction-added.html)(reactionToAdd: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](index.html)>)
 
 
 

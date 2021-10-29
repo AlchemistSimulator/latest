@@ -3,7 +3,7 @@
 # neighborRemoved
 
 [jvm]\
-abstract fun [neighborRemoved](neighbor-removed.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-node/index.md)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-node/index.md)>)
+abstract fun [neighborRemoved](neighbor-removed.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)
 
 This method must get called in case a a communication link connecting two nodes gets broken during the simulation. This method provides dependency and scheduling times re-computation for all the reactions interested by such change.
 

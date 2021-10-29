@@ -10,7 +10,7 @@ title: getNext
 
 
 [jvm]\
-open fun [getNext](get-next.html)(): [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](index.html)>
+open fun [getNext](get-next.html)(): [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-engine/index.html)>
 
 
 

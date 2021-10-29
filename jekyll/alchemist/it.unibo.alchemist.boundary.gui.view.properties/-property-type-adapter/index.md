@@ -10,7 +10,7 @@ title: PropertyTypeAdapter
 
 
 [jvm]\
-interface [PropertyTypeAdapter](index.html)<[T](index.html) : Property<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>?> : JsonSerializer<T> , JsonDeserializer<T> 
+interface [PropertyTypeAdapter](index.html)<[T](index.html) : Property<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>?> : JsonSerializer<[T](index.html)> , JsonDeserializer<[T](index.html)> 
 
 This interface lets implement classes for JavaFX custom property serialization.
 
@@ -32,8 +32,8 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [deserialize](deserialize.html) | [jvm]<br>abstract fun [deserialize](deserialize.html)(json: JsonElement, typeOfT: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonDeserializationContext): T |
-| [serialize](serialize.html) | [jvm]<br>abstract fun [serialize](serialize.html)(src: T, typeOfSrc: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonSerializationContext): JsonElement |
+| [deserialize](deserialize.html) | [jvm]<br>abstract fun [deserialize](deserialize.html)(json: JsonElement, typeOfT: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonDeserializationContext): [T](index.html) |
+| [serialize](serialize.html) | [jvm]<br>abstract fun [serialize](serialize.html)(src: [T](index.html), typeOfSrc: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonSerializationContext): JsonElement |
 
 
 ## Properties

@@ -10,7 +10,7 @@ title: getDevicePosition
 
 
 [jvm]\
-open fun [getDevicePosition](get-device-position.html)(): [P](../../it.unibo.alchemist.model/-protelis-incarnation/index.html)
+open fun [getDevicePosition](get-device-position.html)(): [P](index.html)
 
 
 

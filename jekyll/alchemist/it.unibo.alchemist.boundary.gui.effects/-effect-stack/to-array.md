@@ -18,7 +18,7 @@ title: toArray
 
 
 
-open fun [toArray](to-array.html)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<@NotNull()[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>
+open fun [toArray](to-array.html)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>
 
 
 
@@ -28,7 +28,7 @@ open fun [toArray](to-array.html)(): [Array](https://kotlinlang.org/api/latest/j
 
 
 
-open fun <[T](to-array.html)> [toArray](to-array.html)(a: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<T>): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<T>
+open fun <[T](to-array.html)> [toArray](to-array.html)(a: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](../../it.unibo.alchemist.boundary.gui.view.properties/-property-type-adapter/index.html)>): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](../../it.unibo.alchemist.boundary.gui.view.properties/-property-type-adapter/index.html)>
 
 
 

@@ -3,7 +3,7 @@
 # setEffects
 
 [jvm]\
-abstract fun [setEffects](set-effects.md)(effects: [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>>)
+abstract fun [setEffects](set-effects.md)(effects: [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../-draw-command/index.md)>>)
 
 Setter method for the effects to draw. 
 

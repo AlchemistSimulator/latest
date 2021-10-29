@@ -10,7 +10,7 @@ title: contains
 
 
 [jvm]\
-abstract fun [contains](contains.html)(n: [Node](../-node/index.html)<[T](../-node/index.html)>): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+abstract fun [contains](contains.html)(n: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
 
 
 

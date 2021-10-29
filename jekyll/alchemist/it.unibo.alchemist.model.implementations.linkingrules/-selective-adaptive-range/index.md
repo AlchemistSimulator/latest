@@ -10,7 +10,7 @@ title: SelectiveAdaptiveRange
 
 
 [jvm]\
-open class [SelectiveAdaptiveRange](index.html)<[T](index.html), [P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../../it.unibo.alchemist.model/-s-a-p-e-r-e-incarnation/index.html)>?> : [AdaptiveRange](../-adaptive-range/index.html)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.html), [P](../../it.unibo.alchemist.model/-s-a-p-e-r-e-incarnation/index.html)>
+open class [SelectiveAdaptiveRange](index.html)<[T](index.html), [P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../../it.unibo.alchemist.model.implementations.actions/-lsa-ascending-gradient-dist/index.html)>?> : [AdaptiveRange](../-adaptive-range/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-abstract-action/index.html), [P](../../it.unibo.alchemist.model.implementations.actions/-lsa-ascending-gradient-dist/index.html)>
 
 
 
@@ -46,7 +46,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [computeNeighborhood](../-adaptive-range/compute-neighborhood.html) | [jvm]<br>fun [computeNeighborhood](../-adaptive-range/compute-neighborhood.html)(center: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.html)>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.html), [P](../../it.unibo.alchemist.model/-s-a-p-e-r-e-incarnation/index.html)>): [Neighborhood](../../it.unibo.alchemist.model.interfaces/-neighborhood/index.html)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.html)> |
+| [computeNeighborhood](../-adaptive-range/compute-neighborhood.html) | [jvm]<br>fun [computeNeighborhood](../-adaptive-range/compute-neighborhood.html)(center: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-abstract-action/index.html)>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-abstract-action/index.html), [P](../../it.unibo.alchemist.model.implementations.actions/-lsa-ascending-gradient-dist/index.html)>): [Neighborhood](../../it.unibo.alchemist.model.interfaces/-neighborhood/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-abstract-action/index.html)> |
 | [isLocallyConsistent](../-abstract-locally-consistent-linking-rule/is-locally-consistent.html) | [jvm]<br>fun [isLocallyConsistent](../-abstract-locally-consistent-linking-rule/is-locally-consistent.html)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
 
 

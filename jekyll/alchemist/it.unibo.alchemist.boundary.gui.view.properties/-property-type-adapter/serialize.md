@@ -10,7 +10,7 @@ title: serialize
 
 
 [jvm]\
-abstract fun [serialize](serialize.html)(src: T, typeOfSrc: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonSerializationContext): JsonElement
+abstract fun [serialize](serialize.html)(src: [T](index.html), typeOfSrc: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonSerializationContext): JsonElement
 
 
 

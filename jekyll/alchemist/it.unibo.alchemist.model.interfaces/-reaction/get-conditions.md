@@ -10,7 +10,7 @@ title: getConditions
 
 
 [jvm]\
-abstract fun [getConditions](get-conditions.html)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Condition](../-condition/index.html)<[T](../-node/index.html)>>
+abstract fun [getConditions](get-conditions.html)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Condition](../-condition/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
 
 
 

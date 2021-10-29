@@ -10,7 +10,7 @@ title: setConcentration
 
 
 [jvm]\
-open fun [setConcentration](set-concentration.html)(molecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), concentration: [T](../../it.unibo.alchemist/-supported-incarnations/get.html))
+open fun [setConcentration](set-concentration.html)(molecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), concentration: [T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html))
 
 
 

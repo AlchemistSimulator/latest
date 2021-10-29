@@ -14,7 +14,7 @@ title: SpeedSelectionStrategy
 
 
 
-interface [SpeedSelectionStrategy](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<out [P](../../it.unibo.alchemist/-supported-incarnations/get.html)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
+interface [SpeedSelectionStrategy](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<out [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
 
 Given the current target [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html), this strategy interface computes the current [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)'s speed.
 
@@ -36,7 +36,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getNodeMovementLength](get-node-movement-length.html) | [jvm]<br>abstract fun [getNodeMovementLength](get-node-movement-length.html)(target: [P](../../it.unibo.alchemist/-supported-incarnations/get.html)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>the [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html) describing where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.html) is directed |
+| [getNodeMovementLength](get-node-movement-length.html) | [jvm]<br>abstract fun [getNodeMovementLength](get-node-movement-length.html)(target: [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>the [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html) describing where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.html) is directed |
 
 
 ## Inheritors

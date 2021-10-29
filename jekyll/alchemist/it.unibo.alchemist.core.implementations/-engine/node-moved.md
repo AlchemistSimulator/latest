@@ -10,7 +10,7 @@ title: nodeMoved
 
 
 [jvm]\
-open fun [nodeMoved](node-moved.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-array-indexed-priority-queue/index.html)>)
+open fun [nodeMoved](node-moved.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](index.html)>)
 
 
 

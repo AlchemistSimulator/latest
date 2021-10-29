@@ -10,7 +10,7 @@ title: getPoints
 
 
 [jvm]\
-fun [getPoints](get-points.html)(): ImmutableList<[P](../../it.unibo.alchemist/-supported-incarnations/get.html)>
+fun [getPoints](get-points.html)(): ImmutableList<[P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>
 
 
 

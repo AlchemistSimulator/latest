@@ -10,7 +10,7 @@ title: getCenter
 
 
 [jvm]\
-abstract fun [getCenter](get-center.html)(): [Node](../-node/index.html)<[T](../-node/index.html)>
+abstract fun [getCenter](get-center.html)(): [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

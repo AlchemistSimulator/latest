@@ -10,7 +10,7 @@ title: removeReaction
 
 
 [jvm]\
-open fun [removeReaction](remove-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](index.html)>)
+open fun [removeReaction](remove-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-engine/index.html)>)
 
 
 

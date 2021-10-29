@@ -3,7 +3,7 @@
 # UniformLayer
 
 [jvm]\
-class [UniformLayer](index.md)<[T](index.md), [P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<out [P](index.md)>?> : [Layer](../../it.unibo.alchemist.model.interfaces/-layer/index.md)<[T](index.md), [P](index.md)> 
+class [UniformLayer](index.md)<[T](index.md), [P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<out [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)>?> : [Layer](../../it.unibo.alchemist.model.interfaces/-layer/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md), [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)> 
 
 a Layer where the concentration is the same at every point in space.
 
@@ -20,10 +20,10 @@ jvm
 
 | | |
 |---|---|
-| [UniformLayer](-uniform-layer.md) | [jvm]<br>open fun [UniformLayer](-uniform-layer.md)(level: [T](index.md))<br>the concentration |
+| [UniformLayer](-uniform-layer.md) | [jvm]<br>open fun [UniformLayer](-uniform-layer.md)(level: [T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md))<br>the concentration |
 
 ## Functions
 
 | Name | Summary |
 |---|---|
-| [getValue](get-value.md) | [jvm]<br>open fun [getValue](get-value.md)(p: [P](index.md)): [T](index.md) |
+| [getValue](get-value.md) | [jvm]<br>open fun [getValue](get-value.md)(p: [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)): [T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md) |

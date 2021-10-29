@@ -3,7 +3,7 @@
 # add
 
 [jvm]\
-abstract fun [add](add.md)(node: [Node](../-node/index.md)<[T](../-node/index.md)>): [Neighborhood](index.md)<[T](../-node/index.md)>
+abstract fun [add](add.md)(node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>): [Neighborhood](index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
 
 #### Return
 

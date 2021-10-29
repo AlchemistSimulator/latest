@@ -10,7 +10,7 @@ title: getValue
 
 
 [jvm]\
-open fun [getValue](get-value.html)(p: [P](../../it.unibo.alchemist/-supported-incarnations/get.html)): [T](../../it.unibo.alchemist/-supported-incarnations/get.html)
+open fun [getValue](get-value.html)(p: [P](index.html)): [T](index.html)
 
 
 

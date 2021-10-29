@@ -10,7 +10,7 @@ title: getSimulation
 
 
 [jvm]\
-abstract fun [getSimulation](get-simulation.html)(): [Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.html)<[T](../-node/index.html), [P](../-position2-d/index.html)>
+abstract fun [getSimulation](get-simulation.html)(): [Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

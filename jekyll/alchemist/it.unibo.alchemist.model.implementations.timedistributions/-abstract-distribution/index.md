@@ -10,7 +10,7 @@ title: AbstractDistribution
 
 
 [jvm]\
-abstract class [AbstractDistribution](index.html)<[T](index.html)> : [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.html)<[T](../../it.unibo.alchemist/-supported-incarnations/get.html)> 
+abstract class [AbstractDistribution](index.html)<[T](index.html)> : [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)> 
 
 This class provides, through a template method pattern, an utility that ensures that the distribution does not trigger events before its initial scheduling time.
 
@@ -40,10 +40,10 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [cloneOnNewNode](clone-on-new-node.html) | [jvm]<br>abstract fun [cloneOnNewNode](clone-on-new-node.html)(destination: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist/-supported-incarnations/get.html)>, currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [AbstractDistribution](index.html)<[T](../../it.unibo.alchemist/-supported-incarnations/get.html)> |
+| [cloneOnNewNode](clone-on-new-node.html) | [jvm]<br>abstract fun [cloneOnNewNode](clone-on-new-node.html)(destination: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>, currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html)): [AbstractDistribution](index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)> |
 | [getNextOccurence](get-next-occurence.html) | [jvm]<br>fun [getNextOccurence](get-next-occurence.html)(): [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html) |
 | [getRate](../../it.unibo.alchemist.model.interfaces/-time-distribution/get-rate.html) | [jvm]<br>abstract fun [getRate](../../it.unibo.alchemist.model.interfaces/-time-distribution/get-rate.html)(): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |
-| [update](update.html) | [jvm]<br>fun [update](update.html)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html), hasBeenExecuted: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), additionalParameter: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist/-supported-incarnations/get.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>) |
+| [update](update.html) | [jvm]<br>fun [update](update.html)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.html), hasBeenExecuted: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), additionalParameter: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>) |
 
 
 ## Inheritors

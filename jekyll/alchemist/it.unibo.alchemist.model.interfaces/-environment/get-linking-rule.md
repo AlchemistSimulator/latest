@@ -10,7 +10,7 @@ title: getLinkingRule
 
 
 [jvm]\
-abstract fun [getLinkingRule](get-linking-rule.html)(): [LinkingRule](../-linking-rule/index.html)<[T](../-node/index.html), [P](../-position2-d/index.html)>
+abstract fun [getLinkingRule](get-linking-rule.html)(): [LinkingRule](../-linking-rule/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

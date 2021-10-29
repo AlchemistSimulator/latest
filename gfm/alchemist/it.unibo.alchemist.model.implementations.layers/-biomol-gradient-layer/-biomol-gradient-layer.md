@@ -19,7 +19,7 @@ jvm
 | offset | minimum value of concentration reached by this spatial distribution |
 
 [jvm]\
-open fun [BiomolGradientLayer](-biomol-gradient-layer.md)(direction: [P](index.md), unitVariation: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), offset: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+open fun [BiomolGradientLayer](-biomol-gradient-layer.md)(direction: [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.md), unitVariation: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), offset: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 Initialize a gradient layer which grows in concentration proportionally in space.
 

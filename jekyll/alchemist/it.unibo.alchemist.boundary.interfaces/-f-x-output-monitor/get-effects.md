@@ -10,7 +10,7 @@ title: getEffects
 
 
 [jvm]\
-abstract fun [getEffects](get-effects.html)(): [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-serializer/effect-from-file.html)>>
+abstract fun [getEffects](get-effects.html)(): [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.html)<[P](../-draw-command/index.html)>>
 
 
 

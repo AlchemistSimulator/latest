@@ -6,4 +6,4 @@
 
 @Nullable()
 
-private open var [simulation](simulation.md): @Nullable()[Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)<[T](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md), [P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>
+private open var [simulation](simulation.md): @Nullable()[Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html), [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>

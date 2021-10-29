@@ -10,7 +10,7 @@ title: values
 
 
 [jvm]\
-open fun [values](values.html)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<T>
+open fun [values](values.html)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](../-property-type-adapter/index.html)>
 
 
 

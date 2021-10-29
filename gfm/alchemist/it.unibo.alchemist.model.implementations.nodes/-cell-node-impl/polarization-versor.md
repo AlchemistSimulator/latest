@@ -3,4 +3,4 @@
 # polarizationVersor
 
 [jvm]\
-private open val [polarizationVersor](polarization-versor.md): [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)
+private open val [polarizationVersor](polarization-versor.md): [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.md)

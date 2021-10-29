@@ -10,7 +10,7 @@ title: getData
 
 
 [jvm]\
-abstract fun [getData](get-data.html)(): [T](../../it.unibo.alchemist.expressions.implementations/-a-tree-node/index.html)
+abstract fun [getData](get-data.html)(): [T](index.html)
 
 
 

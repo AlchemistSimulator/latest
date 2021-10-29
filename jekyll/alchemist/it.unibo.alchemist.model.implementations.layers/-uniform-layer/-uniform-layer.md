@@ -10,7 +10,7 @@ title: UniformLayer
 
 
 [jvm]\
-open fun [UniformLayer](-uniform-layer.html)(level: [T](../../it.unibo.alchemist/-supported-incarnations/get.html))
+open fun [UniformLayer](-uniform-layer.html)(level: [T](index.html))
 
 
 

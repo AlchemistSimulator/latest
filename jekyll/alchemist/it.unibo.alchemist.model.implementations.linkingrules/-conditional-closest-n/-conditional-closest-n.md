@@ -10,7 +10,7 @@ title: ConditionalClosestN
 
 
 [jvm]\
-open fun [ConditionalClosestN](-conditional-closest-n.html)(n: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), expectedNodes: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), value: [T](../../it.unibo.alchemist/-supported-incarnations/get.html))
+open fun [ConditionalClosestN](-conditional-closest-n.html)(n: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), expectedNodes: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), value: [T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html))
 
 
 
@@ -31,7 +31,7 @@ jvm
 
 
 [jvm]\
-open fun [ConditionalClosestN](-conditional-closest-n.html)(n: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), value: [T](../../it.unibo.alchemist/-supported-incarnations/get.html))
+open fun [ConditionalClosestN](-conditional-closest-n.html)(n: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html), mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html), value: [T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html))
 
 
 

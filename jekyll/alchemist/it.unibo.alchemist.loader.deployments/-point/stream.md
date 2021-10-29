@@ -10,7 +10,7 @@ title: stream
 
 
 [jvm]\
-open fun [stream](stream.html)(): [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)<[P](../-circle/index.html)>
+open fun [stream](stream.html)(): [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)<[P](../../it.unibo.alchemist.loader.shapes/-circle/index.html)>
 
 
 

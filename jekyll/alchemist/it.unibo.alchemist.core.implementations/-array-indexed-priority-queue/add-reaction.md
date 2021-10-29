@@ -10,7 +10,7 @@ title: addReaction
 
 
 [jvm]\
-open fun [addReaction](add-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](index.html)>)
+open fun [addReaction](add-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-engine/index.html)>)
 
 
 
