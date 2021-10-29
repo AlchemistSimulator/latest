@@ -4,3 +4,5 @@
 
 [jvm]\
 val [adultMale](adult-male.md): RequiredItem<[Pair](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html)<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)>>
+
+The attitude of an adult female to help a male adult.

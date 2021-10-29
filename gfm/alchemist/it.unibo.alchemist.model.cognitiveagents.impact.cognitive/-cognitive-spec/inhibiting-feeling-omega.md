@@ -4,3 +4,5 @@
 
 [jvm]\
 val [inhibitingFeelingOmega](inhibiting-feeling-omega.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)>
+
+A factor inhibiting fear.

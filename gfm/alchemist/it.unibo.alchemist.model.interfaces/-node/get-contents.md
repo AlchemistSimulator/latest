@@ -3,7 +3,7 @@
 # getContents
 
 [jvm]\
-abstract fun [getContents](get-contents.md)(): [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[Molecule](../-molecule/index.md), [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
+abstract fun [getContents](get-contents.md)(): [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[Molecule](../-molecule/index.md), [T](index.md)>
 
 #### Return
 

@@ -12,7 +12,7 @@ A specification of the parameters regarding help attitudes to load from a config
 | Name | Summary |
 |---|---|
 | [AdultFemale](-adult-female/index.md) | [jvm]<br>object [AdultFemale](-adult-female/index.md) : ConfigSpec<br>Adult females attitudes. |
-| [AdultMale](-adult-male/index.md) | [jvm]<br>object [AdultMale](-adult-male/index.md) : ConfigSpec<br>Adult males attitudes. |
+| [AdultMale](-adult-male/index.md) | [jvm]<br>object [AdultMale](-adult-male/index.md) : ConfigSpec<br>Adult males' help attitudes. |
 | [ElderlyFemale](-elderly-female/index.md) | [jvm]<br>object [ElderlyFemale](-elderly-female/index.md) : ConfigSpec<br>Elderly females attitudes. |
 | [ElderlyMale](-elderly-male/index.md) | [jvm]<br>object [ElderlyMale](-elderly-male/index.md) : ConfigSpec<br>Elderly males attitudes. |
 

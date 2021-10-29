@@ -3,4 +3,4 @@
 # addReaction
 
 [jvm]\
-open fun [addReaction](add-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../-engine/index.md)>)
+open fun [addReaction](add-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](index.md)>)

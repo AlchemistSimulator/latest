@@ -3,7 +3,7 @@
 # PropertyTypeAdapter
 
 [jvm]\
-interface [PropertyTypeAdapter](index.md)<[T](index.md) : Property<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>?> : JsonSerializer<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)> , JsonDeserializer<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)> 
+interface [PropertyTypeAdapter](index.md)<[T](index.md) : Property<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>?> : JsonSerializer<[T](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)> , JsonDeserializer<[T](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)> 
 
 This interface lets implement classes for JavaFX custom property serialization.
 
@@ -19,8 +19,8 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [deserialize](deserialize.md) | [jvm]<br>abstract fun [deserialize](deserialize.md)(json: JsonElement, typeOfT: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonDeserializationContext): [T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md) |
-| [serialize](serialize.md) | [jvm]<br>abstract fun [serialize](serialize.md)(src: [T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md), typeOfSrc: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonSerializationContext): JsonElement |
+| [deserialize](deserialize.md) | [jvm]<br>abstract fun [deserialize](deserialize.md)(json: JsonElement, typeOfT: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonDeserializationContext): [T](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md) |
+| [serialize](serialize.md) | [jvm]<br>abstract fun [serialize](serialize.md)(src: [T](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md), typeOfSrc: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonSerializationContext): JsonElement |
 
 ## Properties
 

@@ -1,0 +1,21 @@
+---
+title: moveNodeToPosition
+---
+//[alchemist](../../../index.html)/[it.unibo.alchemist.model.implementations.environments](../index.html)/[Abstract2DEnvironment](index.html)/[moveNodeToPosition](move-node-to-position.html)
+
+
+
+# moveNodeToPosition
+
+
+
+[jvm]\
+open fun [moveNodeToPosition](move-node-to-position.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist/-supported-incarnations/get.html)>, newpos: [P](../../it.unibo.alchemist/-supported-incarnations/get.html))
+
+
+
+Subclasses may override this method if they want to change the way a node moves towards some absolute position.
+
+
+
+

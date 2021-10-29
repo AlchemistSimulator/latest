@@ -3,7 +3,7 @@
 # globalInputContextReactions
 
 [jvm]\
-abstract fun [globalInputContextReactions](global-input-context-reactions.md)(): ListSet<[Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>
+abstract fun [globalInputContextReactions](global-input-context-reactions.md)(): ListSet<[Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-node/index.md)>>
 
 #### Return
 

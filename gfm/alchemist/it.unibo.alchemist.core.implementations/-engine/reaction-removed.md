@@ -3,4 +3,4 @@
 # reactionRemoved
 
 [jvm]\
-open fun [reactionRemoved](reaction-removed.md)(reactionToRemove: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](index.md)>)
+open fun [reactionRemoved](reaction-removed.md)(reactionToRemove: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../-array-indexed-priority-queue/index.md)>)

@@ -3,7 +3,7 @@
 # LsaAscendingGradientDist
 
 [jvm]\
-class [LsaAscendingGradientDist](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.implementations.linkingrules/-selective-adaptive-range/index.md)>?> : [SAPERENeighborAgent](../-s-a-p-e-r-e-neighbor-agent/index.md)<[P](../../it.unibo.alchemist.model.implementations.linkingrules/-selective-adaptive-range/index.md)>
+class [LsaAscendingGradientDist](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](index.md)>?> : [SAPERENeighborAgent](../-s-a-p-e-r-e-neighbor-agent/index.md)<[P](index.md)>
 
 ## Parameters
 
@@ -17,7 +17,7 @@ jvm
 
 | | |
 |---|---|
-| [LsaAscendingGradientDist](-lsa-ascending-gradient-dist.md) | [jvm]<br>open fun [LsaAscendingGradientDist](-lsa-ascending-gradient-dist.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.md)>, [P](../../it.unibo.alchemist.model.implementations.linkingrules/-selective-adaptive-range/index.md)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.md))<br>environment |
+| [LsaAscendingGradientDist](-lsa-ascending-gradient-dist.md) | [jvm]<br>open fun [LsaAscendingGradientDist](-lsa-ascending-gradient-dist.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.md)>, [P](index.md)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.md))<br>environment |
 
 ## Functions
 

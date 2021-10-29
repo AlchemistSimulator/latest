@@ -3,7 +3,7 @@
 # makePosition
 
 [jvm]\
-abstract fun [makePosition](make-position.md)(coordinates: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[Number](https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html)>): [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)
+abstract fun [makePosition](make-position.md)(coordinates: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[Number](https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html)>): [P](../-incarnation/index.md)
 
 #### Return
 

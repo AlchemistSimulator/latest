@@ -4,3 +4,5 @@
 
 [jvm]\
 fun [family](family.md)(): [Family](../-family/index.md)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)>
+
+Builds a new [Family](../-family/index.md).

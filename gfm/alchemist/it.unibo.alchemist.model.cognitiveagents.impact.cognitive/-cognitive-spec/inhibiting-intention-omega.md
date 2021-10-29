@@ -4,3 +4,5 @@
 
 [jvm]\
 val [inhibitingIntentionOmega](inhibiting-intention-omega.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)>
+
+Reduces the intention to flee from danger.

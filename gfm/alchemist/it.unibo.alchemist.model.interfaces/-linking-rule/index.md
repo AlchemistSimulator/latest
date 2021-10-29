@@ -3,7 +3,7 @@
 # LinkingRule
 
 [jvm]\
-interface [LinkingRule](index.md)<[T](index.md), [P](index.md) : [Position](../-position/index.md)<out [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
+interface [LinkingRule](index.md)<[T](index.md), [P](index.md) : [Position](../-position/index.md)<out [P](../-incarnation/index.md)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
 
 An interface that represent an auto-linking logic for nodes within an environment.
 
@@ -20,7 +20,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [computeNeighborhood](compute-neighborhood.md) | [jvm]<br>abstract fun [computeNeighborhood](compute-neighborhood.md)(center: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, environment: [Environment](../-environment/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>): [Neighborhood](../-neighborhood/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)><br>Produces a new neighborhood for specified node considering its position. |
+| [computeNeighborhood](compute-neighborhood.md) | [jvm]<br>abstract fun [computeNeighborhood](compute-neighborhood.md)(center: [Node](../-node/index.md)<[T](../-node/index.md)>, environment: [Environment](../-environment/index.md)<[T](../-node/index.md), [P](../-incarnation/index.md)>): [Neighborhood](../-neighborhood/index.md)<[T](../-node/index.md)><br>Produces a new neighborhood for specified node considering its position. |
 | [isLocallyConsistent](is-locally-consistent.md) | [jvm]<br>abstract fun [isLocallyConsistent](is-locally-consistent.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Some rules may require to be evaluated against multiple nodes until the situations gets consistent. |
 
 ## Inheritors

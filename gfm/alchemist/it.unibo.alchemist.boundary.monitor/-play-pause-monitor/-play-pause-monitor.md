@@ -8,7 +8,7 @@ open fun [PlayPauseMonitor](-play-pause-monitor.md)()
 No arguments constructor. Current [Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md) is not set.
 
 [jvm]\
-open fun [PlayPauseMonitor](-play-pause-monitor.md)(@Nullable()simulation: @Nullable()[Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)<[T](../-f-x-step-monitor/index.md), [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>)
+open fun [PlayPauseMonitor](-play-pause-monitor.md)(@Nullable()simulation: @Nullable()[Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)<[T](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md), [P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>)
 
 Default constructor.
 

@@ -3,4 +3,4 @@
 # element
 
 [jvm]\
-open fun [element](element.md)(): [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>
+open fun [element](element.md)(): [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>

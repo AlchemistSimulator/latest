@@ -4,3 +4,5 @@
 
 [jvm]\
 val [sensingOmega](sensing-omega.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)>
+
+Ability to perceive danger.

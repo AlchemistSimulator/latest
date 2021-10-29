@@ -4,3 +4,5 @@
 
 [jvm]\
 val [childFemale](child-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)>
+
+Compliance of a female child.

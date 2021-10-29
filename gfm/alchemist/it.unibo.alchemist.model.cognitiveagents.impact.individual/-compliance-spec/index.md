@@ -26,12 +26,12 @@ A specification of the parameters regarding compliance to load from a config fil
 
 | Name | Summary |
 |---|---|
-| [adultFemale](adult-female.md) | [jvm]<br>val [adultFemale](adult-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [adultMale](adult-male.md) | [jvm]<br>val [adultMale](adult-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [childFemale](child-female.md) | [jvm]<br>val [childFemale](child-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [childMale](child-male.md) | [jvm]<br>val [childMale](child-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [elderlyFemale](elderly-female.md) | [jvm]<br>val [elderlyFemale](elderly-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [elderlyMale](elderly-male.md) | [jvm]<br>val [elderlyMale](elderly-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
+| [adultFemale](adult-female.md) | [jvm]<br>val [adultFemale](adult-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>Compliance of a female adult. |
+| [adultMale](adult-male.md) | [jvm]<br>val [adultMale](adult-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>Compliance of a male adult. |
+| [childFemale](child-female.md) | [jvm]<br>val [childFemale](child-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>Compliance of a female child. |
+| [childMale](child-male.md) | [jvm]<br>val [childMale](child-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>Compliance of a male child. |
+| [elderlyFemale](elderly-female.md) | [jvm]<br>val [elderlyFemale](elderly-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>Compliance of a female elderly. |
+| [elderlyMale](elderly-male.md) | [jvm]<br>val [elderlyMale](elderly-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>Compliance of a male elderly. |
 | [innerSpecs](index.md#-704896213%2FProperties%2F-267951372) | [jvm]<br>open override val [innerSpecs](index.md#-704896213%2FProperties%2F-267951372): [Set](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html)<Spec> |
 | [items](index.md#-2041428627%2FProperties%2F-267951372) | [jvm]<br>open override val [items](index.md#-2041428627%2FProperties%2F-267951372): [Set](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html)<Item<*>> |
 | [prefix](index.md#1756526075%2FProperties%2F-267951372) | [jvm]<br>override val [prefix](index.md#1756526075%2FProperties%2F-267951372): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

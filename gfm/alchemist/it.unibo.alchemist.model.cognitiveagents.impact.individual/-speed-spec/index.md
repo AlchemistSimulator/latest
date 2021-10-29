@@ -26,14 +26,14 @@ A specification of the parameters regarding speeds to load from a config file.
 
 | Name | Summary |
 |---|---|
-| [adultFemale](adult-female.md) | [jvm]<br>val [adultFemale](adult-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [adultMale](adult-male.md) | [jvm]<br>val [adultMale](adult-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [childFemale](child-female.md) | [jvm]<br>val [childFemale](child-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [childMale](child-male.md) | [jvm]<br>val [childMale](child-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [default](default.md) | [jvm]<br>val [default](default.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [elderlyFemale](elderly-female.md) | [jvm]<br>val [elderlyFemale](elderly-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
-| [elderlyMale](elderly-male.md) | [jvm]<br>val [elderlyMale](elderly-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
+| [adultFemale](adult-female.md) | [jvm]<br>val [adultFemale](adult-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>The walking speed of an adult female. |
+| [adultMale](adult-male.md) | [jvm]<br>val [adultMale](adult-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>The walking speed of an adult male. |
+| [childFemale](child-female.md) | [jvm]<br>val [childFemale](child-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>The walking speed of a young female. |
+| [childMale](child-male.md) | [jvm]<br>val [childMale](child-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>The walking speed of a young male. |
+| [default](default.md) | [jvm]<br>val [default](default.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>The default walking speed, if the pedestrian details have not been defined. |
+| [elderlyFemale](elderly-female.md) | [jvm]<br>val [elderlyFemale](elderly-female.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>The walking speed of an elderly female. |
+| [elderlyMale](elderly-male.md) | [jvm]<br>val [elderlyMale](elderly-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>The walking speed of an elderly male. |
 | [innerSpecs](index.md#-853171611%2FProperties%2F-267951372) | [jvm]<br>open override val [innerSpecs](index.md#-853171611%2FProperties%2F-267951372): [Set](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html)<Spec> |
 | [items](index.md#1932569075%2FProperties%2F-267951372) | [jvm]<br>open override val [items](index.md#1932569075%2FProperties%2F-267951372): [Set](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html)<Item<*>> |
 | [prefix](index.md#396403253%2FProperties%2F-267951372) | [jvm]<br>override val [prefix](index.md#396403253%2FProperties%2F-267951372): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [variance](variance.md) | [jvm]<br>val [variance](variance.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)> |
+| [variance](variance.md) | [jvm]<br>val [variance](variance.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)><br>The walking speed variance. |

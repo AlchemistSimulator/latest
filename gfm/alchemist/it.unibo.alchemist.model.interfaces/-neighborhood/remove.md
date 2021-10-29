@@ -3,7 +3,7 @@
 # remove
 
 [jvm]\
-abstract fun [remove](remove.md)(node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>): [Neighborhood](index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
+abstract fun [remove](remove.md)(node: [Node](../-node/index.md)<[T](../-node/index.md)>): [Neighborhood](index.md)<[T](../-node/index.md)>
 
 #### Return
 

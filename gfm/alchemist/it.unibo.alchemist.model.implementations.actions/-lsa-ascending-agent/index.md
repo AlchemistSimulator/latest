@@ -3,7 +3,7 @@
 # LsaAscendingAgent
 
 [jvm]\
-class [LsaAscendingAgent](index.md)<[P](index.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.model.implementations.linkingrules/-selective-adaptive-range/index.md)>?> : [SAPEREMoveNodeAgent](../-s-a-p-e-r-e-move-node-agent/index.md)<[P](../../it.unibo.alchemist.model.implementations.linkingrules/-selective-adaptive-range/index.md)>
+class [LsaAscendingAgent](index.md)<[P](index.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../-lsa-ascending-gradient-dist/index.md)>?> : [SAPEREMoveNodeAgent](../-s-a-p-e-r-e-move-node-agent/index.md)<[P](../-lsa-ascending-gradient-dist/index.md)>
 
 ## Parameters
 
@@ -17,7 +17,7 @@ jvm
 
 | | |
 |---|---|
-| [LsaAscendingAgent](-lsa-ascending-agent.md) | [jvm]<br>open fun [LsaAscendingAgent](-lsa-ascending-agent.md)(reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.md)>>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.md)>, [P](../../it.unibo.alchemist.model.implementations.linkingrules/-selective-adaptive-range/index.md)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.md), molecule: [LsaMolecule](../../it.unibo.alchemist.model.implementations.molecules/-lsa-molecule/index.md), pos: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))<br>firing reaction |
+| [LsaAscendingAgent](-lsa-ascending-agent.md) | [jvm]<br>open fun [LsaAscendingAgent](-lsa-ascending-agent.md)(reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.md)>>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.md)>, [P](../-lsa-ascending-gradient-dist/index.md)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.md), molecule: [LsaMolecule](../../it.unibo.alchemist.model.implementations.molecules/-lsa-molecule/index.md), pos: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))<br>firing reaction |
 
 ## Functions
 

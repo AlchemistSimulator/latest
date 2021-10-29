@@ -4,3 +4,5 @@
 
 [jvm]\
 val [default](default.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)>
+
+The default walking speed, if the pedestrian details have not been defined.

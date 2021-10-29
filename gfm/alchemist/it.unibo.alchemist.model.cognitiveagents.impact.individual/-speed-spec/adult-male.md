@@ -4,3 +4,5 @@
 
 [jvm]\
 val [adultMale](adult-male.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)>
+
+The walking speed of an adult male.

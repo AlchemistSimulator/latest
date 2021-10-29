@@ -3,4 +3,4 @@
 # nodes
 
 [jvm]\
-private val [nodes](nodes.md): ListSet<[Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.timedistributions/-weibull-distributed-weibull-time/index.md)>>
+private val [nodes](nodes.md): ListSet<[Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>>

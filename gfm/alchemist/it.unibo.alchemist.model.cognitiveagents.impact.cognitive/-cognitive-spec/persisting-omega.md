@@ -4,3 +4,5 @@
 
 [jvm]\
 val [persistingOmega](persisting-omega.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)>
+
+How long the fear sensation persists in time.

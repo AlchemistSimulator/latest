@@ -3,4 +3,4 @@
 # cloneOnNewNode
 
 [jvm]\
-fun [cloneOnNewNode](clone-on-new-node.md)(destination: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../-weibull-distributed-weibull-time/index.md)>, currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)): [DiracComb](index.md)<[T](../-weibull-distributed-weibull-time/index.md)>
+fun [cloneOnNewNode](clone-on-new-node.md)(destination: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>, currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)): [DiracComb](index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>

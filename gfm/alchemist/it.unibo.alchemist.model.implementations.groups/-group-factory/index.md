@@ -11,5 +11,5 @@ Utility for shorter loading of groups within the Yaml files.
 
 | Name | Summary |
 |---|---|
-| [family](family.md) | [jvm]<br>fun [family](family.md)(): [Family](../-family/index.md)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)> |
-| [friends](friends.md) | [jvm]<br>fun [friends](friends.md)(): [Friends](../-friends/index.md)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)> |
+| [family](family.md) | [jvm]<br>fun [family](family.md)(): [Family](../-family/index.md)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)><br>Builds a new [Family](../-family/index.md). |
+| [friends](friends.md) | [jvm]<br>fun [friends](friends.md)(): [Friends](../-friends/index.md)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)><br>Builds a new group of [Friends](../-friends/index.md). |

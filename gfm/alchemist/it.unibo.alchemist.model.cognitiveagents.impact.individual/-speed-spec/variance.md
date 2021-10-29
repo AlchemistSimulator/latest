@@ -4,3 +4,5 @@
 
 [jvm]\
 val [variance](variance.md): RequiredItem<[Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)>
+
+The walking speed variance.

@@ -6,7 +6,7 @@
 
 @[Deprecated](https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html)()
 
-~~abstract~~ ~~fun~~ [~~getNeighborByNumber~~](get-neighbor-by-number.md)~~(~~~~num~~~~:~~ [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)~~)~~~~:~~ [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
+~~abstract~~ ~~fun~~ [~~getNeighborByNumber~~](get-neighbor-by-number.md)~~(~~~~num~~~~:~~ [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)~~)~~~~:~~ [Node](../-node/index.md)<[T](../-node/index.md)>
 
 Returns the num-th neighbor.
 

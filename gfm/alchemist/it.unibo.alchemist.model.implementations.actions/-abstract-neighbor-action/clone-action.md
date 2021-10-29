@@ -3,4 +3,4 @@
 # cloneAction
 
 [jvm]\
-abstract fun [cloneAction](clone-action.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)>): [AbstractNeighborAction](index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)>
+abstract fun [cloneAction](clone-action.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md)>): [AbstractNeighborAction](index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md)>

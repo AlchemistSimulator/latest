@@ -3,4 +3,4 @@
 # addNode
 
 [jvm]\
-fun [addNode](add-node.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.timedistributions/-weibull-distributed-weibull-time/index.md)>, p: [P](../../it.unibo.alchemist.model.interfaces/-route/index.md))
+fun [addNode](add-node.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>, p: [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md))

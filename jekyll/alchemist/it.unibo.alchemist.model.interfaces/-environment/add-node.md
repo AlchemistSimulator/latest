@@ -1,0 +1,33 @@
+---
+title: addNode
+---
+//[alchemist](../../../index.html)/[it.unibo.alchemist.model.interfaces](../index.html)/[Environment](index.html)/[addNode](add-node.html)
+
+
+
+# addNode
+
+
+
+[jvm]\
+abstract fun [addNode](add-node.html)(node: [Node](../-node/index.html)<[T](../-node/index.html)>, p: [P](../-position2-d/index.html))
+
+
+
+This method allows to add a new node to this environment. The environment is responsible to call the right method of the simulation in order to ensure that the reaction is properly scheduled.
+
+
+
+## Parameters
+
+
+jvm
+
+| | |
+|---|---|
+| node | The node to add |
+| p | The position where to place it |
+
+
+
+
