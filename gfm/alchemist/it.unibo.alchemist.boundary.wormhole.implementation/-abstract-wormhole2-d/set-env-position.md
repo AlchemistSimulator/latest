@@ -3,6 +3,6 @@
 # setEnvPosition
 
 [jvm]\
-open fun [setEnvPosition](set-env-position.md)(envPoint: [P](index.md))
+open fun [setEnvPosition](set-env-position.md)(envPoint: [P](../-point-adapter/index.md))
 
 Sets the position to the view-point corresponding to envPoint.

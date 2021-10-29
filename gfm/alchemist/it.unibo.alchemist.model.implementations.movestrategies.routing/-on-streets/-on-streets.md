@@ -3,7 +3,7 @@
 # OnStreets
 
 [jvm]\
-open fun [OnStreets](-on-streets.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-trace-dependant-speed/index.md)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md))
+open fun [OnStreets](-on-streets.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md))
 
 ## Parameters
 

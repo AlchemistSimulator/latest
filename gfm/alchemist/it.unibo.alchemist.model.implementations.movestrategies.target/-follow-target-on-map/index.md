@@ -3,7 +3,7 @@
 # FollowTargetOnMap
 
 [jvm]\
-open class [FollowTargetOnMap](index.md)<[T](index.md)> : [FollowTarget](../-follow-target/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-trace-dependant-speed/index.md), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)> 
+open class [FollowTargetOnMap](index.md)<[T](index.md)> : [FollowTarget](../-follow-target/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)> 
 
 This strategy reads the value of a "target" molecule and tries to interpret it as a coordinate.
 
@@ -19,10 +19,10 @@ jvm
 
 | | |
 |---|---|
-| [FollowTargetOnMap](-follow-target-on-map.md) | [jvm]<br>open fun [FollowTargetOnMap](-follow-target-on-map.md)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-trace-dependant-speed/index.md), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-trace-dependant-speed/index.md)>, targetMolecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md))<br>the environment |
+| [FollowTargetOnMap](-follow-target-on-map.md) | [jvm]<br>open fun [FollowTargetOnMap](-follow-target-on-map.md)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, targetMolecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md))<br>the environment |
 
 ## Functions
 
 | Name | Summary |
 |---|---|
-| [getTarget](../-follow-target/get-target.md) | [jvm]<br>fun [getTarget](../-follow-target/get-target.md)(): [P](../../it.unibo.alchemist.model.interfaces/-timed-route/index.md) |
+| [getTarget](../-follow-target/get-target.md) | [jvm]<br>fun [getTarget](../-follow-target/get-target.md)(): [P](../../it.unibo.alchemist.loader.deployments/-deployment/index.md) |

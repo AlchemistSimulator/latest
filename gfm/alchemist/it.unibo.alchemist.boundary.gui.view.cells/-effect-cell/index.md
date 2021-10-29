@@ -3,7 +3,7 @@
 # EffectCell
 
 [jvm]\
-open class [EffectCell](index.md)<[P](index.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>?> : [AbstractEffectCell](../-abstract-effect-cell/index.md)<[EffectFX](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>> 
+open class [EffectCell](index.md)<[P](index.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>?> : [AbstractEffectCell](../-abstract-effect-cell/index.md)<[EffectFX](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>> 
 
 This ListView cell implements the [AbstractEffectCell](../-abstract-effect-cell/index.md) for containing an [EffectFX](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.md). It has a name that identifies the Effect and when clicked should open another view to edit effect-specific parameters.
 

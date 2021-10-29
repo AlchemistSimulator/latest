@@ -21,13 +21,13 @@ jvm
 
 | | |
 |---|---|
-| [ClassItem](-class-item.md) | [jvm]<br>open fun [ClassItem](-class-item.md)(clazz: [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<[E](index.md)>)<br>the class |
+| [ClassItem](-class-item.md) | [jvm]<br>open fun [ClassItem](-class-item.md)(clazz: [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<[E](https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html)>)<br>the class |
 
 ## Functions
 
 | Name | Summary |
 |---|---|
 | [equals](equals.md) | [jvm]<br>open fun [equals](equals.md)(obj: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [getPayload](get-payload.md) | [jvm]<br>open fun [getPayload](get-payload.md)(): [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<[E](index.md)><br>the wrapped [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html) |
+| [getPayload](get-payload.md) | [jvm]<br>open fun [getPayload](get-payload.md)(): [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<[E](https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html)><br>the wrapped [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html) |
 | [hashCode](hash-code.md) | [jvm]<br>open fun [hashCode](hash-code.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [toString](to-string.md) | [jvm]<br>open fun [toString](to-string.md)(): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html) |

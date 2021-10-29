@@ -3,7 +3,7 @@
 # setEnvPosition
 
 [jvm]\
-abstract fun [setEnvPosition](set-env-position.md)(envPoint: [P](../../it.unibo.alchemist.boundary.wormhole.implementation/-abstract-wormhole2-d/index.md))
+abstract fun [setEnvPosition](set-env-position.md)(envPoint: [P](../../it.unibo.alchemist.boundary.wormhole.implementation/-point-adapter/index.md))
 
 Sets the position to the view-point corresponding to envPoint.
 

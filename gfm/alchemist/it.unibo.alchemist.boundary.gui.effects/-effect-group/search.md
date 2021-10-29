@@ -3,7 +3,7 @@
 # search
 
 [jvm]\
-abstract fun [search](search.md)(effect: [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
+abstract fun [search](search.md)(effect: [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)
 
 Checks if an effect is present in the group.
 

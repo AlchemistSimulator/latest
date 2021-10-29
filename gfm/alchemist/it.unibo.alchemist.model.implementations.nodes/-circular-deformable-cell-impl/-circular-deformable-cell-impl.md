@@ -3,7 +3,7 @@
 # CircularDeformableCellImpl
 
 [jvm]\
-open fun [CircularDeformableCellImpl](-circular-deformable-cell-impl.md)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>, maxDiameter: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), rigidity: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+open fun [CircularDeformableCellImpl](-circular-deformable-cell-impl.md)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.md)>, maxDiameter: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), rigidity: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 Create a circular deformable cell of maxDiam = maxDiameter and minDiam = deformability * maxDiam.
 

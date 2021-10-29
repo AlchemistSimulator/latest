@@ -3,7 +3,7 @@
 # RoutingTraceDependantSpeed
 
 [jvm]\
-class [RoutingTraceDependantSpeed](index.md)<[T](index.md)> : [TraceDependantSpeed](../-trace-dependant-speed/index.md)<[T](../-trace-dependant-speed/index.md)> 
+class [RoutingTraceDependantSpeed](index.md)<[T](index.md)> : [TraceDependantSpeed](../-trace-dependant-speed/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)> 
 
 This [TraceDependantSpeed](../-trace-dependant-speed/index.md) strategy computes the remaining distance by relying on maps data for a selected [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md).
 
@@ -19,11 +19,11 @@ jvm
 
 | | |
 |---|---|
-| [RoutingTraceDependantSpeed](-routing-trace-dependant-speed.md) | [jvm]<br>open fun [RoutingTraceDependantSpeed](-routing-trace-dependant-speed.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../-trace-dependant-speed/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../-trace-dependant-speed/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../-trace-dependant-speed/index.md)>, vehicle: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md))<br>the environment |
+| [RoutingTraceDependantSpeed](-routing-trace-dependant-speed.md) | [jvm]<br>open fun [RoutingTraceDependantSpeed](-routing-trace-dependant-speed.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, vehicle: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md))<br>the environment |
 
 ## Functions
 
 | Name | Summary |
 |---|---|
-| [getNodeMovementLength](../-trace-dependant-speed/get-node-movement-length.md) | [jvm]<br>fun [getNodeMovementLength](../-trace-dependant-speed/get-node-movement-length.md)(target: [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>abstract fun [getNodeMovementLength](../../it.unibo.alchemist.model.interfaces.movestrategies/-speed-selection-strategy/get-node-movement-length.md)(p: [P](../../it.unibo.alchemist.model.interfaces/-timed-route/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |
+| [getNodeMovementLength](../-trace-dependant-speed/get-node-movement-length.md) | [jvm]<br>fun [getNodeMovementLength](../-trace-dependant-speed/get-node-movement-length.md)(target: [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>abstract fun [getNodeMovementLength](../../it.unibo.alchemist.model.interfaces.movestrategies/-speed-selection-strategy/get-node-movement-length.md)(p: [P](../../it.unibo.alchemist.loader.deployments/-deployment/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |
 | [setTrace](../-straight-line-trace-dependant-speed/index.md#2080248117%2FFunctions%2F-267951372) | [jvm]<br>fun [setTrace](../-straight-line-trace-dependant-speed/index.md#2080248117%2FFunctions%2F-267951372)(trace: [GPSTrace](../../it.unibo.alchemist.model.interfaces/-g-p-s-trace/index.md))<br>abstract fun [setTrace](../../it.unibo.alchemist.model.interfaces/-object-with-g-p-s/set-trace.md)(trace: [GPSTrace](../../it.unibo.alchemist.model.interfaces/-g-p-s-trace/index.md))<br>the [GPSTrace](../../it.unibo.alchemist.model.interfaces/-g-p-s-trace/index.md) to follow |

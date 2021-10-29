@@ -3,4 +3,4 @@
 # nodes
 
 [jvm]\
-private val [nodes](nodes.md): ListSet<[Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist/-supported-incarnations/get.md)>>
+private val [nodes](nodes.md): ListSet<[Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>>

@@ -3,7 +3,7 @@
 # GenericMoleculePresent
 
 [jvm]\
-open fun [GenericMoleculePresent](-generic-molecule-present.md)(n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.md)>, mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), quantity: [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.md))
+open fun [GenericMoleculePresent](-generic-molecule-present.md)(n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](index.md)>, mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), quantity: [T](index.md))
 
 Builds a new condition, which checks if the molecule exists or not inside the node n.
 

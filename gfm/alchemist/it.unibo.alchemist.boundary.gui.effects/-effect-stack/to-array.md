@@ -6,7 +6,7 @@
 
 @NotNull()
 
-open fun [toArray](to-array.md)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<@NotNull()[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>
+open fun [toArray](to-array.md)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>
 
 @NotNull()
 

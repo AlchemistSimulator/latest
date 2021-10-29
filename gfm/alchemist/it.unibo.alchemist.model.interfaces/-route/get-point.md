@@ -3,7 +3,7 @@
 # getPoint
 
 [jvm]\
-abstract fun [getPoint](get-point.md)(step: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [P](../../it.unibo.alchemist/-supported-incarnations/get.md)
+abstract fun [getPoint](get-point.md)(step: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [P](index.md)
 
 #### Return
 

@@ -3,7 +3,7 @@
 # getPolarizationVersor
 
 [jvm]\
-abstract fun [getPolarizationVersor](get-polarization-versor.md)(): [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)
+abstract fun [getPolarizationVersor](get-polarization-versor.md)(): [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.md)
 
 #### Return
 

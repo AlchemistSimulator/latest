@@ -3,7 +3,7 @@
 # getEnvironment
 
 [jvm]\
-abstract fun [getEnvironment](get-environment.md)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
+abstract fun [getEnvironment](get-environment.md)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-node/index.md), [P](../../it.unibo.alchemist.model.interfaces/-benchmarkable-environment/index.md)>
 
 Allows to access the current environment.
 

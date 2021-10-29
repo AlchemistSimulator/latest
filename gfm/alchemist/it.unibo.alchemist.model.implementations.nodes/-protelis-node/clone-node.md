@@ -3,4 +3,4 @@
 # cloneNode
 
 [jvm]\
-open fun [cloneNode](clone-node.md)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)): [ProtelisNode](index.md)<[P](../../it.unibo.alchemist.model/-protelis-incarnation/index.md)>
+open fun [cloneNode](clone-node.md)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)): [ProtelisNode](index.md)<[P](../../it.unibo.alchemist.protelis/-alchemist-execution-context/index.md)>

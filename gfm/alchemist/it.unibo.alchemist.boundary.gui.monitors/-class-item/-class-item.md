@@ -3,7 +3,7 @@
 # ClassItem
 
 [jvm]\
-open fun [ClassItem](-class-item.md)(clazz: [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<[E](index.md)>)
+open fun [ClassItem](-class-item.md)(clazz: [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<[E](https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html)>)
 
 ## Parameters
 

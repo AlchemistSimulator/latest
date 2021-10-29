@@ -3,7 +3,7 @@
 # getNeighborhood
 
 [jvm]\
-abstract fun [getNeighborhood](get-neighborhood.md)(center: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>): [Neighborhood](../-neighborhood/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
+abstract fun [getNeighborhood](get-neighborhood.md)(center: [Node](../-node/index.md)<[T](../-node/index.md)>): [Neighborhood](../-neighborhood/index.md)<[T](../-node/index.md)>
 
 Given a node, this method returns its neighborhood.
 

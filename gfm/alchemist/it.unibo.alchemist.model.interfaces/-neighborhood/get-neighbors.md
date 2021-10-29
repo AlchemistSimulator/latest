@@ -3,7 +3,7 @@
 # getNeighbors
 
 [jvm]\
-abstract fun [getNeighbors](get-neighbors.md)(): ListSet<out [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>
+abstract fun [getNeighbors](get-neighbors.md)(): ListSet<out [Node](../-node/index.md)<[T](../-node/index.md)>>
 
 Allows to directly access every node in the neighborhood. A change of this List will be reflected in the neighborhood.
 

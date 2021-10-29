@@ -3,7 +3,7 @@
 # getQuantity
 
 [jvm]\
-open fun [getQuantity](get-quantity.md)(): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.md)
+open fun [getQuantity](get-quantity.md)(): [T](index.md)
 
 Allows to access the threshold.
 

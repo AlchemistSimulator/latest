@@ -3,7 +3,7 @@
 # diff
 
 [jvm]\
-open fun [diff](diff.md)(op: [PointAdapter](index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>): [PointAdapter](index.md)<[P](../-abstract-wormhole2-d/index.md)>
+open fun [diff](diff.md)(op: [PointAdapter](index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>): [PointAdapter](index.md)<[P](index.md)>
 
 #### Return
 

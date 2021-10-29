@@ -3,7 +3,7 @@
 # getWith
 
 [jvm]\
-abstract fun <[T](get-with.md), [P](get-with.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.loader.shapes/-rectangle/index.md)>?> [getWith](get-with.md)(values: [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>): [InitializedEnvironment](../-initialized-environment/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html), [P](../../it.unibo.alchemist.loader.shapes/-rectangle/index.md)>
+abstract fun <[T](get-with.md), [P](get-with.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.loader.deployments/-circle/index.md)>?> [getWith](get-with.md)(values: [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>): [InitializedEnvironment](../-initialized-environment/index.md)<[T](../../it.unibo.alchemist.loader.export/-exporter/index.md), [P](../../it.unibo.alchemist.loader.deployments/-circle/index.md)>
 
 #### Return
 

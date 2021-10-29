@@ -3,4 +3,4 @@
 # addLayer
 
 [jvm]\
-fun [addLayer](add-layer.md)(m: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), l: [Layer](../../it.unibo.alchemist.model.interfaces/-layer/index.md)<[T](../../it.unibo.alchemist/-supported-incarnations/get.md), [P](../../it.unibo.alchemist/-supported-incarnations/get.md)>)
+fun [addLayer](add-layer.md)(m: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), l: [Layer](../../it.unibo.alchemist.model.interfaces/-layer/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md), [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)>)

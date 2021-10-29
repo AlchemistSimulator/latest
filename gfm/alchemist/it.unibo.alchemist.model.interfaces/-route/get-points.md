@@ -3,7 +3,7 @@
 # getPoints
 
 [jvm]\
-abstract fun [getPoints](get-points.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](../../it.unibo.alchemist/-supported-incarnations/get.md)>
+abstract fun [getPoints](get-points.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](index.md)>
 
 #### Return
 

@@ -3,7 +3,7 @@
 # getContent
 
 [jvm]\
-abstract fun [getContent](get-content.md)(): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)
+abstract fun [getContent](get-content.md)(): [T](../-node/index.md)
 
 Allows to access the content of the concentration.
 

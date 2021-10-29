@@ -3,4 +3,4 @@
 # timeDistribution
 
 [jvm]\
-private val [timeDistribution](time-distribution.md): [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[T](../../it.unibo.alchemist/-supported-incarnations/get.md)>
+private val [timeDistribution](time-distribution.md): [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>

@@ -3,7 +3,7 @@
 # getTarget
 
 [jvm]\
-fun [getTarget](get-target.md)(): [P](../../it.unibo.alchemist/-supported-incarnations/get.md)
+fun [getTarget](get-target.md)(): [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)
 
 #### Return
 

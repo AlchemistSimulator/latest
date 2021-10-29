@@ -3,7 +3,7 @@
 # StepLayer
 
 [jvm]\
-open fun [StepLayer](-step-layer.md)(mx: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), my: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), maxValue: [T](../../it.unibo.alchemist/-supported-incarnations/get.md), minValue: [T](../../it.unibo.alchemist/-supported-incarnations/get.md))
+open fun [StepLayer](-step-layer.md)(mx: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), my: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), maxValue: [T](index.md), minValue: [T](index.md))
 
 Initialize a [StepLayer](index.md).
 
@@ -19,7 +19,7 @@ jvm
 | maxValue | the high value of concentration. |
 
 [jvm]\
-open fun [StepLayer](-step-layer.md)(maxValue: [T](../../it.unibo.alchemist/-supported-incarnations/get.md), minValue: [T](../../it.unibo.alchemist/-supported-incarnations/get.md))
+open fun [StepLayer](-step-layer.md)(maxValue: [T](index.md), minValue: [T](index.md))
 
 Initialize a [StepLayer](index.md) where concentration is at its maximum value in first quadrant (for positive values of x and y).
 

@@ -3,4 +3,4 @@
 # getValue
 
 [jvm]\
-open fun [getValue](get-value.md)(p: [P](../../it.unibo.alchemist/-supported-incarnations/get.md)): [T](../../it.unibo.alchemist/-supported-incarnations/get.md)
+open fun [getValue](get-value.md)(p: [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)): [T](index.md)

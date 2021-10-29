@@ -3,7 +3,7 @@
 # ChemicalReaction
 
 [jvm]\
-open fun [ChemicalReaction](-chemical-reaction.md)(n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist/-supported-incarnations/get.md)>, pd: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[T](../../it.unibo.alchemist/-supported-incarnations/get.md)>)
+open fun [ChemicalReaction](-chemical-reaction.md)(n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>, pd: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>)
 
 ## Parameters
 
