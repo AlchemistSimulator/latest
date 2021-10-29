@@ -10,7 +10,7 @@ title: randomGenerator
 
 
 [jvm]\
-open fun [randomGenerator](random-generator.html)(rg: RandomGenerator): [BiochemicalReactionBuilder](index.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html)>
+open fun [randomGenerator](random-generator.html)(rg: RandomGenerator): [BiochemicalReactionBuilder](index.html)<[P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html)>
 
 
 

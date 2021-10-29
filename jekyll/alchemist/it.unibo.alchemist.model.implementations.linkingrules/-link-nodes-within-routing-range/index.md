@@ -10,7 +10,7 @@ title: LinkNodesWithinRoutingRange
 
 
 [jvm]\
-class [LinkNodesWithinRoutingRange](index.html)<[T](index.html)> : [AbstractLocallyConsistentLinkingRule](../-abstract-locally-consistent-linking-rule/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>
+class [LinkNodesWithinRoutingRange](index.html)<[T](index.html)> : [AbstractLocallyConsistentLinkingRule](../-abstract-locally-consistent-linking-rule/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>
 
 
 
@@ -38,6 +38,6 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [computeNeighborhood](compute-neighborhood.html) | [jvm]<br>open fun [computeNeighborhood](compute-neighborhood.html)(center: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html)>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>): [Neighborhood](../../it.unibo.alchemist.model.interfaces/-neighborhood/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html)> |
+| [computeNeighborhood](compute-neighborhood.html) | [jvm]<br>open fun [computeNeighborhood](compute-neighborhood.html)(center: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>): [Neighborhood](../../it.unibo.alchemist.model.interfaces/-neighborhood/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)> |
 | [isLocallyConsistent](../-abstract-locally-consistent-linking-rule/is-locally-consistent.html) | [jvm]<br>fun [isLocallyConsistent](../-abstract-locally-consistent-linking-rule/is-locally-consistent.html)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
 

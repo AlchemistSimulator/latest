@@ -10,7 +10,7 @@ title: getViewPoint
 
 
 [jvm]\
-abstract fun [getViewPoint](get-view-point.html)(envPoint: [P](index.html)): [Point](https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html)
+abstract fun [getViewPoint](get-view-point.html)(envPoint: [P](../../it.unibo.alchemist.boundary.wormhole.implementation/-point-adapter/index.html)): [Point](https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html)
 
 
 

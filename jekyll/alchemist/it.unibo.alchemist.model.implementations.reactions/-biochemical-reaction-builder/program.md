@@ -10,7 +10,7 @@ title: program
 
 
 [jvm]\
-open fun [program](program.html)(program: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [BiochemicalReactionBuilder](index.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html)>
+open fun [program](program.html)(program: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [BiochemicalReactionBuilder](index.html)<[P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html)>
 
 
 

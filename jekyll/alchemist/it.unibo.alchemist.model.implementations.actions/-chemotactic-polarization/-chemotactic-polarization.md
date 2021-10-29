@@ -10,7 +10,7 @@ title: ChemotacticPolarization
 
 
 [jvm]\
-open fun [ChemotacticPolarization](-chemotactic-polarization.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html)>, node: [CellNode](../../it.unibo.alchemist.model.interfaces/-cell-node/index.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html)>, biomolecule: [Biomolecule](../../it.unibo.alchemist.model.implementations.molecules/-biomolecule/index.html), ascendGrad: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))
+open fun [ChemotacticPolarization](-chemotactic-polarization.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html)>, node: [CellNode](../../it.unibo.alchemist.model.interfaces/-cell-node/index.html)<[P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html)>, biomolecule: [Biomolecule](../../it.unibo.alchemist.model.implementations.molecules/-biomolecule/index.html), ascendGrad: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))
 
 
 
@@ -31,7 +31,7 @@ jvm
 
 
 [jvm]\
-open fun [ChemotacticPolarization](-chemotactic-polarization.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>, biomolecule: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), ascendGrad: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))
+open fun [ChemotacticPolarization](-chemotactic-polarization.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>, biomolecule: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), ascendGrad: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))
 
 
 

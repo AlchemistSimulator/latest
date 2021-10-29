@@ -3,7 +3,7 @@
 # zoomTo
 
 [jvm]\
-abstract fun [zoomTo](zoom-to.md)(center: [P](index.md), zoomLevel: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+abstract fun [zoomTo](zoom-to.md)(center: [P](../../it.unibo.alchemist.boundary.wormhole.implementation/-wormhole-swing/index.md), zoomLevel: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 ## Parameters
 

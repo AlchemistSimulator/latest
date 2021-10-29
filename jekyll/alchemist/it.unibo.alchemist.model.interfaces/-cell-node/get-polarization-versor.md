@@ -10,7 +10,7 @@ title: getPolarizationVersor
 
 
 [jvm]\
-abstract fun [getPolarizationVersor](get-polarization-versor.html)(): [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html)
+abstract fun [getPolarizationVersor](get-polarization-versor.html)(): [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html)
 
 
 

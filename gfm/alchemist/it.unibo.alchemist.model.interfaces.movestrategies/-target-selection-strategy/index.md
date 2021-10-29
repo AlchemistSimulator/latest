@@ -5,7 +5,7 @@
 [jvm]\
 @[FunctionalInterface](https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html)()
 
-interface [TargetSelectionStrategy](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<out [P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
+interface [TargetSelectionStrategy](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<out [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
 
 This interface models a strategy for selecting positions where to move.
 
@@ -21,7 +21,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getTarget](get-target.md) | [jvm]<br>abstract fun [getTarget](get-target.md)(): [P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)<br>the next target where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.md) is directed |
+| [getTarget](get-target.md) | [jvm]<br>abstract fun [getTarget](get-target.md)(): [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)<br>the next target where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.md) is directed |
 
 ## Inheritors
 

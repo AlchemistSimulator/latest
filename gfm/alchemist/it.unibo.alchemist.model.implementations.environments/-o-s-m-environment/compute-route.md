@@ -40,7 +40,7 @@ jvm
 | vehicle | vehicle to use. Different vehicles may use different paths, e.g. pedestrians can't go along a highway, but can walk the parks |
 
 [jvm]\
-open fun [computeRoute](compute-route.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, coord: [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.md)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)>
+open fun [computeRoute](compute-route.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, coord: [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.md)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)>
 
 This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific [Action](../../it.unibo.alchemist.model.interfaces/-action/index.md) calling this method to effectively move nodes along the path.
 
@@ -58,7 +58,7 @@ jvm
 | coord | The absolute coordinate where this node wants to move to |
 
 [jvm]\
-open fun [computeRoute](compute-route.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, coord: [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md), vehicle: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.md)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)>
+open fun [computeRoute](compute-route.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, coord: [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md), vehicle: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.md)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.md)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)>
 
 This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific [Action](../../it.unibo.alchemist.model.interfaces/-action/index.md) calling this method to effectively move nodes along the path.
 
@@ -77,7 +77,7 @@ jvm
 | vehicle | The vehicle tipe for this route |
 
 [jvm]\
-open fun [computeRoute](compute-route.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, node2: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.md)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)>
+open fun [computeRoute](compute-route.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, node2: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.md)<[GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.md)>
 
 This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific [Action](../../it.unibo.alchemist.model.interfaces/-action/index.md) calling this method to effectively move nodes along the path. It uses the fastest path as metric.
 

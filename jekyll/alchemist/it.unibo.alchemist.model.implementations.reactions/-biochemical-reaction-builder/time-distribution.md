@@ -10,7 +10,7 @@ title: timeDistribution
 
 
 [jvm]\
-open fun [timeDistribution](time-distribution.html)(td: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.html)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>): [BiochemicalReactionBuilder](index.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html)>
+open fun [timeDistribution](time-distribution.html)(td: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.html)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>): [BiochemicalReactionBuilder](index.html)<[P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html)>
 
 
 

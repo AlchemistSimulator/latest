@@ -10,7 +10,7 @@ title: setPolarization
 
 
 [jvm]\
-fun [setPolarization](set-polarization.html)(v: [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html))
+fun [setPolarization](set-polarization.html)(v: [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html))
 
 
 

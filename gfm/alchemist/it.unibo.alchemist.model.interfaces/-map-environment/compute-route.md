@@ -3,7 +3,7 @@
 # computeRoute
 
 [jvm]\
-abstract fun [computeRoute](compute-route.md)(node: [Node](../-node/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, node2: [Node](../-node/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>): [Route](../-route/index.md)<[GeoPosition](../-geo-position/index.md)>
+abstract fun [computeRoute](compute-route.md)(node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, node2: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>): [Route](../-route/index.md)<[GeoPosition](../-geo-position/index.md)>
 
 This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific [Action](../-action/index.md) calling this method to effectively move nodes along the path. It uses the fastest path as metric.
 
@@ -21,7 +21,7 @@ jvm
 | node2 | the second node's position will be used as destination |
 
 [jvm]\
-abstract fun [computeRoute](compute-route.md)(node: [Node](../-node/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, coord: [GeoPosition](../-geo-position/index.md)): [Route](../-route/index.md)<[GeoPosition](../-geo-position/index.md)>
+abstract fun [computeRoute](compute-route.md)(node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, coord: [GeoPosition](../-geo-position/index.md)): [Route](../-route/index.md)<[GeoPosition](../-geo-position/index.md)>
 
 This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific [Action](../-action/index.md) calling this method to effectively move nodes along the path.
 
@@ -39,7 +39,7 @@ jvm
 | coord | The absolute coordinate where this node wants to move to |
 
 [jvm]\
-abstract fun [computeRoute](compute-route.md)(node: [Node](../-node/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, coord: [GeoPosition](../-geo-position/index.md), vehicle: [Vehicle](../-vehicle/index.md)): [Route](../-route/index.md)<[GeoPosition](../-geo-position/index.md)>
+abstract fun [computeRoute](compute-route.md)(node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, coord: [GeoPosition](../-geo-position/index.md), vehicle: [Vehicle](../-vehicle/index.md)): [Route](../-route/index.md)<[GeoPosition](../-geo-position/index.md)>
 
 This method relies on the map data, and computes a route towards some absolute coordinate solving a TSP problem. It's up to the specific [Action](../-action/index.md) calling this method to effectively move nodes along the path.
 

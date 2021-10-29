@@ -10,7 +10,7 @@ title: FollowTargetOnMap
 
 
 [jvm]\
-open class [FollowTargetOnMap](index.html)<[T](index.html)> : [FollowTarget](../-follow-target/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)> 
+open class [FollowTargetOnMap](index.html)<[T](index.html)> : [FollowTarget](../-follow-target/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)> 
 
 This strategy reads the value of a "target" molecule and tries to interpret it as a coordinate.
 
@@ -32,7 +32,7 @@ jvm
 
 | | |
 |---|---|
-| [FollowTargetOnMap](-follow-target-on-map.html) | [jvm]<br>open fun [FollowTargetOnMap](-follow-target-on-map.html)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html)>, targetMolecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html))<br>the environment |
+| [FollowTargetOnMap](-follow-target-on-map.html) | [jvm]<br>open fun [FollowTargetOnMap](-follow-target-on-map.html)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html), [GeoPosition](../../it.unibo.alchemist.model.interfaces/-geo-position/index.html)>, n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)>, targetMolecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html))<br>the environment |
 
 
 ## Functions
@@ -40,5 +40,5 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getTarget](../-follow-target/get-target.html) | [jvm]<br>fun [getTarget](../-follow-target/get-target.html)(): [P](../../it.unibo.alchemist.model.interfaces/-timed-route/index.html) |
+| [getTarget](../-follow-target/get-target.html) | [jvm]<br>fun [getTarget](../-follow-target/get-target.html)(): [P](../../it.unibo.alchemist.model.implementations.actions/-abstract-configurable-move-node/index.html) |
 

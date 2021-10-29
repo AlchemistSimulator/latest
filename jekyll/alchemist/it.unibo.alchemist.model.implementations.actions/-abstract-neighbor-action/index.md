@@ -10,7 +10,7 @@ title: AbstractNeighborAction
 
 
 [jvm]\
-abstract class [AbstractNeighborAction](index.html)<[T](index.html)> : [AbstractRandomizableAction](../-abstract-randomizable-action/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.html)> 
+abstract class [AbstractNeighborAction](index.html)<[T](index.html)> : [AbstractRandomizableAction](../-abstract-randomizable-action/index.html)<[T](../../it.unibo.alchemist.model.interfaces/-environment/index.html)> 
 
 Represents an action on a neighbor.
 
@@ -32,8 +32,8 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [cloneAction](clone-action.html) | [jvm]<br>abstract fun [cloneAction](clone-action.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.html)>): [AbstractNeighborAction](index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.html)> |
-| [execute](execute.html) | [jvm]<br>open fun [execute](execute.html)()<br>Execute the action on a random neighbor if the node has a neighborhood.<br>[jvm]<br>abstract fun [execute](execute.html)(targetNode: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.html)>)<br>Execute the action on the given target node. |
+| [cloneAction](clone-action.html) | [jvm]<br>abstract fun [cloneAction](clone-action.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.interfaces/-environment/index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.interfaces/-environment/index.html)>): [AbstractNeighborAction](index.html)<[T](../../it.unibo.alchemist.model.interfaces/-environment/index.html)> |
+| [execute](execute.html) | [jvm]<br>open fun [execute](execute.html)()<br>Execute the action on a random neighbor if the node has a neighborhood.<br>[jvm]<br>abstract fun [execute](execute.html)(targetNode: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.interfaces/-environment/index.html)>)<br>Execute the action on the given target node. |
 | [getContext](get-context.html) | [jvm]<br>fun [getContext](get-context.html)(): [Context](../../it.unibo.alchemist.model.interfaces/-context/index.html) |
 | [getOutboundDependencies](../-abstract-action/get-outbound-dependencies.html) | [jvm]<br>fun [getOutboundDependencies](../-abstract-action/get-outbound-dependencies.html)(): ListSet<out [Dependency](../../it.unibo.alchemist.model.interfaces/-dependency/index.html)> |
 | [toString](../-abstract-action/to-string.html) | [jvm]<br>open fun [toString](../-abstract-action/to-string.html)(): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html) |

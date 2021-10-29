@@ -3,7 +3,7 @@
 # MeanSquaredError
 
 [jvm]\
-open fun [MeanSquaredError](-mean-squared-error.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, localCorrectValueMolecule: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), localCorrectValueProperty: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), statistics: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), localValueMolecule: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), localValueProperty: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))
+open fun [MeanSquaredError](-mean-squared-error.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, localCorrectValueMolecule: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), localCorrectValueProperty: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), statistics: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), localValueMolecule: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), localValueProperty: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html))
 
 ## Parameters
 

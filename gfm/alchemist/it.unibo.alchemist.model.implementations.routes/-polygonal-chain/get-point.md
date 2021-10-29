@@ -3,7 +3,7 @@
 # getPoint
 
 [jvm]\
-fun [getPoint](get-point.md)(step: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)
+fun [getPoint](get-point.md)(step: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)
 
 #### Return
 

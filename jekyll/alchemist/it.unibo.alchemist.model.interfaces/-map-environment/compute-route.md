@@ -10,7 +10,7 @@ title: computeRoute
 
 
 [jvm]\
-abstract fun [computeRoute](compute-route.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html)>, node2: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html)>): [Route](../-route/index.html)<[GeoPosition](../-geo-position/index.html)>
+abstract fun [computeRoute](compute-route.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)>, node2: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)>): [Route](../-route/index.html)<[GeoPosition](../-geo-position/index.html)>
 
 
 
@@ -41,7 +41,7 @@ jvm
 
 
 [jvm]\
-abstract fun [computeRoute](compute-route.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html)>, coord: [GeoPosition](../-geo-position/index.html)): [Route](../-route/index.html)<[GeoPosition](../-geo-position/index.html)>
+abstract fun [computeRoute](compute-route.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)>, coord: [GeoPosition](../-geo-position/index.html)): [Route](../-route/index.html)<[GeoPosition](../-geo-position/index.html)>
 
 
 
@@ -72,7 +72,7 @@ jvm
 
 
 [jvm]\
-abstract fun [computeRoute](compute-route.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html)>, coord: [GeoPosition](../-geo-position/index.html), vehicle: [Vehicle](../-vehicle/index.html)): [Route](../-route/index.html)<[GeoPosition](../-geo-position/index.html)>
+abstract fun [computeRoute](compute-route.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)>, coord: [GeoPosition](../-geo-position/index.html), vehicle: [Vehicle](../-vehicle/index.html)): [Route](../-route/index.html)<[GeoPosition](../-geo-position/index.html)>
 
 
 

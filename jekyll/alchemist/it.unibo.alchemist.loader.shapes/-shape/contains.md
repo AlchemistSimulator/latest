@@ -10,7 +10,7 @@ title: contains
 
 
 [jvm]\
-abstract fun [contains](contains.html)(position: [P](../-circle/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+abstract fun [contains](contains.html)(position: [P](../-rectangle/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
 
 
 

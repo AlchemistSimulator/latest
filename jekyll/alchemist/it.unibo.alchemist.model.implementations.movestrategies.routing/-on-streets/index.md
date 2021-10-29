@@ -32,7 +32,7 @@ jvm
 
 | | |
 |---|---|
-| [OnStreets](-on-streets.html) | [jvm]<br>open fun [OnStreets](-on-streets.html)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.html))<br>the environment |
+| [OnStreets](-on-streets.html) | [jvm]<br>open fun [OnStreets](-on-streets.html)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.html))<br>the environment |
 
 
 ## Functions

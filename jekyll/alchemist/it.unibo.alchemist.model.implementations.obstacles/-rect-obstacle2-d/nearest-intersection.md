@@ -10,7 +10,7 @@ title: nearestIntersection
 
 
 [jvm]\
-open fun [nearestIntersection](nearest-intersection.html)(start: [V](index.html), end: [V](index.html)): [V](index.html)
+open fun [nearestIntersection](nearest-intersection.html)(start: [V](../../it.unibo.alchemist.model.interfaces/-obstacle2-d/index.html), end: [V](../../it.unibo.alchemist.model.interfaces/-obstacle2-d/index.html)): [V](../../it.unibo.alchemist.model.interfaces/-obstacle2-d/index.html)
 
 
 

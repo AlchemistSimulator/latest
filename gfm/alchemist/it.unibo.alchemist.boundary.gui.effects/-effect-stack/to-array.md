@@ -10,4 +10,4 @@ open fun [toArray](to-array.md)(): [Array](https://kotlinlang.org/api/latest/jvm
 
 @NotNull()
 
-open fun <[T](to-array.md)> [toArray](to-array.md)(a: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<T>): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<T>
+open fun <[T](to-array.md)> [toArray](to-array.md)(a: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>

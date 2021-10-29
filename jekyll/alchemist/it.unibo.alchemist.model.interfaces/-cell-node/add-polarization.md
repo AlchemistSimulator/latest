@@ -10,7 +10,7 @@ title: addPolarization
 
 
 [jvm]\
-abstract fun [addPolarization](add-polarization.html)(v: [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html))
+abstract fun [addPolarization](add-polarization.html)(v: [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html))
 
 
 

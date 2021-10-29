@@ -10,7 +10,7 @@ title: AbstractRandomizableAction
 
 
 [jvm]\
-open fun [AbstractRandomizableAction](-abstract-randomizable-action.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.html)>, random: RandomGenerator)
+open fun [AbstractRandomizableAction](-abstract-randomizable-action.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.interfaces/-environment/index.html)>, random: RandomGenerator)
 
 
 

@@ -10,7 +10,7 @@ title: node
 
 
 [jvm]\
-private val [node](node.html): [ProtelisNode](../../it.unibo.alchemist.model.implementations.nodes/-protelis-node/index.html)<[P](../../it.unibo.alchemist.model.implementations.nodes/-protelis-node/index.html)>
+private val [node](node.html): [ProtelisNode](../../it.unibo.alchemist.model.implementations.nodes/-protelis-node/index.html)<[P](../../it.unibo.alchemist.protelis/-alchemist-execution-context/index.html)>
 
 
 

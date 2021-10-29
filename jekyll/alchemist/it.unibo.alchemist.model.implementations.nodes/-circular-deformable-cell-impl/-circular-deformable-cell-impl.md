@@ -10,7 +10,7 @@ title: CircularDeformableCellImpl
 
 
 [jvm]\
-open fun [CircularDeformableCellImpl](-circular-deformable-cell-impl.html)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html)>, maxDiameter: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), rigidity: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+open fun [CircularDeformableCellImpl](-circular-deformable-cell-impl.html)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html)>, maxDiameter: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), rigidity: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 
 

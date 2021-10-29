@@ -10,7 +10,7 @@ title: getEnvironment
 
 
 [jvm]\
-fun [getEnvironment](get-environment.html)(): [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.html)>
+fun [getEnvironment](get-environment.html)(): [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../-reproduce-g-p-s-trace/index.html)>
 
 
 

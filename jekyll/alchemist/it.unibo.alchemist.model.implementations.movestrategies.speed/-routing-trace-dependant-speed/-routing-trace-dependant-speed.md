@@ -10,7 +10,7 @@ title: RoutingTraceDependantSpeed
 
 
 [jvm]\
-open fun [RoutingTraceDependantSpeed](-routing-trace-dependant-speed.html)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../-straight-line-trace-dependant-speed/index.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../-straight-line-trace-dependant-speed/index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-straight-line-trace-dependant-speed/index.html)>, vehicle: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.html))
+open fun [RoutingTraceDependantSpeed](-routing-trace-dependant-speed.html)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.implementations.actions/-reproduce-g-p-s-trace/index.html)>, vehicle: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.html))
 
 
 

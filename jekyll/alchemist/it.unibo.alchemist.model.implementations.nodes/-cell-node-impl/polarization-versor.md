@@ -10,7 +10,7 @@ title: polarizationVersor
 
 
 [jvm]\
-private open val [polarizationVersor](polarization-versor.html): [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.html)
+private open val [polarizationVersor](polarization-versor.html): [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html)
 
 
 

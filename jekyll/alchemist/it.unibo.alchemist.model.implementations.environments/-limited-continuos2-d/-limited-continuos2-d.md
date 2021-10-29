@@ -10,7 +10,7 @@ title: LimitedContinuos2D
 
 
 [jvm]\
-open fun [LimitedContinuos2D](-limited-continuos2-d.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../-museum-hall/index.html), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.html)>)
+open fun [LimitedContinuos2D](-limited-continuos2-d.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../-image-environment/index.html), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.html)>)
 
 
 

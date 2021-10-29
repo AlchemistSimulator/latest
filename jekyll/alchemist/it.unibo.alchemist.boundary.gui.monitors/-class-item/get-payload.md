@@ -10,7 +10,7 @@ title: getPayload
 
 
 [jvm]\
-open fun [getPayload](get-payload.html)(): [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<[E](https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html)>
+open fun [getPayload](get-payload.html)(): [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<[E](index.html)>
 
 
 

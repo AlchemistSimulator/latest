@@ -3,7 +3,7 @@
 # ConstantSpace
 
 [jvm]\
-class [ConstantSpace](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../-interact-with-others/index.md)>?> : [SpeedSelectionStrategy](../../it.unibo.alchemist.model.interfaces.movestrategies/-speed-selection-strategy/index.md)<[P](../-interact-with-others/index.md)> 
+class [ConstantSpace](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.interfaces/-route/index.md)>?> : [SpeedSelectionStrategy](../../it.unibo.alchemist.model.interfaces.movestrategies/-speed-selection-strategy/index.md)<[P](../../it.unibo.alchemist.model.interfaces/-route/index.md)> 
 
 This strategy makes the node move every time of a fixed amount of space.
 
@@ -25,4 +25,4 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getNodeMovementLength](get-node-movement-length.md) | [jvm]<br>open fun [getNodeMovementLength](get-node-movement-length.md)(target: [P](../-interact-with-others/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>the [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md) describing where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.md) is directed |
+| [getNodeMovementLength](get-node-movement-length.md) | [jvm]<br>open fun [getNodeMovementLength](get-node-movement-length.md)(target: [P](../../it.unibo.alchemist.model.interfaces/-route/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>the [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md) describing where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.md) is directed |

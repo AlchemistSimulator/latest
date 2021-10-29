@@ -10,7 +10,7 @@ title: computeRoute
 
 
 [jvm]\
-open fun [computeRoute](compute-route.html)(currentPos: [P](../../it.unibo.alchemist.model.interfaces/-timed-route/index.html), finalPos: [P](../../it.unibo.alchemist.model.interfaces/-timed-route/index.html)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.html)<[P](../../it.unibo.alchemist.model.interfaces/-timed-route/index.html)>
+open fun [computeRoute](compute-route.html)(currentPos: [P](../../it.unibo.alchemist.model.implementations.actions/-abstract-configurable-move-node/index.html), finalPos: [P](../../it.unibo.alchemist.model.implementations.actions/-abstract-configurable-move-node/index.html)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.html)<[P](../../it.unibo.alchemist.model.implementations.actions/-abstract-configurable-move-node/index.html)>
 
 
 

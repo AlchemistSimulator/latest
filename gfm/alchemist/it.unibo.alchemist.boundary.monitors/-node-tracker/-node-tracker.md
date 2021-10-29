@@ -3,7 +3,7 @@
 # NodeTracker
 
 [jvm]\
-open fun [NodeTracker](-node-tracker.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-graphical2-d-output-monitor/index.md)>)
+open fun [NodeTracker](-node-tracker.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.boundary.gui.effects/-draw-layers-gradient/draw-function.md)>)
 
 ## Parameters
 

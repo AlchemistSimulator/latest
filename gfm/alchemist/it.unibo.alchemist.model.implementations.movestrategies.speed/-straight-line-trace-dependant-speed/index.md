@@ -3,7 +3,7 @@
 # StraightLineTraceDependantSpeed
 
 [jvm]\
-class [StraightLineTraceDependantSpeed](index.md)<[T](index.md)> : [TraceDependantSpeed](../-trace-dependant-speed/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)> 
+class [StraightLineTraceDependantSpeed](index.md)<[T](index.md)> : [TraceDependantSpeed](../-trace-dependant-speed/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)> 
 
 This [TraceDependantSpeed](../-trace-dependant-speed/index.md) uses the distance between coordinates for estimating the distance.
 
@@ -19,7 +19,7 @@ jvm
 
 | | |
 |---|---|
-| [StraightLineTraceDependantSpeed](-straight-line-trace-dependant-speed.md) | [jvm]<br>open fun [StraightLineTraceDependantSpeed](-straight-line-trace-dependant-speed.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>)<br>the environment |
+| [StraightLineTraceDependantSpeed](-straight-line-trace-dependant-speed.md) | [jvm]<br>open fun [StraightLineTraceDependantSpeed](-straight-line-trace-dependant-speed.md)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.md)>)<br>the environment |
 
 ## Functions
 

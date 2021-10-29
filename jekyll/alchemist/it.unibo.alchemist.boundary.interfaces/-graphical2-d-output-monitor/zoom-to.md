@@ -10,7 +10,7 @@ title: zoomTo
 
 
 [jvm]\
-abstract fun [zoomTo](zoom-to.html)(center: [P](../../it.unibo.alchemist.boundary.wormhole.implementation/-wormhole-swing/index.html), zoomLevel: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+abstract fun [zoomTo](zoom-to.html)(center: [P](index.html), zoomLevel: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 
 

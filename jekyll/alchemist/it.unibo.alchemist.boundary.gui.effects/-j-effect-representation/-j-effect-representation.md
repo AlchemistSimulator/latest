@@ -10,7 +10,7 @@ title: JEffectRepresentation
 
 
 [jvm]\
-open fun [JEffectRepresentation](-j-effect-representation.html)(e: [Effect](../-effect/index.html), main: [GraphicalOutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-graphical-output-monitor/index.html)<[T](../-function-drawer/draw-function.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
+open fun [JEffectRepresentation](-j-effect-representation.html)(e: [Effect](../-effect/index.html), main: [GraphicalOutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-graphical-output-monitor/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-graphical2-d-output-monitor/index.html), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
 
 
 

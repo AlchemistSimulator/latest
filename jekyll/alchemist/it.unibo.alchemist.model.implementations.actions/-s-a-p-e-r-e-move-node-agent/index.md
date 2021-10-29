@@ -10,7 +10,7 @@ title: SAPEREMoveNodeAgent
 
 
 [jvm]\
-abstract class [SAPEREMoveNodeAgent](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<out [P](../-lsa-ascending-gradient-dist/index.html)>?> : [SAPERELocalAgent](../-s-a-p-e-r-e-local-agent/index.html)
+abstract class [SAPEREMoveNodeAgent](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<out [P](../../it.unibo.alchemist.model.implementations.linkingrules/-selective-adaptive-range/index.html)>?> : [SAPERELocalAgent](../-s-a-p-e-r-e-local-agent/index.html)
 
 
 
@@ -30,8 +30,8 @@ jvm
 
 | | |
 |---|---|
-| [SAPEREMoveNodeAgent](-s-a-p-e-r-e-move-node-agent.html) | [jvm]<br>open fun [SAPEREMoveNodeAgent](-s-a-p-e-r-e-move-node-agent.html)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html)>, [P](../-lsa-ascending-gradient-dist/index.html)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.html))<br>Creates a new SAPERE Local Agent stub. |
-| [SAPEREMoveNodeAgent](-s-a-p-e-r-e-move-node-agent.html) | [jvm]<br>open fun [SAPEREMoveNodeAgent](-s-a-p-e-r-e-move-node-agent.html)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html)>, [P](../-lsa-ascending-gradient-dist/index.html)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.html), m: [ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html))<br>Creates a new SAPERE Local Agent stub. |
+| [SAPEREMoveNodeAgent](-s-a-p-e-r-e-move-node-agent.html) | [jvm]<br>open fun [SAPEREMoveNodeAgent](-s-a-p-e-r-e-move-node-agent.html)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html)>, [P](../../it.unibo.alchemist.model.implementations.linkingrules/-selective-adaptive-range/index.html)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.html))<br>Creates a new SAPERE Local Agent stub. |
+| [SAPEREMoveNodeAgent](-s-a-p-e-r-e-move-node-agent.html) | [jvm]<br>open fun [SAPEREMoveNodeAgent](-s-a-p-e-r-e-move-node-agent.html)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html)>, [P](../../it.unibo.alchemist.model.implementations.linkingrules/-selective-adaptive-range/index.html)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.html), m: [ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html))<br>Creates a new SAPERE Local Agent stub. |
 
 
 ## Functions

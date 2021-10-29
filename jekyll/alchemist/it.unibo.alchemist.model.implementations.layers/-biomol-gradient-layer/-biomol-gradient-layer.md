@@ -35,7 +35,7 @@ jvm
 
 
 [jvm]\
-open fun [BiomolGradientLayer](-biomol-gradient-layer.html)(direction: [P](index.html), unitVariation: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), offset: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
+open fun [BiomolGradientLayer](-biomol-gradient-layer.html)(direction: [P](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.html), unitVariation: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), offset: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html))
 
 
 
