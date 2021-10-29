@@ -3,7 +3,7 @@
 # nodeMoved
 
 [jvm]\
-abstract fun [nodeMoved](node-moved.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-node/index.md)>)
+abstract fun [nodeMoved](node-moved.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)
 
 This method must get called in case a node is moved in the environment during the simulation and after its neighborhood has been computed (or can be consistently computed by the simulated environment). This method provides dependency computation and is responsible of correctly scheduling the Node's reactions.
 

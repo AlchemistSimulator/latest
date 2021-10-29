@@ -3,4 +3,4 @@
 # getEnvironment
 
 [jvm]\
-fun [getEnvironment](get-environment.md)(): [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)>
+fun [getEnvironment](get-environment.md)(): [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-trace-dependant-speed/index.md)>

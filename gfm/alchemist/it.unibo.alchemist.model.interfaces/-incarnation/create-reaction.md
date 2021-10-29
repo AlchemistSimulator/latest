@@ -3,7 +3,7 @@
 # createReaction
 
 [jvm]\
-abstract fun [createReaction](create-reaction.md)(randomGenerator: RandomGenerator, environment: [Environment](../-environment/index.md)<[T](../-node/index.md), [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)>, node: [Node](../-node/index.md)<[T](../-node/index.md)>, timeDistribution: [TimeDistribution](../-time-distribution/index.md)<[T](../-node/index.md)>, parameter: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [Reaction](../-reaction/index.md)<[T](../-node/index.md)>
+abstract fun [createReaction](create-reaction.md)(randomGenerator: RandomGenerator, environment: [Environment](../-environment/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, timeDistribution: [TimeDistribution](../-time-distribution/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, parameter: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [Reaction](../-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
 
 #### Return
 

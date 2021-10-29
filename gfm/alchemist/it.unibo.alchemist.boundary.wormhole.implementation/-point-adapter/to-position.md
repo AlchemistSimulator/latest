@@ -3,7 +3,7 @@
 # toPosition
 
 [jvm]\
-open fun [toPosition](to-position.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](index.md)>): [P](index.md)
+open fun [toPosition](to-position.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../-abstract-wormhole2-d/index.md)>): [P](../-abstract-wormhole2-d/index.md)
 
 #### Return
 

@@ -3,7 +3,7 @@
 # ConcentrationChanged
 
 [jvm]\
-open fun [ConcentrationChanged](-concentration-changed.md)(@[Nonnull](https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html)()node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>, @[Nonnull](https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html)()target: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md))
+open fun [ConcentrationChanged](-concentration-changed.md)(@[Nonnull](https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html)()node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist/-supported-incarnations/get.md)>, @[Nonnull](https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html)()target: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md))
 
 ## Parameters
 

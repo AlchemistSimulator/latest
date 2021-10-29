@@ -3,6 +3,6 @@
 # getEnvPoint
 
 [jvm]\
-open fun [getEnvPoint](get-env-point.md)(viewPoint: [Point](https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html)): [P](../-point-adapter/index.md)
+open fun [getEnvPoint](get-env-point.md)(viewPoint: [Point](https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html)): [P](index.md)
 
 Converts a point from the view-space to the env-space.

@@ -3,7 +3,7 @@
 # BiochemicalReactionBuilder
 
 [jvm]\
-open class [BiochemicalReactionBuilder](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.implementations.environments/-abstract2-d-environment/index.md)>?, [Vector](../../it.unibo.alchemist.model.interfaces.geometry/-vector/index.md)<[P](../../it.unibo.alchemist.model.implementations.environments/-abstract2-d-environment/index.md)>?>
+open class [BiochemicalReactionBuilder](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>?, [Vector](../../it.unibo.alchemist.model.interfaces.geometry/-vector/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>?>
 
 This class implements a builder for chemical reactions.
 
@@ -19,13 +19,13 @@ jvm
 
 | | |
 |---|---|
-| [BiochemicalReactionBuilder](-biochemical-reaction-builder.md) | [jvm]<br>open fun [BiochemicalReactionBuilder](-biochemical-reaction-builder.md)(inc: [BiochemistryIncarnation](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.md)<[P](../../it.unibo.alchemist.model.implementations.environments/-abstract2-d-environment/index.md)>, currentNode: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model.implementations.environments/-abstract2-d-environment/index.md)>)<br>Construct a builder for biochemical reactions. |
+| [BiochemicalReactionBuilder](-biochemical-reaction-builder.md) | [jvm]<br>open fun [BiochemicalReactionBuilder](-biochemical-reaction-builder.md)(inc: [BiochemistryIncarnation](../../it.unibo.alchemist.model/-biochemistry-incarnation/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>, currentNode: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>)<br>Construct a builder for biochemical reactions. |
 
 ## Functions
 
 | Name | Summary |
 |---|---|
 | [build](build.md) | [jvm]<br>open fun [build](build.md)(): [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)><br>Builds the chemical reaction. |
-| [program](program.md) | [jvm]<br>open fun [program](program.md)(program: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.environments/-abstract2-d-environment/index.md)><br>Set the reaction to the passed program string. |
-| [randomGenerator](random-generator.md) | [jvm]<br>open fun [randomGenerator](random-generator.md)(rg: RandomGenerator): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.environments/-abstract2-d-environment/index.md)><br>set the random generator to the passed object. |
-| [timeDistribution](time-distribution.md) | [jvm]<br>open fun [timeDistribution](time-distribution.md)(td: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.environments/-abstract2-d-environment/index.md)><br>Set the time distribution to the passed object. |
+| [program](program.md) | [jvm]<br>open fun [program](program.md)(program: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)><br>Set the reaction to the passed program string. |
+| [randomGenerator](random-generator.md) | [jvm]<br>open fun [randomGenerator](random-generator.md)(rg: RandomGenerator): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)><br>set the random generator to the passed object. |
+| [timeDistribution](time-distribution.md) | [jvm]<br>open fun [timeDistribution](time-distribution.md)(td: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)><br>Set the time distribution to the passed object. |

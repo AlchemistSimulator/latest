@@ -3,7 +3,7 @@
 # computeNeighborhood
 
 [jvm]\
-abstract fun [computeNeighborhood](compute-neighborhood.md)(center: [Node](../-node/index.md)<[T](../-node/index.md)>, environment: [Environment](../-environment/index.md)<[T](../-node/index.md), [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)>): [Neighborhood](../-neighborhood/index.md)<[T](../-node/index.md)>
+abstract fun [computeNeighborhood](compute-neighborhood.md)(center: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, environment: [Environment](../-environment/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>): [Neighborhood](../-neighborhood/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
 
 Produces a new neighborhood for specified node considering its position.
 

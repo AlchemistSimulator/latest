@@ -3,7 +3,7 @@
 # getValue
 
 [jvm]\
-abstract fun [getValue](get-value.md)(p: [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)): [T](../-node/index.md)
+abstract fun [getValue](get-value.md)(p: [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)
 
 #### Return
 

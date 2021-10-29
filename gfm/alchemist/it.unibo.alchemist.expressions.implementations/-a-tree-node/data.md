@@ -3,4 +3,4 @@
 # data
 
 [jvm]\
-private val [data](data.md): [T](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.md)
+private val [data](data.md): [T](index.md)

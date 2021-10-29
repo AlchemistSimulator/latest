@@ -3,4 +3,4 @@
 # setConcentration
 
 [jvm]\
-open fun [setConcentration](set-concentration.md)(molecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), concentration: [T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md))
+open fun [setConcentration](set-concentration.md)(molecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), concentration: [T](../../it.unibo.alchemist/-supported-incarnations/get.md))

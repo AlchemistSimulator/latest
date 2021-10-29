@@ -3,7 +3,7 @@
 # getNodeMovementLength
 
 [jvm]\
-open fun [getNodeMovementLength](get-node-movement-length.md)(target: [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
+open fun [getNodeMovementLength](get-node-movement-length.md)(target: [P](../../it.unibo.alchemist/-supported-incarnations/get.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
 
 #### Return
 

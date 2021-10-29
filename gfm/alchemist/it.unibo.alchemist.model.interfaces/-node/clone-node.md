@@ -3,7 +3,7 @@
 # cloneNode
 
 [jvm]\
-abstract fun [cloneNode](clone-node.md)(currentTime: [Time](../-time/index.md)): [Node](index.md)<[T](index.md)>
+abstract fun [cloneNode](clone-node.md)(currentTime: [Time](../-time/index.md)): [Node](index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
 
 Creates a new Node which is a clone of the current Node. The new Node will have all the current Node's properties, such as reactions and molecules, but it will also have a different ID.
 

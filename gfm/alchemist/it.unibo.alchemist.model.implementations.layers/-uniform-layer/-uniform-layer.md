@@ -3,7 +3,7 @@
 # UniformLayer
 
 [jvm]\
-open fun [UniformLayer](-uniform-layer.md)(level: [T](index.md))
+open fun [UniformLayer](-uniform-layer.md)(level: [T](../../it.unibo.alchemist/-supported-incarnations/get.md))
 
 ## Parameters
 

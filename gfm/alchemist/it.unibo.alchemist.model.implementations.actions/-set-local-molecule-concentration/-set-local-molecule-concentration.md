@@ -3,7 +3,7 @@
 # SetLocalMoleculeConcentration
 
 [jvm]\
-open fun [SetLocalMoleculeConcentration](-set-local-molecule-concentration.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>, target: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), value: [T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md))
+open fun [SetLocalMoleculeConcentration](-set-local-molecule-concentration.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist/-supported-incarnations/get.md)>, target: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), value: [T](../../it.unibo.alchemist/-supported-incarnations/get.md))
 
 ## Parameters
 

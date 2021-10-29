@@ -3,7 +3,7 @@
 # SelectiveAdaptiveRange
 
 [jvm]\
-open class [SelectiveAdaptiveRange](index.md)<[T](index.md), [P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.implementations.actions/-lsa-ascending-gradient-dist/index.md)>?> : [AdaptiveRange](../-adaptive-range/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md), [P](../../it.unibo.alchemist.model.implementations.actions/-lsa-ascending-gradient-dist/index.md)>
+open class [SelectiveAdaptiveRange](index.md)<[T](index.md), [P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.implementations.reactions/-s-a-p-e-r-e-gradient/index.md)>?> : [AdaptiveRange](../-adaptive-range/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md), [P](../../it.unibo.alchemist.model.implementations.reactions/-s-a-p-e-r-e-gradient/index.md)>
 
 ## Parameters
 
@@ -31,7 +31,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [computeNeighborhood](../-adaptive-range/compute-neighborhood.md) | [jvm]<br>fun [computeNeighborhood](../-adaptive-range/compute-neighborhood.md)(center: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md)>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md), [P](../../it.unibo.alchemist.model.implementations.actions/-lsa-ascending-gradient-dist/index.md)>): [Neighborhood](../../it.unibo.alchemist.model.interfaces/-neighborhood/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md)> |
+| [computeNeighborhood](../-adaptive-range/compute-neighborhood.md) | [jvm]<br>fun [computeNeighborhood](../-adaptive-range/compute-neighborhood.md)(center: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md)>, environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md), [P](../../it.unibo.alchemist.model.implementations.reactions/-s-a-p-e-r-e-gradient/index.md)>): [Neighborhood](../../it.unibo.alchemist.model.interfaces/-neighborhood/index.md)<[T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.md)> |
 | [isLocallyConsistent](../-abstract-locally-consistent-linking-rule/is-locally-consistent.md) | [jvm]<br>fun [isLocallyConsistent](../-abstract-locally-consistent-linking-rule/is-locally-consistent.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
 
 ## Properties

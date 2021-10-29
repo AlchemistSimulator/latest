@@ -3,7 +3,7 @@
 # sum
 
 [jvm]\
-open fun [sum](sum.md)(op: [PointAdapter](index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>): [PointAdapter](index.md)<[P](index.md)>
+open fun [sum](sum.md)(op: [PointAdapter](index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>): [PointAdapter](index.md)<[P](../-abstract-wormhole2-d/index.md)>
 
 #### Return
 

@@ -3,7 +3,7 @@
 # getLayout
 
 [jvm]\
-open fun <[T](get-layout.md) : Node?> [getLayout](get-layout.md)(controller: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), layoutName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)
+open fun <[T](get-layout.md) : Node?> [getLayout](get-layout.md)(controller: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), layoutName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)
 
 Loads a layout FXML file returning the base pane defined by the layout.
 
@@ -28,7 +28,7 @@ jvm
 | [java.io.IOException](https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) | if it cannot load the file for some reason |
 
 [jvm]\
-open fun <[T](get-layout.md) : Node?> [getLayout](get-layout.md)(layoutName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)
+open fun <[T](get-layout.md) : Node?> [getLayout](get-layout.md)(layoutName: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [T](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)
 
 Loads a layout FXML file returning the base pane defined by the layout. It doesn't set any controller.
 

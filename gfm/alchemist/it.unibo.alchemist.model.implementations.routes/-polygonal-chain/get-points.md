@@ -3,7 +3,7 @@
 # getPoints
 
 [jvm]\
-fun [getPoints](get-points.md)(): ImmutableList<[P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>
+fun [getPoints](get-points.md)(): ImmutableList<[P](../../it.unibo.alchemist/-supported-incarnations/get.md)>
 
 #### Return
 

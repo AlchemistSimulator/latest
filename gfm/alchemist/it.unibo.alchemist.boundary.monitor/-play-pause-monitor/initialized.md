@@ -3,4 +3,4 @@
 # initialized
 
 [jvm]\
-open fun [initialized](initialized.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../-f-x-time-monitor/index.md), [P](../-f-x-time-monitor/index.md)>)
+open fun [initialized](initialized.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../-f-x-step-monitor/index.md), [P](../-f-x-step-monitor/index.md)>)

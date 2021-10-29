@@ -3,7 +3,7 @@
 # MuseumHall
 
 [jvm]\
-open fun [MuseumHall](-museum-hall.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](../-limited-continuos2-d/index.md), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>)
+open fun [MuseumHall](-museum-hall.md)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.md)<[T](../-continuous2-d-obstacles/index.md), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md)>)
 
 ## Parameters
 

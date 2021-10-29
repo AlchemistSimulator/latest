@@ -3,7 +3,7 @@
 # computeRoute
 
 [jvm]\
-abstract fun [computeRoute](compute-route.md)(currentPos: [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md), finalPos: [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>
+abstract fun [computeRoute](compute-route.md)(currentPos: [P](../../it.unibo.alchemist/-supported-incarnations/get.md), finalPos: [P](../../it.unibo.alchemist/-supported-incarnations/get.md)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.md)<[P](../../it.unibo.alchemist/-supported-incarnations/get.md)>
 
 Computes a route between two positions.
 

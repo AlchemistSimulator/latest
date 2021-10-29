@@ -3,7 +3,7 @@
 # addLayer
 
 [jvm]\
-abstract fun [addLayer](add-layer.md)(m: [Molecule](../-molecule/index.md), l: [Layer](../-layer/index.md)<[T](../-node/index.md), [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)>)
+abstract fun [addLayer](add-layer.md)(m: [Molecule](../-molecule/index.md), l: [Layer](../-layer/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)
 
 Add a [Layer](../-layer/index.md) to the [Environment](index.md).
 

@@ -3,7 +3,7 @@
 # BiomolPresentInEnv
 
 [jvm]\
-open fun [BiomolPresentInEnv](-biomol-present-in-env.md)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model.implementations.environments/-abstract2-d-environment/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>, biomolecule: [Biomolecule](../../it.unibo.alchemist.model.implementations.molecules/-biomolecule/index.md), concentration: [Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html))
+open fun [BiomolPresentInEnv](-biomol-present-in-env.md)(env: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html), [P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html)>, biomolecule: [Biomolecule](../../it.unibo.alchemist.model.implementations.molecules/-biomolecule/index.md), concentration: [Double](https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html))
 
 Initialize condition for extra-cellular environment, implemented as a set of [EnvironmentNode](../../it.unibo.alchemist.model.interfaces/-environment-node/index.md).
 

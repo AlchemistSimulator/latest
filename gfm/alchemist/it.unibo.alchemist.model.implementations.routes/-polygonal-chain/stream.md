@@ -3,7 +3,7 @@
 # stream
 
 [jvm]\
-fun [stream](stream.md)(): [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>
+fun [stream](stream.md)(): [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)<[P](../../it.unibo.alchemist/-supported-incarnations/get.md)>
 
 #### Return
 

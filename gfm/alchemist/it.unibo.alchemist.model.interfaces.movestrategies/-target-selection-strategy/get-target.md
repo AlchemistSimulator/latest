@@ -3,7 +3,7 @@
 # getTarget
 
 [jvm]\
-abstract fun [getTarget](get-target.md)(): [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)
+abstract fun [getTarget](get-target.md)(): [P](../../it.unibo.alchemist/-supported-incarnations/get.md)
 
 #### Return
 

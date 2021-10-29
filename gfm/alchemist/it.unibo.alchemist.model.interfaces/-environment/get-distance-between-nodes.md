@@ -3,7 +3,7 @@
 # getDistanceBetweenNodes
 
 [jvm]\
-abstract fun [getDistanceBetweenNodes](get-distance-between-nodes.md)(n1: [Node](../-node/index.md)<[T](../-node/index.md)>, n2: [Node](../-node/index.md)<[T](../-node/index.md)>): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
+abstract fun [getDistanceBetweenNodes](get-distance-between-nodes.md)(n1: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, n2: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
 
 Measures the distance between two nodes in the environment.
 

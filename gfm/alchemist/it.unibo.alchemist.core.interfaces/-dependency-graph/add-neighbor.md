@@ -3,7 +3,7 @@
 # addNeighbor
 
 [jvm]\
-abstract fun [addNeighbor](add-neighbor.md)(n1: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-node/index.md)>, n2: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-node/index.md)>)
+abstract fun [addNeighbor](add-neighbor.md)(n1: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, n2: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)
 
 Given two nodes, the graph assumes they are now neighbors and calculates the neighborhood dependencies between them.
 
