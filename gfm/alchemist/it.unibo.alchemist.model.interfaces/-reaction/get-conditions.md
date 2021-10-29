@@ -3,7 +3,7 @@
 # getConditions
 
 [jvm]\
-abstract fun [getConditions](get-conditions.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Condition](../-condition/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>>
+abstract fun [getConditions](get-conditions.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Condition](../-condition/index.md)<[T](../-node/index.md)>>
 
 #### Return
 

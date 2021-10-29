@@ -3,4 +3,4 @@
 # initializationComplete
 
 [jvm]\
-open fun [initializationComplete](initialization-complete.md)(atTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md), environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
+open fun [initializationComplete](initialization-complete.md)(atTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md), environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)

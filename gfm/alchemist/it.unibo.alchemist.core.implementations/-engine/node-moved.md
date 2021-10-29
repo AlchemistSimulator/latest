@@ -3,4 +3,4 @@
 # nodeMoved
 
 [jvm]\
-open fun [nodeMoved](node-moved.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](index.md)>)
+open fun [nodeMoved](node-moved.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../-array-indexed-priority-queue/index.md)>)

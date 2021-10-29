@@ -3,7 +3,7 @@
 # removeReaction
 
 [jvm]\
-abstract fun [removeReaction](remove-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)
+abstract fun [removeReaction](remove-reaction.md)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-node/index.md)>)
 
 Removes a reaction from the structure. If the reaction is not present, nothing is done and an Exception is thrown.
 

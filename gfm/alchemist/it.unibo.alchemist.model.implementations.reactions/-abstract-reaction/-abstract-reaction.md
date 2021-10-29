@@ -3,7 +3,7 @@
 # AbstractReaction
 
 [jvm]\
-open fun [AbstractReaction](-abstract-reaction.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md)>, timeDistribution: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md)>)
+open fun [AbstractReaction](-abstract-reaction.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>, timeDistribution: [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>)
 
 Builds a new reaction, starting at time t.
 

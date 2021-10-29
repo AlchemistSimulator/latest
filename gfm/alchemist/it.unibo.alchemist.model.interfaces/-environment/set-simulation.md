@@ -3,7 +3,7 @@
 # setSimulation
 
 [jvm]\
-abstract fun [setSimulation](set-simulation.md)(s: [Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>)
+abstract fun [setSimulation](set-simulation.md)(s: [Simulation](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)<[T](../-node/index.md), [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)>)
 
 ## Parameters
 

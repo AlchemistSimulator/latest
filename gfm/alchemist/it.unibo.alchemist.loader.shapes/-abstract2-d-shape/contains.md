@@ -3,7 +3,7 @@
 # contains
 
 [jvm]\
-fun [contains](contains.md)(position: [P](../../it.unibo.alchemist.loader.deployments/-circle/index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+fun [contains](contains.md)(position: [P](../-rectangle/index.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
 
 #### Return
 

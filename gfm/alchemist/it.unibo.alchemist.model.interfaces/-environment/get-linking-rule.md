@@ -3,7 +3,7 @@
 # getLinkingRule
 
 [jvm]\
-abstract fun [getLinkingRule](get-linking-rule.md)(): [LinkingRule](../-linking-rule/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
+abstract fun [getLinkingRule](get-linking-rule.md)(): [LinkingRule](../-linking-rule/index.md)<[T](../-node/index.md), [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)>
 
 #### Return
 

@@ -3,4 +3,4 @@
 # addReaction
 
 [jvm]\
-fun [addReaction](add-reaction.md)(reactionToAdd: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md)>)
+fun [addReaction](add-reaction.md)(reactionToAdd: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>)

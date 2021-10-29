@@ -3,4 +3,4 @@
 # deserialize
 
 [jvm]\
-abstract fun [deserialize](deserialize.md)(json: JsonElement, typeOfT: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonDeserializationContext): [T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html)
+abstract fun [deserialize](deserialize.md)(json: JsonElement, typeOfT: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonDeserializationContext): [T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)

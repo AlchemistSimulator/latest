@@ -3,7 +3,7 @@
 # JEffectRepresentation
 
 [jvm]\
-open fun [JEffectRepresentation](-j-effect-representation.md)(e: [Effect](../-effect/index.md), main: [GraphicalOutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-graphical-output-monitor/index.md)<[T](../../it.unibo.alchemist.boundary.monitors/-map-display/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
+open fun [JEffectRepresentation](-j-effect-representation.md)(e: [Effect](../-effect/index.md), main: [GraphicalOutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-graphical-output-monitor/index.md)<[T](../../it.unibo.alchemist.boundary.gui.monitors/-j-output-monitor-representation/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
 
 Creates a new representation for the effect and monitor in input.
 

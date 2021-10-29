@@ -3,7 +3,7 @@
 # PropertyTypeAdapter
 
 [jvm]\
-interface [PropertyTypeAdapter](index.md)<[T](index.md) : Property<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>?> : JsonSerializer<[T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html)> , JsonDeserializer<[T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html)> 
+interface [PropertyTypeAdapter](index.md)<[T](index.md) : Property<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>?> : JsonSerializer<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)> , JsonDeserializer<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)> 
 
 This interface lets implement classes for JavaFX custom property serialization.
 
@@ -19,8 +19,8 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [deserialize](deserialize.md) | [jvm]<br>abstract fun [deserialize](deserialize.md)(json: JsonElement, typeOfT: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonDeserializationContext): [T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html) |
-| [serialize](serialize.md) | [jvm]<br>abstract fun [serialize](serialize.md)(src: [T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html), typeOfSrc: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonSerializationContext): JsonElement |
+| [deserialize](deserialize.md) | [jvm]<br>abstract fun [deserialize](deserialize.md)(json: JsonElement, typeOfT: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonDeserializationContext): [T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md) |
+| [serialize](serialize.md) | [jvm]<br>abstract fun [serialize](serialize.md)(src: [T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md), typeOfSrc: [Type](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Type.html), context: JsonSerializationContext): JsonElement |
 
 ## Properties
 

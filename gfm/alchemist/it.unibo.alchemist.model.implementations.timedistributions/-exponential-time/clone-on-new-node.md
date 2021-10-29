@@ -3,7 +3,7 @@
 # cloneOnNewNode
 
 [jvm]\
-open fun [cloneOnNewNode](clone-on-new-node.md)(destination: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md)>, currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)): [ExponentialTime](index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md)>
+open fun [cloneOnNewNode](clone-on-new-node.md)(destination: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>, currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)): [ExponentialTime](index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>
 
 Must be overridden by subclasses returning the correct instance.
 

@@ -25,4 +25,4 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getTarget](../-follow-target/get-target.md) | [jvm]<br>fun [getTarget](../-follow-target/get-target.md)(): [P](../../it.unibo.alchemist.model.interfaces/-timed-route/index.md) |
+| [getTarget](../-follow-target/get-target.md) | [jvm]<br>fun [getTarget](../-follow-target/get-target.md)(): [P](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md) |

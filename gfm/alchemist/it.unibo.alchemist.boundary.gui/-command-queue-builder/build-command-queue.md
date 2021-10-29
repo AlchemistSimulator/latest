@@ -3,7 +3,7 @@
 # buildCommandQueue
 
 [jvm]\
-open fun [buildCommandQueue](build-command-queue.md)(): [Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)<[DrawCommand](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>>
+open fun [buildCommandQueue](build-command-queue.md)(): [Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)<[DrawCommand](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)>>
 
 Builds the queue of commands.
 

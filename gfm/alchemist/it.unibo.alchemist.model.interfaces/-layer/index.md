@@ -5,7 +5,7 @@
 [jvm]\
 @[FunctionalInterface](https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html)()
 
-interface [Layer](index.md)<[T](index.md), [P](index.md) : [Position](../-position/index.md)<out [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
+interface [Layer](index.md)<[T](index.md), [P](index.md) : [Position](../-position/index.md)<out [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
 
 Interface for static layer, containing a substance or a molecule with a spatial distribution.
 
@@ -22,7 +22,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getValue](get-value.md) | [jvm]<br>abstract fun [getValue](get-value.md)(p: [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<br>the [Position](../-position/index.md). |
+| [getValue](get-value.md) | [jvm]<br>abstract fun [getValue](get-value.md)(p: [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)): [T](../-node/index.md)<br>the [Position](../-position/index.md). |
 
 ## Inheritors
 

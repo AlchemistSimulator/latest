@@ -3,7 +3,7 @@
 # JOutputMonitorRepresentation
 
 [jvm]\
-open fun [JOutputMonitorRepresentation](-j-output-monitor-representation.md)(mon: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](../../it.unibo.alchemist.boundary.monitors/-map-display/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
+open fun [JOutputMonitorRepresentation](-j-output-monitor-representation.md)(mon: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
 
 ## Parameters
 

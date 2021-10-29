@@ -3,7 +3,7 @@
 # cloneOnNewNode
 
 [jvm]\
-abstract fun [cloneOnNewNode](clone-on-new-node.md)(destination: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, currentTime: [Time](../-time/index.md)): [TimeDistribution](index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>
+abstract fun [cloneOnNewNode](clone-on-new-node.md)(destination: [Node](../-node/index.md)<[T](../-node/index.md)>, currentTime: [Time](../-time/index.md)): [TimeDistribution](index.md)<[T](../-node/index.md)>
 
 #### Return
 

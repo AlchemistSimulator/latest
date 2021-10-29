@@ -3,4 +3,4 @@
 # nodeRemoved
 
 [jvm]\
-open fun [nodeRemoved](node-removed.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](index.md)>, oldNeighborhood: [Neighborhood](../../it.unibo.alchemist.model.interfaces/-neighborhood/index.md)<[T](index.md)>)
+open fun [nodeRemoved](node-removed.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../-array-indexed-priority-queue/index.md)>, oldNeighborhood: [Neighborhood](../../it.unibo.alchemist.model.interfaces/-neighborhood/index.md)<[T](../-array-indexed-priority-queue/index.md)>)

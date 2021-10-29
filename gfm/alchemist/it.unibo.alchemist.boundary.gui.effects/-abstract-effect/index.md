@@ -3,7 +3,7 @@
 # AbstractEffect
 
 [jvm]\
-abstract class [AbstractEffect](index.md)<[P](index.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>?> : [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)> 
+abstract class [AbstractEffect](index.md)<[P](index.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)>?> : [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)> 
 
 It models an abstract implementation of the [effect](../-effect-f-x/index.md) interface, implementing default name and visibility properties. 
 
@@ -21,7 +21,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [computeDrawCommands](compute-draw-commands.md) | [jvm]<br>open fun <[T](compute-draw-commands.md)> [computeDrawCommands](compute-draw-commands.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html), [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>): [Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)<[DrawCommand](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>><br>Computes a queue of commands to Draw something. |
+| [computeDrawCommands](compute-draw-commands.md) | [jvm]<br>open fun <[T](compute-draw-commands.md)> [computeDrawCommands](compute-draw-commands.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md), [P](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)>): [Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)<[DrawCommand](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)>><br>Computes a queue of commands to Draw something. |
 | [equals](equals.md) | [jvm]<br>abstract fun [equals](equals.md)(obj: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
 | [hashCode](hash-code.md) | [jvm]<br>abstract fun [hashCode](hash-code.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [isVisible](is-visible.md) | [jvm]<br>fun [isVisible](is-visible.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Gets the visibility of the effect. |

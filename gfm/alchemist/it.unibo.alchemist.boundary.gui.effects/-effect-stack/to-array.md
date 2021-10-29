@@ -6,8 +6,8 @@
 
 @NotNull()
 
-open fun [toArray](to-array.md)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>
+open fun [toArray](to-array.md)(): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<@NotNull()[Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>
 
 @NotNull()
 
-open fun <[T](to-array.md)> [toArray](to-array.md)(a: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html)>): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html)>
+open fun <[T](to-array.md)> [toArray](to-array.md)(a: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)>): [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md)>

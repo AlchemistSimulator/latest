@@ -3,4 +3,4 @@
 # actions
 
 [jvm]\
-private open var [actions](actions.md): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<out [Action](../../it.unibo.alchemist.model.interfaces/-action/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md)>>
+private open var [actions](actions.md): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<out [Action](../../it.unibo.alchemist.model.interfaces/-action/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>>

@@ -3,4 +3,4 @@
 # timeDistribution
 
 [jvm]\
-private val [timeDistribution](time-distribution.md): [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target/index.md)>
+private val [timeDistribution](time-distribution.md): [TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.md)>

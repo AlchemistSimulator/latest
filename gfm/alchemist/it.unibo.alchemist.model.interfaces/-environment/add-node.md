@@ -3,7 +3,7 @@
 # addNode
 
 [jvm]\
-abstract fun [addNode](add-node.md)(node: [Node](../-node/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)>, p: [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md))
+abstract fun [addNode](add-node.md)(node: [Node](../-node/index.md)<[T](../-node/index.md)>, p: [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md))
 
 This method allows to add a new node to this environment. The environment is responsible to call the right method of the simulation in order to ensure that the reaction is properly scheduled.
 

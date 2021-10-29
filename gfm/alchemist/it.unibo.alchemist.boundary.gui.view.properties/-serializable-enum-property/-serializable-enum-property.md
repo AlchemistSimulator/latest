@@ -8,7 +8,7 @@ open fun [SerializableEnumProperty](-serializable-enum-property.md)()
 The constructor of {@code ObjectPropertyBase}.
 
 [jvm]\
-open fun [SerializableEnumProperty](-serializable-enum-property.md)(initialValue: [T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html))
+open fun [SerializableEnumProperty](-serializable-enum-property.md)(initialValue: [T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md))
 
 The constructor of {@code ObjectPropertyBase}.
 
@@ -34,7 +34,7 @@ jvm
 | name | the name of this {@code SimpleObjectProperty} |
 
 [jvm]\
-open fun [SerializableEnumProperty](-serializable-enum-property.md)(name: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), initialValue: [T](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html))
+open fun [SerializableEnumProperty](-serializable-enum-property.md)(name: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), initialValue: [T](../../it.unibo.alchemist.boundary.monitor/-f-x-time-monitor/index.md))
 
 The constructor of {@code ObjectPropertyBase}.
 
