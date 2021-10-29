@@ -15,7 +15,6 @@ title: alchemist
 | Name |
 |---|
 | [it.unibo.alchemist](alchemist/it.unibo.alchemist/index.html) |
-| [it.unibo.alchemist.biochemistrydsl](alchemist/it.unibo.alchemist.biochemistrydsl/index.html) |
 | [it.unibo.alchemist.boundary](alchemist/it.unibo.alchemist.boundary/index.html) |
 | [it.unibo.alchemist.boundary.gpsload.api](alchemist/it.unibo.alchemist.boundary.gpsload.api/index.html) |
 | [it.unibo.alchemist.boundary.gpsload.impl](alchemist/it.unibo.alchemist.boundary.gpsload.impl/index.html) |

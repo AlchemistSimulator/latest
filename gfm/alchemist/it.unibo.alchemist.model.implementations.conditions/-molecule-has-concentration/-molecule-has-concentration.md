@@ -3,7 +3,7 @@
 # MoleculeHasConcentration
 
 [jvm]\
-open fun [MoleculeHasConcentration](-molecule-has-concentration.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>, molecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), value: [T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md))
+open fun [MoleculeHasConcentration](-molecule-has-concentration.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)>, molecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), value: [T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md))
 
 ## Parameters
 

@@ -10,7 +10,7 @@ title: getLayers
 
 
 [jvm]\
-abstract fun [getLayers](get-layers.html)(): ListSet<[Layer](../-layer/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html), [P](../-position2-d/index.html)>>
+abstract fun [getLayers](get-layers.html)(): ListSet<[Layer](../-layer/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
 
 
 

@@ -10,7 +10,7 @@ title: makePosition
 
 
 [jvm]\
-abstract fun [makePosition](make-position.html)(coordinates: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[Number](https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html)>): [P](../-position2-d/index.html)
+abstract fun [makePosition](make-position.html)(coordinates: [Array](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)<[Number](https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html)>): [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)
 
 
 

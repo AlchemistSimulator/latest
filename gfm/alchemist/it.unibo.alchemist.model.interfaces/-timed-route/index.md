@@ -3,7 +3,7 @@
 # TimedRoute
 
 [jvm]\
-interface [TimedRoute](index.md)<[P](index.md) : [Position](../-position/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>?> : [Route](../-route/index.md)<[P](../../it.unibo.alchemist.model.implementations.movestrategies.routing/-ignore-streets/index.md)> 
+interface [TimedRoute](index.md)<[P](index.md) : [Position](../-position/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>?> : [Route](../-route/index.md)<[P](index.md)> 
 
 Route with total trip time to cross it.
 
@@ -20,14 +20,14 @@ jvm
 | Name | Summary |
 |---|---|
 | [forEach](../../it.unibo.alchemist.expressions.implementations/-list-tree-node/index.md#-655675525%2FFunctions%2F-267951372) | [jvm]<br>open fun [forEach](../../it.unibo.alchemist.expressions.implementations/-list-tree-node/index.md#-655675525%2FFunctions%2F-267951372)(action: [Consumer](https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>) |
-| [getPoint](../-route/get-point.md) | [jvm]<br>abstract fun [getPoint](../-route/get-point.md)(p: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [P](../../it.unibo.alchemist.model.implementations.movestrategies.routing/-ignore-streets/index.md) |
-| [getPoints](../-route/get-points.md) | [jvm]<br>abstract fun [getPoints](../-route/get-points.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](../../it.unibo.alchemist.model.implementations.movestrategies.routing/-ignore-streets/index.md)> |
+| [getPoint](../-route/get-point.md) | [jvm]<br>abstract fun [getPoint](../-route/get-point.md)(p: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)): [P](index.md) |
+| [getPoints](../-route/get-points.md) | [jvm]<br>abstract fun [getPoints](../-route/get-points.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](index.md)> |
 | [getTripTime](get-trip-time.md) | [jvm]<br>abstract fun [getTripTime](get-trip-time.md)(): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>the total trip time |
-| [iterator](../../it.unibo.alchemist.loader.variables/-arbitrary-variable/index.md#-1606146105%2FFunctions%2F-267951372) | [jvm]<br>abstract fun [iterator](../../it.unibo.alchemist.loader.variables/-arbitrary-variable/index.md#-1606146105%2FFunctions%2F-267951372)(): [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.md)> |
+| [iterator](../../it.unibo.alchemist.loader.variables/-arbitrary-variable/index.md#-1606146105%2FFunctions%2F-267951372) | [jvm]<br>abstract fun [iterator](../../it.unibo.alchemist.loader.variables/-arbitrary-variable/index.md#-1606146105%2FFunctions%2F-267951372)(): [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)> |
 | [length](../-route/length.md) | [jvm]<br>abstract fun [length](../-route/length.md)(): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |
 | [size](../-route/size.md) | [jvm]<br>abstract fun [size](../-route/size.md)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
-| [spliterator](../../it.unibo.alchemist.expressions.implementations/-list-tree-node/index.md#-677603448%2FFunctions%2F-267951372) | [jvm]<br>open fun [spliterator](../../it.unibo.alchemist.expressions.implementations/-list-tree-node/index.md#-677603448%2FFunctions%2F-267951372)(): [Spliterator](https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.target/-follow-target-on-map/index.md)> |
-| [stream](../-route/stream.md) | [jvm]<br>abstract fun [stream](../-route/stream.md)(): [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)<[P](../../it.unibo.alchemist.model.implementations.movestrategies.routing/-ignore-streets/index.md)> |
+| [spliterator](../../it.unibo.alchemist.expressions.implementations/-list-tree-node/index.md#-677603448%2FFunctions%2F-267951372) | [jvm]<br>open fun [spliterator](../../it.unibo.alchemist.expressions.implementations/-list-tree-node/index.md#-677603448%2FFunctions%2F-267951372)(): [Spliterator](https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)> |
+| [stream](../-route/stream.md) | [jvm]<br>abstract fun [stream](../-route/stream.md)(): [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)<[P](index.md)> |
 
 ## Inheritors
 

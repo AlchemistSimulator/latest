@@ -3,7 +3,7 @@
 # addEffectGroup
 
 [jvm]\
-abstract fun [addEffectGroup](add-effect-group.md)(effects: [EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>)
+abstract fun [addEffectGroup](add-effect-group.md)(effects: [EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>)
 
 Add the [EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md) in the collection to the [Effects](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.md) to draw.
 

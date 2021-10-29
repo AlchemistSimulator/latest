@@ -21,7 +21,7 @@ Interface for time representation.
 
 | Name | Summary |
 |---|---|
-| [compareTo](../-g-p-s-point/index.html#-1554281679%2FFunctions%2F-134779887) | [jvm]<br>abstract fun [compareTo](../-g-p-s-point/index.html#-1554281679%2FFunctions%2F-134779887)(p: [T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [compareTo](../-g-p-s-point/index.html#-1554281679%2FFunctions%2F-134779887) | [jvm]<br>abstract fun [compareTo](../-g-p-s-point/index.html#-1554281679%2FFunctions%2F-134779887)(p: [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [isInfinite](is-infinite.html) | [jvm]<br>abstract fun [isInfinite](is-infinite.html)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)<br>Verifies if the [Time](index.html) is set at infinite, namely if the event will never happen. |
 | [minus](minus.html) | [jvm]<br>abstract fun [minus](minus.html)(dt: [Time](index.html)): [Time](index.html)<br>Allows to subtract a [Time](index.html) to this [Time](index.html). |
 | [plus](plus.html) | [jvm]<br>abstract fun [plus](plus.html)(dt: [Time](index.html)): [Time](index.html)<br>Allows to add a [Time](index.html) to this [Time](index.html). |

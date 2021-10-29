@@ -5,7 +5,7 @@
 [jvm]\
 @[FunctionalInterface](https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html)()
 
-interface [SpeedSelectionStrategy](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<out [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
+interface [SpeedSelectionStrategy](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<out [P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
 
 Given the current target [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md), this strategy interface computes the current [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)'s speed.
 
@@ -21,7 +21,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getNodeMovementLength](get-node-movement-length.md) | [jvm]<br>abstract fun [getNodeMovementLength](get-node-movement-length.md)(target: [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>the [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md) describing where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.md) is directed |
+| [getNodeMovementLength](get-node-movement-length.md) | [jvm]<br>abstract fun [getNodeMovementLength](get-node-movement-length.md)(target: [P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>the [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md) describing where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.md) is directed |
 
 ## Inheritors
 

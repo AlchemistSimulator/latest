@@ -10,7 +10,7 @@ title: getTimeDistribution
 
 
 [jvm]\
-abstract fun [getTimeDistribution](get-time-distribution.html)(): [TimeDistribution](../-time-distribution/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>
+abstract fun [getTimeDistribution](get-time-distribution.html)(): [TimeDistribution](../-time-distribution/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

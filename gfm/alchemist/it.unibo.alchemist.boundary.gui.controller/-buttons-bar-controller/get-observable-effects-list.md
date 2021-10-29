@@ -3,7 +3,7 @@
 # getObservableEffectsList
 
 [jvm]\
-open fun [getObservableEffectsList](get-observable-effects-list.md)(): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>>
+open fun [getObservableEffectsList](get-observable-effects-list.md)(): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>>
 
 Getter method for the {@code List} of groups of [effects](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.md) in the side drawer.
 

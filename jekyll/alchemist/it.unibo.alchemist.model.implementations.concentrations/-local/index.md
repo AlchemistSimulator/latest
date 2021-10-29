@@ -29,7 +29,7 @@ class [Local](index.html) : [Concentration](../../it.unibo.alchemist.model.inter
 | Name | Summary |
 |---|---|
 | [equals](equals.html) | [jvm]<br>open fun [equals](equals.html)(obj: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [getContent](../../it.unibo.alchemist.model.interfaces/-concentration/get-content.html) | [jvm]<br>abstract fun [getContent](../../it.unibo.alchemist.model.interfaces/-concentration/get-content.html)(): [T](../../it.unibo.alchemist.model.implementations.actions/-abstract-action/index.html) |
+| [getContent](../../it.unibo.alchemist.model.interfaces/-concentration/get-content.html) | [jvm]<br>abstract fun [getContent](../../it.unibo.alchemist.model.interfaces/-concentration/get-content.html)(): [T](../../it.unibo.alchemist.model.implementations.conditions/-abstract-condition/index.html) |
 | [hashCode](hash-code.html) | [jvm]<br>open fun [hashCode](hash-code.html)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [toString](to-string.html) | [jvm]<br>open fun [toString](to-string.html)(): [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html) |
 

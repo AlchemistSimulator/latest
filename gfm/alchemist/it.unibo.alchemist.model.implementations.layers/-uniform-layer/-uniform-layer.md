@@ -3,7 +3,7 @@
 # UniformLayer
 
 [jvm]\
-open fun [UniformLayer](-uniform-layer.md)(level: [T](../-step-layer/index.md))
+open fun [UniformLayer](-uniform-layer.md)(level: [T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md))
 
 ## Parameters
 

@@ -14,7 +14,7 @@ title: Layer
 
 
 
-interface [Layer](index.html)<[T](index.html), [P](index.html) : [Position](../-position/index.html)<out [P](../-position2-d/index.html)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
+interface [Layer](index.html)<[T](index.html), [P](index.html) : [Position](../-position/index.html)<out [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
 
 Interface for static layer, containing a substance or a molecule with a spatial distribution.
 
@@ -37,7 +37,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getValue](get-value.html) | [jvm]<br>abstract fun [getValue](get-value.html)(p: [P](../-position2-d/index.html)): [T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)<br>the [Position](../-position/index.html). |
+| [getValue](get-value.html) | [jvm]<br>abstract fun [getValue](get-value.html)(p: [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)<br>the [Position](../-position/index.html). |
 
 
 ## Inheritors

@@ -10,7 +10,7 @@ title: getValue
 
 
 [jvm]\
-abstract fun [getValue](get-value.html)(p: [P](../-position2-d/index.html)): [T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)
+abstract fun [getValue](get-value.html)(p: [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)
 
 
 

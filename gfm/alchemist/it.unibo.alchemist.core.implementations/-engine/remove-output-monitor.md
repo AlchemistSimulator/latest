@@ -3,4 +3,4 @@
 # removeOutputMonitor
 
 [jvm]\
-open fun [removeOutputMonitor](remove-output-monitor.md)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](../-array-indexed-priority-queue/index.md), [P](index.md)>)
+open fun [removeOutputMonitor](remove-output-monitor.md)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](index.md), [P](index.md)>)

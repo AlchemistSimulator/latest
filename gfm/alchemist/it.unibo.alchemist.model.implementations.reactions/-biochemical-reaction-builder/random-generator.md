@@ -3,7 +3,7 @@
 # randomGenerator
 
 [jvm]\
-open fun [randomGenerator](random-generator.md)(rg: RandomGenerator): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.environments/-abstract2-d-environment/index.md)>
+open fun [randomGenerator](random-generator.md)(rg: RandomGenerator): [BiochemicalReactionBuilder](index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-biomol-gradient-layer/index.md)>
 
 set the random generator to the passed object.
 

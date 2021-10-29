@@ -10,7 +10,7 @@ title: getEnvironment
 
 
 [jvm]\
-abstract fun [getEnvironment](get-environment.html)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../-scheduler/index.html), [P](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)>
+abstract fun [getEnvironment](get-environment.html)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

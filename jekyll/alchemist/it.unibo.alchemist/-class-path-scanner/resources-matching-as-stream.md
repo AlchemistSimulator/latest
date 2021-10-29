@@ -26,4 +26,8 @@ fun [resourcesMatchingAsStream](resources-matching-as-stream.html)(regex: [Strin
 
 
 
+This function returns a list of all the resources in a certain (optional) package matching a regular expression.
+
+
+
 

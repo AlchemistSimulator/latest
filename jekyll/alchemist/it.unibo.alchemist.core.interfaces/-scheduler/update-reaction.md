@@ -10,7 +10,7 @@ title: updateReaction
 
 
 [jvm]\
-abstract fun [updateReaction](update-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](index.html)>)
+abstract fun [updateReaction](update-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)
 
 
 

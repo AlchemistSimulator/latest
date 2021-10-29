@@ -10,7 +10,7 @@ title: addNode
 
 
 [jvm]\
-abstract fun [addNode](add-node.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>, p: [P](../-position2-d/index.html))
+abstract fun [addNode](add-node.html)(node: [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>, p: [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html))
 
 
 

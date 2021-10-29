@@ -3,4 +3,4 @@
 # getNext
 
 [jvm]\
-open fun [getNext](get-next.md)(): [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](index.md)>
+open fun [getNext](get-next.md)(): [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../-engine/index.md)>

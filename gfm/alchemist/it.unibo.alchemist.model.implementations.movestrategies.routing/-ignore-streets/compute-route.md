@@ -3,4 +3,4 @@
 # computeRoute
 
 [jvm]\
-open fun [computeRoute](compute-route.md)(currentPos: [P](index.md), finalPos: [P](index.md)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.md)<[P](index.md)>
+open fun [computeRoute](compute-route.md)(currentPos: [P](../../it.unibo.alchemist.model.interfaces/-timed-route/index.md), finalPos: [P](../../it.unibo.alchemist.model.interfaces/-timed-route/index.md)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.md)<[P](../../it.unibo.alchemist.model.interfaces/-timed-route/index.md)>

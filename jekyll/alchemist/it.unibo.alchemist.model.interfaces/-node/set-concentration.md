@@ -10,7 +10,7 @@ title: setConcentration
 
 
 [jvm]\
-abstract fun [setConcentration](set-concentration.html)(mol: [Molecule](../-molecule/index.html), c: [T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html))
+abstract fun [setConcentration](set-concentration.html)(mol: [Molecule](../-molecule/index.html), c: [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html))
 
 
 

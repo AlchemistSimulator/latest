@@ -3,4 +3,4 @@
 # cloneCondition
 
 [jvm]\
-abstract fun [cloneCondition](clone-condition.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)>): [AbstractNeighborCondition](index.md)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)>
+abstract fun [cloneCondition](clone-condition.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.md)>, reaction: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.md)>): [AbstractNeighborCondition](index.md)<[T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.md)>

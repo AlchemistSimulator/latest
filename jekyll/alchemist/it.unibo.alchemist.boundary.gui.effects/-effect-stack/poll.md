@@ -10,7 +10,7 @@ title: poll
 
 
 [jvm]\
-open fun [poll](poll.html)(): [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>
+open fun [poll](poll.html)(): [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>
 
 
 

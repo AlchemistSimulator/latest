@@ -3,7 +3,7 @@
 # getPoints
 
 [jvm]\
-abstract fun [getPoints](get-points.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>
+abstract fun [getPoints](get-points.md)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)>
 
 #### Return
 

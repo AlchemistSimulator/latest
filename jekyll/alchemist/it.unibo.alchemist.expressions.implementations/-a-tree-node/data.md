@@ -10,7 +10,7 @@ title: data
 
 
 [jvm]\
-private val [data](data.html): [T](../../it.unibo.alchemist.expressions.interfaces/-i-tree-node/index.html)
+private val [data](data.html): [T](index.html)
 
 
 

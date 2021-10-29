@@ -10,7 +10,7 @@ title: cloneNode
 
 
 [jvm]\
-abstract fun [cloneNode](clone-node.html)(currentTime: [Time](../-time/index.html)): [Node](index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>
+abstract fun [cloneNode](clone-node.html)(currentTime: [Time](../-time/index.html)): [Node](index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

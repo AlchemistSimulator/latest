@@ -3,7 +3,7 @@
 # ConstantSpeed
 
 [jvm]\
-class [ConstantSpeed](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>?> : [SpeedSelectionStrategy](../../it.unibo.alchemist.model.interfaces.movestrategies/-speed-selection-strategy/index.md)<[P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)> 
+class [ConstantSpeed](index.md)<[P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<[P](../-interact-with-others/index.md)>?> : [SpeedSelectionStrategy](../../it.unibo.alchemist.model.interfaces.movestrategies/-speed-selection-strategy/index.md)<[P](../-interact-with-others/index.md)> 
 
 This strategy makes the node move at an average constant speed, which is influenced by the [it.unibo.alchemist.model.interfaces.TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md) of the [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md) hosting this [it.unibo.alchemist.model.interfaces.Action](../../it.unibo.alchemist.model.interfaces/-action/index.md). This action tries to normalize on the [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md) rate, but if the [it.unibo.alchemist.model.interfaces.TimeDistribution](../../it.unibo.alchemist.model.interfaces/-time-distribution/index.md) has a high variance, the movements on the map will inherit this tract.
 
@@ -25,4 +25,4 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getNodeMovementLength](get-node-movement-length.md) | [jvm]<br>open fun [getNodeMovementLength](get-node-movement-length.md)(target: [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>the [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md) describing where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.md) is directed |
+| [getNodeMovementLength](get-node-movement-length.md) | [jvm]<br>open fun [getNodeMovementLength](get-node-movement-length.md)(target: [P](../-interact-with-others/index.md)): [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>the [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md) describing where the [it.unibo.alchemist.model.interfaces.Node](../../it.unibo.alchemist.model.interfaces/-node/index.md) is directed |

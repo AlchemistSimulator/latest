@@ -3,4 +3,4 @@
 # moveNodeToPosition
 
 [jvm]\
-open fun [moveNodeToPosition](move-node-to-position.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-connection-beam/index.md)>, newPos: [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md))
+open fun [moveNodeToPosition](move-node-to-position.md)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](index.md)>, newPos: [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.md))

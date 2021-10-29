@@ -10,7 +10,7 @@ title: chooseAndLoad
 
 
 [jvm]\
-open fun <[P](choose-and-load.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>?> [chooseAndLoad](choose-and-load.html)(): [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.html)>
+open fun <[P](choose-and-load.html) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)<out [P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>?> [chooseAndLoad](choose-and-load.html)(): [EffectFX](../-effect-f-x/index.html)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.html)>
 
 
 

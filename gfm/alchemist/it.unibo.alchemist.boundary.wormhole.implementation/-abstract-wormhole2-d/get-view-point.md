@@ -3,6 +3,6 @@
 # getViewPoint
 
 [jvm]\
-open fun [getViewPoint](get-view-point.md)(envPoint: [P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.md)): [Point](https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html)
+open fun [getViewPoint](get-view-point.md)(envPoint: [P](../-point-adapter/index.md)): [Point](https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html)
 
 Converts a point from the env-space to the view-space.

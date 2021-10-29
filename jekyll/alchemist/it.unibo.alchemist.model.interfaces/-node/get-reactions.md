@@ -10,7 +10,7 @@ title: getReactions
 
 
 [jvm]\
-abstract fun [getReactions](get-reactions.html)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Reaction](../-reaction/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>>
+abstract fun [getReactions](get-reactions.html)(): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Reaction](../-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>>
 
 
 

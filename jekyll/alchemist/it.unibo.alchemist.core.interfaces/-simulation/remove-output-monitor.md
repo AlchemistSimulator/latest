@@ -10,7 +10,7 @@ title: removeOutputMonitor
 
 
 [jvm]\
-abstract fun [removeOutputMonitor](remove-output-monitor.html)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)<[T](../-scheduler/index.html), [P](../../it.unibo.alchemist.model.interfaces/-position2-d/index.html)>)
+abstract fun [removeOutputMonitor](remove-output-monitor.html)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)
 
 
 

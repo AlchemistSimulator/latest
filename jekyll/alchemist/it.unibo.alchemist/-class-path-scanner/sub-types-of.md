@@ -41,4 +41,8 @@ inline fun <[T](sub-types-of.html)> [subTypesOf](sub-types-of.html)(inPackage: [
 
 
 
+This function loads all subtypes of the provided Java class that can be discovered on the current classpath.
+
+
+
 

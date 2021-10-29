@@ -3,7 +3,7 @@
 # ButtonsBarController
 
 [jvm]\
-open class [ButtonsBarController](index.md)<[P](index.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>?> : Initializable
+open class [ButtonsBarController](index.md)<[P](index.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>?> : Initializable
 
 This class models a JavaFX controller for ButtonsBarLayout.fxml.
 
@@ -28,7 +28,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getObservableEffectsList](get-observable-effects-list.md) | [jvm]<br>open fun [getObservableEffectsList](get-observable-effects-list.md)(): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>><br>Getter method for the {@code List} of groups of [effects](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.md) in the side drawer. |
+| [getObservableEffectsList](get-observable-effects-list.md) | [jvm]<br>open fun [getObservableEffectsList](get-observable-effects-list.md)(): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>><br>Getter method for the {@code List} of groups of [effects](../../it.unibo.alchemist.boundary.gui.effects/-effect-f-x/index.md) in the side drawer. |
 | [initialize](initialize.md) | [jvm]<br>open fun [initialize](initialize.md)(location: [URL](https://docs.oracle.com/javase/8/docs/api/java/net/URL.html), resources: [ResourceBundle](https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html)) |
 | [setStepMonitor](set-step-monitor.md) | [jvm]<br>fun [setStepMonitor](set-step-monitor.md)(stepMonitor: Label)<br>Sets the step monitor label. |
 | [setTimeMonitor](set-time-monitor.md) | [jvm]<br>fun [setTimeMonitor](set-time-monitor.md)(timeMonitor: Label)<br>Sets the time monitor label. |

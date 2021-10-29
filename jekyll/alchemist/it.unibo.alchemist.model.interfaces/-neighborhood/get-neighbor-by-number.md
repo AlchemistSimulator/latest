@@ -18,7 +18,7 @@ title: getNeighborByNumber
 
 
 
-~~abstract~~ ~~fun~~ [~~getNeighborByNumber~~](get-neighbor-by-number.html)~~(~~~~num~~~~:~~ [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)~~)~~~~:~~ [Node](../-node/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>
+~~abstract~~ ~~fun~~ [~~getNeighborByNumber~~](get-neighbor-by-number.html)~~(~~~~num~~~~:~~ [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)~~)~~~~:~~ [Node](../-node/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>
 
 
 

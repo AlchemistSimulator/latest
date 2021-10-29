@@ -3,4 +3,4 @@
 # environment
 
 [jvm]\
-private val [environment](environment.md): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../-array-indexed-priority-queue/index.md), [P](index.md)>
+private val [environment](environment.md): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](index.md), [P](index.md)>

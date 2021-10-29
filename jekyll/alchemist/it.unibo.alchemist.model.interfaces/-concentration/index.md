@@ -36,7 +36,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [getContent](get-content.html) | [jvm]<br>abstract fun [getContent](get-content.html)(): [T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)<br>Allows to access the content of the concentration. |
+| [getContent](get-content.html) | [jvm]<br>abstract fun [getContent](get-content.html)(): [T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)<br>Allows to access the content of the concentration. |
 
 
 ## Inheritors

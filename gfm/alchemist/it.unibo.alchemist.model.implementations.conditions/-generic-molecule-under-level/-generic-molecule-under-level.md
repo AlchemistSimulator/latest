@@ -3,7 +3,7 @@
 # GenericMoleculeUnderLevel
 
 [jvm]\
-open fun [GenericMoleculeUnderLevel](-generic-molecule-under-level.md)(n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md)>, mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), quantity: [T](../../it.unibo.alchemist.model.implementations.environments/-limited-continuos2-d/index.md))
+open fun [GenericMoleculeUnderLevel](-generic-molecule-under-level.md)(n: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.md)>, mol: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.md), quantity: [T](../../it.unibo.alchemist.model.implementations.nodes/-abstract-node/index.md))
 
 ## Parameters
 

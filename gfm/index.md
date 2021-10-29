@@ -7,7 +7,6 @@
 | Name |
 |---|
 | [it.unibo.alchemist](alchemist/it.unibo.alchemist/index.md) |
-| [it.unibo.alchemist.biochemistrydsl](alchemist/it.unibo.alchemist.biochemistrydsl/index.md) |
 | [it.unibo.alchemist.boundary](alchemist/it.unibo.alchemist.boundary/index.md) |
 | [it.unibo.alchemist.boundary.gpsload.api](alchemist/it.unibo.alchemist.boundary.gpsload.api/index.md) |
 | [it.unibo.alchemist.boundary.gpsload.impl](alchemist/it.unibo.alchemist.boundary.gpsload.impl/index.md) |

@@ -10,7 +10,7 @@ title: addReaction
 
 
 [jvm]\
-abstract fun [addReaction](add-reaction.html)(r: [Reaction](../-reaction/index.html)<[T](../../it.unibo.alchemist.core.interfaces/-scheduler/index.html)>)
+abstract fun [addReaction](add-reaction.html)(r: [Reaction](../-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)
 
 
 

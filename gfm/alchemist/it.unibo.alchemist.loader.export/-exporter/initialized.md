@@ -3,4 +3,4 @@
 # initialized
 
 [jvm]\
-open fun [initialized](initialized.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.loader.deployments/-deployment/get-associated-linking-rule.md), [P](../../it.unibo.alchemist.loader.shapes/-rectangle/index.md)>)
+open fun [initialized](initialized.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html), [P](../../it.unibo.alchemist.loader.shapes/-rectangle/index.md)>)

@@ -10,7 +10,7 @@ title: LsaAscendingGradientDist
 
 
 [jvm]\
-class [LsaAscendingGradientDist](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../../it.unibo.alchemist.model.implementations.reactions/-s-a-p-e-r-e-gradient/index.html)>?> : [SAPERENeighborAgent](../-s-a-p-e-r-e-neighbor-agent/index.html)<[P](../../it.unibo.alchemist.model.implementations.reactions/-s-a-p-e-r-e-gradient/index.html)>
+class [LsaAscendingGradientDist](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](index.html)>?> : [SAPERENeighborAgent](../-s-a-p-e-r-e-neighbor-agent/index.html)<[P](index.html)>
 
 
 
@@ -30,7 +30,7 @@ jvm
 
 | | |
 |---|---|
-| [LsaAscendingGradientDist](-lsa-ascending-gradient-dist.html) | [jvm]<br>open fun [LsaAscendingGradientDist](-lsa-ascending-gradient-dist.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html)>, [P](../../it.unibo.alchemist.model.implementations.reactions/-s-a-p-e-r-e-gradient/index.html)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.html))<br>environment |
+| [LsaAscendingGradientDist](-lsa-ascending-gradient-dist.html) | [jvm]<br>open fun [LsaAscendingGradientDist](-lsa-ascending-gradient-dist.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html)>, [P](index.html)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.html))<br>environment |
 
 
 ## Functions

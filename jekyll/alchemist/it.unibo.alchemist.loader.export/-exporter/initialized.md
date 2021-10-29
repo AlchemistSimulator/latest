@@ -10,7 +10,7 @@ title: initialized
 
 
 [jvm]\
-open fun [initialized](initialized.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html), [P](../../it.unibo.alchemist.loader.shapes/-circle/index.html)>)
+open fun [initialized](initialized.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[T](../../it.unibo.alchemist.loader.deployments/-deployment/get-associated-linking-rule.html), [P](../../it.unibo.alchemist.loader.shapes/-circle/index.html)>)
 
 
 

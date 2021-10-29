@@ -32,10 +32,10 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [addReaction](add-reaction.html) | [jvm]<br>abstract fun [addReaction](add-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](index.html)>)<br>Adds a reaction to the data structure. |
-| [getNext](get-next.html) | [jvm]<br>abstract fun [getNext](get-next.html)(): [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](index.html)><br>Allows to access the next reaction to be executed. |
-| [removeReaction](remove-reaction.html) | [jvm]<br>abstract fun [removeReaction](remove-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](index.html)>)<br>Removes a reaction from the structure. |
-| [updateReaction](update-reaction.html) | [jvm]<br>abstract fun [updateReaction](update-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](index.html)>)<br>Notifies the structure that the reaction r has changed. |
+| [addReaction](add-reaction.html) | [jvm]<br>abstract fun [addReaction](add-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)<br>Adds a reaction to the data structure. |
+| [getNext](get-next.html) | [jvm]<br>abstract fun [getNext](get-next.html)(): [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)><br>Allows to access the next reaction to be executed. |
+| [removeReaction](remove-reaction.html) | [jvm]<br>abstract fun [removeReaction](remove-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)<br>Removes a reaction from the structure. |
+| [updateReaction](update-reaction.html) | [jvm]<br>abstract fun [updateReaction](update-reaction.html)(r: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)<br>Notifies the structure that the reaction r has changed. |
 
 
 ## Inheritors

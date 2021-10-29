@@ -10,7 +10,7 @@ title: createDependencies
 
 
 [jvm]\
-abstract fun [createDependencies](create-dependencies.html)(rh: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../-scheduler/index.html)>)
+abstract fun [createDependencies](create-dependencies.html)(rh: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.html)>)
 
 
 

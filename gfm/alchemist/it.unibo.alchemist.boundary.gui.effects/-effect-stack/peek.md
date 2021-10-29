@@ -3,7 +3,7 @@
 # peek
 
 [jvm]\
-open fun [peek](peek.md)(): [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.monitor.generic/-numeric-label-monitor/index.md)>
+open fun [peek](peek.md)(): [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.monitor/-f-x-step-monitor/index.md)>
 
 Returns the effect with maximum priority, without removing it. 
 
