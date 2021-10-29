@@ -10,7 +10,7 @@ title: visitDecimal
 
 
 [jvm]\
-abstract fun [visitDecimal](visit-decimal.html)(ctx: [BiochemistrydslParser.DecimalContext](../-biochemistrydsl-parser/-decimal-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
+abstract fun [visitDecimal](visit-decimal.html)(ctx: [BiochemistrydslParser.DecimalContext](../-biochemistrydsl-parser/-decimal-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
 
 
 

@@ -3,7 +3,7 @@
 # effectGroupsToFile
 
 [jvm]\
-open fun <[P](effect-groups-to-file.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>?> [effectGroupsToFile](effect-groups-to-file.md)(effectFile: [File](https://docs.oracle.com/javase/8/docs/api/java/io/File.html), effects: [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>>)
+open fun <[P](effect-groups-to-file.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../-effect-group-adapter/index.md)>?> [effectGroupsToFile](effect-groups-to-file.md)(effectFile: [File](https://docs.oracle.com/javase/8/docs/api/java/io/File.html), effects: [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../-effect-group-adapter/index.md)>>)
 
 Write the given list of [EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)s to the destination file.
 

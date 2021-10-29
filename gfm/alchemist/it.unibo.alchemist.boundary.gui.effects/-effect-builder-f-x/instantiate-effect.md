@@ -3,7 +3,7 @@
 # instantiateEffect
 
 [jvm]\
-open fun <[P](instantiate-effect.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>?> [instantiateEffect](instantiate-effect.md)(clazz: [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<out [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>>): [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>
+open fun <[P](instantiate-effect.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>?> [instantiateEffect](instantiate-effect.md)(clazz: [Class](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)<out [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>>): [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>
 
 Instantiates the desired effect.
 

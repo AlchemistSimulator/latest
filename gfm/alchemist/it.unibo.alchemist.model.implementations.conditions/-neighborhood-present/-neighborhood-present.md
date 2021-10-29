@@ -3,7 +3,7 @@
 # NeighborhoodPresent
 
 [jvm]\
-open fun [NeighborhoodPresent](-neighborhood-present.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](index.md)>)
+open fun [NeighborhoodPresent](-neighborhood-present.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../-generic-molecule-present/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>, node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.md)<[T](../-generic-molecule-present/index.md)>)
 
 Create the condition.
 

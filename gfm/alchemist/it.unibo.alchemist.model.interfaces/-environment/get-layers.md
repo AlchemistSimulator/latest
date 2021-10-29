@@ -3,7 +3,7 @@
 # getLayers
 
 [jvm]\
-abstract fun [getLayers](get-layers.md)(): ListSet<[Layer](../-layer/index.md)<[T](../-action/index.md), [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)>>
+abstract fun [getLayers](get-layers.md)(): ListSet<[Layer](../-layer/index.md)<[T](../-action/index.md), [P](../-layer/index.md)>>
 
 Return all the Layers in this [Environment](index.md).
 

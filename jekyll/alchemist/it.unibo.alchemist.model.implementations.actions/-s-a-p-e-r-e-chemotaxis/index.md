@@ -10,7 +10,7 @@ title: SAPEREChemotaxis
 
 
 [jvm]\
-class [SAPEREChemotaxis](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../-lsa-ascending-gradient-dist/index.html)>?> : [SAPERENeighborAgent](../-s-a-p-e-r-e-neighbor-agent/index.html)<[P](../-lsa-ascending-gradient-dist/index.html)> 
+class [SAPEREChemotaxis](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](index.html)>?> : [SAPERENeighborAgent](../-s-a-p-e-r-e-neighbor-agent/index.html)<[P](index.html)> 
 
 This class provides a chemotaxis implementation for SAPERE, namely, an agent able to move a molecule towards a specific node.
 
@@ -32,7 +32,7 @@ jvm
 
 | | |
 |---|---|
-| [SAPEREChemotaxis](-s-a-p-e-r-e-chemotaxis.html) | [jvm]<br>open fun [SAPEREChemotaxis](-s-a-p-e-r-e-chemotaxis.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html)>, [P](../-lsa-ascending-gradient-dist/index.html)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.html), response: [ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html), gradient: [ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html), idPosition: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))<br>Builds a new SAPEREChemotaxis. |
+| [SAPEREChemotaxis](-s-a-p-e-r-e-chemotaxis.html) | [jvm]<br>open fun [SAPEREChemotaxis](-s-a-p-e-r-e-chemotaxis.html)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.html)<[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html)>, [P](index.html)>, node: [ILsaNode](../../it.unibo.alchemist.model.interfaces/-i-lsa-node/index.html), response: [ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html), gradient: [ILsaMolecule](../../it.unibo.alchemist.model.interfaces/-i-lsa-molecule/index.html), idPosition: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))<br>Builds a new SAPEREChemotaxis. |
 
 
 ## Functions

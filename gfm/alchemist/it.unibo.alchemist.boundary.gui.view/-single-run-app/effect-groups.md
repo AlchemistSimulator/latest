@@ -3,4 +3,4 @@
 # effectGroups
 
 [jvm]\
-private open var [effectGroups](effect-groups.md): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>>
+private open var [effectGroups](effect-groups.md): ObservableList<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>>

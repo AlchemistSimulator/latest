@@ -10,7 +10,7 @@ title: AbstractActionOnSingleMolecule
 
 
 [jvm]\
-abstract class [AbstractActionOnSingleMolecule](index.html)<[T](index.html)> : [AbstractAction](../-abstract-action/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)> 
+abstract class [AbstractActionOnSingleMolecule](index.html)<[T](index.html)> : [AbstractAction](../-abstract-action/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)> 
 
 This class offers the basic structures to provide operations with numeric concentrations on a single molecule.
 
@@ -32,7 +32,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [cloneAction](../../it.unibo.alchemist.model.interfaces/-action/clone-action.html) | [jvm]<br>abstract fun [cloneAction](../../it.unibo.alchemist.model.interfaces/-action/clone-action.html)(p: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>, p1: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>): [Action](../../it.unibo.alchemist.model.interfaces/-action/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)> |
+| [cloneAction](../../it.unibo.alchemist.model.interfaces/-action/clone-action.html) | [jvm]<br>abstract fun [cloneAction](../../it.unibo.alchemist.model.interfaces/-action/clone-action.html)(p: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>, p1: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>): [Action](../../it.unibo.alchemist.model.interfaces/-action/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)> |
 | [execute](../../it.unibo.alchemist.model.interfaces/-action/execute.html) | [jvm]<br>abstract fun [execute](../../it.unibo.alchemist.model.interfaces/-action/execute.html)() |
 | [getContext](../../it.unibo.alchemist.model.interfaces/-action/get-context.html) | [jvm]<br>abstract fun [getContext](../../it.unibo.alchemist.model.interfaces/-action/get-context.html)(): [Context](../../it.unibo.alchemist.model.interfaces/-context/index.html) |
 | [getMolecule](get-molecule.html) | [jvm]<br>open fun [getMolecule](get-molecule.html)(): [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html)<br>the molecule which whose concentration will be modified y the execution of this action |

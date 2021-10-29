@@ -3,7 +3,7 @@
 # JOutputMonitorRepresentation
 
 [jvm]\
-open fun [JOutputMonitorRepresentation](-j-output-monitor-representation.md)(mon: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](../../it.unibo.alchemist.boundary.interfaces/-graphical2-d-output-monitor/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
+open fun [JOutputMonitorRepresentation](-j-output-monitor-representation.md)(mon: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](../../it.unibo.alchemist.boundary.monitors/-molecule-injector-g-u-i/index.md), out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>)
 
 ## Parameters
 

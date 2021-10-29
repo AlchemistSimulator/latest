@@ -3,7 +3,7 @@
 # effectGroupsFromResources
 
 [jvm]\
-open fun <[P](effect-groups-from-resources.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>?> [effectGroupsFromResources](effect-groups-from-resources.md)(resource: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>>
+open fun <[P](effect-groups-from-resources.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../-effect-group-adapter/index.md)>?> [effectGroupsFromResources](effect-groups-from-resources.md)(resource: [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md)<[P](../-effect-group-adapter/index.md)>>
 
 Get a list of [EffectGroup](../../it.unibo.alchemist.boundary.gui.effects/-effect-group/index.md) from the specified resource file. It tries to deserialize a JSON file.
 

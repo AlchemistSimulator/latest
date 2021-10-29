@@ -3,7 +3,7 @@
 # pop
 
 [jvm]\
-open fun [pop](pop.md)(): [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>
+open fun [pop](pop.md)(): [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>
 
 Removes the effect with maximum priority and returns it. 
 

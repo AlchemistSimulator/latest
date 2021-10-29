@@ -10,7 +10,7 @@ title: conditions
 
 
 [jvm]\
-private open var [conditions](conditions.html): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<out [Condition](../../it.unibo.alchemist.model.interfaces/-condition/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>>
+private open var [conditions](conditions.html): [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<out [Condition](../../it.unibo.alchemist.model.interfaces/-condition/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>>
 
 
 

@@ -10,7 +10,7 @@ title: getPosition
 
 
 [jvm]\
-open fun [getPosition](get-position.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>): [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)
+open fun [getPosition](get-position.html)(node: [Node](../../it.unibo.alchemist.model.interfaces/-node/index.html)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)>): [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)
 
 
 

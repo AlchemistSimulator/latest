@@ -3,7 +3,7 @@
 # from
 
 [jvm]\
-open fun <[P](from.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](index.md)>?> [from](from.md)(x: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), y: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): [PointAdapter](index.md)<[P](index.md)>
+open fun <[P](from.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.md)>?> [from](from.md)(x: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html), y: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): [PointAdapter](index.md)<[P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.md)>
 
 Builds a [PointAdapter](index.md) from coordinates.
 
@@ -22,7 +22,7 @@ jvm
 | <P> | Position type |
 
 [jvm]\
-open fun <[P](from.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](index.md)>?> [from](from.md)(p: [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>): [PointAdapter](index.md)<[P](index.md)>
+open fun <[P](from.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.md)>?> [from](from.md)(p: [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>): [PointAdapter](index.md)<[P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.md)>
 
 Builds a [PointAdapter](index.md).
 
@@ -40,7 +40,7 @@ jvm
 | <P> | Position type |
 
 [jvm]\
-open fun <[P](from.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](index.md)>?> [from](from.md)(p: [Point2D](https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html)): [PointAdapter](index.md)<[P](index.md)>
+open fun <[P](from.md) : [Position2D](../../it.unibo.alchemist.model.interfaces/-position2-d/index.md)<out [P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.md)>?> [from](from.md)(p: [Point2D](https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html)): [PointAdapter](index.md)<[P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.md)>
 
 Builds a [PointAdapter](index.md).
 

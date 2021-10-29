@@ -10,7 +10,7 @@ title: MuseumHall
 
 
 [jvm]\
-open fun [MuseumHall](-museum-hall.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../-limited-continuos2-d/index.html), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.html)>)
+open fun [MuseumHall](-museum-hall.html)(incarnation: [Incarnation](../../it.unibo.alchemist.model.interfaces/-incarnation/index.html)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-connection-beam/index.html), [Euclidean2DPosition](../../it.unibo.alchemist.model.implementations.positions/-euclidean2-d-position/index.html)>)
 
 
 

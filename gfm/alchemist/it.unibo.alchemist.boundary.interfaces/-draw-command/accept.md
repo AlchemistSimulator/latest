@@ -3,7 +3,7 @@
 # accept
 
 [jvm]\
-abstract fun [accept](accept.md)(graphic: GraphicsContext, wormhole: [Wormhole2D](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.md)<[P](index.md)>)
+abstract fun [accept](accept.md)(graphic: GraphicsContext, wormhole: [Wormhole2D](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.md)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>)
 
 The method consumes a graphic and a wormhole to draw something.
 

@@ -10,7 +10,7 @@ title: visitBiochemicalReactionRightContext
 
 
 [jvm]\
-open fun [visitBiochemicalReactionRightContext](visit-biochemical-reaction-right-context.html)(ctx: [BiochemistrydslParser.BiochemicalReactionRightContextContext](../-biochemistrydsl-parser/-biochemical-reaction-right-context-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
+open fun [visitBiochemicalReactionRightContext](visit-biochemical-reaction-right-context.html)(ctx: [BiochemistrydslParser.BiochemicalReactionRightContextContext](../-biochemistrydsl-parser/-biochemical-reaction-right-context-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
 
 
 

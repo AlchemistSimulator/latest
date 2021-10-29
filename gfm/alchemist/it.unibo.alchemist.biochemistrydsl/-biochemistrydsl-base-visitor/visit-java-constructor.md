@@ -3,7 +3,7 @@
 # visitJavaConstructor
 
 [jvm]\
-open fun [visitJavaConstructor](visit-java-constructor.md)(ctx: [BiochemistrydslParser.JavaConstructorContext](../-biochemistrydsl-parser/-java-constructor-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.md)
+open fun [visitJavaConstructor](visit-java-constructor.md)(ctx: [BiochemistrydslParser.JavaConstructorContext](../-biochemistrydsl-parser/-java-constructor-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
 
 Visit a parse tree produced by BiochemistrydslParser#javaConstructor. 
 

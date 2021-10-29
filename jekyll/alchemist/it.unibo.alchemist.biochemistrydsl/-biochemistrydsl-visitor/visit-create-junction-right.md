@@ -10,7 +10,7 @@ title: visitCreateJunctionRight
 
 
 [jvm]\
-abstract fun [visitCreateJunctionRight](visit-create-junction-right.html)(ctx: [BiochemistrydslParser.CreateJunctionRightContext](../-biochemistrydsl-parser/-create-junction-right-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
+abstract fun [visitCreateJunctionRight](visit-create-junction-right.html)(ctx: [BiochemistrydslParser.CreateJunctionRightContext](../-biochemistrydsl-parser/-create-junction-right-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
 
 
 

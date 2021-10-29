@@ -3,7 +3,7 @@
 # getNextPosition
 
 [jvm]\
-abstract fun [getNextPosition](get-next-position.md)(): [P](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)
+abstract fun [getNextPosition](get-next-position.md)(): [P](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)
 
 #### Return
 

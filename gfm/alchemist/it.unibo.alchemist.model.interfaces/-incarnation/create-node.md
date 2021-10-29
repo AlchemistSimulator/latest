@@ -3,7 +3,7 @@
 # createNode
 
 [jvm]\
-abstract fun [createNode](create-node.md)(randomGenerator: RandomGenerator, environment: [Environment](../-environment/index.md)<[T](../-action/index.md), [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)>, @Nullable()parameter: @Nullable()[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [Node](../-node/index.md)<[T](../-action/index.md)>
+abstract fun [createNode](create-node.md)(randomGenerator: RandomGenerator, environment: [Environment](../-environment/index.md)<[T](../-action/index.md), [P](../-layer/index.md)>, @Nullable()parameter: @Nullable()[String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)): [Node](../-node/index.md)<[T](../-action/index.md)>
 
 #### Return
 

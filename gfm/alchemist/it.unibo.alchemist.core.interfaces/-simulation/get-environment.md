@@ -3,7 +3,7 @@
 # getEnvironment
 
 [jvm]\
-abstract fun [getEnvironment](get-environment.md)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md), [P](index.md)>
+abstract fun [getEnvironment](get-environment.md)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md), [P](../../it.unibo.alchemist.model.interfaces/-layer/index.md)>
 
 Allows to access the current environment.
 

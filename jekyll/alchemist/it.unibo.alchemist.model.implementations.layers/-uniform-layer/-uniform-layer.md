@@ -10,7 +10,7 @@ title: UniformLayer
 
 
 [jvm]\
-open fun [UniformLayer](-uniform-layer.html)(level: [T](index.html))
+open fun [UniformLayer](-uniform-layer.html)(level: [T](../-step-layer/index.html))
 
 
 

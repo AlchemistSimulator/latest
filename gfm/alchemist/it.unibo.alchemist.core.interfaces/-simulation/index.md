@@ -3,7 +3,7 @@
 # Simulation
 
 [jvm]\
-interface [Simulation](index.md)<[T](index.md), [P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<out [P](index.md)>?> : [Runnable](https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)
+interface [Simulation](index.md)<[T](index.md), [P](index.md) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.md)<out [P](../../it.unibo.alchemist.model.interfaces/-layer/index.md)>?> : [Runnable](https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)
 
 This interface forces simulations to be independent threads, and make them controllable from an external console.
 
@@ -20,8 +20,8 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [addOutputMonitor](add-output-monitor.md) | [jvm]<br>abstract fun [addOutputMonitor](add-output-monitor.md)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md), [P](index.md)>)<br>Adds an [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md) to this simulation. |
-| [getEnvironment](get-environment.md) | [jvm]<br>abstract fun [getEnvironment](get-environment.md)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md), [P](index.md)><br>Allows to access the current environment. |
+| [addOutputMonitor](add-output-monitor.md) | [jvm]<br>abstract fun [addOutputMonitor](add-output-monitor.md)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md), [P](../../it.unibo.alchemist.model.interfaces/-layer/index.md)>)<br>Adds an [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md) to this simulation. |
+| [getEnvironment](get-environment.md) | [jvm]<br>abstract fun [getEnvironment](get-environment.md)(): [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md), [P](../../it.unibo.alchemist.model.interfaces/-layer/index.md)><br>Allows to access the current environment. |
 | [getError](get-error.md) | [jvm]<br>abstract fun [getError](get-error.md)(): [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html)<[Throwable](https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html)><br>an [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html) containing the exception that made the simulation fail, or [empty](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html#empty--) in case the simulation is ongoing or has terminated successfully. |
 | [getFinalStep](get-final-step.md) | [jvm]<br>abstract fun [getFinalStep](get-final-step.md)(): [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)<br>the step at which this simulation will eventually stop. |
 | [getFinalTime](get-final-time.md) | [jvm]<br>abstract fun [getFinalTime](get-final-time.md)(): [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)<br>Allows to at which time this simulation will end. |
@@ -39,7 +39,7 @@ jvm
 | [play](play.md) | [jvm]<br>abstract fun [play](play.md)()<br>Sends a play command to the simulation. |
 | [reactionAdded](reaction-added.md) | [jvm]<br>abstract fun [reactionAdded](reaction-added.md)(reactionToAdd: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md)>)<br>Adds a reaction during the simulation to the scheduler and start to execute it. |
 | [reactionRemoved](reaction-removed.md) | [jvm]<br>abstract fun [reactionRemoved](reaction-removed.md)(reactionToRemove: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md)>)<br>Removes a reaction during the simulation from the scheduler and stop to execute it. |
-| [removeOutputMonitor](remove-output-monitor.md) | [jvm]<br>abstract fun [removeOutputMonitor](remove-output-monitor.md)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md), [P](index.md)>)<br>Removes an [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md) to this simulation. |
+| [removeOutputMonitor](remove-output-monitor.md) | [jvm]<br>abstract fun [removeOutputMonitor](remove-output-monitor.md)(op: [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md)<[T](../../it.unibo.alchemist.model.interfaces/-action/index.md), [P](../../it.unibo.alchemist.model.interfaces/-layer/index.md)>)<br>Removes an [OutputMonitor](../../it.unibo.alchemist.boundary.interfaces/-output-monitor/index.md) to this simulation. |
 | [run](index.md#-853624561%2FFunctions%2F-267951372) | [jvm]<br>abstract fun [run](index.md#-853624561%2FFunctions%2F-267951372)() |
 | [schedule](schedule.md) | [jvm]<br>abstract fun [schedule](schedule.md)(r: CheckedRunnable)<br>Schedules a runnable to be executed by the Simulation thread, useful for synchronization purposes (e.g. |
 | [terminate](terminate.md) | [jvm]<br>abstract fun [terminate](terminate.md)()<br>Sends a terminate command to the simulation. |

@@ -10,7 +10,7 @@ title: diff
 
 
 [jvm]\
-open fun [diff](diff.html)(op: [PointAdapter](index.html)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>): [PointAdapter](index.html)<[P](index.html)>
+open fun [diff](diff.html)(op: [PointAdapter](index.html)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)>): [PointAdapter](index.html)<[P](../../it.unibo.alchemist.boundary.wormhole.interfaces/-wormhole2-d/index.html)>
 
 
 

@@ -3,4 +3,4 @@
 # reactionAdded
 
 [jvm]\
-open fun [reactionAdded](reaction-added.md)(reactionToAdd: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](index.md)>)
+open fun [reactionAdded](reaction-added.md)(reactionToAdd: [Reaction](../../it.unibo.alchemist.model.interfaces/-reaction/index.md)<[T](../-array-indexed-priority-queue/index.md)>)

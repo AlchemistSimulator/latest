@@ -3,7 +3,7 @@
 # visitBiomolecule
 
 [jvm]\
-open fun [visitBiomolecule](visit-biomolecule.md)(ctx: [BiochemistrydslParser.BiomoleculeContext](../-biochemistrydsl-parser/-biomolecule-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.md)
+open fun [visitBiomolecule](visit-biomolecule.md)(ctx: [BiochemistrydslParser.BiomoleculeContext](../-biochemistrydsl-parser/-biomolecule-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
 
 Visit a parse tree produced by BiochemistrydslParser#biomolecule. 
 

@@ -14,7 +14,7 @@ title: RoutingStrategy
 
 
 
-interface [RoutingStrategy](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
+interface [RoutingStrategy](index.html)<[P](index.html) : [Position](../../it.unibo.alchemist.model.interfaces/-position/index.html)<[P](../../it.unibo.alchemist.model.interfaces/-route/index.html)>?> : [Serializable](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html)
 
 Strategy interface describing how the routing between two points happens.
 
@@ -36,7 +36,7 @@ jvm
 
 | Name | Summary |
 |---|---|
-| [computeRoute](compute-route.html) | [jvm]<br>abstract fun [computeRoute](compute-route.html)(currentPos: [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html), finalPos: [P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.html)<[P](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)><br>Computes a route between two positions. |
+| [computeRoute](compute-route.html) | [jvm]<br>abstract fun [computeRoute](compute-route.html)(currentPos: [P](../../it.unibo.alchemist.model.interfaces/-route/index.html), finalPos: [P](../../it.unibo.alchemist.model.interfaces/-route/index.html)): [Route](../../it.unibo.alchemist.model.interfaces/-route/index.html)<[P](../../it.unibo.alchemist.model.interfaces/-route/index.html)><br>Computes a route between two positions. |
 
 
 ## Inheritors

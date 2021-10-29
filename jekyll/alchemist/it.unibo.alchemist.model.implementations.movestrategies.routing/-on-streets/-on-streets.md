@@ -10,7 +10,7 @@ title: OnStreets
 
 
 [jvm]\
-open fun [OnStreets](-on-streets.html)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.linkingrules/-link-nodes-within-routing-range/index.html)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.html))
+open fun [OnStreets](-on-streets.html)(environment: [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.html)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-trace-dependant-speed/index.html)>, v: [Vehicle](../../it.unibo.alchemist.model.interfaces/-vehicle/index.html))
 
 
 

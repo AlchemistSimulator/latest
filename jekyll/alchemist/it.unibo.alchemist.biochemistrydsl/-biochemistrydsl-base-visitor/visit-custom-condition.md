@@ -10,7 +10,7 @@ title: visitCustomCondition
 
 
 [jvm]\
-open fun [visitCustomCondition](visit-custom-condition.html)(ctx: [BiochemistrydslParser.CustomConditionContext](../-biochemistrydsl-parser/-custom-condition-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
+open fun [visitCustomCondition](visit-custom-condition.html)(ctx: [BiochemistrydslParser.CustomConditionContext](../-biochemistrydsl-parser/-custom-condition-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
 
 
 

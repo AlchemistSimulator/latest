@@ -3,7 +3,7 @@
 # setLinkingRule
 
 [jvm]\
-abstract fun [setLinkingRule](set-linking-rule.md)(rule: [LinkingRule](../-linking-rule/index.md)<[T](../-action/index.md), [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md)>)
+abstract fun [setLinkingRule](set-linking-rule.md)(rule: [LinkingRule](../-linking-rule/index.md)<[T](../-action/index.md), [P](../-layer/index.md)>)
 
 ## Parameters
 

@@ -3,7 +3,7 @@
 # visitJunctionReaction
 
 [jvm]\
-abstract fun [visitJunctionReaction](visit-junction-reaction.md)(ctx: [BiochemistrydslParser.JunctionReactionContext](../-biochemistrydsl-parser/-junction-reaction-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-neighborhood-present/index.md)
+abstract fun [visitJunctionReaction](visit-junction-reaction.md)(ctx: [BiochemistrydslParser.JunctionReactionContext](../-biochemistrydsl-parser/-junction-reaction-context/index.md)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.md)
 
 Visit a parse tree produced by [junctionReaction](../-biochemistrydsl-parser/junction-reaction.md).
 

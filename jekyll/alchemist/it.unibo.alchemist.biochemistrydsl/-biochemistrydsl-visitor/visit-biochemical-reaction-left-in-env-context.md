@@ -10,7 +10,7 @@ title: visitBiochemicalReactionLeftInEnvContext
 
 
 [jvm]\
-abstract fun [visitBiochemicalReactionLeftInEnvContext](visit-biochemical-reaction-left-in-env-context.html)(ctx: [BiochemistrydslParser.BiochemicalReactionLeftInEnvContextContext](../-biochemistrydsl-parser/-biochemical-reaction-left-in-env-context-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.reactions/-chemical-reaction/index.html)
+abstract fun [visitBiochemicalReactionLeftInEnvContext](visit-biochemical-reaction-left-in-env-context.html)(ctx: [BiochemistrydslParser.BiochemicalReactionLeftInEnvContextContext](../-biochemistrydsl-parser/-biochemical-reaction-left-in-env-context-context/index.html)): [T](../../it.unibo.alchemist.model.implementations.conditions/-generic-molecule-present/index.html)
 
 
 

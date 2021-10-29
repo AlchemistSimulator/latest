@@ -21,7 +21,7 @@ jvm
 | range | the exploration range |
 
 [jvm]\
-abstract fun [getNodesWithinRange](get-nodes-within-range.md)(center: [P](../../it.unibo.alchemist.core.interfaces/-simulation/index.md), range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): ListSet<[Node](../-node/index.md)<[T](../-action/index.md)>>
+abstract fun [getNodesWithinRange](get-nodes-within-range.md)(center: [P](../-layer/index.md), range: [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)): ListSet<[Node](../-node/index.md)<[T](../-action/index.md)>>
 
 Given a [Position](../-position/index.md)(center) this method returns a list of all the surroundings nodes within the given range. Note that this method (depending on the implementation) might be not optimized.
 

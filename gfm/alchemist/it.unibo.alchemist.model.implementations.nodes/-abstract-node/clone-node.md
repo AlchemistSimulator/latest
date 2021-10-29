@@ -3,6 +3,6 @@
 # cloneNode
 
 [jvm]\
-open fun [cloneNode](clone-node.md)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)): [AbstractNode](index.md)<[T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.md)>
+open fun [cloneNode](clone-node.md)(currentTime: [Time](../../it.unibo.alchemist.model.interfaces/-time/index.md)): [AbstractNode](index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-interact-with-others/index.md)>
 
 Default implementation fails: override correctly calling the constructor.

@@ -3,4 +3,4 @@
 # iterator
 
 [jvm]\
-open fun [iterator](iterator.md)(): [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)<[EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>>
+open fun [iterator](iterator.md)(): [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)<[EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>>

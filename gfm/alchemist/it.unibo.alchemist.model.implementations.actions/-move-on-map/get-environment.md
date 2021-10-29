@@ -3,4 +3,4 @@
 # getEnvironment
 
 [jvm]\
-fun [getEnvironment](get-environment.md)(): [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.routing/-on-streets/index.md)>
+fun [getEnvironment](get-environment.md)(): [MapEnvironment](../../it.unibo.alchemist.model.interfaces/-map-environment/index.md)<[T](../../it.unibo.alchemist.model.implementations.movestrategies.speed/-straight-line-trace-dependant-speed/index.md)>

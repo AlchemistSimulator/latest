@@ -10,7 +10,7 @@ title: getConcentration
 
 
 [jvm]\
-open fun [getConcentration](get-concentration.html)(molecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html)): [T](../../it.unibo.alchemist.model.implementations.layers/-uniform-layer/index.html)
+open fun [getConcentration](get-concentration.html)(molecule: [Molecule](../../it.unibo.alchemist.model.interfaces/-molecule/index.html)): [T](../../it.unibo.alchemist.model.implementations.layers/-step-layer/index.html)
 
 
 

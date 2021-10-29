@@ -3,7 +3,7 @@
 # changePriority
 
 [jvm]\
-open fun [changePriority](change-priority.md)(effect: [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.interfaces/-draw-command/index.md)>, offset: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))
+open fun [changePriority](change-priority.md)(effect: [EffectFX](../-effect-f-x/index.md)<[P](../../it.unibo.alchemist.boundary.gui.effects.json/-effect-group-adapter/index.md)>, offset: [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html))
 
 Changes the specified offset priority of the specified offset.
 

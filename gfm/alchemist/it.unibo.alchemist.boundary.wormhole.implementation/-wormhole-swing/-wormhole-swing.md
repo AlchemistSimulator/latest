@@ -3,4 +3,4 @@
 # WormholeSwing
 
 [jvm]\
-open fun [WormholeSwing](-wormhole-swing.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](../../it.unibo.alchemist.boundary.interfaces/-graphical2-d-output-monitor/index.md)>, component: [Component](https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html))
+open fun [WormholeSwing](-wormhole-swing.md)(environment: [Environment](../../it.unibo.alchemist.model.interfaces/-environment/index.md)<out [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html), [P](index.md)>, component: [Component](https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html))
