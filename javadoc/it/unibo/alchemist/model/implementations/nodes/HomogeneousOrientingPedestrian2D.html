@@ -174,6 +174,27 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                 <li class="blockList">
                 <!-- ======== NESTED CLASS SUMMARY ======== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- =========== FIELD SUMMARY =========== -->
                     
                     <section role="region">
@@ -290,6 +311,24 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                     </section>
                     
                     <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- ========== METHOD SUMMARY =========== -->
                     
@@ -609,7 +648,7 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                     <li class="blockList">
                                         <h4>getCognitiveMap</h4>
                                         <pre class="methodSignature"> <a href=../../interfaces/geometry/euclidean2d/graph/NavigationGraph.html>NavigationGraph</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>, <a href=../geometry/euclidean2d/Ellipse.html>Ellipse</a>, DefaultEdge&gt; <a href=HomogeneousOrientingPedestrian2D.html#getCognitiveMap()>getCognitiveMap</a>()</pre>
-                                        <div class="block"><p>The cognitive map of the pedestrian. This is generated from the <a href=AbstractOrientingPedestrian.html#environment>environment</a>'s graph as follows: we randomly select a % of environment's areas equal to the knowledge degree of the pedestrian, we then create a landmark in each of them. Those landmarks will be the nodes of the cognitive map. Concerning the connections between them, we produce a graph in which each generated landmark is connected to any other landmark reachable from it, with an edge whose weight depends on the number of areas that need to be traversed. Finally, the cognitive map is a minimum spanning tree of the described full connected graph. Note that edges are plain DefaultEdges, which means no extra info regarding the connection between landmarks is stored in the cognitive map. If two landmarks are connected, the pedestrian knows there's a path between them (this may be simple or not, i.e. representable as a single segment, but the pedestrian doesn't know it). If two landmarks are not connected, the pedestrian doesn't have info regarding any path between them, which may anyway exist.</p></div>
+                                        <div class="block"><p>The cognitive map of the pedestrian. This is generated from the environment's graph as follows: we randomly select a % of environment's areas equal to the knowledge degree of the pedestrian, we then create a landmark in each of them. Those landmarks will be the nodes of the cognitive map. Concerning the connections between them, we produce a graph in which each generated landmark is connected to any other landmark reachable from it, with an edge whose weight depends on the number of areas that need to be traversed. Finally, the cognitive map is a minimum spanning tree of the described full connected graph. Note that edges are plain DefaultEdges, which means no extra info regarding the connection between landmarks is stored in the cognitive map. If two landmarks are connected, the pedestrian knows there's a path between them (this may be simple or not, i.e. representable as a single segment, but the pedestrian doesn't know it). If two landmarks are not connected, the pedestrian doesn't have info regarding any path between them, which may anyway exist.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -624,7 +663,7 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                     <li class="blockList">
                                         <h4>getKnowledgeDegree</h4>
                                         <pre class="methodSignature"> final <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> <a href=HomogeneousOrientingPedestrian2D.html#getKnowledgeDegree()>getKnowledgeDegree</a>()</pre>
-                                        <div class="block"><p>The knowledge degree of the agent concerning the environment. This is a Double value in 0, 1 describing the percentage of environment the agent is familiar with prior to the start of the simulation (thus it does not take into account the knowledge the pedestrian will gain during it, namely the <a href=AbstractOrientingPedestrian.html#volatileMemory>volatileMemory</a>).</p></div>
+                                        <div class="block"><p>The knowledge degree of the agent concerning the environment. This is a Double value in 0, 1 describing the percentage of environment the agent is familiar with prior to the start of the simulation (thus it does not take into account the knowledge the pedestrian will gain during it, namely the <a href=HomogeneousOrientingPedestrian2D.html#volatileMemory>volatileMemory</a>).</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

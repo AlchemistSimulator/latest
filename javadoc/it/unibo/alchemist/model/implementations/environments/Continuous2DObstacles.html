@@ -173,7 +173,7 @@ var pathtoroot = "../../../../../../";
                     <pre class="wrap-overflow">
 
 public class <span class="typeNameLabel"><a href=Continuous2DObstacles.html>Continuous2DObstacles</a>&lt;T&gt;</span>
-extends <a href=LimitedContinuos2D.html>LimitedContinuos2D</a>&lt;<a href=Continuous2DObstacles.html>T</a>&gt; implements <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithObstacles.html>EuclideanPhysics2DEnvironmentWithObstacles</a>&lt;<a href=../obstacles/RectObstacle2D.html>RectObstacle2D</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt;, <a href=Continuous2DObstacles.html>T</a>&gt;
+extends <a href=LimitedContinuos2D.html>LimitedContinuos2D</a>&lt;<a href=ImageEnvironment.html>T</a>&gt; implements <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithObstacles.html>EuclideanPhysics2DEnvironmentWithObstacles</a>&lt;<a href=../obstacles/RectObstacle2D.html>RectObstacle2D</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt;, <a href=ImageEnvironment.html>T</a>&gt;
                     </pre>
                     <div class="block"></div>
                 </li>
@@ -184,7 +184,49 @@ extends <a href=LimitedContinuos2D.html>LimitedContinuos2D</a>&lt;<a href=Contin
                 <li class="blockList">
                 <!-- ======== NESTED CLASS SUMMARY ======== -->
                     
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
                     <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- ======== CONSTRUCTOR SUMMARY ======== -->
                     
@@ -206,7 +248,7 @@ extends <a href=LimitedContinuos2D.html>LimitedContinuos2D</a>&lt;<a href=Contin
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#Continuous2DObstacles(Incarnation)">Continuous2DObstacles</a></span>(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=Continuous2DObstacles.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation)</code></th>
+                                                        href="#Continuous2DObstacles(Incarnation)">Continuous2DObstacles</a></span>(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=ImageEnvironment.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
@@ -219,6 +261,24 @@ extends <a href=LimitedContinuos2D.html>LimitedContinuos2D</a>&lt;<a href=Contin
                     </section>
                     
                     <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="enum.constant.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Enum Constant Summary</h3>
+                                <table class="memberSummary">
+                                    <caption><span>Enum Constants</span><span class="tabEnd">&nbsp;</span></caption>
+                                    <tr>
+                                        <th class="colFirst" scope="col">Enum Constant</th>
+                                        <th class="colLast" scope="col">Description</th>
+                                    </tr>
+                                    
+                                </table>
+                            </li>
+                        </ul>
+                    </section>
                     
                     <!-- ========== METHOD SUMMARY =========== -->
                     
@@ -358,7 +418,7 @@ extends <a href=LimitedContinuos2D.html>LimitedContinuos2D</a>&lt;<a href=Contin
                                             <!--   -->
                                         </a>
                                             <h3>Methods inherited from class&nbsp;it.unibo.alchemist.model.interfaces.environments.Euclidean2DEnvironment</h3>
-                                            <code>getOrigin</code></li>
+                                            <code>getOrigin, makePosition</code></li>
                                  
                                     <li class="blockList"><a id="methods.inherited.from.class.it.unibo.alchemist.model.interfaces.EuclideanEnvironment">
                                             <!--   -->
@@ -370,7 +430,7 @@ extends <a href=LimitedContinuos2D.html>LimitedContinuos2D</a>&lt;<a href=Contin
                                             <!--   -->
                                         </a>
                                             <h3>Methods inherited from class&nbsp;it.unibo.alchemist.model.interfaces.environments.PhysicsEnvironment</h3>
-                                            <code>farthestPositionReachable, getHeading, getShape, getShapeFactory</code></li>
+                                            <code>farthestPositionReachable, getHeading, getNodesWithin, getShape, getShapeFactory</code></li>
                                  
                                     <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
                                         <!--   -->
@@ -402,7 +462,7 @@ extends <a href=LimitedContinuos2D.html>LimitedContinuos2D</a>&lt;<a href=Contin
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>Continuous2DObstacles</h4>
-                                        <pre>Continuous2DObstacles(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=Continuous2DObstacles.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation)</pre>
+                                        <pre>Continuous2DObstacles(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=ImageEnvironment.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation)</pre>
                                         <div class="block"></div>
                                         
                                     </li>
