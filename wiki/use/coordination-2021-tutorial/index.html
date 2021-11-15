@@ -76,7 +76,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.3.1-dev52+acb245d99"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.3.1-dev53+1396df283"};
 </script>
 
 
@@ -370,10 +370,14 @@ variables:
     parameters: [300, 50, 500, 9] # default 300, minimum 50, maximum 100, 9 samples
 seeds: { simulation: *seed, scenario: *scenario_seed}
 export:
-  - time
-  - molecule: &quot;default_module:default_program&quot;
-    aggregators: [mean, max, min, variance, median] # From Apache's UnivariateStatistic
-    value-filter: onlyfinite # discards NaN and Infinity
+    type: CSVExporter
+    parameters:
+      fileNameRoot: &quot;snippet-variables-export&quot;
+    data:
+      - time
+      - molecule: &quot;default_module:default_program&quot;
+        aggregators: [ mean, max, min, variance, median ] # From Apache's UnivariateStatistic
+        value-filter: onlyfinite # discards NaN and Infinity
 environment: { type: ImageEnvironment, parameters: [*image_path, *zoom] }
 network-model: { type: ObstaclesBreakConnection, parameters: [50] }
 deployments:
@@ -823,7 +827,7 @@ deployments:
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 11.3.1-dev52+acb245d99. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 11.3.1-dev53+1396df283. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
