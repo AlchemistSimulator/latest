@@ -122,8 +122,8 @@ var pathtoroot = "../../../../../";
                     <hr>
                     <pre class="wrap-overflow">
 
-public final class <span class="typeNameLabel"><a href=JSR223Variable.html>JSR223Variable</a>&lt;R extends <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt;</span>
- implements <a href=DependentVariable.html>DependentVariable</a>&lt;<a href=JSR223Variable.html>R</a>&gt;
+public final class <span class="typeNameLabel"><a href=JSR223Variable.html>JSR223Variable</a></span>
+ implements <a href=DependentVariable.html>DependentVariable</a>&lt;<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html>Any</a>&gt;
                     </pre>
                     <div class="block"><p>This variable loads any <a href=http://archive.fo/PGdk8.html>JSR-233</a> language available in the classpath.</p></div>
                 </li>
@@ -184,6 +184,12 @@ public final class <span class="typeNameLabel"><a href=JSR223Variable.html>JSR22
                                             <td class="colLast"></td>
                                         </tr>
                                         
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>private final <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=JSR223Variable.html#timeout>timeout</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
                                     </table>
                                 </div>
                             </li>
@@ -210,7 +216,7 @@ public final class <span class="typeNameLabel"><a href=JSR223Variable.html>JSR22
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#JSR223Variable(String,String)">JSR223Variable</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> language, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> formula)</code></th>
+                                                        href="#JSR223Variable(String,String,Long)">JSR223Variable</a></span>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> language, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> formula, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a> timeout)</code></th>
                                                 <td class="colLast">builds a new JSR223Variable given a language name and a script.</td>
                                             </tr>
                                         
@@ -280,7 +286,15 @@ public final class <span class="typeNameLabel"><a href=JSR223Variable.html>JSR22
                                         </tr>
                                         
                                         <tr id="i2" class="altColor">
-                                            <td class="colFirst"><code><a href=JSR223Variable.html>R</a></code>
+                                            <td class="colFirst"><code>final <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=JSR223Variable.html#getTimeout()>getTimeout</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=JSR223Variable.html#getWith(Map)>getWith</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; variables) </code>
                                             </th>
@@ -318,11 +332,11 @@ public final class <span class="typeNameLabel"><a href=JSR223Variable.html>JSR22
                             </a>
                                 <h3>Constructor Detail</h3>
                                 
-                                <a name="JSR223Variable(String,String)"></a>
+                                <a name="JSR223Variable(String,String,Long)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>JSR223Variable</h4>
-                                        <pre>JSR223Variable(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> language, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> formula)</pre>
+                                        <pre>JSR223Variable(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> language, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> formula, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a> timeout)</pre>
                                         <div class="block">builds a new JSR223Variable given a language name and a script.</div>
                                         
                                         <dl>
@@ -334,6 +348,8 @@ public final class <span class="typeNameLabel"><a href=JSR223Variable.html>JSR22
                                             
                                             
                                             <dd><code>formula</code> - the script that will get interpreted</dd>
+                                            
+                                            
                                             
                                             
                                         </dl>
@@ -384,6 +400,21 @@ public final class <span class="typeNameLabel"><a href=JSR223Variable.html>JSR22
                                     </li>
                                 </ul>
                                 
+                                <a id="getTimeout()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getTimeout</h4>
+                                        <pre class="methodSignature"> final <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a> <a href=JSR223Variable.html#getTimeout()>getTimeout</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
                                 <a id="getWith(Map)">
                                     <!--   -->
                                 </a>
@@ -392,7 +423,7 @@ public final class <span class="typeNameLabel"><a href=JSR223Variable.html>JSR22
                                           >
                                     <li class="blockList">
                                         <h4>getWith</h4>
-                                        <pre class="methodSignature"> <a href=JSR223Variable.html>R</a> <a href=JSR223Variable.html#getWith(Map)>getWith</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; variables)</pre>
+                                        <pre class="methodSignature">@<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-experimental-time/index.html>ExperimentalTime</a>() <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a> <a href=JSR223Variable.html#getWith(Map)>getWith</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a>, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html>Object</a>&gt; variables)</pre>
                                         <div class="block"><p>Given the current controlled variables, computes the current values for this variable.</p></div>
                                         
                                         <dl>
