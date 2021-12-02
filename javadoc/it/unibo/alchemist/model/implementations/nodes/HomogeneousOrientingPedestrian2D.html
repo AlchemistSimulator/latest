@@ -213,18 +213,6 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                         </tr>
                                         
                                         <tr class="altColor">
-                                            <td class="colFirst"><code>private final <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#shape>shape</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>private final <a href=../geometry/euclidean2d/FieldOfView2D.html>FieldOfView2D</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#fieldOfView>fieldOfView</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
                                             <td class="colFirst"><code>private final <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt;</code></td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#environment>environment</a></code></th>
                                             <td class="colLast"></td>
@@ -249,8 +237,26 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                         </tr>
                                         
                                         <tr class="altColor">
+                                            <td class="colFirst"><code>private final <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#senses>senses</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>private final <a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#fieldOfView>fieldOfView</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
                                             <td class="colFirst"><code>private final <a href=../../interfaces/PedestrianGroup.html>PedestrianGroup</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#membershipGroup>membershipGroup</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=CognitivePhysicalPedestrian2D.html#membershipGroup>membershipGroup</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>private final <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#shape>shape</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
@@ -280,25 +286,55 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#HomogeneousOrientingPedestrian2D(EuclideanPhysics2DEnvironmentWithGraph,RandomGenerator,Double,Double,Double,PedestrianGroup2D)">HomogeneousOrientingPedestrian2D</a></span>(<a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, RandomGenerator randomGenerator, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide, <a href=../../interfaces/PedestrianGroup2D.html>PedestrianGroup2D</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; group)</code></th>
+                                                        href="#HomogeneousOrientingPedestrian2D(Incarnation,RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,String,Double,Double,Double,PedestrianGroup2D)">HomogeneousOrientingPedestrian2D</a></span>(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide, <a href=../../interfaces/PedestrianGroup2D.html>PedestrianGroup2D</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; group)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
                                             <tr class="rowColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#HomogeneousOrientingPedestrian2D(EuclideanPhysics2DEnvironmentWithGraph,RandomGenerator,Double,Double,Double)">HomogeneousOrientingPedestrian2D</a></span>(<a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, RandomGenerator randomGenerator, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide)</code></th>
+                                                        href="#HomogeneousOrientingPedestrian2D(Incarnation,RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,String,Double,Double,Double)">HomogeneousOrientingPedestrian2D</a></span>(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#HomogeneousOrientingPedestrian2D(EuclideanPhysics2DEnvironmentWithGraph,RandomGenerator,Double,Double)">HomogeneousOrientingPedestrian2D</a></span>(<a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, RandomGenerator randomGenerator, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide)</code></th>
+                                                        href="#HomogeneousOrientingPedestrian2D(Incarnation,RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,String,Double,Double)">HomogeneousOrientingPedestrian2D</a></span>(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
                                             <tr class="rowColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#HomogeneousOrientingPedestrian2D(EuclideanPhysics2DEnvironmentWithGraph,RandomGenerator,Double)">HomogeneousOrientingPedestrian2D</a></span>(<a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, RandomGenerator randomGenerator, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree)</code></th>
+                                                        href="#HomogeneousOrientingPedestrian2D(Incarnation,RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,String,Double)">HomogeneousOrientingPedestrian2D</a></span>(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#HomogeneousOrientingPedestrian2D(Incarnation,RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,Double)">HomogeneousOrientingPedestrian2D</a></span>(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#HomogeneousOrientingPedestrian2D(RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,Node,Double,Double,Double,PedestrianGroup2D)">HomogeneousOrientingPedestrian2D</a></span>(RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; backingNode, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide, <a href=../../interfaces/PedestrianGroup2D.html>PedestrianGroup2D</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; group)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#HomogeneousOrientingPedestrian2D(RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,Node,Double,Double,Double)">HomogeneousOrientingPedestrian2D</a></span>(RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; backingNode, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#HomogeneousOrientingPedestrian2D(RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,Node,Double,Double)">HomogeneousOrientingPedestrian2D</a></span>(RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; backingNode, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#HomogeneousOrientingPedestrian2D(RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,Node,Double)">HomogeneousOrientingPedestrian2D</a></span>(RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; backingNode, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
@@ -352,30 +388,14 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                         </tr>
                                         
                                         <tr id="i0" class="altColor">
-                                            <td class="colFirst"><code><a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;</code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#getShape()>getShape</a>() </code>
-                                            </th>
-                                            <td class="colLast">The shape of any pedestrian in the Euclidean world.</td>
-                                        </tr>
-                                        
-                                        <tr id="i1" class="rowColor">
-                                            <td class="colFirst"><code>final <a href=../geometry/euclidean2d/FieldOfView2D.html>FieldOfView2D</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt;</code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#getFieldOfView()>getFieldOfView</a>() </code>
-                                            </th>
-                                            <td class="colLast">The field of view of a pedestrian in the Euclidean world.</td>
-                                        </tr>
-                                        
-                                        <tr id="i2" class="altColor">
                                             <td class="colFirst"><code><a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt;</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#getEnvironment()>getEnvironment</a>() </code>
                                             </th>
-                                            <td class="colLast"></td>
+                                            <td class="colLast">Access to the <a href=HomogeneousOrientingPedestrian2D.html#environment>environment</a>.</td>
                                         </tr>
                                         
-                                        <tr id="i3" class="rowColor">
+                                        <tr id="i1" class="rowColor">
                                             <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/Map.html>Map</a>&lt;<a href=../../interfaces/geometry/ConvexGeometricShape.html>ConvexGeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html>Integer</a>&gt;</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#getVolatileMemory()>getVolatileMemory</a>() </code>
@@ -383,7 +403,7 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                             <td class="colLast">The volatile memory of the agent: it models the ability to remember areas of the environment already visited since the start of the simulation.</td>
                                         </tr>
                                         
-                                        <tr id="i4" class="altColor">
+                                        <tr id="i2" class="altColor">
                                             <td class="colFirst"><code><a href=../../interfaces/geometry/euclidean2d/graph/NavigationGraph.html>NavigationGraph</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>, <a href=../geometry/euclidean2d/Ellipse.html>Ellipse</a>, DefaultEdge&gt;</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#getCognitiveMap()>getCognitiveMap</a>() </code>
@@ -391,12 +411,28 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                             <td class="colLast">The cognitive map of the pedestrian.</td>
                                         </tr>
                                         
-                                        <tr id="i5" class="rowColor">
+                                        <tr id="i3" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#getKnowledgeDegree()>getKnowledgeDegree</a>() </code>
                                             </th>
                                             <td class="colLast">The knowledge degree of the agent concerning the environment.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#getSenses()>getSenses</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>abstract <a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#getFieldOfView()>getFieldOfView</a>() </code>
+                                            </th>
+                                            <td class="colLast">The field of view of the pedestrian.</td>
                                         </tr>
                                         
                                         <tr id="i6" class="altColor">
@@ -405,6 +441,14 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#getMembershipGroup()>getMembershipGroup</a>() </code>
                                             </th>
                                             <td class="colLast">The group this pedestrian belongs to.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>abstract <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousOrientingPedestrian2D.html#getShape()>getShape</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
                                         </tr>
                                         
                                         </tbody>
@@ -462,106 +506,92 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                             </a>
                                 <h3>Constructor Detail</h3>
                                 
-                                <a name="HomogeneousOrientingPedestrian2D(EuclideanPhysics2DEnvironmentWithGraph,RandomGenerator,Double,Double,Double,PedestrianGroup2D)"></a>
+                                <a name="HomogeneousOrientingPedestrian2D(Incarnation,RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,String,Double,Double,Double,PedestrianGroup2D)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>HomogeneousOrientingPedestrian2D</h4>
-                                        <pre>HomogeneousOrientingPedestrian2D(<a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, RandomGenerator randomGenerator, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide, <a href=../../interfaces/PedestrianGroup2D.html>PedestrianGroup2D</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; group)</pre>
+                                        <pre>HomogeneousOrientingPedestrian2D(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide, <a href=../../interfaces/PedestrianGroup2D.html>PedestrianGroup2D</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; group)</pre>
                                         <div class="block"></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>environment</code> - <pre><code>    the environment inside which this pedestrian moves.</code></pre></dd>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                        </dl>
                                         
                                     </li>
                                 </ul>
                                 
-                                <a name="HomogeneousOrientingPedestrian2D(EuclideanPhysics2DEnvironmentWithGraph,RandomGenerator,Double,Double,Double)"></a>
+                                <a name="HomogeneousOrientingPedestrian2D(Incarnation,RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,String,Double,Double,Double)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>HomogeneousOrientingPedestrian2D</h4>
-                                        <pre>HomogeneousOrientingPedestrian2D(<a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, RandomGenerator randomGenerator, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide)</pre>
+                                        <pre>HomogeneousOrientingPedestrian2D(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide)</pre>
                                         <div class="block"></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>environment</code> - <pre><code>    the environment inside which this pedestrian moves.</code></pre></dd>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                        </dl>
                                         
                                     </li>
                                 </ul>
                                 
-                                <a name="HomogeneousOrientingPedestrian2D(EuclideanPhysics2DEnvironmentWithGraph,RandomGenerator,Double,Double)"></a>
+                                <a name="HomogeneousOrientingPedestrian2D(Incarnation,RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,String,Double,Double)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>HomogeneousOrientingPedestrian2D</h4>
-                                        <pre>HomogeneousOrientingPedestrian2D(<a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, RandomGenerator randomGenerator, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide)</pre>
+                                        <pre>HomogeneousOrientingPedestrian2D(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide)</pre>
                                         <div class="block"></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>environment</code> - <pre><code>    the environment inside which this pedestrian moves.</code></pre></dd>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                        </dl>
                                         
                                     </li>
                                 </ul>
                                 
-                                <a name="HomogeneousOrientingPedestrian2D(EuclideanPhysics2DEnvironmentWithGraph,RandomGenerator,Double)"></a>
+                                <a name="HomogeneousOrientingPedestrian2D(Incarnation,RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,String,Double)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>HomogeneousOrientingPedestrian2D</h4>
-                                        <pre>HomogeneousOrientingPedestrian2D(<a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, RandomGenerator randomGenerator, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree)</pre>
+                                        <pre>HomogeneousOrientingPedestrian2D(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree)</pre>
                                         <div class="block"></div>
                                         
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>environment</code> - <pre><code>    the environment inside which this pedestrian moves.</code></pre></dd>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                        </dl>
+                                    </li>
+                                </ul>
+                                
+                                <a name="HomogeneousOrientingPedestrian2D(Incarnation,RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,Double)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>HomogeneousOrientingPedestrian2D</h4>
+                                        <pre>HomogeneousOrientingPedestrian2D(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="HomogeneousOrientingPedestrian2D(RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,Node,Double,Double,Double,PedestrianGroup2D)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>HomogeneousOrientingPedestrian2D</h4>
+                                        <pre>HomogeneousOrientingPedestrian2D(RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; backingNode, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide, <a href=../../interfaces/PedestrianGroup2D.html>PedestrianGroup2D</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; group)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="HomogeneousOrientingPedestrian2D(RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,Node,Double,Double,Double)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>HomogeneousOrientingPedestrian2D</h4>
+                                        <pre>HomogeneousOrientingPedestrian2D(RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; backingNode, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> maxSide)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="HomogeneousOrientingPedestrian2D(RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,Node,Double,Double)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>HomogeneousOrientingPedestrian2D</h4>
+                                        <pre>HomogeneousOrientingPedestrian2D(RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; backingNode, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> minSide)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="HomogeneousOrientingPedestrian2D(RandomGenerator,EuclideanPhysics2DEnvironmentWithGraph,Node,Double)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>HomogeneousOrientingPedestrian2D</h4>
+                                        <pre>HomogeneousOrientingPedestrian2D(RandomGenerator randomGenerator, <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; environment, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; backingNode, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> knowledgeDegree)</pre>
+                                        <div class="block"></div>
                                         
                                     </li>
                                 </ul>
@@ -579,36 +609,6 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                             </a>
                                 <h3>Method Detail</h3>
                                 
-                                <a id="getShape()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getShape</h4>
-                                        <pre class="methodSignature"> <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt; <a href=HomogeneousOrientingPedestrian2D.html#getShape()>getShape</a>()</pre>
-                                        <div class="block"><p>The shape of any pedestrian in the Euclidean world. Implementors should override this property to prevent the continuous creation of new Euclidean2DShapes.</p></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getFieldOfView()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getFieldOfView</h4>
-                                        <pre class="methodSignature"> final <a href=../geometry/euclidean2d/FieldOfView2D.html>FieldOfView2D</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>&gt; <a href=HomogeneousOrientingPedestrian2D.html#getFieldOfView()>getFieldOfView</a>()</pre>
-                                        <div class="block"><p>The field of view of a pedestrian in the Euclidean world. Implementors should override this property to prevent the continuous creation of new FieldOfView2Ds.</p></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
                                 <a id="getEnvironment()">
                                     <!--   -->
                                 </a>
@@ -618,7 +618,7 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                     <li class="blockList">
                                         <h4>getEnvironment</h4>
                                         <pre class="methodSignature"> <a href=../../interfaces/environments/EuclideanPhysics2DEnvironmentWithGraph.html>EuclideanPhysics2DEnvironmentWithGraph</a>&lt;?, <a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=HomogeneousOrientingPedestrian2D.html>N</a>, <a href=HomogeneousOrientingPedestrian2D.html>E</a>&gt; <a href=HomogeneousOrientingPedestrian2D.html#getEnvironment()>getEnvironment</a>()</pre>
-                                        <div class="block"></div>
+                                        <div class="block"><p>Access to the <a href=HomogeneousOrientingPedestrian2D.html#environment>environment</a>.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -648,7 +648,7 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                     <li class="blockList">
                                         <h4>getCognitiveMap</h4>
                                         <pre class="methodSignature"> <a href=../../interfaces/geometry/euclidean2d/graph/NavigationGraph.html>NavigationGraph</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>, <a href=../geometry/euclidean2d/Ellipse.html>Ellipse</a>, DefaultEdge&gt; <a href=HomogeneousOrientingPedestrian2D.html#getCognitiveMap()>getCognitiveMap</a>()</pre>
-                                        <div class="block"><p>The cognitive map of the pedestrian. This is generated from the environment's graph as follows: we randomly select a % of environment's areas equal to the knowledge degree of the pedestrian, we then create a landmark in each of them. Those landmarks will be the nodes of the cognitive map. Concerning the connections between them, we produce a graph in which each generated landmark is connected to any other landmark reachable from it, with an edge whose weight depends on the number of areas that need to be traversed. Finally, the cognitive map is a minimum spanning tree of the described full connected graph. Note that edges are plain DefaultEdges, which means no extra info regarding the connection between landmarks is stored in the cognitive map. If two landmarks are connected, the pedestrian knows there's a path between them (this may be simple or not, i.e. representable as a single segment, but the pedestrian doesn't know it). If two landmarks are not connected, the pedestrian doesn't have info regarding any path between them, which may anyway exist.</p></div>
+                                        <div class="block"><p>The cognitive map of the pedestrian. This is generated from the <a href=AbstractOrientingPedestrian.html#environment>environment</a>'s graph as follows: we randomly select a % of environment's areas equal to the knowledge degree of the pedestrian, we then create a landmark in each of them. Those landmarks will be the nodes of the cognitive map. Concerning the connections between them, we produce a graph in which each generated landmark is connected to any other landmark reachable from it, with an edge whose weight depends on the number of areas that need to be traversed. Finally, the cognitive map is a minimum spanning tree of the described full connected graph. Note that edges are plain DefaultEdges, which means no extra info regarding the connection between landmarks is stored in the cognitive map. If two landmarks are connected, the pedestrian knows there's a path between them (this may be simple or not, i.e. representable as a single segment, but the pedestrian doesn't know it). If two landmarks are not connected, the pedestrian doesn't have info regarding any path between them, which may anyway exist.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -669,16 +669,61 @@ extends <a href=AbstractOrientingPedestrian.html>AbstractOrientingPedestrian</a>
                                     </li>
                                 </ul>
                                 
+                                <a id="getSenses()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSenses</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a>&gt; <a href=HomogeneousOrientingPedestrian2D.html#getSenses()>getSenses</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getFieldOfView()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getFieldOfView</h4>
+                                        <pre class="methodSignature"> abstract <a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a> <a href=HomogeneousOrientingPedestrian2D.html#getFieldOfView()>getFieldOfView</a>()</pre>
+                                        <div class="block"><p>The field of view of the pedestrian.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
                                 <a id="getMembershipGroup()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMembershipGroup</h4>
+                                        <pre class="methodSignature"> abstract <a href=../../interfaces/PedestrianGroup.html>PedestrianGroup</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt; <a href=HomogeneousOrientingPedestrian2D.html#getMembershipGroup()>getMembershipGroup</a>()</pre>
+                                        <div class="block"><p>The group this pedestrian belongs to.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getShape()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockListLast"
                                           >
                                     <li class="blockList">
-                                        <h4>getMembershipGroup</h4>
-                                        <pre class="methodSignature"> abstract <a href=../../interfaces/PedestrianGroup.html>PedestrianGroup</a>&lt;<a href=HomogeneousOrientingPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt; <a href=HomogeneousOrientingPedestrian2D.html#getMembershipGroup()>getMembershipGroup</a>()</pre>
-                                        <div class="block"><p>The group this pedestrian belongs to.</p></div>
+                                        <h4>getShape</h4>
+                                        <pre class="methodSignature"> abstract <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt; <a href=HomogeneousOrientingPedestrian2D.html#getShape()>getShape</a>()</pre>
+                                        <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

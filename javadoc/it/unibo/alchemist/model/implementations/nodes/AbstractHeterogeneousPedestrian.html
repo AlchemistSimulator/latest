@@ -203,20 +203,8 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                                         </tr>
                                         
                                         <tr class="altColor">
-                                            <td class="colFirst"><code>private final <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=CognitivePhysicalPedestrian2D.html#compliance>compliance</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
-                                            <td class="colFirst"><code>private final <a href=../../cognitiveagents/impact/individual/Age.html>Age</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=CognitivePhysicalPedestrian2D.html#age>age</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>private final <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=CognitivePhysicalPedestrian2D.html#gender>gender</a></code></th>
+                                            <td class="colFirst"><code>private final <a href=../../HeterogeneousPedestrianModel.html>HeterogeneousPedestrianModel</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=CognitivePhysicalPedestrian2D.html#pedestrianModel>pedestrianModel</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
@@ -227,14 +215,20 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                                         </tr>
                                         
                                         <tr class="altColor">
-                                            <td class="colFirst"><code>private final <a href=../../interfaces/environments/PhysicsEnvironment.html>PhysicsEnvironment</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>, <a href=AbstractHeterogeneousPedestrian.html>F</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=AbstractOrientingPedestrian.html#environment>environment</a></code></th>
+                                            <td class="colFirst"><code>private final <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#senses>senses</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="rowColor">
+                                            <td class="colFirst"><code>private final <a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#fieldOfView>fieldOfView</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
                                             <td class="colFirst"><code>private final <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt;</code></td>
-                                            <th class="colSecond" scope="row"><code><a href=AbstractOrientingPedestrian.html#shape>shape</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#shape>shape</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
@@ -264,13 +258,13 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#AbstractHeterogeneousPedestrian(PhysicsEnvironment,RandomGenerator,Age,Gender,PedestrianGroup)">AbstractHeterogeneousPedestrian</a></span>(<a href=../../interfaces/environments/PhysicsEnvironment.html>PhysicsEnvironment</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>, <a href=AbstractHeterogeneousPedestrian.html>F</a>&gt; environment, RandomGenerator randomGenerator, <a href=../../cognitiveagents/impact/individual/Age.html>Age</a> age, <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a> gender, <a href=../../interfaces/PedestrianGroup.html>PedestrianGroup</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt; group)</code></th>
+                                                        href="#AbstractHeterogeneousPedestrian(RandomGenerator,Node,Age,Gender,PedestrianGroup)">AbstractHeterogeneousPedestrian</a></span>(RandomGenerator randomGenerator, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>&gt; backingNode, <a href=../../cognitiveagents/impact/individual/Age.html>Age</a> age, <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a> gender, <a href=../../interfaces/PedestrianGroup.html>PedestrianGroup</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt; group)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
                                             <tr class="rowColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#AbstractHeterogeneousPedestrian(PhysicsEnvironment,RandomGenerator,Age,Gender)">AbstractHeterogeneousPedestrian</a></span>(<a href=../../interfaces/environments/PhysicsEnvironment.html>PhysicsEnvironment</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>, <a href=AbstractHeterogeneousPedestrian.html>F</a>&gt; environment, RandomGenerator randomGenerator, <a href=../../cognitiveagents/impact/individual/Age.html>Age</a> age, <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a> gender)</code></th>
+                                                        href="#AbstractHeterogeneousPedestrian(RandomGenerator,Node,Age,Gender)">AbstractHeterogeneousPedestrian</a></span>(RandomGenerator randomGenerator, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>&gt; backingNode, <a href=../../cognitiveagents/impact/individual/Age.html>Age</a> age, <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a> gender)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
@@ -324,30 +318,14 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                                         </tr>
                                         
                                         <tr id="i0" class="altColor">
-                                            <td class="colFirst"><code>final <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code>
+                                            <td class="colFirst"><code>final <a href=../../HeterogeneousPedestrianModel.html>HeterogeneousPedestrianModel</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt;</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=AbstractHeterogeneousPedestrian.html#getCompliance()>getCompliance</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=AbstractHeterogeneousPedestrian.html#getPedestrianModel()>getPedestrianModel</a>() </code>
                                             </th>
-                                            <td class="colLast">Value between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.</td>
+                                            <td class="colLast">The pedestrian model, capturing its characteristics.</td>
                                         </tr>
                                         
                                         <tr id="i1" class="rowColor">
-                                            <td class="colFirst"><code>final <a href=../../cognitiveagents/impact/individual/Age.html>Age</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=AbstractHeterogeneousPedestrian.html#getAge()>getAge</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i2" class="altColor">
-                                            <td class="colFirst"><code>final <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=AbstractHeterogeneousPedestrian.html#getGender()>getGender</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i3" class="rowColor">
                                             <td class="colFirst"><code><a href=../../interfaces/PedestrianGroup.html>PedestrianGroup</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt;</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=AbstractHeterogeneousPedestrian.html#getMembershipGroup()>getMembershipGroup</a>() </code>
@@ -355,28 +333,28 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                                             <td class="colLast">The group this pedestrian belongs to.</td>
                                         </tr>
                                         
-                                        <tr id="i4" class="altColor">
-                                            <td class="colFirst"><code><a href=../../interfaces/environments/PhysicsEnvironment.html>PhysicsEnvironment</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>, <a href=AbstractHeterogeneousPedestrian.html>F</a>&gt;</code>
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a>&gt;</code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=AbstractHeterogeneousPedestrian.html#getEnvironment()>getEnvironment</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=AbstractHeterogeneousPedestrian.html#getSenses()>getSenses</a>() </code>
                                             </th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr id="i5" class="rowColor">
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>abstract <a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=AbstractHeterogeneousPedestrian.html#getFieldOfView()>getFieldOfView</a>() </code>
+                                            </th>
+                                            <td class="colLast">The field of view of the pedestrian.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
                                             <td class="colFirst"><code>abstract <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt;</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=AbstractHeterogeneousPedestrian.html#getShape()>getShape</a>() </code>
                                             </th>
                                             <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i6" class="altColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=AbstractHeterogeneousPedestrian.html#probabilityOfHelping(HeterogeneousPedestrian)>probabilityOfHelping</a>(<a href=../../interfaces/HeterogeneousPedestrian.html>HeterogeneousPedestrian</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt; toHelp) </code>
-                                            </th>
-                                            <td class="colLast">Value between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.</td>
                                         </tr>
                                         
                                         </tbody>
@@ -390,11 +368,23 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                                             <h3>Methods inherited from class&nbsp;it.unibo.alchemist.model.implementations.nodes.AbstractHeterogeneousPedestrian</h3>
                                             <code>speed</code></li>
                                  
+                                    <li class="blockList"><a id="methods.inherited.from.class.it.unibo.alchemist.model.interfaces.Node">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;it.unibo.alchemist.model.interfaces.Node</h3>
+                                            <code>compareTo, iterator</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.kotlin.collections.MutableIterable">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;kotlin.collections.MutableIterable</h3>
+                                            <code>forEach, spliterator</code></li>
+                                 
                                     <li class="blockList"><a id="methods.inherited.from.class.it.unibo.alchemist.model.implementations.nodes.AbstractHomogeneousPedestrian">
                                             <!--   -->
                                         </a>
                                             <h3>Methods inherited from class&nbsp;it.unibo.alchemist.model.implementations.nodes.AbstractHomogeneousPedestrian</h3>
-                                            <code>addReaction, cloneNode, compareTo, contains, equals, forEach, getConcentration, getContents, getId, getMoleculeCount, getReactions, hashCode, iterator, removeConcentration, removeReaction, setConcentration, spliterator, toString</code></li>
+                                            <code>addReaction, cloneNode, contains, getConcentration, getContents, getId, getMoleculeCount, getReactions, removeConcentration, removeReaction, setConcentration</code></li>
                                  
                                     <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
                                         <!--   -->
@@ -422,22 +412,20 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                             </a>
                                 <h3>Constructor Detail</h3>
                                 
-                                <a name="AbstractHeterogeneousPedestrian(PhysicsEnvironment,RandomGenerator,Age,Gender,PedestrianGroup)"></a>
+                                <a name="AbstractHeterogeneousPedestrian(RandomGenerator,Node,Age,Gender,PedestrianGroup)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>AbstractHeterogeneousPedestrian</h4>
-                                        <pre>AbstractHeterogeneousPedestrian(<a href=../../interfaces/environments/PhysicsEnvironment.html>PhysicsEnvironment</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>, <a href=AbstractHeterogeneousPedestrian.html>F</a>&gt; environment, RandomGenerator randomGenerator, <a href=../../cognitiveagents/impact/individual/Age.html>Age</a> age, <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a> gender, <a href=../../interfaces/PedestrianGroup.html>PedestrianGroup</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt; group)</pre>
+                                        <pre>AbstractHeterogeneousPedestrian(RandomGenerator randomGenerator, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>&gt; backingNode, <a href=../../cognitiveagents/impact/individual/Age.html>Age</a> age, <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a> gender, <a href=../../interfaces/PedestrianGroup.html>PedestrianGroup</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt; group)</pre>
                                         <div class="block"></div>
                                         
                                         <dl>
                                             <dt><span class="paramLabel">Parameters:</span></dt>
                                             
                                             
-                                            <dd><code>environment</code> - <pre><code>    the environment inside which this pedestrian moves.</code></pre></dd>
-                                            
-                                            
-                                            
                                             <dd><code>randomGenerator</code> - <pre><code>    the simulation {@link RandomGenerator}.</code></pre></dd>
+                                            
+                                            
                                             
                                             
                                             
@@ -455,22 +443,20 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                                     </li>
                                 </ul>
                                 
-                                <a name="AbstractHeterogeneousPedestrian(PhysicsEnvironment,RandomGenerator,Age,Gender)"></a>
+                                <a name="AbstractHeterogeneousPedestrian(RandomGenerator,Node,Age,Gender)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>AbstractHeterogeneousPedestrian</h4>
-                                        <pre>AbstractHeterogeneousPedestrian(<a href=../../interfaces/environments/PhysicsEnvironment.html>PhysicsEnvironment</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>, <a href=AbstractHeterogeneousPedestrian.html>F</a>&gt; environment, RandomGenerator randomGenerator, <a href=../../cognitiveagents/impact/individual/Age.html>Age</a> age, <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a> gender)</pre>
+                                        <pre>AbstractHeterogeneousPedestrian(RandomGenerator randomGenerator, <a href=../../interfaces/Node.html>Node</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>&gt; backingNode, <a href=../../cognitiveagents/impact/individual/Age.html>Age</a> age, <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a> gender)</pre>
                                         <div class="block"></div>
                                         
                                         <dl>
                                             <dt><span class="paramLabel">Parameters:</span></dt>
                                             
                                             
-                                            <dd><code>environment</code> - <pre><code>    the environment inside which this pedestrian moves.</code></pre></dd>
-                                            
-                                            
-                                            
                                             <dd><code>randomGenerator</code> - <pre><code>    the simulation {@link RandomGenerator}.</code></pre></dd>
+                                            
+                                            
                                             
                                             
                                             
@@ -499,46 +485,16 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                             </a>
                                 <h3>Method Detail</h3>
                                 
-                                <a id="getCompliance()">
+                                <a id="getPedestrianModel()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>getCompliance</h4>
-                                        <pre class="methodSignature"> final <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> <a href=AbstractHeterogeneousPedestrian.html#getCompliance()>getCompliance</a>()</pre>
-                                        <div class="block"><p>Value between 0 and 1 representing the attitude towards conforming to social rules of this pedestrian.</p></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getAge()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getAge</h4>
-                                        <pre class="methodSignature"> final <a href=../../cognitiveagents/impact/individual/Age.html>Age</a> <a href=AbstractHeterogeneousPedestrian.html#getAge()>getAge</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getGender()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getGender</h4>
-                                        <pre class="methodSignature"> final <a href=../../cognitiveagents/impact/individual/Gender.html>Gender</a> <a href=AbstractHeterogeneousPedestrian.html#getGender()>getGender</a>()</pre>
-                                        <div class="block"></div>
+                                        <h4>getPedestrianModel</h4>
+                                        <pre class="methodSignature"> final <a href=../../HeterogeneousPedestrianModel.html>HeterogeneousPedestrianModel</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt; <a href=AbstractHeterogeneousPedestrian.html#getPedestrianModel()>getPedestrianModel</a>()</pre>
+                                        <div class="block"><p>The pedestrian model, capturing its characteristics.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -559,16 +515,31 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                                     </li>
                                 </ul>
                                 
-                                <a id="getEnvironment()">
+                                <a id="getSenses()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>getEnvironment</h4>
-                                        <pre class="methodSignature"> <a href=../../interfaces/environments/PhysicsEnvironment.html>PhysicsEnvironment</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>, <a href=AbstractHeterogeneousPedestrian.html>F</a>&gt; <a href=AbstractHeterogeneousPedestrian.html#getEnvironment()>getEnvironment</a>()</pre>
+                                        <h4>getSenses</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a>&gt; <a href=AbstractHeterogeneousPedestrian.html#getSenses()>getSenses</a>()</pre>
                                         <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getFieldOfView()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getFieldOfView</h4>
+                                        <pre class="methodSignature"> abstract <a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a> <a href=AbstractHeterogeneousPedestrian.html#getFieldOfView()>getFieldOfView</a>()</pre>
+                                        <div class="block"><p>The field of view of the pedestrian.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -578,36 +549,12 @@ extends <a href=AbstractHomogeneousPedestrian.html>AbstractHomogeneousPedestrian
                                     <!--   -->
                                 </a>
                                 <ul class=
-                                              "blockList"
+                                              "blockListLast"
                                           >
                                     <li class="blockList">
                                         <h4>getShape</h4>
                                         <pre class="methodSignature"> abstract <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt; <a href=AbstractHeterogeneousPedestrian.html#getShape()>getShape</a>()</pre>
                                         <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="probabilityOfHelping(HeterogeneousPedestrian)">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockListLast"
-                                          >
-                                    <li class="blockList">
-                                        <h4>probabilityOfHelping</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html>Double</a> <a href=AbstractHeterogeneousPedestrian.html#probabilityOfHelping(HeterogeneousPedestrian)>probabilityOfHelping</a>(<a href=../../interfaces/HeterogeneousPedestrian.html>HeterogeneousPedestrian</a>&lt;<a href=AbstractHeterogeneousPedestrian.html>T</a>, <a href=AbstractHeterogeneousPedestrian.html>P</a>, <a href=AbstractHeterogeneousPedestrian.html>A</a>&gt; toHelp)</pre>
-                                        <div class="block"><p>Value between 0 and 1 representing the probability this pedestrian will help another pedestrian in difficulty.</p></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>toHelp</code> - The pedestrian who needs help.</dd>
-                                            
-                                            
-                                        </dl>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

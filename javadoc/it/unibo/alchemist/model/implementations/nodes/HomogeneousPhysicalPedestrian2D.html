@@ -230,7 +230,7 @@ extends <a href=HomogeneousPedestrian2D.html>HomogeneousPedestrian2D</a>&lt;<a h
                                         </tr>
                                         
                                         <tr class="altColor">
-                                            <td class="colFirst"><code>private final <a href=../geometry/euclidean2d/FieldOfView2D.html>FieldOfView2D</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt;</code></td>
+                                            <td class="colFirst"><code>private final <a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a></code></td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#fieldOfView>fieldOfView</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
@@ -242,12 +242,18 @@ extends <a href=HomogeneousPedestrian2D.html>HomogeneousPedestrian2D</a>&lt;<a h
                                         </tr>
                                         
                                         <tr class="altColor">
+                                            <td class="colFirst"><code>private final <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#senses>senses</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
                                             <td class="colFirst"><code>private final <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;</code></td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#shape>shape</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr class="rowColor">
+                                        <tr class="altColor">
                                             <td class="colFirst"><code>private final <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;</code></td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#comfortArea>comfortArea</a></code></th>
                                             <td class="colLast"></td>
@@ -279,13 +285,19 @@ extends <a href=HomogeneousPedestrian2D.html>HomogeneousPedestrian2D</a>&lt;<a h
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#HomogeneousPhysicalPedestrian2D(Physics2DEnvironment,RandomGenerator,PedestrianGroup2D)">HomogeneousPhysicalPedestrian2D</a></span>(<a href=../../interfaces/environments/Physics2DEnvironment.html>Physics2DEnvironment</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; environment, RandomGenerator randomGenerator, <a href=../../interfaces/PedestrianGroup2D.html>PedestrianGroup2D</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; group)</code></th>
+                                                        href="#HomogeneousPhysicalPedestrian2D(Incarnation,RandomGenerator,Physics2DEnvironment,String,PedestrianGroup2D)">HomogeneousPhysicalPedestrian2D</a></span>(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/Physics2DEnvironment.html>Physics2DEnvironment</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter, <a href=../../interfaces/PedestrianGroup2D.html>PedestrianGroup2D</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; group)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
                                             <tr class="rowColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#HomogeneousPhysicalPedestrian2D(Physics2DEnvironment,RandomGenerator)">HomogeneousPhysicalPedestrian2D</a></span>(<a href=../../interfaces/environments/Physics2DEnvironment.html>Physics2DEnvironment</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; environment, RandomGenerator randomGenerator)</code></th>
+                                                        href="#HomogeneousPhysicalPedestrian2D(Incarnation,RandomGenerator,Physics2DEnvironment,String)">HomogeneousPhysicalPedestrian2D</a></span>(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/Physics2DEnvironment.html>Physics2DEnvironment</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#HomogeneousPhysicalPedestrian2D(Incarnation,RandomGenerator,Physics2DEnvironment)">HomogeneousPhysicalPedestrian2D</a></span>(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/Physics2DEnvironment.html>Physics2DEnvironment</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; environment)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
@@ -355,7 +367,7 @@ extends <a href=HomogeneousPedestrian2D.html>HomogeneousPedestrian2D</a>&lt;<a h
                                         </tr>
                                         
                                         <tr id="i2" class="altColor">
-                                            <td class="colFirst"><code>final <a href=../geometry/euclidean2d/FieldOfView2D.html>FieldOfView2D</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt;</code>
+                                            <td class="colFirst"><code>abstract <a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#getFieldOfView()>getFieldOfView</a>() </code>
                                             </th>
@@ -371,14 +383,22 @@ extends <a href=HomogeneousPedestrian2D.html>HomogeneousPedestrian2D</a>&lt;<a h
                                         </tr>
                                         
                                         <tr id="i4" class="altColor">
-                                            <td class="colFirst"><code><a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;</code>
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#getSenses()>getSenses</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>abstract <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#getShape()>getShape</a>() </code>
                                             </th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr id="i5" class="rowColor">
+                                        <tr id="i6" class="altColor">
                                             <td class="colFirst"><code><a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt;</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=HomogeneousPhysicalPedestrian2D.html#getComfortArea()>getComfortArea</a>() </code>
@@ -395,7 +415,19 @@ extends <a href=HomogeneousPedestrian2D.html>HomogeneousPedestrian2D</a>&lt;<a h
                                             <!--   -->
                                         </a>
                                             <h3>Methods inherited from class&nbsp;it.unibo.alchemist.model.implementations.nodes.AbstractHomogeneousPedestrian</h3>
-                                            <code>addReaction, cloneNode, compareTo, contains, equals, forEach, getConcentration, getContents, getId, getMoleculeCount, getReactions, hashCode, iterator, removeConcentration, removeReaction, setConcentration, spliterator, toString</code></li>
+                                            <code>addReaction, cloneNode, contains, getConcentration, getContents, getId, getMoleculeCount, getReactions, removeConcentration, removeReaction, setConcentration</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.it.unibo.alchemist.model.interfaces.Node">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;it.unibo.alchemist.model.interfaces.Node</h3>
+                                            <code>compareTo, iterator</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.kotlin.collections.MutableIterable">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;kotlin.collections.MutableIterable</h3>
+                                            <code>forEach, spliterator</code></li>
                                  
                                     <li class="blockList"><a id="methods.inherited.from.class.it.unibo.alchemist.model.implementations.nodes.HomogeneousPedestrian2D">
                                             <!--   -->
@@ -441,21 +473,31 @@ extends <a href=HomogeneousPedestrian2D.html>HomogeneousPedestrian2D</a>&lt;<a h
                             </a>
                                 <h3>Constructor Detail</h3>
                                 
-                                <a name="HomogeneousPhysicalPedestrian2D(Physics2DEnvironment,RandomGenerator,PedestrianGroup2D)"></a>
+                                <a name="HomogeneousPhysicalPedestrian2D(Incarnation,RandomGenerator,Physics2DEnvironment,String,PedestrianGroup2D)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>HomogeneousPhysicalPedestrian2D</h4>
-                                        <pre>HomogeneousPhysicalPedestrian2D(<a href=../../interfaces/environments/Physics2DEnvironment.html>Physics2DEnvironment</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; environment, RandomGenerator randomGenerator, <a href=../../interfaces/PedestrianGroup2D.html>PedestrianGroup2D</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; group)</pre>
+                                        <pre>HomogeneousPhysicalPedestrian2D(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/Physics2DEnvironment.html>Physics2DEnvironment</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter, <a href=../../interfaces/PedestrianGroup2D.html>PedestrianGroup2D</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; group)</pre>
                                         <div class="block"></div>
                                         
                                     </li>
                                 </ul>
                                 
-                                <a name="HomogeneousPhysicalPedestrian2D(Physics2DEnvironment,RandomGenerator)"></a>
+                                <a name="HomogeneousPhysicalPedestrian2D(Incarnation,RandomGenerator,Physics2DEnvironment,String)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>HomogeneousPhysicalPedestrian2D</h4>
-                                        <pre>HomogeneousPhysicalPedestrian2D(<a href=../../interfaces/environments/Physics2DEnvironment.html>Physics2DEnvironment</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; environment, RandomGenerator randomGenerator)</pre>
+                                        <pre>HomogeneousPhysicalPedestrian2D(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/Physics2DEnvironment.html>Physics2DEnvironment</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; environment, <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> nodeCreationParameter)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="HomogeneousPhysicalPedestrian2D(Incarnation,RandomGenerator,Physics2DEnvironment)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>HomogeneousPhysicalPedestrian2D</h4>
+                                        <pre>HomogeneousPhysicalPedestrian2D(<a href=../../interfaces/Incarnation.html>Incarnation</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>, <a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>&gt; incarnation, RandomGenerator randomGenerator, <a href=../../interfaces/environments/Physics2DEnvironment.html>Physics2DEnvironment</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; environment)</pre>
                                         <div class="block"></div>
                                         
                                     </li>
@@ -512,7 +554,7 @@ extends <a href=HomogeneousPedestrian2D.html>HomogeneousPedestrian2D</a>&lt;<a h
                                           >
                                     <li class="blockList">
                                         <h4>getFieldOfView</h4>
-                                        <pre class="methodSignature"> final <a href=../geometry/euclidean2d/FieldOfView2D.html>FieldOfView2D</a>&lt;<a href=HomogeneousPhysicalPedestrian2D.html>T</a>&gt; <a href=HomogeneousPhysicalPedestrian2D.html#getFieldOfView()>getFieldOfView</a>()</pre>
+                                        <pre class="methodSignature"> abstract <a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a> <a href=HomogeneousPhysicalPedestrian2D.html#getFieldOfView()>getFieldOfView</a>()</pre>
                                         <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
@@ -534,6 +576,21 @@ extends <a href=HomogeneousPedestrian2D.html>HomogeneousPedestrian2D</a>&lt;<a h
                                     </li>
                                 </ul>
                                 
+                                <a id="getSenses()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSenses</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/util/List.html>List</a>&lt;<a href=../../interfaces/geometry/InfluenceSphere.html>InfluenceSphere</a>&gt; <a href=HomogeneousPhysicalPedestrian2D.html#getSenses()>getSenses</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
                                 <a id="getShape()">
                                     <!--   -->
                                 </a>
@@ -542,7 +599,7 @@ extends <a href=HomogeneousPedestrian2D.html>HomogeneousPedestrian2D</a>&lt;<a h
                                           >
                                     <li class="blockList">
                                         <h4>getShape</h4>
-                                        <pre class="methodSignature"> <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt; <a href=HomogeneousPhysicalPedestrian2D.html#getShape()>getShape</a>()</pre>
+                                        <pre class="methodSignature"> abstract <a href=../../interfaces/geometry/GeometricShape.html>GeometricShape</a>&lt;<a href=../positions/Euclidean2DPosition.html>Euclidean2DPosition</a>, <a href=../../interfaces/geometry/euclidean2d/Euclidean2DTransformation.html>Euclidean2DTransformation</a>&gt; <a href=HomogeneousPhysicalPedestrian2D.html#getShape()>getShape</a>()</pre>
                                         <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
