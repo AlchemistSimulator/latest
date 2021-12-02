@@ -76,7 +76,7 @@
 
 
 <script>
-    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.3.1-dev5w+d50307ea7"};
+    window.site = {"orchidVersion":"0.21.1","baseUrl":"https://alchemistsimulator.github.io/latest","environment":"debug","version":"11.3.1-dev63+e3669d346"};
 </script>
 
 
@@ -226,11 +226,13 @@ deployments:
 
 environment:
   type: ImageEnvironmentWithGraph
-  parameters: [planimetry.png]
+  parameters:
+    path: planimetry.png
+    zoom: 0.05
 
 deployments:
   - type: Point
-    parameters: [15, 15]
+    parameters: [2, 2]
     nodes:
       type: HomogeneousOrientingPedestrian2D
       parameters: [0.5]
@@ -241,7 +243,9 @@ deployments:
 
 environment:
   type: ImageEnvironmentWithGraph
-  parameters: [planimetry.png]
+  parameters:
+    path: planimetry.png
+    zoom: 0.05
 
 _reactions: &amp;behavior
   - time-distribution:
@@ -251,7 +255,7 @@ _reactions: &amp;behavior
 
 deployments:
   - type: Point
-    parameters: [0, 0]
+    parameters: [2, 2]
     nodes:
       type: CognitiveOrientingPedestrian2D
       parameters: [0.5, &quot;adult&quot;, &quot;male&quot;]
@@ -434,7 +438,9 @@ deployments:
 
 environment:
   type: ImageEnvironmentWithGraph
-  parameters: [planimetry.png]
+  parameters:
+    path: planimetry.png
+    zoom: 0.05
 
 _reactions: &amp;behavior
   - time-distribution:
@@ -449,7 +455,7 @@ _reactions: &amp;behavior
 
 deployments:
   - type: Point
-    parameters: [0, 0]
+    parameters: [2, 2]
     nodes:
       type: HomogeneousPhysicalPedestrian2D
     programs:
@@ -898,7 +904,7 @@ Controlling Individual Agents in High-Density Crowd Simulation</a></p>
         <!-- Section -->
         <section>
             <p class="text-center">
-                Currently 11.3.1-dev5w+d50307ea7. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+                Currently 11.3.1-dev63+e3669d346. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
             </p>
         </section>
 
